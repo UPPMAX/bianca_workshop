@@ -1,0 +1,1102 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../transfer/">
+      
+      
+        <link rel="next" href="../slurm-intro/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
+    
+    
+      
+        <title>NAISS-SENS and sensitive data - Bianca workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7bf56d0a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#naiss-sens-sensitive-data-and-bianca" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Bianca workshop" class="md-header__button md-logo" aria-label="Bianca workshop" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bianca workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NAISS-SENS and sensitive data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../practicalities/" class="md-tabs__link">
+      Practicalities
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../overview/" class="md-tabs__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      NAISS-SENS and sensitive data
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../slurm-intro/" class="md-tabs__link">
+        The compute nodes and install yourself
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../slurm/" class="md-tabs__link">
+        Extra material
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../exercises/" class="md-tabs__link">
+      Exercises
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Bianca workshop" class="md-nav__button md-logo" aria-label="Bianca workshop" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    Bianca workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicalities/" class="md-nav__link">
+        Practicalities
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login_bianca/" class="md-nav__link">
+        Logging into Bianca
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commandline/" class="md-nav__link">
+        Command-line intro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules1/" class="md-nav__link">
+        Module system
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transfer/" class="md-nav__link">
+        Transfering files to/from Bianca
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          NAISS-SENS and sensitive data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        NAISS-SENS and sensitive data
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sensitive-personal-data" class="md-nav__link">
+    Sensitive personal data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudonymisation-and-anonymisation" class="md-nav__link">
+    Pseudonymisation and anonymisation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-for-project" class="md-nav__link">
+    Apply for project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bianca" class="md-nav__link">
+    Bianca
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#biancas-design" class="md-nav__link">
+    Bianca's design
+  </a>
+  
+    <nav class="md-nav" aria-label="Bianca's design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bianca-has-no-internet" class="md-nav__link">
+    Bianca has no Internet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-questions" class="md-nav__link">
+    Common Questions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          The compute nodes and install yourself
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          The compute nodes and install yourself
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slurm-intro/" class="md-nav__link">
+        Introduction to compute nodes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        Software and package installation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Extra material
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Extra material
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slurm/" class="md-nav__link">
+        More about Slurm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conda/" class="md-nav__link">
+        Conda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pip/" class="md-nav__link">
+        Install with pip to Bianca
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rpackages/" class="md-nav__link">
+        Installing R packages on Bianca
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../julia/" class="md-nav__link">
+        Using Julia packages on Bianca
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../containers/" class="md-nav__link">
+        Containers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jupyter/" class="md-nav__link">
+        Running Jupyter on Bianca
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercises/" class="md-nav__link">
+        Exercises
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sensitive-personal-data" class="md-nav__link">
+    Sensitive personal data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudonymisation-and-anonymisation" class="md-nav__link">
+    Pseudonymisation and anonymisation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-for-project" class="md-nav__link">
+    Apply for project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bianca" class="md-nav__link">
+    Bianca
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#biancas-design" class="md-nav__link">
+    Bianca's design
+  </a>
+  
+    <nav class="md-nav" aria-label="Bianca's design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bianca-has-no-internet" class="md-nav__link">
+    Bianca has no Internet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-questions" class="md-nav__link">
+    Common Questions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="naiss-sens-sensitive-data-and-bianca">NAISS-SENS, sensitive data and Bianca<a class="headerlink" href="#naiss-sens-sensitive-data-and-bianca" title="Anchor link to this section for reference">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Objectives</p>
+<ul>
+<li>A brief overview of various aspects of sensitive data projects</li>
+<li>A discussion of NAISS SENS projects, proposals, and allocations</li>
+<li>... and an overview of the <strong>Bianca</strong> system</li>
+</ul>
+</div>
+<h2 id="sensitive-personal-data">Sensitive personal data<a class="headerlink" href="#sensitive-personal-data" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>
+<p>Personal data: Traced to now living persons, e.g.</p>
+<ul>
+<li>Name</li>
+<li>Address</li>
+<li>Food preference</li>
+<li>Size of left nostril</li>
+</ul>
+</li>
+<li>
+<p>Sensitive personal data:</p>
+<ul>
+<li>ethnic origin</li>
+<li>political opinion</li>
+<li>religious or philosophical beliefs</li>
+<li>trade union membership</li>
+<li>health</li>
+<li>sex life</li>
+<li>genetic data</li>
+<li>biometric data that can uniquely identify a person<ul>
+<li>including some image or auditory recordings</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>More about sensitive personal data</p>
+<ul>
+<li><a href="https://www.imy.se/en/">IMY</a></li>
+<li><a href="https://www.gdpr.eu/">GDPR</a></li>
+<li><a href="https://ec.europa.eu/info/law/law-topic/data-protection_en">Data protection</a></li>
+<li><a href="https://ec.europa.eu/info/law/law-topic/data-protection_sv">Skydd av personuppgifter</a></li>
+<li><a href="https://snd.gu.se/sv/hantera-data/planera/forskningsdata-med-personuppgifter">SND</a></li>
+</ul>
+</li>
+<li>
+<p>When in doubt, contact your university's <a href="https://www.uppmax.uu.se/support/faq/general-miscellaneous-faq/sensitive+data+questions/">data protection officer</a>.</p>
+</li>
+<li>
+<p>Other sensitive data:</p>
+<ul>
+<li>Confidential information<ul>
+<li>e.g. IP from private industry</li>
+</ul>
+</li>
+<li>Secrets<ul>
+<li>sensitive environmental data, e.g. protected species      </li>
+</ul>
+</li>
+<li>National security</li>
+</ul>
+</li>
+<li>
+<p>A Data Protection Impact Assessment(DPIA) is legal requirement for any project with GDPR-data.</p>
+</li>
+<li>
+<p>If in doubt (especially with "new" data type), also do a information security evaluation to determine how you should handle the data.</p>
+</li>
+</ul>
+<h2 id="pseudonymisation-and-anonymisation">Pseudonymisation and anonymisation<a class="headerlink" href="#pseudonymisation-and-anonymisation" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>Anonymised: no theoretical way at all to determine an individual</li>
+<li>Pseudonymised: anything less</li>
+</ul>
+<p>Pseudonymisation is a security mechanism that improves the security of sensitive personal data. <em>The data is still sensitive</em>.</p>
+<p>But how do you know whether data is anonymised? 
+    - "It depends..." 
+    - Some data cannot be anonymised at all (e.g. whole genome sequence)
+    - One metric for microdata is <a href="https://en.wikipedia.org/wiki/K-anonymity">K-anonymity</a></p>
+<h2 id="apply-for-project">Apply for project<a class="headerlink" href="#apply-for-project" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li><a href="https://www.uppmax.uu.se/support/getting-started/applying-for-sens-project/">Detailed instructions for project application</a>
+<a href="https://supr.naiss.se/round/open_type/?type=NAISS+SENS">Open NAISS SENS Rounds</a></li>
+<li>Before GDPR-data will be transferred to UPPMAX, there must be a <a href="https://www.uppmax.uu.se/support/faq/general-miscellaneous-faq/how-to-establish-a-puba-with-uu/">Data Processing Agreement</a> between UU and the data controlling organisation. These are currently specific to the PI (and sometimes project).</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Some definitions</p>
+<ul>
+<li>Project: A collection of resource allocations and people, with an expiration date.</li>
+<li>Compute resources: CPU time used by submitted jobs.</li>
+<li>Storage resources: GB of disk space. /proj has backup, /proj/no-backup has no backup.</li>
+<li>Allocation: The amount of resources a project may consume before hitting a limit.</li>
+</ul>
+</div>
+<ul>
+<li>Take home message: follow the above instructions, be as complete as detailed as you reasonably can. Submit requests early in the month. </li>
+</ul>
+<h2 id="bianca">Bianca<a class="headerlink" href="#bianca" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>Bianca is a great platform for computationally intensive research on sensitive personal data. It can also be useful for:<ul>
+<li>national and international collaboration on sensitive personal data (without a high compute need)</li>
+<li>other types of sensitive data</li>
+<li>making sensitive data accessible (on Bianca)<ul>
+<li><a href="https://snd.gu.se/en/catalogue/study/ext0285">Swegen</a></li>
+<li><a href="https://www.simpler4health.se/">SIMPLER</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Bianca is not intended for:<ul>
+<li>storing (inactive) data</li>
+</ul>
+</li>
+</ul>
+<h2 id="biancas-design">Bianca's design<a class="headerlink" href="#biancas-design" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>Bianca was designed<ul>
+<li>for sensitive data from large-scale molecular experiments<ul>
+<li>but has since grown into new domains</li>
+</ul>
+</li>
+<li>to make accidental data leaks difficult</li>
+<li>to make correct data management as easy as possible</li>
+<li>to emulate the HPC cluster environment that SNIC/NAISS users were familiar with</li>
+<li>to provide a maximum amount of resources</li>
+<li>and to satisfy regulations.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Some definitions</p>
+<p>— Node: A basic "computer", with processor, RAM memory, local disk, and network connection.
+- Core: A <em>part</em> of a processor (CPU), capable of executing a thread of execution.
+- Thread: A series of logical steps, executing a program.
+- Multithreading: A program that runs with many threads in parallel. Each thread can occupy one core.</p>
+</div>
+<h3 id="bianca-has-no-internet">Bianca has no Internet<a class="headerlink" href="#bianca-has-no-internet" title="Anchor link to this section for reference">&para;</a></h3>
+<p>... but we have “solutions”</p>
+<p><img alt="Image" src="../img/biancaorganisation-01.png" /></p>
+<ul>
+<li>Bianca is only accessible from within Sunet (i.e. from university networks).</li>
+<li>Use VPN outside Sunet. <a href="https://mp.uu.se/en/web/info/stod/it-telefoni/it-support/network-on-campus/vpn-service">Link to VPN for UU</a><ul>
+<li>You can get VPN credentials from all Swedish universities.</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li>The whole Bianca cluster (blue) contains hundreds of virtual project clusters (green), each of which is isolated from each other and the Internet.</li>
+<li>Data can be transferred to or from a virtual project cluster through the Wharf, which is a special file area that is visible from the Internet.</li>
+</ul>
+<h3 id="common-questions">Common Questions<a class="headerlink" href="#common-questions" title="Anchor link to this section for reference">&para;</a></h3>
+<p>What should I do if I have both sensitive and non-sensitive data?
+- It may be convenient to have a separate project on Rackham. Scripts and pipelines can then be built on Rackham and moved to Bianca.
+- Having non-sensitive data on Bianca is okay, if maintaining two separate projects is impractical.</p>
+<p>One project or many? When should I apply for another project? 
+- Because <em>every</em> member in a project should be assumed to have full access to all data, each different constellation of collaborators needs its own project.
+- Because of the extra effort required to move data between projects, NAISS SENS projects can be extended and a continuation proposal is not necessary.
+- Let data, ethical consent, and practicality rule.</p>
+<p>I need more core-hours!
+- Do you really? 
+    - First, use jobstats to determine whether you've been using your allocation efficiently.
+    - Second, remember that you can still submit and run jobs after your allocation is out. Such "bonus" jobs run after normal-priority jobs. Typically, they will run in the evening, within a couple of days.
+- If you know that you've been submitting efficient jobs and the wait time in the queue is an actual problem, then contact UPPMAX support and request more time. Motivate your request.</p>
+<p>I need more storage space!
+- Do you really?
+    - First, make an inventory of the data in your project — what do you have, how much space does it take, and why is it there?
+    - Second, delete data that you don't have an immediate plan to analyse.
+    - Also convert all .sam files to .bam and compress all your .fastq files.
+- If you've done all this and you still need space, contact UPPMAX support and request more space. Motivate your request by summarising your inventory. Include an estimate of your future needs. </p>
+<div class="admonition abstract">
+<p class="admonition-title">Keypoints</p>
+<ul>
+<li>Sensitive Personal data is data that could identify a person and that have implication</li>
+<li>The workflow for a project is When doing your Data management plan, do a DPIA, apply for PUBA(if apropriate), apply for project, DO scicens , Transfer resulted data, close project.</li>
+</ul>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../transfer/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Transfering files to/from Bianca" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                Transfering files to/from Bianca
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../slurm-intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction to compute nodes" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                Introduction to compute nodes
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.footer", "search.suggest", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fc8c2696.min.js"></script>
+      
+    
+  </body>
+</html>

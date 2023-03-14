@@ -1,0 +1,1357 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../modules1/">
+      
+      
+        <link rel="next" href="../naiss-sens-bianca/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
+    
+    
+      
+        <title>Transfering files to/from Bianca - Bianca workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7bf56d0a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-does-it-work" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Bianca workshop" class="md-header__button md-logo" aria-label="Bianca workshop" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bianca workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Transfering files to/from Bianca
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../practicalities/" class="md-tabs__link">
+      Practicalities
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../overview/" class="md-tabs__link md-tabs__link--active">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../naiss-sens-bianca/" class="md-tabs__link">
+      NAISS-SENS and sensitive data
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../slurm-intro/" class="md-tabs__link">
+        The compute nodes and install yourself
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../slurm/" class="md-tabs__link">
+        Extra material
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../exercises/" class="md-tabs__link">
+      Exercises
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Bianca workshop" class="md-nav__button md-logo" aria-label="Bianca workshop" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    Bianca workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicalities/" class="md-nav__link">
+        Practicalities
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login_bianca/" class="md-nav__link">
+        Logging into Bianca
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commandline/" class="md-nav__link">
+        Command-line intro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules1/" class="md-nav__link">
+        Module system
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Transfering files to/from Bianca
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Transfering files to/from Bianca
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-it-work" class="md-nav__link">
+    How does it work?
+  </a>
+  
+    <nav class="md-nav" aria-label="How does it work?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-wharf" class="md-nav__link">
+    The Wharf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-transfers" class="md-nav__link">
+    Data transfers:
+  </a>
+  
+    <nav class="md-nav" aria-label="Data transfers:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-wharf-location" class="md-nav__link">
+    The wharf location
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-standard-sftp-client-command-line" class="md-nav__link">
+    Using standard sftp client (command line)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-other-sftp-client" class="md-nav__link">
+    Some other sftp client
+  </a>
+  
+    <nav class="md-nav" aria-label="Some other sftp client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#winscp-windows" class="md-nav__link">
+    WinSCP (Windows)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filezilla" class="md-nav__link">
+    Filezilla
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example ??
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mounting-the-sftp-server-with-sshfs-on-you-local-machine" class="md-nav__link">
+    Mounting the sftp-server with sshfs on you local machine
+  </a>
+  
+    <nav class="md-nav" aria-label="Mounting the sftp-server with sshfs on you local machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transit" class="md-nav__link">
+    Transit
+  </a>
+  
+    <nav class="md-nav" aria-label="Transit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moving-data-from-transit-to-rackham" class="md-nav__link">
+    Moving data from transit to Rackham
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-data-between-projects" class="md-nav__link">
+    Moving data between projects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-on-transit" class="md-nav__link">
+    Software on Transit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ngi-deliver" class="md-nav__link">
+    NGI Deliver
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../naiss-sens-bianca/" class="md-nav__link">
+        NAISS-SENS and sensitive data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          The compute nodes and install yourself
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          The compute nodes and install yourself
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slurm-intro/" class="md-nav__link">
+        Introduction to compute nodes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        Software and package installation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Extra material
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Extra material
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slurm/" class="md-nav__link">
+        More about Slurm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conda/" class="md-nav__link">
+        Conda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pip/" class="md-nav__link">
+        Install with pip to Bianca
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rpackages/" class="md-nav__link">
+        Installing R packages on Bianca
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../julia/" class="md-nav__link">
+        Using Julia packages on Bianca
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../containers/" class="md-nav__link">
+        Containers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jupyter/" class="md-nav__link">
+        Running Jupyter on Bianca
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercises/" class="md-nav__link">
+        Exercises
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-it-work" class="md-nav__link">
+    How does it work?
+  </a>
+  
+    <nav class="md-nav" aria-label="How does it work?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-wharf" class="md-nav__link">
+    The Wharf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-transfers" class="md-nav__link">
+    Data transfers:
+  </a>
+  
+    <nav class="md-nav" aria-label="Data transfers:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-wharf-location" class="md-nav__link">
+    The wharf location
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-standard-sftp-client-command-line" class="md-nav__link">
+    Using standard sftp client (command line)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-other-sftp-client" class="md-nav__link">
+    Some other sftp client
+  </a>
+  
+    <nav class="md-nav" aria-label="Some other sftp client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#winscp-windows" class="md-nav__link">
+    WinSCP (Windows)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filezilla" class="md-nav__link">
+    Filezilla
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example ??
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mounting-the-sftp-server-with-sshfs-on-you-local-machine" class="md-nav__link">
+    Mounting the sftp-server with sshfs on you local machine
+  </a>
+  
+    <nav class="md-nav" aria-label="Mounting the sftp-server with sshfs on you local machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transit" class="md-nav__link">
+    Transit
+  </a>
+  
+    <nav class="md-nav" aria-label="Transit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moving-data-from-transit-to-rackham" class="md-nav__link">
+    Moving data from transit to Rackham
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-data-between-projects" class="md-nav__link">
+    Moving data between projects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-on-transit" class="md-nav__link">
+    Software on Transit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ngi-deliver" class="md-nav__link">
+    NGI Deliver
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Transfering files to/from Bianca</h1>
+
+<div class="admonition info">
+<p class="admonition-title">Objectives</p>
+<ul>
+<li>We'll go through the methods to transfer files</li>
+<li>wharf</li>
+<li>transit server</li>
+<li>rsync, scp/sftp</li>
+<li>pros/cons of different solutions</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is important to keep the entire chain of transferring the data secure</p>
+</div>
+<h2 id="how-does-it-work">How does it work?<a class="headerlink" href="#how-does-it-work" title="Anchor link to this section for reference">&para;</a></h2>
+<p><img alt="Bianca" src="../img/biancaorganisation-01.png" /></p>
+<h3 id="the-wharf">The Wharf<a class="headerlink" href="#the-wharf" title="Anchor link to this section for reference">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Wharf is a harbour dock</p>
+<ul>
+<li>The Wharf area can be reached from both Bianca and any other place on Bianca.</li>
+<li>Therefore, it serves as a bridge between Internet and Bianca.</li>
+</ul>
+</div>
+<h2 id="data-transfers">Data transfers:<a class="headerlink" href="#data-transfers" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li><a href="https://www.uppmax.uu.se/support/user-guides/bianca-user-guide/">https://www.uppmax.uu.se/support/user-guides/bianca-user-guide/</a> <ul>
+<li>section 3: Transfer files to and from Bianca</li>
+</ul>
+</li>
+</ul>
+<h3 id="the-wharf-location">The wharf location<a class="headerlink" href="#the-wharf-location" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>
+<p>The path to this folder, once you are logged into your project's cluster, is:</p>
+<p><code>/proj/&lt;projid&gt;/nobackup/wharf/&lt;username&gt;/&lt;username&gt;-&lt;projid&gt;</code><br />
+E.g.<br />
+<code>/proj/sens2016999/nobackup/wharf/myuser/myuser-sens2016999</code></p>
+</li>
+<li>
+<p>To transfer data from Bianca, copy the files you want to transfer here.</p>
+</li>
+<li>
+<p>To get the files transferred to the wharf area from outside, move the files to you project folde or home folder.</p>
+</li>
+<li>
+<p>Please note that in the wharf you only have access to upload your files to the directory that is named:
+   <code>&lt;username&gt;-&lt;projid&gt;</code>
+   e.g.
+   <code>myuser-sens2016999</code></p>
+</li>
+</ul>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>Using standard sftp client</li>
+<li>Some other sftp clients</li>
+<li>Mounting the wharf on your local computer</li>
+<li>Transit Server from Rackham</li>
+</ul>
+<h2 id="using-standard-sftp-client-command-line">Using standard sftp client (command line)<a class="headerlink" href="#using-standard-sftp-client-command-line" title="Anchor link to this section for reference">&para;</a></h2>
+<p>https://www.uppmax.uu.se/support/user-guides/basic-sftp-commands/</p>
+<p><code>$ sftp -q &lt;username&gt;-&lt;projid&gt;@bianca-sftp.uppmax.uu.se</code><br />
+ Ex.<br />
+<code>$ sftp -q myuser-sens2016999@bianca-sftp.uppmax.uu.se</code></p>
+<p>Notice the different host name from before!</p>
+<p>The <code>-q</code> flag is to be quiet (not showing the banner intended to help someone trying to ssh to the host), if your client does not support it, you can just skip it.</p>
+<p>As password you use your normal UPPMAX password directly followed by
+the six digits from the second factor application from step 1.</p>
+<p>Ex. if your password is "VerySecret" and the second factor code is 123 456 you would type VerySecret123456 as the password in this step.</p>
+<p>Once connected you will have to type the sftp commands to upload/download files. Have a look at the Basic SFTP commands guide to get started with it.</p>
+<p>Please note that in the wharf you only have access to upload your files to the directory that is named:</p>
+<p><code>&lt;username&gt;-&lt;projid&gt;</code>
+e.g.
+<code>myuser-sens2016999</code></p>
+<p>so you will want to cd to that directory the first thing you do.</p>
+<p><code>sftp&gt; cd myuser-sens2016999</code></p>
+<p>Alternatively, you can specify this at the end of the sftp command, so that you will always end up in the correct folder directly.</p>
+<p><code>$ sftp -q &lt;username&gt;-&lt;projid&gt;@bianca-sftp.uppmax.uu.se:&lt;username&gt;-&lt;projid&gt;</code><br />
+E.g.<br />
+<code>$ sftp -q myuser-sens2016999@bianca-sftp.uppmax.uu.se:myuser-sens2016999</code></p>
+<ul>
+<li><code>sftp</code> supports a recursive flag (<code>put -r</code>), but it seems to be very sensitive to combinations of different sftp servers and clients, so be warned... a bit further down you can see a rough solution for bulk transfers.</li>
+</ul>
+<div class="admonition info tip">
+<p class="admonition-title">Info</p>
+<p><strong>Bulk recursive transfer with only standard sftp client</strong></p>
+<ul>
+<li>It seems to be rather common with directory structures with symbolic links inside the directories that you should transfer. </li>
+<li>This is a very simple solution to copy everything in a specific folder (and follow symbolic links) to the wharf.</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">==============</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>~/sftp-upload.sh
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="o">==============</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">#!/bin/bash</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">#sftp-upload.sh</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>find<span class="w"> </span><span class="nv">$*</span><span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print &quot;mkdir&quot;,&quot;\&quot;&quot;$0&quot;\&quot;&quot;}&#39;</span><span class="w"> </span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>find<span class="w"> </span><span class="nv">$*</span><span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print &quot;put&quot;,&quot;\&quot;&quot;$0&quot;\&quot;&quot;,&quot;\&quot;&quot;$0&quot;\&quot;&quot; }&#39;</span><span class="w"> </span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>find<span class="w"> </span><span class="nv">$*</span><span class="w"> </span>-type<span class="w"> </span>l<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print &quot;put&quot;,&quot;\&quot;&quot;$0&quot;\&quot;&quot;,&quot;\&quot;&quot;$0&quot;\&quot;&quot; }&#39;</span><span class="w"> </span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>-----------
+</code></pre></div>
+With this script you can do:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>/home/myuser/glob/testing/nobackup/somedata
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>~/sftp-upload.sh<span class="w"> </span>*<span class="p">|</span>sftp<span class="w"> </span>-oBatchMode<span class="o">=</span>no<span class="w"> </span>-b-<span class="w"> </span>&lt;username&gt;-&lt;projid&gt;@bianca-sftp.uppmax.uu.se:&lt;username&gt;-&lt;projid&gt;
+</code></pre></div>
+The special <code>-b</code> makes the script stop on error.</p>
+</div>
+<h2 id="some-other-sftp-client">Some other sftp client<a class="headerlink" href="#some-other-sftp-client" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>
+<p>Please notice that sftp is NOT the same as scp. So be sure to really use a sftp client -- not just a scp client.</p>
+</li>
+<li>
+<p>Also be aware that many sftp clients use reconnects (with a cached version of your password). This will not work for Bianca, because of the second factor! And some try to use multiple connections with the same password, which will fail.</p>
+</li>
+<li>
+<p>So for example with lftp, you need to "set net:connection_limit 1". lftp may also defer the actual connection until it's really required unless you end your connect URL with a path.</p>
+</li>
+<li>
+<p>An example command line for lftp would be</p>
+</li>
+</ul>
+<p><code>lftp sftp://&lt;username&gt;-&lt;projname&gt;@bianca-sftp.uppmax.uu.se/&lt;username&gt;-&lt;projname&gt;/</code></p>
+<h3 id="winscp-windows">WinSCP (Windows)<a class="headerlink" href="#winscp-windows" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>Does work!</li>
+<li>Only connect with local computer (not Rackham)</li>
+</ul>
+<h3 id="filezilla">Filezilla<a class="headerlink" href="#filezilla" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>Does work</li>
+<li>but asks for password everytime</li>
+<li>Only connect with local computer (not Rackham)</li>
+</ul>
+<p><strong>Other?</strong>
+- Cyberduck problem</p>
+<h3 id="example">Example ??<a class="headerlink" href="#example" title="Anchor link to this section for reference">&para;</a></h3>
+<h2 id="mounting-the-sftp-server-with-sshfs-on-you-local-machine">Mounting the sftp-server with sshfs on you local machine<a class="headerlink" href="#mounting-the-sftp-server-with-sshfs-on-you-local-machine" title="Anchor link to this section for reference">&para;</a></h2>
+<p><strong>Mount the wharf on your machine</strong></p>
+<ul>
+<li>This is only possible on your own system. </li>
+<li>sshfs allows you to mount the wharf on your own machine. </li>
+<li>You will be able to copy and work on the data using your own local tools such as cp or vim. </li>
+<li>Remember that you are neither logged in on the distant server, nor is the data physically on your local disk (until you have copied it).</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>UPPMAX doesn't have sshfs client package installed for security reasons. sshfs is available on most Linux distributions: install the package sshfs on Ubuntu, fuse-sshfs on Fedora, RHEL7/CentOS7 (enable EPEL repository) and RHEL8 (enable codeready-builder repository) / CentOS8 (enable powertools repository).    </p>
+</div>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Anchor link to this section for reference">&para;</a></h3>
+<h2 id="transit">Transit<a class="headerlink" href="#transit" title="Anchor link to this section for reference">&para;</a></h2>
+<p><strong>Recommended way from Rackham?</strong>
+- To facilitate secure data transfers to, from and within the system for computing on sensitive data (bianca/castor) a service is available via ssh at transit.uppmax.uu.se.
+- You can connect to transit via ssh. Once connected, you should see a short help message. The most important thing there is the <code>mount_wharf</code> command which you can use to mount a project from the bianca wharf</p>
+<ul>
+<li>Example from Rackham as Rackham session</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ssh<span class="w"> </span>transit
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>username@transit:~$<span class="w"> </span>mount_wharf<span class="w"> </span>sens2023531
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Mounting<span class="w"> </span>wharf<span class="w"> </span><span class="o">(</span>accessible<span class="w"> </span><span class="k">for</span><span class="w"> </span>you<span class="w"> </span>only<span class="o">)</span><span class="w"> </span>to<span class="w"> </span>/home/&lt;user&gt;/sens2023531
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&lt;user&gt;-sens2023531@bianca-sftp.uppmax.uu.se<span class="err">&#39;</span>s<span class="w"> </span>password:<span class="w"> </span>
+</code></pre></div>
+- Enter password + F2A</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">done</span>.
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>username@transit:~$<span class="w"> </span>ls<span class="w"> </span>sens2023531/
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>username@transit:~$<span class="w"> </span>
+</code></pre></div>
+<ul>
+<li>
+<p>Note that your home directory is mounted <em>read-only</em>, any changes you do to your "local" home directory (on transit) will be forgotten afterwards.</p>
+</li>
+<li>
+<p>You can use commands like <code>rsync</code>, <code>scp</code> to fetch data and transfer it to your bianca wharf.</p>
+</li>
+<li>You can use cp to copy from Rackham to the wharf </li>
+<li>Remember that you cannot make lasting changes to anything except for mounted wharf directories. Therefore you have to use rsync and scp to tranfer from the wharf to Rackham.</li>
+<li>The mounted directory will be kept for later sessions.</li>
+</ul>
+<h3 id="moving-data-from-transit-to-rackham">Moving data from transit to Rackham<a class="headerlink" href="#moving-data-from-transit-to-rackham" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>
+<p><strong>On Rackham:</strong> copy files to Bianca via transit: <br />
+<code>scp path/my_files transit:sens2023531/</code></p>
+</li>
+<li>
+<p><strong>On transit:</strong> copy files to Bianca from Rackham<br />
+<code>scp  rackham:path/my_files ~/sens2023531/</code></p>
+</li>
+</ul>
+<blockquote>
+<p>Keep in mind that project folders on Rackham are not available on transit.</p>
+</blockquote>
+<h3 id="moving-data-between-projects">Moving data between projects<a class="headerlink" href="#moving-data-between-projects" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>You can use transit to transfer data between projects by mounting the wharfs for the different projects and transferring data with rsync. </li>
+<li>Note that you may of course only do this if this is allowed (agreements, permissions, etc.)</li>
+</ul>
+<h3 id="software-on-transit">Software on Transit<a class="headerlink" href="#software-on-transit" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>
+<p>While logged in to Transit, you cannot make lasting changes to anything except for mounted wharf directories. However, anything you have added to your Rackham home directory is available on Transit. In addition, some modules are available.</p>
+</li>
+<li>
+<p>For example, if you need to download data from TCGA, log in to Rackham and install the GDC client to your home directory. Then log in to Transit, mount the wharf, and run ./gdc-client.</p>
+</li>
+</ul>
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Anchor link to this section for reference">&para;</a></h2>
+<h2 id="ngi-deliver">NGI Deliver<a class="headerlink" href="#ngi-deliver" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>Not covered here but </li>
+<li>https://www.uppmax.uu.se/support/user-guides/deliver-user-guide/</li>
+<li>https://www.uppmax.uu.se/support/user-guides/grus-user-guide/</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>Make sure you access Bianca from SUNET Network - use VPN, connect from Rackham, use university connection...</li>
+<li>For simple transfers use SFP to connect to <code>bianca-sftp.uppmax.uu.se</code> - use command line <code>sftp</code> or tools that support SFTP protocol.</li>
+<li>For <code>rsync</code> - sync files to pre-mounted wharf folder from Rackham or secure local computer.</li>
+<li>Keep in mind that project folders on Rackham are not available on transit.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">keypoints</p>
+<ul>
+<li>The "WHARF" works like a dock at the harbour.</li>
+<li>There are several ways to use the wharf to transfer files<ul>
+<li>copy</li>
+<li>transit server</li>
+<li>rsync, scp/sftp</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../modules1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Module system" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                Module system
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../naiss-sens-bianca/" class="md-footer__link md-footer__link--next" aria-label="Next: NAISS-SENS and sensitive data" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                NAISS-SENS and sensitive data
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.footer", "search.suggest", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fc8c2696.min.js"></script>
+      
+    
+  </body>
+</html>

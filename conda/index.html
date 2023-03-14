@@ -1,0 +1,1199 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../slurm/">
+      
+      
+        <link rel="next" href="../pip/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
+    
+    
+      
+        <title>Conda - Bianca workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7bf56d0a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conda" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Bianca workshop" class="md-header__button md-logo" aria-label="Bianca workshop" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bianca workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conda
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../practicalities/" class="md-tabs__link">
+      Practicalities
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../overview/" class="md-tabs__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../naiss-sens-bianca/" class="md-tabs__link">
+      NAISS-SENS and sensitive data
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../slurm-intro/" class="md-tabs__link">
+        The compute nodes and install yourself
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../slurm/" class="md-tabs__link md-tabs__link--active">
+        Extra material
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../exercises/" class="md-tabs__link">
+      Exercises
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Bianca workshop" class="md-nav__button md-logo" aria-label="Bianca workshop" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    Bianca workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicalities/" class="md-nav__link">
+        Practicalities
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login_bianca/" class="md-nav__link">
+        Logging into Bianca
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commandline/" class="md-nav__link">
+        Command-line intro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules1/" class="md-nav__link">
+        Module system
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transfer/" class="md-nav__link">
+        Transfering files to/from Bianca
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../naiss-sens-bianca/" class="md-nav__link">
+        NAISS-SENS and sensitive data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          The compute nodes and install yourself
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          The compute nodes and install yourself
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slurm-intro/" class="md-nav__link">
+        Introduction to compute nodes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        Software and package installation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Extra material
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Extra material
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slurm/" class="md-nav__link">
+        More about Slurm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Conda
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pip/" class="md-nav__link">
+        Install with pip to Bianca
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rpackages/" class="md-nav__link">
+        Installing R packages on Bianca
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../julia/" class="md-nav__link">
+        Using Julia packages on Bianca
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../containers/" class="md-nav__link">
+        Containers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jupyter/" class="md-nav__link">
+        Running Jupyter on Bianca
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercises/" class="md-nav__link">
+        Exercises
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="conda">Conda<a class="headerlink" href="#conda" title="Anchor link to this section for reference">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Objectives</p>
+<ul>
+<li>We'll ...</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">keypoints</p>
+<ul>
+<li>bullet 1</li>
+<li>bullet 2</li>
+</ul>
+</div>
+<p>This is a brief description of the necessary steps to use the local Conda repository at UPPMAX, and install things for yourself or your project using Conda. </p>
+<p>To use conda on UPPMAX Bianca you could use the following steps:</p>
+<ol>
+<li>
+<p>Run: module load conda
+This loads the module conda and grants you access to the latest version of conda and all major repositories on all UPPMAX systems.</p>
+</li>
+<li>
+<p>Run: export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/
+The variable CONDA_ENVS_PATH contains the location of your environments. As long as all members of a project set the variable CONDA_ENVS_PATH to the same place, you can all use the same environments. Set it to your project's environments folder. Otherwise, the default is ~/.conda/envs (warning: installing conda environments in your home directory like this can quickly consume all your space and/or files).</p>
+</li>
+</ol>
+<p>3: Run: conda create ... etc
+This where you use conda as you normally would. On Bianca this is equal to running conda with --offline on Rackham since there is no internet. </p>
+<p>Customising
+    - You may run 'source conda_init.sh' to initialise your shell to be able to run 'conda activate' and 'conda deactivate' etc. Just remember that this command ADDS STUFF TO YOUR SHELL outside the scope of the module system.</p>
+<p>Remember to run 'conda clean -a' once in a while. When you load the module, there is also a reminder displayed, so you get this info there also.</p>
+<h1 id="install-with-pip">Install with pip<a class="headerlink" href="#install-with-pip" title="Anchor link to this section for reference">&para;</a></h1>
+<p>You use <code>pip</code> this way, in a Linux shell OR a python shell:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>&lt;package&gt;
+</code></pre></div>
+<p>Use <code>pip3</code> if you loaded python3.</p>
+<p>Then the package ends up in
+<code>~/.local/lib/python&lt;version&gt;/site-packages/</code> .</p>
+<p>Note that python\&lt;version> is omitting the last number (bug fix), like
+3.8 for python-3.8.7. We HIGHLY recommend using a virtual environment
+during installation, since this makes it easier to install for different
+versions of Python. More information will follow later in this course
+(<a href="https://uppmax.github.io/HPC-python/isolated.html">https://uppmax.github.io/HPC-python/isolated.html</a>).</p>
+<div class="note">
+<div class="title">
+<p>Note</p>
+</div>
+<p>You will test this in the separated sessions about isolated environments
+in a while.</p>
+</div>
+<div class="keypoints">
+<ul>
+<li>You can check for packages</li>
+</ul>
+<blockquote>
+<ul>
+<li>
+<p>from the Python shell with the <code>import</code> command</p>
+</li>
+<li>
+<p>from BASH shell with the</p>
+<blockquote>
+<ul>
+<li><code>pip list</code> command at both centers</li>
+<li><code>ml help python/3.9.5</code> at UPPMAX</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>Installation of Python packages can be done either with <strong>PYPI</strong> or
+    <strong>Conda</strong></li>
+<li>You install own packages with the <code>pip install</code> command (This is the
+    recommended way on HPC2N)</li>
+<li>At UPPMAX Conda is also available (See Conda section)</li>
+</ul>
+</div>
+<h1 id="conda_1">Conda<a class="headerlink" href="#conda_1" title="Anchor link to this section for reference">&para;</a></h1>
+<div class="questions">
+<ul>
+<li>What does Conda do?</li>
+<li>How to create a Conda environment</li>
+</ul>
+</div>
+<div class="objectives">
+<ul>
+<li>Learn pros and cons with Conda</li>
+<li>Learn how to install packages and work with the Conda (isolated)
+    environment</li>
+</ul>
+</div>
+<div class="hint">
+<div class="title">
+<p>Hint</p>
+</div>
+<ul>
+<li>On Bianca (with no internet), Conda is the first choice when
+    installing packages, because there is a local mirror of most of the
+    Conda repositories.</li>
+</ul>
+</div>
+<h2 id="using-conda">Using Conda<a class="headerlink" href="#using-conda" title="Anchor link to this section for reference">&para;</a></h2>
+<div class="admonition">
+<p>Conda cheat sheet</p>
+<ul>
+<li>List packages in present environment: <code>conda list</code></li>
+<li>List all environments: <code>conda info -e</code> or <code>conda env list</code></li>
+<li>Install a package: <code>conda install somepackage</code></li>
+<li>Install from certain channel (conda-forge):
+    <code>conda install -c conda-forge somepackage</code></li>
+<li>Install a specific version: <code>conda install somepackage=1.2.3</code></li>
+<li>Create a new environment: <code>conda create --name myenvironment</code></li>
+<li>Create a new environment from requirements.txt:
+    <code>conda create --name myenvironment --file requirements.txt</code></li>
+<li>On e.g. HPC systems where you don’t have write access to central
+    installation directory: conda create --prefix /some/path/to/env``</li>
+<li>Activate a specific environment: <code>conda activate myenvironment</code></li>
+<li>Deactivate current environment: <code>conda deactivate</code></li>
+</ul>
+</div>
+<h2 id="install-with-conda-uppmax">Install with conda (UPPMAX)<a class="headerlink" href="#install-with-conda-uppmax" title="Anchor link to this section for reference">&para;</a></h2>
+<div class="note">
+<div class="title">
+<p>Note</p>
+</div>
+<p>We have mirrored all major conda repositories directly on UPPMAX, on
+both Rackham and Bianca. These are updated every third day. We have the
+following channels available:</p>
+<ul>
+<li>bioconda</li>
+<li>biocore</li>
+<li>conda-forge</li>
+<li>dranew</li>
+<li>free</li>
+<li>main</li>
+<li>pro</li>
+<li>qiime2</li>
+<li>r</li>
+<li>r2018.11</li>
+<li>scilifelab-lts</li>
+</ul>
+<p>You reach them all by loading the conda module. You don't have to state
+the specific channel when using UPPMAX. Otherwise you do with
+<code>conda -c &lt;channel&gt; ...</code></p>
+</div>
+<h2 id="first-steps">First steps<a class="headerlink" href="#first-steps" title="Anchor link to this section for reference">&para;</a></h2>
+<div class="tip">
+<div class="title">
+<p>Tip</p>
+</div>
+<p>There will be an exercise in the end!</p>
+</div>
+<ol>
+<li>First load our conda module (there is no need to install you own
+    miniconda, for instance)</li>
+</ol>
+<blockquote>
+<div class="prompt" markdown="1">
+<p>bash \$</p>
+<p>module load conda</p>
+</div>
+<ul>
+<li>This grants you access to the latest version of Conda and all
+    major repositories on all UPPMAX systems.</li>
+<li>Check the text output as conda is loaded, especially the first
+    time, see below</li>
+</ul>
+<blockquote>
+<div class="admonition dropdown" markdown="1">
+<p>Conda load output</p>
+<ul>
+<li>The variable CONDA_ENVS_PATH contains the location of your
+    environments. Set it to your project's environments folder if
+    you have one.</li>
+<li>Otherwise, the default is \~/.conda/envs.</li>
+<li>You may run <code>source conda_init.sh</code> to initialise your shell to
+    be able to run <code>conda activate</code> and <code>conda deactivate</code> etc.</li>
+<li>Just remember that this command adds stuff to your shell outside
+    the scope of the module system.</li>
+<li>REMEMBER TO <code>conda clean -a</code> once in a while to remove unused
+    and unnecessary files</li>
+</ul>
+</div>
+</blockquote>
+</blockquote>
+<ol>
+<li>First time</li>
+</ol>
+<blockquote>
+<ul>
+<li>
+<p>The variable CONDA_ENVS_PATH contains the location of your
+    environments. Set it to your project's environments folder if you
+    have one.</p>
+</li>
+<li>
+<p>Otherwise, the default is \~/.conda/envs.</p>
+</li>
+<li>
+<p>Example:</p>
+<blockquote>
+<div class="prompt" markdown="1">
+<p>bash \$</p>
+<p>export
+CONDA_ENVS_PATH=/proj/\&lt;your-project-id>/nobackup/\&lt;username></p>
+</div>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<div class="admonition dropdown" markdown="1">
+<p>By choice</p>
+<p>Run <code>source conda_init.sh</code> to initialise your shell (bash) to be
+able to run <code>conda activate</code> and <code>conda deactivate</code> etcetera instead
+of <code>source activate</code>. It will modify (append) your <code>.bashrc</code> file.</p>
+</div>
+<ul>
+<li>When conda is loaded you will by default be in the base
+    environment, which works in the same way as other conda
+    environments. include a Python installation and some core system
+    libraries and dependencies of Conda. It is a “best practice” to
+    avoid installing additional packages into your base software
+    environment.</li>
+</ul>
+</blockquote>
+</blockquote>
+<ol>
+<li>Create the conda environment</li>
+</ol>
+<blockquote>
+<ul>
+<li>
+<p>Example:</p>
+<div class="prompt" markdown="1">
+<p>bash \$</p>
+<p>conda create --name python36-env python=3.6 numpy=1.13.1
+matplotlib=2.2.2</p>
+</div>
+<div class="admonition dropdown" markdown="1">
+<p>The <code>mamba</code> alternative</p>
+</div>
+<ul>
+<li>
+<p><code>mamba</code> is a fast drop-in alternative to conda, using
+    "libsolv" for dependency resolution. It is available from the
+    <code>conda</code> module.</p>
+</li>
+<li>
+<p>Example:</p>
+<blockquote>
+<div class="prompt" markdown="1">
+<p>bash \$</p>
+</div>
+<p>mamba create --name python37-env python=3.7 numpy=1.13.1
+matplotlib=2.2.2</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ol>
+<li>
+<p>Activate the conda environment by:</p>
+<blockquote>
+<div class="prompt" markdown="1">
+<p>bash \$</p>
+</div>
+<p>source activate python36-env</p>
+<ul>
+<li>You will see that your prompt is changing to start with
+    <code>(python-36-env)</code> to show that you are within an environment.</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>Now do your work!</p>
+</li>
+<li>
+<p>Deactivate</p>
+</li>
+</ol>
+<blockquote>
+<div class="prompt" markdown="1" language="bash"
+prompts="(python-36-env) $">
+<p>conda deactivate</p>
+</div>
+</blockquote>
+<div class="warning">
+<div class="title">
+<p>Warning</p>
+</div>
+<ul>
+<li>Conda is known to create <strong>many</strong> <em>small</em> files. Your diskspace is
+    not only limited in GB, but also in number of files (typically
+    <code>300000</code> in \$home).</li>
+<li>Check your disk usage and quota limit with <code>uquota</code></li>
+<li>Do a <code>conda clean -a</code> once in a while to remove unused and
+    unnecessary files</li>
+</ul>
+</div>
+<ul>
+<li><a href="https://uppmax.uu.se/support/user-guides/conda-user-guide/">More info about Conda on
+    UPPMAX</a></li>
+</ul>
+<h2 id="working-with-conda-environments-defined-by-files">Working with Conda environments defined by files<a class="headerlink" href="#working-with-conda-environments-defined-by-files" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>
+<p>Create an environment based on dependencies given in an environment
+    file:</p>
+<div class="highlight"><pre><span></span><code>$ conda env create --file environment.yml
+</code></pre></div>
+</li>
+<li>
+<p>Create file from present conda environment:</p>
+<div class="highlight"><pre><span></span><code>$ conda env export &gt; environment.yml
+</code></pre></div>
+</li>
+</ul>
+<p><code>environments.yml</code> (for conda) is a yaml-file which looks like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-environment</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">channels</span><span class="p">:</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">defaults</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">dependencies</span><span class="p">:</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">numpy</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matplotlib</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandas</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scipy</span>
+</code></pre></div>
+<p><code>environments.yml</code> with versions:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-environment</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">channels</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">defaults</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nt">dependencies</span><span class="p">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python=3.7</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">numpy=1.18.1</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matplotlib=3.1.3</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandas=1.1.2</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scipy=1.6.2</span>
+</code></pre></div>
+<div class="admonition">
+<p>More on dependencies</p>
+<ul>
+<li>Dependency management from course <a href="https://aaltoscicomp.github.io/python-for-scicomp/dependencies/">Python for Scientific
+    computing</a></li>
+</ul>
+</div>
+<h1 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Anchor link to this section for reference">&para;</a></h1>
+<div class="challenge">
+<p>UPPMAX: Create a conda environment and install some packages</p>
+<ul>
+<li>First check the current installed packages while having
+    <code>python/3.9.5</code> loaded</li>
+<li>Open a new terminal and have the old one available for later
+    comparison</li>
+<li>Use the conda module on Rackham and create an environment with name
+    <code>HPC-python23</code> with <code>python 3.7</code> and <code>numpy 1.15</code></li>
+</ul>
+<blockquote>
+<ul>
+<li>
+<p>Use your a path for <code>CONDA_ENVS_PATH</code> of your own choice or <code>/proj/py-r-jl/&lt;user&gt;/python</code></p>
+<p>:   -   (It may take a minute or so)</p>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>Activate!</li>
+<li>Check with <code>pip list</code> what is there. Compare with the environment
+    given from the python module in the first terminal window.</li>
+</ul>
+<blockquote>
+<ul>
+<li>Which version of Python did you get?</li>
+</ul>
+</blockquote>
+<ul>
+<li>Don't forget to deactivate the Conda environment before doing other
+    exercises!</li>
+</ul>
+</div>
+<div class="solution dropdown">
+<p>Solution for UPPMAX</p>
+<p>Write this in the terminal</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>conda
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">CONDA_ENVS_PATH</span><span class="o">=</span>/proj/py-r-jl/&lt;user&gt;/python
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>HPC-python23<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7<span class="w"> </span><span class="nv">numpy</span><span class="o">=</span><span class="m">1</span>.15
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>HPC-python23
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>$<span class="w"> </span>pip<span class="w"> </span>list
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>$<span class="w"> </span>python<span class="w"> </span>-V
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>deactivate
+</code></pre></div>
+</div>
+<div class="keypoints">
+<ul>
+<li>
+<p>Conda is an installer of packages but also bigger toolkits</p>
+</li>
+<li>
+<p>Conda creates isolated environments (see next section) not clashing
+    with other installations of python and other versions of packages</p>
+</li>
+<li>
+<p>Conda environment requires that you install all packages needed by
+    yourself.</p>
+<blockquote>
+<ul>
+<li>That is, you cannot load the python module and use the
+    packages therein inside you Conda environment.</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../slurm/" class="md-footer__link md-footer__link--prev" aria-label="Previous: More about Slurm" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                More about Slurm
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../pip/" class="md-footer__link md-footer__link--next" aria-label="Next: Install with pip to Bianca" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                Install with pip to Bianca
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.footer", "search.suggest", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fc8c2696.min.js"></script>
+      
+    
+  </body>
+</html>
