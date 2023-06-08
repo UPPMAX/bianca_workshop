@@ -8,7 +8,7 @@
 
 ## The module system
 
-- As we have seen this morning, there is a lot of programs and tools installed as tools on Bianca.
+- As we have seen this morning, there is a lot of programs and tools installed as modules on Bianca.
 - These have typically been installed on Rackham and is synced over to Bianca a couple of times per day.
 - You can request installations but that may take several days or even weeks to be handled by the application experts at UPPMAX.
 - But you may be able to do installations yourself. Here the use of Rackham comes handy because of the:
@@ -21,8 +21,8 @@
     - This is handy for personal needs, low numbers of files (i.e. not Conda).
 - Usually better to install in project directory.
     - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
-- If not available on Bianca already you may have to use the wharf to install your tools
-    - alternatively let a Application Expert install the tool as a module.
+- If not available on Bianca already (like Conda repositories) you may have to use the Wharf to install your tools
+    - Alternatively let an Application Expert install the tool as a module.
 
 
 
@@ -41,8 +41,9 @@
 ### Conda
 
 - We have mirrored all major conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
-    We have the following channels available:
-    
+
+!!! info "Available Conda channels"
+      
     - bioconda
     - biocore
     - conda-forge
