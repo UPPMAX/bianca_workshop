@@ -7,3 +7,4 @@ This repository contains the source code for the [Bianca workshop](https://uppma
 
 The website is created using
 [mkdocs-material](https://squidfunk.github.io/mkdocs-material). 
+
