@@ -23,12 +23,12 @@
 
     ``` sh
     ╔═══════════╗ ╔═════════════╗
-    ║   WEB     ║ ║  TERMINAL   ║
-    ║  BROWSER  ║ ║   WINDOW    ║
-    ║  WINDOW   ║ ╚═════════════╝
-    ║   WITH    ║ ╔═════════════╗
-    ║   THE     ║ ║   BROWSER   ║
-    ║  STREAM   ║ ║   W/HACKMD  ║
+    ║           ║ ║  TERMINAL   ║
+    ║           ║ ║   WINDOW    ║
+    ║   ZOOM    ║ ╚═════════════╝
+    ║  WINDOW   ║ ╔═════════════╗
+    ║           ║ ║   BROWSER   ║
+    ║           ║ ║  W/MATERIAL ║
     ╚═══════════╝ ╚═════════════╝
     ```
 ## Questions
@@ -68,19 +68,20 @@
 |Topic|Start|Timing|Content|
 |-----|-----|------|-------|
 |Syllabus and overview|9.00|15|intro|
-|Login|9.15|45|Login ssh/ThinLinc, 2FA|
-|Coffee break|10.00|15|Break|
-|Working with the command-line|10.15|30|Command-line intro|
-|Module system|10.45|25| Module system|
-|Short break|11.10|5|Break|
-|Transferring files|11.15|45|Transfering files to/from Bianca|
+|Login|9.15|30|Login ssh/ThinLinc, 2FA|
+|Coffee break|9.45|15|Break|
+|Working with the command-line|10.00|30|Command-line intro|
+|Module system|10.30|30| Module system|
+|Short break|11.00|5|Break|
+|Transferring files|11.05|45|Transfering files to/from Bianca|
+|(Q/A)|11.50
 |LUNCH break|12.00|60| | 
 |NAISS-SENS and sensitive data|13.00|60|NAISS-SENS and sensitive data| 
 |Short break|14.00|5|Break|
 |Compute nodes and slurm|14.05|20 |Compute nodes and slurm|
-|Software installation |14.25| 15|Software installation |
-|Summary|14.40|10|Summary|
-|Coffee break|14.50|15|Break|
-|Q/A|15.05|55| Time for interaction|
+|Software installation |14.25| 20|Software installation |
+|Summary|14.45|10|Summary|
+|Coffee break|14.55|15|Break|
+|Q/A|15.10|55| Time for interaction|
 
 
