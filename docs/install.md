@@ -41,8 +41,9 @@
 ### Conda
 
 - We have mirrored all major conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
-    We have the following channels available:
-    
+
+!!! info "Available Conda channels"
+      
     - bioconda
     - biocore
     - conda-forge
