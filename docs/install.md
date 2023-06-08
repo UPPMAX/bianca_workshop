@@ -83,22 +83,29 @@
 
 ### R packages
 
-- On UPPMAX the module R_packages is a package library containing almost all packages in the
-  - CRAN and BioConductor repositories. 
-  - As of 2021-11-11 there are a total of 21659 R packages installed in R_packages/4.1.1. A total of 21740 packages are available in CRAN and BioConductor.
+- On UPPMAX the module ``R_packages`` is an omnibus package library containing almost all packages in the CRAN and BioConductor repositories. 
+- As of 2023-05-31, there were a total of 23100 R packages installed in ``R_packages/4.2.1``.
+    -  A total of 23109 packages were available in CRAN and BioConductor, and 23000 of these were installed in ``R_packages/4.2.1``
+    -  The additional 100 R packages available in this module were installed from the CRAN/BioConductor archives, or were hosted on github, gitlab or elsewhere.
 
-- You can quickly check if your package is there by:
+Chances are good the R packages you need are already available once you load this module.  You can quickly check by loading it:
 
-``$ ml R_packages/4.1.1``
+``$ ml R_packages/4.2.1``
 
-Then ``grep`` for some package, in this case "glmnet".
+Then within R, try loading the package you want:
+
+``library(glmnet)``
+
+Or a bit longer way, you can ``grep`` for the package after this module is loaded using the environment variable ``$R_LIBS_SITE``, which contains the locations of all R packages installed within the module.
 
 ```bash
 $ ls -l $R_LIBS_SITE | grep glmnet
-dr-xr-sr-x  9 douglas sw  4096 Sep  6  2021 EBglmnet
-dr-xr-sr-x 11 douglas sw  4096 Nov 11  2021 glmnet
-dr-xr-sr-x  8 douglas sw  4096 Sep  7  2021 glmnetcr
-dr-xr-sr-x  7 douglas sw  4096 Sep  7  2021 glmnetUtils
+drwxrwsr-x  9 douglas sw  4096 May 28 16:59 EBglmnet
+drwxrwsr-x 11 douglas sw  4096 May 25 01:22 glmnet
+drwxrwsr-x  6 douglas sw  4096 May 25 04:03 glmnetSE
+drwxrwsr-x  7 douglas sw  4096 May 25 04:04 glmnetUtils
+drwxrwsr-x  8 douglas sw  4096 May 25 04:04 glmnetcr
+drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 ```
 
 !!! info "More info"

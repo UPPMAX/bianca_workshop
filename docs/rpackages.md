@@ -1,19 +1,31 @@
 # Installing R packages on Bianca
 
-## First check if package is already in R_packages/X.Y.0
+## First check if package is already in R_packages/x.y.z
 
-- You can quickly check if your package is there by:
 
-``$ ml R_packages/4.1.1``
+- On UPPMAX the module ``R_packages`` is an omnibus package library containing almost all packages in the CRAN and BioConductor repositories.
+- As of 2023-05-31, there were a total of 23100 R packages installed in ``R_packages/4.2.1``.
+    -  A total of 23109 packages were available in CRAN and BioConductor, and 23000 of these were installed in ``R_packages/4.2.1``
+    -  The additional 100 R packages available in this module were installed from the CRAN/BioConductor archives, or were hosted on github, gitlab or elsewhere.
 
-Then grep for some package, in this case "glmnet".
+Chances are good the R packages you need are already available once you load this module.  You can quickly check by loading it:
+
+``$ ml R_packages/4.2.1``
+
+Then within R, try loading the package you want:
+
+``library(glmnet)``
+
+Or a bit longer way, you can ``grep`` for the package after this module is loaded using the environment variable ``$R_LIBS_SITE``, which contains the locations of all R packages installed within the module.
 
 ```bash
 $ ls -l $R_LIBS_SITE | grep glmnet
-dr-xr-sr-x  9 douglas sw  4096 Sep  6  2021 EBglmnet
-dr-xr-sr-x 11 douglas sw  4096 Nov 11  2021 glmnet
-dr-xr-sr-x  8 douglas sw  4096 Sep  7  2021 glmnetcr
-dr-xr-sr-x  7 douglas sw  4096 Sep  7  2021 glmnetUtils
+drwxrwsr-x  9 douglas sw  4096 May 28 16:59 EBglmnet
+drwxrwsr-x 11 douglas sw  4096 May 25 01:22 glmnet
+drwxrwsr-x  6 douglas sw  4096 May 25 04:03 glmnetSE
+drwxrwsr-x  7 douglas sw  4096 May 25 04:04 glmnetUtils
+drwxrwsr-x  8 douglas sw  4096 May 25 04:04 glmnetcr
+drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 ```
 
 ## Install steps
@@ -22,7 +34,7 @@ dr-xr-sr-x  7 douglas sw  4096 Sep  7  2021 glmnetUtils
 
 - [R on UPPMAX course](https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html)
 - **note** First decide on wich R version it should be based on and load that R_packages module.
-- If not stated otherwise, your installation will end up in your ``~/R`` directory
+- If not stated otherwise, your installation will end up in the ``~/R`` directory within your home directory
 
 #### Methods
 
@@ -40,46 +52,50 @@ dr-xr-sr-x  7 douglas sw  4096 Sep  7  2021 glmnetUtils
 ### Transfer to wharf
 
 - You may transfer the whole R library (in you home folder)  
+    - this is usually the easiest way
 - or select the directory(-ies) related to you new installation
     - **note** there may be more than one directory
 
 ### Move package to local Bianca R package path 
 
-- Sync or move the R directory or the specific folders to ~/R 
+- Sync or move the R directory or the specific folders to your ``~/R`` directory on bianca
 
 ### Test your installation
 
-- Start an R session and load the new package
+- Start an R session on bianca and load the new package
 
 
 
-## Example — Install Tidycmprsk
+## Example : Update dowser
 
-[tidycmprsk on GitHub](https://mskcc-epi-bio.github.io/tidycmprsk/)
+[dowser on Readthedocs](https://dowser.readthedocs.io/en/latest/)
 
 !!! info
    
-    The tidycmprsk package provides an intuitive interface for working with the competing risk endpoints. The package wraps the cmprsk package, and exports functions for univariate cumulative incidence estimates with cuminc() and competing risk regression with crr().
+    Dowser is part of the Immcantation analysis framework for Adaptive Immune Receptor Repertoire sequencing (AIRR-seq). Dowser provides a set of tools for performing phylogenetic analysis on B cell receptor repertoires. It supports building and visualizing trees using multiple methods, and implements statistical tests for discrete trait analysis of B cell migration, differentiation, and isotype switching.
 
+The version of dowser in ``R_packages/4.2.1`` is 1.1.0. It was updated to version 1.2.0 on [2023-05-30](https://cran.rstudio.com/web/packages/dowser/).
 
 ### Install on Rackham
 
-You can install this for yourself by beginning on rackham. Do
+You can update this for yourself by beginning on rackham. Do
 
 ``` bash
-module load R_packages/4.1.1
+module load R_packages/4.2.1
 ```
 and then, within R, do
 
 ``` R
-install.packages('tidycmprsk')
+install.packages('dowser')
 ```
 
-You will see two questions to answer yes to:
+The `install.packages()` command that you use to install new packages is also used to update already installed packages.
+
+As the update begins, you will see two questions, answer yes to both:
 
 ``` R
-Warning in install.packages("tidycmprsk") :
-      'lib = "/sw/apps/R_packages/4.1.1/rackham"' is not writable
+Warning in install.packages("dowser") :
+      'lib = "/sw/apps/R_packages/4.2.1/rackham"' is not writable
     Would you like to use a personal library instead? (yes/No/cancel) yes
 ```
 
@@ -87,11 +103,55 @@ and
 
 ``` R
 Would you like to create a personal library
-    '~/R/x86_64-pc-linux-gnu-library/4.1'
+    '~/R/x86_64-pc-linux-gnu-library/4.2'
     to install packages into? (yes/No/cancel) yes
 ```
 
-This will then to an extended installation process that also does some updates.  This creates a directory ~/R that contains the installations and updates of R packages.
+If you have already installed or updated an R package with R_packages/4.2.1 loaded that resulted in creating a personal library, you may not see one or both of these questions.
+
+This will then lead to a brief installation process.  This creates the directory `~/R/x86_64-pc-linux-gnu-library/4.2` that it refers to in the question.  This directory contains your personal installations and updates of R packages.
+
+The complete installation output for this update on rackham was:
+
+``` R
+> install.packages('dowser')
+Installing package into '/sw/apps/R_packages/4.2.1/rackham'
+(as 'lib' is unspecified)
+Warning in install.packages("dowser") :
+  'lib = "/sw/apps/R_packages/4.2.1/rackham"' is not writable
+Would you like to use a personal library instead? (yes/No/cancel) yes
+Would you like to create a personal library
+'/domus/h1/douglas/R/x86_64-pc-linux-gnu-library/4.2'
+to install packages into? (yes/No/cancel) yes
+--- Please select a CRAN mirror for use in this session ---
+trying URL 'https://ftp.acc.umu.se/mirror/CRAN/src/contrib/dowser_1.2.0.tar.gz'
+Content type 'application/x-gzip' length 1722229 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+* installing *source* package 'dowser' ...
+** package 'dowser' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (dowser)
+
+The downloaded source packages are in
+    '/scratch/RtmpRo0Gz5/downloaded_packages'
+>
+```
+
+
 
 ### Transfer to the Wharf
 
@@ -126,7 +186,7 @@ sftp>
 
 If you have not uploaded anything to your wharf, this will be empty. It might have a few things in it.
 
-Now, upload your (whole) ``R`` directory here.
+Now, upload your entire personal ``R`` directory from rackham here.
 
 ``` bash
 sftp> put -r R
