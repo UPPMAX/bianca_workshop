@@ -22,14 +22,14 @@
     If you have just one screen (e.g. a laptop), we recommend arranging your windows like this:
 
     ``` sh
-    ╔═══════════╗ ╔═════════════╗
+    ╔════════════╗ ╔══════════════╗
     ║           ║ ║  TERMINAL   ║
     ║           ║ ║   WINDOW    ║
-    ║   ZOOM    ║ ╚═════════════╝
-    ║  WINDOW   ║ ╔═════════════╗
+    ║   ZOOM    ║ ╚══════════════╝
+    ║  WINDOW   ║ ╔══════════════╗
     ║           ║ ║   BROWSER   ║
     ║           ║ ║  W/MATERIAL ║
-    ╚═══════════╝ ╚═════════════╝
+    ╚════════════╝ ╚══════════════╝
     ```
 ## Questions
 
@@ -82,6 +82,6 @@
 |Software installation |14.25| 20|Software installation |
 |Summary|14.45|10|Summary|
 |Coffee break|14.55|15|Break|
-|Q/A|15.10|55| Time for interaction|
+|Q/A|15.10|50| Time for interaction|
 
 
