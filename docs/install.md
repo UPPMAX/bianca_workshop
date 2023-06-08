@@ -21,8 +21,8 @@
     - This is handy for personal needs, low numbers of files (i.e. not Conda).
 - Usually better to install in project directory.
     - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
-- If not available on Bianca already you may have to use the wharf to install your tools
-    - alternatively let a Application Expert install the tool as a module.
+- If not available on Bianca already (like Conda repositories) you may have to use the Wharf to install your tools
+    - Alternatively let a Application Expert install the tool as a module.
 
 
 
