@@ -23,8 +23,8 @@
     - and to satisfy regulations.
     
 ### Bianca has no Internet
-    - Still you can log in, but it is done in two steps!
-    - We recomend the ThinLink web portal, to enable graphics
+- Still you can log in, but it is done in two steps!
+- We recomend the ThinLink web portal, to enable graphics
 
 ![Bianca](./img/biancaorganisation-01.png)
 
