@@ -81,8 +81,9 @@ You may try to log in any of your terminals <https://uppmax.github.io/uppmax_int
 ``` bash
     $ ssh <user>-sens2023531@bianca.uppmax.uu.se
 ```
+
 - you are prompted to give your password directly followed by the 6-digit 2-factor
-        - like: verysecret678123
+    - like: verysecret678123
 
 
 ## Start an interactive session
