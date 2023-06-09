@@ -57,6 +57,8 @@ $ pwd -P
     The first `cd ~` gives no output, due to the 'Silence is golden' rule,
     which entails to display nothing if all went OK.
 
+    It appears that your home folder, is some else's subfolder :-)
+
 - Check the path to your projects
 
 ```
@@ -71,6 +73,8 @@ $ pwd -P
     /proj
     /proj
     ```
+    Your `/proj` folder, is the machine's `/proj` folder.
+
 ```
 $ cd /sensXXX
 $ pwd
@@ -81,6 +85,7 @@ $ pwd -P
     /proj/sensXXX
     /castor/project/proj
     ```
+    Your `/proj/sensXXX` folder, however, is a subfolder of `/castor`
 
 ### Create empty file
 
@@ -111,12 +116,14 @@ $ ./my_script.sh
 $ rm my_script.sh
 ```
 
+Note that `>` means '(over)write the text to file',
+and `>>` means 'append the text to file'.
+
 ??? answer
     There is only output after running the script:
     ```
     Hello world
     ```
-
 
 ## The terminal and the GUI are friends
 
