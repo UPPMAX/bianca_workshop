@@ -6,7 +6,7 @@
     - This is a short introduction in how to reach the calculation nodes
 
 ### Slurm, sbatch, the job queue
-- Problem: _1000 users, 300 nodes, 4.5k cores_
+- Problem: _1000 users, 300 nodes, 5000 cores_
     - Need a queue:
 
 - [Slurm](https://slurm.schedmd.com/) is a jobs scheduler
