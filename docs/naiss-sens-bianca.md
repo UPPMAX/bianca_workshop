@@ -115,22 +115,26 @@ But how do you know whether data is anonymised?
 
 ### Common Questions
 
-What should I do if I have both sensitive and non-sensitive data?
+**What should I do if I have both sensitive and non-sensitive data?**
+
 - It may be convenient to have a separate project on Rackham. Scripts and pipelines can then be built on Rackham and moved to Bianca.
 - Having non-sensitive data on Bianca is okay, if maintaining two separate projects is impractical.
 
-One project or many? When should I apply for another project? 
+**One project or many? When should I apply for another project?**
+
 - Because *every* member in a project should be assumed to have full access to all data, each different constellation of collaborators needs its own project.
 - Because of the extra effort required to move data between projects, NAISS SENS projects can be extended and a continuation proposal is not necessary.
 - Let data, ethical consent, and practicality rule.
 
-I need more core-hours!
+**I need more core-hours!**
+
 - Do you really? 
 	- First, use jobstats to determine whether you've been using your allocation efficiently.
 	- Second, remember that you can still submit and run jobs after your allocation is out. Such "bonus" jobs run after normal-priority jobs. Typically, they will run in the evening, within a couple of days.
 - If you know that you've been submitting efficient jobs and the wait time in the queue is an actual problem, then contact UPPMAX support and request more time. Motivate your request.
 
-I need more storage space!
+**I need more storage space!**
+
 - Do you really?
 	- First, make an inventory of the data in your project — what do you have, how much space does it take, and why is it there?
 	- Second, delete data that you don't have an immediate plan to analyse.
