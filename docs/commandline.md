@@ -117,7 +117,8 @@ $ rm my_script.sh
 ```
 
 Note that `>` means '(over)write the text to file',
-and `>>` means 'append the text to file'.
+and `>>` means 'append the text to file'. Also, single quotes (`'`)
+for a cleaner syntax (i.e. avoiding `\"`).
 
 ??? answer
     There is only output after running the script:
