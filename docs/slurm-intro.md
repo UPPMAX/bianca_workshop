@@ -104,8 +104,8 @@ In short, this program goes over the following procedure, over and over again:
 1. Reads status reports from all compute nodes, about all their jobs, all their compute nodes, and all their active users.
 1. Are there unallocated compute nodes for all queued jobs?
 1. Otherwise, try to "steal" nodes from project clusters, to get more unallocated compute nodes. This "stealing" is done in two steps: 
-   - a/ "drain" a certain node, i.e. disallow more jobs to start on it; 
-   - b/ remove the compute node from the project cluster, if no jobs are running on the node.
+    - a/ "drain" a certain node, i.e. disallow more jobs to start on it; 
+    - b/ remove the compute node from the project cluster, if no jobs are running on the node.
 3. Use all unallocated nodes to create new compute nodes. Jobs with a higher priority get compute nodes first.
 
 
