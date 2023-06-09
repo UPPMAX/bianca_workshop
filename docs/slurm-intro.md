@@ -142,6 +142,34 @@ In short, this program goes over the following procedure, over and over again:
     - We restrict each user to at most 5000 running and waiting jobs in total.
     - Each project has a 30 days running allocation of CPU hours. We do not forbid running jobs after the allocation is overdrafted, but instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
 
+## Summary about the Bianca Hardware
+
+- Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes with 128, 256 or 512 GB memory
+- GPU nodes with two NVIDIA A100 40GB GPUs each.
+
+**Cores per node:** 16, or on some 64
+
+**Details about the compute nodes**
+
+- Thin nodes
+    - 194 compute nodes with 16 cores and a 4TB mechanical drive or 1TB SSD as SCRATCH.
+- Fat nodes
+    - 74 compute nodes, 256 GB memory each and 4 TB scratch disk
+    - 2 compute nodes, 512 GB memory each and 4 TB scratch disk
+    - 12 compute nodes, 512 GB memory each and 128 cores and 4 or 12 TB scratch disk
+    - 10 compute nodes, 256 GB memory each and equipped with 2xNVIDIA A100 (40GB) GPUs and 4.9 TB scratch disk
+- Total number of CPU cores is 5248
+- Login nodes have 2vCPU each and 16GB memory
+- Network
+    - Dual 10 Gigabit Ethernet for all nodes
+
+**Storage**
+
+- Local disk (scratch): 4 TB 
+- Home storage: 32 GB at Castor
+- Project Storage: Castor
+
+
 
 !!! abstract "Keypoints"
     - You are always in the login node unless you:
