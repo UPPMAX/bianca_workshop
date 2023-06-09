@@ -17,6 +17,7 @@
 
 1. `pwd`  &emsp; present directory
 1. `ls`  &emsp;list content
+1. `touch` &emsp;create an empty file
 1. `cd`  &emsp;change directory
 1. `mkdir`  &emsp;make directory
 1. `cp`  &emsp;copy
@@ -34,6 +35,7 @@
 14. `tar`  &emsp;compress or extract file
 15. `chmod`  &emsp;change file permissions
 16. `man`  &emsp;info about a command
+17. `echo`  &emsp;print text on screen
 
 ## Type along
 
@@ -52,6 +54,8 @@ $ pwd -P
     /home/$USER
     /castor/project/home/bjornc
     ```
+    The first `cd ~` gives no output, due to the 'Silence is golden' rule,
+    which entails to display nothing if all went OK.
 
 - Check the path to your projects
 
@@ -78,6 +82,73 @@ $ pwd -P
     /castor/project/proj
     ```
 
+### Create empty file
+
+Create an empty file, show it exists, and delete it:
+
+```
+$ touch my_file.txt
+$ ls
+$ rm my_file.txt
+```
+
+??? answer
+    There is only output after `ls`:
+    ```
+    my_file.txt
+    ```
+    The exact output depends on all files present in your working directory
+
+### Create simple script
+
+Create a simple script, run it, and delete it:
+
+```
+$ echo '#!/bin/bash' > my_script.sh
+$ echo 'echo "Hello world"' >> my_script.sh
+$ chmod +x my_script.sh
+$ ./my_script.sh
+$ rm my_script.sh
+```
+
+??? answer
+    There is only output after running the script:
+    ```
+    Hello world
+    ```
+
+
+## The terminal and the GUI are friends
+
+On a clean terminal, try typing `cd` 
+and then dragging a folder from the GUI to the terminal.
+
+It types the absolute path for you!
+
+## Use `chmod` to protect important files
+
+Most projects rely on data that should in principle never be changed. 
+Run `chmod -R -w data/` to remove write permissions 
+on everything inside the `data` directory. 
+Run `chmod -R +w data/` to undo this.
+
+- Protect your files
+
+```
+$ mkdir dont_delete_me
+$ touch dont_delete_me/please_let_me_live.txt
+$ chmod -R -w dont_delete_me/
+$ rm -rf dont_delete_me
+$ chmod -R +w dont_delete_me/
+$ rm -rf dont_delete_me
+```
+
+??? answer
+    Only the first `rm` gives output:
+    ```
+    rm: cannot remove ‘dont_delete_me/please_let_me_live.txt’: Permission denied
+    ```
+
 ## Aliases on your desktop
 
 1. Be logged in with ThinLinc.
@@ -89,18 +160,5 @@ $ pwd -P
   - `ln -s /proj/$PROJ/nobackup nobackup`
   - `ln -s /proj/$PROJ/nobackup/wharf/<yourusername>/<yourusername-$PROJ> wharf`
 
-You can also make aliases to executables, like the convenient `interactive`-job starting script in `proj/useful_files`.
-
-## The terminal and the GUI are friends
-
-On a clean terminal, try typing `cd` and then dragging a folder from the GUI to the terminal.
-
-It types the absolute path for you!
-
-## Use `chmod` to protect important files
-
-Most projects rely on data that should in principle never be changed. Run `chmod -R -w data/` to remove write permissions on everything inside the `data` directory. 
-
-Note that e.g. `rm --force` can still delete files, and you can overwrite or delete data by confirming when Bash prompts (if you own the files). However, this will protect you from most programmatic mistakes, the mistakes of others, and give you an opportunity to regret a typo.
-
-Some people use an alias for `rm` that causes it to always prompt for confirmation. I don't recommend this because it detracts from the effectiveness of write-protecting your own files.
+You can also make aliases to executables, 
+like the convenient `interactive`-job starting script in `proj/useful_files`.
