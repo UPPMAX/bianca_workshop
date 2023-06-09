@@ -154,31 +154,6 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 - [Guide for compiling serial and parallel programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/)
 - Available combinations of compilers and parallel libraries (openmpi): <https://hackmd.io/_IqCbOiyS8SZ0Uqpa3UpHg?view>
 
-## Summary about the Bianca Hardware
-
-- Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes with 128, 256 or 512 GB memory
-- GPU nodes withtwo NVIDIA A100 40GB GPUs each.
-
-**Cores per node**|16/64|
-
-**Details about the compute nodes**
-
-- Thin nodes
-    - 204 compute nodes with single or dual CPUs and one 4TB mechanical drive or 1TB SSD
-    - Each CPU has 8 cores
-- Fat nodes
-    - 75 compute nodes, 256 GB memory each.
-    - 15 compute nodes, 512 GB memory each
-    - 10 compute nodes each equipped with 2xNVIDIA A100 (40GB) GPUs
-- Total number of CPU cores is 4800
-- Login nodes have 2vCPU each and 16GB memory
-- Network
-    - Dual 10 Gigabit Ethernet for all nodes
-
-**Storage**
-- Local disk (scratch): 4 TB 
-- Home storage: 32 GB at Castor
-- Project Storage: Castor
 
 
 !!! abstract "Keypoints"
