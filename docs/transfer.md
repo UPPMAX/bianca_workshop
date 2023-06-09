@@ -185,7 +185,7 @@ username@transit:~$
 - **On transit:** copy files to Bianca from Rackham  
 `scp  rackham:path/my_files ~/sens2023531/`
 
-> Keep in mind that project folders on Rackham are not available on transit.
+:warning: Keep in mind that project folders on Rackham are not available on transit.
 
 ### Moving data between projects
 
