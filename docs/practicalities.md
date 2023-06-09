@@ -74,7 +74,7 @@
 |Module system|10.30|30| Module system|
 |Short break|11.00|5|Break|
 |Transferring files|11.05|45|Transfering files to/from Bianca|
-|(Q/A)|11.50
+|(Q/A)|11.50|Q/A
 |LUNCH break|12.00|60| | 
 |NAISS-SENS and sensitive data|13.00|60|NAISS-SENS and sensitive data| 
 |Short break|14.00|5|Break|
