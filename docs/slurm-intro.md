@@ -147,7 +147,7 @@ In short, this program goes over the following procedure, over and over again:
 - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes with 128, 256 or 512 GB memory
 - GPU nodes with two NVIDIA A100 40GB GPUs each.
 
-**Cores per node:** 16, or on some 64
+**Cores per node:** 16, or on some 128
 
 **Details about the compute nodes**
 
