@@ -58,7 +58,7 @@
 
 !!! info "More info"
 
-    - [Extra material, Conda on Bianca](https://uppmax.github.io/bianca_workshop/conda/)
+    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/conda/)
     - [Conda user guide](https://www.uppmax.uu.se/support/user-guides/conda-user-guide/)
     - [UPPMAX Python user guide: Conda](https://www.uppmax.uu.se/support/user-guides/python-user-guide/#tocjump_9332829429720808_6)
 
@@ -77,7 +77,7 @@
 
 !!! info "More info"
 
-    - [Extra material, PyPI on Bianca](https://uppmax.github.io/bianca_workshop/pip/)
+    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/pip/)
     - [UPPMAX Python user guide: Pip](https://www.uppmax.uu.se/support/user-guides/python-user-guide/#tocjump_9332829429720808_5)
     - [From Python course: packages](https://uppmax.github.io/R-python-julia-HPC/python/packages.html)
     - [From Python course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/python/isolated.html)
@@ -112,9 +112,9 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 
 !!! info "More info"
 
-    - <https://uppmax.github.io/bianca_workshop/rpackages/>
-    - <https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html>
-    - <https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html>
+    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/rpackages/)
+    - [From R course: packages](https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html)
+    - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html)
 
 ### Julia packages
 
@@ -137,7 +137,7 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 
 !!! info "More info"
 
-    - [Extra material: Julia](https://uppmax.github.io/bianca_workshop/julia/)
+    - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/julia/)
     - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html)
 
 ## "Containers"
