@@ -58,8 +58,9 @@
 
 !!! info "More info"
 
+    - [Extra material, Conda on Bianca](https://uppmax.github.io/bianca_workshop/conda/)
     - [Conda user guide](https://www.uppmax.uu.se/support/user-guides/conda-user-guide/)
-    - <https://uppmax.github.io/bianca_workshop/conda/>
+    - [UPPMAX Python user guide: Conda](https://www.uppmax.uu.se/support/user-guides/python-user-guide/#tocjump_9332829429720808_6)
 
 
 
@@ -76,10 +77,10 @@
 
 !!! info "More info"
 
-    - <https://uppmax.github.io/bianca_workshop/pip/>
-    - [Python packages](https://uppmax.uu.se/support/user-guides/python-user-guide/)
-    - <https://uppmax.github.io/R-python-julia-HPC/python/packages.html>
-    - <https://uppmax.github.io/R-python-julia-HPC/python/isolated.html>
+    - [Extra material, PyPI on Bianca](https://uppmax.github.io/bianca_workshop/pip/)
+    - [UPPMAX Python user guide: Pip](https://www.uppmax.uu.se/support/user-guides/python-user-guide/#tocjump_9332829429720808_5)
+    - [From Python course: packages](https://uppmax.github.io/R-python-julia-HPC/python/packages.html)
+    - [From Python course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/python/isolated.html)
 
 
 ### R packages
@@ -136,8 +137,8 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 
 !!! info "More info"
 
-    - <https://uppmax.github.io/bianca_workshop/julia/>
-    - <https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html>
+    - [Extra material: Julia](https://uppmax.github.io/bianca_workshop/julia/)
+    - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html)
 
 ## "Containers"
 ### Singularity
