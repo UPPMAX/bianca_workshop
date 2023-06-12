@@ -21,6 +21,7 @@ nav:
     - rpackages.md
     - julia.md
     - containers.md
+    - devel.md
     - jupyter.md
   - Exercises: exercises.md
      
