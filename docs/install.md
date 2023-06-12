@@ -17,12 +17,31 @@
     - you can use the wharf to transfer source files and binaries to Bianca from Rackham
 
 ## Install software yourself
-- You can install in your home directory.
-    - This is handy for personal needs, low numbers of files (i.e. not Conda).
-- Usually better to install in project directory.
-    - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
+
 - If not available on Bianca already (like Conda repositories) you may have to use the Wharf to install your tools
     - Alternatively let an Application Expert install the tool as a module.
+
+!!! info Typical workflow for installation
+
+    - Download the source code or binary (Linux on x86 and 64-bit) to Rackham first
+    - Transfer to the wharf
+    - Then, either 
+        - You can install in your home directory.
+            - This is handy for personal needs, low numbers of files (i.e. not Conda).
+         - Usually better to install in project directory.
+            - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
+    - Binaries for Linux on x86 and 64-bit should be able to be run directly as it is, see the software specific installation documentation.
+    - or build from source, see next session.
+     
+
+### Build from source
+- To build from source use a compiler module
+- We have several compiler versions from GNU and INTEL
+- check with: ``$ ml avail gcc`` and ``$ ml avail intel``
+- [Guide for compiling serial and parallel programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/)
+- Available combinations of compilers and parallel libraries (openmpi): <https://hackmd.io/_IqCbOiyS8SZ0Uqpa3UpHg?view>
+
+
 
 
 
@@ -66,7 +85,7 @@
 
 ### Python packages with pip
 
-!!! info "Principle"
+!!! info "Installation principle"
 
     - install on Rackham
         - pip install --user <package>
@@ -110,6 +129,12 @@ drwxrwsr-x  8 douglas sw  4096 May 25 04:04 glmnetcr
 drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 ```
 
+!!! info "Installation principle"
+
+    - install on Rackham
+    - sync to wharf
+    - move the files on Bianca
+
 !!! info "More info"
 
     - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/rpackages/)
@@ -135,6 +160,12 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
         DistributedArrays
         PlotlyJS
 
+!!! info "Installation principle"
+
+    - install on Rackham
+    - sync to wharf
+    - move the files on Bianca
+
 !!! info "More info"
 
     - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/julia/)
@@ -147,14 +178,6 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 ### Docker
 - Docker will unfortunately not work on the clusters, since it requires root permission.
 - However, Singularity may use Docker images.
-
-## Build from source
-- We have several compiler versions from GNU and INTEL
-- check with: ``$ ml avail gcc`` and ``$ ml avail intel``
-- The safest way is to transfer the source code to Bianca via the wharf.
-- [Guide for compiling serial and parallel programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/)
-- Available combinations of compilers and parallel libraries (openmpi): <https://hackmd.io/_IqCbOiyS8SZ0Uqpa3UpHg?view>
-
 
 
 !!! abstract "Keypoints"
