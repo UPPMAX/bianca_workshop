@@ -32,7 +32,7 @@
     - [Skydd av personuppgifter](https://ec.europa.eu/info/law/law-topic/data-protection_sv)
     - [SND](https://snd.gu.se/sv/hantera-data/planera/forskningsdata-med-personuppgifter)
   
-- When in doubt, contact your university's [data protection officer](https://www.uppmax.uu.se/support/faq/general-miscellaneous-faq/sensitive+data+questions/).
+- When in doubt, contact your university's [data protection officer](https://www.uppmax.uu.se/support/faq/general-miscellaneous-faq/sensitive+data+questions/), legal department, and/or security department.
 
 - Other sensitive data:
 	- Confidential information
@@ -52,6 +52,7 @@
 Pseudonymisation is a security mechanism that improves the security of sensitive personal data. *The data is still sensitive*.
 
 But how do you know whether data is anonymised? 
+
 	- "It depends..." 
 	- Some data cannot be anonymised at all (e.g. whole genome sequence)
 	- One metric for microdata is [K-anonymity](https://en.wikipedia.org/wiki/K-anonymity)
@@ -77,6 +78,7 @@ But how do you know whether data is anonymised?
     - making sensitive data accessible (on Bianca)
     	- [Swegen](https://snd.gu.se/en/catalogue/study/ext0285)
     	- [SIMPLER](https://www.simpler4health.se/)
+    	- COPE (coming soon)
 - Bianca is not intended for:
     - storing (inactive) data
 
@@ -93,7 +95,7 @@ But how do you know whether data is anonymised?
     - and to satisfy regulations.
 
 !!! note "Some definitions"
-    — Node: A basic "computer", with processor, RAM memory, local disk, and network connection.
+    - Node: A basic "computer", with processor, RAM memory, local disk, and network connection.
     - Core: A *part* of a processor (CPU), capable of executing a thread of execution.
     - Thread: A series of logical steps, executing a program.
     - Multithreading: A program that runs with many threads in parallel. Each thread can occupy one core.
@@ -112,6 +114,19 @@ But how do you know whether data is anonymised?
 
 - The whole Bianca cluster (blue) contains hundreds of virtual project clusters (green), each of which is isolated from each other and the Internet.
 - Data can be transferred to or from a virtual project cluster through the Wharf, which is a special file area that is visible from the Internet.
+
+### 10 minute reflection exercise
+
+5 min: Consider your sensitive research data and write down the following:
+
+- How you store and handle data outside of Bianca
+   - Before analysis on Bianca
+   - After analysis on Bianca
+- How you treat data inside Bianca (wharf, /proj, /proj/nobackup, home dir, etc)
+- How you handle data transfers to/from Bianca
+
+5 min: Go through your list and reflect on which steps are the weakest in terms of information security
+
 
 ### Common Questions
 
