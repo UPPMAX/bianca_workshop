@@ -19,7 +19,7 @@
 
 
 
-## Just download on Rackham and install on Bianca
+## Download on Rackham and install on Bianca
 
 **Rackham**
 ``` sh 
