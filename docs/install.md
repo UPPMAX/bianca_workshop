@@ -172,6 +172,17 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
     - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html)
 
 ## "Containers"
+
+!!! info
+   
+    - Containers let you install programs without needing to think about the computer environment, like    
+        - operative system
+        - dependencies (libraries and other programs) with correct versions
+    - Everything is included
+    - Draw-backs
+        - you install also things that may be already installed
+        - therefore probably more disk space is needed
+
 ### Singularity
 - [Singularity user guide](https://www.uppmax.uu.se/support/user-guides/singularity-user-guide/)
 
