@@ -2,7 +2,7 @@
 
 ## Git on Bianca
 
-[More on Git on Bianca](https://www.uppmax.uu.se/support/faq/software-faq/git-on-bianca/]
+[More on Git on Bianca](https://www.uppmax.uu.se/support/faq/software-faq/git-on-bianca/)
 
 
 ## Install software yourself
