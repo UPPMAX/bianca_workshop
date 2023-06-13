@@ -71,7 +71,7 @@ Note
 
 </div>
 
-We have mirrored all major conda repositories directly on UPPMAX, on
+We have mirrored all major Conda repositories directly on UPPMAX, on
 both Rackham and Bianca. These are updated every third day. We have the
 following channels available:
 
@@ -89,7 +89,7 @@ following channels available:
 -   nvidia
 -   pytorch
 
-You reach them all by loading the conda module. You don't have to state the specific channel when using UPPMAX. Also, you are offline on Bianca which means that the default is `--offline`, which you can specify if you want to simulate the experience on Rackham.
+You reach them all by loading the ``conda`` module. You don't have to state the specific channel when using UPPMAX. Also, you are offline on Bianca which means that the default is `--offline`, which you can specify if you want to simulate the experience on Rackham.
 
 If you need a channel that isn't in our repository, we can easily add it. Just send us a message and we will do it.
 
@@ -122,7 +122,7 @@ There will be an exercise in the end!
 >
 > -   This grants you access to the latest version of Conda and all
 >     major repositories on all UPPMAX systems.
-> -   Check the text output as conda is loaded, especially the first
+> -   Check the text output as ``conda`` is loaded, especially the first
 >     time, see below
 >
 > > <div class="admonition dropdown" markdown="1">
@@ -172,13 +172,13 @@ There will be an exercise in the end!
 > > </div>
 > >
 > > -   When conda is loaded you will by default be in the base
-> >     environment, which works in the same way as other conda
+> >     environment, which works in the same way as other Conda
 > >     environments. include a Python installation and some core system
 > >     libraries and dependencies of Conda. It is a “best practice” to
 > >     avoid installing additional packages into your base software
 > >     environment.
 
-1.  Create the conda environment
+1.  Create the Conda environment
 
 > -   Example:
 >
@@ -253,8 +253,7 @@ Warning
 
 </div>
 
--   [More info about Conda on
-    UPPMAX](https://uppmax.uu.se/support/user-guides/conda-user-guide/)
+-   [More info about Conda on UPPMAX](https://uppmax.uu.se/support/user-guides/conda-user-guide/)
 
 ## Working with Conda environments defined by files
 
@@ -298,8 +297,7 @@ dependencies:
 
 More on dependencies
 
--   Dependency management from course [Python for Scientific
-    computing](https://aaltoscicomp.github.io/python-for-scicomp/dependencies/)
+-   Dependency management from course [Python for Scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/dependencies/)
 
 </div>
 
@@ -313,7 +311,8 @@ UPPMAX: Create a conda environment and install some packages
     `python/3.9.5` loaded
 -   Open a new terminal and have the old one available for later
     comparison
--   Use the conda module on Rackham and create an environment with name
+-   Unload ``python`` module
+-   Use the ``conda`` module on Rackham and create an environment with name
     `HPC-python23` with `python 3.7` and `numpy 1.15`
 
 > -   
