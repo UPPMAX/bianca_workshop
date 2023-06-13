@@ -117,20 +117,13 @@ In short, this program goes over the following procedure, over and over again:
 - `jobstats` — efficiency of booked resources
 - `bianca_combined_jobinfo`
 
-!!! info "Objectives"
-    - We'll briefly get overviews over 
-        -  software tools on UPPMAX
-        -  databases
-    - Introduction quide for installing own software or packages
-    - Very short introduction to developing old programs
-
 !!! note "Node types"
 
     - Bianca has three node types: thin, fat and gpu. 
         - thin being the typical cluster node with 128 GB memory 
         - fat nodes having 256 GB or 512 GB of memory. 
             - You may specify a node with more RAM, by adding the words "-C fat" to your job submission line and thus making sure that you will get at least 256 GB of RAM on each node in your job. 
-            - If you absolutely must have more than 256 GB of RAM then you can request to get 512 GB of RAM specfifically by adding the words "-C mem512GB" to your job submission line. 
+            - If you absolutely must have more than 256 GB of RAM then you can request to get 512 GB of RAM specifically by adding the words "-C mem512GB" to your job submission line. 
             - Please note that requesting 512 GB can not be combined with requesting GPUs.
         - You may also add "-C gpu" to your submission line to request a GPU node with two NVIDIA A100 40 GB. 
             - Please note that all GPU nodes have 256 GB of RAM, and are thus "fat" as well. All compute nodes in Bianca has 16 CPU cores in total.
@@ -138,9 +131,9 @@ In short, this program goes over the following procedure, over and over again:
    
 !!! note "Some Limits"
 
-    - There is a job walltime limit of ten days (240 hours).
+    - There is a job wall time limit of ten days (240 hours).
     - We restrict each user to at most 5000 running and waiting jobs in total.
-    - Each project has a 30 days running allocation of CPU hours. We do not forbid running jobs after the allocation is overdrafted, but instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
+    - Each project has a 30 days running allocation of CPU hours. We do not forbid running jobs after the allocation is over-drafted, but instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
 
 ## Summary about the Bianca Hardware
 
@@ -154,11 +147,10 @@ In short, this program goes over the following procedure, over and over again:
 - Thin nodes
     - 194 compute nodes with 16 cores and a 4TB mechanical drive or 1TB SSD as SCRATCH.
 - Fat nodes
-    - 74 compute nodes, 256 GB memory each and 4 TB scratch disk
-    - 2 compute nodes, 512 GB memory each and 4 TB scratch disk
-    - 12 compute nodes, 512 GB memory each and 128 cores and 4 or 12 TB scratch disk
-    - 10 compute nodes, 256 GB memory each and equipped with 2xNVIDIA A100 (40GB) GPUs and 4.9 TB scratch disk
-- Total number of CPU cores is 5248
+    - 74 compute nodes, 256 GB memory
+    - 14 compute nodes, 512 GB memory
+    - 10 compute nodes, 256 GB memory each and equipped with 2xNVIDIA A100 (40GB) GPUs
+- Total number of CPU cores is about 5000
 - Login nodes have 2vCPU each and 16GB memory
 - Network
     - Dual 10 Gigabit Ethernet for all nodes
@@ -177,5 +169,5 @@ In short, this program goes over the following procedure, over and over again:
         - start a batch job
     - Slurm is a job scheduler
         - add flags to describe your job.
-    - There is a job walltime limit of ten days (240 hours).
+    - There is a job wall time limit of ten days (240 hours).
  
