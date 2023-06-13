@@ -42,7 +42,7 @@
 
 - You can log in either through ThinLinc or via ssh
 - If you are using graphics of an kind, use ThinLinc
-- Otherwise, if you just ned the commandline, it is enough to use ssh.
+- Otherwise, if you just need the command line, it is enough to use ssh.
     - ssh from home terminal
     - ssh from a session on Rackham 
 
@@ -54,11 +54,13 @@
         - [https://bianca.uppmax.uu.se](https://bianca.uppmax.uu.se)
         - requires [2-factor authentication](https://www.uppmax.uu.se/support/user-guides/setting-up-two-factor-authentication/)
 
+![Bianca login](./img/login.png)
+
 !!! warning
 
     The ThinLinc application will work for Rackham but not Bianca
 
-![Image](./img/Thinlinc2.jpg)
+![Thinlinc_example](./img/Thinlinc2.jpg)
 
 ### The log in steps
 1. When you log in to [https://bianca.uppmax.uu.se](https://bianca.uppmax.uu.se), your SSH or ThinLinc client first meets the blue Bianca login node.
