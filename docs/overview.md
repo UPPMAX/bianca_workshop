@@ -12,7 +12,7 @@
 - Mission: to provide a quality high-performance computing environment nationally
 
 - Starting 1 January 2023, the National Academic Infrastructure for Supercomputing in Sweden (NAISS) is the new organization for high-performance computing, storage, and data services for academic users in Sweden. 
-- From the users perspective, there will initially only be minimal differences between the SNIC and NAISS regimes.
+- From the users' perspective, there will initially only be minimal differences between the SNIC and NAISS regimes.
     - FAQ:s — <https://www.naiss.se/>
 - Application rounds: <https://www.naiss.se//#application-rounds-for-compute-and-storage-resources>
 - NAISS and Uppsala University fund UPPMAX — UU’s supercomputing center.
@@ -53,7 +53,7 @@
 
 ![Node](./img/node.png)
 
-- The user logs in to **login nodes**  via Internet through ssh or Thinlinc.
+- The user logs in to **login nodes** via Internet through ssh or ThinLinc.
 
   - Here the file management and lighter data analysis can be performed.
 
@@ -113,7 +113,7 @@
 
 !!! abstract "keypoints"
     - NAISS makes available large-scale high-performance computing resources, storage capacity, and advanced user support, for Swedish research. 
-    - UPPMAX runs the local resources placed at Uppsala Universty
+    - UPPMAX runs the local resources placed at Uppsala University
     - A cluster consists of several inter-connected computers that can work individually or together.
 
 
