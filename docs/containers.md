@@ -26,9 +26,9 @@ Anyone can upload a container to the repositories. So be cautious and look for v
 Read more on the Uppmax singularity workshop:  
 <https://pmitev.github.io/UPPMAX-Singularity-workshop/>
 
-# Example: I want gatk on bianca
+# Example: I want gatk on Bianca
 
-Remember, no internet on bianca. Build on rackham and then transfer the container to the wharf. 
+Remember, no internet on Bianca. Build on rackham and then transfer the container to the wharf. 
 
 Can I find it on syslabs.io?
 - <https://cloud.sylabs.io/library/search?q=gatk>  
@@ -45,7 +45,7 @@ Perfect.
 
 ![apptainer_pull](./img/apptainer_pull.png)
 
-`sftp` to the wharf:
+`sftp` to the ``wharf``:
 
 ![sftp_gatk](./img/sftp_gatk.png)
 
