@@ -1,9 +1,5 @@
 # Using Julia packages on Bianca
 
-!!! warning
-  
-    under construction
-
 ## UPPMAX Central library
 
 !!! info
