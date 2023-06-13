@@ -64,7 +64,7 @@
 1. When you log in to [https://bianca.uppmax.uu.se](https://bianca.uppmax.uu.se), your SSH or ThinLinc client first meets the Bianca login node (blue in the graph above).
     - In ThinLinc session:
     
-    ![Bianca login](./img/login.png)
+        ![Bianca login](./img/login.png)
  
     - In ssh session
         - user name: `<username>-<projid>@bianca.uppmax.uu.se`
