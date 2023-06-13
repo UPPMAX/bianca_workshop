@@ -16,7 +16,7 @@ Then within R, try loading the package you want:
 
 ``library(glmnet)``
 
-Or a bit longer way, you can ``grep`` for the package after this module is loaded using the environment variable ``$R_LIBS_SITE``, which contains the locations of all R packages installed within the module.
+Alternatively, and this is both a longer solution and not our recommended one, you can ``grep`` for the package after this module is loaded using the environment variable ``$R_LIBS_SITE``, which contains the locations of all R packages installed within the module.
 
 ```bash
 $ ls -l $R_LIBS_SITE | grep glmnet
@@ -114,6 +114,8 @@ This will then lead to a brief installation process.  This creates the directory
 The complete installation output for this update on rackham was:
 
 ``` R
+> packageVersion('dowser')
+[1] '1.1.0'
 > install.packages('dowser')
 Installing package into '/sw/apps/R_packages/4.2.1/rackham'
 (as 'lib' is unspecified)
@@ -149,6 +151,8 @@ downloaded 1.6 MB
 The downloaded source packages are in
     '/scratch/RtmpRo0Gz5/downloaded_packages'
 >
+> packageVersion('dowser')
+[1] '1.2.0'
 ```
 
 
@@ -223,11 +227,13 @@ drwxrwxr-x  3 douglas douglas    4096 Mar  2 14:27 R
 
 ### Start an R session and load the new package
 
-To use R_packages/4.1.1 with these new installations/updates, change to the directory you want to work in, load the R_packages/4.1.1 module.  Substitute your directory for my example directory.
+Because R_packages/4.2.1 was loaded when you installed/updated the packages in your personal R library, you need to have it loaded when you use these packages as well.
+
+Simply change to the directory you want to work in, load the R_packages/4.2.1 module, and get to work.
 
 ``` bash
 [douglas@sens2017625-bianca douglas-sens2017625]$ cd /proj/sens2017625/nobackup/douglas/
-    [douglas@sens2017625-bianca douglas]$ module load R_packages/4.1.1
+    [douglas@sens2017625-bianca douglas]$ module load R_packages/4.2.1
 ```
 
 Then start R, and load the new package.
@@ -237,14 +243,9 @@ Then start R, and load the new package.
 ```
 
 ``` R
-    R version 4.1.1 (2021-08-10) -- "Kick Things"
-    Copyright (C) 2021 The R Foundation for Statistical Computing
-    ....
-    Type 'demo()' for some demos, 'help()' for on-line help, or
-    'help.start()' for an HTML browser interface to help.
-    Type 'q()' to quit R.
-
-    > library(tidycmprsk)
+    > packageVersion('dowser')
+    [1] '1.2.0'
+    > library(dowser)
     >
 ```
 
