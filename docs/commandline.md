@@ -172,3 +172,7 @@ $ rm -rf dont_delete_me
 
 You can also make aliases to executables, 
 like the convenient `interactive`-job starting script in `proj/useful_files`.
+
+## Links
+
+ * Video: [YouTube](https://youtu.be/kjqLAx2bgJI) [download (.ogv)](https://richelbilderbeek.nl/uppmax_bianca_command_line.ogv)
