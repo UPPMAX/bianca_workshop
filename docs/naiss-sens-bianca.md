@@ -42,7 +42,7 @@ This page summarises the content of [this presentation](https://github.com/UPPMA
 		- sensitive environmental data, e.g. protected species		
 	- National security
 	
-- A Data Protection Impact Assessment(DPIA) is legal requirement for any project with GDPR-data.
+- A Data Protection Impact Assessment (DPIA) is legal requirement for any project with GDPR-data.
 
 - If in doubt (especially with "new" data type), also do a information security evaluation to determine how you should handle the data.
 
@@ -114,7 +114,7 @@ But how do you know whether data is anonymised?
 <br>
 
 - The whole Bianca cluster (blue) contains hundreds of virtual project clusters (green), each of which is isolated from each other and the Internet.
-- Data can be transferred to or from a virtual project cluster through the Wharf, which is a special file area that is visible from the Internet.
+- Data can be transferred to or from a virtual project cluster through the ``wharf``, which is a special file area that is visible from the Internet.
 
 ### 10 minute reflection exercise
 
@@ -123,7 +123,7 @@ But how do you know whether data is anonymised?
 - How you store and handle data outside of Bianca
    - Before analysis on Bianca
    - After analysis on Bianca
-- How you treat data inside Bianca (wharf, /proj, /proj/nobackup, home dir, etc)
+- How you treat data inside Bianca (``wharf``, ``/proj``, ``/proj/nobackup``, home dir (``$HOME``), etc)
 - How you handle data transfers to/from Bianca
 
 5 min: Go through your list and reflect on which steps are the weakest in terms of information security
@@ -145,7 +145,7 @@ But how do you know whether data is anonymised?
 **I need more core-hours!**
 
 - Do you really? 
-	- First, use jobstats to determine whether you've been using your allocation efficiently.
+	- First, use ``jobstats`` to determine whether you've been using your allocation efficiently.
 	- Second, remember that you can still submit and run jobs after your allocation is out. Such "bonus" jobs run after normal-priority jobs. Typically, they will run in the evening, within a couple of days.
 - If you know that you've been submitting efficient jobs and the wait time in the queue is an actual problem, then contact UPPMAX support and request more time. Motivate your request.
 
@@ -160,4 +160,11 @@ But how do you know whether data is anonymised?
 
 !!! abstract "Keypoints"
     - Sensitive Personal data is data that could identify a person and that have implication
-    - The workflow for a project is When doing your Data management plan, do a DPIA, apply for PUBA(if apropriate), apply for project, DO scicens , Transfer resulted data, close project.
+    - The workflow for a project is:
+        - When doing your Data management plan, 
+	    - do a DPIA, 
+	    - apply for PUBA (if appropriate)
+	    - apply for project
+	- DO science
+	- Transfer resulted data
+	- close project
