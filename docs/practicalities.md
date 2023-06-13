@@ -1,6 +1,6 @@
 # Practicalities
 
-## Prerequisities
+## Prerequisites
 
 
 - SUPR/course project
@@ -50,7 +50,7 @@
     - Login
     - Command-line
     - modules
-    - transfering files
+    - transferring files
 
 - Afternoon session
     - NAISS-SENS and sensitive data
@@ -78,7 +78,7 @@
 |LUNCH break|12.00|60| | 
 |NAISS-SENS and sensitive data|13.00|60|NAISS-SENS and sensitive data| 
 |Short break|14.00|5|Break|
-|Compute nodes and slurm|14.05|20 |Compute nodes and slurm|
+|Compute nodes and slurm|14.05|20 |Compute nodes and Slurm|
 |Software installation |14.25| 20|Software installation |
 |Summary|14.45|10|Summary|
 |Coffee break|14.55|15|Break|
