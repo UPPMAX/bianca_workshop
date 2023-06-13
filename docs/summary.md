@@ -4,7 +4,7 @@
 
 - Q/A session
 - Pick topics from Extra material or ask more general questions, see below summary
-- Exercises ready in the end of the week.
+- Exercises for the interested.
 
 ## Today's topics
 
