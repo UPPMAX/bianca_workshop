@@ -183,7 +183,7 @@ jobs accordingly.
 
 The complete GATK resource bundle is in /sw/data/GATK
 
-See 'module help GATK/4.3.0.0' for information on activating the GATK conda
+See 'module help GATK/4.3.0.0' for information on activating the GATK Conda
 environment for using DetermineGermlineContigPloidy and similar other tools.
 ```
 
@@ -373,7 +373,7 @@ You can find descriptions of almost all installed databases at:
     ```
 
     We want to set the `CONDA_ENVS_PATH` variable to a directory within our project, rather than use the default which is our home directory.
-    If you do not set this variable, your home directory will easily exceed its quotas when creating even a single conda environment.
+    If you do not set this variable, your home directory will easily exceed its quotas when creating even a single Conda environment.
     This will be covered in more detail in the afternoon.
 
 
