@@ -29,7 +29,12 @@
 ## Git on Bianca
 
 - You may develop code on Bianca with a local repo.
-- However, to push to GitHub, you have to manually copy your git repo via the ``wharf`` to another place, like local computer or Rackham. And from there push to GitHub. And conversily pulling from remote to local. 
+- However, to push to GitHub, you have to manually copy your git repo via the ``wharf`` to another place, like
+    - local computer or Rackham. 
+    - ... and from there push to GitHub. 
+- ... and conversely pulling from remote to local with internet connection
+    - and transfer back to Bianca via ``wharf``  
+- A little cumbersome but doable!
 
 - For collaboration within a ``sens`` project your can have a "local" ``remote`` repo in yor common project folder. 
 - [More on Git on Bianca](https://www.uppmax.uu.se/support/faq/software-faq/git-on-bianca/)
