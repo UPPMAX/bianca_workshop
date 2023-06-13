@@ -38,7 +38,7 @@
 ```
 ### First time run on Bianca
 
-You may have to build a package the first time with Pkg.build(“<package>”). Since “<package> is pre-installed centrally on UPPMAX you must activate the central environment by following these steps below. This should only be needed the first time like this
+You may have to build a package the first time with ``Pkg.build(“<package>”)``. Since “<package> is pre-installed centrally on UPPMAX you must activate the central environment by following these steps below. This should only be needed the first time like this
 
 ``` julia
 > using Pkg
@@ -48,7 +48,7 @@ You may have to build a package the first time with Pkg.build(“<package>”). 
 
 ## Install yourself
 
-If you have started Julia once you will get the folders like this in the ~/.julia folder.
+If you have started Julia once you will get the folders like this in the ``~/.julia`` folder.
 
 ```bash
    $ tree .julia/ -d -L 1
@@ -68,10 +68,10 @@ If you have started Julia once you will get the folders like this in the ~/.juli
 **The plan is that what you install on Rackham should be moved here in the same manner**
 
 - Make an installation of the package on Rackham in the Julia package manager
-- Use a transfer method to move the package files to the wharf
-    - To be certain to include all files, you may transfer the whole .julia dir. However, that can grow rather big with time.
+- Use a transfer method to move the package files to the ``wharf``
+    - To be certain to include all files, you may transfer the whole ``.julia`` dir. However, that can grow rather big with time.
 
-**Transfer to the Wharf**
+**Transfer to the ``wharf``**
 
 ``` bash
 sftp douglas-sens2017625@bianca-sftp
@@ -79,15 +79,15 @@ sftp> cd douglas-sens2017625/
 sftp> dir
 sftp>
 ```
-If you have not uploaded anything to your wharf, this will be empty. It might have a few things in it.
+If you have not uploaded anything to your ``wharf``, this will be empty. It might have a few things in it.
 
-- **Alt1: If you would like all yor locally installed packages:**
+- **Alt1: If you would like all your locally installed packages:**
 
 ``` bash
 sftp> put -r ~/.julia
 ```
 
-- **Alt 2: Just transfer the latest installed python package(s)**
+- **Alt 2: Just transfer the latest installed julia package(s)**
 
 - Check what was installed. It may have been several dependency packages as well. Look at the times!
 
