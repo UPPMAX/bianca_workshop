@@ -11,7 +11,7 @@
 - [**National Academic Infrastructure for Supercomputing in Sweden**](https://www.naiss.se/)
 - Mission: to provide a quality high-performance computing environment nationally
 
-- Starting 1 January 2023, the National Academic Infrastructure for Supercomputing in Sweden (NAISS) is the new organization for high-performance computing, storage, and date services for academic users in Sweden. 
+- Starting 1 January 2023, the National Academic Infrastructure for Supercomputing in Sweden (NAISS) is the new organization for high-performance computing, storage, and data services for academic users in Sweden. 
 - From the users perspective, there will initially only be minimal differences between the SNIC and NAISS regimes.
     - FAQ:s — <https://www.naiss.se/>
 - Application rounds: <https://www.naiss.se//#application-rounds-for-compute-and-storage-resources>
