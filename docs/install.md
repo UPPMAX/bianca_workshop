@@ -14,17 +14,17 @@
 - But you may be able to do installations yourself. Here the use of Rackham comes handy because of the:
     - internet connection
     - the computer architecture is somewhat similar such that precompiled binaries or compiled programs (x86_64) on Rackham will most often work also on Bianca.
-    - you can use the wharf to transfer source files and binaries to Bianca from Rackham
+    - you can use the ``wharf`` to transfer source files and binaries to Bianca from Rackham
 
 ## Install software yourself
 
-- If not available on Bianca already (like Conda repositories) you may have to use the Wharf to install your tools
+- If not available on Bianca already (like Conda repositories) you may have to use the ``wharf`` to install your tools
     - Alternatively let an Application Expert install the tool as a module.
 
 !!! info Typical workflow for installation
 
     - Download the source code or binary (Linux on x86 and 64-bit) to Rackham first
-    - Transfer to the wharf
+    - Transfer to the ``wharf``
     - Then, either 
         - You can install in your home directory.
             - This is handy for personal needs, low numbers of files (i.e. not Conda).
@@ -54,12 +54,12 @@
 
 !!! info "Tip Python packages"
 
-    - Try Conda first directly on Bianca. We have mirrored all major conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
-    - If you want to keep number of files down, use PyPI (pip), but then you need to use Rackham and the wharf.
+    - Try Conda first directly on Bianca. We have mirrored all major Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
+    - If you want to keep number of files down, use PyPI (pip), but then you need to use Rackham and the ``wharf``.
 
 ### Conda
 
-- We have mirrored all major conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
+- We have mirrored all major Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
 
 !!! info "Available Conda channels"
       
@@ -90,7 +90,7 @@
     - install on Rackham
         - pip install --user <package>
         - python setup.py install --user or --prefix=<path>
-    - sync to wharf
+    - sync to ``wharf``
     - move the files on Bianca
     - you may have to update $PYTHONPATH
 
@@ -132,7 +132,7 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 !!! info "Installation principle"
 
     - install on Rackham
-    - sync to wharf
+    - sync to ``wharf``
     - move the files on Bianca
 
 !!! info "More info"
@@ -144,10 +144,9 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 ### Julia packages
 
 - At UPPMAX there is a central library with installed packages.
-- This is good, especially when working on Bianca, since you then do not need to install via the Wharf.
+- This is good, especially when working on Bianca, since you then do not need to install via the ``wharf``.
 - A selection of the Julia packages and libraries installed on UPPMAX are:
 
-        BenchmarkTools
         CSV
         CUDA
         MPI
@@ -155,15 +154,12 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
         IJulia
         Plots
         PyPlot
-        Gadfly
         DataFrames
-        DistributedArrays
-        PlotlyJS
 
 !!! info "Installation principle"
 
     - install on Rackham
-    - sync to wharf
+    - sync to ``wharf``
     - move the files on Bianca
 
 !!! info "More info"
@@ -181,16 +177,14 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
     - Everything is included
     - Draw-backs
         - you install also things that may be already installed
-        - therefore probably more disk space is needed
+        - therefore, probably more disk space is needed
 
-### Singularity
-- [Singularity user guide](https://www.uppmax.uu.se/support/user-guides/singularity-user-guide/)
+!!! info "More info"
 
-### Docker
-- Docker will unfortunately not work on the clusters, since it requires root permission.
-- However, Singularity may use Docker images.
+    - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/containers/)
+
 
 
 !!! abstract "Keypoints"
-    - You have got an overview of the procedures to install packages/libraries and tools on Bianca through the wharf
+    - You have got an overview of the procedures to install packages/libraries and tools on Bianca through the ``wharf``
     - If you feel uncomfortable or think that many users would benefit from the software, ask the support to install it.
