@@ -24,7 +24,7 @@
     
 ### Bianca has no Internet
 - Still you can log in, but it is done in two steps!
-- We recomend the ThinLink web portal, to enable graphics
+- We recommend the ThinLink web portal, to enable graphics
 
 ![Bianca](./img/biancaorganisation-01.png)
 
@@ -40,11 +40,11 @@
 
 ## Log in
 
-- You can log in either through ThinLinc or via ssh
+- You can log in either through ThinLinc or via SSH, ``ssh``
 - If you are using graphics of an kind, use ThinLinc
-- Otherwise, if you just need the command line, it is enough to use ssh.
-    - ssh from home terminal
-    - ssh from a session on Rackham 
+- Otherwise, if you just need the command line, it is enough to use ``ssh``.
+    - ``ssh`` from home terminal
+    - ``ssh`` from a session on Rackham 
 
 ## Log in to Bianca with ThinLinc
 
@@ -68,7 +68,7 @@
     
         ![Bianca login](./img/login.png)
  
-    - In ssh session
+    - In SSH session
 
         - user name: `<username>-<projid>@bianca.uppmax.uu.se`
         
@@ -89,7 +89,7 @@
 4. Inside each virtual project cluster, by default there is just a one-core login node. When you need more memory or more CPU power, you submit a job (interactive or batch), and an idle node will be moved into your project cluster.
 
 
-## Log in via ssh
+## Log in via SSH
     
 You may try to log in any of your terminals <https://uppmax.github.io/uppmax_intro/login2.html#terminals>
     
@@ -103,7 +103,7 @@ You may try to log in any of your terminals <https://uppmax.github.io/uppmax_int
 
 ## Start an interactive session
     
-To be able to work with the type alongs we strongly recommend you to start an interactive session already now.
+To be able to work with the type-alongs we strongly recommend you to start an interactive session already now.
 
 - More about interactive sessions and Slurm in the afternoon, but we don't need a further insight in this to proceed now!
    
