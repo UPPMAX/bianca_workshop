@@ -23,7 +23,7 @@ template: home.html
     
         - NAISS-SENS, 
         - how to login to Bianca, 
-        - transfer files via wharf, 
+        - transfer files via ``wharf``, 
         - Slurm and the module system, 
         - and how to work with Conda packages.
 
