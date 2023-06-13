@@ -168,7 +168,7 @@ $ rm -rf dont_delete_me
   - `PROJ=sens2023531`
   - `ln -s /proj/$PROJ/ proj`
   - `ln -s /proj/$PROJ/nobackup nobackup`
-  - `ln -s /proj/$PROJ/nobackup/wharf/<yourusername>/<yourusername-$PROJ> wharf`
+  - `ln -s /proj/$PROJ/nobackup/wharf/${USER}/${USER}-$PROJ wharf`
 
 You can also make aliases to executables, 
 like the convenient `interactive`-job starting script in `proj/useful_files`.
