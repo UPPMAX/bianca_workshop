@@ -19,7 +19,7 @@
 
 
 
-## Just download on Rackham and install on Bianca
+## Only download on Rackham and install on Bianca
 
 **Rackham**
 ``` sh 
@@ -144,7 +144,7 @@ mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
     - You can create one for each project and no problem if the two projects require different versions.
     - You can remove the environment and create a new one, if not needed or with errors.
 
-- More information [here](https://uppmax.github.io/HPC-python/isolated.html). 
+- More information about [isolated environments](https://uppmax.github.io/HPC-python/isolated.html). 
 
 **Example, where python packages from the loaded module are used (``--system-site-packages``)**
 

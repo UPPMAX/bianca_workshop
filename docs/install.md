@@ -17,12 +17,31 @@
     - you can use the wharf to transfer source files and binaries to Bianca from Rackham
 
 ## Install software yourself
-- You can install in your home directory.
-    - This is handy for personal needs, low numbers of files (i.e. not Conda).
-- Usually better to install in project directory.
-    - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
+
 - If not available on Bianca already (like Conda repositories) you may have to use the Wharf to install your tools
     - Alternatively let an Application Expert install the tool as a module.
+
+!!! info Typical workflow for installation
+
+    - Download the source code or binary (Linux on x86 and 64-bit) to Rackham first
+    - Transfer to the wharf
+    - Then, either 
+        - You can install in your home directory.
+            - This is handy for personal needs, low numbers of files (i.e. not Conda).
+         - Usually better to install in project directory.
+            - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
+    - Binaries for Linux on x86 and 64-bit should be able to be run directly as it is, see the software specific installation documentation.
+    - or build from source, see next session.
+     
+
+### Build from source
+- To build from source use a compiler module
+- We have several compiler versions from GNU and INTEL
+- check with: ``$ ml avail gcc`` and ``$ ml avail intel``
+- [Guide for compiling serial and parallel programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/)
+- Available combinations of compilers and parallel libraries (openmpi): <https://hackmd.io/_IqCbOiyS8SZ0Uqpa3UpHg?view>
+
+
 
 
 
@@ -58,14 +77,15 @@
 
 !!! info "More info"
 
+    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/conda/)
     - [Conda user guide](https://www.uppmax.uu.se/support/user-guides/conda-user-guide/)
-    - <https://uppmax.github.io/bianca_workshop/conda/>
+    - [UPPMAX Python user guide: Conda](https://www.uppmax.uu.se/support/user-guides/python-user-guide/#tocjump_9332829429720808_6)
 
 
 
 ### Python packages with pip
 
-!!! info "Principle"
+!!! info "Installation principle"
 
     - install on Rackham
         - pip install --user <package>
@@ -76,10 +96,10 @@
 
 !!! info "More info"
 
-    - <https://uppmax.github.io/bianca_workshop/pip/>
-    - [Python packages](https://uppmax.uu.se/support/user-guides/python-user-guide/)
-    - <https://uppmax.github.io/R-python-julia-HPC/python/packages.html>
-    - <https://uppmax.github.io/R-python-julia-HPC/python/isolated.html>
+    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/pip/)
+    - [UPPMAX Python user guide: Pip](https://www.uppmax.uu.se/support/user-guides/python-user-guide/#tocjump_9332829429720808_5)
+    - [From Python course: packages](https://uppmax.github.io/R-python-julia-HPC/python/packages.html)
+    - [From Python course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/python/isolated.html)
 
 
 ### R packages
@@ -109,11 +129,17 @@ drwxrwsr-x  8 douglas sw  4096 May 25 04:04 glmnetcr
 drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 ```
 
+!!! info "Installation principle"
+
+    - install on Rackham
+    - sync to wharf
+    - move the files on Bianca
+
 !!! info "More info"
 
-    - <https://uppmax.github.io/bianca_workshop/rpackages/>
-    - <https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html>
-    - <https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html>
+    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/rpackages/)
+    - [From R course: packages](https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html)
+    - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html)
 
 ### Julia packages
 
@@ -134,26 +160,35 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
         DistributedArrays
         PlotlyJS
 
+!!! info "Installation principle"
+
+    - install on Rackham
+    - sync to wharf
+    - move the files on Bianca
+
 !!! info "More info"
 
-    - <https://uppmax.github.io/bianca_workshop/julia/>
-    - <https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html>
+    - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/julia/)
+    - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html)
 
 ## "Containers"
+
+!!! info
+   
+    - Containers let you install programs without needing to think about the computer environment, like    
+        - operative system
+        - dependencies (libraries and other programs) with correct versions
+    - Everything is included
+    - Draw-backs
+        - you install also things that may be already installed
+        - therefore probably more disk space is needed
+
 ### Singularity
 - [Singularity user guide](https://www.uppmax.uu.se/support/user-guides/singularity-user-guide/)
 
 ### Docker
 - Docker will unfortunately not work on the clusters, since it requires root permission.
 - However, Singularity may use Docker images.
-
-## Build from source
-- We have several compiler versions from GNU and INTEL
-- check with: ``$ ml avail gcc`` and ``$ ml avail intel``
-- The safest way is to transfer the source code to Bianca via the wharf.
-- [Guide for compiling serial and parallel programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/)
-- Available combinations of compilers and parallel libraries (openmpi): <https://hackmd.io/_IqCbOiyS8SZ0Uqpa3UpHg?view>
-
 
 
 !!! abstract "Keypoints"
