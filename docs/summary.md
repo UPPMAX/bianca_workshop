@@ -20,7 +20,7 @@
 - **Logging in**
  
     - ThinLinc, a must for graphics
-    - ssh, may be faster if you just use command-line
+    - ``ssh``, may be faster if you just use command-line
     - VPN
     - 2FA
 
@@ -45,11 +45,11 @@
     - workflows
 
 
-- **Transfering files**
+- **Transferring files**
 
 
-    - The "WHARF" works like a dock at the harbour.
-    - There are several ways to use the wharf to transfer files
+    - The ``wharf`` works like a dock at the harbour.
+    - There are several ways to use the ``wharf`` to transfer files
 
 
       - copy
@@ -75,12 +75,9 @@
         - Slurm parameters
         - Interactive jobs 
 
-
-            - (allows you to work interactively with commandline and yopur tools but on a compute node.
-
+            - allows you to work interactively with command line and your tools but on a compute node.
 
     - How compute nodes are moved between project clusters
-
 
     - Other Slurm tools
 
