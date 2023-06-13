@@ -35,7 +35,7 @@
 <br>
 
 - The whole Bianca cluster (blue) contains hundreds of virtual project clusters (green), each of which is isolated from each other and the Internet.
-- Data can be transferred to or from a virtual project cluster through the Wharf, which is a special file area that is visible from the Internet.
+- Data can be transferred to or from a virtual project cluster through the ``wharf``, which is a special file area that is visible from the Internet.
 
 
 ## Log in
