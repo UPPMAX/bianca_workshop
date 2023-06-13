@@ -13,9 +13,9 @@
 !!! info
     **Methods:**
     
-    - You can either just download a python package, transfer to Wharf and Bianca and install there.
-    - Install it on Rackham. Perhaps you need it here as well! Then transfer to Wharf and Bianca local python library.
-    - Make a virtual environment with one or several packages on Rackham. Then transfer to Wharf and Bianca (any place).
+    - You can either just download a python package, transfer to ``wharf`` and Bianca and install there.
+    - Install it on Rackham. Perhaps you need it here as well! Then transfer to ``wharf`` and Bianca local python library.
+    - Make a virtual environment with one or several packages on Rackham. Then transfer to ``wharf`` and Bianca (any place).
 
 
 
@@ -26,7 +26,7 @@
 $ pip download <package-name>
 ``` 
 
-**Transfer to the wharf**
+**Transfer to the ``wharf``**
 
 ``` bash
 sftp douglas-sens2017625@bianca-sftp
@@ -34,9 +34,9 @@ sftp> cd douglas-sens2017625/
 sftp> dir
 sftp>
 ```
-If you have not uploaded anything to your wharf, this will be empty. It might have a few things in it.
+If you have not uploaded anything to your ``wharf``, this will be empty. It might have a few things in it.
 
-Now, upload to the wharf the package <package-name> and all the dependency packages ``pip download`` got you.
+Now, upload to the ``wharf`` the package <package-name> and all the dependency packages ``pip download`` got you.
 
 ``` bash
 sftp> put -r <package-name>
@@ -55,7 +55,7 @@ $ pip install --user --no-index --find-links <path-to-packages> <package-name>
 
 **Then the package ends up in ``~/.local/lib/python<version>/site-packages/`` .**
 
-## Install on Rackham and then tranfer to Bianca
+## Install on Rackham and then transfer to Bianca
 
 !!! info
 
@@ -78,7 +78,7 @@ pip install --user -r requirements.txt
 
 **Then the package(s) ends up in ``~/.local/lib/python<version>/site-packages/`` .**
 
-**Transfer to the Wharf**
+**Transfer to the ``wharf``**
 
 ``` bash
 sftp douglas-sens2017625@bianca-sftp
@@ -86,9 +86,9 @@ sftp> cd douglas-sens2017625/
 sftp> dir
 sftp>
 ```
-If you have not uploaded anything to your wharf, this will be empty. It might have a few things in it.
+If you have not uploaded anything to your ``wharf``, this will be empty. It might have a few things in it.
 
-- **Alt1: If you would like all yor locally installed packages:**
+- **Alt1: If you would like all your locally installed packages:**
 
 ``` bash
 sftp> put -r ~/.local/lib/python<version>/site-packages/
@@ -172,7 +172,7 @@ $ deactivate
 
 - Virtual environments can be saved easily anywhere
 	
-**Transfer to the Wharf**
+**Transfer to the ``wharf``**
 
 ``` bash
 sftp douglas-sens2017625@bianca-sftp
@@ -180,7 +180,7 @@ sftp> cd douglas-sens2017625/
 sftp> dir
 sftp>
 ```
-If you have not uploaded anything to your wharf, this will be empty. It might have a few things in it.
+If you have not uploaded anything to your ``wharf``, this will be empty. It might have a few things in it.
 
 ``` bash
 sftp> put -r <path>/projectB
