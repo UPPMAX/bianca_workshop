@@ -14,18 +14,18 @@
 
 ![Bianca](./img/biancaorganisation-01.png)
 
-### The Wharf
+### The `wharf`
 
-!!! info "Wharf is a harbour dock"
+!!! info "`wharf` is a harbour dock"
 
-    - The Wharf area can be reached from both Bianca and any other place on Bianca.
+    - The `wharf` area can be reached from both Bianca and any other place on Bianca.
     - Therefore, it serves as a bridge between Internet and Bianca.
     
 ## Data transfers:
 - <https://www.uppmax.uu.se/support/user-guides/bianca-user-guide/> 
     - section 3: Transfer files to and from Bianca
 
-### The wharf location
+### The `wharf` location
 
 - The path to this folder, once you are logged into your project's cluster, is:
 
@@ -34,9 +34,9 @@ E.g.
     `/proj/sens2016999/nobackup/wharf/myuser/myuser-sens2016999`
 
 - To transfer data from Bianca, copy the files you want to transfer here.
-- To get the files transferred to the wharf area from outside, move the files to you project folder or home folder.
+- To get the files transferred to the `wharf` area from outside, move the files to you project folder or home folder.
     
-- Please note that in the wharf you only have access to upload your files to the directory that is named:
+- Please note that in the `wharf` you only have access to upload your files to the directory that is named:
    `<username>-<projid>`
    e.g.
    `myuser-sens2016999`
