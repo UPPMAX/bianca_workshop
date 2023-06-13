@@ -34,7 +34,7 @@ E.g.
     `/proj/sens2016999/nobackup/wharf/myuser/myuser-sens2016999`
 
 - To transfer data from Bianca, copy the files you want to transfer here.
-- To get the files transferred to the wharf area from outside, move the files to you project folde or home folder.
+- To get the files transferred to the wharf area from outside, move the files to you project folder or home folder.
     
 - Please note that in the wharf you only have access to upload your files to the directory that is named:
    `<username>-<projid>`
@@ -61,7 +61,7 @@ E.g.
 
 Notice the different host name from before!
 
-The `-q` flag is to be quiet (not showing the banner intended to help someone trying to ssh to the host), if your client does not support it, you can just skip it.
+The `-q` flag is to be quiet (not showing the banner intended to help someone trying to ``ssh`` to the host), if your client does not support it, you can just skip it.
 
 As password you use your normal UPPMAX password directly followed by
 the six digits from the second factor application from step 1.
@@ -116,14 +116,14 @@ E.g.
 
 
     
-## Some other sftp client
-- Please notice that sftp is NOT the same as scp. So be sure to really use a sftp client -- not just a scp client.
+## Some other SFTP client
+- Please notice that SFTP is NOT the same as SCP. So be sure to really use a SFTP client -- not just a SCP client.
 
-- Also be aware that many sftp clients use reconnects (with a cached version of your password). This will not work for Bianca, because of the second factor! And some try to use multiple connections with the same password, which will fail.
+- Also be aware that many SFTP clients use reconnects (with a cached version of your password). This will not work for Bianca, because of the second factor! And some try to use multiple connections with the same password, which will fail.
 
-- So for example with lftp, you need to "set net:connection_limit 1". lftp may also defer the actual connection until it's really required unless you end your connect URL with a path.
+- So for example with the command line SFTP client LFTP, you need to "set net:connection_limit 1". LFTP may also defer the actual connection until it's really required unless you end your connect URL with a path.
 
-- An example command line for lftp would be
+- An example command line for LFTP would be
 
 `lftp sftp://<username>-<projname>@bianca-sftp.uppmax.uu.se/<username>-<projname>/`
 
@@ -133,31 +133,31 @@ E.g.
 
 ### Filezilla
 - Does work
-  - but asks for password everytime
+  - but asks for password every time
 - Only connect with local computer (not Rackham)
     
-## Mounting the sftp-server with sshfs on you local machine
+## Mounting the SFTP-server with ``sshfs`` on you local machine
 
 **Mount the wharf on your machine**
     
 - This is only possible on your own system. 
-- ``sshfs`` allows you to mount the wharf on your own machine. 
-- You will be able to copy and work on the data using your own local tools such as cp or vim. 
+- ``sshfs`` allows you to mount the ``wharf`` on your own machine. 
+- You will be able to copy and work on the data using your own local tools such as ``cp`` or ``vim``. 
 - Remember that you are neither logged in on the distant server, nor is the data physically on your local disk (until you have copied it).
 
 !!! warning
-    - UPPMAX doesn't have sshfs client package installed for security reasons. 
-    - sshfs is available on most Linux distributions: 
-        - install the package sshfs on Ubuntu, 
-        - fuse-sshfs on Fedora, RHEL7/CentOS7 (enable EPEL repository) and RHEL8 (enable codeready-builder repository) / CentOS8 (enable powertools repository).    
+    - UPPMAX doesn't have ``sshfs`` client package installed for security reasons. 
+    - ``sshfs`` is available on most Linux distributions: 
+        - install the package ``sshfs`` on Ubuntu, 
+        - ``fuse-sshfs`` on Fedora, RHEL7/CentOS7 (enable EPEL repository) and RHEL8 (enable codeready-builder repository) / CentOS8 (enable powertools repository).    
    
 ## Transit
-- To facilitate secure data transfers to, from and within the system for computing on sensitive data (bianca/castor) a service is available via ssh at transit.uppmax.uu.se.
-- You can connect to transit via ssh. Once connected, you should see a short help message. The most important thing there is the ``mount_wharf`` command which you can use to mount a project from the bianca wharf
+- To facilitate secure data transfers to, from and within the system for computing on sensitive data (bianca/castor) a service is available via SSH at ``transit.uppmax.uu.se``.
+- You can connect to transit via SSH. Once connected, you should see a short help message. The most important thing there is the ``mount_wharf`` command which you can use to mount a project from the bianca ``wharf``.
 
 - Example from Rackham as Rackham session
 
-``` sh
+```sh
 ssh transit
 username@transit:~$ mount_wharf sens2023531
 Mounting wharf (accessible for you only) to /home/<user>/sens2023531
@@ -175,7 +175,7 @@ username@transit:~$
 
 - You can use commands like ``rsync``, ``scp`` to fetch data and transfer it to your bianca wharf.
   - You can use cp to copy from Rackham to the wharf 
-- Remember that you cannot make lasting changes to anything except for mounted wharf directories. Therefore you have to use rsync and scp to tranfer from the wharf to Rackham.
+- Remember that you cannot make lasting changes to anything except for mounted wharf directories. Therefore you have to use rsync and scp to transfer from the ``wharf`` to Rackham.
 - The mounted directory will be kept for later sessions.
 
 ### Moving data from transit to Rackham
@@ -189,7 +189,7 @@ username@transit:~$
 
 ### Moving data between projects
 
-- You can use transit to transfer data between projects by mounting the wharfs for the different projects and transferring data with rsync. 
+- You can use transit to transfer data between projects by mounting the wharfs for the different projects and transferring data with ``rsync``. 
 - Note that you may of course only do this if this is allowed (agreements, permissions, etc.)
 
 
