@@ -61,21 +61,31 @@
 ![Thinlinc_example](./img/Thinlinc2.jpg)
 
 ### The log in steps
+
 1. When you log in to [https://bianca.uppmax.uu.se](https://bianca.uppmax.uu.se), your SSH or ThinLinc client first meets the Bianca login node (blue in the graph above).
+    
     - In ThinLinc session:
     
         ![Bianca login](./img/login.png)
  
     - In ssh session
+
         - user name: `<username>-<projid>@bianca.uppmax.uu.se`
+        
             - like: `myname-sens2023531@bianca.uppmax.uu.se`
+           
         - password: your password, directly followed by the 6-digit 2-factor
+        
             - like: verysecret678123
+
 2. After checking your [2-factor authentication] this server looks for your virtual project cluster.
 3. If it's present, then you are transferred to a login prompt on your cluster's login node. If not, then the virtual cluster is started.
+
     - you are prompted to give your username and password again, this time without projid and 2nd-factor:
+
         - username: `<myname>`
         - password: verysecret
+        
 4. Inside each virtual project cluster, by default there is just a one-core login node. When you need more memory or more CPU power, you submit a job (interactive or batch), and an idle node will be moved into your project cluster.
 
 
