@@ -1,9 +1,5 @@
 # Own development and Git on Bianca
 
-## Git on Bianca
-
-[More on Git on Bianca](https://www.uppmax.uu.se/support/faq/software-faq/git-on-bianca/)
-
 
 ## Install software yourself
 
@@ -29,6 +25,14 @@
 - check with: ``$ ml avail gcc`` and ``$ ml avail intel``
 - [Guide for compiling serial and parallel programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/)
 - Available combinations of compilers and parallel libraries (openmpi): <https://hackmd.io/_IqCbOiyS8SZ0Uqpa3UpHg?view>
+
+## Git on Bianca
+
+- You may develop code on Bianca with a local repo.
+- However, to push to GitHub, you have to manually copy your git repo via the ``wharf`` to another place, like local computer or Rackham. And from there push to GitHub. And conversily pulling from remote to local. 
+
+- For collaboration within a ``sens`` project your can have a "local" ``remote`` repo in yor common project folder. 
+- [More on Git on Bianca](https://www.uppmax.uu.se/support/faq/software-faq/git-on-bianca/)
 
 
 
