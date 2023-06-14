@@ -121,7 +121,7 @@
 
 ???+ question "Install with pip"
 
-    - Make a virtual environment (confer this [tutorial](https://uppmax.github.io/R-python-julia-HPC/python/isolated.html) with python/3.8.7 on Rackham and install numpy==1.18.1 and matplotlib==3.1.3. Use sftp to get it to Bianca.
+    - Make a virtual environment (confer this [tutorial](https://uppmax.github.io/R-python-julia-HPC/python/isolated.html) with ``python/3.8.7`` on Rackham and install ``numpy==1.18.1`` and ``matplotlib==3.1.3``. Use ``sftp`` to get it to Bianca.
     
 
     ??? tip "Answer"
@@ -132,7 +132,7 @@
 
 ???+ question "Install gatk on bianca with apptainer"
 
-    - Use the docker image for gatk/4.3.0.0 and insatll on rackham and tranfer to Bianca.
+    - Use the docker image for ``gatk/4.3.0.0`` and insatll on rackham and tranfer to Bianca.
 
     ??? tip "Answer"
         <https://uppmax.github.io/bianca_workshop/containers/#example-i-want-gatk-on-bianca>
