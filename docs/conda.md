@@ -125,7 +125,7 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
         export CONDA_ENVS_PATH=/proj/\<your-project-id\>/nobackup/\<username\>
     ```
     
-    !!! info "By choice"
+    ??? info "By choice"
 
         Run `source conda_init.sh` to initialise your shell (bash) to be able to run `conda activate` and `conda deactivate` etcetera instead of `source activate`. It will modify (append) your `.bashrc` file.
 
@@ -214,11 +214,9 @@ dependencies:
 - scipy=1.6.2
 ```
 
-<div class="admonition" markdown="1">
+!!! admonition "More on dependencies"
 
-More on dependencies
-
--   Dependency management from course [Python for Scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/dependencies/)
+    - Dependency management from course [Python for Scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/dependencies/)
 
 </div>
 
@@ -253,40 +251,31 @@ UPPMAX: Create a conda environment and install some packages
 
 </div>
 
-<div class="solution dropdown" markdown="1">
+??? Solution for UPPMAX
 
-Solution for UPPMAX
+    Write this in the terminal
 
-Write this in the terminal
+    ``` sh
+    $ module load conda
+    $ export CONDA_ENVS_PATH=/proj/py-r-jl/<user>/python
+    $ conda create --name HPC-python23 python=3.7 numpy=1.15
+    $ source activate HPC-python23
+    $ pip list
+    $ python -V
+    $ source deactivate
+    ```
 
-``` sh
-$ module load conda
-$ export CONDA_ENVS_PATH=/proj/py-r-jl/<user>/python
-$ conda create --name HPC-python23 python=3.7 numpy=1.15
-$ source activate HPC-python23
-$ pip list
-$ python -V
-$ source deactivate
-```
 
-</div>
 
-<div class="keypoints" markdown="1">
 
--   Conda is an installer of packages but also bigger toolkits
-
--   Conda creates isolated environments (see next section) not clashing
-    with other installations of python and other versions of packages
-
--   Conda environment requires that you install all packages needed by
-    yourself.
-
-    > -   That is, you cannot load the python module and use the
-    >     packages therein inside you Conda environment.
-
-</div>
 
 !!! abstract "keypoints"
-    - No internet
-    - Local repositories
+    
+    -   Conda is an installer of packages but also bigger toolkits
+
+    -   Conda creates isolated environments (see next section) not clashing with other installations of python and other versions of packages
+
+    -   Conda environment requires that you install all packages needed by yourself.
+    
+    -   That is, you cannot load the python module and use the  packages therein inside you Conda environment.
 
