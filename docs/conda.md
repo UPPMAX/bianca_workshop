@@ -147,51 +147,33 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
 
         -   Example:
 
-        ```bash $
-        mamba create --name python37-env python=3.7 numpy=1.13.1
-        matplotlib=2.2.2
-        ```
+            ```bash
+            mamba create --name python37-env python=3.7 numpy=1.13.1
+            matplotlib=2.2.2
+            ```
         
 4.  Activate the conda environment by:
 
-    > <div class="prompt" markdown="1">
-    >
-    > bash \$
-    >
-    > </div>
-    >
-    > source activate python36-env
-    >
-    > -   You will see that your prompt is changing to start with
-    >     `(python-36-env)` to show that you are within an environment.
+    ```bash 
+    source activate python36-env
+    ```
+    -   You will see that your prompt is changing to start with `(python-36-env)` to show that you are within an environment.
 
 5.  Now do your work!
 
 6.  Deactivate
 
-> <div class="prompt" markdown="1" language="bash"
-> prompts="(python-36-env) $">
->
-> conda deactivate
->
-> </div>
-
-<div class="warning" markdown="1">
-
-<div class="title" markdown="1">
-
-Warning
-
+<div class="prompt" markdown="1" language="bash"
+prompts="(python-36-env) $">
+conda deactivate
 </div>
 
--   Conda is known to create **many** *small* files. Your diskspace is
-    not only limited in GB, but also in number of files (typically
-    `300000` in \$home).
--   Check your disk usage and quota limit with `uquota`
--   Do a `conda clean -a` once in a while to remove unused and
-    unnecessary files
+!!! warning
 
-</div>
+    -   Conda is known to create **many** *small* files. Your diskspace is not only limited in GB, but also in number of files (typically `300000` in \$home).
+    -   Check your disk usage and quota limit with `uquota`
+    -   Do a `conda clean -a` once in a while to remove unused and unnecessary files
+
 
 -   [More info about Conda on UPPMAX](https://uppmax.uu.se/support/user-guides/conda-user-guide/)
 
