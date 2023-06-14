@@ -125,13 +125,9 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
         export CONDA_ENVS_PATH=/proj/\<your-project-id\>/nobackup/\<username\>
     ```
     
-    <div class="admonition dropdown" markdown="1">
+    !!! info "By choice"
 
- By choice
-
- Run `source conda_init.sh` to initialise your shell (bash) to be able to run `conda activate` and `conda deactivate` etcetera instead of `source activate`. It will modify (append) your `.bashrc` file.
-
-    </div>
+        Run `source conda_init.sh` to initialise your shell (bash) to be able to run `conda activate` and `conda deactivate` etcetera instead of `source activate`. It will modify (append) your `.bashrc` file.
 
     -   When conda is loaded you will by default be in the base environment, which works in the same way as other Conda environments. include a Python installation and some core system libraries and dependencies of Conda. It is a “best practice” to avoid installing additional packages into your base software environment.
 
