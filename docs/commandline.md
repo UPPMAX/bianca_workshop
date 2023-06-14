@@ -37,7 +37,6 @@
 1. `less`  &emsp;browse content
 1. `chmod`  &emsp;change file permissions
 1. `echo`  &emsp;print text on screen
-1. `tar`  &emsp;compress or extract file
 
 ## Type along
 
@@ -169,9 +168,6 @@ $ rm -rf dont_delete_me
   - `ln -s /proj/$PROJ/ proj`
   - `ln -s /proj/$PROJ/nobackup nobackup`
   - `ln -s /proj/$PROJ/nobackup/wharf/${USER}/${USER}-$PROJ wharf`
-
-You can also make aliases to executables, 
-like the convenient `interactive`-job starting script in `proj/useful_files`.
 
 ## Links
 
