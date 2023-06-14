@@ -109,7 +109,7 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
     !!! info "Conda load output"
 
         -   The variable CONDA_ENVS_PATH contains the location of your environments. Set it to your project's environments folder if you have one.
-        -   Otherwise, the default is \~/.conda/envs.
+        -   Otherwise, the default is ``~/.conda/envs``.
         -   You may run `source conda_init.sh` to initialise your shell to be able to run `conda activate` and `conda deactivate` etc.
         -   Just remember that this command adds stuff to your shell outside the scope of the module system.
         -   REMEMBER TO `conda clean -a` once in a while to remove unused and unnecessary files
@@ -117,39 +117,24 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
 
 2.  First time
 
-> -   The variable CONDA_ENVS_PATH contains the location of your
->     environments. Set it to your project's environments folder if you
->     have one.
->
-> -   Otherwise, the default is \~/.conda/envs.
->
-> -   Example:
->
->     > <div class="prompt" markdown="1">
->     >
->     > bash \$
->     >
->     > export
->     > CONDA_ENVS_PATH=/proj/\<your-project-id\>/nobackup/\<username\>
->     >
->     > </div>
->
-> > <div class="admonition dropdown" markdown="1">
-> >
-> > By choice
-> >
-> > Run `source conda_init.sh` to initialise your shell (bash) to be
-> > able to run `conda activate` and `conda deactivate` etcetera instead
-> > of `source activate`. It will modify (append) your `.bashrc` file.
-> >
-> > </div>
-> >
-> > -   When conda is loaded you will by default be in the base
-> >     environment, which works in the same way as other Conda
-> >     environments. include a Python installation and some core system
-> >     libraries and dependencies of Conda. It is a “best practice” to
-> >     avoid installing additional packages into your base software
-> >     environment.
+    -   The variable CONDA_ENVS_PATH contains the location of your environments. Set it to your project's environments folder if you have one.
+    -   Otherwise, the default is ``~/.conda/envs``.
+    -   Example:
+
+    ``` bash 
+        export CONDA_ENVS_PATH=/proj/\<your-project-id\>/nobackup/\<username\>
+    ```
+       <div class="admonition dropdown" markdown="1">
+
+ By choice
+
+ Run `source conda_init.sh` to initialise your shell (bash) to be
+ able to run `conda activate` and `conda deactivate` etcetera instead
+ of `source activate`. It will modify (append) your `.bashrc` file.
+
+ </div>
+
+    -   When conda is loaded you will by default be in the base environment, which works in the same way as other Conda environments. include a Python installation and some core system libraries and dependencies of Conda. It is a “best practice” to avoid installing additional packages into your base software environment.
 
 3.  Create the Conda environment
 
