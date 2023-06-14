@@ -105,13 +105,13 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
     - This grants you access to the latest version of Conda and all major repositories on all UPPMAX systems.
     - Check the text output as ``conda`` is loaded, especially the first time, see below
 
-    !!! info "Conda load output"
+!!! info "Conda load output"
 
-        -   The variable CONDA_ENVS_PATH contains the location of your environments. Set it to your project's environments folder if you have one.
-        -   Otherwise, the default is \~/.conda/envs.
-        -   You may run `source conda_init.sh` to initialise your shell to be able to run `conda activate` and `conda deactivate` etc.
-        -   Just remember that this command adds stuff to your shell outside the scope of the module system.
-        -   REMEMBER TO `conda clean -a` once in a while to remove unused and unnecessary files
+    -   The variable CONDA_ENVS_PATH contains the location of your environments. Set it to your project's environments folder if you have one.
+    -   Otherwise, the default is \~/.conda/envs.
+    -   You may run `source conda_init.sh` to initialise your shell to be able to run `conda activate` and `conda deactivate` etc.
+    -   Just remember that this command adds stuff to your shell outside the scope of the module system.
+    -   REMEMBER TO `conda clean -a` once in a while to remove unused and unnecessary files
 
 
 2.  First time
