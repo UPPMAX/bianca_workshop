@@ -27,17 +27,9 @@
 
 </div>
 
-<div class="hint" markdown="1">
+!!! info "Hint""
 
-<div class="title" markdown="1">
-
-Hint
-
-</div>
-
--   On Bianca Conda is the first choice when installing packages, because there is a local mirror of most of the Conda repositories.
-
-</div>
+    -   On Bianca Conda is the first choice when installing packages, because there is a local mirror of most of the Conda repositories.
 
 ## Using Conda
 
