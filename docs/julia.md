@@ -70,10 +70,10 @@ If you have started Julia once you will get the folders like this in the ``~/.ju
 **Transfer to the ``wharf``**
 
 ``` bash
-sftp douglas-sens2017625@bianca-sftp
-sftp> cd douglas-sens2017625/
+sftp sftp bjornc-sens2023531@bianca-sftp
+sftp> cd bjornc-sens2023531/
 sftp> dir
-sftp>
+sftp>     
 ```
 If you have not uploaded anything to your ``wharf``, this will be empty. It might have a few things in it.
 
@@ -82,8 +82,11 @@ If you have not uploaded anything to your ``wharf``, this will be empty. It migh
 ``` bash
 sftp> put -r ~/.julia
 ```
-
+- That may take a while since you are sending thousands of files. Consider archiving the .julia directory (a copy) and then tranfer it with the ``put`` command.
+	
 - **Alt 2: Just transfer the latest installed julia package(s)**
+
+:warning: Thie following part still needs some update	
 
 - Check what was installed. It may have been several dependency packages as well. Look at the times!
 
