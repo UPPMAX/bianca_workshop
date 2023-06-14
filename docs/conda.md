@@ -27,7 +27,7 @@
 
 </div>
 
-!!! info "Hint""
+!!! info "Hint"
 
     -   On Bianca Conda is the first choice when installing packages, because there is a local mirror of most of the Conda repositories.
 
