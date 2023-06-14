@@ -10,10 +10,10 @@
 ???+ question "View in IGV"
 
    
-    - Load the genome, the bam file, and the annotated vcf that we got from the [demo](https://uppmax.github.io/bianca_workshop/modules1/#workflows) into IGV for viewing
+    - Load the genome, the bam file, and the annotated *vcf* that we got from the [demo](https://uppmax.github.io/bianca_workshop/modules1/#workflows) into IGV for viewing
 
         ??? tip "Answer"
-            For this small example we use igv-core. Good is also to be on a compute node.
+            For this small example we use ``igv-core``. Good is also to be on a compute node.
             
             ``` bash
             $ ml bioinfo-tools IGV
@@ -21,11 +21,11 @@
             ```
             Then open ERR1252289.subset.bam ERR1252289.subset.snpEff.vcf.gz from the GUI.
 
-## Transfering files
+## Transferring files
 
 ???+ question "Copy files between to Sens projects"
 
-    - Use the Transit server to copy a file (e.g. the interactive session script) from the the Bianca workshop project to another project, if you belong to one. 
+    - Use the Transit server to copy a file (e.g. the interactive session script) from the Bianca workshop project to another project, if you belong to one. 
 
         ??? tip "Answer"
             
@@ -43,7 +43,7 @@
     - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshop/modules1/#workflows) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
     
     ??? tip "Answer"
-        - edit a file using you prefered editor, named `my_bio_worksflow.sh`, for example, with the content
+        - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
         
         ```bash
         #!/bin/bash
@@ -87,7 +87,7 @@
 
         - make the job script executable
         ```bash
-        $ chmoad a+x my_bio_workflow.sh
+        $ chmod a+x my_bio_workflow.sh
         ```
         
         - submit the job
@@ -121,18 +121,18 @@
 
 ???+ question "Install with pip"
 
-    - Make a virtual environment (confer this [tutorial](https://uppmax.github.io/R-python-julia-HPC/python/isolated.html) with python/3.8.7 on Rackham and install numpy==1.18.1 and matplotlib==3.1.3. Use sftp to get it to Bianca.
+    - Make a virtual environment (confer this [tutorial](https://uppmax.github.io/R-python-julia-HPC/python/isolated.html) with ``python/3.8.7`` on Rackham and install ``numpy==1.18.1`` and ``matplotlib==3.1.3``. Use ``sftp`` to get it to Bianca.
     
 
     ??? tip "Answer"
         <https://uppmax.github.io/bianca_workshop/pip>
 
 
-### Singularity/apptainer
+### Singularity/Apptainer
 
-???+ question "Install gatk on bianca with apptainer"
+???+ question "Install gatk on bianca with Apptainer"
 
-    - Use the docker image for gatk/4.3.0.0 and insatll on rackham and tranfer to Bianca.
+    - Use the docker image for ``gatk/4.3.0.0`` and install on Rackham and transfer to Bianca.
 
     ??? tip "Answer"
         <https://uppmax.github.io/bianca_workshop/containers/#example-i-want-gatk-on-bianca>
