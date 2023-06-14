@@ -18,7 +18,7 @@ HPC-clusters without root privileges uses Apptainer.
 Dockerhub is the most common and has the biggest repository: <https://hub.docker.com/>
 
 Apptainer/Singularity uses: <https://cloud.sylabs.io/library>  
-Luckily, Apptainer can convert docker containers into Apptainer containers. 
+Luckily, **Apptainer can convert docker containers into Apptainer containers**. 
 
 Anyone can upload a container to the repositories. So be cautious and look for verified publishers.
 
@@ -28,14 +28,20 @@ Read more on the Uppmax singularity workshop:
 
 # Example: I want gatk on Bianca
 
-Remember, no internet on Bianca. Build on rackham and then transfer the container to the wharf. 
+Remember, no internet on Bianca. Build on Rackham and then transfer the container to the ``wharf``. 
 
 Can I find it on sylabs.io?
+
 - <https://cloud.sylabs.io/library/search?q=gatk>  
-No. Continue to Dockerhub.
+
+No. 
+
+  - Continue to Dockerhub.
 
 Dockerhub?
-- <https://hub.docker.com/r/broadinstitute/gatk/>  
+
+    - <https://hub.docker.com/r/broadinstitute/gatk/>  
+
 Perfect.
 
 | ![gatk_syslabs](./img/gatk_syslabs.png) | ![gatk_dockerhub](./img/gatk_dockerhub.png) |
