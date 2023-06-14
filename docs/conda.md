@@ -221,9 +221,9 @@ dependencies:
 
     -   Unload ``python`` module
 
-    -   Use the ``conda`` module on Rackham and create an environment with name `HPC-python23` with `python 3.7` and `numpy 1.15`
+    -   Use the ``conda`` module on Rackham and create an environment with name `bianca-course` with `python 3.7` and `numpy 1.15`
 
-    -   Use your a path for `CONDA_ENVS_PATH` of your own choice or `/proj/py-r-jl/<user>/python` 
+    -   Use your a path for `CONDA_ENVS_PATH` of your own choice (not doing this is perfectly OK and isnatalls in your ``$HOME`` folder) or `/proj/sens2023531/<user>/` 
         
         -   (It may take a minute or so)
 
@@ -242,12 +242,12 @@ dependencies:
 
     ``` sh
     $ module load conda
-    $ export CONDA_ENVS_PATH=/proj/py-r-jl/<user>/python
+    ($ export CONDA_ENVS_PATH=/proj/sens2023/$USER)
     $ conda create --name HPC-python23 python=3.7 numpy=1.15
     $ source activate HPC-python23
     $ pip list
     $ python -V
-    $ source deactivate
+    $ conda deactivate
     ```
 
 
