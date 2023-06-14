@@ -128,6 +128,17 @@
         <https://uppmax.github.io/bianca_workshop/pip>
 
 
+### Julia installation
+
+???+ question "Install a Julia package"
+
+    - Install ``Gumbo`` in the julia packager [tutorial](https://www.uppmax.uu.se/support/user-guides/julia-user-guide/#tocjump_536805789462588_6). Use ``sftp`` to get it to Bianca.
+    
+
+    ??? tip "Answer"
+        <https://uppmax.github.io/bianca_workshop/julia>
+
+
 ### Singularity/Apptainer
 
 ???+ question "Install gatk on bianca with Apptainer"
