@@ -133,38 +133,25 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
 
 3.  Create the Conda environment
 
-> -   Example:
->
->     <div class="prompt" markdown="1">
->
->     bash \$
->
->     conda create --name python36-env python=3.6 numpy=1.13.1
->     matplotlib=2.2.2
->
->     </div>
->
->     <div class="admonition dropdown" markdown="1">
->
->     The `mamba` alternative
->
->     </div>
->
->     -   `mamba` is a fast drop-in alternative to conda, using
->         "libsolv" for dependency resolution. It is available from the
->         `conda` module.
->
->     -   Example:
->
->         > <div class="prompt" markdown="1">
->         >
->         > bash \$
->         >
->         > </div>
->         >
->         > mamba create --name python37-env python=3.7 numpy=1.13.1
->         > matplotlib=2.2.2
+    -   Example:
 
+    ```bash
+      conda create --name python36-env python=3.6 numpy=1.13.1
+      matplotlib=2.2.2
+    ```
+
+    !!! info "The `mamba` alternative"
+        -   `mamba` is a fast drop-in alternative to conda, using
+            "libsolv" for dependency resolution. It is available from the
+            `conda` module.
+
+        -   Example:
+
+        ```bash $
+        mamba create --name python37-env python=3.7 numpy=1.13.1
+        matplotlib=2.2.2
+        ```
+        
 4.  Activate the conda environment by:
 
     > <div class="prompt" markdown="1">
