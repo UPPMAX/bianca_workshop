@@ -213,7 +213,7 @@ dependencies:
 # Exercises
 
 
-???+ Create a conda environment and install some packages
+???+ question "Create a conda environment and install some packages"
 
     -   First check the current installed packages while having `python/3.9.5` loaded
 
