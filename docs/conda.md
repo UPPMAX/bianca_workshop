@@ -91,52 +91,32 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
 
 ## First steps
 
-<div class="tip" markdown="1">
+!!! Tip
 
-<div class="title" markdown="1">
+    There will be an exercise in the end!
 
-Tip
-
-</div>
-
-There will be an exercise in the end!
-
-</div>
 
 1.  First load our conda module (there is no need to install you own
     miniconda, for instance)
 
-> <div class="prompt" markdown="1">
->
-> bash \$
->
-> module load conda
->
-> </div>
->
-> -   This grants you access to the latest version of Conda and all
->     major repositories on all UPPMAX systems.
-> -   Check the text output as ``conda`` is loaded, especially the first
->     time, see below
->
-> > <div class="admonition dropdown" markdown="1">
-> >
-> > Conda load output
-> >
-> > -   The variable CONDA_ENVS_PATH contains the location of your
-> >     environments. Set it to your project's environments folder if
-> >     you have one.
-> > -   Otherwise, the default is \~/.conda/envs.
-> > -   You may run `source conda_init.sh` to initialise your shell to
-> >     be able to run `conda activate` and `conda deactivate` etc.
-> > -   Just remember that this command adds stuff to your shell outside
-> >     the scope of the module system.
-> > -   REMEMBER TO `conda clean -a` once in a while to remove unused
-> >     and unnecessary files
-> >
-> > </div>
+``` bash \$
 
-1.  First time
+    module load conda
+```
+    -   This grants you access to the latest version of Conda and all major repositories on all UPPMAX systems.
+    -   Check the text output as ``conda`` is loaded, especially the first time, see below
+
+
+    !!! Conda load output
+
+        -   The variable CONDA_ENVS_PATH contains the location of your environments. Set it to your project's environments folder if you have one.
+        -   Otherwise, the default is \~/.conda/envs.
+        -   You may run `source conda_init.sh` to initialise your shell to be able to run `conda activate` and `conda deactivate` etc.
+        -   Just remember that this command adds stuff to your shell outside the scope of the module system.
+        -   REMEMBER TO `conda clean -a` once in a while to remove unused and unnecessary files
+
+
+2.  First time
 
 > -   The variable CONDA_ENVS_PATH contains the location of your
 >     environments. Set it to your project's environments folder if you
@@ -172,7 +152,7 @@ There will be an exercise in the end!
 > >     avoid installing additional packages into your base software
 > >     environment.
 
-1.  Create the Conda environment
+3.  Create the Conda environment
 
 > -   Example:
 >
@@ -206,7 +186,7 @@ There will be an exercise in the end!
 >         > mamba create --name python37-env python=3.7 numpy=1.13.1
 >         > matplotlib=2.2.2
 
-1.  Activate the conda environment by:
+4.  Activate the conda environment by:
 
     > <div class="prompt" markdown="1">
     >
@@ -219,9 +199,9 @@ There will be an exercise in the end!
     > -   You will see that your prompt is changing to start with
     >     `(python-36-env)` to show that you are within an environment.
 
-2.  Now do your work!
+5.  Now do your work!
 
-3.  Deactivate
+6.  Deactivate
 
 > <div class="prompt" markdown="1" language="bash"
 > prompts="(python-36-env) $">
