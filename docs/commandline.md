@@ -77,7 +77,7 @@ $ pwd -P
     Your `/proj` folder, is the machine's `/proj` folder.
 
 ```
-$ cd /sensXXX
+$ cd /proj/sensXXX
 $ pwd
 $ pwd -P
 ```
