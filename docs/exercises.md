@@ -130,9 +130,9 @@
 
 ### Singularity/Apptainer
 
-???+ question "Install gatk on bianca with apptainer"
+???+ question "Install gatk on bianca with Apptainer"
 
-    - Use the docker image for ``gatk/4.3.0.0`` and insatll on rackham and tranfer to Bianca.
+    - Use the docker image for ``gatk/4.3.0.0`` and install on Rackham and transfer to Bianca.
 
     ??? tip "Answer"
         <https://uppmax.github.io/bianca_workshop/containers/#example-i-want-gatk-on-bianca>
