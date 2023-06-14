@@ -99,8 +99,7 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
 1.  First load our conda module (there is no need to install you own
     miniconda, for instance)
 
-``` bash \$
-
+``` bash 
     module load conda
 ```
     -   This grants you access to the latest version of Conda and all major repositories on all UPPMAX systems.
