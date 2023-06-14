@@ -121,11 +121,11 @@
 
 ???+ question "Install with pip"
 
-    - Make a virtual environment (confer this [tutorial](https://uppmax.github.io/R-python-julia-HPC/python/isolated.html) with ``python/3.8.7`` on Rackham and install ``numpy==1.18.1`` and ``matplotlib==3.1.3``. Use ``sftp`` to get it to Bianca.
+    - Make a virtual environment (confer this [tutorial](https://uppmax.github.io/R-python-julia-HPC/python/isolated.html)) with ``python/3.8.7`` on Rackham and install ``numpy==1.18.1`` and ``matplotlib==3.1.3``. Use ``sftp`` to get it to Bianca.
     
 
     ??? tip "Answer"
-        <https://uppmax.github.io/bianca_workshop/pip>
+        <https://uppmax.github.io/bianca_workshop/pip/#isolatedvirtual-environments>
 
 
 ### Julia installation
@@ -136,7 +136,7 @@
     
 
     ??? tip "Answer"
-        <https://uppmax.github.io/bianca_workshop/julia>
+        <https://uppmax.github.io/bianca_workshop/julia/#install-yourself>
 
 
 ### Singularity/Apptainer
