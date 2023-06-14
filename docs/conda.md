@@ -213,30 +213,27 @@ dependencies:
 # Exercises
 
 
-UPPMAX: Create a conda environment and install some packages
+???+ Create a conda environment and install some packages
 
--   First check the current installed packages while having
-    `python/3.9.5` loaded
--   Open a new terminal and have the old one available for later
-    comparison
--   Unload ``python`` module
--   Use the ``conda`` module on Rackham and create an environment with name
-    `HPC-python23` with `python 3.7` and `numpy 1.15`
+    -   First check the current installed packages while having `python/3.9.5` loaded
 
- -   
+    -   Open a new terminal and have the old one available for later comparison
 
-     Use your a path for `CONDA_ENVS_PATH` of your own choice or `/proj/py-r-jl/<user>/python`
+    -   Unload ``python`` module
 
-     :   -   (It may take a minute or so)
+    -   Use the ``conda`` module on Rackham and create an environment with name `HPC-python23` with `python 3.7` and `numpy 1.15`
 
--   Activate!
--   Check with `pip list` what is there. Compare with the environment
-    given from the python module in the first terminal window.
+    -   Use your a path for `CONDA_ENVS_PATH` of your own choice or `/proj/py-r-jl/<user>/python` 
+        
+        -   (It may take a minute or so)
 
- -   Which version of Python did you get?
+    -   Activate!
 
--   Don't forget to deactivate the Conda environment before doing other
-    exercises!
+    -   Check with `pip list` what is there. Compare with the environment given from the python module in the first terminal window.
+
+    -   Which version of Python did you get?
+
+    -   Don't forget to deactivate the Conda environment before doing other exercises!
 
 
 ??? Solution for UPPMAX
