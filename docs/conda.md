@@ -102,11 +102,10 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
 ``` bash 
     module load conda
 ```
-    -   This grants you access to the latest version of Conda and all major repositories on all UPPMAX systems.
-    -   Check the text output as ``conda`` is loaded, especially the first time, see below
+    - This grants you access to the latest version of Conda and all major repositories on all UPPMAX systems.
+    - Check the text output as ``conda`` is loaded, especially the first time, see below
 
-
-    !!! Conda load output
+    !!! info "Conda load output"
 
         -   The variable CONDA_ENVS_PATH contains the location of your environments. Set it to your project's environments folder if you have one.
         -   Otherwise, the default is \~/.conda/envs.
