@@ -163,10 +163,9 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
 
 6.  Deactivate
 
-<div class="prompt" markdown="1" language="bash"
-prompts="(python-36-env) $">
-conda deactivate
-</div>
+    ```bash
+    (python-36-env) $ conda deactivate
+    ```
 
 !!! warning
 
