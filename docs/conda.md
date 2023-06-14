@@ -3,7 +3,7 @@
 !!! info "Objectives"
     - This is a brief description of the necessary steps to use the local Conda repository at UPPMAX, and install things for yourself or your project using Conda. 
 
-!!! info "TLDR;"
+!!! info "Summary of ``conda`` commands"
     - ```module load conda```
     - ```export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/```
     - ```conda create``` ... etc
@@ -63,37 +63,31 @@ Conda cheat sheet
 
 ## Installing using Conda
 
-<div class="note" markdown="1">
-
-<div class="title" markdown="1">
-
-Note
-
-</div>
 
 We have mirrored all major Conda repositories directly on UPPMAX, on
 both Rackham and Bianca. These are updated every third day. We have the
 following channels available:
 
--   bioconda
--   biocore
--   conda-forge
--   dranew
--   free
--   main
--   pro
--   qiime2
--   r
--   r2018.11
--   scilifelab-lts
--   nvidia
--   pytorch
+!!! info "Conda Channels"
+
+    -   bioconda
+    -   biocore
+    -   conda-forge
+    -   dranew
+    -   free
+    -   main
+    -   pro
+    -   qiime2
+    -   r
+    -   r2018.11
+    -   scilifelab-lts
+    -   nvidia
+    -   pytorch
 
 You reach them all by loading the ``conda`` module. You don't have to state the specific channel when using UPPMAX. Also, you are offline on Bianca which means that the default is `--offline`, which you can specify if you want to simulate the experience on Rackham.
 
 If you need a channel that isn't in our repository, we can easily add it. Just send us a message and we will do it.
 
-</div>
 
 ## First steps
 
