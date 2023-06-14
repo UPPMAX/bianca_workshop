@@ -30,7 +30,7 @@ Read more on the Uppmax singularity workshop:
 
 Remember, no internet on Bianca. Build on rackham and then transfer the container to the wharf. 
 
-Can I find it on syslabs.io?
+Can I find it on sylabs.io?
 - <https://cloud.sylabs.io/library/search?q=gatk>  
 No. Continue to Dockerhub.
 
