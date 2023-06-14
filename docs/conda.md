@@ -12,20 +12,12 @@
 
 # Conda basics
 
-<div class="questions" markdown="1">
-
 -   What does Conda do?
 -   How to create a Conda environment
-
-</div>
-
-<div class="objectives" markdown="1">
 
 -   Learn pros and cons with Conda
 -   Learn how to install packages and work with the Conda (isolated)
     environment
-
-</div>
 
 !!! info "Hint"
 
@@ -33,25 +25,33 @@
 
 ## Using Conda
 
-<div class="admonition" markdown="1">
+!!! info "Conda cheat sheet"
 
-Conda cheat sheet
+    -   List packages in present environment: `conda list`
 
--   List packages in present environment: `conda list`
--   List all environments: `conda info -e` or `conda env list`
--   Install a package: `conda install somepackage`
--   Install from certain channel (conda-forge):
-    `conda install -c conda-forge somepackage`
--   Install a specific version: `conda install somepackage=1.2.3`
--   Create a new environment: `conda create --name myenvironment`
--   Create a new environment from requirements.txt:
-    `conda create --name myenvironment --file requirements.txt`
--   On e.g. HPC systems where you don’t have write access to central
-    installation directory: ```conda create --prefix /some/path/to/env```
--   Activate a specific environment: `conda activate myenvironment`
--   Deactivate current environment: `conda deactivate`
+    -   List all environments: `conda info -e` or `conda env list`
 
-</div>
+    -   Install a package: `conda install somepackage`
+
+    -   Install from certain channel (conda-forge):
+       
+        - `conda install -c conda-forge somepackage`
+
+    -   Install a specific version: `conda install somepackage=1.2.3`
+
+    -   Create a new environment: `conda create --name myenvironment`
+
+    -   Create a new environment from requirements.txt:
+   
+        - `conda create --name myenvironment --file requirements.txt`
+
+    -   On e.g. HPC systems where you don’t have write access to central installation directory: ```conda create --prefix /some/path/to/env```
+
+    -   Activate a specific environment: `conda activate myenvironment`
+
+    -   Deactivate current environment: `conda deactivate`
+
+
 
 ## Installing using Conda
 
@@ -210,11 +210,8 @@ dependencies:
 
     - Dependency management from course [Python for Scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/dependencies/)
 
-</div>
-
 # Exercises
 
-<div class="challenge" markdown="1">
 
 UPPMAX: Create a conda environment and install some packages
 
@@ -226,22 +223,21 @@ UPPMAX: Create a conda environment and install some packages
 -   Use the ``conda`` module on Rackham and create an environment with name
     `HPC-python23` with `python 3.7` and `numpy 1.15`
 
-> -   
->
->     Use your a path for `CONDA_ENVS_PATH` of your own choice or `/proj/py-r-jl/<user>/python`
->
->     :   -   (It may take a minute or so)
+ -   
+
+     Use your a path for `CONDA_ENVS_PATH` of your own choice or `/proj/py-r-jl/<user>/python`
+
+     :   -   (It may take a minute or so)
 
 -   Activate!
 -   Check with `pip list` what is there. Compare with the environment
     given from the python module in the first terminal window.
 
-> -   Which version of Python did you get?
+ -   Which version of Python did you get?
 
 -   Don't forget to deactivate the Conda environment before doing other
     exercises!
 
-</div>
 
 ??? Solution for UPPMAX
 
