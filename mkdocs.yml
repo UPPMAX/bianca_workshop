@@ -8,7 +8,7 @@ nav:
     - Logging in to Bianca: login_bianca.md
     - Command-line intro: commandline.md
     - Module system: modules1.md
-    - Transfering files to/from Bianca: transfer.md
+    - Transferring files to/from Bianca: transfer.md
   - NAISS-SENS and sensitive data: naiss-sens-bianca.md
   - The compute nodes and install yourself: 
     - Introduction to compute nodes: slurm-intro.md
