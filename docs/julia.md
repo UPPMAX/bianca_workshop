@@ -86,7 +86,7 @@ sftp> put -r ~/.julia
 	
 - **Alt 2: Just transfer the latest installed julia package(s)**
 
-:warning: Thie following part still needs some update	
+    :warning: The following part still needs some update	
 
 - Check what was installed. It may have been several dependency packages as well. Look at the times!
 
@@ -113,7 +113,7 @@ mv –a  <file(s)> ~/.julia/packages/
     you may want to tar before copying to include all possible symbolic links:
 
     ``` bash
-    $ tar cfz <tarfile.tar.gz> <package>
+    $ tar cfz <package.tar.gz> <package>
     ```
     and in target directory (wharf_mnt) on Bianca:
 
