@@ -65,23 +65,23 @@
 
 ## Preliminary schedule 
 
-|Topic                        |Start|Timing|Content                |
-|-----------------------------|-----|------|-----------------------|
-|Syllabus and overview        | 9:00|15    |Intro                  |
-|Login                        | 9:15|30    |Login ssh/ThinLinc, 2FA|
-|Coffee break                 | 9:45|15    |Break                  |
-|Working with the command-line|10.00|15    |Command-line intro     |
-|Module system                |10.15|30    |Module system          |
-|Break                        |10.45|15    |Break                  |
-|Transferring files|11.00|45|Transfering files to/from Bianca|
-|(Q/A)|11.50|Q/A
-|LUNCH break|12.00|60| | 
-|NAISS-SENS and sensitive data|13.00|60|NAISS-SENS and sensitive data| 
-|Short break|14.00|5|Break|
-|Compute nodes and slurm|14.05|20 |Compute nodes and Slurm|
-|Software installation |14.25| 20|Software installation |
-|Summary|14.45|10|Summary|
-|Coffee break|14.55|15|Break|
-|Q/A|15.10|50| Time for interaction|
+|Topic                        |Start|Timing|Content                         |
+|-----------------------------|-----|------|--------------------------------|
+|Syllabus and overview        | 9:00|15    |Intro                           |
+|Login                        | 9:15|30    |Login ssh/ThinLinc, 2FA         |
+|Coffee break                 | 9:45|15    |Break                           |
+|Working with the command-line|10:00|15    |Command-line intro              |
+|Module system                |10:15|30    |Module system                   |
+|Break                        |10:45|15    |Break                           |
+|Transferring files           |11:00|45    |Transfering files to/from Bianca|
+|(Q/A)                        |11:50|10    |.                               |
+|Lunch                        |12:00|60    |Lunch                           | 
+|NAISS-SENS and sensitive data|13.00|55    |NAISS-SENS and sensitive data   |
+|Break                        |13:55|5     |Break                           |
+|Compute nodes and SLURM      |14:05|20    |Compute nodes and Slurm         |
+|Software installation        |14:25|20    |Software installation           |
+|Summary                      |14.45|10    |Summary                         |
+|Coffee break                 |14.55|15    |Break                           |
+|Q/A                          |15.10|50    |Time for interaction            |
 
 
