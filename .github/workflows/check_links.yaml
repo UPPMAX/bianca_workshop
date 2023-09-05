@@ -19,5 +19,5 @@ jobs:
 
       - uses: lycheeverse/lychee-action@v1.2.0
         with:
-          args: --exclude-mail './docs/*.md'
+          args: --verbose --no-progress --exclude-mail './docs/*.md' './docs/*.html'
           fail: true
