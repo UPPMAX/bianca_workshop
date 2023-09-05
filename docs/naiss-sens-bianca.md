@@ -5,7 +5,8 @@
     - A discussion of NAISS SENS projects, proposals, and allocations
     - ... and an overview of the **Bianca** system
 
-This page summarises the content of [this presentation](https://raw.githubusercontent.com/UPPMAX/bianca_workshop/main/docs/presentations/NAISS%20SENS%2C%20sensitive%20data%2C%20and%20Bianca.pdf).
+This page summarises the content of [this presentation](https://github.com/UPPMAX/bianca_workshop/blob/main/docs/presentations/NAISS%20SENS%2C%20sensitive%20data%2C%20and%20Bianca.pdf).
+
 
 ## Sensitive personal data
 
