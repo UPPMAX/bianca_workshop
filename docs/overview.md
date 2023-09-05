@@ -15,7 +15,7 @@
 - From the users' perspective, there will initially only be minimal differences between the SNIC and NAISS regimes.
     - FAQ:s — <https://www.naiss.se/>
 - Application rounds: <https://www.naiss.se//#application-rounds-for-compute-and-storage-resources>
-- NAISS and Uppsala University fund UPPMAX — UU’s supercomputing center.
+- NAISS and Uppsala University fund UPPMAX — UU's supercomputing center.
 
 
 ## UPPMAX missions

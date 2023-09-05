@@ -195,6 +195,7 @@ xNVIDIA
 yaml
 Yhm
 zH
+alongs
 type-alongs
 repo
 
