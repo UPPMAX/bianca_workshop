@@ -19,5 +19,4 @@ jobs:
 
       - uses: lycheeverse/lychee-action@v1.2.0
         with:
-          args: --exclude-mail --verbose
           fail: true
