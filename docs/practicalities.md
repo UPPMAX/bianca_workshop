@@ -18,7 +18,7 @@
 
 !!! note
  
-    It is OK to take parts of the course only!
+    It is OK to attend only the parts of the course that are relevent to you!
 
 Time |Topic
 -----|--------------------------------
