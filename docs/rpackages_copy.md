@@ -4,7 +4,7 @@
 
 ## What is a package, really?
 
-- An R package is essentialy a contained folder and file structure containing R
+- An R package is essentially a contained folder and file structure containing R
 code (and possibly C/C++ or other code) and other files relevant for the
 package e.g. documentation(vignettes), licensing and configuration files. 
 
