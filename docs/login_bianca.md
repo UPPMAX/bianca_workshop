@@ -13,6 +13,11 @@
         - transfer scripts
         - updating your git repositories (not containing sensitive data)
 
+## Videos
+
+ * Login from outside SUNET: [YouTube](https://youtu.be/W-PMTyNcbYI), [download (.mp4)](https://richelbilderbeek.nl/login_bianca_outside_sunet.mp4)
+ * Login from inside SUNET: [YouTube](https://youtu.be/upBozh2BI5c), [download (.ogv)](https://richelbilderbeek.nl/login_bianca_inside_sunet.ogv)
+
 ## Bianca's design
 
 - Bianca was designed
@@ -23,6 +28,7 @@
     - and to satisfy regulations.
     
 ### Bianca has no Internet
+
 - Still you can log in, but it is done in two steps!
 - We recommend the ThinLink web portal, to enable graphics
 
