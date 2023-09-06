@@ -7,6 +7,7 @@
 
 This page summarises the content of [this presentation](https://github.com/UPPMAX/bianca_workshop/blob/main/docs/presentations/NAISS%20SENS%2C%20sensitive%20data%2C%20and%20Bianca.pdf).
 
+
 ## Sensitive personal data
 
 - Personal data: Traced to now living persons, e.g.
@@ -108,7 +109,8 @@ But how do you know whether data is anonymised?
 ![Image](./img/biancaorganisation-01.png)
 
 - Bianca is only accessible from within Sunet (i.e. from university networks).
-- Use VPN outside Sunet. [Link to VPN for UU](https://mp.uu.se/en/web/info/stod/it-telefoni/it-support/network-on-campus/vpn-service)
+- Use VPN outside Sunet. [Link to VPN for UU](https://mp.uu.se/en/web/info/stod/it-telefoni/anvandarguider/network/vpn-service)
+
     - You can get VPN credentials from all Swedish universities.
 
 <br>

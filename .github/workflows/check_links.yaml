@@ -1,0 +1,26 @@
+name: Check links
+
+on:
+  push:
+  pull_request:
+  schedule:
+  - cron: "0 0 2 * *"
+
+
+jobs:
+  check_links:
+
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: gaurav-nelson/github-action-markdown-link-check@v1
+
+      # Cannot deal with emails :-/
+      #- uses: lycheeverse/lychee-action@v1.2.0
+      #  with:
+      #    #args: --verbose --exclude-mail './**/*.md' './**/*.html'
+      #    fail: true

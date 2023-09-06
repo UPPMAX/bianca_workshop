@@ -21,11 +21,12 @@ template: home.html
     - If yes, welcome to a full day introduction to handling sensitive data on the UPPMAX cluster, Bianca. 
     - We will tell you about 
     
-        - NAISS-SENS, 
+        - NAISS-SENS: Legal and administrative aspects, 
         - how to login to Bianca, 
-        - transfer files via ``wharf``, 
-        - Slurm and the module system, 
-        - and how to work with Conda packages.
+        - some differences from Rackham
+        - transferring files via ``wharf``, 
+        - modules and job schedules system, 
+        - and how to do own installations.
 
 <center>
 <br>

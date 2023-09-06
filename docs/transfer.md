@@ -142,9 +142,9 @@ directory.
 Note; any chagnes you do to your normal home directory will not persist.
 ```
 
-- Example from Rackham as Rackham session
+- Example
 
-```sh
+```bash
 $ ssh my_user@transit.uppmax.uu.se
 
 my_user@transit:~$ mount_wharf sens2023531
@@ -153,7 +153,7 @@ Mounting wharf (accessible for you only) to /home/<user>/sens2023531
 ```
 - Enter password + F2A
 
-```sh
+```bash
 my_user@transit:~$ ls sens2023531/
 my_user@transit:~$ 
 ```
@@ -166,15 +166,25 @@ my_user@transit:~$
 - The mounted directory will be kept for later sessions.
 
 ### Moving data from transit to Rackham
-- **On Rackham:** copy files to Bianca via transit:   
+- **On Rackham:** (_or other computer_) copy files to Bianca via transit:   
 ```bash
+# scp
 scp path/my_files my_user@transit.uppmax.uu.se:sens2023531/
+
+# rsync
+rsync -avh path/my_files my_user@transit.uppmax.uu.se:sens2023531/
 ```
 
-- **On transit:** copy files to Bianca from Rackham  
+- **On transit:** copy files to Bianca from Rackham (_or other computer_) 
 ```bash
+# scp
 scp my_user@rackham.uppmax.uu.se:path/my_files ~/sens2023531/
+
+# rsync
+rsync -avh my_user@rackham.uppmax.uu.se:path/my_files ~/sens2023531/
 ```
+
+    :book:  `rsync` [tutorial](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories) for beginners.
 
 :warning: Keep in mind that project folders on Rackham are not available on transit.
 
@@ -187,8 +197,18 @@ scp my_user@rackham.uppmax.uu.se:path/my_files ~/sens2023531/
 ### Software on Transit
 
 - While logged in to Transit, you cannot make lasting changes to anything except for mounted wharf directories. However, anything you have added to your Rackham home directory is available on Transit. In addition, some modules are available.
+- SciLifeLab Data Delivery System - [https://delivery.scilifelab.se/](https://delivery.scilifelab.se/)
 
-- For example, if you need to download data from TCGA, log in to Rackham and install the GDC client to your home directory. Then log in to Transit, mount the wharf, and run ./gdc-client.
+    ```bash
+    # Load the tool from the software module tree
+    module load bioinfo-tools dds-cli
+
+    # Run the tool
+    dds
+    ```
+  ![dds-cli](./img/dds-cli.png)
+
+- To download data from TCGA, log in to Rackham and install the GDC client to your home directory. Then log in to Transit, mount the wharf, and run ./gdc-client.
 
 
 ## NGI Deliver 
