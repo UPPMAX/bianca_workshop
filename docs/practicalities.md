@@ -55,15 +55,3 @@ Time |Topic
     ║            ║ ║  W/MATERIAL  ║
     ╚════════════╝ ╚══════════════╝
     ```
-## Questions
-
-**Most questions here, please**
-
-- Yell in the Zoom chat
-
-**Relevant for the presenting teacher**
-
-- Zoom chat
-
-
-
