@@ -23,20 +23,20 @@
 Time |Topic
 -----|--------------------------------
 9:00 |Intro, syllabus
-9:15 |Login, SSH, ThinLinc, 2FA
+9:15 |[Login, SSH, ThinLinc, 2FA](login_bianca.md)
 .    |Parallel session for active users
 9:45 |Break
-10:00|Command-line intro
-10:15|Module system
+10:00|[Command-line intro](commandline.md)
+10:15|[Module system](modules1.md)
 10:45|Break
-11.00|NAISS-SENS
+11.00|[NAISS-SENS](naiss-sens-bianca.md)
 12:00|Lunch
-13:00|Transfering files to/from Bianca
+13:00|[Transferring files to/from Bianca](transfer.md)
 13:45|Break
-14:00|Compute nodes and SLURM
+14:00|[Compute nodes and SLURM](slurm-intro.md)
 14:45|Break
-15:00|Software installation
-15.35|Summary, closing
+15:00|[Software installation](install.md)
+15.35|Summary
 15.45|Done, optional Q/A
 
 ## Window layout
