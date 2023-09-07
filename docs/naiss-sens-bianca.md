@@ -1,9 +1,9 @@
-# NAISS-SENS, sensitive data and Bianca
+# Legal and administrative aspects
 
 !!! info "Objectives"
-    - A brief overview of various aspects of sensitive data projects
+    - Information security
+    - Legal guidance
     - A discussion of NAISS SENS projects, proposals, and allocations
-    - ... and an overview of the **Bianca** system
 
 This page summarises the content of [this presentation](https://github.com/UPPMAX/bianca_workshop/blob/main/docs/presentations/NAISS%20SENS%2C%20sensitive%20data%2C%20and%20Bianca.pdf).
 
@@ -58,6 +58,13 @@ But how do you know whether data is anonymised?
 	- "It depends..." 
 	- Some data cannot be anonymised at all (e.g. whole genome sequence)
 	- One metric for microdata is [K-anonymity](https://en.wikipedia.org/wiki/K-anonymity)
+
+## Making sensitive data FAIR
+FAIR means Findable, Accessible, Interoperable, and Reusable. These are qualities that are important for maximising the value of data in research.
+
+Sensitive data can be made FAIR. Even though you cannot publish it freely and openly online, you can (and should):
+- Publish **open** metadata, with clear access conditions to the underlying data.
+
 
 ## Apply for project
 - [Detailed instructions for project application](https://www.uppmax.uu.se/support/getting-started/applying-for-sens-project/)
