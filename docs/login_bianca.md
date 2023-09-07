@@ -3,15 +3,15 @@
 !!! info "Objectives" 
 
     - First step in understanding why Bianca login is the way it is
-    - Log in via SSH
     - Log in via ThinLinc
+    - Log in via SSH
     - First step in understanding what a login node is 
 
 ## Exercises
 
  1. Discuss: what is the purpose of Bianca? What kind of consequences will this have for its design?
- 2. Login via SSH
- 3. Login via ThinLinc
+ 2. Login via ThinLinc
+ 3. Login via SSH
  4. Start an interactive session
 
 ## Bianca's design
@@ -62,57 +62,61 @@ You can log in either through ThinLinc or via SSH, `ssh`:
     - ``ssh`` from home terminal
     - ``ssh`` from a session on Rackham 
 
-## Log in to Bianca with ThinLinc
+## Log in to the Bianca remote desktop environment
 
 !!! warning
 
     You need to be within SUNET or use a VPN
 
-Bianca offers a graphical login at [https://bianca.uppmax.uu.se](https://bianca.uppmax.uu.se).
+Bianca offers a remote desktop environment (which uses ThinLinc to establish
+the connection). Here is how to login:
 
-Filling in the form is easy, do use the `UPPMAX` [2-factor authentication](https://www.uppmax.uu.se/support/user-guides/setting-up-two-factor-authentication/) (i.e. not SUPR!).
+ 1. In your web browser, go to [https://bianca.uppmax.uu.se](https://bianca.uppmax.uu.se)
 
-![Thinlinc_example](./img/Thinlinc2.jpg)
+ 2. Fill in the first dialog. Do use the `UPPMAX` [2-factor authentication](https://www.uppmax.uu.se/support/user-guides/setting-up-two-factor-authentication/) (i.e. not SUPR!)
 
-### The log in steps
+![Bianca login, first dialog](./img/login.png)
 
-1. When you log in to [https://bianca.uppmax.uu.se](https://bianca.uppmax.uu.se), your SSH or ThinLinc client first meets the Bianca login node (blue in the graph above).
-    
-    - In ThinLinc session:
-    
-        ![Bianca login](./img/login.png)
- 
-    - In SSH session
+ 3. Fill in the second dialog, using your regular password (i.e. no need for two-factor authentication)
 
-        - user name: `<username>-<projid>@bianca.uppmax.uu.se`
-        
-            - like: `myname-sens2023531@bianca.uppmax.uu.se`
-           
-        - password: your password, directly followed by the 6-digit 2-factor
-        
-            - like: verysecret678123
+![Bianca login, second dialog](./img/bianca_gui_login_2)
 
-2. After checking your [2-factor authentication] this server looks for your virtual project cluster.
-3. If it's present, then you are transferred to a login prompt on your cluster's login node. If not, then the virtual cluster is started.
+> The second Bianca remote desktop login dialog. 
+> Note that it uses ThinLinc to establish this connection
 
-    - you are prompted to give your username and password again, this time without projid and 2nd-factor:
+ 4. Enjoy! You are in!
 
-        - username: `<myname>`
-        - password: verysecret
-        
-4. Inside each virtual project cluster, by default there is just a one-core login node. When you need more memory or more CPU power, you submit a job (interactive or batch), and an idle node will be moved into your project cluster.
+![The Bianca remote desktop](./img/Thinlinc2.jpg)
 
+> The Bianca remote desktop
 
-## Log in via SSH
-    
-You may try to log in any of your terminals <https://uppmax.github.io/uppmax_intro/login2.html#terminals>
-    
-``` bash
-    $ ssh <user>-sens2023531@bianca.uppmax.uu.se
+## Log in to the Bianca command-line environment
+
+You can use your favorite terminal to login (see <https://uppmax.github.io/uppmax_intro/login2.html#terminals> for an overview of many)
+to the Bianca command-line environment.
+
+  1. From a terminal, within SUNET, use `ssh` to log in:
+
+```bash
+ssh [user]-[project name]@bianca.uppmax.uu.se
 ```
 
-- you are prompted to give your password directly followed by the 6-digit 2-factor
-    - like: verysecret678123
+For example:
+
+```bash
+ssh richel-sens2023531@bianca.uppmax.uu.se
+```
+
+ 2. Type your UPPMAX password, 
+    directly followed by the UPPMAX 2-factor authentication number,
+    for example `verysecret678123`, then press enter
+
+ 3. Type your UPPMAX password,
+    for example `verysecret`
+
+ 4. Enjoy! You are in!
+
+
 
 ## Login node
 
