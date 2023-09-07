@@ -47,7 +47,7 @@ Outside SUNET|A remote desktop|Login at [https://bianca.uppmax.uu.se](https://bi
 
 The be able to use VPN:
 
- * For Uppsala Univerity: [go to this page](https://mp.uu.se/en/web/info/stod/it-telefoni/anvandarguider/network/vpn-service)
+ * For Uppsala University: [go to this page](https://mp.uu.se/en/web/info/stod/it-telefoni/anvandarguider/network/vpn-service)
  * For other Swedish universities, search their websites to get a VPN setup
 
 Data can be transferred to/from the `wharf`, 
