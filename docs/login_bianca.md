@@ -2,67 +2,75 @@
 
 !!! info "Objectives" 
 
-    - We'll go through the methods to log in
-    
-!!! note
+    - First step in understanding why Bianca login is the way it is
+    - Log in via SSH
+    - Log in via ThinLinc
+    - First step in understanding what a login node is 
 
-    - Remember that Rackham is your friend as well in your work. 
-    - Being able to work there as well will improve your possibilities to work effectively when you also need some sort of internet connection. For instance:
-        - installing tools
-        - installing Python, R and Julia packages
-        - transfer scripts
-        - updating your git repositories (not containing sensitive data)
+## Exercises
 
-## Videos
-
- * Login from outside SUNET: [YouTube](https://youtu.be/W-PMTyNcbYI), [download (.mp4)](https://richelbilderbeek.nl/login_bianca_outside_sunet.mp4)
- * Login from inside SUNET: [YouTube](https://youtu.be/upBozh2BI5c), [download (.ogv)](https://richelbilderbeek.nl/login_bianca_inside_sunet.ogv)
+ 1. Discuss: what is the purpose of Bianca? What kind of consequences will this have for its design?
+ 2. Login via SSH
+ 3. Login via ThinLinc
+ 4. Start an interactive session
 
 ## Bianca's design
 
-- Bianca was designed
-    - to make accidental data leaks difficult
-    - to make correct data management as easy as possible
-    - to emulate the HPC cluster environment that SNIC users were familiar with
-    - to provide a maximum amount of resources
-    - and to satisfy regulations.
-    
-### Bianca has no Internet
+Bianca was designed to:
 
-- Still you can log in, but it is done in two steps!
-- We recommend the ThinLink web portal, to enable graphics
+ * make accidental data leaks difficult
+ * make correct data management as easy as possible
+ * emulate a standard HPC cluster environment
+ * provide a maximum amount of resources
+ * satisfy (privacy) regulations
+    
+### Bianca and the Internet
 
 ![Bianca](./img/biancaorganisation-01.png)
 
-- Bianca is only accessible from within Sunet (i.e. from university networks).
-- Use VPN outside Sunet. [Link to VPN for UU](https://mp.uu.se/en/web/info/stod/it-telefoni/anvandarguider/network/vpn-service)
-  - You can get VPN credentials from all Swedish universities.
+> The way Bianca is organised
 
-<br>
+Bianca and the Internet have this relation:
 
-- The whole Bianca cluster (blue) contains hundreds of virtual project clusters (green), each of which is isolated from each other and the Internet.
-- Data can be transferred to or from a virtual project cluster through the ``wharf``, which is a special file area that is visible from the Internet.
+ * Bianca has no internet [1], to prevent accidental data leaks. 
+ * Bianca is only accessible from within SUNET (i.e. from university networks),
+   to protect the sensitive data better.
 
+Login depends on where you are and what you need:
+
+Where you are|What you need   |What to do
+-------------|----------------|------------------------------
+Inside SUNET |A terminal      |`ssh` into Bianca
+Inside SUNET |A remote desktop|Login at [https://bianca.uppmax.uu.se](https://bianca.uppmax.uu.se)
+Outside SUNET|A terminal      |`ssh` into a VPN/Rackham first
+Outside SUNET|A remote desktop|Login at [https://bianca.uppmax.uu.se](https://bianca.uppmax.uu.se) via a VPN
+
+The be able to use VPN:
+
+ * For Uppsala Univerity: [go to this page](https://mp.uu.se/en/web/info/stod/it-telefoni/anvandarguider/network/vpn-service)
+ * For other Swedish universities, search their websites to get a VPN setup
+
+Data can be transferred to/from the `wharf`, 
+which is a special folder that is visible from the Internet.
 
 ## Log in
 
-- You can log in either through ThinLinc or via SSH, ``ssh``
-- If you are using graphics of an kind, use ThinLinc
-- Otherwise, if you just need the command line, it is enough to use ``ssh``.
+You can log in either through ThinLinc or via SSH, `ssh`:
+
+ * ThinLinc: provides a remote desktop, needed for using graphical tools
+ * SSH: provides only the command line
     - ``ssh`` from home terminal
     - ``ssh`` from a session on Rackham 
 
 ## Log in to Bianca with ThinLinc
 
-- Bianca offers graphical login
-    - You need to be on SUNET or use VPN
-    - On web:
-        - [https://bianca.uppmax.uu.se](https://bianca.uppmax.uu.se)
-        - requires [2-factor authentication](https://www.uppmax.uu.se/support/user-guides/setting-up-two-factor-authentication/)
-
 !!! warning
 
-    The ThinLinc application will work for Rackham but not Bianca
+    You need to be within SUNET or use a VPN
+
+Bianca offers a graphical login at [https://bianca.uppmax.uu.se](https://bianca.uppmax.uu.se).
+
+Filling in the form is easy, do use the `UPPMAX` [2-factor authentication](https://www.uppmax.uu.se/support/user-guides/setting-up-two-factor-authentication/) (i.e. not SUPR!).
 
 ![Thinlinc_example](./img/Thinlinc2.jpg)
 
@@ -106,23 +114,56 @@ You may try to log in any of your terminals <https://uppmax.github.io/uppmax_int
 - you are prompted to give your password directly followed by the 6-digit 2-factor
     - like: verysecret678123
 
+## Login node
 
-## Start an interactive session
-    
-To be able to work with the type-alongs we strongly recommend you to start an interactive session already now.
+When you are logged in, you are on a login node.
+There are two types of nodes:
 
-- More about interactive sessions and Slurm in the afternoon, but we don't need a further insight in this to proceed now!
-   
-!!! info "Start the interactive session"
-    
-    We start an 8 hour session with 2 cores.
-    
-    ``` bash
-    $ interactive -A sens2023531 -p core -n 2 -t 8:0:0
-    ```
-    
+Type        |Purpose
+------------|--------------------------
+Login node  |Start jobs for worker nodes, do easy things
+Worker node |Do hard calculations, either from scripts of an interactive session
 
-    
-!!! abstract "keypoints"
-    - We recommend you to use ThinLinc to log in when you need graphics
+Bianca contains hundreds of nodes, each of which is isolated from each other and the Internet.
 
+As Bianca is a shared resources, there are rules to use it together in fair way:
+
+ * The login node is only for easy things, such as moving files,
+   starting jobs or starting an interactive session
+ * The worker nodes are for harder things, such as
+   running a script or running an interactive session.
+
+To start an interactive session [2], type:
+
+
+```bash
+interactive -A [project name] -p core -n 2 -t 8:0:0
+```
+
+For example:
+
+```bash
+interactive -A sens2023531 -p core -n 2 -t 8:0:0
+```
+
+## Conclusions
+
+ * Bianca makes it hard to leak data
+ * Login differs from where you are and what you need
+ * Only do light things on login nodes
+
+## Footnotes
+
+ * [1] 'no internet' meaning 'no direct way to download or upload data from/to
+   the internet
+ * [2] In this case, 8 hour long, with 2 cores
+
+## Videos
+
+ * Login from outside SUNET: [YouTube](https://youtu.be/W-PMTyNcbYI), [download (.mp4)](https://richelbilderbeek.nl/login_bianca_outside_sunet.mp4)
+ * Login from inside SUNET: [YouTube](https://youtu.be/upBozh2BI5c), [download (.ogv)](https://richelbilderbeek.nl/login_bianca_inside_sunet.ogv)
+
+## Links
+
+ * [The Bianca remote desktop login](https://bianca.uppmax.uu.se)
+ * [How get a VPN for UU](https://mp.uu.se/en/web/info/stod/it-telefoni/anvandarguider/network/vpn-service)
