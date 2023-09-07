@@ -131,6 +131,7 @@ Rpackage
 rpackages
 RStudio
 Rstudio
+rstudio
 rsync
 runtime
 sam
