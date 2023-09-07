@@ -94,11 +94,12 @@ $ interactive -A sens2023531 -p core -n 1 -t 10:00
  
 ##### Start RStudio
 ThinLinc
+
 When logging onto Bianca, you are placed on a login node, which has 2 CPU and a few GB of RAM. This is sufficient for doing some lightweight calculations, but interactive sessions and batch jobs provide access to much more resources and should be requested via the SLURM system.
 
 Such is the case for using RStudio on Bianca. We recommend using at least two cores for this, and to get those resources, you must start an interactive job, for example,
 
-$ interactive -A <project> -n 2 -t hh:mm:sec
+$ interactive -A <project> -n 2 -t hours:minutes:seconds
 
 Once the interactive job has begun, load an RStudio module and an R_packages module and run "rstudio" from there. 
  
