@@ -4,6 +4,35 @@
 
 !!! info "Objectives"
     - This is a short introduction in how to reach the calculation nodes
+    - 
+
+```mermaid
+
+  graph TB
+
+  Node1 -- interactive --> SubGraph2Flow
+  Node1 -- sbatch --> SubGraph2Flow
+  subgraph "Snowy"
+  SubGraph2Flow(calculation nodes) 
+        end
+
+        thinlinc -- usr-sensXXX + 2FA + VPN ----> SubGraph1Flow
+        terminal -- usr --> Node1
+        terminal -- usr-sensXXX + 2FA + VPN ----> SubGraph1Flow
+        Node1 -- usr-sensXXX + 2FA + no VPN ----> SubGraph1Flow
+        
+        subgraph "Bianca"
+        SubGraph1Flow(Bianca login) -- usr+passwd --> private(private cluster)
+        private -- interactive --> calcB(calculation nodes)
+        private -- sbatch --> calcB
+        end
+
+        subgraph "Rackham"
+        Node1[Login] -- interactive --> Node2[calculation nodes]
+        Node1 -- sbatch --> Node2
+        end
+```
+
 
 ### Slurm, sbatch, the job queue
 - Problem: _1000 users, 300 nodes, 5000 cores_
@@ -62,6 +91,16 @@ $ interactive -A sens2023531 -p core -n 1 -t 10:00
 
 - Which node are you on?
   - Logout with `<Ctrl>-D` or `logout`
+ 
+##### Start RStudio
+ThinLinc
+When logging onto Bianca, you are placed on a login node, which has 2 CPU and a few GB of RAM. This is sufficient for doing some lightweight calculations, but interactive sessions and batch jobs provide access to much more resources and should be requested via the SLURM system.
+
+Such is the case for using RStudio on Bianca. We recommend using at least two cores for this, and to get those resources, you must start an interactive job, for example,
+
+$ interactive -A <project> -n 2 -t hh:mm:sec
+
+Once the interactive job has begun, load an RStudio module and an R_packages module and run "rstudio" from there. 
  
 #### A simple job script template
 
@@ -160,7 +199,6 @@ In short, this program goes over the following procedure, over and over again:
 - Local disk (scratch): 4 TB 
 - Home storage: 32 GB at Castor
 - Project Storage: Castor
-
 
 
 !!! abstract "Keypoints"
