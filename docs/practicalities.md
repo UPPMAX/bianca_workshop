@@ -37,7 +37,7 @@ Time |Topic
 14:45|Break
 15:00|Software installation
 15.35|Summary, closing
-15.40|Optional Q/A
+15.45|Done, optional Q/A
 
 ## Window layout
 
