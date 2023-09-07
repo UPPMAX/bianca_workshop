@@ -53,7 +53,7 @@ The be able to use VPN:
 Data can be transferred to/from the `wharf`, 
 which is a special folder that is visible from the Internet.
 
-## Log in
+## Logging in
 
 You can log in either through ThinLinc or via SSH, `ssh`:
 
@@ -62,7 +62,7 @@ You can log in either through ThinLinc or via SSH, `ssh`:
     - ``ssh`` from home terminal
     - ``ssh`` from a session on Rackham 
 
-## Log in to the Bianca remote desktop environment
+### Log in to the Bianca remote desktop environment
 
 !!! warning
 
@@ -90,7 +90,7 @@ the connection). Here is how to login:
 
 > The Bianca remote desktop
 
-## Log in to the Bianca command-line environment
+### Log in to the Bianca command-line environment
 
 You can use your favorite terminal to login (see <https://uppmax.github.io/uppmax_intro/login2.html#terminals> for an overview of many)
 to the Bianca command-line environment.
@@ -115,8 +115,6 @@ ssh richel-sens2023531@bianca.uppmax.uu.se
     for example `verysecret`
 
  4. Enjoy! You are in!
-
-
 
 ## Login node
 
@@ -164,8 +162,9 @@ interactive -A sens2023531 -p core -n 2 -t 8:0:0
 
 ## Videos
 
- * Login from outside SUNET: [YouTube](https://youtu.be/W-PMTyNcbYI), [download (.mp4)](https://richelbilderbeek.nl/login_bianca_outside_sunet.mp4)
  * Login from inside SUNET: [YouTube](https://youtu.be/upBozh2BI5c), [download (.ogv)](https://richelbilderbeek.nl/login_bianca_inside_sunet.ogv)
+ * Login to Bianca from outside SUNET, no VPN: [YouTube](https://youtu.be/W-PMTyNcbYI), [download (.mp4)](https://richelbilderbeek.nl/login_bianca_outside_sunet.mp4)
+ * Login to Bianca remote desktop from outside SUNET, with VPN: [YouTube](https://youtu.be/AIJKbJeu0MI), [download (.ogv)](https://richelbilderbeek.nl/login_bianca_outside_sunet_vpn.ogv)
 
 ## Links
 
