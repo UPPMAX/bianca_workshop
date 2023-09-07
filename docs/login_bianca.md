@@ -28,7 +28,7 @@ Bianca was designed to:
 
 ![Bianca](./img/biancaorganisation-01.png)
 
-> The way Bianca is organised
+> The relation between Bianca and the Internet
 
 Bianca and the Internet have this relation:
 
@@ -75,18 +75,18 @@ the connection). Here is how to login:
 
  2. Fill in the first dialog. Do use the `UPPMAX` [2-factor authentication](https://www.uppmax.uu.se/support/user-guides/setting-up-two-factor-authentication/) (i.e. not SUPR!)
 
-![Bianca login, first dialog](./img/login.png)
+![Bianca login, first dialog](./img/bianca_gui_login_1st.png)
 
  3. Fill in the second dialog, using your regular password (i.e. no need for two-factor authentication)
 
-![Bianca login, second dialog](./img/bianca_gui_login_2)
+![Bianca login, second dialog](./img/bianca_gui_login_2nd.png)
 
 > The second Bianca remote desktop login dialog. 
 > Note that it uses ThinLinc to establish this connection
 
  4. Enjoy! You are in!
 
-![The Bianca remote desktop](./img/Thinlinc2.jpg)
+![The Bianca remote desktop](./img/bianca_remote_desktop.png)
 
 > The Bianca remote desktop
 
