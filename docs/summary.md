@@ -57,7 +57,7 @@
       - rsync, scp/sftp
 
 
-- **NAISS-SENS and sensitive data**
+- **Legal and administrative aspects**
 
 
     - Sensitive personal data
