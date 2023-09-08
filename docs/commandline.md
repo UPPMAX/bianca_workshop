@@ -285,5 +285,7 @@ Run the script:
 
 ## Links
 
- * Video 'Using the command-line on the UPPMAX Bianca cluster': [YouTube](https://youtu.be/kjqLAx2bgJI), [download (.ogv)](https://richelbilderbeek.nl/uppmax_bianca_command_line.ogv)
+ * Video: solution the exercises: [YouTube](https://youtu.be/7_LPeQbcmAo), [download (.ogv)](https://richelbilderbeek.nl/bianca_cli.ogv)
+ * Video: 'Using the command-line on the UPPMAX Bianca cluster': [YouTube](https://youtu.be/kjqLAx2bgJI), [download (.ogv)](https://richelbilderbeek.nl/uppmax_bianca_command_line.ogv)
  * [UPPMAX intro course materials on LINUX](https://uppmax.github.io/uppmax_intro/linux.html)
+
