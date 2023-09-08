@@ -512,6 +512,9 @@ Running the script does not load the module beyond running the script.
 
  * [Almost all installed databases](https://www.uppmax.uu.se/resources/databases/)
 
+## Video
+
+ * Solution to the exercises: [YouTube](https://youtu.be/lNlq2Eb-qgc), [Download (.ogv)](https://richelbilderbeek.nl/bianca_modules.ogv)
 ## Links
 
  * [Software at UPPMAX](https://www.uppmax.uu.se/resources/software/)
