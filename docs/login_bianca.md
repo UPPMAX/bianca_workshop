@@ -14,7 +14,7 @@
  3. Login via SSH
  4. Start an interactive session
 
-![The voyage from outside the university network to a cluster login node](971_the_voyage_from_outside_the_university_network_to_a_cluster_login_node.png)
+![The voyage from outside the university network to a cluster login node](./img/971_the_voyage_from_outside_the_university_network_to_a_cluster_login_node.png)
 
 > The voyage from outside the university network to a cluster login node
 
