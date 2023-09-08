@@ -27,7 +27,7 @@ Time |Topic
 .    |Parallel session for active users
 9:45 |Break
 10:00|[Command-line intro](commandline.md)
-10:15|[Module system](modules1.md)
+10:25|[Module system](modules1.md)
 10:45|Break
 11.00|[NAISS-SENS](naiss-sens-bianca.md)
 12:00|Lunch

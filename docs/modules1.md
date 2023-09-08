@@ -1,29 +1,57 @@
-# Working with the modules on Bianca
+# Working with modules on Bianca
 
 !!! info "Objectives" 
 
-    - Using module system commands
-    - Use software in the module system for some typical workflows
-       
-- 800+ programs and packages are installed, with usually many versions of each.
-- To avoid chaos and collisions, they are managed by a **module system** called [LMOD](https://lmod.readthedocs.io/en/latest/).
-- By default, the only software available on Bianca and other UPPMAX clusters are standard Linux tools.
-- **All other software** is made available by using the module system.
-- This means users must explicitly request software, together with software versions, that they require.
-- This turns out to be quite easy to do. It also improves readability and reproducibility.
-- Nearly all software in the module system is available on all UPPMAX clusters.
+    - Being able to search/load/unload modules
+    - Create an executable Bash script that uses a module (without SLURM)
 
+## Exercises
+
+!!! info "Want more complex/realistic exercises?" 
+
+    The goal of this lesson is to work with the module system
+    in a minimal/fast way. 
+    These exercises do not achieve anything useful.
+    See 'Bigger exercises' for more complex/realistic exercises
+
+ * 2a. Verify that the tool `cowsay` is not available by default
+ * 2b. Search for the module providing `cowsay`
+ * 2c. Load a specific version of that module
+ * 2d. Verify that the tool `cowsay` now works
+ * 2e. Unload that module
+ * 2f. Verify that the tool `cowsay` is not available anymore
+
+ * 3a. Create an executable script called `cow_says_hello.sh`.
+   It should load a specific version of the `cowsay` module,
+   after which it uses `cowsay` to do something
+ * 3b. Find out: if the `cowsay` module is not loaded, after
+   running the script, is it loaded yes/no?
+
+## 1. Background
+
+Bianca is shared Linux computer with all the standard Linux/GNU tools installed,
+on which all users should be able to 
+do their work independently and undisturbed.
+
+To ensure this, users cannot modify, upgrade or uninstall software themselves
+and instead a [module system](https://lmod.readthedocs.io/en/latest/) is used.
+This allow users to independently use their favorite versions of their
+favorite software.
+
+To have new software installed on Bianca,
+users must explicitly request a version of a piece of software.
+As of today, there are nearly [800+ programs and packages, with multiple versions](https://www.uppmax.uu.se/resources/software/installed-software/) 
+available on all UPPMAX clusters.
+Using explicit versions of software is easy to do 
+and improves the reproducibility of the scripts written.
+
+To preserve harddisk space, Bianca also
+has [multiple big databases installed](https://www.uppmax.uu.se/resources/databases/).
 
 !!! warning 
     - To access bioinformatics tools, load the **bioinfo-tools** module first.
 
-
-### Modules
-
-- [Software at UPPMAX](https://www.uppmax.uu.se/resources/software/)
-- [Module system](https://www.uppmax.uu.se/resources/software/module-system/)
-
-#### Some commands
+## 2. Working with the module system
 
 The `module` command is the basic interface to the module system.
 The `ml` shortcut command is also available.
@@ -234,19 +262,23 @@ Modules can also be unloaded, which also unloads their prerequisites.
 - Unload a module 
     - `module unload <module name>` or `ml -<module name>`
 
-### Installed software
+## 3. Using modules in an executable script
 
-You can find almost all installed software at:
+Using modules in an executable script is straightforward:
+just load the module needed before using the software in that module.
 
-- <https://www.uppmax.uu.se/resources/software/installed-software/>
-  
-#### Installed databases
+For example, this is a valid bash script:
 
-You can find descriptions of almost all installed databases at:
-
-- [Installed databases at UPPMAX](https://www.uppmax.uu.se/resources/databases/)
+```
+#!/bin/bash
+module load cowsay/3.03
+cowsay hello
+```
     
-### Workflows    
+## Bigger exercises
+
+!!! warning 
+    - To access bioinformatics tools, load the **bioinfo-tools** module first.
 
 ???+ question "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff"
 
@@ -377,9 +409,108 @@ You can find descriptions of almost all installed databases at:
     This will be covered in more detail in the afternoon.
 
 
-!!! abstract "keypoints"
     
-    - Use the module system to use centrally installed software that is available on all nodes. 
-    - Include versions when loading modules, for reproducibility!
-    - Your own installed software, scripts, python packages etc. are available from their paths.
-    
+## Solutions
+
+### 2a. Verify that the tool `cowsay` is not available by default
+
+```
+cowsay hello
+```
+
+Gives the error message: `cowsay: command not found`.
+
+### 2b. Search for the module providing `cowsay`
+
+```
+module spider cowsay
+```
+
+You will find the `cowsay/3.03` module.
+
+### 2c. Load a specific version of that module
+
+```
+module load cowsay/3.03
+```
+
+### 2d. Verify that the tool `cowsay` now works
+
+```
+cowsay hello
+```
+
+### 2e. Unload that module
+
+```
+module unload cowsay/3.03
+```
+
+### 2f. Verify that the tool `cowsay` is not available anymore
+
+```
+cowsay hello
+```
+
+Gives the error message: `cowsay: command not found`.
+
+### 3a. Create an executable script called `cow_says_hello.sh`
+
+```
+nano cow_says_hello.sh
+```
+
+Copy-paste this example text:
+
+```
+#!/bin/bash
+module load cowsay/3.03
+cowsay hello
+```
+
+Run:
+
+```
+./cow_says_hello.sh
+```
+
+### 3b. Find out
+
+Running the script does not load the module beyond running the script.
+
+```
+[richel@sens2023598-bianca ~]$ cowsay hello
+-bash: cowsay: command not found
+[richel@sens2023598-bianca ~]$ ./cow_says_hello.sh 
+ ________ 
+< hello >
+ -------- 
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+[richel@sens2023598-bianca ~]$ cowsay hello
+-bash: cowsay: command not found
+```
+
+## Conclusion
+
+ * Use the module system to use centrally installed software that is available on all nodes
+ * Include versions when loading modules for reproducibility
+ * Your own installed software, scripts, Python packages etc. are available from their paths
+
+### Installed software
+
+ * [Almost all installed software](https://www.uppmax.uu.se/resources/software/installed-software/)
+  
+#### Installed databases
+
+ * [Almost all installed databases](https://www.uppmax.uu.se/resources/databases/)
+
+## Links
+
+ * [Software at UPPMAX](https://www.uppmax.uu.se/resources/software/)
+ * [The UPPMAX module system](https://www.uppmax.uu.se/resources/software/module-system/)
+ * [Almost all installed software on UPPMAX](https://www.uppmax.uu.se/resources/software/installed-software/)
+ * [Almost all installed databases on UPPMAX](https://www.uppmax.uu.se/resources/databases/)
