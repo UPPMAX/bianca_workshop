@@ -49,7 +49,7 @@ available on all UPPMAX clusters.
 Using explicit versions of software is easy to do 
 and improves the reproducibility of the scripts written.
 
-To preserve harddisk space, Bianca also
+To preserve hard disk space, Bianca also
 has [multiple big databases installed](https://www.uppmax.uu.se/resources/databases/).
 
 !!! warning 
