@@ -27,6 +27,10 @@
  * 3b. Find out: if the `cowsay` module is not loaded, after
    running the script, is it loaded yes/no?
 
+![Working with a computer cluster module system](./img/627409_working_with_a_computer_cluster_module_system.png)
+
+> Working with a computer cluster module system ![Public domain](./img/public_domain_88x31.png)
+
 ## 1. Background
 
 Bianca is shared Linux computer with all the standard Linux/GNU tools installed,
