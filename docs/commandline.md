@@ -100,9 +100,10 @@ As an example, we create a script, called `do_it.sh`:
 nano do_it.sh
 ```
 
-Use `.sh` as a file extension a social convention for how a Bash script is called,
-as (1) `sh` is short for 'shell', (2) Bash is short for 'Bourne Again Shell'.
-A 'shell' in this context is a program that allows working with an operating system. 
+!!! info "Why use a `.sh` file extension?"
+    Using `.sh` as a file extension a social convention for how a Bash script is called,
+    as (1) `sh` is short for 'shell', (2) Bash is short for 'Bourne Again Shell'.
+    A 'shell' in this context is a program that allows working with an operating system. 
 
 As an example, copy-paste this content into the script:
 
@@ -112,11 +113,12 @@ echo "Hello!"
 ls | rev
 ```
 
- * The first line is called the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)),
-   and indicates this is a Bash script
- * The second line displays the text between double quotes
- * The third line displays the files in the folder reversed. 
-   The `|` is called the [pipeline](https://en.wikipedia.org/wiki/Pipeline_(Unix)) operator
+!!! info "What does this program do?"
+     * The first line is called the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)),
+       and indicates this is a Bash script
+     * The second line displays the text between double quotes
+     * The third line displays the files in the folder reversed. 
+       The `|` is called the [pipeline](https://en.wikipedia.org/wiki/Pipeline_(Unix)) operator
 
 Save and close `nano`.
 
