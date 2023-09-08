@@ -1,7 +1,7 @@
 # The command-line on Bianca
 
 !!! info "Objectives"
-    - Being able to navigate in/out folder
+    - Being able to navigate in/out folders
     - Being able to view/create/move/delete files
     - Create an executable bash script
 
@@ -13,7 +13,10 @@ Tips:
  * At the bottom of this page are the solutions.
 
  1. View the help of the command `cd`
- 2. Go to the folder `/proj/sens2023598/workshop/`
+ 2. Go to the following folders:
+  * The project folder, e.g. `/proj/sens2023598`
+  * Your home folder
+  * The wharf, e.g. `/proj/sens2023598/nobackup/wharf`
  3. Create a folder `/proj/sens2023598/workshop/[your_login_name]`,
     for example, `/proj/sens2023598/workshop/richel`
  3. In that folder, create an executable script called `do_it.sh`.
@@ -195,10 +198,33 @@ $ rm -rf dont_delete_me
 man cd
 ```
 
-### 2. Go to the folder `/proj/sens2023598/workshop/`
+### 2. Go to the following folders
+
+ * The project folder, e.g. `/proj/sens2023598`
 
 ```
-cd /proj/sens2023598/workshop/
+cd /proj/sens2023598
+```
+
+Don't forget the `/` at the start.
+
+ * Your home folder
+
+```
+cd /home/richel
+```
+
+
+The squiggle/tilde (`~`) is a shorter notation:
+
+```
+cd ~
+```
+
+ * The wharf, e.g. `/proj/sens2023598/nobackup/wharf`
+
+```
+cd /proj/sens2023598/nobackup/wharf
 ```
 
 ### 3. Create a folder `/proj/sens2023598/workshop/[your_login_name]`
