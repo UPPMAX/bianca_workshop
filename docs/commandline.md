@@ -7,57 +7,143 @@
 
 ## Exercises
 
-!!! info "Tips"
-
-     * You can Google all this
-     * At the bottom of this page are the solutions.
-
- * 1. View the help of the command `cd`
- * 2. Go to the following folders:
-   * The project folder, e.g. `/proj/sens2023598`
-   * Your home folder
-   * The wharf, e.g. `/proj/sens2023598/nobackup/wharf`
- * 3. Create a folder `/proj/sens2023598/workshop/[your_login_name]`,
-    for example, `/proj/sens2023598/workshop/richel`
- * 4. In that folder, create an executable script called `do_it.sh`.
- * 5. Upon running the script, it should:
-   * display a welcome message in text, e.g. `Hello!`
-   * do something, e.g. show the files in reverse order
- * 6. Copy the file (e.g. to `do_it_again.sh`). 
- * 7. Move the copied file (e.g. move it one folder up to `../do_it_again_here.sh`)
- * 8. Delete the copied file
+ * `1. Help`: 
+   * 1a. View the help of the command `cd`
+ * `2. Navigation`: Go to the following folders:
+   * 2a. The project folder, e.g. `/proj/sens2023598`
+   * 2b. Your home folder
+   * 2c. The wharf, e.g. `/proj/sens2023598/nobackup/wharf`
+ * `3. Working with folders`: 
+   * 3a. Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/proj/sens2023598/workshop/richel`
+ * `4. Working with files`: 
+   * 4a. Create a file, e.g. `richel.txt`
+   * 4b. Copy the file (e.g. to `richel_again.txt`). 
+   * 4c. Move the copied file (e.g. move it one folder up to `../richel_again.txt`)
+   * 4d. Delete the copied file
+ * `5. Creating an executable script`:
+   * Create an executable script called `/proj/sens2023598/workshop/[your_login_name]/do_it.sh`,
+     which, upon running, displays a welcome message in text (e.g. `Hello!`)
+     and does something (e.g. show the files in reverse order)
 
 ![Using the command line on a computer cluster](./img/610803_a_woman_using_the_command_line_on_a_computer_cluster.png)
 
 > Using the command line on a computer cluster ![Public domain](./img/public_domain_88x31.png)
 
-## Command-line intro
+## 1. Help
 
-### Help
+Use `man` to see the help pages about a command:
 
-1. `man`  &emsp;info about a command
-      
-### Navigation and file management
+```
+man cd
+man man
+man ls
+```
 
-1. `pwd`  &emsp; present directory
-1. `ls`  &emsp;list content
-1. `mkdir`  &emsp;make directory
-1. `cd`  &emsp;change directory
-1. `rmdir`  &emsp;remove empty directory
-1. `touch` &emsp;create an empty file
-1. `cp`  &emsp;copy
-1. `mv`  &emsp;move
-1. `rm`  &emsp;remove
-1. `scp`  &emsp;securely remotely copy
+Press CTRL-Z to exit `man`
 
-### Read files and change file properties
+## 2. Navigation
 
-1. `cat`  &emsp;print content on screen
-1. `head`  &emsp;print first part
-1. `tail`  &emsp;print last part
-1. `less`  &emsp;browse content
-1. `chmod`  &emsp;change file permissions
-1. `echo`  &emsp;print text on screen
+Use `cd` to change directory/folder:
+
+Where to                           |Example command
+-----------------------------------|---------------------
+The root folder                    |`cd /`
+The project folder                 |`cd /proj/sens2023598`
+Your home folder, using full path  |`cd /home/richel`
+Your home folder, using tilde      |`cd ~`
+The wharf                          |`cd /proj/sens2023598/nobackup/wharf`
+Up one folder                      |`cd ..`
+Into a folder, using relative path |`cd myfolder`
+The previous location              |`cd -`
+
+ * Tip: use `ls` to see the content of a folder
+ * Tip: use `pwd` to see your current location
+
+## 3. Working with folders
+
+Do what                            |Example command
+-----------------------------------|---------------------
+Create a folder                    |`mkdir myfolder`
+Delete an empty folder             |`rmdir myfolder`
+
+ * Tip: use `ls` to see the content of a folder
+ * Tip: use `pwd` to see your current location
+ * Tip for sysadmins: use `pwd -P` to see your real current location on the hardware
+
+## 4. Working with files
+
+Do what                            |Example command
+-----------------------------------|---------------------
+Create an empty file               |`touch myfile.txt`
+View a file using `cat`            |`cat myfile.txt`
+Edit a file using `nano`           |`nano myfile.txt`
+Delete a file                      |`rm myfile.txt`
+Copy a file                        |`cp myfile.txt mycopy.txt`
+Rename a file                      |`mv myfile.txt mycopy.txt`
+Move a file to one folder up       |`mv myfile.txt ../`
+Move a file to the home folder     |`mv myfile.txt ~`
+
+ * Note: `nano` is one of many text editors. 
+   It is the one recommended to beginners, 
+   as its interface is closest to what one expects
+
+## 5. Creating an executable script
+
+Creating an executable script has two steps:
+
+ * 1. Create a script
+ * 2. Allow the script to execute
+
+As an example, we create a script, called `do_it.sh`:
+
+```
+nano do_it.sh
+```
+
+Use `.sh` as a file extension a social convention for how a Bash script is called,
+as (1) `sh` is short for 'shell', (2) Bash is short for 'Bourne Again Shell'.
+A 'shell' in this context is a program that allows working with an operating system. 
+
+As an example, copy-paste this content into the script:
+
+```
+#!/bin/bash
+echo "Hello!"
+ls | rev
+```
+
+ * The first line is called the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)),
+   and indicates this is a Bash script
+ * The second line displays the text between double quotes
+ * The third line displays the files in the folder reversed. 
+   The `|` is called the [pipeline](https://en.wikipedia.org/wiki/Pipeline_(Unix)) operator
+
+Save and close `nano`.
+
+ * Use `CTRL-X` to start to exit, then press `y` to start saving the file, then
+   press enter to use the current filename
+
+Use [chmod](https://en.wikipedia.org/wiki/Chmod) to make the file executable:
+
+```
+chmod +x do_it.sh
+```
+
+ * `+x` can be read as: 'add the right to execute'
+
+## 6. Other useful commands
+
+Command name|Purpose
+------------|---------------------------------------------
+`scp`       |Copy file between Bianca and your local computer
+`cat`       |Show the content of a file
+`less`      |Navigate through the content of a file
+`head`      |Show the first lines of a file
+`tail`      |Show the last lines of a file
+`less`      |Show the content of a file
+
+With `ls /usr/bin | wc --lines` one can see that there are more than 1700
+commands on Bianca.
 
 ## Type along
 
@@ -192,21 +278,21 @@ $ rm -rf dont_delete_me
 
 ## Solutions
 
-### 1. View the help of the command `cd`
+### 1a. View the help of the command `cd`
 
 ```
 man cd
 ```
 
-### 2. Go to the following folders
-
- * The project folder, e.g. `/proj/sens2023598`
+### 2a. Go to the project folder, e.g. `/proj/sens2023598`
 
 ```
 cd /proj/sens2023598
 ```
 
 Don't forget the `/` at the start.
+
+### 2b. Go to your home folder
 
  * Your home folder
 
@@ -221,24 +307,60 @@ The squiggle/tilde (`~`) is a shorter notation:
 cd ~
 ```
 
- * The wharf, e.g. `/proj/sens2023598/nobackup/wharf`
+### 2c. Go to the the wharf, e.g. `/proj/sens2023598/nobackup/wharf`
 
 ```
 cd /proj/sens2023598/nobackup/wharf
 ```
 
-### 3. Create a folder `/proj/sens2023598/workshop/[your_login_name]`
+### 3a. Create a folder `/proj/sens2023598/workshop/[your_login_name]`
+
+```
+mkdir /proj/sens2023598/workshop/richel
+```
+
+Or navigate there first:
 
 ```
 cd /proj/sens2023598/workshop/
 mkdir richel
 ```
-### 4. In that folder, create an executable script called `do_it.sh`.
+
+### 4a. Create a file, e.g. `richel.txt`
 
 ```
-touch do_it.sh
-chmod +x do_it.sh
+touch richel.txt
 ```
+
+### 4b. Copy the file (e.g. to `richel_again.txt`). 
+
+```
+cp richel.txt richel_again.txt
+```
+
+### 4c. Move the copied file (e.g. move it one folder up to `../richel_again.txt`)
+
+```
+mv richel_again.txt ../
+```
+### 4d. Delete the copied file
+
+```
+rm ../richel_again.txt
+```
+
+or:
+
+```
+cd ..
+rm richel_again.txt
+```
+
+
+HIERO
+
+### 4. In that folder, create an executable script called `do_it.sh`.
+
 
 It does nothing, but it is executable :-)
 
@@ -252,44 +374,12 @@ nano do_it.sh
 
 Change the text to:
 
-```
-#!/bin/bash
-echo "Hello!"
-ls | rev
-```
 
 Run the script:
 
 ```
 ./do_it.sh
 ```
-
-### 6. Copy the file (e.g. to `do_it_again.sh`)
-
-```
-copy do_it.sh do_it_again.sh
-```
-
-### 7. Move the copied file
-
-
-```
-mv do_it_again.sh ../do_it_again_richel.sh
-```
-
-### 8. Delete the copied file
-
-```
-rm ../do_it_again_richel.sh
-```
-
-or
-
-```
-cd ..
-rm do_it_again_richel.sh
-```
-
 
 
 ## Links

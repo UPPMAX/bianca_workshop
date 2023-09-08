@@ -9,8 +9,6 @@
 
 ## Exercises
 
- * All you need is written down below
-
  1. Discuss: what is the purpose of Bianca? What kind of consequences will this have for its design?
  2. Login via ThinLinc
  3. Login via SSH
