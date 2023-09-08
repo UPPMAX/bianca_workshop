@@ -55,25 +55,32 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
         end
 ```
 
-## Submitting jobs
-
-### Slurm, sbatch, the job queue
+## Slurm, sbatch, the job queue
 - Problem: _1000 users, 300 nodes, 5000 cores_
-    - Need a queue:
+
+
+- We need a queue:
 
 - [Slurm](https://slurm.schedmd.com/) is a jobs scheduler
-- Plan your job and but in the slurm job batch (sbatch)
-    
-    - `sbatch <flags> <program>` or
-    - `sbatch <job script>`
+
+### Choices
+- Work interactively with your data or development
+    - Run an **Interactive session**
+    - ``$ interactive <flags> ...``
+- If you don't need any live interaction with your workflow/analysis/simulation
+    - Send your job to the slurm job batch (sbatch)
+    - `$ sbatch <flags> <program>` or
+    - `$ sbatch <job script>`
 
 ### Jobs
 - Job = what happens during booked time
-- Described in a Bash script file
+- Described in a script file or 
+- Described in the command-line (priority over script)
+- The definitions of a job:
     - Slurm parameters (**flags**)
     - Load software modules
-    - (Move around file system)
-    - Run programs
+    - (Navigate in file system)
+    - Run program(s)
     - (Collect output)
 - ... and more
 
@@ -91,7 +98,29 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
     - `-n 1`
     - `-t 10-00:00:00`
 
+### The queue
 ![Image](./img/queue1.png)
+- x-axis: cores, one thread per core
+- y-axis: time
+<br/><br/>
+- [Slurm](https://slurm.schedmd.com/) is a jobs scheduler
+- Plan your job and but in the slurm job batch (sbatch)
+    `sbatch <flags> <program>` or
+    `sbatch <job script>`
+
+- Easiest to schedule *single-threaded*, short jobs
+
+![Image](./img/queue2.png)
+![Image](./img/queue3.png)
+- Left: 4 one-core jobs can run immediately (or a 4-core wide job).
+
+  - The jobs are too long to fit in core number 9-13.
+
+- Right: A 5-core job has to wait.
+
+  - Too long to fit in cores 9-13 and too wide to fit in the last cores.
+
+### To think about
 
 - Where should it run? (`-p node` or `-p core`)
 - Use a whole node or just part of it?
@@ -99,6 +128,8 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
     - 1 hour walltime = 16 core hours = expensive
         - Waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
 - Default value: core
+
+## Job scripts (batch)
 
 ### Interactive jobs
 - Most work is most effective as submitted jobs, but e.g. development needs responsiveness
