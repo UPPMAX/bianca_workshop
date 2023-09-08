@@ -131,6 +131,11 @@ chmod +x do_it.sh
 
  * `+x` can be read as: 'add the right to execute'
 
+!!! info "Create read-only files"
+    If you want to protect your data from being modified accidentally,
+    `chmod` can create read-only files,
+    by removing the writing rights using `chmod -w`.
+
 ## 6. Other useful commands
 
 These are some commands that we enjoy.
@@ -151,136 +156,26 @@ Command name|Purpose
 With `ls /usr/bin | wc --lines` one can see that there are more than 1700
 commands on Bianca.
 
-## Type along
-
-### Navigating Bianca
-
-- Check the path to your $HOME folder
-
-```
-$ cd ~
-$ pwd
-$ pwd -P
-```
-
-??? answer
-    ```
-    /home/$USER
-    /castor/project/home/bjornc
-    ```
-    The first `cd ~` gives no output, due to the 'Silence is golden' rule,
-    which entails to display nothing if all went OK.
-
-    It appears that your home folder, is some else's subfolder :-)
-
-- Check the path to your projects
-
-```
-$ cd /proj
-$ ls
-$ pwd
-$ pwd -P
-```
-
-??? answer
-    ```
-    /proj
-    /proj
-    ```
-    Your `/proj` folder, is the machine's `/proj` folder.
-
-```
-$ cd /proj/sensXXX
-$ pwd
-$ pwd -P
-```
-??? answer
-    ```
-    /proj/sensXXX
-    /castor/project/proj
-    ```
-    Your `/proj/sensXXX` folder, however, is a subfolder of `/castor`
-
-### Create empty file
-
-Create an empty file, show it exists, and delete it:
-
-```
-$ touch my_file.txt
-$ ls
-$ rm my_file.txt
-```
-
-??? answer
-    There is only output after `ls`:
-    ```
-    my_file.txt
-    ```
-    The exact output depends on all files present in your working directory
-
-### Create simple script
-
-Create a simple script, run it, and delete it:
-
-```
-$ echo '#!/bin/bash' > my_script.sh
-$ echo 'echo "Hello world"' >> my_script.sh
-$ chmod +x my_script.sh
-$ ./my_script.sh
-$ rm my_script.sh
-```
-
-Note that `>` means '(over)write the text to file',
-and `>>` means 'append the text to file'. Also, single quotes (`'`)
-for a cleaner syntax (i.e. avoiding `\"`).
-
-??? answer
-    There is only output after running the script:
-    ```
-    Hello world
-    ```
-
-## The terminal and the GUI are friends
+## 7. The terminal and the GUI are friends
 
 On a clean terminal, try typing `cd` 
 and then dragging a folder from the GUI to the terminal.
 
 It types the absolute path for you!
 
-## Use `chmod` to protect important files
+## 8. Commonly used links
 
-Most projects rely on data that should in principle never be changed. 
-Run `chmod -R -w data/` to remove write permissions 
-on everything inside the `data` directory. 
-Run `chmod -R +w data/` to undo this.
-
-- Protect your files
+These are some commonly used links:
 
 ```
-$ mkdir dont_delete_me
-$ touch dont_delete_me/please_let_me_live.txt
-$ chmod -R -w dont_delete_me/
-$ rm -rf dont_delete_me
-$ chmod -R +w dont_delete_me/
-$ rm -rf dont_delete_me
+cd Desktop
+ln -s /proj/sens2023598/ proj
+ln -s /proj/sens2023598/nobackup nobackup
+ln -s /proj/sens2023598/nobackup/wharf/richel/richel-sens2023598 wharf`
 ```
 
-??? answer
-    Only the first `rm` gives output:
-    ```
-    rm: cannot remove ‘dont_delete_me/please_let_me_live.txt’: Permission denied
-    ```
-
-## Aliases on your desktop
-
-1. Be logged in with ThinLinc.
-2. Open a terminal.
-3. Run `cd Desktop\`
-4. Make shortcuts to your heart's content:
-  - `PROJ=sens2023531`
-  - `ln -s /proj/$PROJ/ proj`
-  - `ln -s /proj/$PROJ/nobackup nobackup`
-  - `ln -s /proj/$PROJ/nobackup/wharf/${USER}/${USER}-$PROJ wharf`
+ * Replace `sens2023598` by your project
+ * Replace `richel` by your username
 
 ## Solutions
 
