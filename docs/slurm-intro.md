@@ -1,10 +1,32 @@
 # Introduction to compute nodes
 
-## Submitting jobs
-
 !!! info "Objectives"
     - This is a short introduction in how to reach the calculation nodes
-    - 
+    - We will cover
+        - queue system
+        - allocation of the compute nodes
+        - batch job scripts
+        - interactive session
+        - job efficiency
+
+## The compute nodes
+
+When you are logged in, you are on a login node.
+There are two types of nodes:
+
+Type        |Purpose
+------------|--------------------------
+Login node  |Start jobs for worker nodes, do easy things
+Worker node |Do hard calculations, either from scripts of an interactive session
+
+Bianca contains hundreds of nodes, each of which is isolated from each other and the Internet.
+
+As Bianca is a shared resources, there are rules to use it together in fair way:
+
+ * The login node is only for easy things, such as moving files,
+   starting jobs or starting an interactive session
+ * The worker nodes are for harder things, such as
+   running a script or running an interactive session.
 
 ```mermaid
 
@@ -33,6 +55,7 @@
         end
 ```
 
+## Submitting jobs
 
 ### Slurm, sbatch, the job queue
 - Problem: _1000 users, 300 nodes, 5000 cores_
@@ -86,7 +109,7 @@
 #### Try interactive
 
 ```
-$ interactive -A sens2023531 -p core -n 1 -t 10:00
+$ interactive -A sens2023598 -p core -n 1 -t 10:00
 ```
 
 - Which node are you on?
@@ -108,7 +131,7 @@ Once the interactive job has begun, load an RStudio module and an R_packages mod
 ```bash
 #!/bin/bash
 
-#SBATCH -A sens2023531  # Project ID
+#SBATCH -A sens2023598  # Project ID
 
 #SBATCH -p devcore  # Asking for cores (for test jobs and as opposed to multiple nodes) 
 
@@ -120,7 +143,7 @@ Once the interactive job has begun, load an RStudio module and an R_packages mod
 
 # go to some directory
 
-cd /proj/sens2023531/
+cd /proj/sens2023598/
 pwd -P
 
 # load software modules
