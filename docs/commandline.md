@@ -54,6 +54,11 @@ The previous location              |`cd -`
  * Tip: use `ls` to see the content of a folder
  * Tip: use `pwd` to see your current location
 
+!!! info "The Silence Is Golden Rule"
+    When your command 'just works' there is no output
+    (try, for example `cd ~`). 
+    This is due to [The Silence Is Golden Rule](https://www.linfo.org/rule_of_silence.html)
+
 ## 3. Working with folders
 
 Do what                            |Example command
@@ -128,6 +133,8 @@ chmod +x do_it.sh
 
 ## 6. Other useful commands
 
+These are some commands that we enjoy.
+
 Command name|Purpose
 ------------|---------------------------------------------
 `scp`       |Copy file between Bianca and your local computer
@@ -136,6 +143,10 @@ Command name|Purpose
 `head`      |Show the first lines of a file
 `tail`      |Show the last lines of a file
 `less`      |Show the content of a file
+`wc`        |Count words, lines and/or characters
+`|`         |[Pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix)) the output of one command to serve as input for the next
+`>`         |Write to file (removes existing content if any)
+`>>`        |Append to file
 
 With `ls /usr/bin | wc --lines` one can see that there are more than 1700
 commands on Bianca.
