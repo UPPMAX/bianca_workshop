@@ -14,15 +14,24 @@
  3. Login via SSH
  4. Start an interactive session
 
+![The voyage from outside the university network to a cluster login node](971_the_voyage_from_outside_the_university_network_to_a_cluster_login_node.png)
+
+> The voyage from outside the university network to a cluster login node
+
 ## Bianca's design
 
-Bianca was designed to:
+Bianca was designed to, among other:
 
- * make accidental data leaks difficult
- * make correct data management as easy as possible
- * emulate a standard HPC cluster environment
- * provide a maximum amount of resources
- * satisfy (privacy) regulations
+ * Protect the sensitive data
+   * Accidental data leaks should be difficult
+   * Law: if data is leaked, the person doing so should be possibly identified
+ * Emulate a standard HPC cluster environment
+   * Use the hardware as efficient as possible, 
+     by using a queuing system.
+     See [UPPMAX usage for the current usage of Bianca](https://status.uppmax.uu.se/usage/)
+   * Distributes shared resources (CPU, memory) in a fair way,
+     by using a queuing system
+   * make correct data management as easy as possible
     
 ### Bianca and the Internet
 
