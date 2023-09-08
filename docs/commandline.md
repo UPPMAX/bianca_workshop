@@ -21,7 +21,7 @@
    * 4c. Move the copied file (e.g. move it one folder up to `../richel_again.txt`)
    * 4d. Delete the copied file
  * `5. Creating an executable script`:
-   * Create an executable script called `/proj/sens2023598/workshop/[your_login_name]/do_it.sh`,
+   * 5a. Create an executable script called `/proj/sens2023598/workshop/[your_login_name]/do_it.sh`,
      which, upon running, displays a welcome message in text (e.g. `Hello!`)
      and does something (e.g. show the files in reverse order)
 
@@ -356,15 +356,7 @@ cd ..
 rm richel_again.txt
 ```
 
-
-HIERO
-
-### 4. In that folder, create an executable script called `do_it.sh`.
-
-
-It does nothing, but it is executable :-)
-
-### 5. Upon running the script, it should do things
+### 5. In that folder, create an executable script called `do_it.sh`.
 
 Edit the script:
 
@@ -374,6 +366,12 @@ nano do_it.sh
 
 Change the text to:
 
+```
+#!/bin/bash
+echo "Hello!"
+ls | rev
+
+```
 
 Run the script:
 
