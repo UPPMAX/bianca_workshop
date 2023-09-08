@@ -10,6 +10,9 @@
 
 ## Exercises
 
+!!! info "Solutions" 
+    See section 'Video' for the videos that show how to do these exercises
+
  1. Discuss: what is the purpose of Bianca? What kind of consequences will this have for its design?
  2. If outside of SUNET: use a VPN
  3. Log in to the Bianca remote desktop
@@ -123,7 +126,7 @@ ssh [user]-[project name]@bianca.uppmax.uu.se
 For example:
 
 ```bash
-ssh richel-sens2023531@bianca.uppmax.uu.se
+ssh richel-sens2023598@bianca.uppmax.uu.se
 ```
 
  2. Type your UPPMAX password, 
@@ -164,7 +167,7 @@ interactive -A [project name] -p core -n 2 -t 8:0:0
 For example:
 
 ```bash
-interactive -A sens2023531 -p core -n 2 -t 8:0:0
+interactive -A sens2023598 -p core -n 2 -t 8:0:0
 ```
 
 ## 7. Conclusions
@@ -179,11 +182,9 @@ interactive -A sens2023531 -p core -n 2 -t 8:0:0
    the internet
  * [2] In this case, 8 hour long, with 2 cores
 
-## 9. Videos
+## 9. Video
 
- * Login from inside SUNET: [YouTube](https://youtu.be/upBozh2BI5c), [download (.ogv)](https://richelbilderbeek.nl/login_bianca_inside_sunet.ogv)
- * Login to Bianca from outside SUNET, no VPN: [YouTube](https://youtu.be/W-PMTyNcbYI), [download (.mp4)](https://richelbilderbeek.nl/login_bianca_outside_sunet.mp4)
- * Login to Bianca remote desktop from outside SUNET, with VPN: [YouTube](https://youtu.be/AIJKbJeu0MI), [download (.ogv)](https://richelbilderbeek.nl/login_bianca_outside_sunet_vpn.ogv)
+ * Login to Bianca, using a VPN: [YouTube](https://youtu.be/Ni9nyCf7me8), [download (.mp4)](https://richelbilderbeek.nl/login_bianca_vpn.mp4)
 
 ## 10. Links
 
