@@ -7,23 +7,18 @@
 
 ## Exercises
 
- * `1. Help`: 
-   * 1a. View the help of the command `cd`
- * `2. Navigation`: Go to the following folders:
-   * 2a. The project folder, e.g. `/proj/sens2023598`
-   * 2b. Your home folder
-   * 2c. The wharf, e.g. `/proj/sens2023598/nobackup/wharf`
- * `3. Working with folders`: 
-   * 3a. Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/proj/sens2023598/workshop/richel`
- * `4. Working with files`: 
-   * 4a. Create a file, e.g. `richel.txt`
-   * 4b. Copy the file (e.g. to `richel_again.txt`). 
-   * 4c. Move the copied file (e.g. move it one folder up to `../richel_again.txt`)
-   * 4d. Delete the copied file
- * `5. Creating an executable script`:
-   * 5a. Create an executable script called `/proj/sens2023598/workshop/[your_login_name]/do_it.sh`,
-     which, upon running, displays a welcome message in text (e.g. `Hello!`)
-     and does something (e.g. show the files in reverse order)
+ * 1a. View the help of the command `cd`
+ * 2a. Navigate to the project folder, e.g. `/proj/sens2023598`
+ * 2b. Navigate to your home folder
+ * 2c. Navigate to the wharf, e.g. `/proj/sens2023598/nobackup/wharf`
+ * 3a. Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/proj/sens2023598/workshop/richel`
+ * 4a. Create a file, e.g. `richel.txt`
+ * 4b. Copy the file (e.g. to `richel_again.txt`). 
+ * 4c. Move the copied file (e.g. move it one folder up to `../richel_again.txt`)
+ * 4d. Delete the copied file
+ * 5a. Create an executable script called `/proj/sens2023598/workshop/[your_login_name]/do_it.sh`,
+   which, upon running, displays a welcome message in text (e.g. `Hello!`)
+   and does something (e.g. show the files in reverse order)
 
 ![Using the command line on a computer cluster](./img/610803_a_woman_using_the_command_line_on_a_computer_cluster.png)
 
