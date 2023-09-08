@@ -4,16 +4,16 @@
 
     - First step in understanding why Bianca login is the way it is
     - If outside of SUNET: Start VPN
-    - Log in via ThinLinc
-    - Log in via SSH
+    - Log in to the Bianca remote desktop (uses ThinLinc)
+    - Log in to the Bianca terminal (using `ssh`)
     - First step in understanding what a login node is 
 
 ## Exercises
 
  1. Discuss: what is the purpose of Bianca? What kind of consequences will this have for its design?
  2. If outside of SUNET: use a VPN
- 3. Login via ThinLinc
- 4. Login via SSH
+ 3. Log in to the Bianca remote desktop
+ 4. Log in to the Bianca terminal using `ssh`
  5. Start an interactive session
 
 ![The voyage from outside the university network to a cluster login node](./img/971_the_voyage_from_outside_the_university_network_to_a_cluster_login_node.png)
