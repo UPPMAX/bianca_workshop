@@ -18,7 +18,7 @@
 
 ![The voyage from outside the university network to a cluster login node](./img/971_the_voyage_from_outside_the_university_network_to_a_cluster_login_node.png)
 
-> The voyage from outside the university network to a cluster login node ![./img/](public_domain_88x31.png)
+> The voyage from outside the university network to a cluster login node ![Public domain](./img/public_domain_88x31.png)
 
 ## Bianca's design
 

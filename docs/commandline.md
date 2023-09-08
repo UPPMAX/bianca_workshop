@@ -29,7 +29,7 @@ Tips:
 
 ![Using the command line on a computer cluster](./img/610803_a_woman_using_the_command_line_on_a_computer_cluster.png)
 
-> Using the command line on a computer cluster ![./img/](public_domain_88x31.png)
+> Using the command line on a computer cluster ![Public domain](./img/public_domain_88x31.png)
 
 ## Command-line intro
 
