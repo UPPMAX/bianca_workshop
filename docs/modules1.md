@@ -504,11 +504,11 @@ Running the script does not load the module beyond running the script.
  * Include versions when loading modules for reproducibility
  * Your own installed software, scripts, Python packages etc. are available from their paths
 
-### Installed software
+## Installed software
 
  * [Almost all installed software](https://www.uppmax.uu.se/resources/software/installed-software/)
   
-#### Installed databases
+## Installed databases
 
  * [Almost all installed databases](https://www.uppmax.uu.se/resources/databases/)
 
