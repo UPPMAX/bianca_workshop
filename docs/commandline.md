@@ -12,20 +12,24 @@ Tips:
  * You can Google all this
  * At the bottom of this page are the solutions.
 
- 1. View the help of the command `cd`
- 2. Go to the following folders:
-  * The project folder, e.g. `/proj/sens2023598`
-  * Your home folder
-  * The wharf, e.g. `/proj/sens2023598/nobackup/wharf`
- 3. Create a folder `/proj/sens2023598/workshop/[your_login_name]`,
+  1. View the help of the command `cd`
+  2. Go to the following folders:
+
+   * The project folder, e.g. `/proj/sens2023598`
+   * Your home folder
+   * The wharf, e.g. `/proj/sens2023598/nobackup/wharf`
+
+  3. Create a folder `/proj/sens2023598/workshop/[your_login_name]`,
     for example, `/proj/sens2023598/workshop/richel`
- 3. In that folder, create an executable script called `do_it.sh`.
- 4. Upon running the script, it should:
+  4. In that folder, create an executable script called `do_it.sh`.
+  5. Upon running the script, it should:
+
    * display a welcome message in text, e.g. `Hello!`
    * do something, e.g. show the files in reverse order
- 5. Copy the file (e.g. to `do_it_again.sh`). 
- 6. Move the copied file (e.g. move it one folder up to `../do_it_again_here.sh`)
- 7. Delete the copied file
+
+  6. Copy the file (e.g. to `do_it_again.sh`). 
+  7. Move the copied file (e.g. move it one folder up to `../do_it_again_here.sh`)
+  8. Delete the copied file
 
 ![Using the command line on a computer cluster](./img/610803_a_woman_using_the_command_line_on_a_computer_cluster.png)
 
