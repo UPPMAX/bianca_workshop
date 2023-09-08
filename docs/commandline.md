@@ -10,6 +10,19 @@
         - [LINUX](https://uppmax.github.io/uppmax_intro/linux.html)
         - [Basic toolkit](https://uppmax.github.io/uppmax_intro/linux_basics.html)
 
+## Exercises
+
+ 1. Create a folder `/proj/sens2023598/workshop/[your_login_name]`,
+    for example, `/proj/sens2023598/workshop/richel`
+ 2. In that folder, create an executable script called `do_it.sh`.
+ 3. Upon running the script, it should:
+   * display a welcome message in text, e.g. `Hello!`
+   * do something, e.g. show the files in reverse order
+
+![Using the command line on a computer cluster](./img/610803_a_woman_using_the_command_line_on_a_computer_cluster.png)
+
+> Using the command line on a computer cluster ![./img/](public_domain_88x31.png)
+
 ## Command-line intro
 
 ### Help
