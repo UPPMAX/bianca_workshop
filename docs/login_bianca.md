@@ -26,16 +26,16 @@ and originally had 3200 CPU cores.
 
 Bianca was designed to, among other:
 
- * Protect the sensitive data
-   * Accidental data leaks should be difficult
-   * Law: if data is leaked, the person doing so should be possibly identified
- * Emulate a standard HPC cluster environment
-   * Use the hardware as efficient as possible, 
-     by using a queuing system.
-     See [UPPMAX usage for the current usage of Bianca](https://status.uppmax.uu.se/usage/)
-   * Distributes shared resources (CPU, memory) in a fair way,
-     by using a queuing system
-   * make correct data management as easy as possible
+ * Protect the sensitive data: 
+   (1a) Accidental data leaks should be difficult
+   (1b) Law: if data is leaked, the person doing so should be possibly identified
+ * Emulate a standard HPC cluster environment:
+   (2a) Use the hardware as efficient as possible, 
+   by using a queuing system.
+   See [UPPMAX usage for the current usage of Bianca](https://status.uppmax.uu.se/usage/)
+   (2b) Distributes shared resources (CPU, memory) in a fair way,
+   by using a queuing system
+   (2c)make correct data management as easy as possible
 
     
 ### Bianca and the Internet
@@ -72,9 +72,7 @@ which is a special folder that is visible from the Internet.
 You can log in either through ThinLinc or via SSH, `ssh`:
 
  * ThinLinc: provides a remote desktop, needed for using graphical tools
- * SSH: provides only the command line
-    - ``ssh`` from home terminal
-    - ``ssh`` from a session on Rackham 
+ * SSH/`ssh`: provides only the command line
 
 ### Log in to the Bianca remote desktop environment
 
