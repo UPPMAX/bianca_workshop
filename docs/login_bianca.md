@@ -9,6 +9,8 @@
 
 ## Exercises
 
+ * All you need is written down below
+
  1. Discuss: what is the purpose of Bianca? What kind of consequences will this have for its design?
  2. Login via ThinLinc
  3. Login via SSH
@@ -19,6 +21,10 @@
 > The voyage from outside the university network to a cluster login node ![./img/](public_domain_88x31.png)
 
 ## Bianca's design
+
+Bianca, like all clusters at UPPMAX, is named after a Tintin character,
+in this case after Bianca Castafiore
+and originally had 3200 CPU cores.
 
 Bianca was designed to, among other:
 
@@ -32,6 +38,7 @@ Bianca was designed to, among other:
    * Distributes shared resources (CPU, memory) in a fair way,
      by using a queuing system
    * make correct data management as easy as possible
+
     
 ### Bianca and the Internet
 

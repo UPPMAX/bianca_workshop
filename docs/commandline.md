@@ -1,23 +1,28 @@
 # The command-line on Bianca
 
 !!! info "Objectives"
-    - We'll use the commands and investigate the Bianca environment
-    - Tips and tricks for Bianca users
-
-!!! warning
-
-    - We assume that you have already covered the Command-line material and tested on Rackham
-        - [LINUX](https://uppmax.github.io/uppmax_intro/linux.html)
-        - [Basic toolkit](https://uppmax.github.io/uppmax_intro/linux_basics.html)
+    - Being able to navigate in/out folder
+    - Being able to view/create/move/delete files
+    - Create an executable bash script
 
 ## Exercises
 
- 1. Create a folder `/proj/sens2023598/workshop/[your_login_name]`,
+Tips: 
+
+ * You can Google all this
+ * At the bottom of this page are the solutions.
+
+ 1. View the help of the command `cd`
+ 2. Go to the folder `/proj/sens2023598/workshop/`
+ 3. Create a folder `/proj/sens2023598/workshop/[your_login_name]`,
     for example, `/proj/sens2023598/workshop/richel`
- 2. In that folder, create an executable script called `do_it.sh`.
- 3. Upon running the script, it should:
+ 3. In that folder, create an executable script called `do_it.sh`.
+ 4. Upon running the script, it should:
    * display a welcome message in text, e.g. `Hello!`
    * do something, e.g. show the files in reverse order
+ 5. Copy the file (e.g. to `do_it_again.sh`). 
+ 6. Move the copied file (e.g. move it one folder up to `../do_it_again_here.sh`)
+ 7. Delete the copied file
 
 ![Using the command line on a computer cluster](./img/610803_a_woman_using_the_command_line_on_a_computer_cluster.png)
 
@@ -182,6 +187,86 @@ $ rm -rf dont_delete_me
   - `ln -s /proj/$PROJ/nobackup nobackup`
   - `ln -s /proj/$PROJ/nobackup/wharf/${USER}/${USER}-$PROJ wharf`
 
+## Solutions
+
+### 1. View the help of the command `cd`
+
+```
+man cd
+```
+
+### 2. Go to the folder `/proj/sens2023598/workshop/`
+
+```
+cd /proj/sens2023598/workshop/
+```
+
+### 3. Create a folder `/proj/sens2023598/workshop/[your_login_name]`
+
+```
+cd /proj/sens2023598/workshop/
+mkdir richel
+```
+### 4. In that folder, create an executable script called `do_it.sh`.
+
+```
+touch do_it.sh
+chmod +x do_it.sh
+```
+
+It does nothing, but it is executable :-)
+
+### 5. Upon running the script, it should do things
+
+Edit the script:
+
+```
+nano do_it.sh
+```
+
+Change the text to:
+
+```
+#!/bin/bash
+echo "Hello!"
+ls | rev
+```
+
+Run the script:
+
+```
+./do_it.sh
+```
+
+### 6. Copy the file (e.g. to `do_it_again.sh`)
+
+```
+copy do_it.sh do_it_again.sh
+```
+
+### 7. Move the copied file
+
+
+```
+mv do_it_again.sh ../do_it_again_richel.sh
+```
+
+### 8. Delete the copied file
+
+```
+rm ../do_it_again_richel.sh
+```
+
+or
+
+```
+cd ..
+rm do_it_again_richel.sh
+```
+
+
+
 ## Links
 
- * Video: [YouTube](https://youtu.be/kjqLAx2bgJI) [download (.ogv)](https://richelbilderbeek.nl/uppmax_bianca_command_line.ogv)
+ * Video 'Using the command-line on the UPPMAX Bianca cluster': [YouTube](https://youtu.be/kjqLAx2bgJI), [download (.ogv)](https://richelbilderbeek.nl/uppmax_bianca_command_line.ogv)
+ * [UPPMAX intro course materials on LINUX](https://uppmax.github.io/uppmax_intro/linux.html)
