@@ -99,9 +99,11 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
     - `-t 10-00:00:00`
 
 ### The queue
+
 ![Image](./img/queue1.png)
-- x-axis: cores, one thread per core
-- y-axis: time
+<br>
+- *x-axis: cores, one thread per core*
+*- y-axis: time*
 <br/><br/>
 - [Slurm](https://slurm.schedmd.com/) is a jobs scheduler
 - Plan your job and but in the slurm job batch (sbatch)
@@ -112,13 +114,14 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
 
 ![Image](./img/queue2.png)
 ![Image](./img/queue3.png)
-- Left: 4 one-core jobs can run immediately (or a 4-core wide job).
+<br>
+- *Left: 4 one-core jobs can run immediately (or a 4-core wide job).*
 
-  - The jobs are too long to fit in core number 9-13.
+  - *The jobs are too long to fit in core number 9-13.*
 
-- Right: A 5-core job has to wait.
+- *Right: A 5-core job has to wait.*
 
-  - Too long to fit in cores 9-13 and too wide to fit in the last cores.
+  - *Too long to fit in cores 9-13 and too wide to fit in the last cores.*
 
 ### To think about
 
@@ -129,15 +132,13 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
         - Waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
 - Default value: core
 
-## Job scripts (batch)
-
-### Interactive jobs
+## Interactive jobs
 - Most work is most effective as submitted jobs, but e.g. development needs responsiveness
 - Interactive jobs are high-priority but limited in `-n` and `-t`
 - Quickly give you a job and logs you in to the compute node
 - Require same Slurm parameters as other jobs
 
-#### Try interactive
+### Try interactive
 
 ```
 $ interactive -A sens2023598 -p core -n 1 -t 10:00
@@ -146,7 +147,7 @@ $ interactive -A sens2023598 -p core -n 1 -t 10:00
 - Which node are you on?
   - Logout with `<Ctrl>-D` or `logout`
  
-##### Start RStudio
+### Start RStudio
 ThinLinc
 
 When logging onto Bianca, you are placed on a login node, which has 2 CPU and a few GB of RAM. This is sufficient for doing some lightweight calculations, but interactive sessions and batch jobs provide access to much more resources and should be requested via the SLURM system.
@@ -157,6 +158,13 @@ $ interactive -A <project> -n 2 -t hours:minutes:seconds
 
 Once the interactive job has begun, load an RStudio module and an R_packages module and run "rstudio" from there. 
  
+## Job scripts (batch)
+
+- Write a bash script with `#!/bin/bash` in the top line
+- Add also before the rest of the commands the the keywords `#SBATCH`
+- `#` will be ignored by `bash` and can run as an ordinary bash script
+- if running the script with the command `sbatch <script>` the `#SBATCH` lines will be interpreted as slurm flags
+
 #### A simple job script template
 
 ```bash
@@ -255,6 +263,49 @@ In short, this program goes over the following procedure, over and over again:
 - Home storage: 32 GB at Castor
 - Project Storage: Castor
 
+## Other Slurm tools
+
+- ``squeue`` — quick info about jobs in queue
+- ``jobinfo`` — detailed info about jobs
+- ``finishedjobinfo`` — summary of finished jobs
+- ``jobstats``— efficiency of booked resources
+
+## What kind of work are you doing?
+- Compute bound
+  - you use mainly CPU power (more cores can help)
+- Memory bound
+  - if the bottlenecks are allocating memory, copying/duplicating
+
+## Job efficiency
+
+- Check the efficiency!
+
+- Generate jobstats plots for your jobs
+  - Firstly, find some job IDs from this month
+  - finishedjobinfo -m username
+  - Write down the IDs from some interesting jobs.
+  - Generate the images:
+    - $ jobstats -p ID1 ID2 ID3
+
+The figures
+
+  - blue line: the jobs cpu usage, 200% means 2 cores
+  - horizontal dotted black line: the jobs max memory usage
+  - full black line: RAM used at 5 minute intervals
+
+### Examples
+
+![Image](./img/c_555912-l_1-k_bad_job_04.png)
+<br>
+??? tip "Judgement"
+    This job has booked many more cores and memory (RAM) than it needs.
+
+![Image](./img/c_560271-l_1-k_uppmax-slurm-2023-02.png)
+<br>
+??? tip "Judgegment"
+    This job needs more memory (RAM).
+
+[`jobstats` user guide](https://www.uppmax.uu.se/support/user-guides/jobstats-user-guide/)_
 
 !!! abstract "Keypoints"
     - You are always in the login node unless you:
