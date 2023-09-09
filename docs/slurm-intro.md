@@ -1,7 +1,7 @@
 # Introduction to compute nodes
 
 !!! info "Objectives"
-    - This is a short introduction in how to reach the calculation nodes
+    - This is a short introduction in how to reach the calculation/compute/worker nodes
     - We will cover
         - queue system
         - allocation of the compute nodes
@@ -135,7 +135,7 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
 - Interactive jobs are high-priority but limited in `-n` and `-t`
 - Quickly give you a job and logs you in to the compute node
 - Require same Slurm parameters as other jobs
-- Log in to comute node
+- Log in to compute node
   -  `$ interactive ...`
 - Logout with `<Ctrl>-D` or `logout`
 
@@ -169,7 +169,7 @@ $ interactive -A sens2023598 -p core -n 2 -t 60:00
 - Still slow to start?
 - Depends on:
   - number of packages 
-  - if you save a lot of data in your RStudio workspace, to be read duringstart up.
+  - if you save a lot of data in your RStudio workspace, to be read during start up.
 
 - **Quit RStudio**!
 - **Log out** from interactive session with `<Ctrl>-D` or `logout`
@@ -306,7 +306,7 @@ In short, this program goes over the following procedure, over and over again:
 
 The figures
 
-  - blue line: the jobs cpu usage, 200% means 2 cores
+  - blue line: the jobs CPU usage, 200% means 2 cores
   - horizontal dotted black line: the jobs max memory usage
   - full black line: RAM used at 5 minute intervals
 
@@ -319,7 +319,7 @@ The figures
 
 ![Image](./img/c_560271-l_1-k_uppmax-slurm-2023-02.png)
 <br>
-??? tip "Judgegment"
+??? tip "Judgement"
     This job needs more memory (RAM).
 
 [`jobstats` user guide](https://www.uppmax.uu.se/support/user-guides/jobstats-user-guide/){:target="_blank"} 
