@@ -8,23 +8,23 @@
 
 ## The module system
 
-- As we have seen this morning, there is a lot of programs and tools installed as modules on Bianca.
-- These have typically been installed on Rackham and is synced over to Bianca a couple of times per day.
-- You can request installations but that may take several days or even weeks to be handled by the application experts at UPPMAX.
-- But you may be able to do installations yourself. Here the use of Rackham comes handy because of the:
+- As we have seen this morning, there is a **lot of programs and tools installed as modules** on Bianca.
+- These have typically been **installed on Rackham** and is **synced over to Bianca a couple of times per day**.
+- **You can request installations** but that may take **several days or weeks** to be handled by the application experts at UPPMAX.
+- But you may be able to do **installations yourself**. Here the use of Rackham comes handy because of the:
     - internet connection
     - the computer architecture is somewhat similar such that precompiled binaries or compiled programs (x86_64) on Rackham will most often work also on Bianca.
-    - you can use the ``wharf`` to transfer source files and binaries to Bianca from Rackham
+    - you can use the **``wharf`` to transfer source files and binaries to Bianca from Rackham**
 
 ## Install software yourself
 
 - If not available on Bianca already (like Conda repositories) you may have to use the ``wharf`` to install your tools
     - Alternatively let an Application Expert install the tool as a module.
 
-!!! info Typical workflow for installation
+!!! note "Typical workflow for installation"
 
-    - Download the source code or binary (Linux on x86 and 64-bit) to Rackham first
-    - Transfer to the ``wharf``
+    - **Download the source code or binary** (Linux on x86 and 64-bit) to Rackham first
+    - **Transfer** to the ``wharf``
     - Then, either 
         - You can install in your home directory.
             - This is handy for personal needs, low numbers of files (i.e. not Conda).
@@ -35,19 +35,17 @@
      
 
 ### Build from source
-- To build from source use a compiler module
+- To build from source use a **compiler module**
 - We have several compiler versions from GNU and INTEL
 - check with: ``$ ml avail gcc`` and ``$ ml avail intel``
-- [Guide for compiling serial and parallel programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/)
-- Available combinations of compilers and parallel libraries (openmpi): <https://hackmd.io/_IqCbOiyS8SZ0Uqpa3UpHg?view>
-
-
-
+- [Guide for compiling **serial** programs](https://www.uppmax.uu.se/support/user-guides/compiling-source-code/){:target="_blank"}
+- [Guide for compiling **parallel** programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/){:target="_blank"}
+    - [Available **combinations** of compilers and parallel libraries](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/#tocjump_48302061903476823_2){:target="_blank"}
 
 
 ## Packages and libraries to scripting programs
 
-- Python, R and Julia all have some centrally installed packages that are available from the modules. 
+- Python, R and Julia all have some **centrally installed packages** that are available from the modules. 
 - R has a special module called ``R_packages``, and some Machine Learning python packages are included in the ``python_ml_packages`` module.
 - If not found there you can try to install those by yourself.
 
@@ -92,14 +90,14 @@
         - python setup.py install --user or --prefix=<path>
     - sync to ``wharf``
     - move the files on Bianca
-    - you may have to update $PYTHONPATH
+    - you may have to update ``$PYTHONPATH``
 
 !!! info "More info"
 
-    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/pip/)
-    - [UPPMAX Python user guide: Pip](https://www.uppmax.uu.se/support/user-guides/python-user-guide/#tocjump_9332829429720808_5)
-    - [From Python course: packages](https://uppmax.github.io/R-python-julia-HPC/python/packages.html)
-    - [From Python course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/python/isolated.html)
+    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/pip/){:target="_blank"}
+    - [UPPMAX Python user guide: Pip](https://www.uppmax.uu.se/support/user-guides/python-user-guide/#tocjump_9332829429720808_5){:target="_blank"}
+    - [From Python course: packages](https://uppmax.github.io/R-python-julia-HPC/python/packages.html){:target="_blank"}
+    - [From Python course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/python/isolated.html){:target="_blank"}
 
 
 ### R packages
@@ -138,8 +136,8 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 !!! info "More info"
 
     - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/rpackages/)
-    - [From R course: packages](https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html)
-    - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html)
+    - [From R course: packages](https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html){:target="_blank"}
+    - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html){:target="_blank"}
 
 ### Julia packages
 
@@ -164,8 +162,8 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 
 !!! info "More info"
 
-    - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/julia/)
-    - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html)
+    - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/julia/){:target="_blank"}
+    - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html){:target="_blank"}
 
 ## "Containers"
 
