@@ -100,8 +100,6 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
 
 ![Image](./img/queue1.png)
 
-<br>
-
 - *x-axis: cores, one thread per core*
 - *y-axis: time*
 <br/><br/>
@@ -110,16 +108,15 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
 
 ![Image](./img/queue2.png)
 ![Image](./img/queue3.png)
-
 <br>
 
 - *Left: 4 one-core jobs can run immediately (or a 4-core wide job).*
 
-  - *The jobs are too long to fit in core number 9-13.*
+    - *The jobs are too long to fit in core number 9-13.*
 
 - *Right: A 5-core job has to wait.*
 
-  - *Too long to fit in cores 9-13 and too wide to fit in the last cores.*
+    - *Too long to fit in cores 9-13 and too wide to fit in the last cores.*
 
 ### To think about
 
@@ -136,7 +133,7 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
 - Quickly give you a job and logs you in to the compute node
 - Require same Slurm parameters as other jobs
 - Log in to compute node
-  -  `$ interactive ...`
+    -  `$ interactive ...`
 - Logout with `<Ctrl>-D` or `logout`
 
 ### Try interactive and run RStudio
@@ -155,21 +152,21 @@ $ interactive -A sens2023598 -p core -n 2 -t 60:00
 - Once the interactive job has begun you need to load needed modules, even if you had loaded them before in the login node
 - Load an RStudio module and an R_packages module and run "rstudio" from there. 
 
-  $ ml R_packages/4.2.1
-  $ ml RStudio/2022.07.1-554
+  `$ ml R_packages/4.2.1`
+  `$ ml RStudio/2022.07.1-554`
 
 - Which node are you on? 
 
-  $ hostname
+  `$ hostname`
 
 - **Start rstudio**, keeping terminal active (`&`)
 
-  $ rstudio &
+  `$ rstudio &`
 
 - Still slow to start?
 - Depends on:
-  - number of packages 
-  - if you save a lot of data in your RStudio workspace, to be read during start up.
+    - number of packages 
+    - if you save a lot of data in your RStudio workspace, to be read during start up.
 
 - **Quit RStudio**!
 - **Log out** from interactive session with `<Ctrl>-D` or `logout`
@@ -212,20 +209,19 @@ module list
 echo Hello world!  
 
 ```
+??? How compute nodes are moved between project clusters
+    
+    The total job queue, made by putting together job queues of all project clusters, is monitored, and acted upon, by an external program, named meta-scheduler.
 
-## How compute nodes are moved between project clusters
+    In short, this program goes over the following procedure, over and over again:
 
-The total job queue, made by putting together job queues of all project clusters, is monitored, and acted upon, by an external program, named meta-scheduler.
-
-In short, this program goes over the following procedure, over and over again:
-
-1. Finds out where all the compute nodes are: on a specific project cluster or yet unallocated.
-1. Reads status reports from all compute nodes, about all their jobs, all their compute nodes, and all their active users.
-1. Are there unallocated compute nodes for all queued jobs?
-1. Otherwise, try to "steal" nodes from project clusters, to get more unallocated compute nodes. This "stealing" is done in two steps: 
-    - "drain" a certain node, i.e. disallow more jobs to start on it; 
-    - remove the compute node from the project cluster, if no jobs are running on the node.
-3. Use all unallocated nodes to create new compute nodes. Jobs with a higher priority get compute nodes first.
+    1. Finds out where all the compute nodes are: on a specific project cluster or yet unallocated.
+    1. Reads status reports from all compute nodes, about all their jobs, all their compute nodes, and all their active users.
+    1. Are there unallocated compute nodes for all queued jobs?
+    1. Otherwise, try to "steal" nodes from project clusters, to get more unallocated compute nodes. This "stealing" is done in two steps: 
+        - "drain" a certain node, i.e. disallow more jobs to start on it; 
+        - remove the compute node from the project cluster, if no jobs are running on the node.
+    3. Use all unallocated nodes to create new compute nodes. Jobs with a higher priority get compute nodes first.
 
 
 ### Other Slurm tools
@@ -241,44 +237,44 @@ In short, this program goes over the following procedure, over and over again:
     - Bianca has three node types: thin, fat and gpu. 
         - thin being the typical cluster node with 128 GB memory 
         - fat nodes having 256 GB or 512 GB of memory. 
-            - You may specify a node with more RAM, by adding the words "-C fat" to your job submission line and thus making sure that you will get at least 256 GB of RAM on each node in your job. 
-            - If you absolutely must have more than 256 GB of RAM then you can request to get 512 GB of RAM specifically by adding the words "-C mem512GB" to your job submission line. 
+            - You may specify a node with more RAM, by adding the words `-C fat` to your job submission line and thus making sure that you will get at least 256 GB of RAM on each node in your job. 
+            - If you absolutely must have more than 256 GB of RAM then you can request to get 512 GB of RAM specifically by adding the words `-C mem512GB` to your job submission line. 
             - Please note that requesting 512 GB can not be combined with requesting GPUs.
-        - You may also add "-C gpu" to your submission line to request a GPU node with two NVIDIA A100 40 GB. 
+        - You may also add `-C gpu` to your submission line to request a GPU node with two NVIDIA A100 40 GB. 
             - Please note that all GPU nodes have 256 GB of RAM, and are thus "fat" as well. All compute nodes in Bianca has 16 CPU cores in total.
     - Please note that there are only 5 nodes with 256 GB of RAM, 2 nodes with 512 GB of RAM and 4 nodes with 2xA100 GPUs. The wait times for these node types are expected to be somewhat longer.
    
 !!! note "Some Limits"
 
-    - There is a job wall time limit of ten days (240 hours).
+    - There is a job wall time limit of ten days (**240 hours**).
     - We restrict each user to at most 5000 running and waiting jobs in total.
     - Each project has a 30 days running allocation of CPU hours. We do not forbid running jobs after the allocation is over-drafted, but instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
 
-## Summary about the Bianca Hardware
+??? Summary about the Bianca Hardware
 
-- Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes with 128, 256 or 512 GB memory
-- GPU nodes with two NVIDIA A100 40GB GPUs each.
+    - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes with 128, 256 or 512 GB memory
+    - GPU nodes with two NVIDIA A100 40GB GPUs each.
 
-**Cores per node:** 16, or on some 128
+    **Cores per node:** 16, or on some 128
 
-**Details about the compute nodes**
+    **Details about the compute nodes**
 
-- Thin nodes
-    - 194 compute nodes with 16 cores and a 4TB mechanical drive or 1TB SSD as SCRATCH.
-- Fat nodes
-    - 74 compute nodes, 256 GB memory
-    - 14 compute nodes, 512 GB memory
-    - 10 compute nodes, 256 GB memory each and equipped with 2xNVIDIA A100 (40GB) GPUs
-- Total number of CPU cores is about 5000
-- Login nodes have 2vCPU each and 16GB memory
-- Network
-    - Dual 10 Gigabit Ethernet for all nodes
+    - Thin nodes
+        - 194 compute nodes with 16 cores and a 4TB mechanical drive or 1TB SSD as SCRATCH.
+    - Fat nodes
+        - 74 compute nodes, 256 GB memory
+        - 14 compute nodes, 512 GB memory
+        - 10 compute nodes, 256 GB memory each and equipped with 2xNVIDIA A100 (40GB) GPUs
+    - Total number of CPU cores is about 5000
+    - Login nodes have 2vCPU each and 16GB memory
+    - Network
+        - Dual 10 Gigabit Ethernet for all nodes
 
-**Storage**
+    **Storage**
 
-- Local disk (scratch): 4 TB 
-- Home storage: 32 GB at Castor
-- Project Storage: Castor
+    - Local disk (scratch): 4 TB 
+    - Home storage: 32 GB at Castor
+    - Project Storage: Castor
 
 ## Other Slurm tools
 
@@ -289,37 +285,37 @@ In short, this program goes over the following procedure, over and over again:
 
 ## What kind of work are you doing?
 - Compute bound
-  - you use mainly CPU power (more cores can help)
+    - you use mainly CPU power (more cores can help)
 - Memory bound
-  - if the bottlenecks are allocating memory, copying/duplicating
+    - if the bottlenecks are allocating memory, copying/duplicating
 
-## Job efficiency
+## Job efficiency (no type-along)
 
 - Check the efficiency!
 
 - Generate jobstats plots for your jobs
-  - Firstly, find some job IDs from this month
-  - finishedjobinfo -m username
-  - Write down the IDs from some interesting jobs.
-  - Generate the images:
-    - $ jobstats -p ID1 ID2 ID3
+    - Firstly, find some job IDs from this month
+        - `$ finishedjobinfo -m <username>`
+    - Write down the IDs from some interesting jobs.
+    - Generate the images:
+        - `$ jobstats -p ID1 ID2 ID3`
 
-The figures
+- The figures
 
-  - blue line: the jobs CPU usage, 200% means 2 cores
-  - horizontal dotted black line: the jobs max memory usage
-  - full black line: RAM used at 5 minute intervals
+    - blue line: the jobs CPU usage, 200% means 2 cores
+    - horizontal dotted black line: the jobs max memory usage
+    - full black line: RAM used at 5 minute intervals
 
 ### Examples
 
 ![Image](./img/c_555912-l_1-k_bad_job_04.png)
 <br>
-??? tip "Judgement"
+??? tip "The judgement"
     This job has booked many more cores and memory (RAM) than it needs.
 
 ![Image](./img/c_560271-l_1-k_uppmax-slurm-2023-02.png)
 <br>
-??? tip "Judgement"
+??? tip "The judgement"
     This job needs more memory (RAM).
 
 [`jobstats` user guide](https://www.uppmax.uu.se/support/user-guides/jobstats-user-guide/){:target="_blank"} 
