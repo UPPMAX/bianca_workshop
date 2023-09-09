@@ -209,7 +209,7 @@ module list
 echo Hello world!  
 
 ```
-??? How compute nodes are moved between project clusters
+??? "How compute nodes are moved between project clusters"
     
     The total job queue, made by putting together job queues of all project clusters, is monitored, and acted upon, by an external program, named meta-scheduler.
 
@@ -223,14 +223,6 @@ echo Hello world!
         - remove the compute node from the project cluster, if no jobs are running on the node.
     3. Use all unallocated nodes to create new compute nodes. Jobs with a higher priority get compute nodes first.
 
-
-### Other Slurm tools
-
-- `squeue` — quick info about jobs in queue
-- `jobinfo` — detailed info about jobs
-- `finishedjobinfo` — summary of finished jobs
-- `jobstats` — efficiency of booked resources
-- `bianca_combined_jobinfo`
 
 !!! note "Node types"
 
@@ -250,7 +242,7 @@ echo Hello world!
     - We restrict each user to at most 5000 running and waiting jobs in total.
     - Each project has a 30 days running allocation of CPU hours. We do not forbid running jobs after the allocation is over-drafted, but instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
 
-??? Summary about the Bianca Hardware
+??? "Summary about the Bianca Hardware"
 
     - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes with 128, 256 or 512 GB memory
     - GPU nodes with two NVIDIA A100 40GB GPUs each.
@@ -278,10 +270,12 @@ echo Hello world!
 
 ## Other Slurm tools
 
-- ``squeue`` — quick info about jobs in queue
-- ``jobinfo`` — detailed info about jobs
-- ``finishedjobinfo`` — summary of finished jobs
-- ``jobstats``— efficiency of booked resources
+- `squeue` — quick info about jobs in queue
+- `jobinfo` — detailed info about jobs
+- `finishedjobinfo` — summary of finished jobs
+- `jobstats` — efficiency of booked resources
+- `bianca_combined_jobinfo`
+
 
 ## What kind of work are you doing?
 - Compute bound
@@ -292,7 +286,6 @@ echo Hello world!
 ## Job efficiency (no type-along)
 
 - Check the efficiency!
-
 - Generate jobstats plots for your jobs
     - Firstly, find some job IDs from this month
         - `$ finishedjobinfo -m <username>`
@@ -318,13 +311,13 @@ echo Hello world!
 ??? tip "The judgement"
     This job needs more memory (RAM).
 
-[`jobstats` user guide](https://www.uppmax.uu.se/support/user-guides/jobstats-user-guide/){:target="_blank"} 
+[Discovering job resource usage with `jobstats`](https://www.uppmax.uu.se/support/user-guides/jobstats-user-guide/){:target="_blank"} 
 
 ## Exercise (if time allows)
 
 ???+ question "Submit a Slurm job"
 
-    - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshop/modules1/#workflows) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
+    - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshop/modules1/#bigger-exercises) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
     
     ??? tip "Answer"
         - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
@@ -378,13 +371,18 @@ echo Hello world!
         ```bash
         $ sbatch my_bio_workflow.sh
         ```
-        
+## Links
+
+- [Slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
+- [Slurm user guide](https://www.uppmax.uu.se/support/user-guides/slurm-user-guide/){:target="_blank"}
+- [Discovering job resource usage with `jobstats`](https://www.uppmax.uu.se/support/user-guides/jobstats-user-guide/){:target="_blank"} 
+- [Plotting your core hour usage](https://www.uppmax.uu.se/support/user-guides/plotting-your-core-hour-usage/){:target="_blank"} 
 
 
 !!! abstract "Keypoints"
     - You are always in the login node unless you:
-        - start an interactive session
-        - start a batch job
+        - start an interactive session to do development or hands-on work
+        - start a batch job to run jobs not needing any manual input
     - Slurm is a job scheduler
         - add flags to describe your job.
     - There is a job wall time limit of ten days (240 hours).
