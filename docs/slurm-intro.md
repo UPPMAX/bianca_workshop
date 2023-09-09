@@ -57,11 +57,9 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
 
 ## Slurm, sbatch, the job queue
 - Problem: _1000 users, 300 nodes, 5000 cores_
-
-
 - We need a queue:
 
-- [Slurm](https://slurm.schedmd.com/) is a jobs scheduler
+  - [Slurm](https://slurm.schedmd.com/) is a job scheduler
 
 ### Choices
 - Work interactively with your data or development
@@ -98,23 +96,23 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
     - `-n 1`
     - `-t 10-00:00:00`
 
-### The queue
+## The queue
 
 ![Image](./img/queue1.png)
+
 <br>
+
 - *x-axis: cores, one thread per core*
-*- y-axis: time*
+- *y-axis: time*
 <br/><br/>
-- [Slurm](https://slurm.schedmd.com/) is a jobs scheduler
-- Plan your job and but in the slurm job batch (sbatch)
-    `sbatch <flags> <program>` or
-    `sbatch <job script>`
 
 - Easiest to schedule *single-threaded*, short jobs
 
 ![Image](./img/queue2.png)
 ![Image](./img/queue3.png)
+
 <br>
+
 - *Left: 4 one-core jobs can run immediately (or a 4-core wide job).*
 
   - *The jobs are too long to fit in core number 9-13.*
@@ -137,26 +135,45 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
 - Interactive jobs are high-priority but limited in `-n` and `-t`
 - Quickly give you a job and logs you in to the compute node
 - Require same Slurm parameters as other jobs
+- Log in to comute node
+  -  `$ interactive ...`
+- Logout with `<Ctrl>-D` or `logout`
 
-### Try interactive
+### Try interactive and run RStudio
+
+We recommend using at least two cores for RStudio, and to get those resources, you must should start an interactive job.
+
+!!! note
+    Use **ThinLinc**
+
+- Start **interactive session** on compute node (2 cores)
 
 ```
-$ interactive -A sens2023598 -p core -n 1 -t 10:00
+$ interactive -A sens2023598 -p core -n 2 -t 60:00
 ```
 
-- Which node are you on?
-  - Logout with `<Ctrl>-D` or `logout`
+- Once the interactive job has begun you need to load needed modules, even if you had loaded them before in the login node
+- Load an RStudio module and an R_packages module and run "rstudio" from there. 
+
+  $ ml R_packages/4.2.1
+  $ ml RStudio/2022.07.1-554
+
+- Which node are you on? 
+
+  $ hostname
+
+- **Start rstudio**, keeping terminal active (`&`)
+
+  $ rstudio &
+
+- Still slow to start?
+- Depends on:
+  - number of packages 
+  - if you save a lot of data in your RStudio workspace, to be read duringstart up.
+
+- **Quit RStudio**!
+- **Log out** from interactive session with `<Ctrl>-D` or `logout`
  
-### Start RStudio
-ThinLinc
-
-When logging onto Bianca, you are placed on a login node, which has 2 CPU and a few GB of RAM. This is sufficient for doing some lightweight calculations, but interactive sessions and batch jobs provide access to much more resources and should be requested via the SLURM system.
-
-Such is the case for using RStudio on Bianca. We recommend using at least two cores for this, and to get those resources, you must start an interactive job, for example,
-
-$ interactive -A <project> -n 2 -t hours:minutes:seconds
-
-Once the interactive job has begun, load an RStudio module and an R_packages module and run "rstudio" from there. 
  
 ## Job scripts (batch)
 
@@ -305,7 +322,68 @@ The figures
 ??? tip "Judgegment"
     This job needs more memory (RAM).
 
-[`jobstats` user guide](https://www.uppmax.uu.se/support/user-guides/jobstats-user-guide/)_
+[`jobstats` user guide](https://www.uppmax.uu.se/support/user-guides/jobstats-user-guide/){:target="_blank"} 
+
+## Exercise (if time allows)
+
+???+ question "Submit a Slurm job"
+
+    - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshop/modules1/#workflows) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
+    
+    ??? tip "Answer"
+        - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
+        
+        ```bash
+        #!/bin/bash
+        #SBATCH -A sens2023531
+        #SBATCH -J workflow
+        #SBATCH -t 01:00:00
+        #SBATCH -p core
+        #SBATCH -n 2
+
+
+        cd /proj/sens2023531/workshop/slurm/
+
+        module load bioinfo-tools
+
+        # load samtools
+        module load samtools/1.17
+
+        # copy and example BAM file
+        cp -a /proj/sens2023531/workshop/data/ERR1252289.subset.bam .
+
+        # index the BAM file
+        samtools index ERR1252289.subset.bam
+
+        # load the GATK module
+        module load GATK/4.3.0.0
+
+        # make symbolic links to the hg38 genomes
+        ln -s /sw/data/iGenomes/Homo_sapiens/UCSC/hg38/Sequence/WholeGenomeFasta/genome.* .
+
+        # create a VCF containing inferred variants
+        gatk HaplotypeCaller --reference genome.fa --input ERR1252289.subset.bam --intervals chr1:100300000-100800000 --output ERR1252289.subset.vcf
+
+        # use snpEFF to annotate variants
+        module load snpEff/5.1
+        java -jar $SNPEFF_ROOT/snpEff.jar eff hg38 ERR1252289.subset.vcf > ERR1252289.subset.snpEff.vcf
+
+        # compress the annotated VCF and index it
+        bgzip ERR1252289.subset.snpEff.vcf
+        tabix -p vcf ERR1252289.subset.snpEff.vcf.gz
+        ```
+
+        - make the job script executable
+        ```bash
+        $ chmod a+x my_bio_workflow.sh
+        ```
+        
+        - submit the job
+        ```bash
+        $ sbatch my_bio_workflow.sh
+        ```
+        
+
 
 !!! abstract "Keypoints"
     - You are always in the login node unless you:
