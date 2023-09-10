@@ -86,10 +86,10 @@
 !!! info "Installation principle"
 
     - install on Rackham
-        - pip install --user <package>
-        - python setup.py install --user or --prefix=<path>
+        - ``pip install --user <package>``
+        - ``python setup.py install --user or --prefix=<path>``
     - sync to ``wharf``
-    - move the files on Bianca
+    - move the files on Bianca to correct place
     - you may have to update ``$PYTHONPATH``
 
 !!! info "More info"
