@@ -141,6 +141,18 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
             ```bash
             mamba create --name python36-env python=3.6 numpy=1.13.1  matplotlib=2.2.2
             ```
+        - It all worked if you get something like this:
+  
+        ```bash
+
+        To activate this environment, use
+
+            $ mamba activate python36-env
+
+        To deactivate an active environment, use
+
+            $ mamba deactivate
+        ```
 
 -   You may check other environments with:
     ```bash
