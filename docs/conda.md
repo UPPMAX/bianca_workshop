@@ -159,17 +159,29 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
     conda env list
     ```
     
-4.  Activate the conda environment by:
+4.  Activate the conda environment by `source activate` if you have not enabled ``conda/mamba activate``, see above:
 
     ```bash 
     source activate python36-env
     ```
+
     -   You will see that your prompt is changing to start with `(python-36-env)` to show that you are within an environment.
 
+    - you can also see the installed packages by:
+  
+    ```bash
+    conda list
+    pip list
+    ```
+    - you can also add more packages within the environment by exact version (use `=`) or latest (?) compatible version:
+    ```bash
+    conda install pandas
+    ```
+      - that may have given you ``pandas=1.1.5`` which would be the newest version compatible with ``python3.6`` and ``numpy=1.13.1``
 
 6.  Now do your work!
 
-7.  Deactivate
+7.  Deactivate with ``conda``/``mamba deactivate`` (this will work in any case!)
 
     ```bash
     (python-36-env) $ conda deactivate
@@ -258,7 +270,7 @@ dependencies:
 
     ``` sh
     $ module load conda
-    ($ export CONDA_ENVS_PATH=/proj/sens2023/$USER)
+    ($ export CONDA_ENVS_PATH=/proj/sens2023598/$USER)
     $ conda create --name HPC-python23 python=3.7 numpy=1.15
     $ source activate HPC-python23
     $ pip list
