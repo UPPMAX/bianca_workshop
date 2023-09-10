@@ -31,7 +31,7 @@
             
             1. Connect to transit
             2. Mount the projects with mount_wharf
-            3. Move/copy the file(s) from sens2023531 to your other project.
+            3. Move/copy the file(s) from sens2023598 to your other project.
             4. Log in to the other Sens project on Bianca and move the file from the wharf to a good place
            
             
@@ -47,22 +47,22 @@
         
         ```bash
         #!/bin/bash
-        #SBATCH -A sens2023531
+        #SBATCH -A sens2023598
         #SBATCH -J workflow
         #SBATCH -t 01:00:00
         #SBATCH -p core
         #SBATCH -n 2
 
 
-        cd /proj/sens2023531/workshop/slurm/
+        cd /proj/sens2023598/workshop/slurm/
 
         module load bioinfo-tools
 
         # load samtools
         module load samtools/1.17
 
-        # copy and example BAM file
-        cp -a /proj/sens2023531/workshop/data/ERR1252289.subset.bam .
+        # copy and example BAM file****
+        cp -a /proj/sens2023598/workshop/data/ERR1252289.subset.bam .
 
         # index the BAM file
         samtools index ERR1252289.subset.bam
@@ -99,13 +99,13 @@
 
 ### Rpackage installation
 
-???+ question "Install Tidycmprsk"
+???+ question "Install dowser"
 
-    - Install the package Tidycmprsk on Rackham and use sftp to get it to Bianca.
-    - [tidycmprsk on GitHub](https://mskcc-epi-bio.github.io/tidycmprsk/)
+    - Install the package ``dowser`` on Rackham and use sftp to get it to Bianca.
+    - [Dowser on ReadTheDocs](https://dowser.readthedocs.io/en/latest/){:target="_blank"}
      
     ??? tip "Answer"
-        <https://uppmax.github.io/bianca_workshop/rpackages/#example-install-tidycmprsk>
+        [Dowser exercise](https://uppmax.github.io/bianca_workshop/rpackages/#example-update-dowser)
 
 ### Conda installation
 
