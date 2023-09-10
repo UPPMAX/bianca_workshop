@@ -32,7 +32,7 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 
 ### Install on Rackham
 
-- [R on UPPMAX course](https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html)
+- [R on UPPMAX course](https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html){:target="_blank"}
 - **note** First decide on which R version it should be based on and load that R_packages module.
 - If not stated otherwise, your installation will end up in the ``~/R`` directory within your home directory
 
@@ -68,13 +68,13 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 
 ## Example : Update dowser
 
-[dowser on Readthedocs](https://dowser.readthedocs.io/en/latest/)
+[dowser on Readthedocs](https://dowser.readthedocs.io/en/latest/){:target="_blank"}
 
 !!! info
    
     Dowser is part of the Immcantation analysis framework for Adaptive Immune Receptor Repertoire sequencing (AIRR-seq). Dowser provides a set of tools for performing phylogenetic analysis on B cell receptor repertoires. It supports building and visualizing trees using multiple methods, and implements statistical tests for discrete trait analysis of B cell migration, differentiation, and isotype switching.
 
-The version of dowser in ``R_packages/4.2.1`` is 1.1.0. It was updated to version 1.2.0 on [2023-05-30](https://cran.rstudio.com/web/packages/dowser/).
+The version of dowser in ``R_packages/4.2.1`` is 1.1.0. It was updated to version 1.2.0 on [2023-05-30](https://cran.rstudio.com/web/packages/dowser/){:target="_blank"}.
 
 ### Install on Rackham
 
