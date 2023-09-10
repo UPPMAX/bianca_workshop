@@ -47,6 +47,7 @@ Perfect.
 | ![gatk_syslabs](./img/gatk_syslabs.png) | ![gatk_dockerhub](./img/gatk_dockerhub.png) |
 |---|---|
 
+- **Note that `apptainer` is not a module but available lika a system tool!
 `apptainer pull gatk_4.3.0.0.sif docker://broadinstitute/gatk:4.3.0.0`
 
 ![apptainer_pull](./img/apptainer_pull.png)
