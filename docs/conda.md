@@ -114,7 +114,7 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
     -   Example:
 
     ``` bash 
-        export CONDA_ENVS_PATH=/proj/\<your-project-id\>/nobackup/\<username\>
+        export CONDA_ENVS_PATH=/proj/<your-project-id>/nobackup/<username>
     ```
     
     ??? info "By choice"
@@ -128,8 +128,7 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
     -   Example:
 
     ```bash
-      conda create --name python36-env python=3.6 numpy=1.13.1
-      matplotlib=2.2.2
+      conda create --name python36-env python=3.6 numpy=1.13.1 matplotlib=2.2.2
     ```
 
     !!! info "The `mamba` alternative"
@@ -140,10 +139,14 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
         -   Example:
 
             ```bash
-            mamba create --name python37-env python=3.7 numpy=1.13.1
-            matplotlib=2.2.2
+            mamba create --name python36-env python=3.6 numpy=1.13.1  matplotlib=2.2.2
             ```
-        
+
+-   You may check other environments with:
+    ```bash
+    conda env list
+    ```
+    
 4.  Activate the conda environment by:
 
     ```bash 
@@ -151,9 +154,10 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
     ```
     -   You will see that your prompt is changing to start with `(python-36-env)` to show that you are within an environment.
 
-5.  Now do your work!
 
-6.  Deactivate
+6.  Now do your work!
+
+7.  Deactivate
 
     ```bash
     (python-36-env) $ conda deactivate
