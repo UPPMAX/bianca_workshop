@@ -325,6 +325,10 @@ echo Hello world!
     
     ??? tip "Answer"
         - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
+        - alternatively copy the ``/proj/sens2023598/workshop/slurm/my_bio_workflow.sh`` file and modify it
+          ``cd ~`` 
+          ``cp /proj/sens2023598/workshop/slurm/my_bio_workflow.sh .``
+          - edit ``my_bio_workflow.sh`` and add the SBATCH commands
         
         ```bash
         #!/bin/bash
