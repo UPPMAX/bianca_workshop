@@ -224,3 +224,5 @@ symlinks
 jobid
 PNG
 finishedjobinfo
+squeue
+bXX
