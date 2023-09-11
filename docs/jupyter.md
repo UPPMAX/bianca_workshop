@@ -24,7 +24,12 @@ or jupyter lab:
 $ jupyter-lab
 ```
 
-A local Firefox session (not a internet web page!) should start with the Jupyter notebook/lab interface. If not,  copy-paste one of the addresses into the address files in an open ``firefox`` session (start with ``firefox &``).
+A local Firefox session (not a internet web page!) should start with the Jupyter notebook/lab interface. 
+- If not, make jupyter work in background, start firefox and paste the address.
+- `` <ctrl-z>``
+- ``bg``
+- ``firefox &``
+- copy-paste one of the addresses from the jupyter output in the terminal into the address files in the open ``firefox`` session.
 
 ## Jupyter in a virtual environment (venv)
 
