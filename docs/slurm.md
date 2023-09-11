@@ -6,8 +6,7 @@
 - [Discovering job resource usage with `jobstats`](https://www.uppmax.uu.se/support/user-guides/jobstats-user-guide/){:target="_blank"} 
 - [Plotting your core hour usage](https://www.uppmax.uu.se/support/user-guides/plotting-your-core-hour-usage/){:target="_blank"} 
 
-Commands
-========
+## Example
 
 Generate read-1 and read-2 fastq files from 1000 Genomes BAM working file restricted to GRCh38 chr1 and align back to GRCh38. Load modules.
 
@@ -31,8 +30,8 @@ Create local symlinks to the iGenomes BWA index for GRCh38.
     ln -s /sw/data/iGenomes/Homo_sapiens/NCBI/GRCh38/Sequence/BWAIndex/genome.fa* .
 
 
-Good job: efficient use of requested cores
-------------------------------------
+### Good job: efficient use of requested cores
+
 
 The SLURM script `run_good.sh` runs an efficient job, which requests 8 cores and uses 8 for mapping and 2 to generate the BAM file:
 
@@ -50,8 +49,7 @@ The SLURM script `run_good.sh` runs an efficient job, which requests 8 cores and
     bwa mem -t 8 genome.fa NA12878_WGS_possorted_bam.chr1.r1.fastq.gz NA12878_WGS_possorted_bam.chr1.r2.fastq.gz | samtools view -Sb -@ 2 - > good.bam
 
 
-Poor job: inefficient use of requested cores
---------------------------------------
+### Poor job: inefficient use of requested cores
 
 The SLURM script `run_poor.sh` runs an inefficient job, which also requests 8 cores but only uses 2 for mapping and 1 to generate the BAM file:
 
@@ -69,8 +67,7 @@ The SLURM script `run_poor.sh` runs an inefficient job, which also requests 8 co
     bwa mem -t 2 genome.fa NA12878_WGS_possorted_bam.chr1.r1.fastq.gz NA12878_WGS_possorted_bam.chr1.r2.fastq.gz | samtools view -Sb - > poor.bam
 
 
-Examining jobstats plots
-------------------------
+### Examining jobstats plots
 
 Examine the jobs run by user `douglas`. The relevant job numbers are the jobs with the highest jobid= numbers that have the names names `run_good.sh` and `run_poor.sh`. These should appear at the end of the output.
 
