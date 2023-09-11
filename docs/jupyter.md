@@ -31,6 +31,8 @@ A local Firefox session (not a internet web page!) should start with the Jupyter
 - ``firefox &``
 - copy-paste one of the addresses from the jupyter output in the terminal into the address files in the open ``firefox`` session.
 
+- You can browse in jupyter to a test notebook in ``/proj/workshop/Jupyter-demo/Test-01.ipynb``
+
 ## Jupyter in a virtual environment (venv)
 
 You could also use jupyter- (lab or notebook) in a virtual environment.
