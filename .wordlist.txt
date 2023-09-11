@@ -3,6 +3,7 @@ Bilderbeek
 Björn
 BMC
 Claremar
+douglas
 Dahlö
 Eklund
 Iusan
@@ -222,3 +223,4 @@ iGenomes
 symlinks
 jobid
 PNG
+finishedjobinfo
