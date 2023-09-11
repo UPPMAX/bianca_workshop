@@ -159,8 +159,10 @@ $ interactive -A sens2023598 -p core -n 2 -t 60:00
 
     `$ hostname`
   
-- if the name before ``.bianca.uppmax.uu.se`` is ending with bXX you are on a compute node!
-- The login node hase ``sens2023598-bianca``
+- If the name before ``.bianca.uppmax.uu.se`` is ending with bXX you are on a compute node!
+- The login node has ``sens2023598-bianca``
+- You can also probably see this information in your prompt, like:
+    ``[bjornc@sens2023598-b9 ~]$`` 
   
 - Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there. 
 
