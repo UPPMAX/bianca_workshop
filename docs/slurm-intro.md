@@ -144,26 +144,38 @@ We recommend using at least two cores for RStudio, and to get those resources, y
     Use **ThinLinc**
 
 - Start **interactive session** on compute node (2 cores)
+- If you already have an interactive session going on use that.
+    - If you don't find it, do
+        squeue
+    - find your session, ssh to it, like:
+        ssh sens2023598-b9
 
 ```
 $ interactive -A sens2023598 -p core -n 2 -t 60:00
 ```
 
 - Once the interactive job has begun you need to load needed modules, even if you had loaded them before in the login node
-- Load an RStudio module and an R_packages module and run "rstudio" from there. 
+- You can check which node you are on?
 
-  `$ ml R_packages/4.2.1`
-  `$ ml RStudio/2022.07.1-554`
+    `$ hostname`
+  
+- If the name before ``.bianca.uppmax.uu.se`` is ending with bXX you are on a compute node!
+- The login node has ``sens2023598-bianca``
+- You can also probably see this information in your prompt, like:
+    ``[bjornc@sens2023598-b9 ~]$`` 
+  
+- Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there. 
 
-- Which node are you on? 
+    `$ ml R_packages/4.2.1`
+  
+    `$ ml RStudio/2022.07.1-554`
 
-  `$ hostname`
 
 - **Start rstudio**, keeping terminal active (`&`)
 
   `$ rstudio &`
 
-- Still slow to start?
+- Slow to start?
 - Depends on:
     - number of packages 
     - if you save a lot of data in your RStudio workspace, to be read during start up.
@@ -174,7 +186,9 @@ $ interactive -A sens2023598 -p core -n 2 -t 60:00
  
 ## Job scripts (batch)
 
-- Write a bash script with `#!/bin/bash` in the top line
+- Write a bash script called ``jobscript.sh`` 
+    - You can be in your `~` folder    
+- Make first line be  `#!/bin/bash` in the top line
 - Add also before the rest of the commands the the keywords `#SBATCH`
 - `#` will be ignored by `bash` and can run as an ordinary bash script
 - if running the script with the command `sbatch <script>` the `#SBATCH` lines will be interpreted as slurm flags
@@ -209,21 +223,12 @@ module list
 echo Hello world!  
 
 ```
-??? "How compute nodes are moved between project clusters"
-    
-    The total job queue, made by putting together job queues of all project clusters, is monitored, and acted upon, by an external program, named meta-scheduler.
 
-    In short, this program goes over the following procedure, over and over again:
+- Run it:
 
-    1. Finds out where all the compute nodes are: on a specific project cluster or yet unallocated.
-    1. Reads status reports from all compute nodes, about all their jobs, all their compute nodes, and all their active users.
-    1. Are there unallocated compute nodes for all queued jobs?
-    1. Otherwise, try to "steal" nodes from project clusters, to get more unallocated compute nodes. This "stealing" is done in two steps: 
-        - "drain" a certain node, i.e. disallow more jobs to start on it; 
-        - remove the compute node from the project cluster, if no jobs are running on the node.
-    3. Use all unallocated nodes to create new compute nodes. Jobs with a higher priority get compute nodes first.
+    ``$ sbatch jobscript.sh``
 
-
+  
 !!! note "Node types"
 
     - Bianca has three node types: thin, fat and gpu. 
@@ -274,6 +279,7 @@ echo Hello world!
 - `jobinfo` — detailed info about jobs
 - `finishedjobinfo` — summary of finished jobs
 - `jobstats` — efficiency of booked resources
+    - use ``eog`` to watch the ``png`` output files
 - `bianca_combined_jobinfo`
 
 
@@ -293,7 +299,7 @@ echo Hello world!
     - Generate the images:
         - `$ jobstats -p ID1 ID2 ID3`
     - Watch the images:
-        - `$ eog <figure-files.png>  
+        - `$ eog <figure-files.png>`  
     
 
 - The figures
@@ -302,7 +308,24 @@ echo Hello world!
     - horizontal dotted black line: the jobs max memory usage
     - full black line: RAM used at 5 minute intervals
 
-### Examples
+### Example demo
+
+Examine the jobs run by user `douglas`. The relevant job numbers are the jobs with the highest jobid= numbers that have the names names `run_good.sh` and `run_poor.sh`. These should appear at the end of the output. 
+
+- You can be in your ``~`` dir!
+- Some background info may be found in the [extra material](https://uppmax.github.io/bianca_workshop/slurm/){:target="_blank"}.
+
+    ``finishedjobinfo -u douglas``
+
+- We find these are job numbers 18 for `run_good.sh` and 19 for `run_poor.sh`. Generate jobstats plots for each job.
+
+    ``jobstats -p 18 19`` 
+
+- This generates two PNG image files, one for each job. These are named `cluster-project-user-jobid.png`. Examine them both using an image viewer.
+
+    ``eog bianca-sens2023598-douglas-18.png bianca-sens2023598-douglas-19.png``
+
+### Exercise
 
 ![Image](./img/c_555912-l_1-k_bad_job_04.png)
 <br>
@@ -316,7 +339,7 @@ echo Hello world!
 
 [Discovering job resource usage with `jobstats`](https://www.uppmax.uu.se/support/user-guides/jobstats-user-guide/){:target="_blank"} 
 
-## Exercise (if time allows)
+## Extra exercise (if time allows)
 
 ???+ question "Submit a Slurm job"
 

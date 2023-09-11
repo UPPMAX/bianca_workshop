@@ -3,6 +3,7 @@ Bilderbeek
 Björn
 BMC
 Claremar
+douglas
 Dahlö
 Eklund
 Iusan
@@ -214,4 +215,15 @@ Castafiore
 Tintin
 Bourne
 CTRL
-
+GRCh
+chr
+symlink
+BWA
+iGenomes
+symlinks
+jobid
+PNG
+finishedjobinfo
+squeue
+bXX
+firefox
