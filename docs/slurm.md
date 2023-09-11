@@ -80,3 +80,20 @@ We find these are job numbers 18 for `run_good.sh` and 19 for `run_poor.sh`. Gen
 This generates two PNG image files, one for each job. These are named `cluster-project-user-jobid.png`. Examine them both using an image viewer.
 
     eog bianca-sens2023598-douglas-18.png bianca-sens2023598-douglas-19.png
+
+
+??? "Extra: How compute nodes are moved between project clusters"
+    
+    The total job queue, made by putting together job queues of all project clusters, is monitored, and acted upon, by an external program, named meta-scheduler.
+
+    In short, this program goes over the following procedure, over and over again:
+
+    1. Finds out where all the compute nodes are: on a specific project cluster or yet unallocated.
+    1. Reads status reports from all compute nodes, about all their jobs, all their compute nodes, and all their active users.
+    1. Are there unallocated compute nodes for all queued jobs?
+    1. Otherwise, try to "steal" nodes from project clusters, to get more unallocated compute nodes. This "stealing" is done in two steps: 
+        - "drain" a certain node, i.e. disallow more jobs to start on it; 
+        - remove the compute node from the project cluster, if no jobs are running on the node.
+    3. Use all unallocated nodes to create new compute nodes. Jobs with a higher priority get compute nodes first.
+
+
