@@ -226,3 +226,4 @@ PNG
 finishedjobinfo
 squeue
 bXX
+firefox
