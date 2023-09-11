@@ -144,20 +144,28 @@ We recommend using at least two cores for RStudio, and to get those resources, y
     Use **ThinLinc**
 
 - Start **interactive session** on compute node (2 cores)
+- If you already have an interactive session going on use that.
+    - If you don't find it, do
+        squeue
+    - find your session, ssh to it, like:
+        ssh sens2023598-b9
 
 ```
 $ interactive -A sens2023598 -p core -n 2 -t 60:00
 ```
 
 - Once the interactive job has begun you need to load needed modules, even if you had loaded them before in the login node
-- Load an RStudio module and an R_packages module and run "rstudio" from there. 
+- You can check which node you are on?
+
+  `$ hostname`
+- if the name before ``.bianca.uppmax.uu.se`` is ending with bXX you are on a compute node!
+- The login node hase ``sens2023598-bianca``
+  
+- Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there. 
 
   `$ ml R_packages/4.2.1`
   `$ ml RStudio/2022.07.1-554`
 
-- Which node are you on? 
-
-  `$ hostname`
 
 - **Start rstudio**, keeping terminal active (`&`)
 
