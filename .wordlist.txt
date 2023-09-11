@@ -56,6 +56,7 @@ Domus
 DPIA
 eKQ
 ENVS
+eog
 EPEL
 fastq
 FileZilla

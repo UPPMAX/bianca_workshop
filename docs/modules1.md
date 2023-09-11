@@ -290,7 +290,7 @@ cowsay hello
 
     1. Copy example BAM file to your working directory.
     ```
-    $ cp -a /proj/sens2023531/workshop/data/ERR1252289.subset.bam .
+    $ cp -a /proj/sens2023598/workshop/data/ERR1252289.subset.bam .
     ```
 
     2. Take a quick look at the BAM file. First see if `samtools` is available.
