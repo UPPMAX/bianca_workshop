@@ -292,6 +292,9 @@ echo Hello world!
     - Write down the IDs from some interesting jobs.
     - Generate the images:
         - `$ jobstats -p ID1 ID2 ID3`
+    - Watch the images:
+        - `$ eog <figure-files.png>  
+    
 
 - The figures
 
@@ -318,20 +321,23 @@ echo Hello world!
 ???+ question "Submit a Slurm job"
 
     - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshop/modules1/#bigger-exercises) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
+        - You can copy the my_bio_workflow.sh file in ``/proj/sens2023598/workshop/slurm`` to your home folder and make the necessary changes.
     
     ??? tip "Answer"
         - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
         
         ```bash
         #!/bin/bash
-        #SBATCH -A sens2023531
+        #SBATCH -A sens2023598
         #SBATCH -J workflow
         #SBATCH -t 01:00:00
         #SBATCH -p core
         #SBATCH -n 2
 
 
-        cd /proj/sens2023531/workshop/slurm/
+        cd ~
+        mkdir -p myworkflow
+        cd myworkflow
 
         module load bioinfo-tools
 
@@ -339,7 +345,7 @@ echo Hello world!
         module load samtools/1.17
 
         # copy and example BAM file
-        cp -a /proj/sens2023531/workshop/data/ERR1252289.subset.bam .
+        cp -a /proj/sens2023598/workshop/data/ERR1252289.subset.bam .
 
         # index the BAM file
         samtools index ERR1252289.subset.bam
