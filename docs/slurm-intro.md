@@ -157,21 +157,23 @@ $ interactive -A sens2023598 -p core -n 2 -t 60:00
 - Once the interactive job has begun you need to load needed modules, even if you had loaded them before in the login node
 - You can check which node you are on?
 
-  `$ hostname`
+    `$ hostname`
+  
 - if the name before ``.bianca.uppmax.uu.se`` is ending with bXX you are on a compute node!
 - The login node hase ``sens2023598-bianca``
   
 - Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there. 
 
-  `$ ml R_packages/4.2.1`
-  `$ ml RStudio/2022.07.1-554`
+    `$ ml R_packages/4.2.1`
+  
+    `$ ml RStudio/2022.07.1-554`
 
 
 - **Start rstudio**, keeping terminal active (`&`)
 
   `$ rstudio &`
 
-- Still slow to start?
+- Slow to start?
 - Depends on:
     - number of packages 
     - if you save a lot of data in your RStudio workspace, to be read during start up.
@@ -182,7 +184,9 @@ $ interactive -A sens2023598 -p core -n 2 -t 60:00
  
 ## Job scripts (batch)
 
-- Write a bash script with `#!/bin/bash` in the top line
+- Write a bash script called ``jobscript.sh`` 
+    - You can be in your `~` folder    
+- Make first line be  `#!/bin/bash` in the top line
 - Add also before the rest of the commands the the keywords `#SBATCH`
 - `#` will be ignored by `bash` and can run as an ordinary bash script
 - if running the script with the command `sbatch <script>` the `#SBATCH` lines will be interpreted as slurm flags
@@ -217,6 +221,12 @@ module list
 echo Hello world!  
 
 ```
+
+- Run it:
+
+    ``$ sbatch jobscript.sh``
+
+  
 ??? "How compute nodes are moved between project clusters"
     
     The total job queue, made by putting together job queues of all project clusters, is monitored, and acted upon, by an external program, named meta-scheduler.
