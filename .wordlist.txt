@@ -215,3 +215,12 @@ Tintin
 Bourne
 CTRL
 
+GRCh
+chr
+symlink
+BWA
+GRCh
+iGenomes
+symlinks
+jobid
+PNG
