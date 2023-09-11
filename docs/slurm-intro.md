@@ -301,8 +301,26 @@ echo Hello world!
     - blue line: the jobs CPU usage, 200% means 2 cores
     - horizontal dotted black line: the jobs max memory usage
     - full black line: RAM used at 5 minute intervals
+    - 
 
-### Examples
+### Example
+
+Examine the jobs run by user `douglas`. The relevant job numbers are the jobs with the highest jobid= numbers that have the names names `run_good.sh` and `run_poor.sh`. These should appear at the end of the output. 
+
+- You can be in your ~ dir!
+- Some background info may be found in the [extra material](https://uppmax.github.io/bianca_workshop/slurm/){:target="_blank"}.
+
+    finishedjobinfo -u douglas
+
+We find these are job numbers 18 for `run_good.sh` and 19 for `run_poor.sh`. Generate jobstats plots for each job.
+
+    jobstats -p 18 19
+
+This generates two PNG image files, one for each job. These are named `cluster-project-user-jobid.png`. Examine them both using an image viewer.
+
+    eog bianca-sens2023598-douglas-18.png bianca-sens2023598-douglas-19.png
+
+### Exercise
 
 ![Image](./img/c_555912-l_1-k_bad_job_04.png)
 <br>
