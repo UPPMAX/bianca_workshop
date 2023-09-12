@@ -2,7 +2,10 @@
 
 ## Results
 
-There are 5 surveys filled in in total
+There are 5 surveys filled in in total,
+for about 18 students.
+Note that there was one the surveys filled in by
+multiple students.
 
 > How would you rate your overall satisfaction with the course?
 >
