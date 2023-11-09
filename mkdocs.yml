@@ -3,7 +3,7 @@ site_name: Bianca workshop
 nav:
   - Home: index.md
   - Practicalities: practicalities.md
-  - Bianca intro (beginner):
+  - Bianca intro (beginner): intro.md
     - Overview: overview.md
     - Intro to NAISS-SENS and sensitive data: naiss-sens_short.md
     - Logging in to Bianca: login_bianca.md
