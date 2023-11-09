@@ -3,27 +3,29 @@ site_name: Bianca workshop
 nav:
   - Home: index.md
   - Practicalities: practicalities.md
-  - Getting Started:
+  - Bianca intro (beginner):
     - Overview: overview.md
+    - Intro to NAISS-SENS and sensitive data: naiss-sens_short.md
     - Logging in to Bianca: login_bianca.md
     - Command-line intro: commandline.md
     - Module system: modules1.md
-    - Transferring files to/from Bianca: transfer.md
-  - NAISS-SENS and sensitive data: naiss-sens-bianca.md
-  - The compute nodes and install yourself: 
+    - Transferring files to/from Bianca: transfer_basics.md
     - Introduction to compute nodes: slurm-intro.md
-    - Software and package installation: install.md
-  - Summary: summary.md
-  - Extra material:
-    - slurm.md
-    - conda.md
-    - pip.md
-    - rpackages.md
-    - julia.md
-    - containers.md
-    - devel.md
-    - jupyter.md
-  - Exercises: exercises.md
+    - Summary: summary.md
+    - Exercises: exercises.md
+  - Intermediate workshop/hackaton:
+    - IDE:s: intermedate/ides.md
+    - Transferring files to/from Bianca: extra/transfer.md
+    - Software and package installation: intermediate/install.md
+    - Extra material:
+      - extra/slurm.md
+      - extra/conda.md
+      - extra/pip.md
+      - extra/rpackages.md
+      - extra/julia.md
+      - extra/containers.md
+      - extra/devel.md
+      - extra/jupyter.md
      
  
 theme:
