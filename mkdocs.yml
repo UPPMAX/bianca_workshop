@@ -14,6 +14,7 @@ nav:
     - Summary: summary.md
     - Exercises: exercises.md
   - Intermediate workshop/hackaton:
+    - IDE:s: intermedate/ides.md
     - Transferring files to/from Bianca: extra/transfer.md
     - Software and package installation: intermediate/install.md
     - Extra material:
