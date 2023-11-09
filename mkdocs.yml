@@ -3,7 +3,8 @@ site_name: Bianca workshop
 nav:
   - Home: index.md
   - Practicalities: practicalities.md
-  - Bianca intro (beginner): intro.md
+  - Bianca intro (beginner): 
+    - Introduction: intro.md
     - Overview: overview.md
     - Intro to NAISS-SENS and sensitive data: naiss-sens_short.md
     - Logging in to Bianca: login_bianca.md
@@ -13,7 +14,8 @@ nav:
     - Introduction to compute nodes: slurm-intro.md
     - Summary: summary.md
     - Exercises: exercises.md
-  - Intermediate workshop/hackaton: intermediate/intro.md
+  - Intermediate workshop/hackaton: 
+    - Introduction: intermediate/intro.md
     - IDE:s: intermediate/ides.md
     - Transferring files to/from Bianca: extra/transfer.md
     - Software and package installation: intermediate/install.md
