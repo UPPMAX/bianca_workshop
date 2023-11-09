@@ -3,16 +3,18 @@ site_name: Bianca workshop
 nav:
   - Home: index.md
   - Practicalities: practicalities.md
-  - Getting Started:
+  - Bianca intro (beginner):
     - Overview: overview.md
     - Logging in to Bianca: login_bianca.md
     - Command-line intro: commandline.md
     - Module system: modules1.md
     - Transferring files to/from Bianca: transfer.md
   - NAISS-SENS and sensitive data: naiss-sens-bianca.md
-  - The compute nodes and install yourself: 
+  - The compute nodes: 
     - Introduction to compute nodes: slurm-intro.md
-    - Software and package installation: install.md
+
+  - Intermediate workshop
+    - Software and package installation: intermediate/install.md
   - Summary: summary.md
   - Extra material:
     - slurm.md
