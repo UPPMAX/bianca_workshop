@@ -13,18 +13,18 @@ nav:
   - The compute nodes: 
     - Introduction to compute nodes: slurm-intro.md
 
-  - Intermediate workshop
+  - Intermediate workshop:
     - Software and package installation: intermediate/install.md
+    - Extra material:
+      - slurm.md
+      - conda.md
+      - pip.md
+      - rpackages.md
+      - julia.md
+      - containers.md
+      - devel.md
+      - jupyter.md
   - Summary: summary.md
-  - Extra material:
-    - slurm.md
-    - conda.md
-    - pip.md
-    - rpackages.md
-    - julia.md
-    - containers.md
-    - devel.md
-    - jupyter.md
   - Exercises: exercises.md
      
  
