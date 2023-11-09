@@ -228,3 +228,5 @@ TODO
 squeue
 bXX
 firefox
+IDEs
+VSCode
