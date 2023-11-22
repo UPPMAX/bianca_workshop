@@ -15,7 +15,7 @@
 
 ## How does it work?
 
-![Bianca](./img/biancaorganisation-01.png)
+![Bianca](./img/Bianca-transfer.png)
 
 ### The `wharf`
 
