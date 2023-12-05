@@ -4,20 +4,20 @@ Are you already working with sensitive data in your research and feel your workf
 
 Tentative schedule
 
-    Introduction
-    NAISS-SENS summary
-    IDE:s on Bianca
-        VSCode
-        Jupyter
-        RStudio
-    Transferring files to and from Bianca
-        several methods 
-    Slurm jobs
-        jobstats
-        GPU:s
-    Software and packages installation on Bianca
-        packages/libraries
-        tools
-        containers
-    Summary
-    Q/A and extra material
+    9.00 Introduction
+    9.10 NAISS-SENS summary
+    9.20 Transferring files to and from Bianca
+    10.00 Coffee break
+    10.15 Transferring files p2
+    10.35 Slurm jobs p1
+    11.00 Break
+    11.15 Slurm jobs p2 
+    12.00 LUNCH
+    13.00 Software and packages installation on Bianca
+    13.50 break
+    14.05 IDE:s on Bianca
+    15.00 Coffee break
+    15.15 Summary
+    15.20 Q/A and extra material
+    15.55 Closing words
+    16.00 END
