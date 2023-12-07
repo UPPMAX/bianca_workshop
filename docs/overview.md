@@ -137,7 +137,7 @@ Bianca, like all clusters at UPPMAX,
 is named after a Tintin character,
 in this case after Bianca Castafiore.
 
-[Bianca Castafiore, from https://en.wikipedia.org/wiki/File:Bianca_Castafiore-Tintin_comics_series.png](./img/Bianca_Castafiore-Tintin_comics_series.png)
+![Bianca Castafiore, from https://en.wikipedia.org/wiki/File:Bianca_Castafiore-Tintin_comics_series.png](./img/bianca_castafiore_192_x_226.png)
 
 ## Bianca's design
 
