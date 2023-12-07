@@ -110,7 +110,7 @@ As the data is sensitive, it is protected to remain only on Bianca.
 
 ### Difference between supercomputer and computer cluster
 
-![A supercomputer, from https://en.wikipedia.org/wiki/File:IBM_Blue_Gene_P_supercomputer.jpg](IBM_Blue_Gene_P_supercomputer.jpg)
+![A supercomputer, from https://en.wikipedia.org/wiki/File:IBM_Blue_Gene_P_supercomputer.jpg](./img/IBM_Blue_Gene_P_supercomputer.jpg)
 
 A supercomputer is a machine that is optimized for doing calculations
 quickly. For example, to predict the weather for tomorrow, the calculation
