@@ -36,11 +36,12 @@ flowchart TD
     outside-->|Use a VPN|inside_using_vpn
     outside-->|Use Rackham|inside_using_rackham
     physically_inside-->bianca_console
-    physically_inside-->bianca_remote_desktop
+    physically_inside-->|Use website|bianca_remote_desktop
+    physically_inside-->|Use local ThinLinc server|bianca_remote_desktop
     physically_inside-.->inside_using_rackham
     physically_inside-.->inside_using_vpn
     inside_using_vpn-->bianca_console
-    inside_using_vpn-->bianca_remote_desktop
+    inside_using_vpn-->|Use website|bianca_remote_desktop
     inside_using_rackham-->bianca_console
 ```
 
