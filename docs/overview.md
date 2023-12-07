@@ -186,7 +186,7 @@ are restricted in some ways:
   Instead, users need to request either (1) a calculation to be run,
   or (2) an interactive node
 
-!!!- info "Requesting a calculation to run"
+!!!- tip "Requesting a calculation to run"
 
     Requesting a calculation to run is part of this course 
     and is described [here](slurm-intro.md).
