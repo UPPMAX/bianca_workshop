@@ -23,8 +23,9 @@ among other Uppsala.
 
 ![UPPMAX logo](./img/uppmax_logo.png)
 
-[Uppsala Multidisciplinary Center for Advanced Computational Science](https://www.uppmax.uu.se/) (**UPPMAX = UppMACS**) provides the HPC infrastructure 
-that is physically located in Uppsala
+[Uppsala Multidisciplinary Center for Advanced Computational Science](https://www.uppmax.uu.se/) (**UPPMAX = UppMACS**) 
+provides the HPC infrastructure that is physically located in Uppsala. 
+Part of this is to provide training and [support](https://www.uppmax.uu.se/support).
 
 ```mermaid
 flowchart TD
@@ -246,6 +247,10 @@ ThinLinc.
 ???- question "Your script downloads a human reference genome from a secure website. Will this work on Bianca? Why?"
 
     This will fail, because Bianca has (close to) no internet access.
+
+???- question "You have a problem on Bianca that is too hard to solve. Where do you ask us for help?"
+
+    Google for 'UPPMAX support' or directly go to [https://www.uppmax.uu.se/support](https://www.uppmax.uu.se/support).
 
 ## Summary
 
