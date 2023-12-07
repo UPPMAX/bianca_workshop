@@ -257,16 +257,20 @@ Each computer of a cluster is called a **node**.
 There are three types of nodes:
 
 - **login nodes**: nodes where a user enters and interacts with the system
-- **calculation nodes**: nodes that do the calculations
-- **interactive nodes**: a type of calculation node, where a user can do calculations directly
-
-Each node contains several CPU/GPU cores, RAM and local storage space.
-
-A user logs in to a login node via the Internet.
 
 ???- tip "Logging in"
 
     Logging in is part of this course and is described [here](login_bianca.md).
+
+- **calculation nodes**: nodes that do the calculations
+
+???- tip "Requesting a calculation to run"
+
+    Requesting a calculation to run is part of this course 
+    and is described [here](slurm-intro.md).
+    This is done by using the SLURM scheduler.
+
+- **interactive nodes**: a type of calculation node, where a user can do calculations directly
 
 ???- tip "Requesting an interactive node"
 
@@ -274,6 +278,13 @@ A user logs in to a login node via the Internet.
     and is described [here](login_bianca.md).
     This is done by requesting an interactive node 
     from the SLURM scheduler.
+
+
+Each node contains several CPU/GPU cores, RAM and local storage space.
+
+A user logs in to a login node via the Internet.
+
+
 
 ## Summary
 
