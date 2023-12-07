@@ -55,6 +55,8 @@ Here we place Bianca between the other UPPMAX systems.
     - **Bianca: for sensitive data, general use**
     - Miarka: for sensitive data, SciLifeLab-only
 
+A technical summary can be found :ref:`subsection-uppmax-clusters-technical-summary below`.
+
 ```mermaid
 flowchart TD
     UPPMAX(Which UPPMAX cluster?)
@@ -166,6 +168,8 @@ the `EAST-1` region of the SNIC science cloud.
     - A cluster consists of several inter-connected computers that can work individually or together.
 
 ## Extra material
+
+.. subsection-uppmax-clusters-technical-summary:
 
 ### UPPMAX clusters technical summary
 
