@@ -1,8 +1,9 @@
 # Overview
 
-!!! info "Objectives"
-    - We'll get an overview of UPPMAX and SNIC/NAISS and how a computer cluster works
-
+!!! info "Goals"
+    - See the bigger picture UPPMAX is part of
+    - See other UPPMAX systems
+    - First understanding why Bianca is how she is
 
 ## The bigger picture
 
@@ -99,11 +100,13 @@ flowchart TD
 - For cloud servies: use the [UPPMAX cloud](https://www.uppmax.uu.se/resources/systems/the-uppmax-cloud/). It is called 'Dis' (the Swedish word for 'haze') and
 the `EAST-1` region of the SNIC science cloud. 
 
-## Bianca is a computer cluster
+## Bianca is a computer cluster for sensitive data
 
-Bianca is a computer cluster and not a supercomputer.
-A computer cluster is a group of computers that can run
-many calculations, as requested by multiple people, at the same time.
+Bianca is a computer cluster for sensitive data.
+
+Or: Bianca is a group of computers that can run many calculations, 
+as requested by multiple people, at the same time.
+As the data is sensitive, it is protected to remain only on Bianca.
 
 ### Difference between supercomputer and computer cluster
 
@@ -123,10 +126,41 @@ and Rackham below, another UPPMAX computer cluster.
 
 Bianca is a computer cluster.
 
-### What is a computer cluster?
+### Restrictions on a computer cluster
 
 A computer cluster is a group of computers that can run
 many calculations, as requested by multiple people, at the same time.
+
+To ensure fair use of this shared resource, regular users
+are restricted in some ways:
+- Users cannot run calculations directly. 
+  Instead, users need to request either (1) a calculation to be run,
+  or (2) an interactive node
+- Users cannot install software directly. 
+  Instead, users need to use pre-installed software or learn
+  techniques how to run custom software anyway
+
+These restrictions apply to most general-purpose clusters. 
+However, Bianca is a **sensitive data** cluster, to which
+more restrictions apply.
+
+### Restrictions on a sensitive data computer cluster
+
+Next to the general restrictions above, 
+Bianca also is a **sensitive data** cluster.
+This sensitive data must be protected to remain only on Bianca,
+due to which there are these additional restrictions to users:
+
+- Users have no direct access to internet.
+  Instead, users can up/download files from/to a special folder.
+
+The goal is *not* to prevent the up/download of sensitive data,
+instead it is to prevent the *accidental* up/download of sensitive data.
+As these up/downloads are monitored, in case of an accident, 
+the extent of the leak and the person (accidentally) causing it
+is known.
+
+### What is a computer cluster?
 
 Each computer is called a **node**.
 
@@ -138,53 +172,55 @@ There are three types of nodes:
 
 Each node contains several CPU/GPU cores, RAM and local storage space.
 
-A computer cluster typically is used by multiple people.
-To ensure fair use of this shared resource, regular users
-are restricted in some ways:
-- Users cannot run calculations directly. 
-  Instead, users need to request either (1) a calculation to be run,
-  or (2) an interactive node
-- Users cannot install software directly. 
-  Instead, users need to use pre-installed software or learn
-  techniques how to run custom software anyway
-
 A user logs in to a login node via the Internet through:
 
 - [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/)
-  for a remote desktop environment
+  for a remote desktop environment, 
+  that works only from within SUNET
 - ThinLinc, for a remote desktop environment
 - SSH, for a terminal environment
 
 Note that [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/) uses
 ThinLinc.
 
-
-
-![Node](./img/node.png)
-
-
-  - Here the file management and lighter data analysis can be performed.
-
-![RaspBerry](./img/nodes.png)
-
-![RaspBerry](./img/Bild1.png){ width="400" }
-
-- The **calculation nodes** have to be used for intense computing. 
-
-
 ## Questions
 
-???+ question "At which organization does one start to request access to any Swedish computer cluster?"
+???- question "Your want to request access to general-purpose HPC. At which website does your journey start?"
 
-    NAISS
+    Either a search engine to google for 'NAISS', or directly [https://naiss.se](https://naiss.se)
 
-???- question "Which UPPMAX cluster is best for general purpose regular data?"
+???- question "Your colleague visits [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/) and sees nothing appear. What is likely the problem?"
 
-    Rackham
+    He/she is not inside of SUNET.
 
-??? question "wgwf"
+???- question "You want to use a piece of software that came out this morning (!) on Bianca. Will you be able to? Why?"
 
-    wrfwf
+    This will likely fail, as it is not a pre-installed piece of software.
+    
+    If you are more advanced, there are ways to get it running yourself.
+
+???- question "You want to use an online tool to do a calculation on Bianca. Will this work? Why?"
+
+    This will fail, because Bianca has (close to) no internet access.
+
+???- question "You find out you can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?"
+
+    For you, there seems to be no problem. 
+    However, for everyone else this is a problem,
+    as the login node is a *shared* node.
+
+    You will be asked to *schedule* your jobs instead. 
+
+???- question "You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
+
+    This is the typical use-case to use an interactive node.
+    One could also consider to develop code on a local computer 
+    instead (which uses nonsensitive/simulated/fake testing data)
+    and upload the final code instead.
+
+???- question "Your script downloads a human reference genome from a secure website. Will this work on Bianca? Why?"
+
+    This will fail, because Bianca has (close to) no internet access.
 
 ## Summary
 
