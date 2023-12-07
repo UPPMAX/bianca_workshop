@@ -6,7 +6,7 @@
 
 ## The bigger picture
 
-![Vetenskapsrådet logo](vr_logo_128_x_154)
+![Vetenskapsrådet logo](vr_logo_128_x_154.png)
 ![NAISS logo](./img/naiss_logo.png)
 
 - [Vetenskapsrådet](https://www.vr.se) ('Science counsil', VR) is biggest funder
@@ -42,7 +42,7 @@ flowchart TD
     - **Bianca: for sensitive data, general use**
     - Miarka: for sensitive data, SciLifeLab-only
 
-```
+```mermaid
 flowchart TD
     UPPMAX(Which UPPMAX cluster?)
     Bianca
