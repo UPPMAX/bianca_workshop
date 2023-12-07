@@ -116,7 +116,7 @@ A supercomputer is a machine that is optimized for doing calculations
 quickly. For example, to predict the weather for tomorrow, the calculation
 may not take a week. The image above is a supercomputer.
 
-![A computer cluster using a Raspberry Pi ](./img/small_cluster_307_x_230.jpg)
+![A computer cluster using some Raspberry Pi's](./img/small_cluster_307_x_230.jpg)
 
 ![The Rackham computer cluster](./img/uppmax-light2_412_x_285.jpg)
 
@@ -177,7 +177,7 @@ A user logs in to a login node via the Internet through:
 
 - [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/)
   for a remote desktop environment, 
-  that works only from within SUNET
+  that works only from within the universities' network (i.e. SUNET)
 - ThinLinc, for a remote desktop environment
 - SSH, for a terminal environment
 
