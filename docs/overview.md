@@ -6,7 +6,7 @@
 
 ## The bigger picture
 
-![Vetenskapsrådet logo](vr_logo_128_x_154.png)
+![Vetenskapsrådet logo](./img/vr_logo_128_x_154.png)
 ![NAISS logo](./img/naiss_logo.png)
 
 - [Vetenskapsrådet](https://www.vr.se) ('Science counsel', VR) is biggest funder
