@@ -126,22 +126,21 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
     - 1 hour walltime = 16 core hours = expensive
         - Waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
 - Default value: core
+  
+!!! Slurm Cheat Sheet
 
-```{admonition} Slurm Cheat Sheet
-
-- ``-A``    project number
-- ``-t``    wall time
-- ``-n``    number of cores
-- ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
-- ``-p``    partition
-  - ``core`` is default and works for jobs narrower than 16 cores
-  - ``node`` can be used if you need the whole node and its memory
-    - must be used when allocating the fat nodes, see below
-- ``-C mem256GB`` allocate a fat node with 256 GB RAM
-- ``-C mem512GB`` allocate a fat node with 512 GB RAM
-- ``-C gpu``
-
-```
+    - ``-A``    project number
+    - ``-t``    wall time
+    - ``-n``    number of cores
+    - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
+    - ``-p``    partition
+      - ``core`` is default and works for jobs narrower than 16 cores
+      - ``node`` can be used if you need the whole node and its memory
+        - must be used when allocating the fat nodes, see below
+    - ``-C mem256GB`` allocate a fat node with 256 GB RAM
+    - ``-C mem512GB`` allocate a fat node with 512 GB RAM
+    - ``-C gpu --gres=gpu:1`` allocate one GPU (also define number of CPU cores with ``-n 3 `` or similar)
+    - ``-C gpu --gres=gpu:2`` allocate two GPU:s (also define number of CPU cores with ``-n 3 `` or similar)
 
 
 ## Interactive jobs
@@ -357,36 +356,36 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
 [Discovering job resource usage with `jobstats`](https://www.uppmax.uu.se/support/user-guides/jobstats-user-guide/){:target="_blank"} 
 
 
-```{seealso}
+!!! seealso
 
-- [Intermediate workshop material on slurm](https://uppmax.github.io/bianca_workshop/extra/slurm/)
+    - [Intermediate workshop material on slurm](https://uppmax.github.io/bianca_workshop/extra/slurm/)
 
-```
-```{admonition} Slurm Cheat Sheet
 
-- ``-A``    project number
-- ``-t``    wall time
-- ``-n``    number of cores
-- ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
-- ``-p``    partition
-  - ``core`` is default and works for jobs narrower than 16 cores
-  - ``node`` can be used if you need the whole node and its memory
-    - must be used when allocating the fat nodes, see below
-- ``-C mem256GB`` allocate a fat node with 256 GB RAM
-- ``-C mem512GB`` allocate a fat node with 512 GB RAM
-- ``-C gpu``
+!!! Slurm Cheat Sheet
 
-**Batch jobs**
-- Two alternatives
-  - ``sbatch <jobscript with all #SBATCH options>``
-  -`` sbatch <options that will be prioritized over the options within the jobs script> <jobscript>``
-     - can for instance be used if you just want to test with, for instance, fewer cores and shorter time
-     - Example: ``sbatch -t  60:00 -p devcore -n 2 job.sh``
-** Interactive
-- ``interactive -A <project> <other options if not using default settings>`` 
-- load your modules when session starts
+    - ``-A``    project number
+    - ``-t``    wall time
+    - ``-n``    number of cores
+    - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
+    - ``-p``    partition
+      - ``core`` is default and works for jobs narrower than 16 cores
+      - ``node`` can be used if you need the whole node and its memory
+        - must be used when allocating the fat nodes, see below
+    - ``-C mem256GB`` allocate a fat node with 256 GB RAM
+    - ``-C mem512GB`` allocate a fat node with 512 GB RAM
+    - ``-C gpu``
 
-```
+    **Batch jobs**
+    - Two alternatives
+      - ``sbatch <jobscript with all #SBATCH options>``
+      -`` sbatch <options that will be prioritized over the options within the jobs script> <jobscript>``
+         - can for instance be used if you just want to test with, for instance, fewer cores and shorter time
+         - Example: ``sbatch -t  60:00 -p devcore -n 2 job.sh``
+    ** Interactive
+    - ``interactive -A <project> <other options if not using default settings>`` 
+    - load your modules when session starts
+
+
 
 
 ## Extra exercise (if time allows)
