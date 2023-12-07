@@ -116,9 +116,9 @@ A supercomputer is a machine that is optimized for doing calculations
 quickly. For example, to predict the weather for tomorrow, the calculation
 may not take a week. The image above is a supercomputer.
 
-![A computer cluster using a Raspberry Pi ](./img/IMG_5111.jpeg){ height="128" }
+![A computer cluster using a Raspberry Pi ](./img/small_cluster_307_x_230.jpg)
 
-![The Rackham computer cluster](./img/uppmax-light2.jpg){ height="128" }
+![The Rackham computer cluster](./img/uppmax-light2_412_x_285.jpg)
 
 A computer cluster is a machine that is optimized for doing a lot of calculations.
 The images above shows a home-made computer cluster above,
