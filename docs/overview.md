@@ -157,7 +157,7 @@ Bianca is designed to
     - (2b) Distributes shared resources (CPU, memory) in a fair way
     - (2c) make correct data management as easy as possible
 
-### Difference between supercomputer and computer cluster
+### Difference between supercomputer and (high-performing) computer cluster
 
 ![A supercomputer, from https://en.wikipedia.org/wiki/File:IBM_Blue_Gene_P_supercomputer.jpg](./img/IBM_Blue_Gene_P_supercomputer_422_x_280.jpg)
 
@@ -167,12 +167,16 @@ may not take a week. The image above is a supercomputer.
 
 ![A computer cluster using some Raspberry Pi's](./img/small_cluster_307_x_230.jpg)
 
+A computer cluster is a machine that is optimized for doing a lot of calculations.
+The image above shows a home-made computer cluster.
+This home-made computer cluster may not be suitable for high-performance.
+
 ![The Rackham computer cluster](./img/uppmax-light2_412_x_285.jpg)
 
-A computer cluster is a machine that is optimized for doing a lot of calculations.
-The images above shows a home-made computer cluster above,
-and Rackham below, another UPPMAX computer cluster.
-Bianca is a computer cluster.
+The image above shows Rackham, another UPPMAX 
+computer cluster, suitable for high-performance computing.
+This makes Rackham an high-performance computing (HPC) cluster.
+Bianca and Rackham are HPC clusters.
 
 ### Restrictions on a computer cluster
 
