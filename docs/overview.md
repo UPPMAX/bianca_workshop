@@ -133,6 +133,7 @@ many calculations, as requested by multiple people, at the same time.
 
 To ensure fair use of this shared resource, regular users
 are restricted in some ways:
+
 - Users cannot run calculations directly. 
   Instead, users need to request either (1) a calculation to be run,
   or (2) an interactive node
