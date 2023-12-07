@@ -95,7 +95,7 @@ flowchart TD
 Storage systems allow a user to storage (big amounts of) data,
 for either active use (i.e. in calculations) or to archive it.
 Storage for active use is also called 'on-load' storage,
-where archieved data is called 'off-load' storage.
+where archived data is called 'off-load' storage.
 
 The [UPPMAX storage systems](https://www.uppmax.uu.se/resources/systems/storage-systems/) are:
 - On-load: Castor for Bianca, Crex for Rackham
