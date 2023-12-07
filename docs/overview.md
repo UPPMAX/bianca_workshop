@@ -185,9 +185,6 @@ are restricted in some ways:
 - Users cannot run calculations directly. 
   Instead, users need to request either (1) a calculation to be run,
   or (2) an interactive node
-- Users cannot install software directly. 
-  Instead, users need to use pre-installed software or learn
-  techniques how to run custom software anyway
 
 !!!- info "Requesting a calculation to run"
 
@@ -201,6 +198,11 @@ are restricted in some ways:
     and is described [here](login_bianca.md).
     This is done by requesting an interactive node 
     from the SLURM scheduler.
+
+
+- Users cannot install software directly. 
+  Instead, users need to use pre-installed software or learn
+  techniques how to run custom software anyway
 
 !!!- info "Using pre-installed software"
 
@@ -232,6 +234,7 @@ due to which there are these additional restrictions to users:
 !!! info "File transfer"
 
     Transferring file is part of this course and is described [here](transfer_basic.md).
+    This is done using
 
 The goal is *not* to prevent the up/download of sensitive data,
 instead it is to prevent the *accidental* up/download of sensitive data.
