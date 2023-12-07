@@ -275,6 +275,16 @@ A user logs in to a login node via the Internet.
     This is done by requesting an interactive node 
     from the SLURM scheduler.
 
+## Summary
+
+!!! abstract "keypoints"
+
+    - NAISS provides HPC resources for Swedish research. 
+    - UPPMAX takes care of the Uppsala HPC facilities
+    - Bianca is an HPC cluster for sensitive data
+    - The restrictions on Bianca follow from Bianca being a shared resource
+      that uses sensitive data
+
 ## Questions
 
 ???- question "Your want to request access to general-purpose HPC. At which website does your journey start?"
@@ -330,13 +340,6 @@ A user logs in to a login node via the Internet.
 ???- question "You have a problem on Bianca that is too hard to solve. Where do you ask us for help?"
 
     Google for 'UPPMAX support' or directly go to [https://www.uppmax.uu.se/support](https://www.uppmax.uu.se/support).
-
-## Summary
-
-!!! abstract "keypoints"
-    - NAISS makes available large-scale high-performance computing resources, storage capacity, and advanced user support, for Swedish research. 
-    - UPPMAX runs the local resources placed at Uppsala University
-    - A cluster consists of several inter-connected computers that can work individually or together.
 
 ## Extra material
 
