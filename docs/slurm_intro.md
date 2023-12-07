@@ -166,9 +166,8 @@ We recommend using at least two cores for RStudio, and to get those resources, y
     - find your session, ssh to it, like:
         ssh sens2023598-b9
 
-```
-$ interactive -A sens2023598 -p core -n 2 -t 60:00
-```
+- ``$ interactive -A sens2023598 -p core -n 2 -t 60:00`` 
+
 
 - Once the interactive job has begun you need to load needed modules, even if you had loaded them before in the login node
 - You can check which node you are on?
