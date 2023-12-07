@@ -97,7 +97,7 @@ flowchart TD
     usage_type-->|archive|Lutra
 ```
 
-- For cloud servies: use the [UPPMAX cloud](https://www.uppmax.uu.se/resources/systems/the-uppmax-cloud/). It is called 'Dis' (the Swedish word for 'haze') and
+- For cloud services: use the [UPPMAX cloud](https://www.uppmax.uu.se/resources/systems/the-uppmax-cloud/). It is called 'Dis' (the Swedish word for 'haze') and
 the `EAST-1` region of the SNIC science cloud. 
 
 ## Bianca is a computer cluster for sensitive data
