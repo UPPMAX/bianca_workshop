@@ -7,12 +7,20 @@
 ## The bigger picture
 
 ![Vetenskapsrådet logo](./img/vr_logo_128_x_154.png)
+
+[Vetenskapsrådet](https://www.vr.se) ('Science counsel', VR) is biggest funder
+of research in Sweden and funds HPC infrastructure. 
+
 ![NAISS logo](./img/naiss_logo.png)
 
-- [Vetenskapsrådet](https://www.vr.se) ('Science counsel', VR) is biggest funder
-  of research in Sweden and funds HPC infrastructure
-- [**National Academic Infrastructure for Supercomputing in Sweden**](https://www.naiss.se/) (NAISS) provides HPC infrastructure: computing power, storage and data services. Apply [here](https://www.naiss.se//#application-rounds-for-compute-and-storage-resources) for compute and storage
-- [Uppsala Multidisciplinary Center for Advanced Computational Science](https://www.uppmax.uu.se/) (**UPPMAX = UppMACS**) provides HPC infrastructure in Uppsala
+The [National Academic Infrastructure for Supercomputing in Sweden](https://www.naiss.se/) (NAISS) provides such HPC infrastructure: computing power, storage and data services. Applications for these resources starts at
+[this NAISS page](https://www.naiss.se//#application-rounds-for-compute-and-storage-resources). These resources are physically located in multiple places in Sweden,
+among other Uppsala.
+
+![UPPMAX logo](./img/uppmax_logo.png)
+
+[Uppsala Multidisciplinary Center for Advanced Computational Science](https://www.uppmax.uu.se/) (**UPPMAX = UppMACS**) provides the HPC infrastructure 
+that is physically located in Uppsala
 
 ```mermaid
 flowchart TD
