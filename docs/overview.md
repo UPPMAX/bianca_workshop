@@ -264,6 +264,12 @@ A user logs in to a login node via the Internet.
 
     Logging in is part of this course and is described [here](login_bianca.md).
 
+???- tip "Requesting an interactive node"
+
+    Requesting an interactive node is part of this course 
+    and is described [here](login_bianca.md).
+    This is done by requesting an interactive node 
+    from the SLURM scheduler.
 
 ## Questions
 
