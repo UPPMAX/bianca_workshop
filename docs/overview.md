@@ -50,11 +50,22 @@ flowchart TD
 
 Here we place Bianca between the other UPPMAX systems.
 
-- For computing power, the [UPPMAX clusters](https://www.uppmax.uu.se/resources/systems/) are:
-    - Rackham: regular data, general purpose
-    - Snowy: regular data, long runs and GPU:s
-    - **Bianca: for sensitive data, general use**
-    - Miarka: for sensitive data, SciLifeLab-only
+There are three types of UPPMAX systems:
+
+- Computing systems
+- Storage systems
+- Cloud services
+
+### UPPMAX computing systems
+
+Computing systems allow a user to do heavier computational calculations.
+
+[UPPMAX has, among others, the following clusters](https://www.uppmax.uu.se/resources/systems/):
+
+- Rackham: regular data, general purpose
+- Snowy: regular data, long runs and GPU:s
+- **Bianca: for sensitive data, general use**
+- Miarka: for sensitive data, SciLifeLab-only
 
 A technical summary can be found below.
 
@@ -78,9 +89,16 @@ flowchart TD
     is_long --> |yes|Snowy
 ```
 
-- For storage, the [UPPMAX storage systems](https://www.uppmax.uu.se/resources/systems/storage-systems/) are:
-    - On-load, active use: Castor of Bianca, Crex for Rackham
-    - Off-load, archive: Lutra for Rackham
+### UPPMAX storage systems
+
+Storage systems allow a user to storage (big amounts of) data,
+for either active use (i.e. in calculations) or to archive it.
+Storage for active use is also called 'on-load' storage,
+where archieved data is called 'off-load' storage.
+
+The [UPPMAX storage systems](https://www.uppmax.uu.se/resources/systems/storage-systems/) are:
+- On-load: Castor for Bianca, Crex for Rackham
+- Off-load: Lutra for Rackham
 
 ```mermaid
 flowchart TD
@@ -93,11 +111,17 @@ flowchart TD
     UPPMAX-->which_cluster
     which_cluster-->|Rackham|usage_type
     which_cluster-->|Bianca|Castor
-    usage_type-->|active|Crex
-    usage_type-->|archive|Lutra
+    usage_type-->|on-load|Crex
+    usage_type-->|off-load|Lutra
 ```
 
-- For cloud services: use the [UPPMAX cloud](https://www.uppmax.uu.se/resources/systems/the-uppmax-cloud/). It is called 'Dis' (the Swedish word for 'haze') and
+### UPPMAX Cloud services
+
+Cloud services allow a user to have something active (typically a website)
+that can be accessed by the internet.
+
+For this, the [UPPMAX cloud](https://www.uppmax.uu.se/resources/systems/the-uppmax-cloud/)
+has a service called 'Dis' (the Swedish word for 'haze') and is part of
 the `EAST-1` region of the SNIC science cloud. 
 
 ## Bianca is a computer cluster for sensitive data
