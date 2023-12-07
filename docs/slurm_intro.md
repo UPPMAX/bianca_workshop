@@ -127,6 +127,32 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
         - Waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
 - Default value: core
 
+```{admonition} Slurm Cheat Sheet
+
+- ``-A``    project number
+- ``-t``    wall time
+- ``-n``    cumber of cores
+- ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
+- ``-p``    partition
+  - ``core`` is default and works for jobs narrower than 16 cores
+  - ``node`` can be used if you need the whole nmode and its memory
+    - must be used when allocationg the fat nodes, see below
+- ``-C mem256GB`` allocate a fat node with 256 GB RAM
+- ``-C mem512GB`` allocate a fat node with 512 GB RAM
+- ``-C gpu``
+
+**Batch jobs**
+- Two alternatives
+  - ``sbatch <jobscript with all #SBATCH options>``
+  -`` sbatch <options that will be prioritized over the options within the jobs script> <jobscript>``
+     - can for instance be used if you just want to test with, for instance, fewer cores and shorter time
+     - Example: ``sbatch -t  60:00 -p devcore -n 2 job.sh``
+** Interactive
+- interactive -A <
+
+```
+
+
 ## Interactive jobs
 - Most work is most effective as submitted jobs, but e.g. development needs responsiveness
 - Interactive jobs are high-priority but limited in `-n` and `-t`
@@ -338,6 +364,13 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
     This job needs more memory (RAM).
 
 [Discovering job resource usage with `jobstats`](https://www.uppmax.uu.se/support/user-guides/jobstats-user-guide/){:target="_blank"} 
+
+
+```{seealso}
+
+- [Intermediate workshop material on slurm](https://uppmax.github.io/bianca_workshop/extra/slurm/)
+
+```
 
 ## Extra exercise (if time allows)
 
