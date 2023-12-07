@@ -231,3 +231,7 @@ firefox
 IDEs
 VSCode
 Hackathon
+VR
+Vetenskapsrådet
+funder
+
