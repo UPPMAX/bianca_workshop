@@ -55,7 +55,7 @@ Here we place Bianca between the other UPPMAX systems.
     - **Bianca: for sensitive data, general use**
     - Miarka: for sensitive data, SciLifeLab-only
 
-A technical summary can be found at :ref:`subsection-uppmax-clusters-technical-summary`.
+A technical summary can be found at :ref:`section-uppmax-clusters-technical-summary`.
 
 ```mermaid
 flowchart TD
@@ -169,9 +169,9 @@ the `EAST-1` region of the SNIC science cloud.
 
 ## Extra material
 
-.. _subsection-uppmax-clusters-technical-summary:
+.. _section-uppmax-clusters-technical-summary:
 
-### UPPMAX clusters technical summary
+## UPPMAX clusters technical summary
 
 |                        |Rackham        |Snowy                     |Bianca                                      |
 |------------------------|---------------|--------------------------|--------------------------------------------|
