@@ -55,7 +55,7 @@ Here we place Bianca between the other UPPMAX systems.
     - **Bianca: for sensitive data, general use**
     - Miarka: for sensitive data, SciLifeLab-only
 
-A technical summary can be found at :ref:`section-uppmax-clusters-technical-summary`.
+A technical summary can be found below.
 
 ```mermaid
 flowchart TD
@@ -99,25 +99,69 @@ flowchart TD
 - For cloud servies: use the [UPPMAX cloud](https://www.uppmax.uu.se/resources/systems/the-uppmax-cloud/). It is called 'Dis' (the Swedish word for 'haze') and
 the `EAST-1` region of the SNIC science cloud. 
 
-## High Performance Computing — HPC
+## Bianca is a computer cluster
 
-### What is a cluster?
+Bianca is a computer cluster and not a supercomputer.
+A computer cluster is a group of computers that can run
+many calculations, as requested by multiple people, at the same time.
 
-- A network of computers, each computer working as a **node**.
+### Difference between supercomputer and computer cluster
 
-- From small scale RaspberryPi cluster... 
-     
-![RaspBerry](./img/IMG_5111.jpeg){ width="400" }
+![A supercomputer, from https://en.wikipedia.org/wiki/File:IBM_Blue_Gene_P_supercomputer.jpg](IBM_Blue_Gene_P_supercomputer.jpg)
 
-- To supercomputers like Rackham.
+A supercomputer is a machine that is optimized for doing calculations
+quickly. For example, to predict the weather for tomorrow, the calculation
+may not take a week. The image above is a supercomputer.
 
-![Rackham](./img/uppmax-light2.jpg)
+![A computer cluster using a Raspberry Pi ](./img/IMG_5111.jpeg){ width="400" }
 
-- Each node contains several processor cores and RAM and a local disk called scratch.
+![The Rackham computer cluster](./img/uppmax-light2.jpg)
+
+A computer cluster is a machine that is optimized for doing a lot of calculations.
+The images above shows a home-made computer cluster above,
+and Rackham below, another UPPMAX computer cluster.
+
+Bianca is a computer cluster.
+
+### What is a computer cluster?
+
+A computer cluster is a group of computers that can run
+many calculations, as requested by multiple people, at the same time.
+
+Each computer is called a **node**.
+
+There are three types of nodes:
+
+- **login nodes**: nodes where a user enters and interacts with the system
+- **calculation nodes**: nodes that do the calculations
+- **interactive nodes**: a type of calculation node, where a user can do calculations directly
+
+Each node contains several CPU/GPU cores, RAM and local storage space.
+
+A computer cluster typically is used by multiple people.
+To ensure fair use of this shared resource, regular users
+are restricted in some ways:
+- Users cannot run calculations directly. 
+  Instead, users need to request either (1) a calculation to be run,
+  or (2) an interactive node
+- Users cannot install software directly. 
+  Instead, users need to use pre-installed software or learn
+  techniques how to run custom software anyway
+
+A user logs in to a login node via the Internet through:
+
+- [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/)
+  for a remote desktop environment
+- ThinLinc, for a remote desktop environment
+- SSH, for a terminal environment
+
+Note that [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/) uses
+ThinLinc.
+
+
 
 ![Node](./img/node.png)
 
-- The user logs in to **login nodes** via Internet through ssh or ThinLinc.
 
   - Here the file management and lighter data analysis can be performed.
 
@@ -128,7 +172,41 @@ the `EAST-1` region of the SNIC science cloud.
 - The **calculation nodes** have to be used for intense computing. 
 
 
-## Overview of the UPPMAX systems
+## Questions
+
+???+ question "At which organization does one start to request access to any Swedish computer cluster?"
+
+    NAISS
+
+???+ question "Which UPPMAX cluster is best for general purpose regular data?"
+
+    Rackham
+
+## Summary
+
+!!! abstract "keypoints"
+    - NAISS makes available large-scale high-performance computing resources, storage capacity, and advanced user support, for Swedish research. 
+    - UPPMAX runs the local resources placed at Uppsala University
+    - A cluster consists of several inter-connected computers that can work individually or together.
+
+## Extra material
+
+### UPPMAX clusters technical summary
+
+|                        |Rackham        |Snowy                     |Bianca                                      |
+|------------------------|---------------|--------------------------|--------------------------------------------|
+|**Purpose**             |General-purpose|General-purpose           |Sensitive                                   |
+|**# Intel CPU Nodes**   |486+144        |228                       |288                                         |
+|**# GPU Nodes**         |-              |50, Nvidia T4             |10, 2x Nvidia A100 each                     |
+|**Cores per node**      |20/16          |16                        |16/64                                       |
+|**Memory per node**     |128 GB         |128 GB                    |128 GB                                      |
+|**Fat nodes**           |256 GB & 1 TB  |256, 512 GB & 4 TB        |256 & 512 GB                                |
+|**Local disk (scratch)**|2/3 TB         |4 TB                      |4 TB                                        |
+|**Login nodes**         |Yes            |No (reached from Rackham) |Yes (2 cores and 15 GB)                     |
+|**"Home" storage**      |Domus          |Domus                     |Castor                                      |
+|**"Project" Storage**   |Crex, Lutra    |Crex, Lutra               |Castor                                      |
+
+## Detailed overview of the UPPMAX systems
 
 ```mermaid
 
@@ -156,32 +234,3 @@ the `EAST-1` region of the SNIC science cloud.
         Node1 -- sbatch --> Node2
         end
 ```
-
-!!! info "Next session"
-
-    We will try the different forms to log in to Bianca!
-
-
-!!! abstract "keypoints"
-    - NAISS makes available large-scale high-performance computing resources, storage capacity, and advanced user support, for Swedish research. 
-    - UPPMAX runs the local resources placed at Uppsala University
-    - A cluster consists of several inter-connected computers that can work individually or together.
-
-## Extra material
-
-.. _section-uppmax-clusters-technical-summary:
-
-## UPPMAX clusters technical summary
-
-|                        |Rackham        |Snowy                     |Bianca                                      |
-|------------------------|---------------|--------------------------|--------------------------------------------|
-|**Purpose**             |General-purpose|General-purpose           |Sensitive                                   |
-|**# Intel CPU Nodes**   |486+144        |228                       |288                                         |
-|**# GPU Nodes**         |-              |50, Nvidia T4             |10, 2x Nvidia A100 each                     |
-|**Cores per node**      |20/16          |16                        |16/64                                       |
-|**Memory per node**     |128 GB         |128 GB                    |128 GB                                      |
-|**Fat nodes**           |256 GB & 1 TB  |256, 512 GB & 4 TB        |256 & 512 GB                                |
-|**Local disk (scratch)**|2/3 TB         |4 TB                      |4 TB                                        |
-|**Login nodes**         |Yes            |No (reached from Rackham) |Yes (2 cores and 15 GB)                     |
-|**"Home" storage**      |Domus          |Domus                     |Castor                                      |
-|**"Project" Storage**   |Crex, Lutra    |Crex, Lutra               |Castor                                      |
