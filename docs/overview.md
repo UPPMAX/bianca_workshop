@@ -12,7 +12,7 @@ starting from the biggest source of money for research in Sweden.
 ![Vetenskapsrådet logo](./img/vr_logo_128_x_154.png)
 
 [Vetenskapsrådet](https://www.vr.se) ('Science counsel', VR) is biggest funder
-of research in Sweden and funds HPC infrastructure. 
+of research in Sweden and funds the national HPC infrastructure. 
 
 ![NAISS logo](./img/naiss_logo_416_x_68.png)
 
