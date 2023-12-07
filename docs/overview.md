@@ -186,13 +186,13 @@ are restricted in some ways:
   Instead, users need to request either (1) a calculation to be run,
   or (2) an interactive node
 
-!!!- tip "Requesting a calculation to run"
+???- tip "Requesting a calculation to run"
 
     Requesting a calculation to run is part of this course 
     and is described [here](slurm-intro.md).
     This is done by using the SLURM scheduler.
 
-!!!- info "Requesting an interactive node"
+???- tip "Requesting an interactive node"
 
     Requesting an interactive node is part of this course 
     and is described [here](login_bianca.md).
@@ -204,13 +204,13 @@ are restricted in some ways:
   Instead, users need to use pre-installed software or learn
   techniques how to run custom software anyway
 
-!!!- info "Using pre-installed software"
+???- tip "Using pre-installed software"
 
     Using pre-installed software is part of this course 
     and is described [here](modules1.md).
     This is done by using the module system.
 
-!!!- info "How to run custom software"
+???- tip "How to run custom software"
 
     Techniques how to run custom software is *not* part of this course.
     Instead, one technique is part of the intermediate Bianca course 
@@ -231,7 +231,7 @@ due to which there are these additional restrictions to users:
 - Users have no direct access to internet.
   Instead, users can up/download files from/to a special folder.
 
-!!! info "File transfer"
+???- tip "File transfer"
 
     Transferring file is part of this course and is described [here](transfer_basic.md).
     This is done using
@@ -260,9 +260,9 @@ Each node contains several CPU/GPU cores, RAM and local storage space.
 
 A user logs in to a login node via the Internet.
 
-!!! info "Logging in"
+???- tip "Logging in"
 
-    Loggin in is part of this course and is described [here](login_bianca.md).
+    Logging in is part of this course and is described [here](login_bianca.md).
 
 
 ## Questions
