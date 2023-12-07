@@ -8,6 +8,38 @@
     - Log in to the Bianca terminal (using `ssh`)
     - First step in understanding what a login node is 
 
+
+```mermaid
+flowchart TD
+
+    subgraph Outside SUNET
+      outside(Physically outside SUNET)
+    end    
+    subgraph Inside SUNET
+      physically_inside(Physically inside SUNET)
+      inside_using_vpn(Inside SUNET using VPN)
+      inside_using_rackham(Inside SUNET using Rackham)
+    end
+
+    subgraph Bianca environment
+      bianca_console[Bianca console environment]
+      bianca_remote_desktop[Bianca remote desktop] 
+      style bianca_console fill:#000,color:#0f0,stroke:#000
+      style bianca_remote_desktop fill:#bbf,color:#fff,stroke:#00f
+    end
+
+    outside-->|Move physically|physically_inside
+    outside-->|Use a VPN|inside_using_vpn
+    outside-->|Use Rackham|inside_using_rackham
+    physically_inside-->bianca_console
+    physically_inside-->bianca_remote_desktop
+    physically_inside-.->inside_using_rackham
+    inside_using_vpn-->bianca_console
+    inside_using_vpn-->bianca_remote_desktop
+    inside_using_rackham-->bianca_console
+```
+
+
 ## Exercises
 
 !!! info "Solutions" 
