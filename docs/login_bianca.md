@@ -14,6 +14,7 @@ flowchart TD
 
     subgraph sub_outside[Outside SUNET]
       outside(Physically outside SUNET)
+      style outside fill:#fff,color:#000,stroke:#000
     end    
     style sub_outside fill:#f00,color:#fff,stroke:#000
 
@@ -21,12 +22,17 @@ flowchart TD
       physically_inside(Physically inside SUNET)
       inside_using_vpn(Inside SUNET using VPN)
       inside_using_rackham(Inside SUNET using Rackham)
+      style physically_inside fill:#fff,color:#000,stroke:#000
+      style inside_using_vpn fill:#fff,color:#000,stroke:#000
+      style inside_using_rackham fill:#fff,color:#000,stroke:#000
     end
     style sub_inside fill:#ff0,color:#000,stroke:#000
 
     subgraph sub_bianca_env[Bianca environment]
       bianca_console[Bianca console environment]
       bianca_remote_desktop[Bianca remote desktop] 
+      style bianca_console fill:#fff,color:#000,stroke:#000
+      style bianca_remote_desktop fill:#fff,color:#000,stroke:#000
       %% style bianca_console fill:#000,color:#0f0,stroke:#000
       %% style bianca_remote_desktop fill:#bbf,color:#fff,stroke:#00f
     end
