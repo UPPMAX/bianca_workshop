@@ -6,6 +6,9 @@
 
 ## The bigger picture
 
+Here we place UPPMAX within the bigger, national, picture,
+starting from the biggest source of money for research in Sweden.
+
 ![Vetenskapsrådet logo](./img/vr_logo_128_x_154.png)
 
 [Vetenskapsrådet](https://www.vr.se) ('Science counsel', VR) is biggest funder
@@ -44,7 +47,9 @@ flowchart TD
 
 ## UPPMAX systems
 
-- [UPPMAX clusters](https://www.uppmax.uu.se/resources/systems/) are:
+Here we place Bianca between the other UPPMAX systems.
+
+- For computing power, the [UPPMAX clusters](https://www.uppmax.uu.se/resources/systems/) are:
     - Rackham: regular data, general purpose
     - Snowy: regular data, long runs and GPU:s
     - **Bianca: for sensitive data, general use**
@@ -70,7 +75,7 @@ flowchart TD
     is_long --> |yes|Snowy
 ```
 
-- [UPPMAX storage](https://www.uppmax.uu.se/resources/systems/storage-systems/)
+- For storage, the [UPPMAX storage systems](https://www.uppmax.uu.se/resources/systems/storage-systems/) are:
     - On-load, active use: Castor of Bianca, Crex for Rackham
     - Off-load, archive: Lutra for Rackham
 
@@ -89,9 +94,8 @@ flowchart TD
     usage_type-->|archive|Lutra
 ```
 
-- [UPPMAX cloud](https://www.uppmax.uu.se/resources/systems/the-uppmax-cloud/),
-      called 'Dis' (the Swedish word for 'haze'), it is
-      the `EAST-1` region of the SNIC science cloud. 
+- For cloud servies: use the [UPPMAX cloud](https://www.uppmax.uu.se/resources/systems/the-uppmax-cloud/). It is called 'Dis' (the Swedish word for 'haze') and
+the `EAST-1` region of the SNIC science cloud. 
 
 ## High Performance Computing — HPC
 
@@ -121,19 +125,6 @@ flowchart TD
 
 - The **calculation nodes** have to be used for intense computing. 
 
-## Summary about the three "common" UPPMAX clusters
-
-| |Rackham|Snowy|Bianca|
-|-------|-----|------|---|
-|**Purpose**|General-purpose|General-purpose|Sensitive|
-|**#  Nodes (Intel)**|486+144|228+ <br>50 Nvidia T4 GPUs|288 +  <br>10 nodes á 2 <br>NVIDIA A100 GPUs|
-|**Cores per node**|20/16|16|16/64|
-|**Memory per node**|128 GB|128 GB|128 GB
-|**Fat nodes**|256 GB & 1 TB| 256, 512 GB & 4 TB| 256 & 512 GB|
-|**Local disk (scratch)**|2/3 TB| 4 TB| 4 TB |
-|**Login nodes**|Yes| No (reached from Rackham)|Yes (2 cores and 15 GB)|
-|**"Home" storage**|Domus|Domus|Castor|
-|**"Project" Storage**|Crex, Lutra|Crex, Lutra|Castor|
 
 ## Overview of the UPPMAX systems
 
@@ -174,4 +165,19 @@ flowchart TD
     - UPPMAX runs the local resources placed at Uppsala University
     - A cluster consists of several inter-connected computers that can work individually or together.
 
+## Extra material
 
+### UPPMAX clusters technical summary
+
+|                        |Rackham        |Snowy                     |Bianca                                      |
+|------------------------|---------------|--------------------------|--------------------------------------------|
+|**Purpose**             |General-purpose|General-purpose           |Sensitive                                   |
+|**# Intel CPU Nodes**   |486+144        |228                       |288                                         |
+|**# GPU Nodes**         |-              |50, Nvidia T4             |10, 2x Nvidia A100 each                     |
+|**Cores per node**      |20/16          |16                        |16/64                                       |
+|**Memory per node**     |128 GB         |128 GB                    |128 GB                                      |
+|**Fat nodes**           |256 GB & 1 TB  |256, 512 GB & 4 TB        |256 & 512 GB                                |
+|**Local disk (scratch)**|2/3 TB         |4 TB                      |4 TB                                        |
+|**Login nodes**         |Yes            |No (reached from Rackham) |Yes (2 cores and 15 GB)                     |
+|**"Home" storage**      |Domus          |Domus                     |Castor                                      |
+|**"Project" Storage**   |Crex, Lutra    |Crex, Lutra               |Castor                                      |
