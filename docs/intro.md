@@ -1,20 +1,24 @@
 # Introduction to Bianca: Handling Sensitive Research Data
 
-Are you working with your sensitive data in your research? If yes, welcome to a full day introduction to handling sensitive data on the UPPMAX cluster, Bianca. If yes, welcome to a full day introduction to handling sensitive data on the UPPMAX cluster, Bianca. We will tell you about NAISS-SENS, how to login to Bianca, transfer files via wharf, basics on the SLURM workload manager and the module system.
+Are you starting to work with your sensitive data in your research? 
 
-Tentative schedule
+If yes, welcome to a full day introduction to handling sensitive data on the UPPMAX cluster, Bianca!
+
+You will learn about the national infrastructure Bianca is part of, how to login to Bianca, upload and download files, using pre-installed software and how to start your code.
+
+Tentative schedule:
 
     9.00 Introduction
-    9.15 Intro to NAISS-Sens
-    9.35 Login: Thinlinc
+    9.15 NAISS-Sens
+    9.35 Login using Thinlinc
     9.55 coffee break
     10.10 Command line intro specific to Bianca
     10.55 break
     11.10 Module system
-    12.00 LUNCH
-    13.00 Intro to transfering files to and from Bianca
+    12.00 Lunch
+    13.00 Intro to transferring files to and from Bianca
     13.55 break
-    14.10 Compute nodes and slurm
+    14.10 Compute nodes and SLURM
     14.55 Coffee break
     15.10 Summary
     15.15 Q/A
