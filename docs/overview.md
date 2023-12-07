@@ -125,7 +125,37 @@ For this, the [UPPMAX cloud](https://www.uppmax.uu.se/resources/systems/the-uppm
 has a service called 'Dis' (the Swedish word for 'haze') and is part of
 the `EAST-1` region of the SNIC science cloud. 
 
-## Bianca is a computer cluster for sensitive data
+## Bianca
+
+Here we describe what Bianca is, 
+where her name comes from,
+and the ideas behind her design.
+
+### Bianca's name
+
+Bianca, like all clusters at UPPMAX, is named after a Tintin character,
+in this case after Bianca Castafiore.
+
+## 1. Bianca's design
+
+Bianca was designed to, among other:
+
+ * Protect the sensitive data: 
+   (1a) Accidental data leaks should be difficult
+   (1b) Law: if data is leaked, the person doing so should be possibly identified
+ * Emulate a standard HPC cluster environment:
+   (2a) Use the hardware as efficient as possible, 
+   by using a queuing system.
+   See [UPPMAX usage for the current usage of Bianca](https://status.uppmax.uu.se/usage/)
+   (2b) Distributes shared resources (CPU, memory) in a fair way,
+   by using a queuing system
+   (2c)make correct data management as easy as possible
+
+![Bianca](./img/biancaorganisation-01.png)
+
+> The relation between Bianca and the Internet
+
+### Bianca is a computer cluster for sensitive data
 
 Bianca is a computer cluster for sensitive data.
 
@@ -148,7 +178,6 @@ may not take a week. The image above is a supercomputer.
 A computer cluster is a machine that is optimized for doing a lot of calculations.
 The images above shows a home-made computer cluster above,
 and Rackham below, another UPPMAX computer cluster.
-
 Bianca is a computer cluster.
 
 ### Restrictions on a computer cluster
@@ -186,7 +215,7 @@ As these up/downloads are monitored, in case of an accident,
 the extent of the leak and the person (accidentally) causing it
 is known.
 
-### What is a computer cluster?
+## What is a computer cluster?
 
 Each computer is called a **node**.
 
@@ -198,16 +227,8 @@ There are three types of nodes:
 
 Each node contains several CPU/GPU cores, RAM and local storage space.
 
-A user logs in to a login node via the Internet through:
-
-- [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/)
-  for a remote desktop environment, 
-  that works only from within the universities' network (i.e. SUNET)
-- ThinLinc, for a remote desktop environment
-- SSH, for a terminal environment
-
-Note that [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/) uses
-ThinLinc.
+A user logs in to a login node via the Internet.
+Doing is described [here](login_bianca.md).
 
 ## Questions
 

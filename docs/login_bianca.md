@@ -23,25 +23,6 @@
 
 > The voyage from outside the university network to a cluster login node ![Public domain](./img/public_domain_88x31.png)
 
-## 1. Bianca's design
-
-Bianca, like all clusters at UPPMAX, is named after a Tintin character,
-in this case after Bianca Castafiore
-and originally had 3200 CPU cores.
-
-Bianca was designed to, among other:
-
- * Protect the sensitive data: 
-   (1a) Accidental data leaks should be difficult
-   (1b) Law: if data is leaked, the person doing so should be possibly identified
- * Emulate a standard HPC cluster environment:
-   (2a) Use the hardware as efficient as possible, 
-   by using a queuing system.
-   See [UPPMAX usage for the current usage of Bianca](https://status.uppmax.uu.se/usage/)
-   (2b) Distributes shared resources (CPU, memory) in a fair way,
-   by using a queuing system
-   (2c)make correct data management as easy as possible
-
 ![Bianca](./img/biancaorganisation-01.png)
 
 > The relation between Bianca and the Internet
@@ -60,6 +41,17 @@ as is described in the next section.
 
 If you are inside of SUNET, 
 you can skip the next section.
+
+## Login types
+
+- [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/)
+  for a remote desktop environment, 
+  that works only from within the universities' network (i.e. SUNET)
+- ThinLinc, for a remote desktop environment
+- SSH, for a terminal environment
+
+Note that [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/) uses
+ThinLinc.
 
 ## 2. Use a VPN
 
