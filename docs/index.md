@@ -17,16 +17,21 @@ template: home.html
 
 !!! info "Introduction to Bianca: Handling Sensitive Research Data"
     
-    - Are you working with your sensitive data in your research? 
-    - If yes, welcome to a full day introduction to handling sensitive data on the UPPMAX cluster, Bianca. 
-    - We will tell you about 
+    - Are you *starting to* work with your sensitive data in your research? 
+    - If yes, welcome to [a full day introduction to handling sensitive data on the UPPMAX cluster, Bianca](intro.md). 
+
+    - Do you want to *deepen your existing knowledge* to work 
+      with your sensitive data in new, more flexible ways? 
+    - If yes, welcome to [a full day intermediate-level workshop/hackathon to handling sensitive data on the UPPMAX cluster, Bianca](intermediate/intro.md). 
+
+    - You will learn about 
     
-        - NAISS-SENS: Legal and administrative aspects, 
-        - how to login to Bianca, 
-        - some differences from Rackham
-        - transferring files via ``wharf``, 
-        - modules and job schedules system, 
-        - and how to do own installations.
+        - NAISS-SENS, i.e. the legal and administrative aspects
+        - how to login to Bianca
+        - transferring files
+        - the job scheduler system
+        - using pre-installed software
+        - installing your own software
 
 <center>
 <br>
