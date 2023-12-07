@@ -39,7 +39,7 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
         end
 
         thinlinc -- usr-sensXXX + 2FA + VPN ----> SubGraph1Flow
-        terminal -- usr --> Node1
+        terminal/thinlinc -- usr --> Node1
         terminal -- usr-sensXXX + 2FA + VPN ----> SubGraph1Flow
         Node1 -- usr-sensXXX + 2FA + no VPN ----> SubGraph1Flow
         
