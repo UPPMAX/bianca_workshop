@@ -237,5 +237,6 @@ funder
 MPI
 parallelized
 jpg
+png
 wikipedia
 http
