@@ -41,12 +41,6 @@ flowchart TD
     - Snowy: regular data, long runs and GPU:s
     - **Bianca: for sensitive data, general use**
     - Miarka: for sensitive data, SciLifeLab-only
-- [UPPMAX storage](https://www.uppmax.uu.se/resources/systems/storage-systems/)
-    - On-load directly connected to the clusters
-    - Off-load for large data not needed for computation analysis anymore
-- [UPPMAX cloud](https://www.uppmax.uu.se/resources/systems/the-uppmax-cloud/),
-      called 'Dis' (the Swedish word for 'haze'), it is
-      the `EAST-1` region of the SNIC science cloud. 
 
 ```
 flowchart TD
@@ -67,6 +61,29 @@ flowchart TD
     is_long --> |no|Rackham
     is_long --> |yes|Snowy
 ```
+
+- [UPPMAX storage](https://www.uppmax.uu.se/resources/systems/storage-systems/)
+    - On-load, active use: Castor of Bianca, Crex for Rackham
+    - Off-load, archive: Lutra for Rackham
+
+```mermaid
+flowchart TD
+    UPPMAX(Which UPPMAX storage system?)
+    which_cluster{Which UPPMAX cluster?}
+    Castor
+    Lutra
+    usage_type{Type of use?}
+
+    UPPMAX-->which_cluster
+    which_cluster-->|Rackham|usage_type
+    which_cluster-->|Bianca|Castor
+    usage_type-->|active|Crex
+    usage_type-->|archive|Lutra
+```
+
+- [UPPMAX cloud](https://www.uppmax.uu.se/resources/systems/the-uppmax-cloud/),
+      called 'Dis' (the Swedish word for 'haze'), it is
+      the `EAST-1` region of the SNIC science cloud. 
 
 ## High Performance Computing — HPC
 
