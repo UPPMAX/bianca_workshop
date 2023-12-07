@@ -133,35 +133,29 @@ and the ideas behind her design.
 
 ### Bianca's name
 
-Bianca, like all clusters at UPPMAX, is named after a Tintin character,
+Bianca, like all clusters at UPPMAX, 
+is named after a Tintin character,
 in this case after Bianca Castafiore.
 
-## 1. Bianca's design
+[Bianca Castafiore, from https://en.wikipedia.org/wiki/File:Bianca_Castafiore-Tintin_comics_series.png](./img/Bianca_Castafiore-Tintin_comics_series.png)
 
-Bianca was designed to, among other:
+## Bianca's design
 
- * Protect the sensitive data: 
-   (1a) Accidental data leaks should be difficult
-   (1b) Law: if data is leaked, the person doing so should be possibly identified
- * Emulate a standard HPC cluster environment:
-   (2a) Use the hardware as efficient as possible, 
-   by using a queuing system.
-   See [UPPMAX usage for the current usage of Bianca](https://status.uppmax.uu.se/usage/)
-   (2b) Distributes shared resources (CPU, memory) in a fair way,
-   by using a queuing system
-   (2c)make correct data management as easy as possible
+Bianca is an high-performance computing cluster for sensitive data.
 
-![Bianca](./img/biancaorganisation-01.png)
-
-> The relation between Bianca and the Internet
-
-### Bianca is a computer cluster for sensitive data
-
-Bianca is a computer cluster for sensitive data.
-
-Or: Bianca is a group of computers that can run many calculations, 
+Or: Bianca is a group of computers that can effectively run many calculations, 
 as requested by multiple people, at the same time.
 As the data is sensitive, it is protected to remain only on Bianca.
+
+Bianca is designed to
+
+- Protect the sensitive data: 
+    - (1a) Accidental data leaks should be difficult
+    - (1b) Law: if data is leaked, the person doing so should be possibly identified
+- Emulate a standard HPC cluster environment:
+    - (2a) Use the hardware as efficient as possible
+    - (2b) Distributes shared resources (CPU, memory) in a fair way
+    - (2c) make correct data management as easy as possible
 
 ### Difference between supercomputer and computer cluster
 
@@ -195,6 +189,32 @@ are restricted in some ways:
   Instead, users need to use pre-installed software or learn
   techniques how to run custom software anyway
 
+!!!- info "Requesting a calculation to run"
+
+    Requesting a calculation to run is part of this course 
+    and is described [here](slurm-intro.md).
+    This is done by using the SLURM scheduler.
+
+!!!- info "Requesting an interactive node"
+
+    Requesting an interactive node is part of this course 
+    and is described [here](login_bianca.md).
+    This is done by requesting an interactive node 
+    from the SLURM scheduler.
+
+!!!- info "Using pre-installed software"
+
+    Using pre-installed software is part of this course 
+    and is described [here](modules1.md).
+    This is done by using the module system.
+
+!!!- info "How to run custom software"
+
+    Techniques how to run custom software is *not* part of this course.
+    Instead, one technique is part of the intermediate Bianca course 
+    and can be found described [here](extra/containers/),
+    which is about using containers
+
 These restrictions apply to most general-purpose clusters. 
 However, Bianca is a **sensitive data** cluster, to which
 more restrictions apply.
@@ -209,15 +229,23 @@ due to which there are these additional restrictions to users:
 - Users have no direct access to internet.
   Instead, users can up/download files from/to a special folder.
 
+!!! info "File transfer"
+
+    Transferring file is part of this course and is described [here](transfer_basic.md).
+
 The goal is *not* to prevent the up/download of sensitive data,
 instead it is to prevent the *accidental* up/download of sensitive data.
 As these up/downloads are monitored, in case of an accident, 
 the extent of the leak and the person (accidentally) causing it
-is known.
+is known. Identifying a responsible person in case of such an
+accident is required by law.
 
-## What is a computer cluster?
+## What is a computer cluster technically?
 
-Each computer is called a **node**.
+A computer cluster is a machine that consists out of many computers.
+These computers work together.
+
+Each computer of a cluster is called a **node**.
 
 There are three types of nodes:
 
@@ -228,7 +256,11 @@ There are three types of nodes:
 Each node contains several CPU/GPU cores, RAM and local storage space.
 
 A user logs in to a login node via the Internet.
-Doing is described [here](login_bianca.md).
+
+!!! info "Logging in"
+
+    Loggin in is part of this course and is described [here](login_bianca.md).
+
 
 ## Questions
 

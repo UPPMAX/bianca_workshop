@@ -47,7 +47,7 @@ you can skip the next section.
 - [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/)
   for a remote desktop environment, 
   that works only from within the universities' network (i.e. SUNET)
-- ThinLinc, for a remote desktop environment
+- ThinLinc server, a local program for a remote desktop environment
 - SSH, for a terminal environment
 
 Note that [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/) uses
