@@ -4,39 +4,72 @@
     - We'll get an overview of UPPMAX and SNIC/NAISS and how a computer cluster works
 
 
-**UPPMAX = UppMACS**
-- [Uppsala Multidisciplinary Center for Advanced Computational Science](http://uppmax.uu.se)
+## The bigger picture
 
-## NAISS
-- [**National Academic Infrastructure for Supercomputing in Sweden**](https://www.naiss.se/)
-- Mission: to provide a quality high-performance computing environment nationally
+![Vetenskapsrådet logo](vr_logo_128_x_154)
+![NAISS logo](./img/naiss_logo.png)
 
-- Starting 1 January 2023, the National Academic Infrastructure for Supercomputing in Sweden (NAISS) is the new organization for high-performance computing, storage, and data services for academic users in Sweden. 
-- From the users' perspective, there will initially only be minimal differences between the SNIC and NAISS regimes.
-    - FAQ:s — <https://www.naiss.se/>
-- Application rounds: <https://www.naiss.se//#application-rounds-for-compute-and-storage-resources>
-- NAISS and Uppsala University fund UPPMAX — UU's supercomputing center.
+- [Vetenskapsrådet](https://www.vr.se) ('Science counsil', VR) is biggest funder
+  of research in Sweden and funds HPC infrastructure
+- [**National Academic Infrastructure for Supercomputing in Sweden**](https://www.naiss.se/) (NAISS) provides HPC infrastructure: computing power, storage and data services. Apply [here](https://www.naiss.se//#application-rounds-for-compute-and-storage-resources) for compute and storage
+- [Uppsala Multidisciplinary Center for Advanced Computational Science](https://www.uppmax.uu.se/) (**UPPMAX = UppMACS**) provides HPC infrastructure in Uppsala
 
+```mermaid
+flowchart TD
+    HPC_Sweden(HPC in Sweden)
+    HPC_others(HPC in other cities)
+    HPC_Uppsala(HPC in Uppsala)
+    NAISS(NAISS)
+    UPPMAX(UPPMAX)
+    UU(Uppsala University)
+    Users(Users)
+    VR(Vetenskapsrådet)
 
-## UPPMAX missions
-- Runs the clusters placed in Uppsala.
-- More details in the afternoon about Organisational orienteering!
+    VR --> |money| HPC_Sweden
+    HPC_Sweden -->|done by| NAISS
+    NAISS --> |money| HPC_others
+    NAISS --> |money| HPC_Uppsala
+    HPC_Uppsala -->|done by| UPPMAX
+    UU -->|money| HPC_Uppsala
+    Users -->|apply for HPC|NAISS
+```
 
-    
 ## UPPMAX systems
 
-- Clusters
-    - Rackham (general purpose)
-        - Snowy (Long runs and GPU:s)
-    - **Bianca (sensitive data)**
-        - Miarka (new for LifeScience)
-- Storage
+- [UPPMAX clusters](https://www.uppmax.uu.se/resources/systems/) are:
+    - Rackham: regular data, general purpose
+    - Snowy: regular data, long runs and GPU:s
+    - **Bianca: for sensitive data, general use**
+    - Miarka: for sensitive data, SciLifeLab-only
+- [UPPMAX storage](https://www.uppmax.uu.se/resources/systems/storage-systems/)
     - On-load directly connected to the clusters
     - Off-load for large data not needed for computation analysis anymore
-- Cloud
-    - Dis (region EAST-1)
+- [UPPMAX cloud](https://www.uppmax.uu.se/resources/systems/the-uppmax-cloud/),
+      called 'Dis' (the Swedish word for 'haze'), it is
+      the `EAST-1` region of the SNIC science cloud. 
+
+```
+flowchart TD
+    UPPMAX(Which UPPMAX cluster?)
+    Bianca
+    Rackham
+    Miarka
+    Snowy
+    is_sensitive{Do you use sensitive data?}
+    is_scilifelab{Do you work at SciLifeLab?}
+    is_long{Do you use long runs and/or GPUs?}
+
+    UPPMAX --> is_sensitive 
+    is_sensitive --> |yes|is_scilifelab
+    is_scilifelab --> |yes|Miarka
+    is_scilifelab --> |no|Bianca
+    is_sensitive --> |no|is_long
+    is_long --> |no|Rackham
+    is_long --> |yes|Snowy
+```
 
 ## High Performance Computing — HPC
+
 ### What is a cluster?
 
 - A network of computers, each computer working as a **node**.
