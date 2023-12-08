@@ -49,7 +49,7 @@ To use Bianca, there are two environments:
 - A remote desktop environment, also called 'graphical environment', 
   'GUI environment', 'ThinLinc environment'. It looks like the picture above.
 
-![The Bianca console environment](./img/login_bianca_via_terminal_terminal)
+![The Bianca console environment](./img/login_bianca_via_terminal_terminal.png)
 
 - A console environment, also called 'terminal environment' or 'terminal'
   It looks like the picture above.
