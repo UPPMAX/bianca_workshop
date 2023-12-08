@@ -5,6 +5,20 @@
     - See other UPPMAX systems
     - First understanding why Bianca is how she is
 
+???- info "Notes for teachers"
+
+    Teaching goals:
+
+    - The learners demonstrate to have heard about NAISS
+    - The learners demonstrate to have heard about UPPMAX
+    - The learners demonstrate to have a first understanding why Bianca is like she is
+
+    Schedule (15 minutes):
+
+    - 5 minutes: talk about page structure
+    - 5 minutes: exercise: answer the questions at the bottom in a shared document
+    - 5 minutes: discuss answers
+
 ## The bigger picture
 
 Here we place UPPMAX within the bigger, national, picture,
@@ -331,13 +345,14 @@ A user logs in to a login node via the Internet.
 
     This will fail, because Bianca has (close to) no internet access.
 
-???- question "You find out you can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?"
+???- question "Your colleague finds out that one can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?"
 
-    For you, there seems to be no problem. 
+    For that colleague, there seems to be no problem. 
     However, for everyone else this is a problem,
     as the login node is a *shared* node.
 
-    You will be asked to *schedule* your jobs instead. 
+    The colleague will be asked to *schedule* his/her jobs instead.
+    This is usually done by an email from the UPPMAX staff.
 
     Requesting a calculation to run is part of this course 
     and is described [here](slurm-intro.md).

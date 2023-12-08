@@ -253,6 +253,12 @@ using a website:
     the Bianca console environment: [YouTube](https://youtu.be/upBozh2BI5c), 
     [download (.ogv)](https://richelbilderbeek.nl/login_bianca_inside_sunet.ogv)
 
+
+![](./img/login_uppmax_bianca_website_outside_sunet_browser_short.png)
+
+> When accessing the Bianca UPPMAX login website from outside of SUNET,
+> nothing will appear in your browser.
+
 ### Use a locally installed ThinLinc server
 
 This is beyond the scope of this course.
@@ -326,7 +332,9 @@ interactive -A sens2023598 -p core -n 2 -t 8:0:0
 
 ## Exercises
 
-???- question "Your colleague visits [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/) and sees nothing appear. What is likely the problem?"
+![](./img/login_uppmax_bianca_website_outside_sunet_browser_short.png)
+
+???- question "Your colleague visits [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/) and sees nothing appear on the website (see also image above). What is likely the problem?"
 
     He/she is not inside of SUNET. 
     Show him/her the section above on how to get into SUNET.
@@ -354,6 +362,28 @@ interactive -A sens2023598 -p core -n 2 -t 8:0:0
     Do this after having logged in to the Bianca remote desktop,
     as most troubleshooting occurs in that exercise.
 
+???- question "Your colleague finds out that one can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?"
+
+    For that colleague, there seems to be no problem. 
+    However, for everyone else this is a problem,
+    as the login node is a *shared* node.
+
+    The colleague will be asked to *schedule* his/her jobs instead.
+    This is usually done by an email from the UPPMAX staff.
+
+    Requesting a calculation to run is part of this course 
+    and is described [here](slurm-intro.md).
+    This is done by using the SLURM scheduler.
+
+???- question "You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
+
+    This is the typical use-case to use an interactive node.
+    One could also consider to develop code on a local computer 
+    instead (which uses nonsensitive/simulated/fake testing data)
+    and upload the final code instead.
+
+    Requesting an interactive node is part of this course 
+    and is described on this page.
 
 ???- question "Exercise: Start an interactive session"
 
