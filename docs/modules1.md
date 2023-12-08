@@ -15,28 +15,6 @@
 
     - x minutes: [...[
 
-## Exercises
-
-!!! info "Want more complex/realistic exercises?" 
-
-    The goal of this lesson is to work with the module system
-    in a minimal/fast way. 
-    These exercises do not achieve anything useful.
-    See 'Bigger exercises' for more complex/realistic exercises
-
- * 2a. Verify that the tool `cowsay` is not available by default
- * 2b. Search for the module providing `cowsay`
- * 2c. Load a specific version of that module
- * 2d. Verify that the tool `cowsay` now works
- * 2e. Unload that module
- * 2f. Verify that the tool `cowsay` is not available anymore
-
- * 3a. Create an executable script called `cow_says_hello.sh`.
-   It should load a specific version of the `cowsay` module,
-   after which it uses `cowsay` to do something
- * 3b. Find out: if the `cowsay` module is not loaded, after
-   running the script, is it loaded yes/no?
-
 ![Working with a computer cluster module system](./img/627409_working_with_a_computer_cluster_module_system.png)
 
 > Working with a computer cluster module system ![Public domain](./img/public_domain_88x31.png)
@@ -288,8 +266,115 @@ For example, this is a valid bash script:
 module load cowsay/3.03
 cowsay hello
 ```
+
+## Exercises
+
+???- tip "Video with solutions"
+
+    There is a video that shows the solution of all these exercises: 
+    [YouTube](https://youtu.be/lNlq2Eb-qgc), [Download (.ogv)](https://richelbilderbeek.nl/bianca_modules.ogv)
+
+???- question "2a. Verify that the tool `cowsay` is not available by default"
+
+    ```
+    cowsay hello
+    ```
+
+    Gives the error message: `cowsay: command not found`.
+
+???- question "2b. Search for the module providing `cowsay`"
+
+    ```
+    module spider cowsay
+    ```
+
+    You will find the `cowsay/3.03` module.
+
+???- question "2c. Load a specific version of that module"
+
+    ```
+    module load cowsay/3.03
+    ```
+
+???- question "2d. Verify that the tool `cowsay` now works"
+
+    ```
+    cowsay hello
+    ```
+
+???- question "2e. Unload that module"
+
+
+    ```
+    module unload cowsay/3.03
+    ```
+
+???- question "2f. Verify that the tool `cowsay` is not available anymore"
+
+
+    ```
+    cowsay hello
+    ```
+
+    Gives the error message: `cowsay: command not found`.
+
+
+???- question "3a. Create an executable script called `cow_says_hello.sh`. It should load a specific version of the `cowsay` module, after which it uses `cowsay` to do something"
+
+    ```
+    nano cow_says_hello.sh
+    ```
+
+    Copy-paste this example text:
+
+    ```
+    #!/bin/bash
+    module load cowsay/3.03
+    cowsay hello
+    ```
+
+    Run:
+
+    ```
+    ./cow_says_hello.sh
+    ```
+
+???- question "3b. Find out: if the `cowsay` module is not loaded, after running the script, is it loaded yes/no?"
     
-## Bigger exercises
+    Running the script does not load the module beyond running the script.
+
+    ```
+    [richel@sens2023598-bianca ~]$ cowsay hello
+    -bash: cowsay: command not found
+    [richel@sens2023598-bianca ~]$ ./cow_says_hello.sh 
+     ________ 
+    < hello >
+     -------- 
+            \   ^__^
+             \  (oo)\_______
+                (__)\       )\/\
+                    ||----w |
+                    ||     ||
+    [richel@sens2023598-bianca ~]$ cowsay hello
+    -bash: cowsay: command not found
+    ```
+
+???- info "Want more complex/realistic exercises?" 
+
+    The goal of this lesson is to work with the module system
+    in a minimal/fast way. 
+    These exercises do not achieve anything useful.
+    See 'Bigger exercises' for more complex/realistic exercises
+
+## Conclusion
+
+ * Use the module system to use centrally installed software that is available on all nodes
+ * Include versions when loading modules for reproducibility
+ * Your own installed software, scripts, Python packages etc. are available from their paths
+
+## Extra material
+
+### Bigger exercises
 
 !!! warning 
     - To access bioinformatics tools, load the **bioinfo-tools** module first.
@@ -422,98 +507,6 @@ cowsay hello
     If you do not set this variable, your home directory will easily exceed its quotas when creating even a single Conda environment.
     This will be covered in more detail in the afternoon.
 
-
-    
-## Solutions
-
-### 2a. Verify that the tool `cowsay` is not available by default
-
-```
-cowsay hello
-```
-
-Gives the error message: `cowsay: command not found`.
-
-### 2b. Search for the module providing `cowsay`
-
-```
-module spider cowsay
-```
-
-You will find the `cowsay/3.03` module.
-
-### 2c. Load a specific version of that module
-
-```
-module load cowsay/3.03
-```
-
-### 2d. Verify that the tool `cowsay` now works
-
-```
-cowsay hello
-```
-
-### 2e. Unload that module
-
-```
-module unload cowsay/3.03
-```
-
-### 2f. Verify that the tool `cowsay` is not available anymore
-
-```
-cowsay hello
-```
-
-Gives the error message: `cowsay: command not found`.
-
-### 3a. Create an executable script called `cow_says_hello.sh`
-
-```
-nano cow_says_hello.sh
-```
-
-Copy-paste this example text:
-
-```
-#!/bin/bash
-module load cowsay/3.03
-cowsay hello
-```
-
-Run:
-
-```
-./cow_says_hello.sh
-```
-
-### 3b. Find out
-
-Running the script does not load the module beyond running the script.
-
-```
-[richel@sens2023598-bianca ~]$ cowsay hello
--bash: cowsay: command not found
-[richel@sens2023598-bianca ~]$ ./cow_says_hello.sh 
- ________ 
-< hello >
- -------- 
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-[richel@sens2023598-bianca ~]$ cowsay hello
--bash: cowsay: command not found
-```
-
-## Conclusion
-
- * Use the module system to use centrally installed software that is available on all nodes
- * Include versions when loading modules for reproducibility
- * Your own installed software, scripts, Python packages etc. are available from their paths
-
 ## Installed software
 
  * [Almost all installed software](https://www.uppmax.uu.se/resources/software/installed-software/)
@@ -522,12 +515,10 @@ Running the script does not load the module beyond running the script.
 
  * [Almost all installed databases](https://www.uppmax.uu.se/resources/databases/)
 
-## Video
-
- * Solution to the exercises: [YouTube](https://youtu.be/lNlq2Eb-qgc), [Download (.ogv)](https://richelbilderbeek.nl/bianca_modules.ogv)
 ## Links
 
  * [Software at UPPMAX](https://www.uppmax.uu.se/resources/software/)
  * [The UPPMAX module system](https://www.uppmax.uu.se/resources/software/module-system/)
  * [Almost all installed software on UPPMAX](https://www.uppmax.uu.se/resources/software/installed-software/)
  * [Almost all installed databases on UPPMAX](https://www.uppmax.uu.se/resources/databases/)
+
