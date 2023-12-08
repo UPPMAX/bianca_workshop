@@ -24,3 +24,17 @@ Tentative schedule:
     15.15 Q/A
     15.55 Closing words
     16.00 END
+
+!!! Q/A collaboration document
+
+    - Use the Q/A page for the workshop with your questions.
+
+          - [https://hackmd.io/@bclaremar/bianca_dec_2023?both](https://hackmd.io/@bclaremar/bianca_dec_2023?both)
+
+    - Depending on how many helpers there are we’ll see how fast there are answers.
+
+        - Some answers may come after the workshop.
+
+    - Create a new line for new questions. Take care if others are editing at the same time.
+
+    
