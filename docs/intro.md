@@ -25,7 +25,7 @@ Tentative schedule:
     15.55 Closing words
     16.00 END
 
-!!! Q/A collaboration document
+!!! "Q/A collaboration document"
 
     - Use the Q/A page for the workshop with your questions.
 
