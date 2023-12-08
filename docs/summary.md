@@ -3,19 +3,25 @@
 ## Next steps
 
 - Q/A session
-- Pick topics from Extra material or ask more general questions, see below summary
 - Exercises for the interested.
 
 ## Today's topics
 
 - **Overview of UPPMAX systems**
 
+    - NAISS-SENS
     - Several clusters, like 
 
         - Bianca
         - Rackham
 
     - Login and compute nodes
+
+- **Legal and administrative aspects**
+
+    - Sensitive personal data
+    - Pseudonymisation and anonymisation
+    - Apply for project
 
 - **Logging in**
  
@@ -34,36 +40,22 @@
 
 - **Module system and workflows**
 
-
     - modules adds paths to tools
-
 
         - module load ...
         - bioinfo-tools may be required to load you tool
-
 
     - workflows
 
 
 - **Transferring files**
 
-
     - The ``wharf`` works like a dock at the harbour.
     - There are several ways to use the ``wharf`` to transfer files
-
 
       - copy
       - transit server
       - rsync, scp/sftp
-
-
-- **Legal and administrative aspects**
-
-
-    - Sensitive personal data
-    - Pseudonymisation and anonymisation
-    - Apply for project
-
 
 - **Introduction to compute nodes**
 
@@ -77,25 +69,6 @@
 
             - allows you to work interactively with command line and your tools but on a compute node.
 
-    - How compute nodes are moved between project clusters
-
     - Other Slurm tools
 
-- **Software and package installation**
-
-
-    - Install software yourself
-    - Packages and libraries to scripting programs
-
-        - Conda
-        - Python packages with pip
-        - R packages
-        - Julia packages
-
-    - "Containers"
-
-        - Singularity
-        - Docker
-
-    - Build from source
     - Summary about the Bianca Hardware
