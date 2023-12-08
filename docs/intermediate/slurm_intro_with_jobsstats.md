@@ -342,7 +342,7 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
 
 
 
-!!! seealso
+!!! "See also"
 
     - [Intermediate workshop material on slurm](https://uppmax.github.io/bianca_workshop/extra/slurm/)
 
