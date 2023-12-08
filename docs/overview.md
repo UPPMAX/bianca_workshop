@@ -98,6 +98,7 @@ Storage for active use is also called 'on-load' storage,
 where archived data is called 'off-load' storage.
 
 The [UPPMAX storage systems](https://www.uppmax.uu.se/resources/systems/storage-systems/) are:
+
 - On-load: Castor for Bianca, Crex for Rackham
 - Off-load: Lutra for Rackham
 
