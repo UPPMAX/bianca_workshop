@@ -11,7 +11,7 @@ nav:
     - Command-line intro: commandline.md
     - Module system: modules1.md
     - Transferring files to/from Bianca: transfer_basics.md
-    - Introduction to compute nodes: slurm-intro.md
+    - Introduction to compute nodes: slurm_intro.md
     - Summary: summary.md
     - Exercises: exercises.md
   - Intermediate workshop/hackaton: 
