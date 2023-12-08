@@ -15,8 +15,8 @@ There are two types of nodes:
 
 Type        |Purpose
 ------------|--------------------------
-Login node  |Start jobs for worker nodes, do easy things
-Worker node |Do hard calculations, either from scripts of an interactive session
+Login node  |Start jobs for worker nodes, do easy things. You share 2 cores with active users within your project
+Worker nodes |Do hard calculations, either from scripts of an interactive session
 
 Bianca contains hundreds of nodes, each of which is isolated from each other and the Internet.
 
@@ -154,9 +154,12 @@ We recommend using at least two cores for RStudio, and to get those resources, y
     - Start **interactive session** on compute node (2 cores)
     - If you already have an interactive session going on use that.
         - If you don't find it, do
-            squeue
+        
+            ``$ squeue``
+            
         - find your session, ssh to it, like:
-            ssh sens2023598-b9
+        
+            ``$ ssh sens2023598-b9``
 
     - ``$ interactive -A sens2023598 -p core -n 2 -t 60:00`` 
 
@@ -165,6 +168,10 @@ We recommend using at least two cores for RStudio, and to get those resources, y
     - You can check which node you are on?
 
         `$ hostname`
+    
+    - Also try: 
+
+        `$ srun hostname`
   
     - If the name before ``.bianca.uppmax.uu.se`` is ending with bXX you are on a compute node!
     - The login node has ``sens2023598-bianca``
