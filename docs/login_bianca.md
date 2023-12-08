@@ -4,15 +4,13 @@
 
     - Observe that there are two ways to interact with Bianca
     - Observe that there are multiple ways to get inside SUNET
-    - Log in to the Bianca remote desktop (uses ThinLinc)
-    - Log in to the Bianca terminal (using `ssh`)
+    - Log in to the Bianca remote desktop
+    - Log in to the Bianca console environment
     - First step in understanding what a login node is 
 
 ## Overview
 
-![The voyage from outside the university network to a cluster login node](./img/971_the_voyage_from_outside_the_university_network_to_a_cluster_login_node.png)
-
-> The voyage from outside the university network to a cluster login node ![Public domain](./img/public_domain_88x31.png)
+![The voyage from outside the university network to a cluster login node](./img/971_the_voyage_from_outside_the_university_network_to_a_cluster_login_node_256_x_256.png)
 
 Bianca is an HPC cluster for sensitive data.
 
@@ -328,14 +326,39 @@ interactive -A sens2023598 -p core -n 2 -t 8:0:0
 
 ## Exercises
 
-!!! info "Solutions" 
-    See section 'Video' for the videos that show how to do these exercises
+???- question "Your colleague visits [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/) and sees nothing appear. What is likely the problem?"
 
- 1. Discuss: what is the purpose of Bianca? What kind of consequences will this have for its design?
- 2. If outside of SUNET: use a VPN
- 3. Log in to the Bianca remote desktop
- 4. Log in to the Bianca terminal using `ssh`
- 5. Start an interactive session
+    He/she is not inside of SUNET. 
+    Show him/her the section above on how to get into SUNET.
+
+???- question "Exercise: login into the Bianca remote desktop"
+
+    The goal of this exercise is: (1) troubleshooting, to make sure one can access
+    this environment (2) see how it looks like, this may help one decide to
+    use this environment yes of no.
+
+    Note that you have to be within SUNET.
+
+???- question "Exercise: start a terminal in the Bianca remote desktop environment"
+
+    The goal of this exercise is that one makes him/herself slightly
+    familiar within the remote desktop environment. When one knows where
+    it is, this exercise takes literally one mouse click.
+
+???- question "Exercise: login into the Bianca console environment"
+
+    The goal of this exercise is: (1) troubleshooting, to make sure one can access
+    this environment (2) see how it looks like, this may help one decide to
+    use this environment yes of no.
+
+    Do this after having logged in to the Bianca remote desktop,
+    as most troubleshooting occurs in that exercise.
+
+
+???- question "Exercise: Start an interactive session"
+
+    The goal of this exercise is to make sure you know how to start an 
+    interactive session. 
 
 ## Conclusions
 
@@ -350,15 +373,6 @@ interactive -A sens2023598 -p core -n 2 -t 8:0:0
  * [2] In this case, 8 hour long, with 2 cores
 
 ## Extra material
-
-### Video
-
- * Login to Bianca, using a VPN: [YouTube](https://youtu.be/Ni9nyCf7me8), [download (.mp4)](https://richelbilderbeek.nl/login_bianca_vpn.mp4)
-
-### Links
-
- * [The Bianca remote desktop login](https://bianca.uppmax.uu.se)
- * [How get a VPN for UU](https://mp.uu.se/en/web/info/stod/it-telefoni/anvandarguider/network/vpn-service)
 
 ### The relation between Bianca and the Internet
 
