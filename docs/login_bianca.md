@@ -243,11 +243,17 @@ using a website:
 
 > The Bianca remote desktop
 
-???- tip "Video"
+???- tip "Video: using VPN"
 
     This video shows how to use an installed VPN,
     after which the UPPMAX Bianca login website is used to
     access the Bianca remote desktop environment: [YouTube](https://youtu.be/Ni9nyCf7me8), [download (.mp4)](https://richelbilderbeek.nl/login_bianca_vpn.mp4)
+
+???- tip "Video: from within SUNET"
+
+    This video shows how to use a terminal and SSH to access 
+    the Bianca console environment: [YouTube](https://youtu.be/upBozh2BI5c), 
+    [download (.ogv)](https://richelbilderbeek.nl/login_bianca_inside_sunet.ogv)
 
 ### Use a locally installed ThinLinc server
 
@@ -281,6 +287,13 @@ ssh richel-sens2023598@bianca.uppmax.uu.se
     for example `verysecret`
 
  4. Enjoy! You are in!
+
+
+???- tip "Video"
+
+    This video shows how to use a terminal and SSH to access 
+    the Bianca console environment: [YouTube](https://youtu.be/upBozh2BI5c), 
+    [download (.ogv)](https://richelbilderbeek.nl/login_bianca_inside_sunet.ogv)
 
 ## Being on a Bianca login node
 
