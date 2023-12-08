@@ -6,7 +6,7 @@ nav:
   - Bianca intro (beginner): 
     - Introduction: intro.md
     - Overview: overview.md
-    - Intro to NAISS-SENS and sensitive data: naiss-sens_short.md
+    - Intro to NAISS-SENS and sensitive data: naiss_sens_short.md
     - Logging in to Bianca: login_bianca.md
     - Command-line intro: commandline.md
     - Module system: modules1.md
