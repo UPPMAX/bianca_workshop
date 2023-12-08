@@ -73,6 +73,7 @@ flowchart TD
       bianca_terminal[Terminal] 
       style bianca_console fill:#fff,color:#000,stroke:#000
       style bianca_remote_desktop fill:#fff,color:#000,stroke:#000
+      style bianca_terminal fill:#fff,color:#000,stroke:#000
     end
     style sub_bianca_env fill:#0f0,color:#000,stroke:#afa
 
@@ -202,8 +203,7 @@ flowchart TD
       bianca_terminal[Terminal] 
       style bianca_console fill:#fff,color:#000,stroke:#000
       style bianca_remote_desktop fill:#fff,color:#000,stroke:#000
-      %% style bianca_console fill:#000,color:#0f0,stroke:#000
-      %% style bianca_remote_desktop fill:#bbf,color:#fff,stroke:#00f
+      style bianca_terminal fill:#fff,color:#000,stroke:#000
     end
     style sub_bianca_env fill:#0f0,color:#000,stroke:#afa
 
@@ -393,8 +393,7 @@ flowchart TD
       bianca_terminal[Terminal] 
       style bianca_console fill:#fff,color:#000,stroke:#000
       style bianca_remote_desktop fill:#fff,color:#000,stroke:#000
-      %% style bianca_console fill:#000,color:#0f0,stroke:#000
-      %% style bianca_remote_desktop fill:#bbf,color:#fff,stroke:#00f
+      style bianca_terminal fill:#fff,color:#000,stroke:#000
     end
     style sub_bianca_env fill:#0f0,color:#000,stroke:#afa
 
