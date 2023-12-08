@@ -5,40 +5,61 @@
     - Being able to view/create/move/delete files
     - Create an executable bash script
 
-## Exercises
+???- info "Notes for teachers"
 
- * 1a. View the help of the command `cd`
- * 2a. Navigate to the project folder, e.g. `/proj/sens2023598`
- * 2b. Navigate to your home folder
- * 2c. Navigate to the wharf, e.g. `/proj/sens2023598/nobackup/wharf`
- * 3a. Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/proj/sens2023598/workshop/richel`
- * 4a. Create a file, e.g. `richel.txt`
- * 4b. Copy the file (e.g. to `richel_again.txt`). 
- * 4c. Move the copied file (e.g. move it one folder up to `../richel_again.txt`)
- * 4d. Delete the copied file
- * 5a. Create an executable script called `/proj/sens2023598/workshop/[your_login_name]/do_it.sh`,
-   which, upon running, displays a welcome message in text (e.g. `Hello!`)
-   and does something (e.g. show the files in reverse order)
+    Teaching goals:
+
+    - The learners demonstrate they can use a text editor
+    - The learners demonstrate they can create, move and delete files
+    - The learners demonstrate they can create and delete folders
+    - The learners demonstrate they can create an executable script
+
+    Schedule (15 minutes):
+
+    - x minutes: [...[
 
 ![Using the command line on a computer cluster](./img/610803_a_woman_using_the_command_line_on_a_computer_cluster.png)
 
 > Using the command line on a computer cluster ![Public domain](./img/public_domain_88x31.png)
 
-## 1. Help
+## Overview
+
+Bianca is a cluster with the Linux operating system.
+We must use a Linux terminal to work with Bianca,
+therefore we must learn some Linux commands.
+
+We will learn to:
+
+- read the manual
+- navigate through the file system
+- work with directories
+- work with files
+- create an executable script
+
+!!!- tip "Video: using the command-line on the UPPMAX Bianca cluster"
+
+    There exists a video called 'Using the command-line on the UPPMAX Bianca cluster': 
+    [YouTube](https://youtu.be/kjqLAx2bgJI), [download (.ogv)](https://richelbilderbeek.nl/uppmax_bianca_command_line.ogv)
+
+### Read the manual
 
 Use `man` to see the help pages about a command:
 
 ```
-man cd
 man man
+man cd
 man ls
 ```
 
+These command give the help pages about the programs `man`, `cd` and `ls` respectively.
+
 Press CTRL-Z to exit `man`
 
-## 2. Navigation
+### Navigate through the file system
 
-Use `cd` to change directory/folder:
+Like any operating system, Linux has directories (also called 'folders').
+
+Use `cd` to change directory:
 
 Where to                           |Example command
 -----------------------------------|---------------------
@@ -51,26 +72,47 @@ Up one folder                      |`cd ..`
 Into a folder, using relative path |`cd myfolder`
 The previous location              |`cd -`
 
- * Tip: use `ls` to see the content of a folder
- * Tip: use `pwd` to see your current location
+!!! tip "See the content of a folder"
+
+    Use `ls` to see the content of a folder
+
+!!! tip "See the current location"
+
+    Use `pwd` to see your current location
 
 !!! info "The Silence Is Golden Rule"
     When your command 'just works' there is no output
     (try, for example `cd ~`). 
     This is due to [The Silence Is Golden Rule](https://www.linfo.org/rule_of_silence.html)
 
-## 3. Working with folders
+### Work with directories
+
+Linux can create, move and delete folders.
 
 Do what                            |Example command
 -----------------------------------|---------------------
 Create a folder                    |`mkdir myfolder`
+Move a folder                      |`mv from_folder to_folder`
 Delete an empty folder             |`rmdir myfolder`
+Delete a folder                    |`rm -r myfolder`
 
- * Tip: use `ls` to see the content of a folder
- * Tip: use `pwd` to see your current location
- * Tip for sysadmins: use `pwd -P` to see your real current location on the hardware
+!!! tip "See the content of a folder"
 
-## 4. Working with files
+    Use `ls` to see the content of a folder
+
+!!! tip "See the current location"
+
+    Use `pwd` to see your current location
+
+!!!- tip "See the current real location (advanced)"
+
+    For sysadmins: use `pwd -P` to see your real current location on the hardware
+
+### Work with files
+
+Linux can create, view, rename, move and delete files.
+Additionally, there are some text editors that
+allow one to edit files.
 
 Do what                            |Example command
 -----------------------------------|---------------------
@@ -87,12 +129,12 @@ Move a file to the home folder     |`mv myfile.txt ~`
    It is the one recommended to beginners, 
    as its interface is closest to what one expects
 
-## 5. Creating an executable script
+### Create an executable script
 
 Creating an executable script has two steps:
 
- * 1. Create a script
- * 2. Allow the script to execute
+- 1. Create a script
+- 2. Allow the script to execute
 
 As an example, we create a script, called `do_it.sh`:
 
@@ -138,9 +180,133 @@ chmod +x do_it.sh
     `chmod` can create read-only files,
     by removing the writing rights using `chmod -w`.
 
-## 6. Other useful commands
+## Exercises
 
-These are some commands that we enjoy.
+???- tip "Video with solutions"
+
+    There is a video that shows the solution of all these exercises: 
+    [YouTube](https://youtu.be/7_LPeQbcmAo), [download (.ogv)](https://richelbilderbeek.nl/bianca_cli.ogv)
+
+???- question "View the help of the command `cd`"
+
+    Use `man` to view the help of any command, in this case `cd`:
+
+    ```
+    man cd
+    ```
+    This will fail, because Bianca has (close to) no internet access.
+
+???- question "2a. Navigate to the project folder, e.g. `/proj/sens2023598`"
+
+    ```
+    cd /proj/sens2023598
+    ```
+
+    Don't forget the `/` at the start.
+
+???- question "2b. Navigate to your home folder"
+
+    The syntax to move to your home folder is:
+
+    ```
+    cd /home/[username]
+    ```
+
+    where `[username]` is your UPPMAX username, for example:
+
+    ```
+    cd /home/richel
+    ```
+
+    The squiggle/tilde (`~`) is a shorter notation, 
+    that does exactly the same:
+
+    ```
+    cd ~
+    ```
+
+???- question "2c. Navigate to the wharf, e.g. `/proj/sens2023598/nobackup/wharf`"
+
+    ```
+    cd /proj/sens2023598/nobackup/wharf
+    ```
+
+???- question "3a. Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/proj/sens2023598/workshop/richel`"
+
+    ```
+    mkdir /proj/sens2023598/workshop/richel
+    ```
+
+    Or navigate there first:
+
+    ```
+    cd /proj/sens2023598/workshop/
+    mkdir richel
+    ```
+
+
+???- question "4a. Create a file, e.g. `richel.txt`"
+
+    ```
+    touch richel.txt
+    ```
+
+
+???- question " 4b. Copy the file (e.g. to `richel_again.txt`). "
+
+    ```
+    cp richel.txt richel_again.txt
+    ```
+
+???- question "4c. Move the copied file (e.g. move it one folder up to `../richel_again.txt`)"
+
+    ```
+    mv richel_again.txt ../
+    ```
+
+???- question "4d. Delete the copied file"
+
+
+    ```
+    rm ../richel_again.txt
+    ```
+
+    or:
+
+    ```
+    cd ..
+    rm richel_again.txt
+    ```
+
+
+???- question "5a. Create an executable script called `/proj/sens2023598/workshop/[your_login_name]/do_it.sh`, which, upon running, displays a welcome message in text (e.g. `Hello!`) and does something (e.g. show the files in reverse order)"
+
+    Edit the script:
+
+    ```
+    nano do_it.sh
+    ```
+
+    Change the text to:
+
+    ```
+    #!/bin/bash
+    echo "Hello!"
+    ls | rev
+    ```
+
+    Run the script:
+
+    ```
+    ./do_it.sh
+    ```
+
+## Extra material
+
+### Other useful commands
+
+These are some commands that we enjoy,
+but are not part of the learning objectives.
 
 Command name|Purpose
 ------------|---------------------------------------------
@@ -158,16 +324,20 @@ Command name|Purpose
 With `ls /usr/bin | wc --lines` one can see that there are more than 1700
 commands on Bianca.
 
-## 7. The terminal and the GUI are friends
+### The terminal and the GUI are friends
+
+If you are using the Bianca remote desktop environment,
+you can see that its file browser and terminal are friends.
 
 On a clean terminal, try typing `cd` 
-and then dragging a folder from the GUI to the terminal.
+and then drag a folder from the GUI to the terminal.
 
 It types the absolute path for you!
 
-## 8. Commonly used links
+### Commonly used symbolic links
 
-These are some commonly used links:
+These are some commonly used symbolic links, 
+that will simplify navigation:
 
 ```
 cd Desktop
@@ -178,114 +348,3 @@ ln -s /proj/sens2023598/nobackup/wharf/richel/richel-sens2023598 wharf`
 
  * Replace `sens2023598` by your project
  * Replace `richel` by your username
-
-## Solutions
-
-### 1a. View the help of the command `cd`
-
-```
-man cd
-```
-
-### 2a. Go to the project folder, e.g. `/proj/sens2023598`
-
-```
-cd /proj/sens2023598
-```
-
-Don't forget the `/` at the start.
-
-### 2b. Go to your home folder
-
- * Your home folder
-
-```
-cd /home/richel
-```
-
-
-The squiggle/tilde (`~`) is a shorter notation:
-
-```
-cd ~
-```
-
-### 2c. Go to the the wharf, e.g. `/proj/sens2023598/nobackup/wharf`
-
-```
-cd /proj/sens2023598/nobackup/wharf
-```
-
-### 3a. Create a folder `/proj/sens2023598/workshop/[your_login_name]`
-
-```
-mkdir /proj/sens2023598/workshop/richel
-```
-
-Or navigate there first:
-
-```
-cd /proj/sens2023598/workshop/
-mkdir richel
-```
-
-### 4a. Create a file, e.g. `richel.txt`
-
-```
-touch richel.txt
-```
-
-### 4b. Copy the file (e.g. to `richel_again.txt`). 
-
-```
-cp richel.txt richel_again.txt
-```
-
-### 4c. Move the copied file (e.g. move it one folder up to `../richel_again.txt`)
-
-```
-mv richel_again.txt ../
-```
-### 4d. Delete the copied file
-
-```
-rm ../richel_again.txt
-```
-
-or:
-
-```
-cd ..
-rm richel_again.txt
-```
-
-### 5. In that folder, create an executable script called `do_it.sh`.
-
-Edit the script:
-
-```
-nano do_it.sh
-```
-
-Change the text to:
-
-```
-#!/bin/bash
-echo "Hello!"
-ls | rev
-
-```
-
-Run the script:
-
-```
-./do_it.sh
-```
-
-
-## Links
-
- * Video: solution the exercises: [YouTube](https://youtu.be/7_LPeQbcmAo), [download (.ogv)](https://richelbilderbeek.nl/bianca_cli.ogv)
- * Video: 'Using the command-line on the UPPMAX Bianca cluster': [YouTube](https://youtu.be/kjqLAx2bgJI), [download (.ogv)](https://richelbilderbeek.nl/uppmax_bianca_command_line.ogv)
- * [UPPMAX intro course materials on LINUX](https://uppmax.github.io/uppmax_intro/linux.html)
-

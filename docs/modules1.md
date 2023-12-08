@@ -5,6 +5,16 @@
     - Being able to search/load/unload modules
     - Create an executable Bash script that uses a module (without SLURM)
 
+???- info "Notes for teachers"
+
+    Teaching goals:
+
+    - The learners demonstrate [...]
+
+    Schedule (15 minutes):
+
+    - x minutes: [...[
+
 ## Exercises
 
 !!! info "Want more complex/realistic exercises?" 
