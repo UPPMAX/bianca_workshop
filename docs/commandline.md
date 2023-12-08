@@ -18,11 +18,9 @@
 
     - x minutes: [...[
 
-![Using the command line on a computer cluster](./img/610803_a_woman_using_the_command_line_on_a_computer_cluster.png)
-
-> Using the command line on a computer cluster ![Public domain](./img/public_domain_88x31.png)
-
 ## Overview
+
+![Using the command line on a computer cluster](./img/610803_a_woman_using_the_command_line_on_a_computer_cluster_256_x_256.png)
 
 Bianca is a cluster with the Linux operating system.
 We must use a Linux terminal to work with Bianca,
