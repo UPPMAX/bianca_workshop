@@ -142,7 +142,7 @@ in this case after Bianca Castafiore.
 
 ### Bianca's design
 
-Bianca is an high-performance computing cluster for sensitive data.
+Bianca is an high-performance computing (HPC) cluster for sensitive data.
 
 Or: Bianca is a group of computers that can effectively run many calculations, 
 as requested by multiple people, at the same time.
@@ -157,6 +157,16 @@ Bianca is designed to
     - (2a) Use the hardware as efficient as possible
     - (2b) Distributes shared resources (CPU, memory) in a fair way
     - (2c) make correct data management as easy as possible
+
+Bianca runs the Linux operating system and all users need some
+basic Linux knowledge to use her.
+
+???- tip "Using Linux"
+
+    Using Linux (and especially the so-called command-line/terminal) is essential
+    to use Bianca. Learning the essential Linux commands 
+    is part of this course and is described [here](linux.md).
+
 
 ### Difference between supercomputer and (high-performing) computer cluster
 
