@@ -6,7 +6,7 @@ nav:
   - Bianca intro (beginner): 
     - Introduction: intro.md
     - Overview: overview.md
-    - Intro to NAISS-SENS and sensitive data: naiss-sens_short.md
+    - Intro to NAISS-SENS and sensitive data: sens_project_short.md
     - Logging in to Bianca: login_bianca.md
     - Command-line intro: commandline.md
     - Module system: modules1.md
@@ -19,6 +19,7 @@ nav:
     - IDE:s: intermediate/ides.md
     - Transferring files to/from Bianca: extra/transfer.md
     - Software and package installation: intermediate/install.md
+    - Summary: intermediate/summary.md
     - Extra material:
       - extra/slurm.md
       - extra/conda.md

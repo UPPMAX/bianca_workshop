@@ -6,8 +6,7 @@
         - queue system
         - allocation of the compute nodes
         - batch job scripts
-        - interactive session
-        - job efficiency
+        - interactive sessions
 
 ## The compute nodes
 
@@ -16,17 +15,10 @@ There are two types of nodes:
 
 Type        |Purpose
 ------------|--------------------------
-Login node  |Start jobs for worker nodes, do easy things
-Worker node |Do hard calculations, either from scripts of an interactive session
+Login node  |Start jobs for worker nodes, do easy things. You share 2 cores with active users within your project
+Worker nodes |Do hard calculations, either from scripts of an interactive session
 
 Bianca contains hundreds of nodes, each of which is isolated from each other and the Internet.
-
-As Bianca is a shared resources, there are rules to use it together in fair way:
-
- * The login node is only for easy things, such as moving files,
-   starting jobs or starting an interactive session
- * The worker nodes are for harder things, such as
-   running a script or running an interactive session.
 
 ```mermaid
 
@@ -59,16 +51,8 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
 - Problem: _1000 users, 300 nodes, 5000 cores_
 - We need a queue:
 
-  - [Slurm](https://slurm.schedmd.com/) is a job scheduler
+    - [Slurm](https://slurm.schedmd.com/) is a job scheduler
 
-### Choices
-- Work interactively with your data or development
-    - Run an **Interactive session**
-    - ``$ interactive <flags> ...``
-- If you don't need any live interaction with your workflow/analysis/simulation
-    - Send your job to the slurm job batch (sbatch)
-    - `$ sbatch <flags> <program>` or
-    - `$ sbatch <job script>`
 
 ### Jobs
 - Job = what happens during booked time
@@ -134,16 +118,24 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
     - ``-n``    number of cores
     - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
     - ``-p``    partition
-      - ``core`` is default and works for jobs narrower than 16 cores
-      - ``node`` can be used if you need the whole node and its memory
-        - must be used when allocating the fat nodes, see below
+       - ``core`` is default and works for jobs narrower than 16 cores
+       - ``node`` can be used if you need the whole node and its memory
+          - must be used when allocating the fat nodes, see below
     - ``-C mem256GB`` allocate a fat node with 256 GB RAM
     - ``-C mem512GB`` allocate a fat node with 512 GB RAM
     - ``-C gpu --gres=gpu:1`` allocate one GPU (also define number of CPU cores with ``-n 3 `` or similar)
     - ``-C gpu --gres=gpu:2`` allocate two GPU:s (also define number of CPU cores with ``-n 3 `` or similar)
 
+### Choices
+- Work interactively with your data or develop or test
+    - Run an **Interactive session**
+    - ``$ interactive <flags> ...``
+- If you don't need any live interaction with your workflow/analysis/simulation
+    - Send your job to the slurm job batch (sbatch)
+    - `$ sbatch <flags> <program>` or
+    - `$ sbatch <job script>`
 
-## Interactive jobs
+ ## Interactive jobs
 - Most work is most effective as submitted jobs, but e.g. development needs responsiveness
 - Interactive jobs are high-priority but limited in `-n` and `-t`
 - Quickly give you a job and logs you in to the compute node
@@ -156,47 +148,54 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
 
 We recommend using at least two cores for RStudio, and to get those resources, you must should start an interactive job.
 
-!!! note
+!!! example "Type-along"
     Use **ThinLinc**
 
-- Start **interactive session** on compute node (2 cores)
-- If you already have an interactive session going on use that.
-    - If you don't find it, do
-        squeue
-    - find your session, ssh to it, like:
-        ssh sens2023598-b9
+    - Start **interactive session** on compute node (2 cores)
+    - If you already have an interactive session going on use that.
+        - If you don't find it, do
+        
+            ``$ squeue``
+            
+        - find your session, ssh to it, like:
+        
+            ``$ ssh sens2023598-b9``
 
-- ``$ interactive -A sens2023598 -p core -n 2 -t 60:00`` 
+    - ``$ interactive -A sens2023598 -p core -n 2 -t 60:00`` 
 
 
-- Once the interactive job has begun you need to load needed modules, even if you had loaded them before in the login node
-- You can check which node you are on?
+    - Once the interactive job has begun you need to load needed modules, even if you had loaded them before in the login node
+    - You can check which node you are on?
 
-    `$ hostname`
+        `$ hostname`
+    
+    - Also try: 
+
+        `$ srun hostname`
   
-- If the name before ``.bianca.uppmax.uu.se`` is ending with bXX you are on a compute node!
-- The login node has ``sens2023598-bianca``
-- You can also probably see this information in your prompt, like:
-    ``[bjornc@sens2023598-b9 ~]$`` 
+    - If the name before ``.bianca.uppmax.uu.se`` is ending with bXX you are on a compute node!
+    - The login node has ``sens2023598-bianca``
+    - You can also probably see this information in your prompt, like:
+        ``[bjornc@sens2023598-b9 ~]$`` 
   
-- Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there. 
+    - Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there. 
 
-    `$ ml R_packages/4.2.1`
+        `$ ml R_packages/4.2.1`
   
-    `$ ml RStudio/2022.07.1-554`
+        `$ ml RStudio/2022.07.1-554`
 
 
-- **Start rstudio**, keeping terminal active (`&`)
+    - **Start rstudio**, keeping terminal active (`&`)
 
-  `$ rstudio &`
+      `$ rstudio &`
 
-- Slow to start?
-- Depends on:
-    - number of packages 
-    - if you save a lot of data in your RStudio workspace, to be read during start up.
+    - Slow to start?
+    - Depends on:
+        - number of packages 
+        - if you save a lot of data in your RStudio workspace, to be read during start up.
 
-- **Quit RStudio**!
-- **Log out** from interactive session with `<Ctrl>-D` or `logout`
+    - **Quit RStudio**!
+    - **Log out** from interactive session with `<Ctrl>-D` or `logout` or `exit`
  
  
 ## Job scripts (batch)

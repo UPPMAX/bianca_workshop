@@ -53,6 +53,7 @@
     - The ``wharf`` works like a dock at the harbour.
     - There are several ways to use the ``wharf`` to transfer files
 
+
       - copy
       - transit server
       - rsync, scp/sftp
@@ -69,6 +70,25 @@
 
             - allows you to work interactively with command line and your tools but on a compute node.
 
+    - How compute nodes are moved between project clusters
+
     - Other Slurm tools
 
+- **Software and package installation**
+
+
+    - Install software yourself
+    - Packages and libraries to scripting programs
+
+        - Conda
+        - Python packages with pip
+        - R packages
+        - Julia packages
+
+    - "Containers"
+
+        - Singularity
+        - Docker
+
+    - Build from source
     - Summary about the Bianca Hardware
