@@ -15,11 +15,9 @@
 
     - x minutes: [...[
 
-![Working with a computer cluster module system](./img/627409_working_with_a_computer_cluster_module_system.png)
-
-> Working with a computer cluster module system ![Public domain](./img/public_domain_88x31.png)
-
 ## 1. Background
+
+![Working with a computer cluster module system](./img/627409_working_with_a_computer_cluster_module_system_256_x_256)
 
 Bianca is shared Linux computer with all the standard Linux/GNU tools installed,
 on which all users should be able to 
