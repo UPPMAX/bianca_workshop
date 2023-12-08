@@ -315,29 +315,84 @@ ssh richel-sens2023598@bianca.uppmax.uu.se
     the Bianca console environment: [YouTube](https://youtu.be/upBozh2BI5c), 
     [download (.ogv)](https://richelbilderbeek.nl/login_bianca_inside_sunet.ogv)
 
-## Being on a Bianca login node
+## Going from login to an interactive node
 
-When you are logged in, you are on a login node.
-There are two types of nodes:
+Bianca has three types of nodes:
 
-Type        |Purpose
-------------|--------------------------
-Login node  |Start jobs for worker nodes, do easy things
-Worker node |Do hard calculations, either from scripts of an interactive session
+???- tip "What are nodes?"
 
-Bianca contains hundreds of nodes, each of which is isolated from each other and the Internet.
+    What nodes are, is described in general terms [here](overview.md).
 
-As Bianca is a shared resources, there are rules to use it together in fair way:
+- **login nodes**: nodes where a user enters and interacts with the system
+- **calculation nodes**: nodes that do the calculations
 
- * The login node is only for easy things, such as moving files,
-   starting jobs or starting an interactive session
- * The worker nodes are for harder things, such as
-   running a script or running an interactive session.
+???- tip "Requesting a calculation to run"
 
-To start an interactive session [2], type:
+    Requesting a calculation to run is part of this course 
+    and is described [here](slurm-intro.md).
+    This is done by using the SLURM scheduler.
+
+- **interactive nodes**: a type of calculation node, 
+  where a user can do calculations directly
+
+As a Bianca login is shared with all users, 
+there is a simple rule to use it fairly:
+
+> Only do short and light things on the login node
+
+Examples of short and light things are:
+
+- Editing files
+- Copying, deleting, moving files
+- Scheduling jobs
+- Starting an interactive session
+
+Examples of heavy things are:
+
+- Running code with big calculations
+- Develop code with big calculations line-by-line 
+
+???- tip "Develop code with big calculations line-by-line "
+
+    This usage is typically done an interactive node
+
+### Usecase for using an interactive node
+
+Some users develop computer code on Bianca
+in a line-by-line fashion. 
+These users typically want to run a (calculation-heavy) 
+script frequently, to test
+if the code works.
+
+However, scheduling each new line is too slow, as it
+can take minutes before the new code is run.
+Instead, there is a way to directly work 
+with such code: use an interactive node.
+
+An interactive node is a type of calculation node,
+where one can run heavy calculations directly.
+
+
+```mermaid
+flowchart TD
+    UPPMAX(What to run on which node?)
+    operation_type{What type of operation/calculation?}
+    interaction_type{What type of interaction?}
+    login_node(Work on login node)
+    interactive_node(Work on interactive node)
+    calculation_node(Schedule for calculation node)
+
+    UPPMAX-->operation_type
+    operation_type-->|light,short|login_node
+    operation_type-->|heavy,long|interaction_type
+    interaction_type-->|Direct|interactive_node
+    interaction_type-->|Indirect|calculation_node
+```
+
+To use an interactive node, in a terminal, type:
 
 ```bash
-interactive -A [project name] -p core -n 2 -t 8:0:0
+interactive -A [project name] -p core -n [number_of_cores] -t [session_duration]
 ```
 
 For example:
@@ -345,6 +400,9 @@ For example:
 ```bash
 interactive -A sens2023598 -p core -n 2 -t 8:0:0
 ```
+
+This starts an interactive session using project `sens2023598` 
+that uses 2 cores and has a maximum duration of 8 hours.
 
 ## Exercises
 
@@ -406,6 +464,17 @@ interactive -A sens2023598 -p core -n 2 -t 8:0:0
     The goal of this exercise is to make sure you know how to start an 
     interactive session. 
 
+???- question "Why not always use an interactive session?"
+
+    Because it is an inefficient use of your core hours.
+
+    An interactive session means that you use a calculation node with low
+    efficiency: only irregularly you will use such a node to its full
+    capacity. 
+    However, the number of core hours are registered as if the node is used
+    at full capacity, as it is *reserved* to be used at that capacity.
+
+
 ## Conclusions
 
  * Bianca makes it hard to leak data
@@ -416,7 +485,6 @@ interactive -A sens2023598 -p core -n 2 -t 8:0:0
 
  * [1] 'no internet' meaning 'no direct way to download or upload data from/to
    the internet
- * [2] In this case, 8 hour long, with 2 cores
 
 ## Extra material
 
