@@ -329,7 +329,7 @@ Bianca has three types of nodes:
 ???- tip "Requesting a calculation to run"
 
     Requesting a calculation to run is part of this course 
-    and is described [here](slurm-intro.md).
+    and is described [here](slurm_intro.md).
     This is done by using the SLURM scheduler.
 
 - **interactive nodes**: a type of calculation node, 
@@ -446,7 +446,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
     This is usually done by an email from the UPPMAX staff.
 
     Requesting a calculation to run is part of this course 
-    and is described [here](slurm-intro.md).
+    and is described [here](slurm_intro.md).
     This is done by using the SLURM scheduler.
 
 ???- question "You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
