@@ -38,7 +38,9 @@ template: home.html
     
 <br/><br/>
 
-[Get started using Bianca](practicalities.md){ .md-button .md-button--primary }
+[Practicalities](practicalities.md){ .md-button .md-button--primary }
+[Bianca intro ](intro.md){ .md-button .md-button--primary }
+[Intermediate workshop](intermediate/intro.md){ .md-button .md-button--primary }
 
 <br/><br/>
 
