@@ -8,6 +8,22 @@
     - Log in to the Bianca console environment
     - First step in understanding what a login node is 
 
+???- info "Notes for teachers"
+
+    Teaching goals:
+
+    - The learners demonstrate to have logged in to the Bianca remote desktop environment 
+      using the UPPMAX Bianca login website
+    - The learners demonstrate to have started a terminal in the Bianca remote desktop environment
+    - The learners demonstrate to have logged in to the Bianca console environment 
+    - The learners demonstrate to have started an interactive node
+
+    Schedule (20 minutes):
+
+    - 5 minutes: talk about page structure
+    - 10 minutes: exercise: answer the questions at the bottom in a shared document
+    - 5 minutes: discuss answers
+
 ## Overview
 
 ![The voyage from outside the university network to a cluster login node](./img/971_the_voyage_from_outside_the_university_network_to_a_cluster_login_node_256_x_256.png)
