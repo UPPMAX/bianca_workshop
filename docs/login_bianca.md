@@ -145,6 +145,12 @@ To be able to use a VPN to get inside of SUNET:
  * For Uppsala University: [go to this page](https://mp.uu.se/en/web/info/stod/it-telefoni/anvandarguider/network/vpn-service)
  * For other Swedish universities, search their websites to get a VPN setup
 
+???- tip "Video"
+
+    This video shows how to use an installed VPN,
+    after which the UPPMAX Bianca login website is used to
+    access the Bianca remote desktop environment: [YouTube](https://youtu.be/Ni9nyCf7me8), [download (.mp4)](https://richelbilderbeek.nl/login_bianca_vpn.mp4)
+
 ### Use an HPC cluster within SUNET
 
 One must be inside SUNET to access Bianca directly.
@@ -237,13 +243,20 @@ using a website:
 
 > The Bianca remote desktop
 
+???- tip "Video"
+
+    This video shows how to use an installed VPN,
+    after which the UPPMAX Bianca login website is used to
+    access the Bianca remote desktop environment: [YouTube](https://youtu.be/Ni9nyCf7me8), [download (.mp4)](https://richelbilderbeek.nl/login_bianca_vpn.mp4)
+
 ### Use a locally installed ThinLinc server
 
+This is beyond the scope of this course.
 
 ### Use SSH
 
 When inside SUNET, one can access a console environment
-using SSH.
+using a terminal and the Secure Shell Protocol (SSH).
 
 You can use your favorite terminal to login (see <https://uppmax.github.io/uppmax_intro/login2.html#terminals> for an overview of many)
 to the Bianca command-line environment.
@@ -289,7 +302,6 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
    running a script or running an interactive session.
 
 To start an interactive session [2], type:
-
 
 ```bash
 interactive -A [project name] -p core -n 2 -t 8:0:0
@@ -341,7 +353,7 @@ interactive -A sens2023598 -p core -n 2 -t 8:0:0
 
 > The relation between Bianca and the Internet
 
-### The ways to login to Bianca
+### The ways to access Bianca's environments
 
 ```mermaid
 flowchart TD
