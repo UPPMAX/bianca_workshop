@@ -356,7 +356,7 @@ Examples of heavy things are:
 
     This usage is typically done an interactive node
 
-### Usecase for using an interactive node
+### Use-case for using an interactive node
 
 Some users develop computer code on Bianca
 in a line-by-line fashion. 
