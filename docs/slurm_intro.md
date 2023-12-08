@@ -304,12 +304,12 @@ echo Hello world!
 - Memory bound
     - if the bottlenecks are allocating memory, copying/duplicating
 
-!!! seealso
+!!! "See also"
 
     - [Intermediate workshop material on slurm](https://uppmax.github.io/bianca_workshop/extra/slurm/)
 
 
-!!! Slurm Cheat Sheet
+!!! "Slurm Cheat Sheet"
 
     - ``-A``    project number
     - ``-t``    wall time
@@ -333,7 +333,13 @@ echo Hello world!
     - ``interactive -A <project> <other options if not using default settings>`` 
     - load your modules when session starts
 
+!!! Quiz
 
+   - Q1
+   - Q2
+   - Q3
+
+   ??? Answers
 
 
 ## Extra exercise (if time allows)
