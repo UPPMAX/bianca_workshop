@@ -196,8 +196,24 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
     - Send your job to the slurm job batch (sbatch)
     - `$ sbatch <flags> <program>` or
     - `$ sbatch <job script>`
+ 
+```mermaid
+flowchart TD
+    UPPMAX(What to run on which node?)
+    operation_type{What type of operation/calculation?}
+    interaction_type{What type of interaction?}
+    login_node(Work on login node)
+    interactive_node(Work on interactive node)
+    calculation_node(Schedule for calculation node)
 
-### What kind of work are you doing?
+    UPPMAX-->operation_type
+    operation_type-->|light,short|login_node
+    operation_type-->|heavy,long|interaction_type
+    interaction_type-->|Direct|interactive_node
+    interaction_type-->|Indirect|calculation_node
+```
+
+### What kind of compute work are you doing?
 - Compute bound
     - you use mainly CPU power
     - does the software support threads or MPI?
@@ -220,14 +236,9 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
             - Please note that all GPU nodes have 256 GB of RAM, and are thus "fat" as well. All compute nodes in Bianca has 16 CPU cores in total.
     - Please note that there are only 5 nodes with 256 GB of RAM, 2 nodes with 512 GB of RAM and 4 nodes with 2xA100 GPUs. The wait times for these node types are expected to be somewhat longer.
    
-!!! note "Some Limits"
-
-    - There is a job wall time limit of ten days (**240 hours**).
-    - We restrict each user to at most 5000 running and waiting jobs in total.
-    - Each project has a 30 days running allocation of CPU hours. We do not forbid running jobs after the allocation is over-drafted, but instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
 
 
-!!!admonition "Slurm Cheat Sheet"
+!!! admonition "Slurm Cheat Sheet"
 
     - ``-A``    project number
     - ``-t``    wall time
@@ -250,6 +261,21 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
 - Log in to compute node
     -  `$ interactive ...`
 - Logout with `<Ctrl>-D` or `logout`
+
+- To use an interactive node, in a terminal, type:
+
+```bash
+interactive -A [project name] -p core -n [number_of_cores] -t [session_duration]
+```
+
+For example:
+
+```bash
+interactive -A sens2023598 -p core -n 2 -t 8:0:0
+```
+
+This starts an interactive session using project `sens2023598` 
+that uses 2 cores and has a maximum duration of 8 hours.
 
 ### Try interactive and run RStudio
 
@@ -350,6 +376,21 @@ echo Hello world!
     ``$ sbatch jobscript.sh``
 
   
+!!! tip "Do you need more resources?"
+
+    Do you need more memory than 128 GB or GPU:s
+    - ``-C mem256GB`` allocate a fat node with 256 GB RAM
+    - ``-C mem512GB`` allocate a fat node with 512 GB RAM
+    - ``-C gpu``
+    - ``-p node`` must be used when allocating these nodes
+
+!!! note "Some Limits"
+
+    - There is a job wall time limit of ten days (**240 hours**).
+    - We restrict each user to at most 5000 running and waiting jobs in total.
+    - Each project has a 30 days running allocation of CPU hours. We do not forbid running jobs after the allocation is over-drafted, but instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
+
+
 ## Other Slurm tools
 
 - `squeue` — quick info about jobs in queue
@@ -406,7 +447,23 @@ echo Hello world!
          C: batch
          D: interactive
          E. interactive
-        
+
+???- question "Exercise: Start an interactive session"
+
+    The goal of this exercise is to make sure you know how to start an 
+    interactive session. 
+
+???- question "Why not always use an interactive session?"
+
+    Because it is an inefficient use of your core hours.
+
+    An interactive session means that you use a calculation node with low
+    efficiency: only irregularly you will use such a node to its full
+    capacity. 
+    However, the number of core hours are registered as if the node is used
+    at full capacity, as it is *reserved* to be used at that capacity.
+
+
 
 ## Extra exercise (if time allows)
 
