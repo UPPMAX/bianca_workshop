@@ -330,13 +330,14 @@ We recommend using at least two cores for RStudio, and to get those resources, y
     - It is good practice to end the line with ``-l`` to reload a fresh environment with no modules loaded.
     - This makes you sure that you don't enable other software or versions that may interfere with what you want to do in the job. 
 - Before the job content, add the batch flags starting the lines with the keyword `#SBATCH`, like:
-    - #SBATCH -t 2:00:00
-    - #SBATCH -p devcore
-    - #SBATCH -n 3
+    - ``#SBATCH -t 2:00:00``
+    - ``#SBATCH -p core``
+    - ``#SBATCH -n 3``
 - `#` will be ignored by `bash` and can run as an ordinary bash script
 - if running the script with the command `sbatch <script>` the `#SBATCH` lines will be interpreted as slurm flags
 
 
+### Try batch job
 
 !!! example "Type-along"
 
@@ -399,7 +400,8 @@ echo Hello world!
     - There is a job wall time limit of ten days (**240 hours**).
     - We restrict each user to at most 5000 running and waiting jobs in total.
     - Each project has a 30 days running allocation of CPU hours. 
-        - We do not forbid running jobs after the allocation is over-drafted, but instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
+        - We do not forbid running jobs after the allocation is over-drafted
+        - Instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
 
 
 ## Other Slurm tools
