@@ -448,13 +448,13 @@ echo Hello world!
 
 ## Exercises
 
-??? question "You are developing code on Bianca. 
+???+ question "You are developing code on Bianca."
 
     - You write the code line-by-line and schedule a test run after each addition. 
     - However, after each new line, it takes a couple of minutes before you know your code worked yes/no. 
     - How could you develop your code quicker?"
 
-    ??? Answers
+    ??? tip "Answer"
     
         - This is the typical use-case to use an interactive node.
         - One could also consider to develop code on a local computer instead (which uses nonsensitive/simulated/fake testing data) and upload the final code instead.
@@ -466,13 +466,11 @@ echo Hello world!
 
 ???- question "Why not always use an interactive session?"
 
-    Because it is an inefficient use of your core hours.
+     - Because it is an inefficient use of your core hours.
 
-    An interactive session means that you use a calculation node with low
-    efficiency: only irregularly you will use such a node to its full
+     - An interactive session means that you use a calculation node with low efficiency: only irregularly you will use such a node to its full
     capacity. 
-    However, the number of core hours are registered as if the node is used
-    at full capacity, as it is *reserved* to be used at that capacity.
+     - However, the number of core hours are registered as if the node is used at full capacity, as it is *reserved* to be used at that capacity.
 
 ???+ question "Which approach is best in the following use cases? Batch jobs or interactive sessions?"
 
@@ -482,7 +480,7 @@ echo Hello world!
     1.  Test/debugging/developing code
     1.  Playing with and plotting large data
 
-    ??? Answers
+    ??? tip "Answer"
 
         1.  batch
         1.  interactice
