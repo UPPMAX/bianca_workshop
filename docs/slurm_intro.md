@@ -24,7 +24,7 @@
     - 10 minutes: exercise+ quiz
     - 5 minutes: discuss answers
     
- ## The compute nodes
+## The compute nodes
 
 When you are logged in, you are on a login node.
 There are two types of nodes:
@@ -127,7 +127,7 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
         - Waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
 - Default value: core
   
-!!! Slurm Cheat Sheet
+!!!admonition "Slurm Cheat Sheet"
 
     - ``-A``    project number
     - ``-t``    wall time
@@ -319,12 +319,12 @@ echo Hello world!
 - Memory bound
     - if the bottlenecks are allocating memory, copying/duplicating
 
-!!! "See also"
+!!! admonition "See also"
 
     - [Intermediate workshop material on slurm](https://uppmax.github.io/bianca_workshop/extra/slurm/)
 
 
-!!! "Slurm Cheat Sheet"
+!!! admonition "Slurm Cheat Sheet"
 
     - ``-A``    project number
     - ``-t``    wall time
