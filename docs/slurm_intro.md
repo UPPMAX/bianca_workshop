@@ -31,7 +31,7 @@ There are two types of nodes:
 
 Type        |Purpose
 ------------|--------------------------
-Login node  |Start jobs for worker nodes, do easy things. You share 2 cores with active users within your project
+Login node  |Start jobs for worker nodes, do easy things. You share 2 cores and 15 GB RAM with active users within your project
 Compute nodes |Do hard calculations, either from scripts of an interactive session
 
 Bianca contains hundreds of nodes, each of which is isolated from each other and the Internet.
@@ -65,26 +65,25 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
 
 !!! info "Bianca standard nodes"
 
-    **A node:** 128 GB RAM and a 4TB local disk aka "SCRATCH".
-    **Cores per node:** 16
-    **Memory per core: ** 7.5 GB available for you
+    - **A node:** 128 GB RAM and a 4TB local disk aka "SCRATCH".
+    - **Cores per node:** 16
+    - **Memory per core:** 7 GB available for you
 
 
 ??? "Summary about the Bianca Hardware"
 
-    - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes with 128, 256 or 512 GB memory
-    - GPU nodes with two NVIDIA A100 40GB GPUs each.
-
+    - Login nodes (as seen by a user) have virtual 2vCPUs each and 15GB memory
+    - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes
+    
     **Details about the compute nodes**
-
+    - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes
     - Thin nodes
         - 194 compute nodes with 16 cores and a 4TB mechanical drive or 1TB SSD as SCRATCH.
     - Fat nodes
         - 74 compute nodes, 256 GB memory
         - 14 compute nodes, 512 GB memory
-        - 10 compute nodes, 256 GB memory each and equipped with 2xNVIDIA A100 (40GB) GPUs
+        - 10 compute nodes, 256 GB memory each and equipped with 2xNVIDIA A100 (40GB) **GPUs**
     - Total number of CPU cores is about 5000
-    - Login nodes have 2vCPU each and 15GB memory
     - Network
         - Dual 10 Gigabit Ethernet for all nodes
 
@@ -121,7 +120,7 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
     - A program may run _serially_ and then needs only ONE _compute thread_, which will occupy 1 core, which is a physical unit of the CPU on the node.
        - You should most often just book 1 node. If you require more than 7 GB you can allocate more cores and you will get multiples of 7 GB.
     - A program may run in _parallel_ and then needs either several _threads_ or several _tasks_, both occupying several cores. 
-       - If you need all 128 GB RAM or all 16 cores for your job, book a complete node.
+       - If you need all 128 GB RAM (actually 112) or all 16 cores for your job, book a complete node.
 
       
 ### Slurm parameters
@@ -294,7 +293,7 @@ We recommend using at least two cores for RStudio, and to get those resources, y
         
             ``$ ssh sens2023598-b9``
 
-    - ``$ interactive -A sens2023598 -p core -n 2 -t 60:00`` 
+    - ``$ interactive -A sens2023598 -p devcore -n 2 -t 60:00`` 
 
 
     - Once the interactive job has begun you need to load needed modules, even if you had loaded them before in the login node
@@ -305,7 +304,10 @@ We recommend using at least two cores for RStudio, and to get those resources, y
     - Also try: 
 
         `$ srun hostname`
-  
+
+        - This will give several output lines resembling the number of cores you allocated.
+        - How many in this case??
+        
     - If the name before ``.bianca.uppmax.uu.se`` is ending with bXX you are on a compute node!
     - The login node has ``sens2023598-bianca``
     - You can also probably see this information in your prompt, like:
