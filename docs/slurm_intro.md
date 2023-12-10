@@ -430,24 +430,32 @@ echo Hello world!
     - ``interactive -A <project> <other options if not using default settings>`` 
     - load your modules when session starts
 
-!!! Quiz
+???- question "Which approach is best in the following use cases? Batch jobs or interactive sessions?"
 
-    - Q1: Which approach is best in the following use cases? Batch jobs or interactive sessions?
-
-         A. Long jobs
-         B. Short jobs with interactive "run-time"/interactive user input
-         C. Short jobs without interactive "run-time"/interactive user input
-         D. Test/debugging/developing code
-         E. Playing with and plotting large data
+         A.  Long jobs
+         B.  Short jobs with interactive "run-time"/interactive user input
+         C.  Short jobs without interactive "run-time"/interactive user input
+         D.  Test/debugging/developing code
+         E.  Playing with and plotting large data
 
     ???- Answers
 
-         A. batch
-         B. interactice
-         C: batch
-         D: interactive
-         E. interactive
+         A.  batch
+         B.  interactice
+         C:  batch
+         D:  interactive
+         E.  interactive
 
+???- question "You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
+
+    This is the typical use-case to use an interactive node.
+    One could also consider to develop code on a local computer 
+    instead (which uses nonsensitive/simulated/fake testing data)
+    and upload the final code instead.
+
+    Requesting an interactive node is part of this course 
+    and is described on this page.
+    
 ???- question "Exercise: Start an interactive session"
 
     The goal of this exercise is to make sure you know how to start an 
@@ -463,7 +471,21 @@ echo Hello world!
     However, the number of core hours are registered as if the node is used
     at full capacity, as it is *reserved* to be used at that capacity.
 
+??? question "Which approach is best in the following use cases? Batch jobs or interactive sessions?"
 
+         A.  Long jobs
+         B.  Short jobs with interactive "run-time"/interactive user input
+         C.  Short jobs without interactive "run-time"/interactive user input
+         D.  Test/debugging/developing code
+         E.  Playing with and plotting large data
+
+    ??? Answers
+
+         A.  batch
+         B.  interactice
+         C:  batch
+         D:  interactive
+         E.  interactive
 
 ## Extra exercise (if time allows)
 
