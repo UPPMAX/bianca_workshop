@@ -144,7 +144,7 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
 
 - How does the queue work?
 
-- Let's look graphically at jobs presnetly running.
+- Let's look graphically at jobs presently running.
 
 ![Image](./img/queue1.png)
 
@@ -181,9 +181,9 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
        - test and development jobs can get use of specific development nodes if they are shorter than 1 hour and uses up to two nodes.
        - waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
 
-## Core-hours
+### Core-hours
 
-- Remember that wyou are charged CPU-hours according to booked #cores x hours
+- Remember that you are charged CPU-hours according to booked #cores x hours
 - Example 1: 60 hours with 2 cores = 120 CPU-hours
 - Example 2: 12 hours with a full node = 192 hours
    - Waste of resources unless you have a parallel program using all cores or need all the memory, e.g. 128 GB per node
@@ -197,15 +197,15 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
     - `$ sbatch <flags> <program>` or
     - `$ sbatch <job script>`
 
- ### What kind of work are you doing?
+### What kind of work are you doing?
 - Compute bound
     - you use mainly CPU power
     - does the software support threads or MPI?
        - **Threads/openMP** are rather often supported. **Use several cores!**
-       - **MPI** (Message passng Interfacw) allows for inter-node jobs but are seldom supported for bioinformatics software. **You could use several nodes!**
+       - **MPI** (Message Passing Interface) allows for inter-node jobs but are seldom supported for bioinformatics software. **You could use several nodes!**
 - Memory bound
     - if the bottlenecks are allocating memory, copying/duplicating
-    - use more cores up to 1 node
+    - use more cores up to 1 node, perhaps using a "fat" node.
 
 
 !!!- info "Bianca other compute nodes"
