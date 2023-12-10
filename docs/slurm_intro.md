@@ -245,9 +245,9 @@ flowchart TD
     - ``-n``    number of cores
     - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
     - ``-p``    partition
-       - ``core`` is default and works for jobs narrower than 16 cores
-       - ``node`` can be used if you need the whole node and its memory
-          - must be used when allocating the fat nodes, see below
+        - ``core`` is default and works for jobs narrower than 16 cores
+        - ``node`` can be used if you need the whole node and its memory
+            - must be used when allocating the fat nodes, see below
     - ``-C mem256GB`` allocate a fat node with 256 GB RAM
     - ``-C mem512GB`` allocate a fat node with 512 GB RAM
     - ``-C gpu --gres=gpu:1`` allocate one GPU (also define number of CPU cores with ``-n 2`` or similar)
@@ -378,7 +378,8 @@ echo Hello world!
   
 !!! tip "Do you need more resources?"
 
-    Do you need more memory than 128 GB or GPU:s
+    Do you need more memory than 128 GB or GPU:s?
+    
     - ``-C mem256GB`` allocate a fat node with 256 GB RAM
     - ``-C mem512GB`` allocate a fat node with 512 GB RAM
     - ``-C gpu``
@@ -388,7 +389,8 @@ echo Hello world!
 
     - There is a job wall time limit of ten days (**240 hours**).
     - We restrict each user to at most 5000 running and waiting jobs in total.
-    - Each project has a 30 days running allocation of CPU hours. We do not forbid running jobs after the allocation is over-drafted, but instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
+    - Each project has a 30 days running allocation of CPU hours. 
+        - We do not forbid running jobs after the allocation is over-drafted, but instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
 
 
 ## Other Slurm tools
@@ -413,38 +415,26 @@ echo Hello world!
     - ``-n``    number of cores
     - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
     - ``-p``    partition
-      - ``core`` is default and works for jobs narrower than 16 cores
-      - ``node`` can be used if you need the whole node and its memory
-        - must be used when allocating the fat nodes, see below
+        - ``core`` is default and works for jobs narrower than 16 cores
+        - ``node`` can be used if you need the whole node and its memory
+            - must be used when allocating the fat nodes, see below
     - ``-C mem256GB`` allocate a fat node with 256 GB RAM
     - ``-C mem512GB`` allocate a fat node with 512 GB RAM
     - ``-C gpu``
 
     **Batch jobs**
+    
     - Two alternatives
-      - ``sbatch <jobscript with all #SBATCH options>``
-      -`` sbatch <options that will be prioritized over the options within the jobs script> <jobscript>``
-         - can for instance be used if you just want to test with, for instance, fewer cores and shorter time
-         - Example: ``sbatch -t  60:00 -p devcore -n 2 job.sh``
-    ** Interactive
+        - ``sbatch <jobscript with all #SBATCH options>``
+        -`` sbatch <options that will be prioritized over the options within the jobs script> <jobscript>``
+           - can for instance be used if you just want to test with, for instance, fewer cores and shorter time
+           - Example: ``sbatch -t  60:00 -p devcore -n 2 job.sh``
+          
+    **Interactive**
+    
     - ``interactive -A <project> <other options if not using default settings>`` 
     - load your modules when session starts
 
-???- question "Which approach is best in the following use cases? Batch jobs or interactive sessions?"
-
-         A.  Long jobs
-         B.  Short jobs with interactive "run-time"/interactive user input
-         C.  Short jobs without interactive "run-time"/interactive user input
-         D.  Test/debugging/developing code
-         E.  Playing with and plotting large data
-
-    ???- Answers
-
-         A.  batch
-         B.  interactice
-         C:  batch
-         D:  interactive
-         E.  interactive
 
 ???- question "You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
 
@@ -473,19 +463,19 @@ echo Hello world!
 
 ??? question "Which approach is best in the following use cases? Batch jobs or interactive sessions?"
 
-         A.  Long jobs
-         B.  Short jobs with interactive "run-time"/interactive user input
-         C.  Short jobs without interactive "run-time"/interactive user input
-         D.  Test/debugging/developing code
-         E.  Playing with and plotting large data
+    A)  Long jobs
+    A)  Short jobs with interactive "run-time"/interactive user input
+    A)  Short jobs without interactive "run-time"/interactive user input
+    A)  Test/debugging/developing code
+    A)  Playing with and plotting large data
 
     ??? Answers
 
-         A.  batch
-         B.  interactice
-         C:  batch
-         D:  interactive
-         E.  interactive
+         A)  batch
+         A)  interactice
+         A)  batch
+         A)  interactive
+         A)  interactive
 
 ## Extra exercise (if time allows)
 
