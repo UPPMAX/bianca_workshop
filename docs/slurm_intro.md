@@ -63,6 +63,39 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
         end
 ```
 
+!!! info "Bianca standard nodes"
+
+    **A node:** 128 GB RAM and a 4TB local disk aka "SCRATCH".
+    **Cores per node:** 16
+    **Memory per core: ** 7.5 GB available for you
+
+
+??? "Summary about the Bianca Hardware"
+
+    - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes with 128, 256 or 512 GB memory
+    - GPU nodes with two NVIDIA A100 40GB GPUs each.
+
+    **Details about the compute nodes**
+
+    - Thin nodes
+        - 194 compute nodes with 16 cores and a 4TB mechanical drive or 1TB SSD as SCRATCH.
+    - Fat nodes
+        - 74 compute nodes, 256 GB memory
+        - 14 compute nodes, 512 GB memory
+        - 10 compute nodes, 256 GB memory each and equipped with 2xNVIDIA A100 (40GB) GPUs
+    - Total number of CPU cores is about 5000
+    - Login nodes have 2vCPU each and 16GB memory
+    - Network
+        - Dual 10 Gigabit Ethernet for all nodes
+
+    **Storage**
+
+    - Local disk (scratch): 4 TB 
+    - Home storage: 32 GB at Castor
+    - Project Storage: Castor
+
+
+
 ## Slurm, sbatch, the job queue
 - Problem: _1000 users, 300 nodes, 5000 cores_
 - We need a queue:
@@ -72,15 +105,16 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
 
 ### Jobs
 - Job = what happens during booked time
-- Described in a script file or 
-- Described in the command-line (priority over script)
+- Described in
+    - a script file or 
+    - the command-line (priority over script)
 - The definitions of a job:
     - Slurm parameters (**flags**)
     - Load software modules
     - (Navigate in file system)
     - Run program(s)
     - (Collect output)
-- ... and more
+    - ... and more
 
 ### Slurm parameters
 - 1 mandatory setting for jobs:
@@ -118,6 +152,13 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
 
     - *Too long to fit in cores 9-13 and too wide to fit in the last cores.*
 
+!!! tip
+
+    - You don't see the queue graphically, however.
+    - But, overall:
+       - short and narrow jobs will run fast
+       - test and development jobs can get use of 
+
 ### To think about
 
 - Where should it run? (`-p node` or `-p core`)
@@ -126,6 +167,8 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
     - 1 hour walltime = 16 core hours = expensive
         - Waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
 - Default value: core
+
+
   
 !!!admonition "Slurm Cheat Sheet"
 
@@ -139,8 +182,8 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
           - must be used when allocating the fat nodes, see below
     - ``-C mem256GB`` allocate a fat node with 256 GB RAM
     - ``-C mem512GB`` allocate a fat node with 512 GB RAM
-    - ``-C gpu --gres=gpu:1`` allocate one GPU (also define number of CPU cores with ``-n 3 `` or similar)
-    - ``-C gpu --gres=gpu:2`` allocate two GPU:s (also define number of CPU cores with ``-n 3 `` or similar)
+    - ``-C gpu --gres=gpu:1`` allocate one GPU (also define number of CPU cores with ``-n 2`` or similar)
+    - ``-C gpu --gres=gpu:2`` allocate two GPU:s (also define number of CPU cores with ``-n 2`` or similar)
 
 ### Choices
 - Work interactively with your data or develop or test
@@ -151,7 +194,37 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
     - `$ sbatch <flags> <program>` or
     - `$ sbatch <job script>`
 
- ## Interactive jobs
+ ### What kind of work are you doing?
+- Compute bound
+    - you use mainly CPU power
+    - does the software support threads or MPI?
+       - **Threads/openMP** are rather often supported. **Use several cores!**
+       - **MPI** (Message passng Interfacw) allows for inter-node jobs but are seldom supported for bioinformatics software. **You could use several nodes!**
+- Memory bound
+    - if the bottlenecks are allocating memory, copying/duplicating
+    - use more cores up to 1 node
+
+
+!!!- info "Bianca other compute nodes"
+
+    - Bianca has three node types: thin, fat and gpu. 
+        - thin being the typical cluster node with 128 GB memory 
+        - fat nodes having 256 GB or 512 GB of memory. 
+            - You may specify a node with more RAM, by adding the words `-C fat` to your job submission line and thus making sure that you will get at least 256 GB of RAM on each node in your job. 
+            - If you absolutely must have more than 256 GB of RAM then you can request to get 512 GB of RAM specifically by adding the words `-C mem512GB` to your job submission line. 
+            - Please note that requesting 512 GB can not be combined with requesting GPUs.
+        - You may also add `-C gpu` to your submission line to request a GPU node with two NVIDIA A100 40 GB. 
+            - Please note that all GPU nodes have 256 GB of RAM, and are thus "fat" as well. All compute nodes in Bianca has 16 CPU cores in total.
+    - Please note that there are only 5 nodes with 256 GB of RAM, 2 nodes with 512 GB of RAM and 4 nodes with 2xA100 GPUs. The wait times for these node types are expected to be somewhat longer.
+   
+!!! note "Some Limits"
+
+    - There is a job wall time limit of ten days (**240 hours**).
+    - We restrict each user to at most 5000 running and waiting jobs in total.
+    - Each project has a 30 days running allocation of CPU hours. We do not forbid running jobs after the allocation is over-drafted, but instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
+
+
+## Interactive jobs
 - Most work is most effective as submitted jobs, but e.g. development needs responsiveness
 - Interactive jobs are high-priority but limited in `-n` and `-t`
 - Quickly give you a job and logs you in to the compute node
@@ -259,50 +332,6 @@ echo Hello world!
     ``$ sbatch jobscript.sh``
 
   
-!!! note "Node types"
-
-    - Bianca has three node types: thin, fat and gpu. 
-        - thin being the typical cluster node with 128 GB memory 
-        - fat nodes having 256 GB or 512 GB of memory. 
-            - You may specify a node with more RAM, by adding the words `-C fat` to your job submission line and thus making sure that you will get at least 256 GB of RAM on each node in your job. 
-            - If you absolutely must have more than 256 GB of RAM then you can request to get 512 GB of RAM specifically by adding the words `-C mem512GB` to your job submission line. 
-            - Please note that requesting 512 GB can not be combined with requesting GPUs.
-        - You may also add `-C gpu` to your submission line to request a GPU node with two NVIDIA A100 40 GB. 
-            - Please note that all GPU nodes have 256 GB of RAM, and are thus "fat" as well. All compute nodes in Bianca has 16 CPU cores in total.
-    - Please note that there are only 5 nodes with 256 GB of RAM, 2 nodes with 512 GB of RAM and 4 nodes with 2xA100 GPUs. The wait times for these node types are expected to be somewhat longer.
-   
-!!! note "Some Limits"
-
-    - There is a job wall time limit of ten days (**240 hours**).
-    - We restrict each user to at most 5000 running and waiting jobs in total.
-    - Each project has a 30 days running allocation of CPU hours. We do not forbid running jobs after the allocation is over-drafted, but instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
-
-??? "Summary about the Bianca Hardware"
-
-    - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes with 128, 256 or 512 GB memory
-    - GPU nodes with two NVIDIA A100 40GB GPUs each.
-
-    **Cores per node:** 16, or on some 128
-
-    **Details about the compute nodes**
-
-    - Thin nodes
-        - 194 compute nodes with 16 cores and a 4TB mechanical drive or 1TB SSD as SCRATCH.
-    - Fat nodes
-        - 74 compute nodes, 256 GB memory
-        - 14 compute nodes, 512 GB memory
-        - 10 compute nodes, 256 GB memory each and equipped with 2xNVIDIA A100 (40GB) GPUs
-    - Total number of CPU cores is about 5000
-    - Login nodes have 2vCPU each and 16GB memory
-    - Network
-        - Dual 10 Gigabit Ethernet for all nodes
-
-    **Storage**
-
-    - Local disk (scratch): 4 TB 
-    - Home storage: 32 GB at Castor
-    - Project Storage: Castor
-
 ## Other Slurm tools
 
 - `squeue` — quick info about jobs in queue
@@ -312,12 +341,6 @@ echo Hello world!
     - use ``eog`` to watch the ``png`` output files
 - `bianca_combined_jobinfo`
 
-
-## What kind of work are you doing?
-- Compute bound
-    - you use mainly CPU power (more cores can help)
-- Memory bound
-    - if the bottlenecks are allocating memory, copying/duplicating
 
 !!! admonition "See also"
 
