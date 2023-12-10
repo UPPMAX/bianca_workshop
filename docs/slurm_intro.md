@@ -32,7 +32,7 @@ There are two types of nodes:
 Type        |Purpose
 ------------|--------------------------
 Login node  |Start jobs for worker nodes, do easy things. You share 2 cores with active users within your project
-Worker nodes |Do hard calculations, either from scripts of an interactive session
+Compute nodes |Do hard calculations, either from scripts of an interactive session
 
 Bianca contains hundreds of nodes, each of which is isolated from each other and the Internet.
 
@@ -84,7 +84,7 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
         - 14 compute nodes, 512 GB memory
         - 10 compute nodes, 256 GB memory each and equipped with 2xNVIDIA A100 (40GB) GPUs
     - Total number of CPU cores is about 5000
-    - Login nodes have 2vCPU each and 16GB memory
+    - Login nodes have 2vCPU each and 15GB memory
     - Network
         - Dual 10 Gigabit Ethernet for all nodes
 
@@ -94,13 +94,13 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
     - Home storage: 32 GB at Castor
     - Project Storage: Castor
 
-
-
 ## Slurm, sbatch, the job queue
 - Problem: _1000 users, 300 nodes, 5000 cores_
-- We need a queue:
+- We need a **queue**:
 
     - [Slurm](https://slurm.schedmd.com/) is a job scheduler
+ 
+- You define **jobs** to be run on the compute nodes and therefore sent to the queue.
 
 
 ### Jobs
@@ -116,12 +116,22 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
     - (Collect output)
     - ... and more
 
+
+!!! info "Some keywords"
+    - A program may run _serially_ and then needs only ONE _compute thread_, which will occupy 1 core, which is a physical unit of the CPU on the node.
+       - You should most often just book 1 node. If you require more than 7 GB you can allocate more cores and you will get multiples of 7 GB.
+    - A program may run in _parallel_ and then needs either several _threads_ or several _tasks_, both occupying several cores. 
+       - If you need all 128 GB RAM or all 16 cores for your job, book a complete node.
+
+      
 ### Slurm parameters
 - 1 mandatory setting for jobs:
     - Which compute project? (`-A`)
 - 3 settings you really should set:
-    - Type of queue? (`-p`)
-        - core, node, (for short development jobs and tests: devcore, devel)
+    - Type of queue or partition? (`-p`)
+        - ``core``  for most jobs and **default**!
+        - ``node``  for larger jobs
+        - for short development jobs and tests: ``devcore``, ``devel``)
     - How many cores? (`-n`)
         - up to 16 for core job
     - How long at most? (`-t`)
@@ -130,7 +140,11 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
     - `-n 1`
     - `-t 10-00:00:00`
 
-## The queue
+### The queue
+
+- How does the queue work?
+
+- Let's look graphically at jobs presnetly running.
 
 ![Image](./img/queue1.png)
 
@@ -138,58 +152,47 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
 - *y-axis: time*
 <br/><br/>
 
-- Easiest to schedule *single-threaded*, short jobs
+- We see some holes where we may fit jobs already!
+- Let's see which type of jobs that can fit!
 
 ![Image](./img/queue2.png)
+
+<br>
+
+- 4 one-core jobs can run immediately (or a 4-core wide job).*
+
+    - *The jobs are too long to fit at core number 9-13.*
+
 ![Image](./img/queue3.png)
 <br>
 
-- *Left: 4 one-core jobs can run immediately (or a 4-core wide job).*
-
-    - *The jobs are too long to fit in core number 9-13.*
-
-- *Right: A 5-core job has to wait.*
+- A 5-core job has to wait.*
 
     - *Too long to fit in cores 9-13 and too wide to fit in the last cores.*
+
+- Easiest to schedule *single-threaded*, short jobs
+
 
 !!! tip
 
     - You don't see the queue graphically, however.
     - But, overall:
-       - short and narrow jobs will run fast
-       - test and development jobs can get use of 
+       - short and narrow jobs will start fast
+       - test and development jobs can get use of specific development nodes if they are shorter than 1 hour and uses up to two nodes.
+       - waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
 
-### To think about
+## Core-hours
 
-- Where should it run? (`-p node` or `-p core`)
-- Use a whole node or just part of it?
-    - 1 node = 16 cores
-    - 1 hour walltime = 16 core hours = expensive
-        - Waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
-- Default value: core
-
-
+- Remember that wyou are charged CPU-hours according to booked #cores x hours
+- Example 1: 60 hours with 2 cores = 120 CPU-hours
+- Example 2: 12 hours with a full node = 192 hours
+   - Waste of resources unless you have a parallel program using all cores or need all the memory, e.g. 128 GB per node
   
-!!!admonition "Slurm Cheat Sheet"
-
-    - ``-A``    project number
-    - ``-t``    wall time
-    - ``-n``    number of cores
-    - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
-    - ``-p``    partition
-       - ``core`` is default and works for jobs narrower than 16 cores
-       - ``node`` can be used if you need the whole node and its memory
-          - must be used when allocating the fat nodes, see below
-    - ``-C mem256GB`` allocate a fat node with 256 GB RAM
-    - ``-C mem512GB`` allocate a fat node with 512 GB RAM
-    - ``-C gpu --gres=gpu:1`` allocate one GPU (also define number of CPU cores with ``-n 2`` or similar)
-    - ``-C gpu --gres=gpu:2`` allocate two GPU:s (also define number of CPU cores with ``-n 2`` or similar)
-
 ### Choices
 - Work interactively with your data or develop or test
     - Run an **Interactive session**
     - ``$ interactive <flags> ...``
-- If you don't need any live interaction with your workflow/analysis/simulation
+- If you _don't_ need any live interaction with your workflow/analysis/simulation
     - Send your job to the slurm job batch (sbatch)
     - `$ sbatch <flags> <program>` or
     - `$ sbatch <job script>`
@@ -223,6 +226,21 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
     - We restrict each user to at most 5000 running and waiting jobs in total.
     - Each project has a 30 days running allocation of CPU hours. We do not forbid running jobs after the allocation is over-drafted, but instead allow to submit jobs with a very low queue priority, so that you may be able to run your jobs anyway, if a sufficient number of nodes happens to be free on the system.
 
+
+!!!admonition "Slurm Cheat Sheet"
+
+    - ``-A``    project number
+    - ``-t``    wall time
+    - ``-n``    number of cores
+    - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
+    - ``-p``    partition
+       - ``core`` is default and works for jobs narrower than 16 cores
+       - ``node`` can be used if you need the whole node and its memory
+          - must be used when allocating the fat nodes, see below
+    - ``-C mem256GB`` allocate a fat node with 256 GB RAM
+    - ``-C mem512GB`` allocate a fat node with 512 GB RAM
+    - ``-C gpu --gres=gpu:1`` allocate one GPU (also define number of CPU cores with ``-n 2`` or similar)
+    - ``-C gpu --gres=gpu:2`` allocate two GPU:s (also define number of CPU cores with ``-n 2`` or similar)
 
 ## Interactive jobs
 - Most work is most effective as submitted jobs, but e.g. development needs responsiveness
