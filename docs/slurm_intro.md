@@ -448,17 +448,18 @@ echo Hello world!
 
 ## Exercises
 
-???- question "You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
+??? question "You are developing code on Bianca. 
 
-    This is the typical use-case to use an interactive node.
-    One could also consider to develop code on a local computer 
-    instead (which uses nonsensitive/simulated/fake testing data)
-    and upload the final code instead.
+    - You write the code line-by-line and schedule a test run after each addition. 
+    - However, after each new line, it takes a couple of minutes before you know your code worked yes/no. 
+    - How could you develop your code quicker?"
 
-    Requesting an interactive node is part of this course 
-    and is described on this page.
+    ??? Answers
     
-???- question "Exercise: Start an interactive session"
+        - This is the typical use-case to use an interactive node.
+        - One could also consider to develop code on a local computer instead (which uses nonsensitive/simulated/fake testing data) and upload the final code instead.
+    
+??? question "Start an interactive session"
 
     The goal of this exercise is to make sure you know how to start an 
     interactive session. 
@@ -473,7 +474,7 @@ echo Hello world!
     However, the number of core hours are registered as if the node is used
     at full capacity, as it is *reserved* to be used at that capacity.
 
-??? question "Which approach is best in the following use cases? Batch jobs or interactive sessions?"
+???+ question "Which approach is best in the following use cases? Batch jobs or interactive sessions?"
 
     1.  Long jobs
     1.  Short jobs with interactive "run-time"/interactive user input
