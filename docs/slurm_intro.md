@@ -76,6 +76,7 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
     - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes
     
     **Details about the compute nodes**
+    
     - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes
     - Thin nodes
         - 194 compute nodes with 16 cores and a 4TB mechanical drive or 1TB SSD as SCRATCH.
@@ -118,9 +119,9 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
 
 !!! info "Some keywords"
     - A program may run _serially_ and then needs only ONE _compute thread_, which will occupy 1 core, which is a physical unit of the CPU on the node.
-       - You should most often just book 1 node. If you require more than 7 GB you can allocate more cores and you will get multiples of 7 GB.
+        - You should most often just book 1 node. If you require more than 7 GB you can allocate more cores and you will get multiples of 7 GB.
     - A program may run in _parallel_ and then needs either several _threads_ or several _tasks_, both occupying several cores. 
-       - If you need all 128 GB RAM (actually 112) or all 16 cores for your job, book a complete node.
+        - If you need all 128 GB RAM (actually 112) or all 16 cores for your job, book a complete node.
 
       
 ### Slurm parameters
@@ -176,9 +177,9 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
 
     - You don't see the queue graphically, however.
     - But, overall:
-       - short and narrow jobs will start fast
-       - test and development jobs can get use of specific development nodes if they are shorter than 1 hour and uses up to two nodes.
-       - waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
+        - short and narrow jobs will start fast
+        - test and development jobs can get use of specific development nodes if they are shorter than 1 hour and uses up to two nodes.
+        - waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
 
 ### Core-hours
 
@@ -222,18 +223,6 @@ flowchart TD
     - if the bottlenecks are allocating memory, copying/duplicating
     - use more cores up to 1 node, perhaps using a "fat" node.
 
-
-!!!- info "Bianca other compute nodes"
-
-    - Bianca has three node types: thin, fat and gpu. 
-        - thin being the typical cluster node with 128 GB memory 
-        - fat nodes having 256 GB or 512 GB of memory. 
-            - You may specify a node with more RAM, by adding the words `-C fat` to your job submission line and thus making sure that you will get at least 256 GB of RAM on each node in your job. 
-            - If you absolutely must have more than 256 GB of RAM then you can request to get 512 GB of RAM specifically by adding the words `-C mem512GB` to your job submission line. 
-            - Please note that requesting 512 GB can not be combined with requesting GPUs.
-        - You may also add `-C gpu` to your submission line to request a GPU node with two NVIDIA A100 40 GB. 
-            - Please note that all GPU nodes have 256 GB of RAM, and are thus "fat" as well. All compute nodes in Bianca has 16 CPU cores in total.
-    - Please note that there are only 5 nodes with 256 GB of RAM, 2 nodes with 512 GB of RAM and 4 nodes with 2xA100 GPUs. The wait times for these node types are expected to be somewhat longer.
    
 
 
@@ -246,11 +235,6 @@ flowchart TD
     - ``-p``    partition
         - ``core`` is default and works for jobs narrower than 16 cores
         - ``node`` can be used if you need the whole node and its memory
-            - must be used when allocating the fat nodes, see below
-    - ``-C mem256GB`` allocate a fat node with 256 GB RAM
-    - ``-C mem512GB`` allocate a fat node with 512 GB RAM
-    - ``-C gpu --gres=gpu:1`` allocate one GPU (also define number of CPU cores with ``-n 2`` or similar)
-    - ``-C gpu --gres=gpu:2`` allocate two GPU:s (also define number of CPU cores with ``-n 2`` or similar)
 
 ## Interactive jobs
 - Most work is most effective as submitted jobs, but e.g. development needs responsiveness
@@ -275,6 +259,12 @@ interactive -A sens2023598 -p core -n 2 -t 8:0:0
 
 This starts an interactive session using project `sens2023598` 
 that uses 2 cores and has a maximum duration of 8 hours.
+
+!!! tip
+   
+    ![copy-paste](./img/copy_paste.PNG)
+
+
 
 ### Try interactive and run RStudio
 
@@ -335,12 +325,29 @@ We recommend using at least two cores for RStudio, and to get those resources, y
  
 ## Job scripts (batch)
 
-- Write a bash script called ``jobscript.sh`` 
-    - You can be in your `~` folder    
+- Batch scripts can be written in any scripting language. We will use BASH
 - Make first line be  `#!/bin/bash` in the top line
-- Add also before the rest of the commands the the keywords `#SBATCH`
+    - It is good practice to end the line with ``-l`` to reload a fresh environment with no modules loaded.
+    - This makes you sure that you don't enable other software or versions that may interfere with what you want to do in the job. 
+- Before the job content, add the batch flags starting the lines with the keyword `#SBATCH`, like:
+    - #SBATCH -t 2:00:00
+    - #SBATCH -p devcore
+    - #SBATCH -n 3
 - `#` will be ignored by `bash` and can run as an ordinary bash script
 - if running the script with the command `sbatch <script>` the `#SBATCH` lines will be interpreted as slurm flags
+
+
+
+!!! example "Type-along"
+
+    - Write a bash script called ``jobscript.sh`` 
+         - You can be in your `~` folder    
+    - To make it faster Copy-paste the code below.
+
+!!! tip
+   
+    ![copy-paste](./img/copy_paste.PNG)
+
 
 #### A simple job script template
 
