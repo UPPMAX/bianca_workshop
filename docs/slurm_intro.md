@@ -435,6 +435,7 @@ echo Hello world!
     - ``interactive -A <project> <other options if not using default settings>`` 
     - load your modules when session starts
 
+## Exercises
 
 ???- question "You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
 
@@ -463,21 +464,21 @@ echo Hello world!
 
 ??? question "Which approach is best in the following use cases? Batch jobs or interactive sessions?"
 
-    A)  Long jobs
-    A)  Short jobs with interactive "run-time"/interactive user input
-    A)  Short jobs without interactive "run-time"/interactive user input
-    A)  Test/debugging/developing code
-    A)  Playing with and plotting large data
+    1.  Long jobs
+    1.  Short jobs with interactive "run-time"/interactive user input
+    1.  Short jobs without interactive "run-time"/interactive user input
+    1.  Test/debugging/developing code
+    1.  Playing with and plotting large data
 
     ??? Answers
 
-         A)  batch
-         A)  interactice
-         A)  batch
-         A)  interactive
-         A)  interactive
+        1.  batch
+        1.  interactice
+        1.  batch
+        1.  interactive
+        1.  interactive
 
-## Extra exercise (if time allows)
+
 
 ???+ question "Submit a Slurm job"
 
