@@ -242,3 +242,4 @@ wikipedia
 http
 bclaremar
 dec
+openMP
