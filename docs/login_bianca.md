@@ -238,20 +238,22 @@ flowchart TD
 When inside SUNET, one can access a remote desktop environment
 using a website:
 
- 1. In your web browser, go to [https://bianca.uppmax.uu.se](https://bianca.uppmax.uu.se)
+  1. In your web browser, go to [https://bianca.uppmax.uu.se](https://bianca.uppmax.uu.se)
 
- 2. Fill in the first dialog. Do use the `UPPMAX` [2-factor authentication](https://www.uppmax.uu.se/support/user-guides/setting-up-two-factor-authentication/) (i.e. not SUPR!)
+  2. Fill in the first dialog. Do use the `UPPMAX` [2-factor authentication](https://www.uppmax.uu.se/support/user-guides/setting-up-two-factor-authentication/) (i.e. not SUPR!)
 
 ![Bianca login, first dialog](./img/bianca_gui_login_1st.png)
+![Bianca login new, first dialog](./img/login_new.png)
 
- 3. Fill in the second dialog, using your regular password (i.e. no need for two-factor authentication)
+
+  3. Fill in the second dialog, using your regular password (i.e. no need for two-factor authentication)
 
 ![Bianca login, second dialog](./img/bianca_gui_login_2nd.png)
 
 > The second Bianca remote desktop login dialog. 
 > Note that it uses ThinLinc to establish this connection
 
- 4. Enjoy! You are in!
+  4. Enjoy! You are in!
 
 ![The Bianca remote desktop](./img/bianca_remote_desktop.png)
 
