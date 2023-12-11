@@ -47,7 +47,7 @@ has [multiple big databases installed](https://www.uppmax.uu.se/resources/databa
 !!! warning 
     - To access bioinformatics tools, load the **bioinfo-tools** module first.
 
-???- info What is `cowsay`?
+???- info "What is `cowsay`?"
 
     `cowsay` is a tool that is commonly use as a toy example tool.
 
