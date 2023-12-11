@@ -102,11 +102,11 @@ for example `module spider cowsay`.
 If there is an exact match, that module is reported first.
 Of the module shown, also the different versions are reported.
 
-!!! tip Do `module load bioinfo-tools` first
+!!! tip "Do `module load bioinfo-tools` first"
 
     When working with modules, do `module load bioinfo-tools` first
 
-???- tip What to do when you cannot find a module
+???- tip "What to do when you cannot find a module"
 
     Run `module load bioinfo-tools`.
 
@@ -120,7 +120,7 @@ Loading a module always results in a helpful message
 (such as that it worked fine), however,
 it is *not* general help for using the tool itself.
 
-!!!- tip Getting help on a module
+!!!- tip "Getting help on a module"
 
     Run `module help [module]`, e.g. `module help cowsay`
     to get the general help on a module
@@ -131,7 +131,7 @@ to load a specific version. The information given by
 For example, to load the `samtools/1.17` module, 
 do `module load samtools/1.17`.
 
-???- tip Huh, `module load samtools/1.17` gives an error?
+???- tip "Huh, `module load samtools/1.17` gives an error?"
 
     If you do `module load samtools/1.17` without 
     doing `module load bioinfo-tools` first, you'll get the error:
