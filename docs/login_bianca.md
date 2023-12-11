@@ -303,6 +303,18 @@ For example:
 ssh richel-sens2023598@bianca.uppmax.uu.se
 ```
 
+???- tip "Note for teachers: no `-X`"
+
+    On Rackham, we do teach the learners to use `-X`:
+   
+    ```
+    ssh -X username@rackham.uppmax.uu.se
+    ```
+
+    However, on Bianca, this so-called X-forwarding is disabled.
+    Hence, we do not teach it :-)
+
+
  2. Type your UPPMAX password, 
     directly followed by the UPPMAX 2-factor authentication number,
     for example `verysecret678123`, then press enter
