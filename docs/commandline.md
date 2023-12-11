@@ -51,7 +51,7 @@ man ls
 
 These command give the help pages about the programs `man`, `cd` and `ls` respectively.
 
-Press CTRL-Z to exit `man`
+Press `q` (short for 'quit') to exit `man`
 
 ### Navigate through the file system
 
