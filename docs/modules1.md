@@ -458,10 +458,9 @@ Full command            |Shorthand name
  * [Wikipedia page on environment modules](https://en.wikipedia.org/wiki/Environment_Modules_(software))
  * [lmod homepage](https://www.tacc.utexas.edu/research/tacc-research/lmod/)
 
-
 ### About `module avail`
 
-!!! info Why here?
+!!! info "Why here?"
 
     As far as I can see, there is no use case for `module avail`.
 
@@ -487,200 +486,204 @@ Use "module spider" to find all possible modules and extensions.
 Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
 ```
 
-### `module spider` detailed output
+### Example output
 
-Here is some detailed `module spider` output:
+???- info "`module spider R` detailed output"
 
-```
-$ module spider R
+    ```
+    $ module spider R
 
--------------------------------------------
-  R:
--------------------------------------------
-     Versions:
-        R/3.0.2
-        R/3.2.3
-        R/3.3.2
-        R/3.4.0
-        R/3.4.3
-        R/3.5.0
-        R/3.5.2
-        R/3.6.0
-        R/3.6.1
-        R/4.0.0
-        R/4.0.4
-        R/4.1.1
-        R/4.2.1
-     Other possible modules matches:
-        454-dataprocessing  ADMIXTURE  ANTLR  ARCS  ARC_assembler  ARPACK-NG  ART  AdapterRemoval  AlienTrimmer  Amber  AnchorWave  Arlequin  Armadillo  ArrowGrid  Bamsurgeon  BclConverter  BioBakery  BioBakery_data  ...
+    -------------------------------------------
+      R:
+    -------------------------------------------
+         Versions:
+            R/3.0.2
+            R/3.2.3
+            R/3.3.2
+            R/3.4.0
+            R/3.4.3
+            R/3.5.0
+            R/3.5.2
+            R/3.6.0
+            R/3.6.1
+            R/4.0.0
+            R/4.0.4
+            R/4.1.1
+            R/4.2.1
+         Other possible modules matches:
+            454-dataprocessing  ADMIXTURE  ANTLR  ARCS  ARC_assembler  ARPACK-NG  ART  AdapterRemoval  AlienTrimmer  Amber  AnchorWave  Arlequin  Armadillo  ArrowGrid  Bamsurgeon  BclConverter  BioBakery  BioBakery_data  ...
 
--------------------------------------------
-  To find other possible module matches execute:
+    -------------------------------------------
+      To find other possible module matches execute:
 
-      $ module -r spider '.*R.*'
+          $ module -r spider '.*R.*'
 
--------------------------------------------
-  For detailed information about a specific "R" package (including how to load the modules) use the module's full name.
-  Note that names that have a trailing (E) are extensions provided by other modules.
-  For example:
+    -------------------------------------------
+      For detailed information about a specific "R" package (including how to load the modules) use the module's full name.
+      Note that names that have a trailing (E) are extensions provided by other modules.
+      For example:
 
-     $ module spider R/4.2.1
--------------------------------------------
-```
+         $ module spider R/4.2.1
+    -------------------------------------------
+    ```
 
-```
-$ module spider samtools
+???- info "`module spider samtools` detailed output"
 
--------------------------------------------
-  samtools:
--------------------------------------------
-     Versions:
-        samtools/0.1.12-10
-        samtools/0.1.19
-        samtools/1.1
-        samtools/1.2
-        samtools/1.3
-        samtools/1.4
-        samtools/1.5_debug
-        samtools/1.5
-        samtools/1.6
-        samtools/1.8
-        samtools/1.9
-        samtools/1.10
-        samtools/1.12
-        samtools/1.14
-        samtools/1.16
-        samtools/1.17
-     Other possible modules matches:
-        SAMtools
+    ```
+    $ module spider samtools
 
--------------------------------------------
-  To find other possible module matches execute:
+    -------------------------------------------
+      samtools:
+    -------------------------------------------
+         Versions:
+            samtools/0.1.12-10
+            samtools/0.1.19
+            samtools/1.1
+            samtools/1.2
+            samtools/1.3
+            samtools/1.4
+            samtools/1.5_debug
+            samtools/1.5
+            samtools/1.6
+            samtools/1.8
+            samtools/1.9
+            samtools/1.10
+            samtools/1.12
+            samtools/1.14
+            samtools/1.16
+            samtools/1.17
+         Other possible modules matches:
+            SAMtools
 
-      $ module -r spider '.*samtools.*'
+    -------------------------------------------
+      To find other possible module matches execute:
 
--------------------------------------------
-  For detailed information about a specific "samtools" package (including how to load the modules) use the module's full name.
-  Note that names that have a trailing (E) are extensions provided by other modules.
-  For example:
+          $ module -r spider '.*samtools.*'
 
-     $ module spider samtools/1.17
--------------------------------------------
-```
+    -------------------------------------------
+      For detailed information about a specific "samtools" package (including how to load the modules) use the module's full name.
+      Note that names that have a trailing (E) are extensions provided by other modules.
+      For example:
 
-The final bit of output tells us more about a specific module version, including the special step required to access all bioinformatics modules.
+         $ module spider samtools/1.17
+    -------------------------------------------
+    ```
 
-```
-$ module spider samtools/1.17
+???- info "`module spider samtools/1.17` detailed output"
 
--------------------------------------------
-  samtools: samtools/1.17
--------------------------------------------
+    ```
+    $ module spider samtools/1.17
 
-    You will need to load all module(s) on any one of the lines below before the "samtools/1.17" module is available to load.
+    -------------------------------------------
+      samtools: samtools/1.17
+    -------------------------------------------
 
-      bioinfo-tools
+        You will need to load all module(s) on any one of the lines below before the "samtools/1.17" module is available to load.
 
-    Help:
-        samtools - use samtools 1.17
+          bioinfo-tools
 
-        Version 1.17
-```
+        Help:
+            samtools - use samtools 1.17
 
-This reminds us that we need to load the `bioinfo-tools` 
-module to be able to load `samtools/1.17`.
-Again, this is required (just once) before loading bioinformatics software.
+            Version 1.17
+    ```
 
-### `module load` detailed output
-
-```
-$ module load GATK/4.3.0.0
-Note that all versions of GATK starting with 4.0.8.0 use a different wrapper
-script (gatk) than previous versions of GATK.  You might need to update your
-jobs accordingly.
-
-The complete GATK resource bundle is in /sw/data/GATK
-
-See 'module help GATK/4.3.0.0' for information on activating the GATK Conda
-environment for using DetermineGermlineContigPloidy and similar other tools.
-```
-
-This message references the command `module help GATK/4.3.0.0` for additional help with this module.
-
-### `module list` detailed output
-
-```
-$ module list
-
-Currently Loaded Modules:
-  1) uppmax   2) bioinfo-tools   3) samtools/1.17
-```
-
-In this example case, we can see that `bioinfo-tools` is already loaded,
-so loading it again is not required.
-
-### `module help` detailed output
+    This reminds us that we need to load the `bioinfo-tools` 
+    module to be able to load `samtools/1.17`.
+    Again, this is required (just once) before loading bioinformatics software.
 
 
-```
-$ module help GATK/4.3.0.0
+???- info "`module load` detailed output"
 
--------------- Module Specific Help for "GATK/4.3.0.0" ---------------
-GATK - use GATK 4.3.0.0
-Version 4.3.0.0
+    ```
+    $ module load GATK/4.3.0.0
+    Note that all versions of GATK starting with 4.0.8.0 use a different wrapper
+    script (gatk) than previous versions of GATK.  You might need to update your
+    jobs accordingly.
 
-**GATK 4.3.0.0**
+    The complete GATK resource bundle is in /sw/data/GATK
 
-Usage:
+    See 'module help GATK/4.3.0.0' for information on activating the GATK Conda
+    environment for using DetermineGermlineContigPloidy and similar other tools.
+    ```
 
-    gatk --help     for general options, including how to pass java options
+    This message references the command `module help GATK/4.3.0.0` for additional help with this module.
 
-    gatk --list     to list available tools
+???- info "`module list` detailed output"
 
-    gatk ToolName -OPTION1 value1 -OPTION2 value2 ...
-                  to run a specific tool, e.g., HaplotypeCaller, GenotypeGVCFs, ...
+    ```
+    $ module list
 
-For more help getting started, see
+    Currently Loaded Modules:
+      1) uppmax   2) bioinfo-tools   3) samtools/1.17
+    ```
 
-    https://software.broadinstitute.org/gatk/documentation/article.php?id=9881
+    In this example case, we can see that `bioinfo-tools` is already loaded,
+    so loading it again is not required.
 
-...
-```
+???- info "`module help` detailed output"
 
-When we list the loaded modules, we see that `GATK/4.3.0.0` is now loaded, as is its prerequisite module `java/sun_jdk1.8.0_151`.
+    ```
+    $ module help GATK/4.3.0.0
 
-```
-$ module list
+    -------------- Module Specific Help for "GATK/4.3.0.0" ---------------
+    GATK - use GATK 4.3.0.0
+    Version 4.3.0.0
 
-Currently Loaded Modules:
-  1) uppmax   2) bioinfo-tools   3) samtools/1.17   4) java/sun_jdk1.8.0_151   5) GATK/4.3.0.0
-```
+    **GATK 4.3.0.0**
 
-Modules can also be unloaded, which also unloads their prerequisites.
+    Usage:
 
-### `module help` detailed output
+        gatk --help     for general options, including how to pass java options
 
-```
-$ module help GATK/4.3.0.0
+        gatk --list     to list available tools
 
--------------- Module Specific Help for "GATK/4.3.0.0" ---------------
-GATK - use GATK 4.3.0.0
-Version 4.3.0.0
+        gatk ToolName -OPTION1 value1 -OPTION2 value2 ...
+                      to run a specific tool, e.g., HaplotypeCaller, GenotypeGVCFs, ...
 
-**GATK 4.3.0.0**
+    For more help getting started, see
 
-Usage:
+        https://software.broadinstitute.org/gatk/documentation/article.php?id=9881
 
-    gatk --help     for general options, including how to pass java options
+    ...
+    ```
 
-    gatk --list     to list available tools
+    When we list the loaded modules, we see that `GATK/4.3.0.0` is now loaded, as is its prerequisite module `java/sun_jdk1.8.0_151`.
 
-    gatk ToolName -OPTION1 value1 -OPTION2 value2 ...
-                  to run a specific tool, e.g., HaplotypeCaller, GenotypeGVCFs, ...
+???- info "`module list` detailed output"
 
-For more help getting started, see
+    ```
+    $ module list
 
-    https://software.broadinstitute.org/gatk/documentation/article.php?id=9881
+    Currently Loaded Modules:
+      1) uppmax   2) bioinfo-tools   3) samtools/1.17   4) java/sun_jdk1.8.0_151   5) GATK/4.3.0.0
+    ```
 
-...
-```
+    Modules can also be unloaded, which also unloads their prerequisites.
+
+???- info "`module help` detailed output"
+
+    ```
+    $ module help GATK/4.3.0.0
+
+    -------------- Module Specific Help for "GATK/4.3.0.0" ---------------
+    GATK - use GATK 4.3.0.0
+    Version 4.3.0.0
+
+    **GATK 4.3.0.0**
+
+    Usage:
+
+        gatk --help     for general options, including how to pass java options
+
+        gatk --list     to list available tools
+
+        gatk ToolName -OPTION1 value1 -OPTION2 value2 ...
+                      to run a specific tool, e.g., HaplotypeCaller, GenotypeGVCFs, ...
+
+    For more help getting started, see
+
+        https://software.broadinstitute.org/gatk/documentation/article.php?id=9881
+
+    ...
+    ```
