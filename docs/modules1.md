@@ -243,6 +243,12 @@ module load samtools/1.17
     cowsay hello
     ```
 
+    Make the script executable:
+
+    ```
+    chmod +x cow_says_hello.sh
+    ```
+
     Run:
 
     ```
