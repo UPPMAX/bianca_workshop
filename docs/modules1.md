@@ -313,7 +313,7 @@ Full command            |Shorthand name
 !!! warning 
     - To access bioinformatics tools, load the **bioinfo-tools** module first.
 
-???+ question "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff"
+???- question "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff"
 
     This workflow uses a pre-made BAM file that contains a subset of reads from a sample from European Nucleotide Archive project [PRJEB6463](https://www.ebi.ac.uk/ena/browser/view/PRJEB6463) aligned to human genome build hg38. These reads are from the region `chr1:100300000-100800000`.
 
@@ -410,7 +410,7 @@ Full command            |Shorthand name
     ```
 
 
-???+ question "Hands on: Running R within RStudio, use ggplot2 from R_packages/4.1.1"
+???- question "Hands on: Running R within RStudio, use ggplot2 from R_packages/4.1.1"
 
     1. Load the `R_packages/4.1.1` module and the latest `RStudio` module, and start RStudio with `rstudio &`.
     ![ThinLinc load R_packages RStudio](./img/modules-1-ml-rstudio.png)
@@ -422,7 +422,7 @@ Full command            |Shorthand name
     ![ThinLinc ggsave](./img/modules-3-ggsave.png)
 
 
-???+ question "Hands on: Loading the conda/latest module"
+???- question "Hands on: Loading the conda/latest module"
 
     1. Load the `conda/latest` module.
     ```
@@ -441,15 +441,15 @@ Full command            |Shorthand name
     If you do not set this variable, your home directory will easily exceed its quotas when creating even a single Conda environment.
     This will be covered in more detail in the afternoon.
 
-## Installed software
+### Installed software
 
  * [Almost all installed software](https://www.uppmax.uu.se/resources/software/installed-software/)
   
-## Installed databases
+### Installed databases
 
  * [Almost all installed databases](https://www.uppmax.uu.se/resources/databases/)
 
-## Links
+### Links
 
  * [Software at UPPMAX](https://www.uppmax.uu.se/resources/software/)
  * [The UPPMAX module system](https://www.uppmax.uu.se/resources/software/module-system/)
@@ -459,13 +459,11 @@ Full command            |Shorthand name
  * [lmod homepage](https://www.tacc.utexas.edu/research/tacc-research/lmod/)
 
 
-## `module avail`
+### About `module avail`
 
 !!! info Why here?
 
-    I put this text here, because it itself recommends to use `module spider`.
-    If the text itself supplies no use case for `module avail`,
-    then for the time being, I will remove it.
+    As far as I can see, there is no use case for `module avail`.
 
 `module avail` list all modules immediately available, 
 or search for a specific available module:
@@ -489,7 +487,7 @@ Use "module spider" to find all possible modules and extensions.
 Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
 ```
 
-## Detailed `module spider` output
+### `module spider` detailed output
 
 Here is some detailed `module spider` output:
 
@@ -660,7 +658,7 @@ Currently Loaded Modules:
 
 Modules can also be unloaded, which also unloads their prerequisites.
 
-### `module help`
+### `module help` detailed output
 
 ```
 $ module help GATK/4.3.0.0
