@@ -293,6 +293,12 @@ chmod +x do_it.sh
     ls | rev
     ```
 
+    Make the script executable:
+
+    ```
+    chmod +x ./do_it.sh
+    ```
+
     Run the script:
 
     ```
