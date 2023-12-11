@@ -184,7 +184,7 @@ module load samtools/1.17
     There is a video that shows the solution of all these exercises: 
     [YouTube](https://youtu.be/lNlq2Eb-qgc), [Download (.ogv)](https://richelbilderbeek.nl/bianca_modules.ogv)
 
-???- question "2a. Verify that the tool `cowsay` is not available by default"
+???- question "1a. Verify that the tool `cowsay` is not available by default"
 
     ```
     cowsay hello
@@ -192,7 +192,7 @@ module load samtools/1.17
 
     Gives the error message: `cowsay: command not found`.
 
-???- question "2b. Search for the module providing `cowsay`"
+???- question "1b. Search for the module providing `cowsay`"
 
     ```
     module spider cowsay
@@ -200,26 +200,26 @@ module load samtools/1.17
 
     You will find the `cowsay/3.03` module.
 
-???- question "2c. Load a specific version of that module"
+???- question "1c. Load a specific version of that module"
 
     ```
     module load cowsay/3.03
     ```
 
-???- question "2d. Verify that the tool `cowsay` now works"
+???- question "1d. Verify that the tool `cowsay` now works"
 
     ```
     cowsay hello
     ```
 
-???- question "2e. Unload that module"
+???- question "1e. Unload that module"
 
 
     ```
     module unload cowsay/3.03
     ```
 
-???- question "2f. Verify that the tool `cowsay` is not available anymore"
+???- question "1f. Verify that the tool `cowsay` is not available anymore"
 
 
     ```
@@ -229,7 +229,7 @@ module load samtools/1.17
     Gives the error message: `cowsay: command not found`.
 
 
-???- question "3a. Create an executable script called `cow_says_hello.sh`. It should load a specific version of the `cowsay` module, after which it uses `cowsay` to do something"
+???- question "2a. Create an executable script called `cow_says_hello.sh`. It should load a specific version of the `cowsay` module, after which it uses `cowsay` to do something"
 
     ```
     nano cow_says_hello.sh
@@ -255,7 +255,7 @@ module load samtools/1.17
     ./cow_says_hello.sh
     ```
 
-???- question "3b. Find out: if the `cowsay` module is not loaded, after running the script, is it loaded yes/no?"
+???- question "2b. Find out: if the `cowsay` module is not loaded, after running the script, is it loaded yes/no?"
     
     Running the script does not load the module beyond running the script.
 
@@ -275,7 +275,7 @@ module load samtools/1.17
     -bash: cowsay: command not found
     ```
 
-???- question "`module load samtools/1.17` gives the error `These module(s) or extension(s) exist but cannot be loaded as requested: "samtools/1.17`. How to fix this?"
+???- question "3. `module load samtools/1.17` gives the error `These module(s) or extension(s) exist but cannot be loaded as requested: "samtools/1.17`. How to fix this?"
 
     If you do `module load samtools/1.17` without 
     doing `module load bioinfo-tools` first, you'll get the error:
