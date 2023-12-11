@@ -47,32 +47,32 @@ has [multiple big databases installed](https://www.uppmax.uu.se/resources/databa
 !!! warning 
     - To access bioinformatics tools, load the **bioinfo-tools** module first.
 
-## What is `cowsay`?
+???- info What is `cowsay`?
 
-`cowsay` is a tool that is commonly use as a toy example tool.
+    `cowsay` is a tool that is commonly use as a toy example tool.
 
-From a terminal, running:
+    From a terminal, running:
 
 
-```
-cowsay hello
-```
+    ```
+    cowsay hello
+    ```
 
-results in:
+    results in:
 
-``` _______
-< hello >
- -------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-```
+    ``` _______
+    < hello >
+     -------
+            \   ^__^
+             \  (oo)\_______
+                (__)\       )\/\
+                    ||----w |
+                    ||     ||
+    ```
 
-Because `cowsay` is not part of the Linux kernel, 
-users commonly need to install it. 
-Or in our case: load a module to use it.
+    Because `cowsay` is not part of the Linux kernel, 
+    users commonly need to install it. 
+    Or in our case: load a module to use it.
 
 ## Working with the module system
 
