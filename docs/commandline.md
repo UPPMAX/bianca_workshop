@@ -277,7 +277,7 @@ chmod +x do_it.sh
     ```
 
 
-???- question "5a. Create an executable script called `/proj/sens2023598/workshop/[your_login_name]/do_it.sh`, which, upon running, displays a welcome message in text (e.g. `Hello!`) and does something (e.g. show the files in reverse order)"
+???- question "5. Create an executable script called `/proj/sens2023598/workshop/[your_login_name]/do_it.sh`, which, upon running, displays a welcome message in text (e.g. `Hello!`) and does something (e.g. show the files in reverse order)"
 
     Edit the script:
 
