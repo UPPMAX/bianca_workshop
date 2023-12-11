@@ -16,7 +16,9 @@
 
     Schedule (15 minutes):
 
-    - x minutes: [...[
+    - 5 minutes: summarize page, start exercise
+    - 10 minutes: let learners do exercise
+    - 5 minutes: feedback
 
 ## Why Bianca uses environment modules
 
@@ -266,6 +268,20 @@ module load samtools/1.17
     [richel@sens2023598-bianca ~]$ cowsay hello
     -bash: cowsay: command not found
     ```
+
+???- question "`module load samtools/1.17` gives the error `These module(s) or extension(s) exist but cannot be loaded as requested: "samtools/1.17`. How to fix this?"
+
+    If you do `module load samtools/1.17` without 
+    doing `module load bioinfo-tools` first, you'll get the error:
+
+    ```
+    $ module load samtools/1.17
+    Lmod has detected the following error:  These module(s) or
+    extension(s) exist but cannot be loaded as requested: "samtools/1.17"
+       Try: "module spider samtools/1.17" to see how to load the module(s).
+    ```
+
+    The solution is to do `module load bioinfo-tools` first.
 
 ???- info "Want more complex/realistic exercises?" 
 
