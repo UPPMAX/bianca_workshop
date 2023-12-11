@@ -93,7 +93,7 @@ Working with the module system means:
 
 - searching for a module
 - activating ('loading') a module
-- de-activate ('unloading') a module
+- deactivate ('unloading') a module
 
 This section describes these steps in more details.
 
