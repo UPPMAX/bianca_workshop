@@ -323,17 +323,17 @@ A user logs in to a login node via the Internet.
 
 ## Questions
 
-???- question "Your want to request access to general-purpose HPC. At which website does your journey start?"
+???- question "1. Your want to request access to general-purpose HPC. At which website does your journey start?"
 
     Either a search engine to google for 'NAISS', or directly [https://naiss.se](https://naiss.se)
 
-???- question "Your colleague visits [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/) and sees nothing appear. What is likely the problem?"
+???- question "2. Your colleague visits [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/) and sees nothing appear. What is likely the problem?"
 
     He/she is not inside of SUNET.
     
     Logging in is part of this course and is described [here](login_bianca.md).
 
-???- question "You want to use a piece of software that came out this morning (!) on Bianca. Will you be able to? Why?"
+???- question "3. You want to use a piece of software that came out this morning (!) on Bianca. Will you be able to? Why?"
 
     This will likely fail, as it is not a pre-installed piece of software.
     
@@ -341,11 +341,11 @@ A user logs in to a login node via the Internet.
     For example, one technique -using containers- is part of the intermediate Bianca course 
     and can be found described [here](extra/containers/).
 
-???- question "You want to use an online tool to do a calculation on Bianca. Will this work? Why?"
+???- question "4. You want to use an online tool to do a calculation on Bianca. Will this work? Why?"
 
     This will fail, because Bianca has (close to) no internet access.
 
-???- question "Your colleague finds out that one can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?"
+???- question "5. Your colleague finds out that one can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?"
 
     For that colleague, there seems to be no problem. 
     However, for everyone else this is a problem,
@@ -358,7 +358,7 @@ A user logs in to a login node via the Internet.
     and is described [here](slurm-intro.md).
     This is done by using the SLURM scheduler.
 
-???- question "You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
+???- question "6. You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
 
     This is the typical use-case to use an interactive node.
     One could also consider to develop code on a local computer 
@@ -370,11 +370,11 @@ A user logs in to a login node via the Internet.
     This is done by requesting an interactive node 
     from the SLURM scheduler.
 
-???- question "Your script downloads a human reference genome from a secure website. Will this work on Bianca? Why?"
+???- question "7. Your script downloads a human reference genome from a secure website. Will this work on Bianca? Why?"
 
     This will fail, because Bianca has (close to) no internet access.
 
-???- question "You have a problem on Bianca that is too hard to solve. Where do you ask us for help?"
+???- question "8. You have a problem on Bianca that is too hard to solve. Where do you ask us for help?"
 
     Google for 'UPPMAX support' or directly go to [https://www.uppmax.uu.se/support](https://www.uppmax.uu.se/support).
 
