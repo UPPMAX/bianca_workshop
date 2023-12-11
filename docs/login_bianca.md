@@ -252,10 +252,10 @@ using a website:
      > The second Bianca remote desktop login dialog. 
      > Note that it uses ThinLinc to establish this connection
      
-     !!! warning
+!!! warning
 
-         - Avoid choosing the KDE desktop if you want graphics to work smoothly also in interactive sessions on the compute nodes, see below.
-         - GNOME and XFCE has been proven better on this.
+    - Avoid choosing the KDE desktop if you want graphics to work smoothly also in interactive sessions on the compute nodes, see below.
+    - GNOME and XFCE has been proven better on this.
      
   5. Enjoy! You are in!
 
