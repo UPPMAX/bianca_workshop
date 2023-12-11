@@ -243,3 +243,4 @@ http
 bclaremar
 dec
 openMP
+lmod
