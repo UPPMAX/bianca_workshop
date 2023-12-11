@@ -324,12 +324,12 @@ ssh richel-sens2023598@bianca.uppmax.uu.se
 
 ![](./img/login_uppmax_bianca_website_outside_sunet_browser_short.png)
 
-???- question "Your colleague visits [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/) and sees nothing appear on the website (see also image above). What is likely the problem?"
+???- question "1. Your colleague visits [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/) and sees nothing appear on the website (see also image above). What is likely the problem?"
 
     He/she is not inside of SUNET. 
     Show him/her the section above on how to get into SUNET.
 
-???- question "Exercise: login into the Bianca remote desktop"
+???- question "2. Exercise: login into the Bianca remote desktop"
 
     The goal of this exercise is: (1) troubleshooting, to make sure one can access
     this environment (2) see how it looks like, this may help one decide to
@@ -337,13 +337,13 @@ ssh richel-sens2023598@bianca.uppmax.uu.se
 
     Note that you have to be within SUNET.
 
-???- question "Exercise: start a terminal in the Bianca remote desktop environment"
+???- question "3. Exercise: start a terminal in the Bianca remote desktop environment"
 
     The goal of this exercise is that one makes him/herself slightly
     familiar within the remote desktop environment. When one knows where
     it is, this exercise takes literally one mouse click.
 
-???- question "Exercise: login into the Bianca console environment"
+???- question "4. Exercise: login into the Bianca console environment"
 
     The goal of this exercise is: (1) troubleshooting, to make sure one can access
     this environment (2) see how it looks like, this may help one decide to
@@ -352,7 +352,7 @@ ssh richel-sens2023598@bianca.uppmax.uu.se
     Do this after having logged in to the Bianca remote desktop,
     as most troubleshooting occurs in that exercise.
 
-???- question "Your colleague finds out that one can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?"
+???- question "5. Your colleague finds out that one can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?"
 
     For that colleague, there seems to be no problem. 
     However, for everyone else this is a problem,
@@ -365,7 +365,7 @@ ssh richel-sens2023598@bianca.uppmax.uu.se
     and is described [here](slurm_intro.md).
     This is done by using the SLURM scheduler.
 
-???- question "You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
+???- question "6. You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
 
     This is the typical use-case to use an interactive node.
     One could also consider to develop code on a local computer 
