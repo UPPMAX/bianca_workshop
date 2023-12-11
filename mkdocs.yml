@@ -16,9 +16,10 @@ nav:
     - Exercises: exercises.md
   - Intermediate workshop/hackaton: 
     - Introduction: intermediate/intro.md
-    - IDE:s: intermediate/ides.md
     - Transferring files to/from Bianca: extra/transfer.md
+    - Slurm deeper: extra/slurm.md
     - Software and package installation: intermediate/install.md
+    - IDE:s: intermediate/ides.md
     - Summary: intermediate/summary.md
     - Extra material:
       - extra/slurm.md
