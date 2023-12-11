@@ -33,9 +33,9 @@
 
 - **Command-line intro**
 
-    - navigation 
-    - aliases
-    - chmod
+    - navigation, using `cd`
+    - file and directory management
+    - change file permission, using `chmod`
 
 
 - **Module system and workflows**
