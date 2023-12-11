@@ -16,7 +16,7 @@
 
     Schedule (15 minutes):
 
-    - x minutes: [...[
+    - x minutes: [...]
 
 ## Overview
 

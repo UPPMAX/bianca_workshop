@@ -9,7 +9,10 @@
 
     Teaching goals:
 
-    - The learners demonstrate [...]
+    - The learners demonstrate they can find a module
+    - The learners demonstrate they can load a module of a specific version
+    - The learners demonstrate they can unload a module
+    - The learners demonstrate they can load a module in a script
 
     Schedule (15 minutes):
 
