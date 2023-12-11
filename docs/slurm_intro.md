@@ -119,7 +119,7 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
 
 !!! info "Some keywords"
     - A program may run _serially_ and then needs only ONE _compute thread_, which will occupy 1 core, which is a physical unit of the CPU on the node.
-        - You should most often just book 1 node. If you require more than 7 GB you can allocate more cores and you will get multiples of 7 GB.
+        - You should most often just book 1 core. If you require more than 7 GB you can allocate more cores and you will get multiples of 7 GB.
     - A program may run in _parallel_ and then needs either several _threads_ or several _tasks_, both occupying several cores. 
         - If you need all 128 GB RAM (actually 112) or all 16 cores for your job, book a complete node.
 
