@@ -19,9 +19,8 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
 
-      - name: Remove folders that do not care about spelling
+      - name: Remove folders that must allow spelling mistakes
         run: |
-          rm -rf DevelopmentDesign
-          rm -rf feedback
+          rm -rf docs/reflections
 
       - uses: igsekor/pyspelling-any@v0.0.2
