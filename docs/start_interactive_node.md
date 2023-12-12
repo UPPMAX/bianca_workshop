@@ -7,6 +7,12 @@
     We keep it here for now, although we too know that git is
     a version control system :-)
 
+???- info Note to teachers
+
+    We teach `interactive` 
+    (over [`salloc`](https://slurm.schedmd.com/salloc.html)) 
+    as it is recommended by the UPPMAX system experts.
+    
 Bianca has three types of nodes:
 
 ???- tip "What are nodes?"
