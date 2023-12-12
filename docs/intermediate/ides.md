@@ -46,7 +46,7 @@ In all cases, we use an interactive node.
 
 RStudio is an IDE specialized for the R programming language.
 
-
+See [here](rstudio.md) to learn how to run RStudio on Bianca.
 
 ### Jupyter
 
