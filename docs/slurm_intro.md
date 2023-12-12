@@ -268,6 +268,10 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
 ### Try interactive and run RStudio
 
+!!! note "Copied to [intermediate/rstudio.md](intermediate/rstudio.md)"
+
+    One may consider linking to that page :-)
+
 We recommend using at least two cores for RStudio, and to get those resources, you must should start an interactive job.
 
 !!! example "Type-along"

@@ -25,6 +25,13 @@ Bianca has three types of nodes:
 - **interactive nodes**: a type of calculation node, 
   where a user can do calculations directly
 
+???- tip "How can I find out on which node I am?"
+
+    In a terminal, type `hostname`:
+
+    - the login node has `[project]-bianca`, where `[project]` is the name of the project, e.g. `sens2023598`
+    - the interactive node has `b[number]` in it, where `[number]` is the compute node number
+
 As a Bianca login is shared with all users, 
 there is a simple rule to use it fairly:
 
@@ -124,3 +131,11 @@ that uses 2 cores and has a maximum duration of 8 hours.
     capacity. 
     However, the number of core hours are registered as if the node is used
     at full capacity, as it is *reserved* to be used at that capacity.
+
+???- question "How to find out if you are on a login or interactive node"
+
+    In the terminal, type `hostname`
+
+    - the login node has `[project]-bianca`, where `[project]` is the name of the project, e.g. `sens2023598`
+    - the interactive node has `b[number]` in it, where `[number]` is the compute node number
+
