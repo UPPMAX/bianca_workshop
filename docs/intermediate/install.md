@@ -31,8 +31,8 @@
     - **Transfer** to the ``wharf``
     - Then, either 
         - You can install in your home directory.
-            - This is handy for personal needs, low numbers of files (i.e. not Conda).
-         - Usually better to install in project directory.
+            - This is handy for personal needs and low numbers of files — i.e. not Conda.
+        - Usually better to install in project directory.
             - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
     - Binaries for Linux on x86 and 64-bit should be able to be run directly as it is, see the software specific installation documentation.
     - or build from source, see next session.
@@ -41,10 +41,14 @@
 ### Build from source
 - To build from source use a **compiler module**
 - We have several compiler versions from GNU and INTEL
-- check with: ``$ ml avail gcc`` and ``$ ml avail intel``
+- Check with: ``$ ml avail gcc`` and ``$ ml avail intel``
 - [Guide for compiling **serial** programs](https://www.uppmax.uu.se/support/user-guides/compiling-source-code/){:target="_blank"}
 - [Guide for compiling **parallel** programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/){:target="_blank"}
     - [Available **combinations** of compilers and parallel libraries](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/#tocjump_48302061903476823_2){:target="_blank"}
+
+!!! info "Own development and Git"
+
+    - [Own development and git](https://uppmax.github.io/bianca_workshop/extra/devel/)
 
 
 ## Packages and libraries to scripting programs
@@ -56,7 +60,7 @@
 
 !!! info "Tip Python packages"
 
-    - Try Conda first directly on Bianca. We have mirrored all major Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
+    - Try Conda first directly on Bianca. We have mirrored all _major_ Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
     - If you want to keep number of files down, use PyPI (pip), but then you need to use Rackham and the ``wharf``.
 
 ### Conda
@@ -79,7 +83,7 @@
 
 !!! info "More info"
 
-    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/conda/)
+    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
     - [Conda user guide](https://www.uppmax.uu.se/support/user-guides/conda-user-guide/)
     - [UPPMAX Python user guide: Conda](https://www.uppmax.uu.se/support/user-guides/python-user-guide/#tocjump_9332829429720808_6)
 
@@ -98,7 +102,7 @@
 
 !!! info "More info"
 
-    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/pip/){:target="_blank"}
+    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/extra/pip/){:target="_blank"}
     - [UPPMAX Python user guide: Pip](https://www.uppmax.uu.se/support/user-guides/python-user-guide/#tocjump_9332829429720808_5){:target="_blank"}
     - [From Python course: packages](https://uppmax.github.io/R-python-julia-HPC/python/packages.html){:target="_blank"}
     - [From Python course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/python/isolated.html){:target="_blank"}
@@ -139,7 +143,7 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 
 !!! info "More info"
 
-    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/rpackages/)
+    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
     - [From R course: packages](https://uppmax.github.io/R-python-julia-HPC/R/packagesR.html){:target="_blank"}
     - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html){:target="_blank"}
 
@@ -166,7 +170,7 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 
 !!! info "More info"
 
-    - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/julia/){:target="_blank"}
+    - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
     - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html){:target="_blank"}
 
 ## "Containers"
@@ -183,9 +187,17 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 
 !!! info "More info"
 
-    - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/containers/)
+    - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/)
 
+## Demo session
 
+!!! example "What do you want to type-along"
+
+    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
+    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/extra/pip/){:target="_blank"}
+    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
+    - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
+    - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/)
 
 !!! abstract "Keypoints"
     - You have got an overview of the procedures to install packages/libraries and tools on Bianca through the ``wharf``
