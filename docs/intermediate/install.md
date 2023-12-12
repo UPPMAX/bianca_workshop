@@ -46,6 +46,10 @@
 - [Guide for compiling **parallel** programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/){:target="_blank"}
     - [Available **combinations** of compilers and parallel libraries](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/#tocjump_48302061903476823_2){:target="_blank"}
 
+!!! info "Own development and Git"
+
+    - [Own development and git](https://uppmax.github.io/bianca_workshop/extra/devel/)
+
 
 ## Packages and libraries to scripting programs
 
@@ -185,7 +189,15 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 
     - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/)
 
+## Demo session
 
+!!! example "What do you want to type-along"
+
+    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
+    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/extra/pip/){:target="_blank"}
+    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
+    - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
+    - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/)
 
 !!! abstract "Keypoints"
     - You have got an overview of the procedures to install packages/libraries and tools on Bianca through the ``wharf``
