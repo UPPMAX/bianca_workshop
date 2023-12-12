@@ -7,7 +7,7 @@
     We keep it here for now, although we too know that git is
     a version control system :-)
 
-???- info Note to teachers
+???- info "Note to teachers"
 
     We teach `interactive` 
     (over [`salloc`](https://slurm.schedmd.com/salloc.html)) 
