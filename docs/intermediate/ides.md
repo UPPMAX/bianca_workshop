@@ -18,7 +18,7 @@
 
 ## Introduction
 
-IDE (pronounce 'aj-dee-ee') is short for 'Integrated Development Environment',
+IDE (pronounce `aj-dee-ee`) is short for 'Integrated Development Environment',
 or 'a program in which you do programming'.
 The goal of an IDE is to help develop code, with features
 such as code completion, code hints and interactive debugging.
