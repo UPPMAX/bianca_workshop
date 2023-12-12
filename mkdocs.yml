@@ -34,7 +34,6 @@ nav:
       - extra/julia.md
       - extra/containers.md
       - extra/devel.md
-      - extra/jupyter.md
      
  
 theme:

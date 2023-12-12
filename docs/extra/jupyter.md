@@ -1,5 +1,10 @@
 # Running Jupyter on Bianca
 
+???- warning "For teachers"
+
+    This content is copied to [../intermediate/jupyter.md].
+
+
 !!! info
 
     - You can run Python in a **Jupyter-notebook**, i.e. in a web interface with possibility of inline figures and debugging.
