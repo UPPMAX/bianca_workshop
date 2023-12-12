@@ -1,7 +1,10 @@
 # bianca_workshop
 
-This repository contains the source code for the [Bianca workshop](https://uppmax.github.io/bianca_workshop/)
+[![Build pages](https://github.com/UPPMAX/bianca_workshop/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/UPPMAX/bianca_workshop/actions/workflows/pages/pages-build-deployment)
+[![Check links](https://github.com/UPPMAX/bianca_workshop/actions/workflows/check_links.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/bianca_workshop/actions/workflows/check_links.yaml)
+[![Check spelling](https://github.com/UPPMAX/bianca_workshop/actions/workflows/check_spelling.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/bianca_workshop/actions/workflows/check_spelling.yaml)
 
+This repository contains the source code for the [Bianca workshop](https://uppmax.github.io/bianca_workshop/)
 
 ## Credits
 
