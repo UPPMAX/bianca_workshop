@@ -123,7 +123,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
 ## Questions
 
-!!! warning To be merged/moved with/to SLURM
+!!! warning "To be merged/moved with/to SLURM"
 
     This content is to be merged/moved with/to [SLURM](slurm_intro.md).
 
