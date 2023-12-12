@@ -116,7 +116,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
 !!! note "Has Bianca frozen?"
 
-    It can take multiple minutes before an interactive node is allocated.
+    It can take tens of minutes before an interactive node is allocated.
     Bianca is not frozen :-)
 
 ???- tip "`interactive` does support `--account`"
