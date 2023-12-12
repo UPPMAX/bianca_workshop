@@ -51,6 +51,7 @@
 
     - Architecture:          **x86_64**
         - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes
+        - Advanced Vector Extensions 2 (AVX2)
     - CPU op-mode(s):        32-bit, 64-bit
     - Byte Order:            Little Endian
     - CPU(s):                16
@@ -58,7 +59,6 @@
     - Core(s) per socket:    8
     - Socket(s):             2
     - NUMA node(s):          2
-    - Vendor ID:             GenuineIntel
     - Model name:            Intel Core Processor (Haswell, no TSX, IBRS)
     - CPU MHz:               2394.446
     - For more info, type: ``lscpu`` in the terminal 
