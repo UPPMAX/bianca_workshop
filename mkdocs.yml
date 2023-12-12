@@ -21,6 +21,9 @@ nav:
     - Slurm deeper: intermediate/slurm_intermed.md
     - Software and package installation: intermediate/install.md
     - IDE:s: intermediate/ides.md
+      - Jupyter: intermediate/ides.md
+      - RStudio: intermediate/rstudio.md
+      - VSCodium: intermediate/vscodium.md
     - Summary: intermediate/summary.md
     - Extra material:
       - extra/slurm.md
