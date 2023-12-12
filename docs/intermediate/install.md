@@ -8,7 +8,7 @@
 
 ## The module system
 
-- As we have seen this morning, there is a **lot of programs and tools installed as modules** on Bianca.
+- There is a **lot of programs and tools installed as modules** on Bianca.
 - These have typically been **installed on Rackham** and is **synced over to Bianca a couple of times per day**.
 - **You can request installations** but that may take **several days or weeks** to be handled by the application experts at UPPMAX.
 - But you may be able to do **installations yourself**. Here the use of Rackham comes handy because of the:
