@@ -44,7 +44,7 @@ it must be run on an interactive node.
 
 To start RStudio, on needs to
 
-- Start an interactive seesion
+- Start an interactive session
 
 ### Start an interactive session
 
