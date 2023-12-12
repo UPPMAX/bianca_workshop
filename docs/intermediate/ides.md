@@ -35,6 +35,13 @@ In all cases, we login to the Bianca remote desktop environment.
 
     See [the basic Bianca course page 'Logging in'](../login_bianca.md).
 
+In all cases, we use an interactive node.
+
+???- tip "Forgot how to start an interactive node?"
+
+    See [the basic Bianca course page 'Logging in'](../login_bianca.md).
+
+
 ### RStudio
 
 RStudio is an IDE specialized for the R programming language.
