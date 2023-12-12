@@ -328,7 +328,7 @@ echo Hello world!
 Examine the jobs run by user `douglas`. The relevant job numbers are the jobs with the highest jobid= numbers that have the names names `run_good.sh` and `run_poor.sh`. These should appear at the end of the output. 
 
 - You can be in your ``~`` dir!
-- Some background info may be found in the [extra material](https://uppmax.github.io/bianca_workshop/slurm/){:target="_blank"}.
+- Some background info may be found in the [extra material](https://uppmax.github.io/bianca_workshop/extra/slurm/){:target="_blank"}.
 
     ``finishedjobinfo -u douglas``
 
