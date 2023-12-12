@@ -54,7 +54,7 @@ See [here](rstudio.md) to learn how to run RStudio on Bianca.
 
 Jupyter is an IDE specialized for the Python programming language.
 
-tip use the material here: <https://uppmax.github.io/bianca_workshop/extra/jupyter/>
+See [here](jupyter.md) to learn how to run Jupyter on Bianca.
 
 ### VSCodium
 
