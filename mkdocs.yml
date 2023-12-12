@@ -17,8 +17,8 @@ nav:
   - Intermediate workshop/hackaton: 
     - Introduction: intermediate/intro.md
     - Intro to NAISS-SENS and sensitive data: sens_project_short.md
-    - Transferring files to/from Bianca: extra/transfer.md
-    - Slurm deeper: extra/slurm.md
+    - Transferring files to/from Bianca: intermediate/transfer.md
+    - Slurm deeper: intermediate/slurm_intermed.md
     - Software and package installation: intermediate/install.md
     - IDE:s: intermediate/ides.md
     - Summary: intermediate/summary.md

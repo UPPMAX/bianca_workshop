@@ -244,3 +244,16 @@ bclaremar
 dec
 openMP
 lmod
+snic
+supr
+md
+VSCodium
+vscod
+mf
+sw
+SCB
+Alvis
+vera
+analysed
+Bioinformatician
+Niels Krämer
