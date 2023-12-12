@@ -5,6 +5,11 @@ and feel your workflow can be improved?
 If yes, welcome to a full day of learning of smarter ways 
 to work on the Bianca UPPMAX cluster. 
 
+???- tip "I am new to Bianca, where do I start?"
+
+    As a beginner, you are encouraged to start with the
+    basic Bianca course, at [here](../intro.md).
+
 You will learn how to login from a terminal (bypassing ThinLinc), 
 do file transfer from a terminal (allowing scripts), 
 advanced SLURM, using IDEs (i.e. RStudio and/or VSCode), 
