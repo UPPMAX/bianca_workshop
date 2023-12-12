@@ -61,7 +61,7 @@ Examples of heavy things are:
 
 ### Use-case for using an interactive node
 
-!!! warning To be merged/moved with/to SLURM
+!!! warning "To be merged/moved with/to SLURM"
 
     This content is to be merged/moved with/to [SLURM](slurm_intro.md).
 
