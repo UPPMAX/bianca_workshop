@@ -20,7 +20,7 @@ nav:
     - Transferring files to/from Bianca: intermediate/transfer.md
     - Slurm deeper: intermediate/slurm_intermed.md
     - Software and package installation: intermediate/install.md
-    - IDE:s: intermediate/ides.md
+    - IDEs: intermediate/ides.md
       - Jupyter: intermediate/jupyter.md
       - RStudio: intermediate/rstudio.md
       - VSCodium: intermediate/vscodium.md
