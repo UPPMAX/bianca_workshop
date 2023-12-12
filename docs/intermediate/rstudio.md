@@ -31,6 +31,8 @@ using Bianca's remote desktop environment.
 
     See [the basic Bianca course page 'Logging in'](../login_bianca.md).
 
+    Spoiler: go to [https://bianca.uppmax.uu.se/](https://bianca.uppmax.uu.se/)
+
 As RStudio is a resource-heavy program,
 it must be run on an interactive node.
 
