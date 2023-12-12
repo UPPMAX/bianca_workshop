@@ -46,9 +46,28 @@
 - [Guide for compiling **parallel** programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/){:target="_blank"}
     - [Available **combinations** of compilers and parallel libraries](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/#tocjump_48302061903476823_2){:target="_blank"}
 
+
+???- info "About CPU hardware on Bianca"
+
+    - Architecture:          **x86_64**
+        - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes
+    - CPU op-mode(s):        32-bit, 64-bit
+    - Byte Order:            Little Endian
+    - CPU(s):                16
+    - Thread(s) per core:    1
+    - Core(s) per socket:    8
+    - Socket(s):             2
+    - NUMA node(s):          2
+    - Vendor ID:             GenuineIntel
+    - Model name:            Intel Core Processor (Haswell, no TSX, IBRS)
+    - CPU MHz:               2394.446
+    - For more info, type: ``lscpu`` in the terminal 
+
+
 !!! info "Own development and Git"
 
     - [Own development and git](https://uppmax.github.io/bianca_workshop/extra/devel/)
+
 
 
 ## Packages and libraries to scripting programs
