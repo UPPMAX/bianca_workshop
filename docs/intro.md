@@ -8,23 +8,24 @@ You will learn about the national infrastructure Bianca is part of, how to login
 
 Tentative schedule:
 
-
-    9.00 [Introduction](intro.md)
-    9.15 NAISS-Sens
-    9.35 [Login](login_bianca.md)
-    9.55 coffee break
-    10.10 [Command line](commandline.md)
-    10.55 break
-    11.10 [Modules](modules1.md)
-    12.00 Lunch
-    13.00 [Transferring files to and from Bianca](transfer_basics.md)
-    13.55 break
-    14.10 [Compute nodes and SLURM](slurm_intro.md)
-    14.55 Coffee break
-    15.10 Summary
-    15.15 Q/A
-    15.55 Closing words
-    16.00 END
+Time |Topic
+-----|------------------------
+9:00 |[Introduction](intro.md)
+9:15 |[NAISS-Sens](sens_project_short.md)
+9:35 |[Login](login_bianca.md)
+9:55 |Break
+10:10|[Command line](commandline.md)
+10:55|Break
+11:10|[Modules](modules1.md)
+12:00|Lunch
+13:00|[Transferring files to and from Bianca](transfer_basics.md)
+13:55|Break
+14:10|[Compute nodes and SLURM](slurm_intro.md)
+14:55|Break
+15:10|Summary
+15:15|Q/A
+15:55|Closing words
+16:00|END
 
 !!! info "Q/A collaboration document"
 
