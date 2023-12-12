@@ -31,7 +31,7 @@ In this session, we show how to use the most popular IDEs on Bianca.
 
 In all cases, we login to the Bianca remote desktop environment.
 
-???- tip "Forgot how to login?"
+???- tip "Forgot how to login to a remote desktop environment?"
 
     See [the basic Bianca course page 'Logging in'](../login_bianca.md).
 
@@ -39,7 +39,7 @@ In all cases, we use an interactive node.
 
 ???- tip "Forgot how to start an interactive node?"
 
-    See [the basic Bianca course page 'Logging in'](../login_bianca.md).
+    See [the basic Bianca course page 'Starting an interactive node'](../start_interactive_node.md).
 
 
 ### RStudio
