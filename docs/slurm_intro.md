@@ -394,6 +394,8 @@ echo Hello world!
     - ``-C mem512GB`` allocate a fat node with 512 GB RAM
     - ``-C gpu``
     - ``-p node`` must be used when allocating these nodes
+    - GPU example asking for a node, using one GPU and 3 CPU cores. TIP: ask always for more than one hour!
+        - ``interactive -A <proj> -n 3 -C gpu --gres=gpu:1 -t 01:10:00``
 
 !!! note "Some Limits"
 
@@ -437,7 +439,7 @@ echo Hello world!
     
     - Two alternatives
         - ``sbatch <jobscript with all #SBATCH options>``
-        -`` sbatch <options that will be prioritized over the options within the jobs script> <jobscript>``
+        - ``sbatch <options that will be prioritized over the options within the jobs script> <jobscript>``
            - can for instance be used if you just want to test with, for instance, fewer cores and shorter time
            - Example: ``sbatch -t  60:00 -p devcore -n 2 job.sh``
           
