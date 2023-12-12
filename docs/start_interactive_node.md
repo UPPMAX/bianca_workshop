@@ -96,7 +96,7 @@ flowchart TD
 To use an interactive node, in a terminal, type:
 
 ```bash
-interactive -A [project name] -p core -n [number_of_cores] -t [session_duration]
+interactive -A [project name] -p [partition] -n [number_of_cores] -t [session_duration]
 ```
 
 For example:
@@ -105,8 +105,15 @@ For example:
 interactive -A sens2023598 -p core -n 2 -t 8:0:0
 ```
 
-This starts an interactive session using project `sens2023598` 
-that uses 2 cores and has a maximum duration of 8 hours.
+This starts an interactive session using project `sens2023598`
+on a `core` partition, that uses 2 cores and has a maximum duration of 8 hours.
+
+???- tip "`interactive` does support `--account`"
+
+    `interactive` is an UPPMAX script to call
+    [the SLURM  `salloc` command](https://slurm.schedmd.com/salloc.html).
+    Although `salloc` supports both `-A` and `--account`, `interactive`
+    does not do so yet.
 
 ## Questions
 
