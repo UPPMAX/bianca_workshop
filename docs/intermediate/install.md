@@ -41,7 +41,12 @@
 ### Build from source
 - To build from source use a **compiler module**
 - We have several compiler versions from GNU and INTEL
-- Check with: ``$ ml avail gcc`` and ``$ ml avail intel``
+     - Check with: ``$ ml avail gcc`` and ``$ ml avail intel``
+- ``make`` is installed on the system
+    - :warning: It could happen that the "Makefile" contains web fetching, which will not work from Bianca.
+    - Usually it is not a problem to build on Rackham and move to Bianca.
+- ``Cmake`` is availabla as module
+     - Check with: ``$ ml avail cmake``
 - [Guide for compiling **serial** programs](https://www.uppmax.uu.se/support/user-guides/compiling-source-code/){:target="_blank"}
 - [Guide for compiling **parallel** programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/){:target="_blank"}
     - [Available **combinations** of compilers and parallel libraries](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/#tocjump_48302061903476823_2){:target="_blank"}
@@ -51,7 +56,7 @@
 
     - Architecture:          **x86_64**
         - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes
-        - Advanced Vector Extensions 2 (AVX2)
+        - Advanced Vector Extensions 2 (**AVX2**)
     - CPU op-mode(s):        32-bit, 64-bit
     - Byte Order:            Little Endian
     - CPU(s):                16
