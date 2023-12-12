@@ -8,17 +8,18 @@ You will learn about the national infrastructure Bianca is part of, how to login
 
 Tentative schedule:
 
-    9.00 Introduction
+
+    9.00 [Introduction](intro.md)
     9.15 NAISS-Sens
-    9.35 Login using Thinlinc
+    9.35 [Login](login_bianca.md)
     9.55 coffee break
-    10.10 Command line intro specific to Bianca
+    10.10 [Command line](commandline.md)
     10.55 break
-    11.10 Module system
+    11.10 [Modules](modules1.md)
     12.00 Lunch
-    13.00 Intro to transferring files to and from Bianca
+    13.00 [Transferring files to and from Bianca](transfer_basics.md)
     13.55 break
-    14.10 Compute nodes and SLURM
+    14.10 [Compute nodes and SLURM](slurm_intro.md)
     14.55 Coffee break
     15.10 Summary
     15.15 Q/A
@@ -37,4 +38,50 @@ Tentative schedule:
 
     - Create a new line for new questions. Take care if others are editing at the same time.
 
+## Overview of courses
+
+```mermaid
+flowchart TD
+
+    %% Give a white background, instead of a transparent one
+    classDef node fill:#fff,color:#000,stroke:#000
+
+    subgraph sub_prerequisites["Preprequisites to use Bianca"]
+      can_login(Can login)
+      can_use_command_line(Can use the command line)
+      can_create_bash_script(Can create a bash script)
+      can_use_modules(Can use modules)
+      can_use_interactive_node(Can use an interactive node)
+    end
+    style sub_prerequisites fill:#f00,color:#000,stroke:#faa
+
+    subgraph sub_basic_use["Basic use of Bianca"]
+      can_develop_code_interactively(Can develop code interactively)
+      can_tranfer_files_using_gui(Can transfer files using graphical user interface)
+      can_tranfer_files_using_cli(Can transfer files using a command-line tool)
+      can_schedule_jobs(Can schedule jobs)
+      can_use_ide(Can use an IDE)
+    end
+    style sub_basic_use fill:#ff0,color:#000,stroke:#ffa
+
+    subgraph sub_intermediate_use["Intermediate use of Bianca"]
+      can_use_custom_software(Can use custom software)
+      can_monitor_jobs(Can monitor jobs)
+    end
+    style sub_intermediate_use fill:#0f0,color:#000,stroke:#afa
+
+    can_login ---> can_use_command_line
+    can_login ---> can_tranfer_files_using_gui
+    can_use_command_line --> can_create_bash_script
+    can_use_command_line --> can_use_modules
+    can_use_command_line --> can_use_interactive_node
+    can_use_command_line --> can_tranfer_files_using_cli
+    can_use_modules --> can_schedule_jobs
+    can_create_bash_script --> can_schedule_jobs
+    can_schedule_jobs --> can_monitor_jobs
+    can_use_interactive_node --> can_use_ide
+    can_use_interactive_node --> can_develop_code_interactively
+    can_tranfer_files_using_cli --> can_use_custom_software
+    can_tranfer_files_using_gui --> can_use_custom_software
+```
     
