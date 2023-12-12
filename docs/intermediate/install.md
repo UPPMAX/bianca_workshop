@@ -8,6 +8,10 @@
 
 ## The module system
 
+???- tip "Forgot how to use the module system?"
+
+    See [the basic Bianca course page 'Using the module system'](../modules1.md).
+
 - There is a **lot of programs and tools installed as modules** on Bianca.
 - These have typically been **installed on Rackham** and is **synced over to Bianca a couple of times per day**.
 - **You can request installations** but that may take **several days or weeks** to be handled by the application experts at UPPMAX.
