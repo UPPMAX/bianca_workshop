@@ -114,7 +114,8 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
     -   Example:
 
     ``` bash 
-        export CONDA_ENVS_PATH=/proj/<your-project-id>/nobackup/<username>
+        export CONDA_ENVS_PATH=/proj/<your-project-id>/nobackup/<username>/condaenvs
+        export CONDA_PKG_DIRS=/proj/<your-project-id>/nobackup/<username>/condapkg
     ```
     
     ??? info "By choice"
@@ -144,6 +145,13 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
         - It all worked if you get something like this:
   
         ```bash
+        # To activate this environment, use
+        #
+        #     $ conda activate python36-env 
+        #
+        # To deactivate an active environment, use
+        #
+        #     $ conda deactivate
 
         ```
        
