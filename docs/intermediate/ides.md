@@ -41,7 +41,6 @@ In all cases, we use an interactive node.
 
     See [the basic Bianca course page 'Starting an interactive node'](../start_interactive_node.md).
 
-
 ### RStudio
 
 RStudio is an IDE specialized for the R programming language.
@@ -56,9 +55,7 @@ tip use the material here: <https://uppmax.github.io/bianca_workshop/extra/jupyt
 
 ### VSCodium
 
-VSCodium is an IDE that can be used for software development in many languages.
+VSCodium is the community edition of Visual Studio Code
+and can be used for software development in many languages.
 
-ml av vscod
-
--------------------------- /sw/mf/bianca/applications --------------------------
-   VSCodium/latest
+See [here](vscodium.md) to learn how to run VSCodium on Bianca.
