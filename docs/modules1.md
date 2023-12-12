@@ -14,11 +14,11 @@
     - The learners demonstrate they can unload a module
     - The learners demonstrate they can load a module in a script
 
-    Schedule (15 minutes):
+    Schedule (45 minutes):
 
     - 5 minutes: summarize page, start exercise
-    - 10 minutes: let learners do exercise
-    - 5 minutes: feedback
+    - 30 minutes: let learners do exercise
+    - 10 minutes: feedback
 
 ## Why Bianca uses environment modules
 

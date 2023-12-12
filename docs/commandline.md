@@ -14,9 +14,11 @@
     - The learners demonstrate they can create and delete folders
     - The learners demonstrate they can create an executable script
 
-    Schedule (15 minutes):
+    Schedule (45 minutes):
 
-    - x minutes: [...]
+    - 5 minutes: summarize page, start exercise
+    - 30 minutes: let learners do exercise
+    - 10 minutes: feedback
 
 ## Overview
 

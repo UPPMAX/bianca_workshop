@@ -16,11 +16,11 @@
     - The learners demonstrate to have started a terminal in the Bianca remote desktop environment
     - The learners demonstrate to have logged in to the Bianca console environment 
 
-    Schedule (20 minutes):
+    Schedule (45 minutes):
 
-    - 5 minutes: talk about page structure
-    - 10 minutes: exercise: answer the questions at the bottom in a shared document
-    - 5 minutes: discuss answers
+    - 5 minutes: summarize page, start exercise
+    - 30 minutes: let learners do exercise
+    - 10 minutes: feedback
 
 ## Overview
 
