@@ -145,6 +145,8 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
   
         ```bash
 
+        ```
+       
         To activate this environment, use
 
             $ mamba activate python36-env
