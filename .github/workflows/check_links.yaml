@@ -18,6 +18,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-verbose-mode: 'yes'
 
       # Cannot deal with emails :-/
       #- uses: lycheeverse/lychee-action@v1.2.0
