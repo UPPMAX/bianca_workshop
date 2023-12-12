@@ -1,6 +1,6 @@
 # Starting an interactive node
 
-!!! warning To be merged/moved with/to SLURM
+!!! warning "To be merged/moved with/to SLURM"
 
     This content is to be merged/moved with/to [SLURM](slurm_intro.md).
 
@@ -102,17 +102,17 @@ flowchart TD
 To use an interactive node, in a terminal, type:
 
 ```bash
-interactive -A [project name] -p [partition] -n [number_of_cores] -t [session_duration]
+interactive -A [project name] -n [number_of_cores] -t [session_duration]
 ```
 
 For example:
 
 ```bash
-interactive -A sens2023598 -p core -n 2 -t 8:0:0
+interactive -A sens2023598 -n 2 -t 8:0:0
 ```
 
 This starts an interactive session using project `sens2023598`
-on a `core` partition, that uses 2 cores and has a maximum duration of 8 hours.
+that uses 2 cores and has a maximum duration of 8 hours.
 
 ???- tip "`interactive` does support `--account`"
 
