@@ -61,6 +61,7 @@ flowchart TD
       can_tranfer_files_using_gui(Can transfer files using graphical user interface)
       can_tranfer_files_using_cli(Can transfer files using a command-line tool)
       can_schedule_jobs(Can schedule jobs)
+      %% Richel: I think this is basic use, as it is beginners that want this
       can_use_ide(Can use an IDE)
     end
     style sub_basic_use fill:#ff0,color:#000,stroke:#ffa
