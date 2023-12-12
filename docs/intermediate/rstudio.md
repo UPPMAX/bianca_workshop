@@ -63,7 +63,7 @@ Start an interactive session with 2 cores.
     Spoiler: use:
 
     ```
-    interactive -A sens2023598 -p core -n 2 -t 8:0:0
+    interactive -A sens2023598 -n 2 -t 8:00:00
     ```
 
 ### Load the modules needed
