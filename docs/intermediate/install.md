@@ -49,8 +49,7 @@
      - Check with: ``$ ml avail cmake``
 - [Guide for compiling **serial** programs](https://www.uppmax.uu.se/support/user-guides/compiling-source-code/){:target="_blank"}
 - [Guide for compiling **parallel** programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/){:target="_blank"}
-    - [Available **combinations** of compilers and parallel libraries](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/#tocjump_48302061903476823_2){:target="_blank"}
-
+    - [Available **combinations** of compilers and parallel libraries](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/#tocjump_7075108295107558_2){:target="_blank"}
 
 ???- info "About CPU hardware on Bianca"
 
