@@ -68,7 +68,13 @@
 - **IDE:s  on Bianca**
 
     - RStudio
+
+        - Run in interactive session
  
-    - Jupyter-notbeook
+    - Jupyter
+ 
+        - Run in interactive session
  
     - VSCodium
+
+        - Run in interactive session
