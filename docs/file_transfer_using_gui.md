@@ -1,6 +1,6 @@
 # File transfer using graphical tools
 
-## Abstract
+## Overview
 
 Here we learn how to transfer files
 to Bianca using a graphical tool/program.
@@ -8,7 +8,7 @@ to Bianca using a graphical tool/program.
 There are constraints on which programs
 we can use, due to Bianca being an HPC cluster
 for sensitive data.
-Details are described in 'Introduction'.
+Details are described in 'Bianca's constraints'.
 
 When using such a graphical tool, 
 one needs to be inside of SUNET.
@@ -18,7 +18,7 @@ The full procedure is described in 'Using FileZilla'.
 The files you transfer will end up in your so-called `wharf` folder.
 Where to find this folder is shown in the section 'Where do my files end up?'.
 
-## Introduction
+## Bianca's constraints
 
 Bianca is an HPC cluster for sensitive data.
 To protect that sensitive data,
