@@ -1,12 +1,5 @@
 # Starting an interactive node
 
-!!! warning "To be merged/moved with/to SLURM"
-
-    This content is to be merged/moved with/to [SLURM](slurm_intro.md).
-
-    We keep it here for now, although we too know that git is
-    a version control system :-)
-
 ???- info "Note to teachers"
 
     We teach `interactive` 
