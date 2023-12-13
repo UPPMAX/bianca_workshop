@@ -107,8 +107,8 @@ following channels available:
     - Since python or other packages are dependent on each-other expect solving the versions takes some time.
     - use an interactive session!
 
-1.  ``` bash 
-        module load conda
+1.  ```bash 
+    module load conda
     ```
     
     - This grants you access to the latest version of Conda and all major repositories on all UPPMAX systems.
@@ -119,9 +119,9 @@ following channels available:
 
     - Example:
 
-    ```bash
-    conda create --prefix  $CONDA_ENVS_PATH/python36-env python=3.6 numpy=1.13.1 matplotlib=2.2.2
-    ```
+        ```bash
+        conda create --prefix  $CONDA_ENVS_PATH/python36-env python=3.6 numpy=1.13.1 matplotlib=2.2.2
+        ```
 
     !!! info "The `mamba` alternative"
         -   `mamba` is a fast drop-in alternative to conda, using
@@ -165,7 +165,7 @@ following channels available:
 
     - You will see that your prompt is changing to start with `(python-36-env)` to show that you are within an environment.
 
-    - you can also see the installed packages by:
+    - You can also see the installed packages by:
   
     ```bash
     conda list
