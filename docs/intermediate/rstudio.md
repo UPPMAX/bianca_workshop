@@ -74,22 +74,16 @@ These should be loaded via the module system.
 In the terminal of the interactive session, do:
 
 ```
-module load R_packages/4.2.1`
-module load RStudio/2022.07.1-554`
-```
-
-Newest, untested:
-
-```
 module load R_packages/4.3.1 RStudio/2023.06.2-561
 ```
 
 ### Start RStudio
 
-With the modules loaded, start RStudio:
+With the modules loaded, start RStudio from the terminal (on the
+interactive node):
 
 ```
-rstudio &
+rstudio
 ```
 
 RStudio can be slow to startup, as R has thousands (!) of packages.
