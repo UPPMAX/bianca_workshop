@@ -105,21 +105,30 @@ Additionally, at startup and if enabled, your saved RStudio workspace
 
 
 ???- info "How does RStudio look on Bianca?"
+
+    RStudio when starting up:
+
     ![](./img/rstudio_starting_up.png)
+
+    RStudio when started up:
+
     ![](./img/rstudio_started.png)
+
+    RStudio in action:
+
     ![](./img/rstudio_in_action.png)
 
+    The RStudio debugger, at the error message level:
 
-bianca_hostnames_2.png
-bianca_hostnames.png
-rstudio_debugger_at_error_level.png
-rstudio_debugger_at_function_level.png
-rstudio_debugger_at_program_level.png
-vscodium_module.png
-vscodium_on_bianca.png
-waiting_for_interactive.png
+    ![](./img/rstudio_debugger_at_error_level.png)
 
+    The RStudio debugger, at the function-that-caused-the-error level:
 
+    ![](./img/rstudio_debugger_at_function_level.png)
+
+    The RStudio debugger, at the program level:
+
+    ![](./img/rstudio_debugger_at_program_level.png)
 
 ## Exercises
 
@@ -127,6 +136,9 @@ waiting_for_interactive.png
 
     The goal of this exercise is to make sure you can start
     RStudio.
+
+    How to start RStudio is in the instructions above
+    and in [this YouTube video](https://youtu.be/i7sjHOX4B_M).
 
 ???- question "How to find out if you are on a login or interactive node"
 
