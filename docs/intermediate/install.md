@@ -85,7 +85,7 @@
 
 ### Python 
 
-- Chack python versions: ``ml avail python``
+- Check python versions: ``ml avail python``
 - load a python version: ``ml python/3.10.8``
 - from the Python shell with the ``import`` command
 - from BASH shell with the 
