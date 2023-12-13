@@ -197,7 +197,7 @@ To transfer files to/from Bianca using WinSCP, do:
     It is discussed [at the 'login to Bianca' page](login_bianca.md). 
 
 - Start WinSCP
-- Create a new ite
+- Create a new site
 - For that site, use all standards, except:
     - Set file protocol to 'SFTP'
     - Set host name to `bianca-sftp.uppmax.uu.se`
