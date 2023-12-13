@@ -264,3 +264,4 @@ Makefile
 svg
 env
 precompile
+gcc
