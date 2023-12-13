@@ -17,7 +17,36 @@ This means that files cannot be downloaded directly.
 
 Instead, one needs to learn one of the many ways to do **secure** file transfer.
 
-Here it is shown how to do file secure transfer using graphical tools.
+Here, we show how to transfer files using a graphical tool called FileZilla.
+
+In general, one can pick any graphical tools with these constraints:
+
+- the tool must support SFTP
+- the tool must not store a password
+
+Whatever tool one picks, it must do secure file transfer.
+For secure file transfer, Bianca supports the SFTP protocol.
+So, for secure file transfer to Bianca, one needs a tool
+that supports SFTP.
+
+???- warning "Use SFTP: why SCP will never work"
+
+    You must use SFTP. 
+
+    However, some users find tools that support
+    another protocol called 'SCP'. 
+    We understand the confusion, due
+    to the many technical and abbreviated terms. 
+
+    Only SFTP will work.
+
+Whatever tool one picks, additionally, the tool must **not** store a password.
+Due to security reasons, one needs to connect to Bianca using a password
+**and** a two-factor authentication number (e.g. `VerySecret123456`).
+If a tool stores a password, that password will be valid for only one session.
+
+One tool that can be used for file transfer to Bianca
+is FileZilla, which is described in detail below.
 
 ## Get inside SUNET
 
@@ -40,7 +69,7 @@ Do:
 
     It is here:
 
-    ![](filezilla_file_site_manager.png)
+    ![](./img/filezilla_file_site_manager.png)
 
 - Click 'New site'
 
@@ -48,7 +77,7 @@ Do:
 
     It is here:
 
-    ![](filezilla_site_manager.png)
+    ![](./img/filezilla_site_manager.png)
 
 - Create a name for the site, e.g. `bianca-sens123456`.
 - For that site, use all standards, except:
@@ -60,9 +89,9 @@ Do:
 
     It looks similar to these:
 
-    ![](filezilla_setup_bianca_pavlin.png)
+    ![](./img/filezilla_setup_bianca_pavlin.png)
 
-    ![](filezilla_setup_bianca_richel.png)
+    ![](./img/filezilla_setup_bianca_richel.png)
 
 !!! tip "Storing a password is useless"
 
@@ -81,7 +110,7 @@ Now you can transfer files between your local computer and Bianca.
 
     It looks like this
 
-    ![](filezilla_login_to_bianca.png)
+    ![](./img/filezilla_login_to_bianca.png)
 
 ### WinSCP (Windows)
 
