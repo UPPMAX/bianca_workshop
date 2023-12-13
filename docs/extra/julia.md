@@ -34,7 +34,7 @@
 ```
 ### First time run on Bianca
 
-You may have to build a package the first time with ``Pkg.build(“<package>”)``. Since “<package> is pre-installed centrally on UPPMAX you must activate the central environment by following these steps below. This should only be needed the first time like this
+You may have to build some package the first time with ``Pkg.build(“<package>”)``. Since “<package>" is pre-installed centrally on UPPMAX you must activate the central environment by following these steps below. This should only be needed the first time like this
 
 ``` julia
 > using Pkg
@@ -122,3 +122,6 @@ mv –a  <file(s)> ~/.julia/packages/
     $ mv –a  <file(s)> .julia/packages/
     ```
 
+!!! info "More info"
+
+    - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html){:target="_blank"}
