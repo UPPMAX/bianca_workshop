@@ -17,20 +17,20 @@ and installing custom software and packages.
 
 Tentative schedule
 
-    9.00 Introduction
+    9.00 [Introduction](intermediate/intro.md)
     9.10 NAISS-SENS summary
-    9.20 Transferring files to and from Bianca
+    9.20 [Transferring files to and from Bianca](intermediate/intro.md)
     10.00 Coffee break
-    10.15 Transferring files p2
-    10.35 Slurm jobs p1
+    10.15 [Transferring files p2](intermediate/intro.md)
+    10.35 [Slurm jobs p1](intermediate/intro.md)
     11.00 Break
-    11.15 Slurm jobs p2 
+    11.15 [Slurm jobs p2](intermediate/intro.md)
     12.00 LUNCH
-    13.00 Software and packages installation on Bianca
+    13.00 [Software and packages installation](intermediate/intro.md)
     13.50 break
-    14.05 IDE:s on Bianca
+    14.05 [IDE:s on Bianca](intermediate/intro.md)
     15.00 Coffee break
-    15.15 Summary
+    15.15 [Summary](intermediate/intro.md)
     15.20 Q/A and extra material
     15.55 Closing words
     16.00 END
