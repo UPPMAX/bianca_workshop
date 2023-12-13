@@ -261,4 +261,5 @@ json
 mlc
 wordlist
 Makefile
+svg
 
