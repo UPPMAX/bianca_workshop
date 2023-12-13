@@ -263,3 +263,4 @@ wordlist
 Makefile
 svg
 env
+precompile
