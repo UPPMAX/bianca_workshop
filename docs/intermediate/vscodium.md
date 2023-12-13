@@ -92,5 +92,18 @@ code
 
 VSCodium starts up quickly.
 
-## Questions
+## Exercises
+
+???- question "Exercise: Start VSCodium"
+
+    The goal of this exercise is to make sure you can start
+    VSCodium.
+
+???- question "How to find out if you are on a login or interactive node"
+
+    In the terminal, type `hostname`
+
+    - the login node has `[project]-bianca`, where `[project]` is the name of the project, e.g. `sens2023598`
+    - the interactive node has `b[number]` in it, where `[number]` is the compute node number
+
 

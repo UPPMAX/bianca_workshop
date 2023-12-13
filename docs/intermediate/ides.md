@@ -46,7 +46,8 @@ program, so using it on a login node would slow down other users.
 
 ???- note "Do you really want to use an IDE on Bianca?"
 
-    There are superior workflow than using an IDE on Bianca.
+    Using an IDE on Bianca is cumbersome and
+    there are superior ways to develop code on Bianca.
 
     However, using an IDE may make it easier for a new user to feel
     comfortable using Bianca.
@@ -62,6 +63,16 @@ program, so using it on a login node would slow down other users.
     This avoids using a clumsy remote desktop environment,
     as well as many added bonuses.
 
+## IDEs
+
+Here we describe some IDEs, in alphabetic order.
+
+### Jupyter
+
+Jupyter is an IDE specialized for the Python programming language.
+
+See [here](jupyter.md) to learn how to run Jupyter on Bianca.
+
 ### RStudio
 
 ![](./img/rstudio_in_action.png)
@@ -69,12 +80,6 @@ program, so using it on a login node would slow down other users.
 RStudio is an IDE specialized for the R programming language.
 
 See [here](rstudio.md) to learn how to run RStudio on Bianca.
-
-### Jupyter
-
-Jupyter is an IDE specialized for the Python programming language.
-
-See [here](jupyter.md) to learn how to run Jupyter on Bianca.
 
 ### VSCodium
 
@@ -84,3 +89,45 @@ VSCodium is the community edition of Visual Studio Code
 and can be used for software development in many languages.
 
 See [here](vscodium.md) to learn how to run VSCodium on Bianca.
+
+## Exercises
+
+???- question "Exercise: Start your favorite IDE"
+
+    The goal of this exercise is to make sure you can start
+    at least 1 IDE.
+
+???- question "Why use an IDE?"
+
+    It makes new Bianca users feel comfortable,
+    as an IDE is a recognizable environment.
+    Also, the terminal can be daunting to some.
+
+    Additionally, an IDE allows one to do runtime debugging,
+    i.e. running through code line-by-line and/or up/down
+    the so-called call stack.
+
+???- question "Why not always use an IDE?"
+
+    Using an IDE on Bianca is cumbersome and
+    there are superior ways to develop code on Bianca,
+    as -for example- taught in the 
+    [UPPMAX 'Programming Formalisms' course](https://github.com/UPPMAX/programming_formalisms).
+
+???- question "Why not always use an interactive session?"
+
+    Because it is an inefficient use of your core hours.
+
+    An interactive session means that you use a calculation node with low
+    efficiency: only irregularly you will use such a node to its full
+    capacity. 
+    However, the number of core hours are registered as if the node is used
+    at full capacity, as it is *reserved* to be used at that capacity.
+
+???- question "How to find out if you are on a login or interactive node"
+
+    In the terminal, type `hostname`
+
+    - the login node has `[project]-bianca`, where `[project]` is the name of the project, e.g. `sens2023598`
+    - the interactive node has `b[number]` in it, where `[number]` is the compute node number
+
