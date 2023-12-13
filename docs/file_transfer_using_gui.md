@@ -162,7 +162,11 @@ for example, at `/home/sven/sens123456/nobackup/wharf/sven/sven-sens123456`.
     Your colleague can either reset the password every time he/she
     uses the program, or use another tool (such as FileZilla) instead.
 
-!!! question "3a. Exercise: upload a file to Bianca"
+???- question "3a. Exercise: upload a file to Bianca"
+
+    This is described in the text above.
+
+    There is also a video [here](https://youtu.be/V-iPQLjvByc).
 
 ???- question "3b. Locate that file on Bianca using the graphical file explorer"
 
