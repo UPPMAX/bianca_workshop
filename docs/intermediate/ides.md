@@ -1,5 +1,6 @@
 # IDE:s
 
+
 !!! info "Objectives" 
 
     - Observe different IDEs running on Bianca
@@ -12,9 +13,12 @@
     - Show the three IDEs in action
     - The learners demonstrate to have started at least on IDE on Bianca
 
-    Schedule (.. minutes):
+    Schedule (45 minutes):
 
-    - ...
+    - 5 mins: Let the learners start an interactive node: this can take dozens of minutes!
+    - 10 mins: discuss this page and its sub-pages
+    - 15 mins: do the exercises
+    - 15 mins: discuss the exercises
 
 ## Introduction
 

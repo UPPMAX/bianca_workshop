@@ -10,11 +10,17 @@
 
     - The learners demonstrate to have started VSCodium on Bianca
 
-    Schedule (.. minutes):
+    Schedule (45 minutes):
 
-    - ...
+    - 5 mins: Let the learners start an interactive node: this can take dozens of minutes!
+    - 5 mins: kill some time
+    - 5 mins: discuss this page
+    - 15 mins: do the exercises
+    - 15 mins: discuss the exercises
 
 ## Introduction
+
+![](./img/vscodium_on_bianca.png)
 
 VSCodium is the community edition of Visual Studio Code
 and can be used for software development in many languages.

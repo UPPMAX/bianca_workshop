@@ -2,19 +2,21 @@
 
 !!! info "Objectives" 
 
-    - Observe different IDEs running on Bianca
-    - Start your favorite IDE on Bianca
+    - Start RStudio on Bianca
 
 ???- info "Notes for teachers"
 
     Teaching goals:
 
-    - Show the three IDEs in action
-    - The learners demonstrate to have started at least on IDE on Bianca
+    - The learners demonstrate to have started RStudio on Bianca
 
-    Schedule (.. minutes):
+    Schedule (45 minutes):
 
-    - ...
+    - 5 mins: Let the learners start an interactive node: this can take dozens of minutes!
+    - 5 mins: kill some time
+    - 5 mins: discuss this page
+    - 15 mins: do the exercises
+    - 15 mins: discuss the exercises
 
 ## Introduction
 
