@@ -231,7 +231,7 @@ Then within R, try loading the package you want, like ``glmnet``:
     - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
     - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/extra/pip/){:target="_blank"}
     - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
-    - [Extra material: Installing Julia packages (a little imature)](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
+    - [Extra material: Installing Julia packages (a little immature)](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
     - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/)
 
 !!! abstract "Keypoints"
