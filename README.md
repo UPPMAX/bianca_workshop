@@ -1,6 +1,6 @@
 # bianca_workshop
 
-[![Build pages](https://github.com/UPPMAX/bianca_workshop/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/UPPMAX/bianca_workshop/actions/workflows/pages/pages-build-deployment)
+[![Build pages](https://github.com/UPPMAX/bianca_workshop/actions/workflows/gh.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/bianca_workshop/actions/workflows/gh.yaml)
 [![Check links](https://github.com/UPPMAX/bianca_workshop/actions/workflows/check_links.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/bianca_workshop/actions/workflows/check_links.yaml)
 [![Check spelling](https://github.com/UPPMAX/bianca_workshop/actions/workflows/check_spelling.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/bianca_workshop/actions/workflows/check_spelling.yaml)
 
