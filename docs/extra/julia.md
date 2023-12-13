@@ -23,6 +23,7 @@
 - In Julia you can check if the packages are their by: ``using <package-name>``
     - The first time Julia will precompile the package for you!
 - You may control the present "central library" by typing ``ml help julia/<version>`` in the BASH shell.
+    - There you will also find which python, gcc and openpi version that are compatible.
 - A possibly more up-to-date status can be found from the Julia shell:
 
 ``` julia 
