@@ -50,6 +50,25 @@
     -   Deactivate current environment: `conda deactivate`
 
 
+## Your conda settings on Bianca
+
+- ```export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/```
+
+!!! warning
+
+    - It seems you are required to use this path, ending with the name of your environment, together with ``--prefix`` when you install new envronments AND packages also after activating the conda environment!
+    Like: ``conda install --prefix $CONDA_ENVS_PATH/<your-environment> ...``
+
+!!! tip
+
+    -   REMEMBER TO `conda clean -a` once in a while to remove unused and unnecessary files
+
+??? info "By choice"
+
+    - Run `source conda_init.sh` to initialise your shell (bash) to be able to run `conda activate` and `conda deactivate` etcetera instead of `source activate`. It will modify (append) your `.bashrc` file.
+
+    -   When conda is loaded you will by default be in the ``base`` environment, which works in the same way as other Conda environments. It is a “best practice” to avoid installing additional packages into your base software environment unless it is very general packages
+
 ## Installing using Conda
 
 We have mirrored all major Conda repositories directly on UPPMAX, on
@@ -72,31 +91,21 @@ following channels available:
     -   nvidia
     -   pytorch
 
-You reach them all by loading the ``conda`` module. You don't have to state the specific channel when using UPPMAX. Also, you are offline on Bianca which means that the default is `--offline`, which you can specify if you want to simulate the experience on Rackham.
-
-If you need a channel that isn't in our repository, we can easily add it. Just send us a message and we will do it.
-
-## Your conda settings on Bianca
-
-- ```export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/```
-
-!!! warning
-
-    - It seems you are required to use this path, ending with the name of your environment, together with ``--prefix`` when you install new envronments AND packages also after activating the conda environment!
-    Like: ``conda install --prefix $CONDA_ENVS_PATH/<your-environment> ...``
+- You reach them all by loading the ``conda`` module.
+- You don't have to state the specific channel when using UPPMAX.
+- Also, you are offline on Bianca which means that the default is `--offline`, which you can specify if you want to simulate the experience on Rackham.
 
 !!! tip
 
-    -   REMEMBER TO `conda clean -a` once in a while to remove unused and unnecessary files
-
-??? info "By choice"
-
-    - Run `source conda_init.sh` to initialise your shell (bash) to be able to run `conda activate` and `conda deactivate` etcetera instead of `source activate`. It will modify (append) your `.bashrc` file.
-
-    -   When conda is loaded you will by default be in the ``base`` environment, which works in the same way as other Conda environments. It is a “best practice” to avoid installing additional packages into your base software environment unless it is very general packages
+    - If you need a channel that isn't in our repository, we can easily add it. Just send us a message and we will do it.
 
 
 ## Make a new conda environment
+
+!!! tip
+
+    - Since python or other packages are dependent on each-other expect solving the versions takes some time.
+    - use an interactive session!
 
 1.  ``` bash 
         module load conda
@@ -106,12 +115,12 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
     - Check the text output as ``conda`` is loaded, especially the first time, see below
 
 
-3.  Create the Conda environment
+2.  Create the Conda environment
 
-    -   Example:
+    - Example:
 
     ```bash
-      conda create --name python36-env python=3.6 numpy=1.13.1 matplotlib=2.2.2
+    conda create --prefix  $CONDA_ENVS_PATH/python36-env python=3.6 numpy=1.13.1 matplotlib=2.2.2
     ```
 
     !!! info "The `mamba` alternative"
@@ -122,9 +131,9 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
         -   Example:
 
             ```bash
-            mamba create --name python36-env python=3.6 numpy=1.13.1  matplotlib=2.2.2
+            mamba create --prefix  $CONDA_ENVS_PATH/python36-env python=3.6 numpy=1.13.1  matplotlib=2.2.2
             ```
-        - It all worked if you get something like this:
+    - It all worked if you get something like this:
   
         ```bash
         # To activate this environment, use
@@ -134,30 +143,27 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
         # To deactivate an active environment, use
         #
         #     $ conda deactivate
-
         ```
-       
-        To activate this environment, use
-
-            $ mamba activate python36-env
-
-        To deactivate an active environment, use
-
-            $ mamba deactivate
+     - or
+  
+        ```bash    
+        # To activate this environment, use
+        #   
+        #    $ mamba activate python36-env
+        #
+        # To deactivate an active environment, use
+        #
+        #    $ mamba deactivate
         ```
 
--   You may check other environments with:
-    ```bash
-    conda env list
-    ```
     
-4.  Activate the conda environment by `source activate` if you have not enabled ``conda/mamba activate``, see above:
+3.  Activate the conda environment by `source activate` if you have not enabled ``conda/mamba activate``, see above:
 
     ```bash 
     source activate python36-env
     ```
 
-    -   You will see that your prompt is changing to start with `(python-36-env)` to show that you are within an environment.
+    - You will see that your prompt is changing to start with `(python-36-env)` to show that you are within an environment.
 
     - you can also see the installed packages by:
   
@@ -167,13 +173,13 @@ If you need a channel that isn't in our repository, we can easily add it. Just s
     ```
     - you can also add more packages within the environment by exact version (use `=`) or latest (?) compatible version:
     ```bash
-    conda install pandas
+    conda install --prefix   $CONDA_ENVS_PATH/python36-env pandas
     ```
-      - that may have given you ``pandas=1.1.5`` which would be the newest version compatible with ``python3.6`` and ``numpy=1.13.1``
+    - that may have given you ``pandas=1.1.5`` which would be the newest version compatible with ``python3.6`` and ``numpy=1.13.1``
 
-6.  Now do your work!
+4.  Now do your work!
 
-7.  Deactivate with ``conda``/``mamba deactivate`` (this will work in any case!)
+5.  Deactivate with ``conda``/``mamba deactivate`` (this will work in any case!)
 
     ```bash
     (python-36-env) $ conda deactivate
