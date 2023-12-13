@@ -124,7 +124,7 @@ Now you can transfer files between your local computer and Bianca.
 
 ???- tip "How does that look like?"
 
-    It looks like this
+    It looks like this:
 
     ![](./img/filezilla_login_to_bianca.png)
 
@@ -135,7 +135,11 @@ They end up in your personal `wharf` folder.
 Its location is at `/home/[user_name]/[project_name]/nobackup/wharf/[user_name]/[user_name]-[project_name]`,
 for example, at `/home/sven/sens123456/nobackup/wharf/sven/sven-sens123456`.
 
-![](./img/filezilla_file_on_bianca.png)
+???- tip "How does that look like?"
+
+    It looks like this:
+
+    ![](./img/filezilla_file_on_bianca.png)
 
 ## Exercise
 
@@ -203,4 +207,9 @@ To transfer files to/from Bianca using WinSCP, do:
     - Set host name to `bianca-sftp.uppmax.uu.se`
     - Set user name to `[username]-[project]`, e.g. `richel-sens123456`
 
-![WinSCP](./img/winscp-snaphot1.png)
+???- tip "How does that look like?"
+
+    It looks like this:
+
+    ![WinSCP](./img/winscp-snaphot1.png)
+
