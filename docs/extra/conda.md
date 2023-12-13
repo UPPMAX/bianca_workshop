@@ -5,7 +5,7 @@
 
 !!! info "Summary of ``conda`` commands"
     - ```module load conda```
-    - ```export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/```
+    - ```export CONDA_ENVS_PATH=/proj/<your-sens-project>/<path/to/conda-environments-folder>```
     - ```conda create``` ... etc
     - Remember to run ```conda clean -a``` once in a while. When you load the module, there is also a reminder displayed, so you get this info there also.
 
@@ -21,9 +21,9 @@
 
     -   List all environments: `conda info -e` or `conda env list`
 
-    -   Create a conda environment (it is good to directly define the packages included)
+    -   Create a conda environment (it is good to directly define the packages included AND channels do not need to be explicitly mentioned)
     
-        ```conda create --prefix /some/path/to/env -c <channel> [-c <channel2>] <package1> [<package2> ... ] ```
+        ```conda create --prefix /some/path/to/env <package1> [<package2> ... ] ```
        
         - On our systems the above should replace `conda create --name myenvironment ...`
        
@@ -34,6 +34,8 @@
     -   Activate a specific environment: `conda activate myenvironment`
 
     -   List packages in present environment: `conda list`
+
+        - Also pip list will work
 
     -   Install additional package from an active environment: 
     
@@ -124,6 +126,8 @@ following channels available:
         ```
 
     !!! info "The `mamba` alternative"
+
+        - :warning: There are currently issues with `mamba`
         -   `mamba` is a fast drop-in alternative to conda, using
             "libsolv" for dependency resolution. It is available from the
             `conda` module.
@@ -157,7 +161,7 @@ following channels available:
         ```
 
     
-3.  Activate the conda environment by `source activate` if you have not enabled ``conda/mamba activate``, see above:
+4.  Activate the conda environment by `source activate` if you have not enabled ``conda/mamba activate``, see above:
 
     ```bash 
     source activate python36-env
@@ -177,9 +181,9 @@ following channels available:
     ```
     - that may have given you ``pandas=1.1.5`` which would be the newest version compatible with ``python3.6`` and ``numpy=1.13.1``
 
-4.  Now do your work!
+5.  Now do your work!
 
-5.  Deactivate with ``conda``/``mamba deactivate`` (this will work in any case!)
+6.  Deactivate with ``conda``/``mamba deactivate`` (this will work in any case!)
 
     ```bash
     (python-36-env) $ conda deactivate
@@ -207,9 +211,9 @@ following channels available:
 
 `environments.yml` (for conda) is a yaml-file which looks like this:
 
-``` yaml
+```yaml
 name: my-environment
-channels:
+channels:        # not needed on bianca
 - defaults
 dependencies:
 - numpy
@@ -222,7 +226,7 @@ dependencies:
 
 ``` yaml
 name: my-environment
-channels:
+channels:            #not needed on bianca
 - defaults
 dependencies:
 - python=3.7
@@ -284,9 +288,11 @@ dependencies:
     
     -   Conda is an installer of packages but also bigger toolkits
 
-    -   Conda creates isolated environments (see next section) not clashing with other installations of python and other versions of packages
+    - Conda on Bianca is easy since the repos in the most used channels are local.
 
-    -   Conda environment requires that you install all packages needed by yourself.
+    -   Conda creates isolated environments not clashing with other installations of python and other versions of packages
+
+    -   Conda environment requires that you install all packages needed by yourself, although automatically.
     
-    -   That is, you cannot load the python module and use the  packages therein inside you Conda environment.
+    -   That is, you cannot load the python module and use the packages therein inside your Conda environment.
 
