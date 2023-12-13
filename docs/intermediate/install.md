@@ -81,11 +81,43 @@
 - R has a special module called ``R_packages``, and some Machine Learning python packages are included in the ``python_ml_packages`` module.
 - If not found there you can try to install those by yourself.
 
+## Install packages or not? Check it!
+
+### Python 
+
+- Chack python versions: ``ml avail python``
+- load a python version: ``ml python/3.10.8``
+- from the Python shell with the ``import`` command
+- from BASH shell with the 
+	
+- ``pip list`` command 
+- ``ml help python/3.9.5`` at UPPMAX
+
+**Is it not there? Then proceed!**
 
 !!! info "Tip Python packages"
 
     - Try Conda first directly on Bianca. We have mirrored all _major_ Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
     - If you want to keep number of files down, use PyPI (pip), but then you need to use Rackham and the ``wharf``.
+
+### R
+
+- On UPPMAX the module ``R_packages`` is an omnibus package library containing almost all packages in the CRAN and BioConductor repositories. 
+- As of 2023-05-31, there were a total of 23100 R packages installed in ``R_packages/4.2.1``.
+    -  A total of 23109 packages were available in CRAN and BioConductor, and 23000 of these were installed in ``R_packages/4.2.1``
+    -  The additional 100 R packages available in this module were installed from the CRAN/BioConductor archives, or were hosted on github, gitlab or elsewhere.
+
+Chances are good the R packages you need are already available once you load this module.  You can quickly check by loading it:
+
+``$ ml R_packages/4.2.1``
+
+Then within R, try loading the package you want, like ``glmnet``:
+
+``library(glmnet)``
+
+**Is it not there? Then proceed!**
+
+## Install packages! 
 
 ### Conda
 
@@ -134,31 +166,6 @@
 
 ### R packages
 
-- On UPPMAX the module ``R_packages`` is an omnibus package library containing almost all packages in the CRAN and BioConductor repositories. 
-- As of 2023-05-31, there were a total of 23100 R packages installed in ``R_packages/4.2.1``.
-    -  A total of 23109 packages were available in CRAN and BioConductor, and 23000 of these were installed in ``R_packages/4.2.1``
-    -  The additional 100 R packages available in this module were installed from the CRAN/BioConductor archives, or were hosted on github, gitlab or elsewhere.
-
-Chances are good the R packages you need are already available once you load this module.  You can quickly check by loading it:
-
-``$ ml R_packages/4.2.1``
-
-Then within R, try loading the package you want:
-
-``library(glmnet)``
-
-Or a bit longer way, you can ``grep`` for the package after this module is loaded using the environment variable ``$R_LIBS_SITE``, which contains the locations of all R packages installed within the module.
-
-```bash
-$ ls -l $R_LIBS_SITE | grep glmnet
-drwxrwsr-x  9 douglas sw  4096 May 28 16:59 EBglmnet
-drwxrwsr-x 11 douglas sw  4096 May 25 01:22 glmnet
-drwxrwsr-x  6 douglas sw  4096 May 25 04:03 glmnetSE
-drwxrwsr-x  7 douglas sw  4096 May 25 04:04 glmnetUtils
-drwxrwsr-x  8 douglas sw  4096 May 25 04:04 glmnetcr
-drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
-```
-
 !!! info "Installation principle"
 
     - install on Rackham
@@ -204,6 +211,10 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
     - Containers let you install programs without needing to think about the computer environment, like    
         - operative system
         - dependencies (libraries and other programs) with correct versions
+    - 2(3) types
+        - Singularity/Apptainer
+        - Docker that does not work on HPC-systems
+            - But docker images can be used byt Singularity and Apptainer
     - Everything is included
     - Draw-backs
         - you install also things that may be already installed
@@ -220,7 +231,7 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
     - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
     - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/extra/pip/){:target="_blank"}
     - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
-    - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
+    - [Extra material: Installing Julia packages (a little imature)](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
     - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/)
 
 !!! abstract "Keypoints"
