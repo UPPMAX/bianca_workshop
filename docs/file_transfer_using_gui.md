@@ -66,7 +66,7 @@ other tools.
 
 ## Using FileZilla
 
-![](./img/filezilla_logo_240_x_240.png)
+![FileZilla logo, from https://en.wikipedia.org/wiki/FileZilla#/media/File:FileZilla_logo.svg](./img/filezilla_logo_240_x_240.png)
 
 FileZilla is a secure file transfer tool that works under Linux, Mac and Windows.
 
