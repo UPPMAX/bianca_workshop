@@ -141,7 +141,7 @@ for example, at `/home/sven/sens123456/nobackup/wharf/sven/sven-sens123456`.
 
     ![](./img/filezilla_file_on_bianca.png)
 
-## Exercise
+## Exercises
 
 ???- question "1. Your colleague uses an SCP tool for secure file transfer. It does not work on Bianca. What is the problem?"
 
