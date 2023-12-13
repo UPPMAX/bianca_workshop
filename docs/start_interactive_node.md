@@ -54,13 +54,6 @@ Examples of heavy things are:
 
 ### Use-case for using an interactive node
 
-!!! warning "To be merged/moved with/to SLURM"
-
-    This content is to be merged/moved with/to [SLURM](slurm_intro.md).
-
-    We keep it here for now, although we too know that git is
-    a version control system :-)
-
 Some users develop computer code on Bianca
 in a line-by-line fashion. 
 These users typically want to run a (calculation-heavy) 
@@ -113,14 +106,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
     Bianca has not frozen, go ahead and have a coffee break :-)
 
-## Questions
-
-!!! warning "To be merged/moved with/to SLURM"
-
-    This content is to be merged/moved with/to [SLURM](slurm_intro.md).
-
-    We keep it here for now, although we too know that git is
-    a version control system :-)
+## Exercises
 
 ???- question "Exercise: Start an interactive session"
 
