@@ -10,28 +10,34 @@
     - Remember to run ```conda clean -a``` once in a while. When you load the module, there is also a reminder displayed, so you get this info there also.
 
 
-# Conda basics
-
--   What does Conda do?
--   How to create a Conda environment
-
--   Learn pros and cons with Conda
--   Learn how to install packages and work with the Conda (isolated)
-    environment
 
 !!! info "Hint"
 
-    -   On Bianca Conda is the first choice when installing packages, because there is a local mirror of most of the Conda repositories.
+    - On Bianca, Conda is the first choice when installing packages, because there is a local mirror of most of the Conda repositories.
 
 ## Using Conda
 
 !!! info "Conda cheat sheet"
 
-    -   List packages in present environment: `conda list`
-
     -   List all environments: `conda info -e` or `conda env list`
 
-    -   Install a package: `conda install somepackage`
+    -   Create a conda environment (it is good to directly define the packages included)
+    
+        ```conda create --prefix /some/path/to/env -c <channel> [-c <channel2>] <package1> [<package2> ... ] ```
+       
+        - On our systems the above should replace `conda create --name myenvironment ...`
+       
+    -   Create a new environment from requirements.txt:
+   
+        - `conda create --prefix /some/path/to/env --file requirements.txt`
+
+    -   Activate a specific environment: `conda activate myenvironment`
+
+    -   List packages in present environment: `conda list`
+
+    -   Install additional package from an active environment: 
+    
+        - `conda install somepackage`
 
     -   Install from certain channel (conda-forge):
        
@@ -39,22 +45,12 @@
 
     -   Install a specific version: `conda install somepackage=1.2.3`
 
-    -   Create a new environment: `conda create --name myenvironment`
-
-    -   Create a new environment from requirements.txt:
-   
-        - `conda create --name myenvironment --file requirements.txt`
-
-    -   On e.g. HPC systems where you don’t have write access to central installation directory: ```conda create --prefix /some/path/to/env```
-
-    -   Activate a specific environment: `conda activate myenvironment`
+        -   Install a specific version: `conda install somepackage=1.2.3`
 
     -   Deactivate current environment: `conda deactivate`
 
 
-
 ## Installing using Conda
-
 
 We have mirrored all major Conda repositories directly on UPPMAX, on
 both Rackham and Bianca. These are updated every third day. We have the
@@ -80,49 +76,35 @@ You reach them all by loading the ``conda`` module. You don't have to state the 
 
 If you need a channel that isn't in our repository, we can easily add it. Just send us a message and we will do it.
 
+## Your conda settings on Bianca
 
-## First steps
+- ```export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/```
 
-!!! Tip
+!!! warning
 
-    There will be an exercise in the end!
+    - It seems you are required to use this path, ending with the name of your environment, together with ``--prefix`` when you install new envronments AND packages also after activating the conda environment!
+    Like: ``conda install --prefix $CONDA_ENVS_PATH/<your-environment> ...``
+
+!!! tip
+
+    -   REMEMBER TO `conda clean -a` once in a while to remove unused and unnecessary files
+
+??? info "By choice"
+
+    - Run `source conda_init.sh` to initialise your shell (bash) to be able to run `conda activate` and `conda deactivate` etcetera instead of `source activate`. It will modify (append) your `.bashrc` file.
+
+    -   When conda is loaded you will by default be in the ``base`` environment, which works in the same way as other Conda environments. It is a “best practice” to avoid installing additional packages into your base software environment unless it is very general packages
 
 
-1.  First load our conda module (there is no need to install you own
-    miniconda, for instance)
+## Make a new conda environment
 
-    ``` bash 
+1.  ``` bash 
         module load conda
     ```
     
     - This grants you access to the latest version of Conda and all major repositories on all UPPMAX systems.
     - Check the text output as ``conda`` is loaded, especially the first time, see below
 
-    !!! info "Conda load output"
-
-        -   The variable CONDA_ENVS_PATH contains the location of your environments. Set it to your project's environments folder if you have one.
-        -   Otherwise, the default is ``~/.conda/envs``.
-        -   You may run `source conda_init.sh` to initialise your shell to be able to run `conda activate` and `conda deactivate` etc.
-        -   Just remember that this command adds stuff to your shell outside the scope of the module system.
-        -   REMEMBER TO `conda clean -a` once in a while to remove unused and unnecessary files
-
-
-2.  First time
-
-    -   The variable CONDA_ENVS_PATH contains the location of your environments. Set it to your project's environments folder if you have one.
-    -   Otherwise, the default is ``~/.conda/envs``.
-    -   Example:
-
-    ``` bash 
-        export CONDA_ENVS_PATH=/proj/<your-project-id>/nobackup/<username>/condaenvs
-        export CONDA_PKG_DIRS=/proj/<your-project-id>/nobackup/<username>/condapkg
-    ```
-    
-    ??? info "By choice"
-
-        Run `source conda_init.sh` to initialise your shell (bash) to be able to run `conda activate` and `conda deactivate` etcetera instead of `source activate`. It will modify (append) your `.bashrc` file.
-
-    -   When conda is loaded you will by default be in the base environment, which works in the same way as other Conda environments. include a Python installation and some core system libraries and dependencies of Conda. It is a “best practice” to avoid installing additional packages into your base software environment.
 
 3.  Create the Conda environment
 
