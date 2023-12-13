@@ -138,7 +138,7 @@ Additionally, at startup and if enabled, your saved RStudio workspace
     RStudio.
 
     How to start RStudio is in the instructions above
-    and in [this YouTube video](https://youtu.be/i7sjHOX4B_M).
+    and in [this YouTube video](https://youtu.be/rRUb4pqaVak).
 
 ???- question "How to find out if you are on a login or interactive node"
 
