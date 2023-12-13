@@ -54,6 +54,9 @@ E.g.
 -	Mounting the wharf on your local computer
 
 ## GUI sftp clients
+
+!!! info "A step-by-step explanation can be found [here](file_transfer_using_gui.md)"
+
 ---
 - Please notice that **SFTP is NOT the same as SCP**.  
 Be sure to really use a SFTP client -- not just a SCP client.

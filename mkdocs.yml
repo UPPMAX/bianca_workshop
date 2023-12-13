@@ -11,6 +11,7 @@ nav:
     - Command-line intro: commandline.md
     - Module system: modules1.md
     - Transferring files to/from Bianca: transfer_basics.md
+    - Transferring files to/from Bianca using a GUI: file_transfer_using_gui.md
     - Start an interactive node: start_interactive_node.md
     - Introduction to compute nodes: slurm_intro.md
     - Summary: summary.md
