@@ -33,20 +33,22 @@ using Bianca's remote desktop environment.
 As VSCodium is a resource-heavy program,
 it must be run on an interactive node.
 
+## Procedure to start VSCodium
 
-## 1. Get within SUNET
+
+### 1. Get within SUNET
 
 ???- tip "Forgot how to get within SUNET?"
 
     See [the basic Bianca course page 'Login to Bianca'](../login_bianca.md).
 
-## 2. Start the Bianca remote desktop environment
+### 2. Start the Bianca remote desktop environment
 
 ???- tip "Forgot how to start Bianca's remote desktop environment?"
 
     See [the basic Bianca course page 'Login to Bianca'](../login_bianca.md).
 
-## 3. Start an interactive session
+### 3. Start an interactive session
 
 Within the Bianca remote desktop environment, start a terminal.
 Within that terminal, start an interactive session with 2 cores.
@@ -77,7 +79,7 @@ In the terminal of the interactive session, do:
 module load VSCodium/latest`
 ```
 
-### Start VSCodium
+### 5. Start VSCodium
 
 With the modules loaded, 
 in that same terminal, 

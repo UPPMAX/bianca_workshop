@@ -40,15 +40,24 @@ it must be run on an interactive node.
 
     See [the basic Bianca course page 'Starting an interactive node'](../start_interactive_node.md).
 
-## Starting RStudio
+## Procedure to start RStudio
 
-To start RStudio, on needs to
+### 1. Get within SUNET
 
-- Start an interactive session
+???- tip "Forgot how to get within SUNET?"
 
-### Start an interactive session
+    See [the basic Bianca course page 'Login to Bianca'](../login_bianca.md).
 
-Start an interactive session with 2 cores.
+### 2. Start the Bianca remote desktop environment
+
+???- tip "Forgot how to start Bianca's remote desktop environment?"
+
+    See [the basic Bianca course page 'Login to Bianca'](../login_bianca.md).
+
+### 3. Start an interactive session
+
+Within the Bianca remote desktop environment, start a terminal.
+Within that terminal, start an interactive session with 2 cores.
 
 !!!- info "Why two cores?"
 
@@ -66,7 +75,7 @@ Start an interactive session with 2 cores.
     interactive -A sens2023598 -n 2 -t 8:00:00
     ```
 
-### Load the modules needed
+### 4. Load the modules needed
 
 RStudio needs R and its R packages.
 These should be loaded via the module system.
@@ -77,7 +86,7 @@ In the terminal of the interactive session, do:
 module load R_packages/4.3.1 RStudio/2023.06.2-561
 ```
 
-### Start RStudio
+### 5. Start RStudio
 
 With the modules loaded, start RStudio from the terminal (on the
 interactive node):
