@@ -39,11 +39,49 @@ it must be run on an interactive node.
 
 ## Starting VSCodium
 
+To start VSCodium, on needs to
 
+- Start an interactive session
+
+### Start an interactive session
+
+Start an interactive session with 2 cores.
+
+!!!- info "Why two cores?"
+
+    VSCodium is a resource-heavy program.
+    Due to this, we recommend using at least two cores 
+    for a more pleasant user experience.
+
+???- tip "Forgot how to start an interactive node?"
+
+    See [the basic Bianca course page 'Starting an interactive node'](../start_interactive_node.md).
+
+    Spoiler: use:
+
+    ```
+    interactive -A sens2023598 -n 2 -t 8:00:00
+    ```
+
+### Load the modules needed
+
+VSCodium needs the `VSCodium/latest` module.
+
+In the terminal of the interactive session, do:
 
 ```
-ml av vscod
-
--------------------------- /sw/mf/bianca/applications --------------------------
-   VSCodium/latest
+module load VSCodium/latest`
 ```
+
+### Start VSCodium
+
+With the modules loaded, start VSCodium:
+
+```
+code
+```
+
+VSCodium starts up quickly.
+
+## Questions
+
