@@ -11,6 +11,7 @@ nav:
     - Command-line intro: commandline.md
     - Module system: modules1.md
     - Transferring files to/from Bianca: transfer_basics.md
+    - Start an interactive node: start_interactive_node.md
     - Introduction to compute nodes: slurm_intro.md
     - Summary: summary.md
     - Exercises: exercises.md
