@@ -23,36 +23,10 @@
     - Pseudonymisation and anonymisation
     - Apply for project
 
-- **Logging in**
- 
-    - ThinLinc, a must for graphics
-    - ``ssh``, may be faster if you just use command-line
-    - VPN
-    - 2FA
-
-
-- **Command-line intro**
-
-    - navigation 
-    - aliases
-    - chmod
-
-
-- **Module system and workflows**
-
-    - modules adds paths to tools
-
-        - module load ...
-        - bioinfo-tools may be required to load you tool
-
-    - workflows
-
-
 - **Transferring files**
 
     - The ``wharf`` works like a dock at the harbour.
     - There are several ways to use the ``wharf`` to transfer files
-
 
       - copy
       - transit server
@@ -61,7 +35,6 @@
 - **Introduction to compute nodes**
 
     - Submitting jobs
-
 
         - Slurm, sbatch, the job queue
         - Jobs
@@ -75,7 +48,6 @@
     - Other Slurm tools
 
 - **Software and package installation**
-
 
     - Install software yourself
     - Packages and libraries to scripting programs
@@ -92,3 +64,17 @@
 
     - Build from source
     - Summary about the Bianca Hardware
+
+- **IDE:s  on Bianca**
+
+    - RStudio
+
+        - Run in interactive session
+ 
+    - Jupyter
+ 
+        - Run in interactive session
+ 
+    - VSCodium
+
+        - Run in interactive session
