@@ -139,7 +139,7 @@ for example, at `/home/sven/sens123456/nobackup/wharf/sven/sven-sens123456`.
 
 ## Exercise
 
-???- question "x. Your colleague uses an SCP tool for secure file transfer. It does not work on Bianca. What is the problem?"
+???- question "1. Your colleague uses an SCP tool for secure file transfer. It does not work on Bianca. What is the problem?"
 
     The assumptions of your colleague are already wrong:
     SCP is considered an **outdated** secure (`outdated + secure = insecure`) 
@@ -148,7 +148,7 @@ for example, at `/home/sven/sens123456/nobackup/wharf/sven/sven-sens123456`.
     Bianca does not support this outdated file transfer protocol.
     Instead, use a tool that allows the SFTP secure file transfer protocol.
 
-???- question "x. Your colleague used a very user-friendly SFTP tool. However, only on Bianca, it fails after the first use. What is the problem?"
+???- question "2. Your colleague used a very user-friendly SFTP tool. However, only on Bianca, it fails after the first use. What is the problem?"
 
     This user-friendly program stores the password of the user.
     However, the password of Bianca changes, due to the need
@@ -158,9 +158,9 @@ for example, at `/home/sven/sens123456/nobackup/wharf/sven/sven-sens123456`.
     Your colleague can either reset the password every time he/she
     uses the program, or use another tool (such as FileZilla) instead.
 
-!!! question "1a. Exercise: upload a file to Bianca"
+!!! question "3a. Exercise: upload a file to Bianca"
 
-???- question "1b. Locate that file on Bianca using the graphical file explorer"
+???- question "3b. Locate that file on Bianca using the graphical file explorer"
 
     Its location is at `/home/[user_name]/[project_name]/nobackup/wharf/[user_name]/[user_name]-[project_name]`,
     for example, at `/home/sven/sens123456/nobackup/wharf/sven/sven-sens123456`.
@@ -169,7 +169,7 @@ for example, at `/home/sven/sens123456/nobackup/wharf/sven/sven-sens123456`.
 
     ![](./img/filezilla_file_on_bianca.png)
 
-???- question "1c. Locate that file on Bianca using the terminal"
+???- question "3c. Locate that file on Bianca using the terminal"
 
     Its location is at `/home/[user_name]/[project_name]/nobackup/wharf/[user_name]/[user_name]-[project_name]`,
     for example, at `/home/sven/sens123456/nobackup/wharf/sven/sven-sens123456`.
