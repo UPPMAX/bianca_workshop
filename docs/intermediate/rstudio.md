@@ -20,6 +20,8 @@
 
 ## Introduction
 
+![](./img/rstudio_in_action.png)
+
 RStudio is an IDE specialized for the R programming language.
 
 ???- tip "What is an IDE?"
@@ -100,6 +102,24 @@ rstudio
 RStudio can be slow to startup, as R has thousands (!) of packages.
 Additionally, at startup and if enabled, your saved RStudio workspace
 (with potentially a lot of data!) is read.
+
+
+???- info "How does RStudio look on Bianca?"
+    ![](./img/rstudio_starting_up.png)
+    ![](./img/rstudio_started.png)
+    ![](./img/rstudio_in_action.png)
+
+
+bianca_hostnames_2.png
+bianca_hostnames.png
+rstudio_debugger_at_error_level.png
+rstudio_debugger_at_function_level.png
+rstudio_debugger_at_program_level.png
+vscodium_module.png
+vscodium_on_bianca.png
+waiting_for_interactive.png
+
+
 
 ## Exercises
 
