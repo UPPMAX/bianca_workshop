@@ -125,4 +125,5 @@ They end up in your personal `wharf` folder.
 Its location is at `/home/[user_name]/[project_name]/nobackup/wharf/[user_name]/[user_name]-[project_name]`,
 for example, at `/home/sven/sens123456/nobackup/wharf/sven/sven-sens123456`.
 
-![](filezilla_file_on_bianca.png)
+![](./img/filezilla_file_on_bianca.png)
+
