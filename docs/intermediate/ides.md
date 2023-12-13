@@ -44,7 +44,27 @@ program, so using it on a login node would slow down other users.
 
     See [the basic Bianca course page 'Starting an interactive node'](../start_interactive_node.md).
 
+???- note "Do you really want to use an IDE on Bianca?"
+
+    There are superior workflow than using an IDE on Bianca.
+
+    However, using an IDE may make it easier for a new user to feel
+    comfortable using Bianca.
+
+    The [UPPMAX 'Programming Formalisms' course](https://github.com/UPPMAX/programming_formalisms)
+    will teach you a superior workflow, 
+    where development takes place on your own regular computer
+    and testing is done using simulated/fake data.
+    When development is done,
+    the tested project is uploaded to Bianca and setup to
+    use the real data instead.
+
+    This avoids using a clumsy remote desktop environment,
+    as well as many added bonuses.
+
 ### RStudio
+
+![](./img/rstudio_in_action.png)
 
 RStudio is an IDE specialized for the R programming language.
 
@@ -57,6 +77,8 @@ Jupyter is an IDE specialized for the Python programming language.
 See [here](jupyter.md) to learn how to run Jupyter on Bianca.
 
 ### VSCodium
+
+![](./img/vscodium_on_bianca.png)
 
 VSCodium is the community edition of Visual Studio Code
 and can be used for software development in many languages.
