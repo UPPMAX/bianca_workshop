@@ -108,7 +108,7 @@ interactive -A [project name] -n [number_of_cores] -t [session_duration]
 For example:
 
 ```bash
-interactive -A sens2023598 -n 2 -t 8:0:0
+interactive -A sens2023598 -n 2 -t 8:00:00
 ```
 
 This starts an interactive session using project `sens2023598`
@@ -117,16 +117,8 @@ that uses 2 cores and has a maximum duration of 8 hours.
 !!! note "Has Bianca frozen?"
 
     It can take tens of minutes before an interactive node is allocated.
-    Bianca is not frozen :-)
 
-???- tip "`interactive` does support `--account`"
-
-    `interactive` is an UPPMAX script to call
-    [the SLURM  `salloc` command](https://slurm.schedmd.com/salloc.html).
-    Although `salloc` supports both `-A` and `--account`, `interactive`
-    does not do so yet.
-
-
+    Bianca has not frozen, go ahead and have a coffee break :-)
 
 ## Questions
 
