@@ -10,18 +10,21 @@
       - BenchmarkTools
       - CSV
       - CUDA
-      - MPI
+      - MPI	(needs gcc and openmpi loaded)
       - Distributed
-      - IJulia
+      - IJulia    (needs python loaded)
       - Plots
-      - PyPlot
+      - PyPlot     (needs python loaded)
       - Gadfly
       - DataFrames
       - DistributedArrays
       - PlotlyJS
 
-
+- In Julia you can check if the packages are their by: ``using <package-name>``
+    - The first time Julia will precompile the package for you!
 - You may control the present "central library" by typing ``ml help julia/<version>`` in the BASH shell.
+    - There you will also find which python, gcc and openmpi version that are compatible.
+    - Or see the [Julia user guide at UPPMAX](https://www.uppmax.uu.se/support/user-guides/julia-user-guide/){:target="_blank"}
 - A possibly more up-to-date status can be found from the Julia shell:
 
 ``` julia 
@@ -34,7 +37,7 @@
 ```
 ### First time run on Bianca
 
-You may have to build a package the first time with ``Pkg.build(“<package>”)``. Since “<package> is pre-installed centrally on UPPMAX you must activate the central environment by following these steps below. This should only be needed the first time like this
+You may have to build some package the first time with ``Pkg.build(“<package>”)``. Since “<package>" is pre-installed centrally on UPPMAX you must activate the central environment by following these steps below. This should only be needed the first time like this
 
 ``` julia
 > using Pkg
@@ -122,3 +125,6 @@ mv –a  <file(s)> ~/.julia/packages/
     $ mv –a  <file(s)> .julia/packages/
     ```
 
+!!! info "More info"
+
+    - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html){:target="_blank"}

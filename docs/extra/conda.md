@@ -3,14 +3,6 @@
 !!! info "Objectives"
     - This is a brief description of the necessary steps to use the local Conda repository at UPPMAX, and install things for yourself or your project using Conda. 
 
-!!! info "Summary of ``conda`` commands"
-    - ```module load conda```
-    - ```export CONDA_ENVS_PATH=/proj/<your-sens-project>/<path/to/conda-environments-folder>```
-    - ```conda create``` ... etc
-    - Remember to run ```conda clean -a``` once in a while. When you load the module, there is also a reminder displayed, so you get this info there also.
-
-
-
 !!! info "Hint"
 
     - On Bianca, Conda is the first choice when installing packages, because there is a local mirror of most of the Conda repositories.
@@ -55,6 +47,12 @@
 ## Your conda settings on Bianca
 
 - ```export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/```
+
+!!! tip
+
+    - You may wnat to have the same path for all conda environments in the present project
+    - ``echo "export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/" >> ~/.bashrc`` 
+        - Example: ``echo "export CONDA_ENVS_PATH=/proj/sens2023598/bjornc/conda" >> ~/.bashrc``
 
 !!! warning
 
