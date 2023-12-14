@@ -1,4 +1,4 @@
-# File transfer using graphical tools
+# File transfer using a graphical tool
 
 ![](./img/filezilla_login_to_bianca_236_x_266.png)
 
@@ -6,6 +6,8 @@
 
 ## Overview
 
+As a user, we need to transfer files
+between our local computer and Bianca.
 Here we learn how to transfer files
 to Bianca using a graphical tool/program.
 
