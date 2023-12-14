@@ -203,7 +203,7 @@ Then within R, try loading the package you want, like ``glmnet``:
     - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
     - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html){:target="_blank"}
 
-## "Containers"
+## Containers
 
 !!! info
    
