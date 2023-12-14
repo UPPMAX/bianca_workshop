@@ -22,6 +22,43 @@ Where to find this folder is shown in the section 'Where do my files end up?'.
 
 ## Bianca's constraints
 
+```mermaid
+flowchart TD
+
+    %% Give a white background to all nodes, instead of a transparent one
+    classDef node fill:#fff,color:#000,stroke:#000
+
+    %% Graph nodes for files and calculations
+    classDef file_node fill:#faf,color:#000,stroke:#f0f
+    classDef calculation_node fill:#aaf,color:#000,stroke:#00f
+
+    subgraph sunet[Inside SUNET]
+      subgraph bianca_outside[Bianca outside]
+        login_node(login node):::calculation_node
+        wharf(wharf):::file_node
+        subgraph bianca_inside[Bianca]
+          calculation_node(calculation/interative node):::calculation_node
+          your_project_folder(Your project folder):::file_node
+        end
+      end
+      user(User)
+      sftp_client(SFTP client, e.g. FileZilla)
+      sftp_server(SFTP server):::file_node
+    end
+    style bianca_inside fill:#afa,color:#000,stroke:#faa
+    style bianca_outside fill:#ffa,color:#000,stroke:#faa
+    style sunet fill:#faa,color:#000,stroke:#faa
+
+    user --> |logs in |login_node
+    user --> |uses| sftp_client
+    sftp_client --> |transfer files|sftp_server
+    sftp_server <--> |transfer files|wharf
+    login_node --> |submit jobs|calculation_node
+    login_node --> |can use|your_project_folder
+    calculation_node --> |can use|your_project_folder
+    wharf --> |transfer files| your_project_folder
+```
+
 Bianca is an HPC cluster for sensitive data.
 To protect that sensitive data,
 Bianca has no direct internet connection.
@@ -219,3 +256,50 @@ To transfer files to/from Bianca using WinSCP, do:
 
     ![WinSCP](./img/winscp-snaphot1.png)
 
+### File transfer overview
+
+```mermaid
+flowchart TD
+
+    %% Give a white background to all nodes, instead of a transparent one
+    classDef node fill:#fff,color:#000,stroke:#000
+
+    %% Graph nodes for files and calculations
+    classDef file_node fill:#faf,color:#000,stroke:#f0f
+    classDef calculation_node fill:#aaf,color:#000,stroke:#00f
+
+    subgraph sunet[Inside SUNET]
+      subgraph bianca_outside[Bianca outside]
+        login_node(login node):::calculation_node
+        wharf(wharf):::file_node
+        subgraph bianca_inside[Bianca]
+          calculation_node(calculation node):::calculation_node
+          interactive_node(interactive node):::calculation_node
+          your_project_folder(Your project folder):::file_node
+        end
+      end
+      user(User)
+      sftp_client(SFTP client, e.g. FileZilla)
+      transit(transit):::file_node
+      sftp_server(SFTP server):::file_node
+      terminal(terminal)
+    end
+    style bianca_inside fill:#afa,color:#000,stroke:#faa
+    style bianca_outside fill:#ffa,color:#000,stroke:#faa
+    style sunet fill:#faa,color:#000,stroke:#faa
+
+    user --> |logs in |login_node
+    user --> |uses| sftp_client
+    user --> |uses| terminal
+    sftp_client --> |transfer files|sftp_server
+    sftp_server <--> |transfer files|wharf
+    terminal --> |transfer files| transit
+    transit <--> |transfer files|wharf
+    login_node --> |submit jobs|calculation_node
+    login_node --> |login to|interactive_node
+    interactive_node --> |submit jobs|calculation_node
+    login_node --> |can use|your_project_folder
+    interactive_node --> |can use|your_project_folder
+    calculation_node --> |can use|your_project_folder
+    wharf --> |transfer files| your_project_folder
+```
