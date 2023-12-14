@@ -64,6 +64,9 @@ flowchart TD
 > Overview of file transfer on Bianca, when using a graphical tool.
 > The purple nodes are about file transfer,
 > the blue nodes are about 'doing other things'.
+> In this session, we will transfer files between
+> 'Files on user computer' and 'Files on wharf'
+> using a graphical tool, e.g. FileZilla
 
 Bianca is an HPC cluster for sensitive data.
 To protect that sensitive data,
