@@ -1,6 +1,6 @@
 # IDE:s
 
-![](rstudio_in_action_480_x_270.png)
+![](./img/rstudio_in_action_480_x_270.png)
 
 > RStudio is one of the IDEs that can be used on Bianca.
 
