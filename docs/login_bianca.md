@@ -1,7 +1,6 @@
 # Log in to Bianca
 
-![The Bianca remote desktop](./img/bianca_remote_desktop_463_x_262.png)
-![The Bianca console environment](./img/login_bianca_via_terminal_terminal_462_x_202.png)
+![The Bianca environments](./img/bianca_environments_926_x_261.png)
 
 !!! info "Objectives" 
 
