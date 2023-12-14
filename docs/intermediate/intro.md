@@ -28,12 +28,12 @@ Time |Topic
 11.00| Break
 11.15| [Slurm jobs p2](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
 12.00| LUNCH
-13.00| [Software and packages installation](intermediate/intro.md)
+13.00| [Software and packages installation](https://uppmax.github.io/bianca_workshop/intermediate/install/)
 13.50| break
-14.05| [IDE:s on Bianca](intermediate/intro.md)
+14.05| [IDE:s on Bianca](https://uppmax.github.io/bianca_workshop/intermediate/ides/)
 15.00| Coffee break
-15.15| [Summary](intermediate/intro.md)
-15.20| Q/A and extra material
+15.15| [Summary](https://uppmax.github.io/bianca_workshop/intermediate/summary/)
+15.20| Q/A and [extra material](https://uppmax.github.io/bianca_workshop/extra/slurm/)
 15.55| Closing words
 16.00| END
 
