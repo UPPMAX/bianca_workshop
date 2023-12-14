@@ -1,5 +1,7 @@
 # The command-line on Bianca
 
+![Using the command line on a computer cluster](./img/610803_a_woman_using_the_command_line_on_a_computer_cluster_256_x_256.png)
+
 !!! info "Objectives"
     - Being able to navigate in/out folders
     - Being able to view/create/move/delete files
@@ -21,8 +23,6 @@
     - 10 minutes: feedback
 
 ## Overview
-
-![Using the command line on a computer cluster](./img/610803_a_woman_using_the_command_line_on_a_computer_cluster_256_x_256.png)
 
 Bianca is a cluster with the Linux operating system.
 We must use a Linux terminal to work with Bianca,
