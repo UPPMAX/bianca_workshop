@@ -82,7 +82,7 @@ See [here](jupyter.md) to learn how to run Jupyter on Bianca.
 
 ### RStudio
 
-![](./img/rstudio_in_action.png)
+![](./img/rstudio_in_action_480_x_270.png)
 
 RStudio is an IDE specialized for the R programming language.
 
@@ -90,7 +90,7 @@ See [here](rstudio.md) to learn how to run RStudio on Bianca.
 
 ### VSCodium
 
-![](./img/vscodium_on_bianca.png)
+![](./img/vscodium_on_bianca_480_x_270.png)
 
 VSCodium is the community edition of Visual Studio Code
 and can be used for software development in many languages.
