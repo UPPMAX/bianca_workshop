@@ -1,6 +1,6 @@
 # File transfer using graphical tools
 
-![](./img/filezilla_login_to_bianca.png)
+![](./img/filezilla_login_to_bianca_236_x_266.png)
 
 ## Overview
 
