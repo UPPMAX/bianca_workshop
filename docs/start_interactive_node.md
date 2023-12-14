@@ -1,6 +1,6 @@
 # Starting an interactive node
 
-![](login_bianca_via_terminal_terminal_462_x_202.png)
+![](./img/login_bianca_via_terminal_terminal_462_x_202.png)
 
 ???- info "Note to teachers"
 
