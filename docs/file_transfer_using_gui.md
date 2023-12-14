@@ -46,17 +46,15 @@ flowchart TD
         end
       end
       user(User)
-      sftp_client(SFTP client, e.g. FileZilla)
-      sftp_server(SFTP server):::file_node
+      user_local_files(User local files):::file_node
     end
     style bianca_inside fill:#afa,color:#000,stroke:#faa
     style bianca_outside fill:#ffa,color:#000,stroke:#faa
     style sunet fill:#faa,color:#000,stroke:#faa
 
     user --> |logs in |login_node
-    user --> |uses| sftp_client
-    sftp_client --> |transfer files|sftp_server
-    sftp_server <--> |transfer files|wharf
+    user --> |uses| user_local_files
+    user_local_files --> |transfer files|wharf
     login_node --> |submit jobs|calculation_node
     login_node --> |can use|your_project_folder
     calculation_node --> |can use|your_project_folder
@@ -290,21 +288,17 @@ flowchart TD
         end
       end
       user(User)
-      sftp_client(SFTP client, e.g. FileZilla)
-      transit(transit):::file_node
-      sftp_server(SFTP server):::file_node
-      terminal(terminal)
+      user_local_files(User local files):::file_node
+      transit(Files on transit):::file_node
     end
     style bianca_inside fill:#afa,color:#000,stroke:#faa
     style bianca_outside fill:#ffa,color:#000,stroke:#faa
     style sunet fill:#faa,color:#000,stroke:#faa
 
     user --> |logs in |login_node
-    user --> |uses| sftp_client
-    user --> |uses| terminal
-    sftp_client --> |transfer files|sftp_server
-    sftp_server <--> |transfer files|wharf
-    terminal --> |transfer files| transit
+    user --> |uses| user_local_files
+    user_local_files --> |transfer files|wharf
+    user_local_files --> |transfer files|transit
     transit <--> |transfer files|wharf
     login_node --> |submit jobs|calculation_node
     login_node --> |can use|your_project_folder
