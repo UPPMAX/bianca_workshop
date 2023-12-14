@@ -1,5 +1,7 @@
 # VSCodium
 
+![](./img/vscodium_on_bianca_480_x_270.png)
+
 !!! info "Objectives" 
 
     - Start VSCodium on Bianca
@@ -19,8 +21,6 @@
     - 15 mins: discuss the exercises
 
 ## Introduction
-
-![](./img/vscodium_on_bianca.png)
 
 VSCodium is the community edition of Visual Studio Code
 and can be used for software development in many languages.
@@ -97,6 +97,10 @@ code
 ```
 
 VSCodium starts up quickly.
+
+???- info "How does VSCodium look on Bianca?"
+
+    ![](./img/vscodium_on_bianca.png)
 
 ## Exercises
 

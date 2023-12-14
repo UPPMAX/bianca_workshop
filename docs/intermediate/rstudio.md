@@ -1,5 +1,7 @@
 # RStudio
 
+![](./img/rstudio_in_action_480_x_270.png)
+
 !!! info "Objectives" 
 
     - Start RStudio on Bianca
@@ -19,8 +21,6 @@
     - 15 mins: discuss the exercises
 
 ## Introduction
-
-![](./img/rstudio_in_action.png)
 
 RStudio is an IDE specialized for the R programming language.
 
@@ -102,7 +102,6 @@ rstudio
 RStudio can be slow to startup, as R has thousands (!) of packages.
 Additionally, at startup and if enabled, your saved RStudio workspace
 (with potentially a lot of data!) is read.
-
 
 ???- info "How does RStudio look on Bianca?"
 
