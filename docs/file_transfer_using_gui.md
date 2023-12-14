@@ -1,5 +1,7 @@
 # File transfer using graphical tools
 
+![](./img/filezilla_login_to_bianca.png)
+
 ## Overview
 
 Here we learn how to transfer files
