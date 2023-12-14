@@ -17,23 +17,25 @@ and installing custom software and packages.
 
 Tentative schedule
 
-    9.00 [Introduction](intermediate/intro.md)
-    9.10 NAISS-SENS summary
-    9.20 [Transferring files to and from Bianca](intermediate/intro.md)
-    10.00 Coffee break
-    10.15 [Transferring files p2](intermediate/intro.md)
-    10.35 [Slurm jobs p1](intermediate/intro.md)
-    11.00 Break
-    11.15 [Slurm jobs p2](intermediate/intro.md)
-    12.00 LUNCH
-    13.00 [Software and packages installation](intermediate/intro.md)
-    13.50 break
-    14.05 [IDE:s on Bianca](intermediate/intro.md)
-    15.00 Coffee break
-    15.15 [Summary](intermediate/intro.md)
-    15.20 Q/A and extra material
-    15.55 Closing words
-    16.00 END
+Time |Topic
+-----|--------------------------
+9.00| [Introduction](https://uppmax.github.io/bianca_workshop/intermediate/intro/)
+9.10| [NAISS-SENS summary](https://uppmax.github.io/bianca_workshop/sens_project_short/)
+9.20| [Transferring files to and from Bianca](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
+10.00| Coffee break
+10.15| [Transferring files p2](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
+10.35| [Slurm jobs p1](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
+11.00| Break
+11.15| [Slurm jobs p2](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
+12.00| LUNCH
+13.00| [Software and packages installation](https://uppmax.github.io/bianca_workshop/intermediate/install/)
+13.50| break
+14.05| [IDE:s on Bianca](https://uppmax.github.io/bianca_workshop/intermediate/ides/)
+15.00| Coffee break
+15.15| [Summary](https://uppmax.github.io/bianca_workshop/intermediate/summary/)
+15.20| Q/A and [extra material](https://uppmax.github.io/bianca_workshop/extra/slurm/)
+15.55| Closing words
+16.00| END
 
 !!! info "Q/A collaboration document"
 
