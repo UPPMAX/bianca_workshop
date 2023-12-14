@@ -54,7 +54,7 @@ flowchart TD
 
     user --> |logs in |login_node
     user --> |uses| user_local_files
-    user_local_files --> |transfer files|wharf
+    user_local_files <--> |transfer files|wharf
     login_node --> |submit jobs|calculation_node
     login_node --> |can use|your_project_folder
     calculation_node --> |can use|your_project_folder
@@ -289,7 +289,8 @@ flowchart TD
       end
       user(User)
       user_local_files(User local files):::file_node
-      transit(Files on transit):::file_node
+      files_on_transit(Files on transit):::file_node
+      other_clusters(Other HPC clusters)
     end
     style bianca_inside fill:#afa,color:#000,stroke:#faa
     style bianca_outside fill:#ffa,color:#000,stroke:#faa
@@ -297,9 +298,10 @@ flowchart TD
 
     user --> |logs in |login_node
     user --> |uses| user_local_files
-    user_local_files --> |transfer files|wharf
-    user_local_files --> |transfer files|transit
-    transit <--> |transfer files|wharf
+    user_local_files <--> |transfer files|wharf
+    user_local_files <--> |transfer files|files_on_transit
+    files_on_transit <--> |transfer files|wharf
+    files_on_transit <--> |transfer files|other_clusters
     login_node --> |submit jobs|calculation_node
     login_node --> |can use|your_project_folder
     calculation_node --> |can use|your_project_folder
