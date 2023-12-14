@@ -222,6 +222,7 @@ Then within R, try loading the package you want, like ``glmnet``:
 !!! info "More info"
 
     - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/)
+    - [Singularity course](https://www.uppmax.uu.se/support/courses-and-workshops/singularity-workshop-announcement)
 
 ## Demo session
 
