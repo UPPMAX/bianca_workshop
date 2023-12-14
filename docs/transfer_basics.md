@@ -251,3 +251,35 @@ rsync -avh my_user@rackham.uppmax.uu.se:path/my_files ~/sens2023531/
     - ``sshfs`` is available on most Linux distributions: 
         - install the package ``sshfs`` on Ubuntu, 
         - ``fuse-sshfs`` on Fedora, RHEL7/CentOS7 (enable EPEL repository) and RHEL8 (enable codeready-builder repository) / CentOS8 (enable powertools repository).
+
+
+## Transferring files
+
+```mermaid
+flowchart TD
+    subgraph sunet[Inside SUNET]
+      subgraph bianca_outside[Bianca outside]
+        login_node(login node)
+        wharf(wharf)
+        subgraph bianca_inside[Bianca]
+          calculation_node(calculation node)
+          interactive_node(interactive node)
+          your_project_folder(Your project folder)
+        end
+      end
+      user[User]
+      transit[transit]
+      sftp_server[SFTP server]
+    end
+
+    user --> login_node
+    sftp_server <--> |transfer files|wharf
+    transit <--> |transfer files|wharf
+    login_node --> |submit jobs|calculation_node
+    login_node --> |login to|interactive_node
+    interactive_node --> |submit jobs|calculation_node
+    login_node --> |can use|your_project_folder
+    interactive_node --> |can use|your_project_folder
+    calculation_node --> |can use|your_project_folder
+    wharf --> |transfer| your_project_folder
+```
