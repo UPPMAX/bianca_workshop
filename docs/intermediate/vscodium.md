@@ -57,13 +57,7 @@ it must be run on an interactive node.
 ### 3. Start an interactive session
 
 Within the Bianca remote desktop environment, start a terminal.
-Within that terminal, start an interactive session with 2 cores.
-
-!!!- info "Why two cores?"
-
-    VSCodium is a resource-heavy program.
-    Due to this, we recommend using at least two cores 
-    for a more pleasant user experience.
+Within that terminal, start an interactive session with 1 core.
 
 ???- tip "Forgot how to start an interactive node?"
 
@@ -72,7 +66,7 @@ Within that terminal, start an interactive session with 2 cores.
     Spoiler: use:
 
     ```
-    interactive -A sens2023598 -n 2 -t 8:00:00
+    interactive -A sens2023598 -n 1 -t 8:00:00
     ```
 
 ### 4. Load the modules needed
