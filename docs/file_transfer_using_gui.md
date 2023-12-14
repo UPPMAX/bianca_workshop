@@ -63,6 +63,10 @@ flowchart TD
     wharf --> |transfer files| your_project_folder
 ```
 
+> Overview of file transfer on Bianca, when using a graphical tool.
+> The purple nodes are about file transfer,
+> the blue nodes are about 'doing other things'.
+
 Bianca is an HPC cluster for sensitive data.
 To protect that sensitive data,
 Bianca has no direct internet connection.
@@ -307,3 +311,7 @@ flowchart TD
     calculation_node --> |can use|your_project_folder
     wharf --> |transfer files| your_project_folder
 ```
+
+> Overview of file transfer on Bianca
+> The purple nodes are about file transfer,
+> the blue nodes are about 'doing other things'.
