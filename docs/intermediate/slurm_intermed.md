@@ -1,7 +1,8 @@
 # Compute nodes, Slurm and debugging jobs
 
-
-
+!!! info "Lesson material"
+   
+   [PDF material](https://www.uppmax.uu.se/digitalAssets/1071/c_1071312-l_1-k_bianca-slurm-2023-12.pdf)
 
 
 !!! info "See also"
