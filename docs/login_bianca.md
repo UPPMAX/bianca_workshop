@@ -1,5 +1,8 @@
 # Log in to Bianca
 
+![The Bianca remote desktop](./img/bianca_remote_desktop_463_x_262.png)
+![The Bianca console environment](./img/login_bianca_via_terminal_terminal_462_x_202.png)
+
 !!! info "Objectives" 
 
     - Observe that there are two ways to interact with Bianca
@@ -23,8 +26,6 @@
     - 10 minutes: feedback
 
 ## Overview
-
-![The voyage from outside the university network to a cluster login node](./img/971_the_voyage_from_outside_the_university_network_to_a_cluster_login_node_256_x_256.png)
 
 Bianca is an HPC cluster for sensitive data.
 
