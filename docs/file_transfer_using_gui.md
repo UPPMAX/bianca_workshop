@@ -2,6 +2,8 @@
 
 ![](./img/filezilla_login_to_bianca_236_x_266.png)
 
+> FileZilla connected to Bianca
+
 ## Overview
 
 Here we learn how to transfer files
@@ -107,6 +109,8 @@ other tools.
 
 ![FileZilla logo, from https://en.wikipedia.org/wiki/FileZilla#/media/File:FileZilla_logo.svg](./img/filezilla_logo_240_x_240.png)
 
+> The FileZilla logo
+
 FileZilla is a secure file transfer tool that works under Linux, Mac and Windows.
 
 To transfer files to/from Bianca using FileZilla, do:
@@ -125,6 +129,8 @@ To transfer files to/from Bianca using FileZilla, do:
     It is here:
 
     ![](./img/filezilla_file_site_manager.png)
+    
+    > The FileZilla 'File' menu contains the item 'Site manager'
 
 - Click 'New site'
 
