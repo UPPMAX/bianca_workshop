@@ -39,14 +39,14 @@ flowchart TD
     subgraph sunet[Inside SUNET]
       subgraph bianca_outside[Bianca outside]
         login_node(login node):::calculation_node
-        wharf(wharf):::file_node
+        files_on_wharf(Files on wharf):::file_node
         subgraph bianca_inside[Bianca]
           calculation_node(calculation/interative node):::calculation_node
-          your_project_folder(Your project folder):::file_node
+          files_in_bianca_project(Files in Bianca project folder):::file_node
         end
       end
       user(User)
-      user_local_files(User local files):::file_node
+      user_local_files(Files on user computer):::file_node
     end
     style bianca_inside fill:#afa,color:#000,stroke:#faa
     style bianca_outside fill:#ffa,color:#000,stroke:#faa
@@ -54,11 +54,11 @@ flowchart TD
 
     user --> |logs in |login_node
     user --> |uses| user_local_files
-    user_local_files <--> |transfer files|wharf
+    user_local_files <--> |transfer files|files_on_wharf
     login_node --> |submit jobs|calculation_node
-    login_node --> |can use|your_project_folder
-    calculation_node --> |can use|your_project_folder
-    wharf --> |transfer files| your_project_folder
+    login_node --> |can use|files_in_bianca_project
+    calculation_node --> |can use|files_in_bianca_project
+    files_on_wharf <--> |transfer files| files_in_bianca_project
 ```
 
 > Overview of file transfer on Bianca, when using a graphical tool.
@@ -281,16 +281,16 @@ flowchart TD
     subgraph sunet[Inside SUNET]
       subgraph bianca_outside[Bianca outside]
         login_node(login node):::calculation_node
-        wharf(wharf):::file_node
+        files_on_wharf(Files on wharf):::file_node
         subgraph bianca_inside[Bianca]
           calculation_node(calculation/interative node):::calculation_node
-          your_project_folder(Your project folder):::file_node
+          files_in_bianca_project(Files in Bianca project folder):::file_node
         end
       end
       user(User)
-      user_local_files(User local files):::file_node
+      user_local_files(Files on user computer):::file_node
       files_on_transit(Files on transit):::file_node
-      other_clusters(Other HPC clusters)
+      files_on_other_clusters(Files on other HPC clusters):::file_node
     end
     style bianca_inside fill:#afa,color:#000,stroke:#faa
     style bianca_outside fill:#ffa,color:#000,stroke:#faa
@@ -298,14 +298,14 @@ flowchart TD
 
     user --> |logs in |login_node
     user --> |uses| user_local_files
-    user_local_files <--> |transfer files|wharf
+    user_local_files <--> |transfer files|files_on_wharf
     user_local_files <--> |transfer files|files_on_transit
-    files_on_transit <--> |transfer files|wharf
-    files_on_transit <--> |transfer files|other_clusters
+    files_on_transit <--> |transfer files|files_on_wharf
+    files_on_transit <--> |transfer files|files_on_other_clusters
     login_node --> |submit jobs|calculation_node
-    login_node --> |can use|your_project_folder
-    calculation_node --> |can use|your_project_folder
-    wharf --> |transfer files| your_project_folder
+    login_node --> |can use|files_in_bianca_project
+    calculation_node --> |can use|files_in_bianca_project
+    files_on_wharf <--> |transfer files| files_in_bianca_project
 ```
 
 > Overview of file transfer on Bianca
