@@ -281,8 +281,7 @@ flowchart TD
         login_node(login node):::calculation_node
         wharf(wharf):::file_node
         subgraph bianca_inside[Bianca]
-          calculation_node(calculation node):::calculation_node
-          interactive_node(interactive node):::calculation_node
+          calculation_node(calculation/interative node):::calculation_node
           your_project_folder(Your project folder):::file_node
         end
       end
@@ -304,10 +303,7 @@ flowchart TD
     terminal --> |transfer files| transit
     transit <--> |transfer files|wharf
     login_node --> |submit jobs|calculation_node
-    login_node --> |login to|interactive_node
-    interactive_node --> |submit jobs|calculation_node
     login_node --> |can use|your_project_folder
-    interactive_node --> |can use|your_project_folder
     calculation_node --> |can use|your_project_folder
     wharf --> |transfer files| your_project_folder
 ```
