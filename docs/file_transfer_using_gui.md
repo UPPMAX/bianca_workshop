@@ -48,8 +48,8 @@ flowchart TD
       user(User)
       user_local_files(Files on user computer):::file_node
     end
-    style bianca_inside fill:#afa,color:#000,stroke:#faa
-    style bianca_outside fill:#ffa,color:#000,stroke:#faa
+    style bianca_inside fill:#afa,color:#000,stroke:#afa
+    style bianca_outside fill:#ffa,color:#000,stroke:#ffa
     style sunet fill:#faa,color:#000,stroke:#faa
 
     user --> |logs in |login_node
@@ -295,8 +295,8 @@ flowchart TD
       files_on_transit(Files on transit):::file_node
       files_on_other_clusters(Files on other HPC clusters):::file_node
     end
-    style bianca_inside fill:#afa,color:#000,stroke:#faa
-    style bianca_outside fill:#ffa,color:#000,stroke:#faa
+    style bianca_inside fill:#afa,color:#000,stroke:#afa
+    style bianca_outside fill:#ffa,color:#000,stroke:#ffa
     style sunet fill:#faa,color:#000,stroke:#faa
 
     user --> |logs in |login_node
