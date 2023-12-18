@@ -82,6 +82,7 @@ flowchart TD
     can_use_command_line_1 --> can_use_command_line_2
     can_use_command_line_1 --> can_schedule_jobs
     can_use_modules --> can_schedule_jobs
+    can_use_modules --> can_use_ide
     can_use_interactive_node --> can_use_ide
     can_create_bash_script_using_gui --> can_schedule_jobs
 
