@@ -54,23 +54,22 @@ flowchart TD
       can_use_modules(Can use modules)
       can_use_interactive_node(Can use an interactive node)
     end
-    style sub_prerequisites fill:#f00,color:#000,stroke:#faa
+    style sub_prerequisites fill:#faa,color:#000,stroke:#faa
 
     subgraph sub_basic_use["Basic use of Bianca"]
       can_develop_code_interactively(Can develop code interactively)
       can_tranfer_files_using_gui(Can transfer files using graphical user interface)
       can_tranfer_files_using_cli(Can transfer files using a command-line tool)
       can_schedule_jobs(Can schedule jobs)
+      can_use_ide(Can use an IDE)
     end
-    style sub_basic_use fill:#ff0,color:#000,stroke:#ffa
+    style sub_basic_use fill:#ffa,color:#000,stroke:#ffa
 
     subgraph sub_intermediate_use["Intermediate use of Bianca"]
       can_use_custom_software(Can use custom software)
       can_monitor_jobs(Can monitor jobs)
-      %% Richel: I think this is basic use, as it is beginners that want this
-      can_use_ide(Can use an IDE)
     end
-    style sub_intermediate_use fill:#0f0,color:#000,stroke:#afa
+    style sub_intermediate_use fill:#afa,color:#000,stroke:#afa
 
     can_login ---> can_use_command_line
     can_login ---> can_tranfer_files_using_gui
