@@ -42,41 +42,43 @@ Time |Topic
 ## Overview of courses
 
 ```mermaid
+%% Direction is top->down
 flowchart TD
 
     %% Give a white background, instead of a transparent one
     classDef node fill:#fff,color:#000,stroke:#000
-
-    subgraph sub_prerequisites["Preprequisites to use Bianca"]
+    classDef focus_node fill:#fff,color:#000,stroke:#000,stroke-width:4px
+    
+    subgraph sub_basic_use["Basic use of Bianca"]
       can_login(Can login)
-      can_use_command_line(Can use the command line)
+      can_use_command_line_1(Can use the command line 1)
       can_create_bash_script(Can create a bash script)
       can_use_modules(Can use modules)
       can_use_interactive_node(Can use an interactive node)
-    end
-    style sub_prerequisites fill:#faa,color:#000,stroke:#faa
-
-    subgraph sub_basic_use["Basic use of Bianca"]
       can_develop_code_interactively(Can develop code interactively)
-      can_tranfer_files_using_gui(Can transfer files using graphical user interface)
-      can_tranfer_files_using_cli(Can transfer files using a command-line tool)
-      can_schedule_jobs(Can schedule jobs)
-      can_use_ide(Can use an IDE)
+      can_tranfer_files_using_gui(Can transfer files using graphical user interface):::focus_node
+      can_schedule_jobs(Can schedule jobs):::focus_node
+      can_use_ide(Can use an IDE):::focus_node
     end
     style sub_basic_use fill:#ffa,color:#000,stroke:#ffa
 
+
     subgraph sub_intermediate_use["Intermediate use of Bianca"]
-      can_use_custom_software(Can use custom software)
-      can_monitor_jobs(Can monitor jobs)
+      can_use_command_line_2(Can use the command line 2)
+      can_tranfer_files_using_cli(Can transfer files using a command-line tool):::focus_node
+      can_use_custom_software(Can use custom software):::focus_node
+      can_monitor_jobs(Can monitor jobs):::focus_node
     end
     style sub_intermediate_use fill:#afa,color:#000,stroke:#afa
 
-    can_login ---> can_use_command_line
+    can_login ---> can_use_command_line_1
     can_login ---> can_tranfer_files_using_gui
-    can_use_command_line --> can_create_bash_script
-    can_use_command_line --> can_use_modules
-    can_use_command_line --> can_use_interactive_node
-    can_use_command_line --> can_tranfer_files_using_cli
+    can_use_command_line_1 --> can_use_modules
+    can_use_command_line_1 --> can_use_interactive_node
+    can_use_command_line_1 --> can_use_command_line_2
+    can_use_command_line_1 --> can_create_bash_script
+    can_develop_code_interactively --> can_use_ide
+    can_use_command_line_2 --> can_tranfer_files_using_cli
     can_use_modules --> can_schedule_jobs
     can_create_bash_script --> can_schedule_jobs
     can_schedule_jobs --> can_monitor_jobs
