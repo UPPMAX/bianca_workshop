@@ -41,6 +41,7 @@ Time |Topic
 
 ## Overview of courses
 
+```mermaid
 %% Direction is top->down
 flowchart TD
 
@@ -54,7 +55,6 @@ flowchart TD
       can_create_bash_script_using_gui(Can create a bash script using GUI)
       can_use_modules(Can use modules)
       can_use_interactive_node(Can use an interactive node)
-      can_develop_code_interactively(Can develop code interactively)
       can_tranfer_files_using_gui(Can transfer files using GUI):::focus_node
       can_schedule_jobs(Can schedule jobs):::focus_node
       can_use_ide(Can use an IDE):::focus_node
@@ -81,10 +81,8 @@ flowchart TD
     can_use_command_line_1 --> can_use_interactive_node
     can_use_command_line_1 --> can_use_command_line_2
     can_use_command_line_1 --> can_schedule_jobs
-    can_develop_code_interactively --> can_use_ide
     can_use_modules --> can_schedule_jobs
     can_use_interactive_node --> can_use_ide
-    can_use_interactive_node --> can_develop_code_interactively
     can_create_bash_script_using_gui --> can_schedule_jobs
 
     %% Basic -> Intermediate
