@@ -54,7 +54,7 @@ flowchart TD
 
     user --> |logs in |login_node
     user --> |uses| user_local_files
-    user_local_files <==> |transfer files|files_on_wharf
+    user_local_files <== "`**transfer files**`" ==> files_on_wharf
     login_node --> |submit jobs|calculation_node
     login_node --> |can use|files_in_bianca_project
     calculation_node --> |can use|files_in_bianca_project
