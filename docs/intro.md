@@ -41,8 +41,6 @@ Time |Topic
 
 ## Overview of courses
 
-```mermaid
-%% Direction is top->down
 %% Direction is top->down
 flowchart TD
 
@@ -90,7 +88,6 @@ flowchart TD
     can_create_bash_script_using_gui --> can_schedule_jobs
 
     %% Basic -> Intermediate
-
     can_tranfer_files_using_gui --> can_use_custom_software
     can_schedule_jobs --> can_monitor_jobs
 
@@ -99,9 +96,9 @@ flowchart TD
     can_use_ide ~~~ can_use_command_line_2
 
     %% Intermediate
+    can_login_to_console --> can_tranfer_files_using_cli
     can_use_command_line_2 --> can_create_bash_script_using_cli
     can_use_command_line_2 --> can_tranfer_files_using_cli
     can_tranfer_files_using_cli --> can_use_custom_software
-
 ```
     
