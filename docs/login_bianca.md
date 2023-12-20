@@ -87,7 +87,7 @@ flowchart TD
       style bianca_remote_desktop fill:#fff,color:#000,stroke:#000
       style bianca_terminal fill:#fff,color:#000,stroke:#000
     end
-    style sub_bianca_env fill:#0f0,color:#000,stroke:#afa
+    style sub_bianca_env fill:#cfc,color:#000,stroke:#cfc
 
     bianca_console-->|is a|bianca_terminal
     bianca_remote_desktop-->|must also use|bianca_terminal
@@ -118,7 +118,7 @@ flowchart TD
       outside(Physically outside SUNET)
       style outside fill:#fff,color:#000,stroke:#000
     end    
-    style sub_outside fill:#f00,color:#000,stroke:#faa
+    style sub_outside fill:#fcc,color:#000,stroke:#faa
 
     subgraph sub_inside[Inside SUNET]
       physically_inside(Physically inside SUNET)
@@ -128,7 +128,7 @@ flowchart TD
       style inside_using_vpn fill:#fff,color:#000,stroke:#000
       style inside_using_rackham fill:#fff,color:#000,stroke:#000
     end
-    style sub_inside fill:#ff0,color:#000,stroke:#ffa
+    style sub_inside fill:#ffc,color:#000,stroke:#ffa
 
 
     outside-->|Move physically|physically_inside
@@ -207,7 +207,7 @@ flowchart TD
       style inside_using_vpn fill:#fff,color:#000,stroke:#000
       style inside_using_rackham fill:#fff,color:#000,stroke:#000
     end
-    style sub_inside fill:#ff0,color:#000,stroke:#ffa
+    style sub_inside fill:#ffc,color:#000,stroke:#ffa
 
     subgraph sub_bianca_env[Bianca environment]
       bianca_console[Bianca console environment]
@@ -217,7 +217,7 @@ flowchart TD
       style bianca_remote_desktop fill:#fff,color:#000,stroke:#000
       style bianca_terminal fill:#fff,color:#000,stroke:#000
     end
-    style sub_bianca_env fill:#0f0,color:#000,stroke:#afa
+    style sub_bianca_env fill:#cfc,color:#000,stroke:#cfc
 
     physically_inside-->|Use SSH|bianca_console
     physically_inside-->|Use UPPMAX website|bianca_remote_desktop
@@ -409,7 +409,7 @@ flowchart TD
       outside(Physically outside SUNET)
       style outside fill:#fff,color:#000,stroke:#000
     end    
-    style sub_outside fill:#f00,color:#000,stroke:#faa
+    style sub_outside fill:#fcc,color:#000,stroke:#fcc
 
     subgraph sub_inside[Inside SUNET]
       physically_inside(Physically inside SUNET)
@@ -419,7 +419,7 @@ flowchart TD
       style inside_using_vpn fill:#fff,color:#000,stroke:#000
       style inside_using_rackham fill:#fff,color:#000,stroke:#000
     end
-    style sub_inside fill:#ff0,color:#000,stroke:#ffa
+    style sub_inside fill:#ffc,color:#000,stroke:#ffc
 
     subgraph sub_bianca_env[Bianca environment]
       bianca_console[Bianca console environment]
@@ -429,7 +429,7 @@ flowchart TD
       style bianca_remote_desktop fill:#fff,color:#000,stroke:#000
       style bianca_terminal fill:#fff,color:#000,stroke:#000
     end
-    style sub_bianca_env fill:#0f0,color:#000,stroke:#afa
+    style sub_bianca_env fill:#cfc,color:#000,stroke:#cfc
 
     outside-->|Move physically|physically_inside
     outside-->|Use a VPN|inside_using_vpn
