@@ -51,53 +51,67 @@ flowchart TD
     
     subgraph sub_basic_use["Basic use of Bianca"]
       can_login_to_remove_desktop(Can login to remote deskop)
+      can_login_to_console(Can login to console)
       can_use_command_line_1(Can use the command line 1)
-      can_create_bash_script_using_gui(Can create a bash script using GUI)
       can_use_modules(Can use modules)
-      can_use_interactive_node(Can use an interactive node)
-      can_tranfer_files_using_gui(Can transfer files using GUI):::focus_node
+      can_use_interactive_node(Can use an interactive node):::focus_node
+      can_manage_files_using_cli(Can manage files using CLI)
+      can_tranfer_files_using_rsync(Can transfer files using rsync):::focus_node
       can_schedule_jobs(Can schedule jobs):::focus_node
-      can_use_ide(Can use an IDE):::focus_node
+      can_create_bash_script_using_cli(Can create a bash script using CLI)
     end
-    style sub_basic_use fill:#ffa,color:#000,stroke:#ffa
-
-
+    style sub_basic_use fill:#faa,color:#000,stroke:#faa
 
     subgraph sub_intermediate_use["Intermediate use of Bianca"]
-      can_login_to_console(Can login to console)
       can_use_command_line_2(Can use the command line 2)
-      can_create_bash_script_using_cli(Can create a bash script using CLI)
-      can_tranfer_files_using_cli(Can transfer files using a command-line tool):::focus_node
       can_use_custom_software(Can use custom software):::focus_node
       can_monitor_jobs(Can monitor jobs):::focus_node
+      can_use_ide(Can use an IDE)
     end
-    style sub_intermediate_use fill:#afa,color:#000,stroke:#afa
+    style sub_intermediate_use fill:#Ffa,color:#000,stroke:#ffa
+
+    subgraph sub_non_goal["Not in course"]
+      can_tranfer_files_using_gui(Can transfer files using GUI)
+      can_create_bash_script_using_gui(Can create a bash script using GUI)
+    end
+    style sub_non_goal fill:#fff,color:#000,stroke:#fff
+
 
     %% Basic
+    can_login_to_console --> can_tranfer_files_using_rsync
+    can_login_to_console --> can_use_command_line_1
     can_login_to_remove_desktop ---> can_use_command_line_1
-    can_login_to_remove_desktop ---> can_tranfer_files_using_gui
-    can_login_to_remove_desktop ---> can_create_bash_script_using_gui
     can_use_command_line_1 --> can_use_modules
     can_use_command_line_1 --> can_use_interactive_node
     can_use_command_line_1 --> can_use_command_line_2
+    can_use_command_line_1 --> can_create_bash_script_using_cli
     can_use_command_line_1 --> can_schedule_jobs
+    can_use_command_line_1 --> can_manage_files_using_cli
+    can_use_command_line_1 --> can_tranfer_files_using_rsync
     can_use_modules --> can_schedule_jobs
-    can_use_modules --> can_use_ide
-    can_use_interactive_node --> can_use_ide
-    can_create_bash_script_using_gui --> can_schedule_jobs
+    can_create_bash_script_using_cli --> can_schedule_jobs
 
     %% Basic -> Intermediate
-    can_tranfer_files_using_gui --> can_use_custom_software
     can_schedule_jobs --> can_monitor_jobs
+    can_use_interactive_node --> can_use_ide
+    can_use_modules --> can_use_ide
 
-    %% Make sure Intermediat in below Basic,
+    %% Make sure Intermediate is below Basic,
     %% using invisible nodes
-    can_use_ide ~~~ can_use_command_line_2
+    can_schedule_jobs ~~~ can_use_command_line_2
 
     %% Intermediate
-    can_login_to_console --> can_tranfer_files_using_cli
-    can_use_command_line_2 --> can_create_bash_script_using_cli
-    can_use_command_line_2 --> can_tranfer_files_using_cli
-    can_tranfer_files_using_cli --> can_use_custom_software
+    can_use_command_line_2 --> can_use_custom_software
+
+    %% Basic -> None
+    %% can_login_to_remove_desktop ---> can_tranfer_files_using_gui
+    %% can_tranfer_files_using_gui --> can_use_custom_software
+    %% can_login_to_remove_desktop ---> can_create_bash_script_using_gui
+    %% can_create_bash_script_using_gui --> can_schedule_jobs
+
+    %% Make sure Non-goals is below Intermediat,
+    %% using invisible nodes
+    can_use_custom_software ~~~ can_tranfer_files_using_gui
+   
 ```
     
