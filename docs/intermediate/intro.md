@@ -52,48 +52,74 @@ Time |Topic
 ## Overview of courses
 
 ```mermaid
+%% Direction is top->down
 flowchart TD
 
     %% Give a white background, instead of a transparent one
     classDef node fill:#fff,color:#000,stroke:#000
-
-    subgraph sub_prerequisites["Preprequisites to use Bianca"]
-      can_login(Can login)
-      can_use_command_line(Can use the command line)
-      can_create_bash_script(Can create a bash script)
-      can_use_modules(Can use modules)
-      can_use_interactive_node(Can use an interactive node)
-    end
-    style sub_prerequisites fill:#f00,color:#000,stroke:#faa
-
+    classDef focus_node fill:#fff,color:#000,stroke:#000,stroke-width:4px
+    
     subgraph sub_basic_use["Basic use of Bianca"]
-      can_develop_code_interactively(Can develop code interactively)
-      can_tranfer_files_using_gui(Can transfer files using graphical user interface)
-      can_tranfer_files_using_cli(Can transfer files using a command-line tool)
-      can_schedule_jobs(Can schedule jobs)
+      can_login_to_remove_desktop(Can login to remote deskop)
+      can_login_to_console(Can login to console)
+      can_use_command_line_1(Can use the command line 1)
+      can_use_modules(Can use modules)
+      can_use_interactive_node(Can use an interactive node):::focus_node
+      can_manage_files_using_cli(Can manage files using CLI)
+      can_tranfer_files_using_rsync(Can transfer files using rsync):::focus_node
+      can_schedule_jobs(Can schedule jobs):::focus_node
+      can_create_bash_script_using_cli(Can create a bash script using CLI)
     end
-    style sub_basic_use fill:#ff0,color:#000,stroke:#ffa
+    style sub_basic_use fill:#fcc,color:#000,stroke:#fcc
 
     subgraph sub_intermediate_use["Intermediate use of Bianca"]
-      can_use_custom_software(Can use custom software)
-      can_monitor_jobs(Can monitor jobs)
-      %% Richel: I think this is basic use, as it is beginners that want this
+      can_use_command_line_2(Can use the command line 2)
+      can_use_custom_software(Can use custom software):::focus_node
+      can_monitor_jobs(Can monitor jobs):::focus_node
       can_use_ide(Can use an IDE)
     end
-    style sub_intermediate_use fill:#0f0,color:#000,stroke:#afa
+    style sub_intermediate_use fill:#ffc,color:#000,stroke:#ffc
 
-    can_login ---> can_use_command_line
-    can_login ---> can_tranfer_files_using_gui
-    can_use_command_line --> can_create_bash_script
-    can_use_command_line --> can_use_modules
-    can_use_command_line --> can_use_interactive_node
-    can_use_command_line --> can_tranfer_files_using_cli
+    subgraph sub_non_goal["Not in course"]
+      can_tranfer_files_using_gui(Can transfer files using GUI)
+      can_create_bash_script_using_gui(Can create a bash script using GUI)
+    end
+    style sub_non_goal fill:#ccc,color:#000,stroke:#ccc
+
+
+    %% Basic
+    can_login_to_console --> can_tranfer_files_using_rsync
+    can_login_to_console --> can_use_command_line_1
+    can_login_to_remove_desktop ---> can_use_command_line_1
+    can_use_command_line_1 --> can_use_modules
+    can_use_command_line_1 --> can_use_interactive_node
+    can_use_command_line_1 --> can_use_command_line_2
+    can_use_command_line_1 --> can_create_bash_script_using_cli
+    can_use_command_line_1 --> can_schedule_jobs
+    can_use_command_line_1 --> can_manage_files_using_cli
+    can_use_command_line_1 --> can_tranfer_files_using_rsync
     can_use_modules --> can_schedule_jobs
-    can_create_bash_script --> can_schedule_jobs
+    can_create_bash_script_using_cli --> can_schedule_jobs
+
+    %% Basic -> Intermediate
     can_schedule_jobs --> can_monitor_jobs
     can_use_interactive_node --> can_use_ide
-    can_use_interactive_node --> can_develop_code_interactively
-    can_tranfer_files_using_cli --> can_use_custom_software
-    can_tranfer_files_using_gui --> can_use_custom_software
+    can_use_modules --> can_use_ide
+
+    %% Make sure Intermediate is below Basic,
+    %% using invisible nodes
+    can_schedule_jobs ~~~ can_use_command_line_2
+
+    %% Intermediate
+    can_use_command_line_2 --> can_use_custom_software
+
+    %% Basic -> None
+    %% can_login_to_remove_desktop ---> can_tranfer_files_using_gui
+    %% can_tranfer_files_using_gui --> can_use_custom_software
+    %% can_login_to_remove_desktop ---> can_create_bash_script_using_gui
+    %% can_create_bash_script_using_gui --> can_schedule_jobs
+
+    %% Make sure Non-goals is below Intermediat,
+    %% using invisible nodes
+    can_use_custom_software ~~~ can_tranfer_files_using_gui
 ```
-    
