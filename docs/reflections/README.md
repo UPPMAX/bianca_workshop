@@ -9,8 +9,8 @@ Teacher reflections.
 
  * Would this be a link, it would give an error: `non_existing_doc.md`
  * Would this be a link, it would give an error: `https://non-existing-website.com/`
- * [Link to a valid header](#link-to-a-valid-header)
- * [Link to an in valid header](#link-to-a-valid-header): should fail
+ * [Link to a valid header](#valid-header)
+ * [Link to an in valid header](#invalid-header): should fail
 
 
 ## Valid header
