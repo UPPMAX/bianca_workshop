@@ -22,11 +22,11 @@ jobs:
           rm -rf docs/sep23
           rm docs/extra/rpackages_copy.md
 
-      - name: external links must be checked
-        run: grep --silent --regexp "[^0-9]0[^0-9]" mlc_config.json
+      - name: External links must be checked
+        run: grep --invert --silent --regexp "[^0-9]0[^0-9]" mlc_config.json
 
-      - name: internal links must checked
-        run: grep --silent --regexp "400" mlc_config.json
+      - name: Internal links must checked
+        run: grep --invert --silent --regexp "400" mlc_config.json
 
       - uses: gaurav-nelson/github-action-markdown-link-check@v1
 
