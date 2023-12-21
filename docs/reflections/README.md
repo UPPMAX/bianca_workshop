@@ -8,4 +8,10 @@ Teacher reflections.
 [Check link checker](https://github.com/UPPMAX/bianca_workshop/issues/11):
 
  * Would this be a link, it would give an error: `non_existing_doc.md`
- * [non-existing external document](https://non-existing-website.com/)
+ * Would this be a link, it would give an error: `https://non-existing-website.com/`
+ * [Link to a valid header](#link-to-a-valid-header)
+ * [Link to an in valid header](#link-to-a-valid-header): should fail
+
+
+## Valid header
+
