@@ -327,7 +327,7 @@ A user logs in to a login node via the Internet.
 
     Either a search engine to google for 'NAISS', or directly [https://naiss.se](https://naiss.se)
 
-???- question "2. Your colleague visits [http://bianca.uppmax.uu.se/](http://bianca.uppmax.uu.se/) and sees nothing appear. What is likely the problem?"
+???- question "2. Your colleague visits [https://bianca.uppmax.uu.se/](https://bianca.uppmax.uu.se/) and sees nothing appear. What is likely the problem?"
 
     He/she is not inside of SUNET.
     
