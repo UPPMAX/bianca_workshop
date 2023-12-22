@@ -275,54 +275,6 @@ To transfer files to/from Bianca using WinSCP, do:
 
 ### File transfer overview
 
-### High saturation
-
-```mermaid
-flowchart TD
-
-    %% Give a white background to all nodes, instead of a transparent one
-    classDef node fill:#fff,color:#000,stroke:#000
-
-    %% Graph nodes for files and calculations
-    classDef file_node fill:#faf,color:#000,stroke:#f0f
-    classDef calculation_node fill:#aaf,color:#000,stroke:#00f
-
-    subgraph sunet[Inside SUNET]
-      subgraph bianca_outside[Bianca outside]
-        login_node(login node):::calculation_node
-        files_on_wharf(Files on wharf):::file_node
-        subgraph bianca_inside[Bianca]
-          calculation_node(calculation/interative node):::calculation_node
-          files_in_bianca_project(Files in Bianca project folder):::file_node
-        end
-      end
-      user(User)
-      user_local_files(Files on user computer):::file_node
-      files_on_transit(Files on transit):::file_node
-      files_on_other_clusters(Files on other HPC clusters):::file_node
-    end
-    style bianca_inside fill:#afa,color:#000,stroke:#afa
-    style bianca_outside fill:#ffa,color:#000,stroke:#ffa
-    style sunet fill:#faa,color:#000,stroke:#faa
-
-    user --> |logs in |login_node
-    user --> |uses| user_local_files
-    user_local_files <--> |transfer files|files_on_wharf
-    user_local_files <--> |transfer files|files_on_transit
-    files_on_transit <--> |transfer files|files_on_wharf
-    files_on_transit <--> |transfer files|files_on_other_clusters
-    login_node --> |submit jobs|calculation_node
-    login_node --> |can use|files_in_bianca_project
-    calculation_node --> |can use|files_in_bianca_project
-    files_on_wharf <--> |transfer files| files_in_bianca_project
-```
-
-> Overview of file transfer on Bianca
-> The purple nodes are about file transfer,
-> the blue nodes are about 'doing other things'.
-
-### High saturation
-
 ```mermaid
 flowchart TD
 
