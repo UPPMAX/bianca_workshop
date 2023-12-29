@@ -36,11 +36,6 @@ We will learn to:
 - work with files
 - create an executable script
 
-!!!- tip "Video: using the command-line on the UPPMAX Bianca cluster"
-
-    There exists a video called 'Using the command-line on the UPPMAX Bianca cluster': 
-    [YouTube](https://youtu.be/kjqLAx2bgJI), [download (.ogv)](https://richelbilderbeek.nl/uppmax_bianca_command_line.ogv)
-
 ### Read the manual
 
 Use `man` to see the help pages about a command:

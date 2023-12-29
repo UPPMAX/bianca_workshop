@@ -31,9 +31,6 @@ then do these exercises.
     The goal of this exercise is to make sure you can start
     RStudio.
 
-    How to start RStudio is in the instructions above
-    and in [this YouTube video](https://youtu.be/rRUb4pqaVak).
-
 ???- question "How to find out if you are on a login or interactive node"
 
     In the terminal, type `hostname`

@@ -31,9 +31,6 @@ then do these exercises.
     The goal of this exercise is to make sure you can start
     VSCodium.
 
-    How to start VSCodium is in the instructions above
-    and in [this YouTube video](https://youtu.be/i7sjHOX4B_M).
-
 ???- question "How to find out if you are on a login or interactive node"
 
     In the terminal, type `hostname`
