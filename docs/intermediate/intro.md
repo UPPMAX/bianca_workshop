@@ -39,25 +39,27 @@ Time |Topic
 
 Suggested new schedule:
 
-Time | Who  | Topic
+When | Who  | What
 -----|------|-------------------------
 9:00 | ?R   | [Introduction](https://uppmax.github.io/bianca_workshop/intermediate/intro/)
 9:15 | P    | 45 mins [Transferring files to and from Bianca](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
-10:00| .    | Coffee break
+10:00| .    | Break
 10:15| P    | 20 mins [Transferring files p2](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
 10:35| D    | 25 mins [Slurm jobs p1](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
 11:00| .    | Break
 11:15| D    | 45 mins [Slurm jobs p2](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
-12:00| .    | LUNCH
+12:00| .    | Lunch
 13:00| B    | [Software and packages installation](https://uppmax.github.io/bianca_workshop/intermediate/install/)
-13:45| .    | break
+13:45| .    | Break
 14:00| PR   | [IDEs on Bianca](https://uppmax.github.io/bianca_workshop/intermediate/ides/)
-14:45| .    | Coffee break
+14:45| .    | Break
 15:00| L    | [NAISS-SENS summary](https://uppmax.github.io/bianca_workshop/sens_project_short/)
 15:30| ?R   | [Summary](https://uppmax.github.io/bianca_workshop/intermediate/summary/)
 15:35| ?R   | Evaluation
 15:45| DLPR | Optional Q/A and [extra material](https://uppmax.github.io/bianca_workshop/extra/slurm/)
 16:00| .    | END
+
+ * Who: `B`jörn, `L`ars, `P`avlin, `R`ichèl
 
 Changes:
 

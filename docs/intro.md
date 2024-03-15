@@ -8,22 +8,24 @@ You will learn about the national infrastructure Bianca is part of, how to login
 
 Tentative schedule:
 
-From  | To    | Who  | What
-------|-------|------|-----------------------------
-9:00  | 10:00 | R    | [Introduction](intro.md) and [logging in](login_bianca.md)
-10:00 | 10:15 | .    | Break
-10:15 | 11:00 | R    | [Command line](commandline.md)
-11:00 | 11:15 | .    | Break
-11:15 | 12:00 | R    | [Modules](modules1.md)
-12:00 | 13:00 | .    | Lunch
-13:00 | 13:45 | P    | [Transferring files to and from Bianca](transfer_basics.md)
-13:45 | 14:00 | .    | Break
-14:00 | 14:45 | B    | [Compute nodes and SLURM](slurm_intro.md), including interactive nodes
-14:45 | 15:00 | .    | Break
-15:00 | 15:30 | L    | [Legal aspects of sensitive data](sens_project_short.md)
-15:30 | 15:35 | R    | Summary
-15:35 | 15:45 | R    | Anonymous evaluation
-15:45 | 16:00 | BLPR |Optional Q&A
+When  | Who  | What
+------|------|-----------------------------
+9:00  | R    | [Introduction](intro.md) and [logging in](login_bianca.md)
+10:00 | .    | Break
+10:15 | R    | [Command line](commandline.md)
+11:00 | .    | Break
+11:15 | R    | [Modules](modules1.md)
+12:00 | .    | Lunch
+13:00 | P    | [Transferring files to and from Bianca](transfer_basics.md)
+13:45 | .    | Break
+14:00 | B    | [Compute nodes and SLURM](slurm_intro.md), including interactive nodes
+14:45 | .    | Break
+15:00 | L    | [Legal aspects of sensitive data](sens_project_short.md)
+15:30 | R    | Summary
+15:35 | R    | Anonymous evaluation
+15:45 | BLPR |Optional Q&A
+
+ * Who: `B`jörn, `L`ars, `P`avlin, `R`ichèl
 
 !!! info "Q/A collaboration document"
 
