@@ -8,24 +8,22 @@ You will learn about the national infrastructure Bianca is part of, how to login
 
 Tentative schedule:
 
-Time |Topic
------|------------------------
-9:00 |[Introduction](intro.md)
-9:15 |[NAISS-Sens](sens_project_short.md)
-9:35 |[Login](login_bianca.md)
-9:55 |Break
-10:10|[Command line](commandline.md)
-10:55|Break
-11:10|[Modules](modules1.md)
-12:00|Lunch
-13:00|[Transferring files to and from Bianca](transfer_basics.md)
-13:55|Break
-14:10|[Compute nodes and SLURM](slurm_intro.md)
-14:55|Break
-15:10|Summary
-15:15|Q/A
-15:55|Closing words
-16:00|END
+From  | To    | Who  | What
+------|-------|------|-----------------------------
+9:00  | 10:00 | R    | [Introduction](intro.md) and [logging in](login_bianca.md)
+10:00 | 10:15 | .    | Break
+10:15 | 11:00 | R    | [Command line](commandline.md)
+11:00 | 11:15 | .    | Break
+11:15 | 12:00 | R    | [Modules](modules1.md)
+12:00 | 13:00 | .    | Lunch
+13:00 | 13:45 | P    | [Transferring files to and from Bianca](transfer_basics.md)
+13:45 | 14:00 | .    | Break
+14:00 | 14:45 | B    | [Compute nodes and SLURM](slurm_intro.md), including interactive nodes
+14:45 | 15:00 | .    | Break
+15:00 | 15:30 | L    | [Legal aspects of sensitive data](sens_project_short.md)
+15:30 | 15:35 | R    | Summary
+15:35 | 15:45 | R    | Anonymous evaluation
+15:45 | 16:00 | BLPR |Optional Q&A
 
 !!! info "Q/A collaboration document"
 
