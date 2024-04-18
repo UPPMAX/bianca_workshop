@@ -16,11 +16,16 @@
     - The learners demonstrate they can unload a module
     - The learners demonstrate they can load a module in a script
 
-    Schedule (45 minutes):
-
-    - 5 minutes: summarize page, start exercise
-    - 30 minutes: let learners do exercise
-    - 10 minutes: feedback
+    ```mermaid
+    gantt
+      title Lesson plan Command line
+      dateFormat X
+      axisFormat %s
+      Prior knowledge: prior, 0, 5s
+      Theory: theory, after prior, 10s
+      Exercises: crit, exercise, after theory, 25s
+      Feedback: feedback, after exercise, 10s
+    ```
 
 ## Exercises
 

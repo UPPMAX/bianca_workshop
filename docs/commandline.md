@@ -16,11 +16,18 @@
     - The learners demonstrate they can create and delete folders
     - The learners demonstrate they can create an executable script
 
-    Schedule (45 minutes):
+    Schedule:
 
-    - 5 minutes: summarize page, start exercise
-    - 30 minutes: let learners do exercise
-    - 10 minutes: feedback
+    ```mermaid
+    gantt
+      title Lesson plan Command line
+      dateFormat X
+      axisFormat %s
+      Prior knowledge: prior, 0, 5s
+      Theory: theory, after prior, 10s
+      Exercises: crit, exercise, after theory, 25s
+      Feedback: feedback, after exercise, 10s
+    ```
 
 ## Overview
 
