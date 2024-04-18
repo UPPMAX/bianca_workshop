@@ -27,6 +27,15 @@
 
 ## Exercises
 
+???- question "Prefer a video?"
+
+    [This 16 minutes long YouTube video](https://youtu.be/74f9AyKkOjg) 
+    shows how to do these exercises, so you can check your answers.
+
+    A goal of these exercises is to practice to use the UPPMAX documentation.
+    Such active learning is more effective than watching a video passively.
+    Please try to do the exercises first!
+
 ![](./img/login_uppmax_bianca_website_outside_sunet_browser_short.png)
 
 First, read the materials at [the UPPMAX documentation website](https://uppmax.github.io/UPPMAX-documentation/getting_started/login_bianca/),
