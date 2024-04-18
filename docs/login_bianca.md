@@ -29,7 +29,7 @@
 
 ???- question "Prefer a video?"
 
-    [This 16 minutes long YouTube video](https://youtu.be/74f9AyKkOjg) 
+    [This 17 minutes long YouTube video](https://youtu.be/74f9AyKkOjg) 
     shows how to do these exercises, so you can check your answers.
 
     A goal of these exercises is to practice to use the UPPMAX documentation.

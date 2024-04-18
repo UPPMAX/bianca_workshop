@@ -30,7 +30,7 @@ When  | Who  | What
 15:35 | R    | Anonymous evaluation
 15:45 | BLPR |Optional Q&A
 
- * Who: `B`jörn, `L`ars, `P`avlin, `R`ichèl
+ * Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
 
 !!! info "Q/A collaboration document"
 
