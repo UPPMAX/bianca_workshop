@@ -68,7 +68,7 @@ Sensitive data can be made FAIR. Even though you cannot publish it freely and op
 
 ## Apply for project
 - [Detailed instructions for project application](https://www.uppmax.uu.se/support/getting-started/applying-for-sens-project/)
-[Open NAISS SENS Rounds](https://supr.naiss.se/round/open_type/?type=NAISS+SENS)
+[NAISS SENS Rounds](https://supr.naiss.se/round/open_or_pending_type/?type=NAISS+SENS)
 - Before GDPR-data will be transferred to UPPMAX, there must be a [Data Processing Agreement](https://www.uppmax.uu.se/support/faq/general-miscellaneous-faq/how-to-establish-a-puba-with-uu/) between UU and the data controlling organisation. These are currently specific to the PI (and sometimes project).
 
 !!! note "Some definitions"
