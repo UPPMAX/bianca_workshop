@@ -46,10 +46,13 @@
     Such active learning is more effective than watching a video passively.
     Please try to do the exercises first!
 
-![](./img/login_uppmax_bianca_website_outside_sunet_browser_short.png)
 
 First, read the materials at [the UPPMAX documentation website](https://uppmax.github.io/UPPMAX-documentation/getting_started/login_bianca/),
 then answer these questions.
+
+![](./img/login_uppmax_bianca_website_outside_sunet_browser_short.png)
+
+> A colleague visiting [https://bianca.uppmax.uu.se/](https://bianca.uppmax.uu.se/) and sees nothing...
 
 ???- question "1. Your colleague visits [https://bianca.uppmax.uu.se/](https://bianca.uppmax.uu.se/) and sees nothing appear on the website (see also image above). What is likely the problem?"
 
