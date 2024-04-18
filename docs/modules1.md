@@ -24,7 +24,7 @@
 
 ## Exercises
 
-Read the UPPMAX documentation on modules [here](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/bianca_modules_basics/),
+Read the UPPMAX documentation on modules [here](http://docs.uppmax.uu.se/cluster_guides/modules/),
 then do these exercises.
 
 ???- tip "Video with solutions"
