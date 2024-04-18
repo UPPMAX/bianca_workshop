@@ -18,12 +18,22 @@
     - The learners demonstrate to have started a terminal in the Bianca remote desktop environment
     - The learners demonstrate to have logged in to the Bianca console environment 
 
-    Schedule (45 minutes):
+    Schedule:
 
-    - 5 minutes: summarize page, start exercise
-    - 30 minutes: let learners do exercise
-    - 10 minutes: feedback
-
+    ```mermaid
+    gantt
+      title Lesson plan Introduction and Logging in
+      dateFormat X
+      axisFormat %s
+      section Introduction
+      Prior knowledge: prior_1, 0, 5s
+      Theory : theory_1, after prior_1, 5s
+      section Logging In
+      Prior knowledge: prior_2, after theory_1, 5s
+      Theory: theory, after prior_2, 5s
+      Exercises: crit, exercise, after theory, 30s
+      Feedback: feedback, after exercise, 10s
+    ```
 
 ## Exercises
 
