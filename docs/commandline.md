@@ -189,7 +189,7 @@ Use the materials shown above to answer the questions below.
 ???- tip "Video with solutions"
 
     There is a video that shows the solution of all these exercises: 
-    [YouTube](https://youtu.be/7_LPeQbcmAo), [download (.ogv)](https://richelbilderbeek.nl/bianca_cli.ogv)
+    [YouTube](https://youtu.be/7_LPeQbcmAo)
 
 ???- question "1. View the help of the command `cd`"
 

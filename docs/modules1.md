@@ -35,7 +35,7 @@ to do these exercises.
 ???- tip "Video with solutions"
 
     There is a video that shows the solution of all these exercises: 
-    [YouTube](https://youtu.be/lNlq2Eb-qgc), [Download (.ogv)](https://richelbilderbeek.nl/bianca_modules.ogv)
+    [YouTube](https://youtu.be/lNlq2Eb-qgc)
 
 ???- question "1a. Verify that the tool `cowsay` is not available by default"
 
