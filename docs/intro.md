@@ -28,7 +28,7 @@ When  | Who  | What
 15:00 | L    | [Legal aspects of sensitive data](sens_project_short.md)
 15:30 | R    | Summary
 15:35 | R    | Anonymous evaluation
-15:45 | BLPR |Optional Q&A
+15:45 | All  |Optional Q&A
 
  * Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
 
