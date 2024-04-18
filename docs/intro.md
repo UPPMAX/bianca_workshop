@@ -36,7 +36,7 @@ When  | Who  | What
 
     - Use the Q/A page for the workshop with your questions.
 
-          - [https://hackmd.io/@UPPMAX/Bianca_Intro_QaA](https://hackmd.io/@UPPMAX/Bianca_Intro_QaA)
+          - [https://hackmd.io/@UPPMAX/Bianca_Intro_QaA](https://hackmd.io/@UPPMAX/Bianca_Intro_QaA){target="_blank"}
 
     - Depending on how many helpers there are we’ll see how fast there are answers.
 
