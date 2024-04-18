@@ -24,7 +24,7 @@
       dateFormat X
       axisFormat %s
       Prior knowledge: prior, 0, 5s
-      Theory: theory, after prior, 10s
+      Theory: theory, after prior, 5s
       Exercises: crit, exercise, after theory, 25s
       Feedback: feedback, after exercise, 10s
     ```
@@ -183,6 +183,8 @@ chmod +x do_it.sh
     by removing the writing rights using `chmod -w`.
 
 ## Exercises
+
+Use the materials shown above to answer the questions below. 
 
 ???- tip "Video with solutions"
 

@@ -22,15 +22,15 @@
       dateFormat X
       axisFormat %s
       Prior knowledge: prior, 0, 5s
-      Theory: theory, after prior, 10s
+      Theory: theory, after prior, 5s
       Exercises: crit, exercise, after theory, 25s
       Feedback: feedback, after exercise, 10s
     ```
 
 ## Exercises
 
-Read the UPPMAX documentation on modules [here](http://docs.uppmax.uu.se/cluster_guides/modules/),
-then do these exercises.
+Use [the UPPMAX documentation on modules](http://docs.uppmax.uu.se/cluster_guides/modules/) 
+to do these exercises.
 
 ???- tip "Video with solutions"
 

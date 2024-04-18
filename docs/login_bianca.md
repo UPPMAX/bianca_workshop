@@ -47,8 +47,8 @@
     Please try to do the exercises first!
 
 
-Use the materials at [the UPPMAX documentation website](https://uppmax.github.io/UPPMAX-documentation/getting_started/login_bianca/),
-then answer the questions below. 
+Use [the UPPMAX documentation on logging in to Bianca](https://uppmax.github.io/UPPMAX-documentation/getting_started/login_bianca/) 
+to answer the questions below. 
 
 ![](./img/login_uppmax_bianca_website_outside_sunet_browser_short.png)
 
