@@ -18,7 +18,7 @@
 
     ```mermaid
     gantt
-      title Lesson plan Command line
+      title Lesson plan on modules
       dateFormat X
       axisFormat %s
       Prior knowledge: prior, 0, 5s
