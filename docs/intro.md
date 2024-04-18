@@ -1,5 +1,10 @@
 # Introduction to Bianca: Handling Sensitive Research Data
 
+???- question "Prefer a video?"
+
+    In case you prefer a video over reading,
+    go [to this YouTube video](https://youtu.be/o0fRHoa8C5U)
+
 Are you starting to work with your sensitive data in your research? 
 
 If yes, welcome to a full day introduction to handling sensitive data on the UPPMAX cluster, Bianca!
