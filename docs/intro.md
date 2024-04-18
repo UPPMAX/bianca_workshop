@@ -3,7 +3,7 @@
 ???- question "Prefer a video?"
 
     In case you prefer a video over reading,
-    go [to this YouTube video](https://youtu.be/o0fRHoa8C5U)
+    [watch this YouTube video (6 minutes long)](https://youtu.be/o0fRHoa8C5U)
 
 Are you starting to work with your sensitive data in your research? 
 
