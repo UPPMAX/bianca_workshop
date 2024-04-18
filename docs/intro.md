@@ -31,7 +31,7 @@ When  | Who  | What
 
     - Use the Q/A page for the workshop with your questions.
 
-          - [https://hackmd.io/@bclaremar/bianca_dec_2023?both](https://hackmd.io/@bclaremar/bianca_dec_2023?both)
+          - [https://hackmd.io/@UPPMAX/Bianca_Intro_QaA](https://hackmd.io/@UPPMAX/Bianca_Intro_QaA)
 
     - Depending on how many helpers there are we’ll see how fast there are answers.
 
