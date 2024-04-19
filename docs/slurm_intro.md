@@ -439,7 +439,7 @@ echo Hello world!
     - ``interactive -A <project> <other options if not using default settings>`` 
     - load your modules when session starts
 
-### More about the queue
+## (Optional) More about the queue 
 
 - How does the queue work?
 
