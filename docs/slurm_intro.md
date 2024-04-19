@@ -24,6 +24,17 @@
     - 10 minutes: exercise+ quiz
     - 5 minutes: discuss answers
     
+## Nodes
+
+### One node consists of...
+![node principle](./img/node.png)
+
+
+### The compute clusters have this principle
+![nodes principle](./img/nodes.png)
+
+
+
 ## The compute nodes
 
 When you are logged in, you are on a login node.
@@ -142,44 +153,18 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
 
 ### The queue
 
-- How does the queue work?
-
-- Let's look graphically at jobs presently running.
-
-![Image](./img/queue1.png)
-
-- *x-axis: cores, one thread per core*
-- *y-axis: time*
-<br/><br/>
-
-- We see some holes where we may fit jobs already!
-- Let's see which type of jobs that can fit!
-
-![Image](./img/queue2.png)
-
-<br>
-
-- 4 one-core jobs can run immediately (or a 4-core wide job).*
-
-    - *The jobs are too long to fit at core number 9-13.*
-
-![Image](./img/queue3.png)
-<br>
-
-- A 5-core job has to wait.*
-
-    - *Too long to fit in cores 9-13 and too wide to fit in the last cores.*
-
-- Easiest to schedule *single-threaded*, short jobs
-
-
 !!! tip
 
-    - You don't see the queue graphically, however.
+    - You don't see the queue graphically.
     - But, overall:
         - short and narrow jobs will start fast
         - test and development jobs can get use of specific development nodes if they are shorter than 1 hour and uses up to two nodes.
         - waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
+
+!!! note "See also"
+
+    [More about the queue](slurm_intro.md#more-about-the-queue)
+
 
 ### Core-hours
 
@@ -278,10 +263,12 @@ We recommend using at least two cores for RStudio, and to get those resources, y
     Use **ThinLinc**
 
     - Start **interactive session** on compute node (2 cores)
+    
     - If you already have an interactive session going on use that.
+   
         - If you don't find it, do
         
-            ``$ squeue``
+          ``$ squeue``
             
         - find your session, ssh to it, like:
         
@@ -452,6 +439,48 @@ echo Hello world!
     - ``interactive -A <project> <other options if not using default settings>`` 
     - load your modules when session starts
 
+## (Optional) More about the queue 
+
+- How does the queue work?
+
+- Let's look graphically at jobs presently running.
+
+![Image](./img/queue1.png)
+
+- *x-axis: cores, one thread per core*
+- *y-axis: time*
+<br/><br/>
+
+- We see some holes where we may fit jobs already!
+- Let's see which type of jobs that can fit!
+
+![Image](./img/queue2.png)
+
+<br>
+
+- 4 one-core jobs can run immediately (or a 4-core wide job).*
+
+    - *The jobs are too long to fit at core number 9-13.*
+
+![Image](./img/queue3.png)
+<br>
+
+- A 5-core job has to wait.*
+
+    - *Too long to fit in cores 9-13 and too wide to fit in the last cores.*
+
+- Easiest to schedule *single-threaded*, short jobs
+
+
+!!! tip
+
+    - You don't see the queue graphically, however.
+    - But, overall:
+        - short and narrow jobs will start fast
+        - test and development jobs can get use of specific development nodes if they are shorter than 1 hour and uses up to two nodes.
+        - waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
+
+
 ## Exercises
 
 ???+ question "You are developing code on Bianca."
@@ -563,6 +592,7 @@ echo Hello world!
 
 - [Slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
 - [Slurm user guide](https://www.uppmax.uu.se/support/user-guides/slurm-user-guide/){:target="_blank"}
+- [New Slurm user guide (needs updates)](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/slurm/){:target="_blank"}
 - [Discovering job resource usage with `jobstats`](https://www.uppmax.uu.se/support/user-guides/jobstats-user-guide/){:target="_blank"} 
 - [Plotting your core hour usage](https://www.uppmax.uu.se/support/user-guides/plotting-your-core-hour-usage/){:target="_blank"} 
 
