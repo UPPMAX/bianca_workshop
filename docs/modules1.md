@@ -152,6 +152,42 @@ to do these exercises.
 
 ## Bigger exercises
 
+???- question "Hands on: Running R within RStudio, use ggplot2 from R_packages/4.1.1"
+
+    1. Load the `R_packages/4.1.1` module and the latest `RStudio` module, and start RStudio with `rstudio &`.
+    ![ThinLinc load R_packages RStudio](./img/modules-1-ml-rstudio.png)
+
+    2. Load the `ggplot2` R library, provided by `R_packages/4.1.1`, and produce an example plot.
+    ![ThinLinc ggplot2](./img/modules-2-ggplot2.png)
+
+    2. Save the plot using `ggsave`.
+    ![ThinLinc ggsave](./img/modules-3-ggsave.png)
+
+???- question "Hands on: Loading the conda/latest module"
+
+    1. Load the `conda/latest` module.
+    ```
+    $ ml conda/latest
+    The variable CONDA_ENVS_PATH contains the location of your environments. Set it to your project's environments folder if you have one.
+    Otherwise, the default is ~/.conda/envs. Remember to export the variable with export CONDA_ENVS_PATH=/proj/...
+
+    You may run "source conda_init.sh" to initialise your shell to be able
+    to run "conda activate" and "conda deactivate" etc.
+    Just remember that this command adds stuff to your shell outside the scope of the module system.
+
+    REMEMBER TO USE 'conda clean -a' once in a while
+    ```
+
+    We want to set the `CONDA_ENVS_PATH` variable to a directory within our project, rather than use the default which is our home directory.
+    If you do not set this variable, your home directory will easily exceed its quotas when creating even a single Conda environment.
+    This will be covered in more detail in the afternoon.
+
+???- warning  "Do this one on an interactive/computer node!"
+
+    Please, do the exercise below on an interactive node!
+    The tools use too much resources to be used on a login node.
+    Alternatively, use the Slurm scheduler instead :-)
+
 !!! warning 
     - To access bioinformatics tools, load the **bioinfo-tools** module first.
 
@@ -250,35 +286,3 @@ to do these exercises.
     $ bgzip ERR1252289.subset.snpEff.vcf
     $ tabix -p vcf ERR1252289.subset.snpEff.vcf.gz
     ```
-
-
-???- question "Hands on: Running R within RStudio, use ggplot2 from R_packages/4.1.1"
-
-    1. Load the `R_packages/4.1.1` module and the latest `RStudio` module, and start RStudio with `rstudio &`.
-    ![ThinLinc load R_packages RStudio](./img/modules-1-ml-rstudio.png)
-
-    2. Load the `ggplot2` R library, provided by `R_packages/4.1.1`, and produce an example plot.
-    ![ThinLinc ggplot2](./img/modules-2-ggplot2.png)
-
-    2. Save the plot using `ggsave`.
-    ![ThinLinc ggsave](./img/modules-3-ggsave.png)
-
-
-???- question "Hands on: Loading the conda/latest module"
-
-    1. Load the `conda/latest` module.
-    ```
-    $ ml conda/latest
-    The variable CONDA_ENVS_PATH contains the location of your environments. Set it to your project's environments folder if you have one.
-    Otherwise, the default is ~/.conda/envs. Remember to export the variable with export CONDA_ENVS_PATH=/proj/...
-
-    You may run "source conda_init.sh" to initialise your shell to be able
-    to run "conda activate" and "conda deactivate" etc.
-    Just remember that this command adds stuff to your shell outside the scope of the module system.
-
-    REMEMBER TO USE 'conda clean -a' once in a while
-    ```
-
-    We want to set the `CONDA_ENVS_PATH` variable to a directory within our project, rather than use the default which is our home directory.
-    If you do not set this variable, your home directory will easily exceed its quotas when creating even a single Conda environment.
-    This will be covered in more detail in the afternoon.
