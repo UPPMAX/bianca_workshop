@@ -24,6 +24,17 @@
     - 10 minutes: exercise+ quiz
     - 5 minutes: discuss answers
     
+## Nodes
+
+### One node consists of...
+![node principle](./img/node.png)
+
+
+### The compute clusters have this principle
+![nodes principle](./img/nodes.png)
+
+
+
 ## The compute nodes
 
 When you are logged in, you are on a login node.
