@@ -14,4 +14,4 @@
     - [Linux](https://uppmax.github.io/uppmax_intro/linux.html)
     - [Basic toolkit](https://uppmax.github.io/uppmax_intro/linux_basics.html)
 
-- HackMD page: <https://hackmd.io/@bclaremar/bianca_dec_2023?both>
+- HackMD page: [https://hackmd.io/@UPPMAX/Bianca_Intro_QaA](https://hackmd.io/@UPPMAX/Bianca_Intro_QaA)

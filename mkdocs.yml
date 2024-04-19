@@ -6,14 +6,13 @@ nav:
   - Bianca intro (beginner): 
     - Introduction: intro.md
     - Overview: overview.md
-    - Intro to NAISS-SENS and sensitive data: sens_project_short.md
     - Logging in to Bianca: login_bianca.md
     - Command-line intro: commandline.md
     - Module system: modules1.md
     - Transferring files to/from Bianca: transfer_basics.md
     - Transferring files to/from Bianca using a GUI: file_transfer_using_gui.md
-    - Start an interactive node: start_interactive_node.md
     - Introduction to compute nodes: slurm_intro.md
+    - Intro to NAISS-SENS and sensitive data: sens_project_short.md
     - Summary: summary.md
     - Exercises: exercises.md
   - Intermediate workshop/hackaton: 
