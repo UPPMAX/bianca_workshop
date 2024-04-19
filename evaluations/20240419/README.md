@@ -14,27 +14,39 @@ Below are tallies, i.e. add one character behind each
 to answer a question. This helps us
 assess how well we as teachers did.
 
-I can now login:
+I am confident that I can now login:
 - yes:
 - no:
 
-I can now create bash scripts:
+I am confident that I can now create executable bash scripts:
 - yes:
 - no:
 
-I can now use modules:
+I am confident that I can now use modules:
 - yes:
 - no:
 
-I can now do file tranfer:
+I am confident that I can now do file tranfer using a GUI:
 - yes:
 - no:
 
-I can now use the job scheduler:
+I am confident that I can now do file tranfer using transit:
 - yes:
 - no:
 
-I now know the legal aspects of sensitive data:
+I am confident that I can now do file tranfer using rsync:
+- yes:
+- no:
+
+I am confident that I can now start an interactive session:
+- yes:
+- no:
+
+I am confident that I can now submit jobs to the scheduler:
+- yes:
+- no:
+
+I am confident that I now know the legal aspects of sensitive data:
 - yes:
 - no:
 
