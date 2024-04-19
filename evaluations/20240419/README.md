@@ -10,6 +10,34 @@ and will ideally be published in raw form at
 https://github.com/UPPMAX/bianca_workshop/tree/main/evaluations/20240419 .
 To do so, please do not share sensitive data here!
 
+Below are tallies, i.e. add one character behind each
+to answer a question. This helps us
+assess how well we as teachers did.
+
+I can now login:
+- yes:
+- no:
+
+I can now create bash scripts:
+- yes:
+- no:
+
+I can now use modules:
+- yes:
+- no:
+
+I can now do file tranfer:
+- yes:
+- no:
+
+I can now use the job scheduler:
+- yes:
+- no:
+
+I now know the legal aspects of sensitive data:
+- yes:
+- no:
+
 Below are the question. If needed, specify your ideas per session.
 
 ### What should we keep doing? 
