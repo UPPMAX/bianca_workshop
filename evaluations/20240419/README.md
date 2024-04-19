@@ -163,7 +163,7 @@ I am confident that I can now start an interactive session:
 - no:11
 
 I am confident that I can now submit jobs to the scheduler:
-- yes:q1i
+- yes:q1i*
 - no:111i
 
 I am confident that I now know the legal aspects of sensitive data:
@@ -187,7 +187,8 @@ Below are the question. If needed, specify your ideas per session.
 - teacher/helper to student ration was really good
 - ...
 - ...
-- ...
+- Amazing dynamics to keep everyone on the same page. Other bioinfo workshops I have attended tend to be less "interactive" hence more difficult. Thanks!
+- 
 
 
 ### Which section(s) scheduled enough time for exercises?
@@ -217,7 +218,7 @@ Below are the question. If needed, specify your ideas per session.
 - Perhaps more info on developing a script, what way can you scale up your project and estimate workload or test running time.
 - ...
 - Don't have a feedback/evaluation document where text can (accidentaly) be deleted and edited by others :)
-- ...
+- Perhaps to extend more time for the practical exercises. And go throught them together in some of the cases.  
 - ...
 - ...
 - ...
@@ -230,7 +231,7 @@ Below are the question. If needed, specify your ideas per session.
 - More time on transfer of files, to and from desktop and also to and from other secure environments such as Vesta
 - Really great intro, it felt easy to ask questions even though it was on zoom. 
 - Overall very nice course, thank you!
-- 
+- Excellent course, thank you greatly to the organizers and teachers!  
 - ...
 - ...
 - ...
@@ -240,12 +241,3 @@ Below are the question. If needed, specify your ideas per session.
 - ...
 - ...
 - ...
-
----
-:::warning
-   :warning: Don't share any sensitive information in this document!
-:::
-
----
-
-
