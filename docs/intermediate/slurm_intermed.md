@@ -2,7 +2,7 @@
 
 !!! info "Lesson material"
    
-    - [PDF material](https://www.uppmax.uu.se/digitalAssets/1071/c_1071312-l_1-k_bianca-slurm-2023-12.pdf)
+    - [PDF material](https://github.com/UPPMAX/bianca_workshop/blob/main/docs/presentations/Bianca-Slurm-2023-12-Diana.pdf)
 
 
 !!! info "See also"
