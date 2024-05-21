@@ -41,11 +41,11 @@
       Course introduction: done, course_intro, 0, 15s
       Introduction : intro, after course_intro, 5s
       Theory 1: theory_1, after intro, 10s
-      Exercise 1: crit, exercise_1, after theory_1, 20s
+      Exercise 1 in silence: crit, exercise_1, after theory_1, 20s
       Feedback 1: feedback_1, after exercise_1, 10s
       Break: milestone, after feedback_1
       section Second hour
-      Exercise 2: crit, exercise_2, 0, 10s
+      Exercise 2 in silence: crit, exercise_2, 0, 10s
       Feedback 2: feedback_2, after exercise_2, 10s
       SLURM: done, slurm, after feedback_2, 25s
       Break: done, milestone, after slurm
