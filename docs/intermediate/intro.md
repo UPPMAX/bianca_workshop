@@ -51,7 +51,10 @@ to work on the Bianca UPPMAX cluster.
 
 !!! info "Course shared document"
 
-    The course shared document can be found at: [https://hackmd.io/@bclaremar/bianca_hack_dec_2023?both](https://hackmd.io/@bclaremar/bianca_dec_2023?both)
+    The course shared document can be found at: [https://hackmd.io/@UPPMAX/bianca-workshop-2024/edit](https://hackmd.io/@UPPMAX/bianca-workshop-2024/edit)
+
+        - Click on the button in the top between the _pen_ and _eye_ to show both the editing part (left) and the ready page (right)
+
 
     It contains exercises, room for questions and room for feedback.
 
