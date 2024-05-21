@@ -15,6 +15,10 @@
 
     - None
 
+    Preparations are:
+
+    - Prepare the three questions for a public polling website such as Menti
+
     Teaching goals are:
 
     - Learners have explored the UPPMAX documentation
@@ -56,7 +60,7 @@
     - Does it have consequences that Bianca is a sensitive data cluster?
     - How does one do file transfer on Bianca?
 
-    Polls:
+    Polls (goal: part of prior and measure actual usage):
 
     My favorite way to transfer files to/from Bianca now is using:
 
