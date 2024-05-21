@@ -164,7 +164,11 @@ Exercise 1 and 2 are the most important, as:
     - Understand what the Transit server allows
 
 - Scan the content of [the UPPMAX documentation on how to use rsync to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/)
-- Answer the following questions to yourself in your own words (answers are below). If you have no idea at all, read the linked UPPMAX documentation:
+- Answer the following questions to yourself in your own words (answers are below). 
+  Be generous in accepting your own answer.
+  You may share your answer in the course shared document for feedback,
+  but do not wait for feedback.
+  If you have no idea at all, read the linked UPPMAX documentation:
 
     - What is [SUNET](docs.uppmax.uu.se/getting_started/get_inside_sunet)?
     - What is [`ssh`](http://docs.uppmax.uu.se/software/ssh/)? What does it allow us to do?
@@ -224,7 +228,8 @@ Here is the exercise:
   [the UPPMAX documentation on how to use rsync to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/).
   There are 4 transfers described (file versus folder, upload versus download),
   do at least 1 upload and 1 download
-- Signal in Zoom that you are done using the Yes (a green checkmark) Reaction.
+- Signal in Zoom that you are done using the Yes (a green checkmark) Reaction
+  (Zoom Reactions are in the lower menu bar of your Zoom session).
   This helps us assess the optimal length of this session
 - Move to the next optional exercises
 
@@ -241,9 +246,10 @@ Here is the exercise:
   There are 2 transfers described (upload versus download),
   do both
 - Signal in Zoom that you have nothing left to do using the No (a red cross) Reaction.
+  (Zoom Reactions are in the lower menu bar of your Zoom session).
   From now on, you may be asked to help other learners
   and its helps us assess the optimal length of this session
-- Read the material for the next session
+- Read the material for the next session. Well done!
 
 ## Summary
 
