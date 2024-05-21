@@ -1,221 +1,223 @@
-!!! info "Objectives" 
+# File transfer to/from Bianca
 
-    We'll go through the methods to transfer files  
+!!!- info "Learning objectives"
 
-    - wharf
-    - transit server
-    - rsync, scp/sftp
-    - pros/cons of different solutions
-       
-!!! warning
- 
-    It is important to keep the entire chain of transferring the data secure
+    - Understand what the wharf is
+    - Understand what the Transit server allows
+    - Transfer files to/from Bianca using rsync
+    - Transfer files to/from Bianca using FileZilla
 
-## How does it work?
+???- question "For teachers"
 
-![Bianca](./img/biancaorganisation-01.png)
+    Prerequisites are:
 
-### The `wharf`
+    - None
 
-!!! info "`wharf` is a harbour dock"
+    Teaching goals are:
 
-    - The `wharf` area can be reached from both Bianca and any other place on Bianca.
-    - Therefore, it serves as a bridge between Internet and Bianca.
-    
-## Data transfers:
-- <https://www.uppmax.uu.se/support/user-guides/bianca-user-guide/> 
-    - section 3: Transfer files to and from Bianca
-
-### The `wharf` location on Bianca
-
-- The path to this folder, once you are logged into your project's cluster, is:
-
-    `/proj/<projid>/nobackup/wharf/<username>/<username>-<projid>`  
-E.g.  
-    `/proj/sens2023598/nobackup/wharf/myuser/myuser-sens2023598`
-
-- To transfer data from Bianca, copy the files you want to transfer here.
-- To get the files transferred to the `wharf` area from outside, move the files to you project folder or home folder.
-    
-- Please note that in the `wharf` you only have access to upload your files to the directory that is named:
-   `<username>-<projid>`
-   e.g.
-   `myuser-sens2023598`
+    - Learners understand what the wharf is
+    - Learners understand that the Transit server serves
+      like a bridge between locations
+    - Learners have transferred files to/from Bianca using rsync
+    - Learners have transferred files to/from Bianca using FileZilla
 
 
+    Lesson plan:
 
-##  Methods  
----
--	GUI sftp clients
--	Using standard command line sftp client
-- Transit Server from/to Rackham
--	Mounting the wharf on your local computer
-
-## GUI sftp clients
----
-- Please notice that **SFTP is NOT the same as SCP**.  
-Be sure to really use a SFTP client -- not just a SCP client.
-
-- Also be aware that many SFTP clients use reconnects (with a cached version of your password). This will not work for Bianca, because of the second factor authentication! Other clients try to use multiple connections with the same password, which will fail as well.
-
-- So for example with the command line SFTP client LFTP, you need to "set net:connection_limit 1". LFTP may also defer the actual connection until it's really required unless you end your connect URL with a path.
-
-- An example command line for LFTP would be
-
-`lftp sftp://<username>-<projname>@bianca-sftp.uppmax.uu.se/<username>-<projname>/`
-
-### WinSCP (Windows)
-- Connect from local computer  
-
-![WinSCP](./img/winscp-snaphot1.png)
-
-### Filezilla (Linux/MacOS/Windows)
-- Asks for password every time you transfer files
-- Connect from local computer  
-
-![FileZilla](./img/filezilla-snapshot.png)
-
-
-## Using standard sftp client (command line)
----
-<https://www.uppmax.uu.se/support/user-guides/basic-sftp-commands/>
-
-```bash
-$ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se 
-```
- Ex.  
-```bash
-$ sftp -q myuser-sens2023598@bianca-sftp.uppmax.uu.se
-```
-
-The `-q` flag is to be quiet (not showing the banner intended to help someone trying to ``ssh`` to the host), if your client does not support it, you can just skip it.
-
-Use your normal UPPMAX password directly followed by
-the six digits from the second factor application.
-
-Ex. if your password is "VerySecret" and the second factor code is 123 456 you would type VerySecret123456 as the password in this step.
-
-Once connected you will have to type the sftp commands to upload/download files. Have a look at the Basic SFTP commands guide to get started with it.
-
-Please note that in the wharf you only have access to upload your files to the directory that is named:
-
-`<username>-<projid>` e.g. `myuser-sens2023598`
-
-Example:
-```bash
-$ sftp -q  pmitev-sens2023598@bianca-sftp.uppmax.uu.se
-pmitev-sens2023598@bianca-sftp.uppmax.uu.se's password: 
-
-sftp> ls
-pmitev-sens2023598    
-
-sftp> cd pmitev-sens2023598
-sftp> 
-```
-
-Alternatively, you can specify this at the end of the sftp command, so that you will always end up in the correct folder directly.
-
-```bash
-$ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>
-```
-E.g.
-```bash
-`$ sftp -q myuser-sens2023598@bianca-sftp.uppmax.uu.se:myuser-sens2023598
-```
-- `sftp` supports a recursive flag `-r` to upload (`put -r folder_name`) or download (`get -r folder_name`) entire folders and subfolders.
-
-   
-## Transit server
----
-- To facilitate secure data transfers to, from, and within the system for computing on sensitive data a special service is available via SSH at `transit.uppmax.uu.se`.
-
-```bash
-Transit server
-
-You can mount bianca wharf with the command
-
-mount_wharf PROJECT [path]
-
-If you do not give a path the mount will show up as PROJECT in your home
-directory.
-
-Note; any chagnes you do to your normal home directory will not persist.
-```
-
-- Example
-
-```bash
-$ ssh my_user@transit.uppmax.uu.se
-
-my_user@transit:~$ mount_wharf sens2023531
-Mounting wharf (accessible for you only) to /home/<user>/sens2023531
-<user>-sens2023531@bianca-sftp.uppmax.uu.se's password: 
-```
-- Enter password + F2A
-
-```bash
-my_user@transit:~$ ls sens2023531/
-my_user@transit:~$ 
-```
-
-- Note that your home directory is mounted _read-only_, any changes you do to your "local" home directory (on transit) will be lost upon logging out.
-
-- You can use commands like ``rsync``, ``scp`` to fetch data and transfer it to your bianca wharf.
-  - You can use cp to copy from Rackham to the wharf 
-- Remember that you cannot make lasting changes to anything except for mounted wharf directories. Therefore you have to use rsync and scp to transfer from the ``wharf`` to Rackham.
-- The mounted directory will be kept for later sessions.
-
-### Moving data from transit to Rackham
-- **On Rackham:** (_or other computer_) copy files to Bianca via transit:   
-```bash
-# scp
-scp path/my_files my_user@transit.uppmax.uu.se:sens2023531/
-
-# rsync
-rsync -avh path/my_files my_user@transit.uppmax.uu.se:sens2023531/
-```
-
-- **On transit:** copy files to Bianca from Rackham (_or other computer_) 
-```bash
-# scp
-scp my_user@rackham.uppmax.uu.se:path/my_files ~/sens2023531/
-
-# rsync
-rsync -avh my_user@rackham.uppmax.uu.se:path/my_files ~/sens2023531/
-```
-
-    :book:  `rsync` [tutorial](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories) for beginners.
-
-:warning: Keep in mind that project folders on Rackham are not available on transit.
-
-### Moving data between projects
-
-- You can use transit to transfer data between projects by mounting the wharfs for the different projects and transferring data with ``rsync``. 
-- Note that you may of course only do this if this is allowed (agreements, permissions, etc.)
-
-
-### Software on Transit
-
-- While logged in to Transit, you cannot make lasting changes to anything except for mounted wharf directories. However, anything you have added to your Rackham home directory is available on Transit. In addition, some modules are available.
-- SciLifeLab Data Delivery System - [https://delivery.scilifelab.se/](https://delivery.scilifelab.se/)
-
-    ```bash
-    # Load the tool from the software module tree
-    module load bioinfo-tools dds-cli
-
-    # Run the tool
-    dds
+    ```mermaid
+    gantt
+      title File tranfer to/from Bianca
+      dateFormat X
+      axisFormat %s
+      section First hour
+      Course introduction: done, course_intro, 0, 15s
+      Introduction : intro, after course_intro, 5s
+      Theory 1: theory_1, after intro, 10s
+      Exercise 1: crit, exercise_1, after theory_1, 20s
+      Feedback 1: feedback_1, after exercise_1, 10s
+      Break: milestone, after feedback_1
+      section Second hour
+      Exercise 2: crit, exercise_2, 0, 10s
+      Feedback 2: feedback_2, after exercise_2, 10s
+      SLURM: done, slurm, after feedback_2, 25s
+      Break: done, milestone, after slurm
     ```
-  ![dds-cli](./img/dds-cli.png)
 
-- To download data from TCGA, log in to Rackham and install the GDC client to your home directory. Then log in to Transit, mount the wharf, and run ./gdc-client.
+    As the video is 11 minutes, I assume around 3x as much time.
+
+## Why?
+
+Most users need to transfer files to/from Bianca,
+for example, their scripts to analyse their (sensitive) data.
+
+In this session, we will transfer (non-sensitive) files to/from Bianca.
+
+## Terms
+
+```mermaid
+flowchart LR
+  subgraph sunet[SUNET]
+    subgraph bianca[Bianca]
+      wharf
+    end
+    transit[transit server]
+    user[User in SUNET\nUser on Rackham\nUser on other NAISSS clusters\n]
+    wharf <--> transit
+    transit <--> user
+  end
+```
+
+As Bianca is a sensitive data cluster, we need to know:
+
+- [wharf](http://docs.uppmax.uu.se/cluster_guides/wharf/): a folder
+  on Bianca that is the only folder one can transfer data to/from
+- [Transit](http://docs.uppmax.uu.se/cluster_guides/transit/):
+  a service that allows one to transfer files between Bianca
+  and other places, such as your local computer, 
+  but also other sensitive data clusters
+
+## Software
+
+There are many ways to [tranfer files to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/transfer_bianca/).
+
+In this session, we use:
+
+- [File transfer to/from Bianca using rsync](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/): 
+  the recommended way to do so
+- [File transfer to/from Bianca using FileZilla](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_filezilla/):
+  the user-friendly way to do so
+
+We will use `rsync` first, as this is the UPPMAX-recommended way,
+as it is capable of transferring files of any size efficiently.
+
+FileZilla is easier to use and its guide is easier to go through 
+without an UPPMAX expert.
+ 
+
+## Exercises
+
+### Exercise 1: using rsync
+
+???- info "Learning objectives"
+
+    - Understand what the wharf is
+    - Understand what the Transit server allows
+    - Transfer files to/from Bianca using rsync
+
+- Individually, read:
+
+- Together, set a timer for 10 minutes
+- Individually, answer the questions within the time limit
+- Together, write down a shared answer on the GitHub project repository
+  with path `learners/[a teammember's name]/pair_programming.md`
+- Upload the file to the GitHub repo. 
+  Use the GitHub web interface if pushing is a problem!
+
+Questions:
+
+- What is pair programming?
+- How does a good pair behave? Describe what can be observed when pairing online
+- When to switch roles? Give a procedure 
+- What effects does pair programming have?
+
+???- question "Answers"
+
+    > - What is pair programming?
+
+    Pair programming is a software development practice
+    in which two developers work on the same computer.
+    The person with the keyboard ('the driver') develops new code.
+    The person without the keyboard ('the navigator') reviews the code.
+
+    > - How does a good pair behave? Describe what can be observed when pairing online
+
+    In an online course:
+
+    - A good pair has the driver sharing his/her screen
+    - In a good pair, both people talk a lot
+    - A good pair switches roles regularly
+    - A good pair has a lot of commits
+
+    > - When to switch roles? Give a procedure
+
+    Any procedure to achieve the goal of regularly switching roles:
+
+    - after enough work has been done to put in a `git commit`
+      such as 'Add documentation', 'Add test', 'Pass test'
+    - each time a timer goes off, e.g. after 5 minutes
+
+    The first procedure sometimes fails when a driver (thinks he/she) 
+    has much more knowledge than the navigator on the subject
+    and is (apparently) inexperienced in good pair programming.
+    In such cases, the second procedure work better.
+
+    > - What effects does pair programming have?
+
+    All material for this exercise show references to studies that
+    show advantages of pair programming,
+    for example (from two Wikipedia references):
+
+     * a pair considers more alternative ways for a solution [Flor et al., 1991]
+     * 96% of developers prefer pair programming over developing alone [Williams & Kessler, 2000]
+
+    However, the first study uses only 2 programming teams,
+    the second study 41 self-selected respondents. 
+    One can/should be critical on these studies.
+
+    Yet, for teaching, working is groups has a high effect size [Hattie, 2012],
+    where the optimal group size is two [Schwartz & Gurung, 2012].
+
+### Exercise 2: practice pair programming
+
+???- info "Learning objectives"
+
+    - Practice pair programming
+    - Practice to convert class diagrams to real code
+
+Before doing the exercises:
+
+- Reach an agreement on how to do pair programming: among others, 
+  decide upon the first driver and when to switch roles.
+
+The exercise, to be done as a pair:
+
+- In the course's shared document, there is a list of classes
+  extracted from the design document. Assign yourselves to write a class together
+- Find the GitHub repository of a Programming Formalism student project 
+  done in an earlier cohort. Find where the Python code for classes ended up.
+  Look for the Python code of the most simple class.
+- Write the minimal code of your class together. 
+  Share code by `push`ing it to the `main` branch.
+  'Minimal code' means only the name of the class, without any behavior!
+
+Reflect:
+
+- Were roles swapped often enough?
+- Did you solve unexpected problems well?
+- Did the driver always share his/her screen?
+- Did each team member contribute?
+- Did each team member contribute to the code in the Python class?
+
+???- question "Answers to what needs to be done"
+
+    The hardest part will be to understand how little needs to be done here.
+
+    A file needs to be created at  `src/bacsim/[class_name].py`. 
+    For example, for a coordinate, 
+    this file will be called `src/bacsim/coordinate.py`
+
+    The contents of the file is -maybe unexpectedly- minimal.
+    Here I show a good example from [an earlier Programming Formalisms cohort](https://github.com/programming-formalisms/programming_formalisms_project_autumn_2023/blob/main/src/pfpa2023/coordinate.py):
+
+    ```python
+    """A coordinate somewhere in space."""
+
+    class Coordinate:
+
+        """Where am I?."""
+    ```
 
 
-## NGI Deliver 
-
-- Not covered here but 
-  - <https://www.uppmax.uu.se/support/user-guides/deliver-user-guide/>
-  - <https://www.uppmax.uu.se/support/user-guides/grus-user-guide/>
 
 
 !!! info "Summary"
@@ -232,17 +234,3 @@ rsync -avh my_user@rackham.uppmax.uu.se:path/my_files ~/sens2023531/
         - transit server
         - rsync, scp/sftp
 
-## Mounting the SFTP-server with ``sshfs`` on you local machine
----
-**Mount the wharf on your machine**
-    
-- This is only possible on your own system. 
-- ``sshfs`` allows you to mount the ``wharf`` on your own machine. 
-- You will be able to copy and work on the data using your own local tools such as ``cp`` or ``vim``. 
-- Remember that you are neither logged in on the distant server, nor is the data physically on your local disk (until you have copied it).
-
-!!! warning
-    - UPPMAX doesn't have ``sshfs`` client package installed for security reasons. 
-    - ``sshfs`` is available on most Linux distributions: 
-        - install the package ``sshfs`` on Ubuntu, 
-        - ``fuse-sshfs`` on Fedora, RHEL7/CentOS7 (enable EPEL repository) and RHEL8 (enable codeready-builder repository) / CentOS8 (enable powertools repository).
