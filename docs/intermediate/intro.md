@@ -91,7 +91,7 @@ Time |Topic
 
 When | Who  | What
 -----|------|-------------------------
-9:00 | R   | [Introduction](https://uppmax.github.io/bianca_workshop/intermediate/intro/)
+9:00 | R    | [Introduction](https://uppmax.github.io/bianca_workshop/intermediate/intro/)
 9:15 | R    | 45 minutes [Transferring files to and from Bianca](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
 10:00| .    | Break
 10:15| R    | 20 minutes [Transferring files p2](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
