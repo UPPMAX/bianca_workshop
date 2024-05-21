@@ -5,11 +5,11 @@ name: Check markdown
 # 21st as the first letter of this repo is the 21st letter in the alphabet.
 on:
   push:
-    branch:
+    branches:
       - 'issue_16'
       - '!main'
   pull_request:
-    branch:
+    branches:
       - 'issue_16'
       - '!main'
   schedule:
