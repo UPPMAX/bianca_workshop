@@ -11,8 +11,8 @@
 
 - Free, popular, lightweight
 - Open source: https://slurm.schedmd.com
-- available at all SNIC centra
-- [UPPMAX Slurm userguide](http://docs.uppmax.uu.se/cluster_guides/slurm/)
+- available at all SNIC centres
+- [UPPMAX Slurm user guide](http://docs.uppmax.uu.se/cluster_guides/slurm/)
 
 ### More on sbatch
 Recap:
