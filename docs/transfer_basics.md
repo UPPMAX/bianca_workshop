@@ -216,13 +216,6 @@ rsync -avh my_user@rackham.uppmax.uu.se:path/my_files ~/sens2023531/
 - To download data from TCGA, log in to Rackham and install the GDC client to your home directory. Then log in to Transit, mount the wharf, and run ./gdc-client.
 
 
-## NGI Deliver 
-
-- Not covered here but 
-  - <https://www.uppmax.uu.se/support/user-guides/deliver-user-guide/>
-  - <https://www.uppmax.uu.se/support/user-guides/grus-user-guide/>
-
-
 !!! info "Summary"
 
     - Make sure you access Bianca from SUNET Network - use VPN, connect from Rackham, use university connection...
