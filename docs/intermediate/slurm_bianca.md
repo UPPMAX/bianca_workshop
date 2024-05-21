@@ -8,7 +8,23 @@
 - Advanced job submission
 
 ## The Slurm Workload Manager
+Free, popular, lightweight
+Open source:
+https://slurm.schedmd.com
+available at al SNIC centra
+UPPMAX Slurm userguide:
+https://www.uppmax.uu.se/support/user-guides/slurm-user-guide/
+
 ### More on sbatch
+Recap:
+
+sbatch | -A sens2023598  |   -t 10:00 | -p core | -n 10 | my_job.sh
+-|-|-|-|-|-
+slurm batch| project name | max runtime | partition ("job type") | #cores | job script
+
+
+
+
 ### More on time limits
 ### Job walltime
 ### More on partitions
