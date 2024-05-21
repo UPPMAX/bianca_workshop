@@ -106,16 +106,19 @@ In this session, we will transfer (non-sensitive) files to/from Bianca.
 
 ```mermaid
 flowchart LR
+  classDef low_focus_node stroke-dasharray: 5 5
   subgraph sunet[SUNET]
     subgraph bianca[Bianca]
       wharf
     end
     transit[transit server\nrsync]
     sftp_server[SFTP server\nFileZilla]
-    user[User in SUNET\nUser on Rackham\nUser on other NAISSS clusters\n]
+    user[User in SUNET]
+    other_users[User on Rackham\nUser on other NAISSS clusters]:::low_focus_node
     wharf <--> transit
     wharf <--> sftp_server
     transit --> user
+    transit --> other_users
     sftp_server <--> user
   end
 ```
