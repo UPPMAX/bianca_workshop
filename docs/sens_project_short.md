@@ -34,7 +34,7 @@ This page summarises the content of [this presentation](https://github.com/UPPMA
     - [Skydd av personuppgifter](https://ec.europa.eu/info/law/law-topic/data-protection_sv)
     - [SND](https://snd.gu.se/sv/hantera-data/planera/forskningsdata-med-personuppgifter)
   
-- When in doubt, contact your university's [data protection officer](https://www.uppmax.uu.se/support/faq/general-miscellaneous-faq/sensitive+data+questions/), legal department, and/or security department.
+- When in doubt, contact your university's [data protection officer](https://www.uu.se/en/centre/uppmax/get-started/create-account-and-apply-for-project/apply-for-projects/applying-for-naiss-sens-project/sensitive--data), legal department, and/or security department.
 
 - Other sensitive data:
 	- Confidential information
@@ -67,9 +67,9 @@ Sensitive data can be made FAIR. Even though you cannot publish it freely and op
 
 
 ## Apply for project
-- [Detailed instructions for project application](https://www.uppmax.uu.se/support/getting-started/applying-for-sens-project/)
+- [Detailed instructions for project application](https://www.uu.se/en/centre/uppmax/get-started/create-account-and-apply-for-project/apply-for-projects/applying-for-naiss-sens-project)
 [NAISS SENS Rounds](https://supr.naiss.se/round/open_or_pending_type/?type=NAISS+SENS)
-- Before GDPR-data will be transferred to UPPMAX, there must be a [Data Processing Agreement](https://www.uppmax.uu.se/support/faq/general-miscellaneous-faq/how-to-establish-a-puba-with-uu/) between UU and the data controlling organisation. These are currently specific to the PI (and sometimes project).
+- Before GDPR-data will be transferred to UPPMAX, there must be a [Data Processing Agreement](https://www.uu.se/en/centre/uppmax/get-started/create-account-and-apply-for-project/apply-for-projects/applying-for-naiss-sens-project/puba) between UU and the data controlling organisation. These are currently specific to the PI (and sometimes project).
 
 !!! note "Some definitions"
     - Project: A collection of resource allocations and people, with an expiration date.
@@ -116,9 +116,9 @@ Sensitive data can be made FAIR. Even though you cannot publish it freely and op
 ![Image](./img/biancaorganisation-01.png)
 
 - Bianca is only accessible from within Sunet (i.e. from university networks).
-- Use VPN outside Sunet. [Link to VPN for UU](https://mp.uu.se/en/web/info/stod/it-telefoni/anvandarguider/network/vpn-service)
-
-    - You can get VPN credentials from all Swedish universities.
+- Use VPN outside Sunet.
+    - [Link to VPN for UU](https://www.uu.se/en/staff/service-and-tools/tools-and-guides/connect-to-the-network-remotely/connect-using-the-universitys-vpn-service)
+    - You can get VPN credentials from all Swedish universities. Search the web of your University.
 
 <br>
 
