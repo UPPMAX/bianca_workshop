@@ -41,10 +41,10 @@ Suggested new schedule:
 
 When | Who  | What
 -----|------|-------------------------
-9:00 | ?R   | [Introduction](https://uppmax.github.io/bianca_workshop/intermediate/intro/)
-9:15 | P    | 45 minutes [Transferring files to and from Bianca](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
+9:00 | R   | [Introduction](https://uppmax.github.io/bianca_workshop/intermediate/intro/)
+9:15 | R    | 45 minutes [Transferring files to and from Bianca](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
 10:00| .    | Break
-10:15| P    | 20 minutes [Transferring files p2](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
+10:15| R    | 20 minutes [Transferring files p2](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
 10:35| D    | 25 minutes [Slurm jobs p1](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
 11:00| .    | Break
 11:15| D    | 45 minutes [Slurm jobs p2](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
@@ -54,8 +54,8 @@ When | Who  | What
 14:00| PR   | [IDEs on Bianca](https://uppmax.github.io/bianca_workshop/intermediate/ides/)
 14:45| .    | Break
 15:00| L    | [NAISS-SENS summary](https://uppmax.github.io/bianca_workshop/sens_project_short/)
-15:30| ?R   | [Summary](https://uppmax.github.io/bianca_workshop/intermediate/summary/)
-15:35| ?R   | Evaluation
+15:30| R    | [Summary](https://uppmax.github.io/bianca_workshop/intermediate/summary/)
+15:35| R    | Evaluation
 15:45| All  | Optional Q/A and [extra material](https://uppmax.github.io/bianca_workshop/extra/slurm/)
 16:00| .    | END
 
