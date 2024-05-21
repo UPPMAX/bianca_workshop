@@ -167,7 +167,7 @@ Exercise 1 and 2 are the most important, as:
     - Understand what the Transit server allows
 
 - Scan the content of [the UPPMAX documentation on how to use rsync to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/)
-- Answer the following questions to yourself in your own words (answers are below). 
+- Answer the following questions to yourself in your own words (answers are below).
   Be generous in accepting your own answer.
   You may share your answer in the course shared document for feedback,
   but do not wait for feedback.
