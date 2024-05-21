@@ -4,6 +4,7 @@
 
     - Understand what the wharf is
     - Understand what the Transit server allows
+    - Mount the wharf on Transit
     - Transfer files to/from Bianca using rsync
     - Transfer files to/from Bianca using FileZilla
 
@@ -18,6 +19,7 @@
     - Learners understand what the wharf is
     - Learners understand that the Transit server serves
       like a bridge between locations
+    - Learners have mounted the wharf on Transit
     - Learners have transferred files to/from Bianca using rsync
     - Learners have transferred files to/from Bianca using FileZilla
 
@@ -60,10 +62,13 @@ flowchart LR
     subgraph bianca[Bianca]
       wharf
     end
-    transit[transit server]
+    transit[transit server\nrsync]
+    sftp_server[SFTP server\nFileZilla]
     user[User in SUNET\nUser on Rackham\nUser on other NAISSS clusters\n]
     wharf <--> transit
-    transit <--> user
+    wharf <--> sftp_server
+    transit --> user
+    sftp_server <--> user
   end
 ```
 
@@ -92,9 +97,15 @@ as it is capable of transferring files of any size efficiently.
 
 FileZilla is easier to use and its guide is easier to go through 
 without an UPPMAX expert.
- 
 
 ## Exercises
+
+Exercise 1 is most important, as:
+
+- `rsync` is the recommended tool
+- it is harder, so do it with an UPPMAX expert around!
+
+
 
 ### Exercise 1: using rsync
 
@@ -113,124 +124,14 @@ without an UPPMAX expert.
 - Upload the file to the GitHub repo. 
   Use the GitHub web interface if pushing is a problem!
 
-Questions:
-
-- What is pair programming?
-- How does a good pair behave? Describe what can be observed when pairing online
-- When to switch roles? Give a procedure 
-- What effects does pair programming have?
-
-???- question "Answers"
-
-    > - What is pair programming?
-
-    Pair programming is a software development practice
-    in which two developers work on the same computer.
-    The person with the keyboard ('the driver') develops new code.
-    The person without the keyboard ('the navigator') reviews the code.
-
-    > - How does a good pair behave? Describe what can be observed when pairing online
-
-    In an online course:
-
-    - A good pair has the driver sharing his/her screen
-    - In a good pair, both people talk a lot
-    - A good pair switches roles regularly
-    - A good pair has a lot of commits
-
-    > - When to switch roles? Give a procedure
-
-    Any procedure to achieve the goal of regularly switching roles:
-
-    - after enough work has been done to put in a `git commit`
-      such as 'Add documentation', 'Add test', 'Pass test'
-    - each time a timer goes off, e.g. after 5 minutes
-
-    The first procedure sometimes fails when a driver (thinks he/she) 
-    has much more knowledge than the navigator on the subject
-    and is (apparently) inexperienced in good pair programming.
-    In such cases, the second procedure work better.
-
-    > - What effects does pair programming have?
-
-    All material for this exercise show references to studies that
-    show advantages of pair programming,
-    for example (from two Wikipedia references):
-
-     * a pair considers more alternative ways for a solution [Flor et al., 1991]
-     * 96% of developers prefer pair programming over developing alone [Williams & Kessler, 2000]
-
-    However, the first study uses only 2 programming teams,
-    the second study 41 self-selected respondents. 
-    One can/should be critical on these studies.
-
-    Yet, for teaching, working is groups has a high effect size [Hattie, 2012],
-    where the optimal group size is two [Schwartz & Gurung, 2012].
-
-### Exercise 2: practice pair programming
-
-???- info "Learning objectives"
-
-    - Practice pair programming
-    - Practice to convert class diagrams to real code
-
-Before doing the exercises:
-
-- Reach an agreement on how to do pair programming: among others, 
-  decide upon the first driver and when to switch roles.
-
-The exercise, to be done as a pair:
-
-- In the course's shared document, there is a list of classes
-  extracted from the design document. Assign yourselves to write a class together
-- Find the GitHub repository of a Programming Formalism student project 
-  done in an earlier cohort. Find where the Python code for classes ended up.
-  Look for the Python code of the most simple class.
-- Write the minimal code of your class together. 
-  Share code by `push`ing it to the `main` branch.
-  'Minimal code' means only the name of the class, without any behavior!
-
-Reflect:
-
-- Were roles swapped often enough?
-- Did you solve unexpected problems well?
-- Did the driver always share his/her screen?
-- Did each team member contribute?
-- Did each team member contribute to the code in the Python class?
-
-???- question "Answers to what needs to be done"
-
-    The hardest part will be to understand how little needs to be done here.
-
-    A file needs to be created at  `src/bacsim/[class_name].py`. 
-    For example, for a coordinate, 
-    this file will be called `src/bacsim/coordinate.py`
-
-    The contents of the file is -maybe unexpectedly- minimal.
-    Here I show a good example from [an earlier Programming Formalisms cohort](https://github.com/programming-formalisms/programming_formalisms_project_autumn_2023/blob/main/src/pfpa2023/coordinate.py):
-
-    ```python
-    """A coordinate somewhere in space."""
-
-    class Coordinate:
-
-        """Where am I?."""
-    ```
-
-
-
+## Summary
 
 !!! info "Summary"
 
-    - Make sure you access Bianca from SUNET Network - use VPN, connect from Rackham, use university connection...
-    - For simple transfers use SFP to connect to `bianca-sftp.uppmax.uu.se` - use command line `sftp` or tools that support SFTP protocol.
-    - For `rsync` - sync files to pre-mounted wharf folder from Rackham or secure local computer.
-    - Keep in mind that project folders on Rackham are not available on transit.
+    - The wharf is the only Bianca folder that has a connection with the outside worlds
+    - The Transit server allows to transfer sensitive data between many places
+    - One needs to mount a wharf on Transit
+    - rsync is the (recommended) command-line tool that can be used to transfer data
+    - FileZilla is a graphical tool that can be used to transfer data
 
-!!! abstract "keypoints"
-    - The "WHARF" works like a dock at the harbour.
-    - There are several ways to use the wharf to transfer files
-        - copy
-        - transit server
-        - rsync, scp/sftp
 
