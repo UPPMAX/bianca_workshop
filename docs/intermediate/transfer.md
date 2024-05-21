@@ -206,7 +206,7 @@ Exercise 1 and 2 are the most important, as:
     - Mount the wharf on Transit
     - Transfer files to/from Bianca using rsync
 
-This exercise is quite practical. 
+This exercise is quite practical.
 Therefore, one interruption is scheduled for those that are stuck.
 
 Here is what to do when you get stuck:
@@ -214,13 +214,13 @@ Here is what to do when you get stuck:
 1. Take a look at the YouTube video that can be found at that page
    **until the point where you are stuck**, then go back to using
    the UPPMAX documentation again
-1. Ask your question in the shared document. 
+1. Ask your question in the shared document.
    Raise your hand or contact the teachers in any way.
    You will be put in a Zoom room and the question in the document will be answered together
 
 Here is the exercise:
 
-- Follow the step-by-step guide of 
+- Follow the step-by-step guide of
   [the UPPMAX documentation on how to use rsync to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/).
   There are 4 transfers described (file versus folder, upload versus download),
   do at least 1 upload and 1 download
@@ -236,7 +236,7 @@ Here is the exercise:
     - Transfer files to/from Bianca using FileZilla
 
 - Scan the content of [the UPPMAX documentation on how to use FileZilla to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_filezilla/)
-- Follow the step-by-step guide of 
+- Follow the step-by-step guide of
   [the UPPMAX documentation on how to use FileZilla to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_filezilla/).
   There are 2 transfers described (upload versus download),
   do both
