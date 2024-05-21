@@ -173,8 +173,7 @@ Exercise 1 and 2 are the most important, as:
   but do not wait for feedback.
   If you have no idea at all, read the linked UPPMAX documentation:
 
-    - What is [SUNET](docs.uppmax.uu.se/getting_started/get_inside_sunet)?
-    - What is [`ssh`](http://docs.uppmax.uu.se/software/ssh/)? What does it allow us to do?
+    - What is [SUNET](http://docs.uppmax.uu.se/getting_started/get_inside_sunet/)?
     - What is [`wharf`](http://docs.uppmax.uu.se/cluster_guides/wharf/)? What does it allow us to do?
     - What is [`rsync`](http://docs.uppmax.uu.se/software/rsync/)?
     - What is [`transit`](http://docs.uppmax.uu.se/cluster_guides/transit/)?
