@@ -591,10 +591,9 @@ echo Hello world!
 ## Links
 
 - [Slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
-- [Slurm user guide](https://www.uppmax.uu.se/support/user-guides/slurm-user-guide/){:target="_blank"}
 - [New Slurm user guide (needs updates)](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/slurm/){:target="_blank"}
-- [Discovering job resource usage with `jobstats`](https://www.uppmax.uu.se/support/user-guides/jobstats-user-guide/){:target="_blank"} 
-- [Plotting your core hour usage](https://www.uppmax.uu.se/support/user-guides/plotting-your-core-hour-usage/){:target="_blank"} 
+- [Discovering job resource usage with `jobstats`](http://docs.uppmax.uu.se/software/jobstats/){:target="_blank"} 
+- [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"} 
 
 
 !!! abstract "Keypoints"
