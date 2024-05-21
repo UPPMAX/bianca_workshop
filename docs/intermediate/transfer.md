@@ -78,7 +78,7 @@ As Bianca is a sensitive data cluster, we need to know:
   on Bianca that is the only folder one can transfer data to/from
 - [Transit](http://docs.uppmax.uu.se/cluster_guides/transit/):
   a service that allows one to transfer files between Bianca
-  and other places, such as your local computer, 
+  and other places, such as your local computer,
   but also other sensitive data clusters
 
 ## Software
@@ -87,7 +87,7 @@ There are many ways to [tranfer files to/from Bianca](http://docs.uppmax.uu.se/c
 
 In this session, we use:
 
-- [File transfer to/from Bianca using rsync](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/): 
+- [File transfer to/from Bianca using rsync](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/):
   the recommended way to do so
 - [File transfer to/from Bianca using FileZilla](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_filezilla/):
   the user-friendly way to do so
@@ -95,7 +95,7 @@ In this session, we use:
 We will use `rsync` first, as this is the UPPMAX-recommended way,
 as it is capable of transferring files of any size efficiently.
 
-FileZilla is easier to use and its guide is easier to go through 
+FileZilla is easier to use and its guide is easier to go through
 without an UPPMAX expert.
 
 ## Exercises
@@ -104,7 +104,6 @@ Exercise 1 is most important, as:
 
 - `rsync` is the recommended tool
 - it is harder, so do it with an UPPMAX expert around!
-
 
 
 ### Exercise 1: using rsync
@@ -121,7 +120,7 @@ Exercise 1 is most important, as:
 - Individually, answer the questions within the time limit
 - Together, write down a shared answer on the GitHub project repository
   with path `learners/[a teammember's name]/pair_programming.md`
-- Upload the file to the GitHub repo. 
+- Upload the file to the GitHub repo.
   Use the GitHub web interface if pushing is a problem!
 
 ## Summary
@@ -133,5 +132,4 @@ Exercise 1 is most important, as:
     - One needs to mount a wharf on Transit
     - rsync is the (recommended) command-line tool that can be used to transfer data
     - FileZilla is a graphical tool that can be used to transfer data
-
 
