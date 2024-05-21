@@ -44,7 +44,7 @@ and feel your workflow can be improved?
 If yes, welcome to a full day of learning of smarter ways
 to work on the Bianca UPPMAX cluster.
 
-???- tip "I am new to Bianca, where do I start?"
+???- tip "Help! I am new to Bianca, where do I start instead?"
 
     As a beginner, you are encouraged to start with the
     basic Bianca course, at [here](../intro.md).
@@ -59,7 +59,7 @@ to work on the Bianca UPPMAX cluster.
 
     - create a new line for new questions
     - take care if others are editing at the same time
-    - the more teaching assistents available, the quicker questions are answered
+    - the more teaching assistants available, the quicker questions are answered
     - some questions may be answered after the workshop
 
 ## Previous schedule
