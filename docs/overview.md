@@ -75,7 +75,7 @@ There are three types of UPPMAX systems:
 
 Computing systems allow a user to do heavier computational calculations.
 
-[UPPMAX has, among others, the following clusters](https://www.uppmax.uu.se/resources/systems/):
+[UPPMAX has, among others, the following clusters](https://www.uu.se/en/centre/uppmax/resources/clusters):
 
 - Rackham: regular data, general purpose
 - Snowy: regular data, long runs and GPU:s
@@ -111,7 +111,7 @@ for either active use (i.e. in calculations) or to archive it.
 Storage for active use is also called 'on-load' storage,
 where archived data is called 'off-load' storage.
 
-The [UPPMAX storage systems](https://www.uppmax.uu.se/resources/systems/storage-systems/) are:
+The [UPPMAX storage systems](https://www.uu.se/en/centre/uppmax/resources/storage) are:
 
 - On-load: Castor for Bianca, Crex for Rackham
 - Off-load: Lutra for Rackham
@@ -136,7 +136,7 @@ flowchart TD
 Cloud services allow a user to have something active (typically a website)
 that can be accessed by the internet.
 
-For this, the [UPPMAX cloud](https://www.uppmax.uu.se/resources/systems/the-uppmax-cloud/)
+For this, the [UPPMAX cloud](https://www.uu.se/en/centre/uppmax/resources/clusters/cloud-service-dis)
 has a service called 'Dis' (the Swedish word for 'haze') and is part of
 the `EAST-1` region of the SNIC science cloud. 
 
