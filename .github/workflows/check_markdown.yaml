@@ -26,6 +26,11 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
 
+      - name: Remove folders that should not have a Markdown style check
+        run: |
+          rm -rf evaluations
+          rm -rf shared_documents
+
       - uses: articulate/actions-markdownlint@v1
         with:
           config: .markdownlint.jsonc
