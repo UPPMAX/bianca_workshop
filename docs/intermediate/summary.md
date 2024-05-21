@@ -10,7 +10,7 @@
 - **Overview of UPPMAX systems**
 
     - NAISS-SENS
-    - Several clusters, like 
+    - Several clusters, like
 
         - Bianca
         - Rackham
@@ -28,9 +28,9 @@
     - The ``wharf`` works like a dock at the harbour.
     - There are several ways to use the ``wharf`` to transfer files
 
-      - copy
-      - transit server
-      - rsync, scp/sftp
+        - copy
+        - transit server
+        - rsync, scp/sftp
 
 - **Introduction to compute nodes**
 
@@ -39,7 +39,7 @@
         - Slurm, sbatch, the job queue
         - Jobs
         - Slurm parameters
-        - Interactive jobs 
+        - Interactive jobs
 
             - allows you to work interactively with command line and your tools but on a compute node.
 
@@ -70,11 +70,11 @@
     - RStudio
 
         - Run in interactive session
- 
+
     - Jupyter
- 
+
         - Run in interactive session
- 
+
     - VSCodium
 
         - Run in interactive session

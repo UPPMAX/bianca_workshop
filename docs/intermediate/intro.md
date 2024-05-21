@@ -1,18 +1,18 @@
 # Bianca In-Depth Hackathon: Improve Your Handling of Sensitive Research Data
 
-Are you already working with sensitive data in your research 
-and feel your workflow can be improved? 
-If yes, welcome to a full day of learning of smarter ways 
-to work on the Bianca UPPMAX cluster. 
+Are you already working with sensitive data in your research
+and feel your workflow can be improved?
+If yes, welcome to a full day of learning of smarter ways
+to work on the Bianca UPPMAX cluster.
 
 ???- tip "I am new to Bianca, where do I start?"
 
     As a beginner, you are encouraged to start with the
     basic Bianca course, at [here](../intro.md).
 
-You will learn how to login from a terminal (bypassing ThinLinc), 
-do file transfer from a terminal (allowing scripts), 
-advanced SLURM, using IDEs (i.e. RStudio and/or VSCode), 
+You will learn how to login from a terminal (bypassing ThinLinc),
+do file transfer from a terminal (allowing scripts),
+advanced SLURM, using IDEs (i.e. RStudio and/or VSCode),
 and installing custom software and packages.
 
 Tentative schedule
@@ -59,15 +59,15 @@ When | Who  | What
 15:45| All  | Optional Q/A and [extra material](https://uppmax.github.io/bianca_workshop/extra/slurm/)
 16:00| .    | END
 
- * Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
+* Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
 
 Changes:
 
-- IDEs changed from 55 -> 45 minutes, as there is a new setup: (1) let learners vote on one IDE, (2) discuss that IDE in detail, (3) mention the others more briefly. If teachers think it would be better to discuss 2 in detail, they may do so
-- NAISS-SENS to back, so that (1) learners can dive in immediately, (2) it is a nice easy way to round off the day
-- NAISS-SENS duration changed from 10 -> 30 minutes, as this is more realistic
-- Introduction duration changed from 5 -> 15 minutes
-- Transferring files part 1 duration changed from 40 -> 45 minutes
+* IDEs changed from 55 -> 45 minutes, as there is a new setup: (1) let learners vote on one IDE, (2) discuss that IDE in detail, (3) mention the others more briefly. If teachers think it would be better to discuss 2 in detail, they may do so
+* NAISS-SENS to back, so that (1) learners can dive in immediately, (2) it is a nice easy way to round off the day
+* NAISS-SENS duration changed from 10 -> 30 minutes, as this is more realistic
+* Introduction duration changed from 5 -> 15 minutes
+* Transferring files part 1 duration changed from 40 -> 45 minutes
 
 !!! info "Q/A collaboration document"
 

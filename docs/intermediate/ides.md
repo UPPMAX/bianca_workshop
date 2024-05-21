@@ -1,10 +1,10 @@
 # IDE:s
 
-![](./img/rstudio_in_action_480_x_270.png)
+![RStudio running on Bianca](./img/rstudio_in_action_480_x_270.png)
 
 > RStudio is one of the IDEs that can be used on Bianca.
 
-!!! info "Objectives" 
+!!! info "Objectives"
 
     - Observe different IDEs running on Bianca
     - Start your favorite IDE on Bianca

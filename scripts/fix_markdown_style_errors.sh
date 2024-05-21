@@ -23,4 +23,12 @@ markdownlint --fix "**/lesson_plans/*.md"
 markdownlint --fix "**/reflections/*.md"
 markdownlint --fix "*.md"
 markdownlint --fix "**/docs/intermediate/transfer.md"
+markdownlint --fix "**/docs/intermediate/summary.md"
+markdownlint --fix "**/docs/intermediate/ides.md"
+markdownlint --fix "**/docs/intermediate/overview2.md"
+markdownlint --fix "**/docs/intermediate/intro.md"
 # markdownlint --fix "**/docs/*.md"
+
+
+
+
