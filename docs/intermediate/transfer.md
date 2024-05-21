@@ -2,6 +2,7 @@
 
 !!!- info "Learning objectives"
 
+    - Explore the UPPMAX documentation
     - Understand what the wharf is
     - Understand what the Transit server allows
     - Mount the wharf on Transit
@@ -16,6 +17,7 @@
 
     Teaching goals are:
 
+    - Learners have explored the UPPMAX documentation
     - Learners understand what the wharf is
     - Learners understand that the Transit server serves
       like a bridge between locations
@@ -46,6 +48,48 @@
     ```
 
     As the video is 11 minutes, I assume around 3x as much time.
+
+    Prior questions:
+
+    - What is file transfer?
+    - Could you give an example of a file transfer you do in daily life?
+    - Does it have consequences that Bianca is a sensitive data cluster?
+    - How does one do file transfer on Bianca?
+
+    Polls:
+
+    My favorite way to transfer files to/from Bianca now is using:
+
+    - FileZilla
+    - fuse-sshfs and mounting the wharf
+    - lftp
+    - rsync
+    - scp
+    - sftp
+    - sshfs and mounting the wharf
+    - Rclone
+    - WinSCP
+    - other
+
+    About rsync:
+
+    - I have never followed a lecture on rsync, I don't know what it is
+    - I have never heard a lecture on rsync, but I've never gotten it to work
+    - I have never heard a lecture on rsync, I have gotten it to work, but don't use it in practice
+    - I have never heard a lecture on rsync, I have gotten it to work, and use it
+    - I have heard a lecture on rsync, but I've never gotten it to work
+    - I have heard a lecture on rsync, I have gotten it to work, but don't use it in practice
+    - I have heard a lecture on rsync, I have gotten it to work, and use it
+
+    About FileZilla:
+
+    - I have never followed a lecture on FileZilla, I don't know what it is
+    - I have never heard a lecture on FileZilla, but I've never gotten it to work
+    - I have never heard a lecture on FileZilla, I have gotten it to work, but don't use it in practice
+    - I have never heard a lecture on FileZilla, I have gotten it to work, and use it
+    - I have heard a lecture on FileZilla, but I've never gotten it to work
+    - I have heard a lecture on FileZilla, I have gotten it to work, but don't use it in practice
+    - I have heard a lecture on FileZilla, I have gotten it to work, and use it
 
 ## Why?
 
@@ -79,7 +123,9 @@ As Bianca is a sensitive data cluster, we need to know:
 - [Transit](http://docs.uppmax.uu.se/cluster_guides/transit/):
   a service that allows one to transfer files between Bianca
   and other places, such as your local computer,
-  but also other sensitive data clusters
+  but also other sensitive data clusters.
+- `rsync`: a tool to transfer files via Transit
+- FileZilla: a tool to transfer files via an SFTP server (whatever that is)
 
 ## Software
 
@@ -110,23 +156,23 @@ Exercise 1 is most important, as:
 
 ???- info "Learning objectives"
 
+    - Explore the UPPMAX documentation
     - Understand what the wharf is
     - Understand what the Transit server allows
     - Transfer files to/from Bianca using rsync
 
-- Individually, read:
+### Exercise 2: using FileZilla
 
-- Together, set a timer for 10 minutes
-- Individually, answer the questions within the time limit
-- Together, write down a shared answer on the GitHub project repository
-  with path `learners/[a teammember's name]/pair_programming.md`
-- Upload the file to the GitHub repo.
-  Use the GitHub web interface if pushing is a problem!
+???- info "Learning objectives"
+
+    - Explore the UPPMAX documentation
+    - Transfer files to/from Bianca using FileZilla
 
 ## Summary
 
 !!! info "Summary"
 
+    - The UPPMAX documentation is quite complete
     - The wharf is the only Bianca folder that has a connection with the outside worlds
     - The Transit server allows to transfer sensitive data between many places
     - One needs to mount a wharf on Transit
