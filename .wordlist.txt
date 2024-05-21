@@ -268,3 +268,12 @@ gcc
 Pavlins
 suboptimal
 QaA
+coderefinery
+flavours
+jobinfo
+nbis
+Nextflow
+scancel
+scontrol
+Snakemake
+TMP
