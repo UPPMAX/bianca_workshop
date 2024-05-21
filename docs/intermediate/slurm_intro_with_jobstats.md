@@ -442,9 +442,9 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
 ## Links
 
 - [Slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
-- [Slurm user guide](https://www.uppmax.uu.se/support/user-guides/slurm-user-guide/){:target="_blank"}
-- [Discovering job resource usage with `jobstats`](https://www.uppmax.uu.se/support/user-guides/jobstats-user-guide/){:target="_blank"} 
-- [Plotting your core hour usage](https://www.uppmax.uu.se/support/user-guides/plotting-your-core-hour-usage/){:target="_blank"} 
+- [Slurm user guide](http://docs.uppmax.uu.se/cluster_guides/slurm/){:target="_blank"}
+- [Discovering job resource usage with `jobstats`](http://docs.uppmax.uu.se/software/jobstats/){:target="_blank"} 
+- [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"} 
 
 
 !!! abstract "Keypoints"
