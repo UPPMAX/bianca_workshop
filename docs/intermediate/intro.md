@@ -1,5 +1,44 @@
 # Bianca In-Depth Hackathon: Improve Your Handling of Sensitive Research Data
 
+!!!- info "Learning objectives"
+
+    - See an overview of topics discussed today
+    - See the link to the shared document
+    - See the schedule
+
+???- question "For teachers"
+
+    Prerequisites are:
+
+    - None
+
+    Preparations are:
+
+    - None
+
+    Teaching goals are:
+
+    - Learners have seen an overview of topics discussed today
+    - Learners have seen the link to the shared document
+    - Learners have seen the schedule
+
+    Lesson plan:
+
+    ```mermaid
+    gantt
+      title Introduction
+      dateFormat X
+      axisFormat %s
+      About Richel: about_richel, 0, 5s
+      Prior: prior, after about_richel, 5s
+      Introduction: after prior, 5s
+    ```
+
+    Prior questions:
+
+    - What do you think about when you think about Bianca?
+    - How would you like to improve your Bianca experience?
+
 Are you already working with sensitive data in your research
 and feel your workflow can be improved?
 If yes, welcome to a full day of learning of smarter ways
@@ -10,12 +49,20 @@ to work on the Bianca UPPMAX cluster.
     As a beginner, you are encouraged to start with the
     basic Bianca course, at [here](../intro.md).
 
-You will learn how to login from a terminal (bypassing ThinLinc),
-do file transfer from a terminal (allowing scripts),
-advanced SLURM, using IDEs (i.e. RStudio and/or VSCode),
-and installing custom software and packages.
+!!! info "Course shared document"
 
-Tentative schedule
+    The course shared document can be found at: [https://hackmd.io/@bclaremar/bianca_hack_dec_2023?both](https://hackmd.io/@bclaremar/bianca_dec_2023?both)
+
+    It contains exercises, room for questions and room for feedback.
+
+    Regarding questions: 
+
+    - create a new line for new questions
+    - take care if others are editing at the same time
+    - the more teaching assistents available, the quicker questions are answered
+    - some questions may be answered after the workshop
+
+## Previous schedule
 
 Time |Topic
 -----|--------------------------
@@ -37,7 +84,7 @@ Time |Topic
 15.55| Closing words
 16.00| END
 
-Suggested new schedule:
+## Suggested new schedule
 
 When | Who  | What
 -----|------|-------------------------
@@ -69,54 +116,36 @@ Changes:
 * Introduction duration changed from 5 -> 15 minutes
 * Transferring files part 1 duration changed from 40 -> 45 minutes
 
-!!! info "Q/A collaboration document"
-
-    - Use the Q/A page for the workshop with your questions.
-
-          - [https://hackmd.io/@bclaremar/bianca_hack_dec_2023?both](https://hackmd.io/@bclaremar/bianca_dec_2023?both)
-
-    - Depending on how many helpers there are we’ll see how fast there are answers.
-
-        - Some answers may come after the workshop.
-
-    - Create a new line for new questions. Take care if others are editing at the same time.
-
 ## Overview of courses
 
 ```mermaid
 %% Direction is top->down
 flowchart TD
 
-    %% Give a white background, instead of a transparent one
-    classDef node fill:#fff,color:#000,stroke:#000
-    classDef focus_node fill:#fff,color:#000,stroke:#000,stroke-width:4px
-    
     subgraph sub_basic_use["Basic use of Bianca"]
       can_login_to_remove_desktop(Can login to remote deskop)
       can_login_to_console(Can login to console)
       can_use_command_line_1(Can use the command line 1)
       can_use_modules(Can use modules)
-      can_use_interactive_node(Can use an interactive node):::focus_node
+      can_use_interactive_node(Can use an interactive node)
       can_manage_files_using_cli(Can manage files using CLI)
-      can_tranfer_files_using_rsync(Can transfer files using rsync):::focus_node
-      can_schedule_jobs(Can schedule jobs):::focus_node
+      can_tranfer_files_using_rsync(Can transfer files using rsync)
+      can_schedule_jobs(Can schedule jobs)
       can_create_bash_script_using_cli(Can create a bash script using CLI)
     end
-    style sub_basic_use fill:#fcc,color:#000,stroke:#fcc
 
     subgraph sub_intermediate_use["Intermediate use of Bianca"]
       can_use_command_line_2(Can use the command line 2)
-      can_use_custom_software(Can use custom software):::focus_node
-      can_monitor_jobs(Can monitor jobs):::focus_node
+      can_use_custom_software(Can use custom software)
+      can_monitor_jobs(Can monitor jobs)
       can_use_ide(Can use an IDE)
+      can_tranfer_files_using_rsync2(Can transfer files using rsync)
     end
-    style sub_intermediate_use fill:#ffc,color:#000,stroke:#ffc
 
-    subgraph sub_non_goal["Not in course"]
+    subgraph sub_non_goal["Not in courses"]
       can_tranfer_files_using_gui(Can transfer files using GUI)
       can_create_bash_script_using_gui(Can create a bash script using GUI)
     end
-    style sub_non_goal fill:#ccc,color:#000,stroke:#ccc
 
 
     %% Basic
@@ -134,9 +163,11 @@ flowchart TD
     can_create_bash_script_using_cli --> can_schedule_jobs
 
     %% Basic -> Intermediate
+    can_tranfer_files_using_rsync --> can_tranfer_files_using_rsync2
     can_schedule_jobs --> can_monitor_jobs
     can_use_interactive_node --> can_use_ide
     can_use_modules --> can_use_ide
+    can_tranfer_files_using_rsync2 -.-> |extra| can_tranfer_files_using_gui
 
     %% Make sure Intermediate is below Basic,
     %% using invisible nodes
