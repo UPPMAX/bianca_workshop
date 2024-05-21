@@ -194,7 +194,7 @@ following channels available:
     -   Do a `conda clean -a` once in a while to remove unused and unnecessary files
 
 
--   [More info about Conda on UPPMAX](https://uppmax.uu.se/support/user-guides/conda-user-guide/)
+-   [More info about Conda on UPPMAX](http://docs.uppmax.uu.se/cluster_guides/conda/)
 
 ## Working with Conda environments defined by files
 
