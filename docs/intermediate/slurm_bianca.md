@@ -8,12 +8,11 @@
 - Advanced job submission
 
 ## The Slurm Workload Manager
-Free, popular, lightweight
-Open source:
-https://slurm.schedmd.com
-available at al SNIC centra
-UPPMAX Slurm userguide:
-https://www.uppmax.uu.se/support/user-guides/slurm-user-guide/
+
+- Free, popular, lightweight
+- Open source: https://slurm.schedmd.com
+- available at all SNIC centra
+- [UPPMAX Slurm userguide](http://docs.uppmax.uu.se/cluster_guides/slurm/)
 
 ### More on sbatch
 Recap:
@@ -23,11 +22,34 @@ sbatch | -A sens2023598  |   -t 10:00 | -p core | -n 10 | my_job.sh
 slurm batch| project name | max runtime | partition ("job type") | #cores | job script
 
 
-
-
 ### More on time limits
+
+- ``-t dd-hh:mm:ss``
+- ``0-00:10:00 = 00:10:00 = 10:00 = 10``
+- ``0-12:00:00 = 12:00:00``
+- ``3-00:00:00 =                    3-0``
+- ``3-12:10:15``
+
 ### Job walltime
+
+???- question "When you have no idea how long a program will take to run, what should you book?"
+
+    A: very long time, e.g. 10-00:00:00
+
+???- question "When you have an idea of how long a program would take to run, what should you book?"
+
+    A: overbook by 50%
+
 ### More on partitions
+
+- ``-p core``
+    - “core” is the default partition
+    - ≤ 16 cores on Bianca
+    - a script or program written without any thought on parallelism will use 1 core
+
+- ``-p node`
+    - if you wish to book full node(s)
+
 ### Quick testing
 ### Debugging or complicated workflows
 ### Parameters in the job script or the command line?
