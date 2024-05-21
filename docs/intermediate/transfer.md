@@ -150,27 +150,100 @@ without an UPPMAX expert.
 
 ## Exercises
 
-Exercise 1 is most important, as:
+Exercise 1 and 2 are the most important, as:
 
 - `rsync` is the recommended tool
 - it is harder, so do it with an UPPMAX expert around!
 
-
-### Exercise 1: using rsync
+### Exercise 1: first understanding of how to use `rsync`
 
 ???- info "Learning objectives"
 
     - Explore the UPPMAX documentation
     - Understand what the wharf is
     - Understand what the Transit server allows
+
+- Scan the content of [the UPPMAX documentation on how to use rsync to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/)
+- Answer the following questions to yourself in your own words (answers are below). If you have no idea at all, read the linked UPPMAX documentation:
+
+    - What is [SUNET](docs.uppmax.uu.se/getting_started/get_inside_sunet)?
+    - What is [`ssh`](http://docs.uppmax.uu.se/software/ssh/)? What does it allow us to do?
+    - What is [`wharf`](http://docs.uppmax.uu.se/cluster_guides/wharf/)? What does it allow us to do?
+    - What is [`rsync`](http://docs.uppmax.uu.se/software/rsync/)?
+    - What is [`transit`](http://docs.uppmax.uu.se/cluster_guides/transit/)?
+
+???- question "Answers"
+
+    > - What is SUNET?
+
+    [SUNET](docs.uppmax.uu.se/getting_started/get_inside_sunet) is the university networks (yes, plural!).
+
+    > - What is `ssh`? What does it allow us to do?
+
+    [`ssh`](http://docs.uppmax.uu.se/software/ssh/) is an SSH client
+    that allows us to log in to Bianca and Transit
+
+    > - What is `wharf`? What does it allow us to do?
+
+    [`wharf`](http://docs.uppmax.uu.se/cluster_guides/wharf/) is a folder 
+    on Bianca used for file transfer to/from Bianca.
+
+    > - What is `rsync`?
+
+    [`rsync`](http://docs.uppmax.uu.se/software/rsync/) is a command-line tool
+    to transfer files to/from Bianca.
+
+    > - What is `transit`?
+
+    [`transit`](http://docs.uppmax.uu.se/cluster_guides/transit/) 
+    is an UPPMAX service that can be used to securely transfer files.
+
+### Exercise 2: using `rsync`
+
+???- info "Learning objectives"
+
+    - Explore the UPPMAX documentation
+    - Mount the wharf on Transit
     - Transfer files to/from Bianca using rsync
 
-### Exercise 2: using FileZilla
+This exercise is quite practical. 
+Therefore, one interruption is scheduled for those that are stuck.
+
+Here is what to do when you get stuck:
+
+1. Take a look at the YouTube video that can be found at that page
+   **until the point where you are stuck**, then go back to using
+   the UPPMAX documentation again
+1. Ask your question in the shared document. 
+   Raise your hand or contact the teachers in any way.
+   You will be put in a Zoom room and the question in the document will be answered together
+
+Here is the exercise:
+
+- Follow the step-by-step guide of 
+  [the UPPMAX documentation on how to use rsync to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/).
+  There are 4 transfers described (file versus folder, upload versus download),
+  do at least 1 upload and 1 download
+- Signal in Zoom that you are done using the Yes (a green checkmark) Reaction.
+  This helps us assess the optimal length of this session
+- Move to the next optional exercises
+
+### (optional) Exercise 3: using FileZilla
 
 ???- info "Learning objectives"
 
     - Explore the UPPMAX documentation
     - Transfer files to/from Bianca using FileZilla
+
+- Scan the content of [the UPPMAX documentation on how to use FileZilla to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_filezilla/)
+- Follow the step-by-step guide of 
+  [the UPPMAX documentation on how to use FileZilla to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_filezilla/).
+  There are 2 transfers described (upload versus download),
+  do both
+- Signal in Zoom that you have nothing left to do using the No (a red cross) Reaction.
+  From now on, you may be asked to help other learners
+  and its helps us assess the optimal length of this session
+- Read the material for the next session
 
 ## Summary
 
@@ -182,4 +255,3 @@ Exercise 1 is most important, as:
     - One needs to mount a wharf on Transit
     - rsync is the (recommended) command-line tool that can be used to transfer data
     - FileZilla is a graphical tool that can be used to transfer data
-
