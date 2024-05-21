@@ -51,8 +51,55 @@ slurm batch| project name | max runtime | partition ("job type") | #cores | job 
     - if you wish to book full node(s)
 
 ### Quick testing
+
+- The “devel” partition
+
+  - max 2 nodes per job
+  - up to 1 hour in length
+  - only 1 at a time
+  - ``-p devcore``, ``-p devel`
+???- question "Any free nodes in the devel partition? Check status with"
+
+    - ``sinfo -p devel``
+    - ``jobinfo -p devel`
+   
+- more on these tools later
+- High priority queue for short jobs
+
+  - 4 nodes
+  - up to 15 minutes
+  - ``--qos=short``
+
 ### Debugging or complicated workflows
+- Interactive jobs
+
+  - handy for debugging a code or a script by executing it line by line or for using programs with a graphical user interface
+  - ``salloc -n 80 -t 03:00:00 -A sens2023598``
+  - ``interactive -n 80 -t 03:00:00 -A sens2023598`
+
+  - up to 12 hours
+  - useful together with the --begin=<time> flag
+  - ``salloc -A snic2022-22-50 --begin=2022-02-17T08:00:00`
+
+    - asks for an interactive job that will start earliest tomorrow at 08:00
+
 ### Parameters in the job script or the command line?
+
+- Command line parameters override script parameters
+- A typical script may be:
+
+```bash
+#!/bin/bash
+#SBATCH -A sens2023598
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -t 24:00:00
+```
+Just a quick test:
+
+```console
+sbatch -p devcore -t 00:15:00 jobscript.sh
+```
 
 ???+ question "Hands-on #1: sbatch/jobinfo"
 
@@ -64,7 +111,29 @@ slurm batch| project name | max runtime | partition ("job type") | #cores | job 
     - write in the HackMD when you’re done
 
 ### Memory in core or devcore jobs
+
+- ``-n X`
+- Bianca: 8GB per core
+- Slurm reports the available memory in the prompt at the start of an interactive job
+
 ### More flags
+- ``-J <jobname>`
+- email:
+
+  - ``--mail-type=BEGIN,END,FAIL,TIME_LIMIT_80``
+  - ``--mail-user``
+
+    - Don’t use. Set your email correctly in SUPR instead.
+
+- out/err redirection:
+
+  - ``--output=slurm-%j.out`` and ``—-error=slurm-%j.err`
+
+    -  by default, where %j will be replaced by the job ID
+
+  - ``--output=my.output.file``
+  - ``--error=my.error.file``
+
 
 ## Monitoring jobs
 ### Monitoring and modifying jobs
