@@ -1,19 +1,19 @@
-name: Check links
 
+# Check links on the 2nd day of the month.
+# 2nd as the first letter of this repo is the 2nd letter in the alphabet.
 on:
   push:
   pull_request:
   schedule:
   - cron: "0 0 2 * *"
 
+name: check-links
 
 jobs:
-  check_links:
-
+  check-links:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-
     steps:
       - uses: actions/checkout@v2
 
@@ -22,6 +22,15 @@ jobs:
           rm -rf docs/sep23
           rm docs/extra/rpackages_copy.md
 
+      # The link checker will only work if mlc_config.json is a valid JSON
+      - name: Validate JSON
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: .github/workflows/valid_json_schema.json
+          INPUT_JSONS: mlc_config.json
+
+      # These are status code that cannot be ignored.
+      #
       # If there is a valid external link that fails,
       # add it to mlc_config.json
       - name: External links must be checked, do not allow '0' in the 'aliveStatusCodes' of mlc_config.json
@@ -31,9 +40,7 @@ jobs:
         run: if [[ $(grep --regexp "[^0-9]400[^0-9]" mlc_config.json | wc --lines) == "1" ]]; then echo "FOUND"; exit 42; fi
 
       - uses: gaurav-nelson/github-action-markdown-link-check@v1
-
-      # Cannot deal with emails :-/
-      #- uses: lycheeverse/lychee-action@v1.2.0
-      #  with:
-      #    #args: --verbose --exclude-mail './**/*.md' './**/*.html'
-      #    fail: true
+        with:
+          config-file: 'mlc_config.json'
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'no'
