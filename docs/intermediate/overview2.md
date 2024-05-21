@@ -3,7 +3,6 @@
 !!! info "Objectives"
     - We'll get an overview of UPPMAX and SNIC/NAISS and how a computer cluster works
 
-
 ## The bigger picture
 
 ![Vetenskapsrådet logo](./img/vr_logo_128_x_154.png)
@@ -11,8 +10,12 @@
 
 - [Vetenskapsrådet](https://www.vr.se) ('Science counsel', VR) is biggest funder
   of research in Sweden and funds HPC infrastructure
-- [**National Academic Infrastructure for Supercomputing in Sweden**](https://www.naiss.se/) (NAISS) provides HPC infrastructure: computing power, storage and data services. Apply [here](https://www.naiss.se//#application-rounds-for-compute-and-storage-resources) for compute and storage
-- [Uppsala Multidisciplinary Center for Advanced Computational Science](https://www.uppmax.uu.se/) (**UPPMAX = UppMACS**) provides HPC infrastructure in Uppsala
+- [**National Academic Infrastructure for Supercomputing in Sweden**](https://www.naiss.se/) (NAISS) 
+  provides HPC infrastructure: computing power, storage and data services. 
+  Apply [here](https://www.naiss.se//#application-rounds-for-compute-and-storage-resources) 
+  for compute and storage
+- [Uppsala Multidisciplinary Center for Advanced Computational Science](https://www.uppmax.uu.se/) (**UPPMAX = UppMACS**) 
+  provides HPC infrastructure in Uppsala
 
 ```mermaid
 flowchart TD
@@ -36,7 +39,7 @@ flowchart TD
 
 ## UPPMAX systems
 
-- [UPPMAX clusters](https://www.uppmax.uu.se/resources/systems/) are:
+- [UPPMAX clusters](http://docs.uppmax.uu.se/cluster_guides/uppmax_cluster/) are:
     - Rackham: regular data, general purpose
     - Snowy: regular data, long runs and GPU:s
     - **Bianca: for sensitive data, general use**
@@ -62,7 +65,7 @@ flowchart TD
     is_long --> |yes|Snowy
 ```
 
-- [UPPMAX storage](https://www.uppmax.uu.se/resources/systems/storage-systems/)
+- UPPMAX storage:
     - On-load, active use: Castor of Bianca, Crex for Rackham
     - Off-load, archive: Lutra for Rackham
 
@@ -81,7 +84,7 @@ flowchart TD
     usage_type-->|archive|Lutra
 ```
 
-- [UPPMAX cloud](https://www.uppmax.uu.se/resources/systems/the-uppmax-cloud/),
+- UPPMAX cloud:
       called 'Dis' (the Swedish word for 'haze'), it is
       the `EAST-1` region of the SNIC science cloud. 
 
