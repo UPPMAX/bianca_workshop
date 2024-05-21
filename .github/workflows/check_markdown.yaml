@@ -6,8 +6,12 @@ name: Check markdown
 on:
   push:
     branch:
-      'issue_12'
+      - 'issue_16'
+      - '!main'
   pull_request:
+    branch:
+      - 'issue_16'
+      - '!main'
   schedule:
   - cron: "0 0 21 * *"
 
