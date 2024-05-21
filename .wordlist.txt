@@ -279,3 +279,4 @@ Snakemake
 TMP
 checkmark
 pseudonymisation
+schedmd
