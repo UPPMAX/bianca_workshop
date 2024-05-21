@@ -25,7 +25,7 @@
     - Therefore, it serves as a bridge between Internet and Bianca.
     
 ## Data transfers:
-- <https://www.uppmax.uu.se/support/user-guides/bianca-user-guide/> 
+- <http://docs.uppmax.uu.se/cluster_guides/transfer_bianca/> 
     - section 3: Transfer files to and from Bianca
 
 ### The `wharf` location on Bianca
@@ -83,7 +83,7 @@ Be sure to really use a SFTP client -- not just a SCP client.
 
 ## Using standard sftp client (command line)
 ---
-<https://www.uppmax.uu.se/support/user-guides/basic-sftp-commands/>
+<http://docs.uppmax.uu.se/cluster_guides/sftp_with_bianca/>
 
 ```bash
 $ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se 
