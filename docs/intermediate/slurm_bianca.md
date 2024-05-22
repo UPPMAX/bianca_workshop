@@ -199,7 +199,19 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
     - cancel your job with name “wrongjob”
 
 ## Determining job efficiency
+
+- `jobstats` - custom-made UPPMAX tool
+
 ### Job efficiency
+
+- `jobstats` - a tool in the fight for productivity
+
+  - it works only for jobs longer than 5-15 minutes
+  - `-r jobid` - check running jobs
+  - `A project` - check all recent jobs of a given project
+  - `p jobid` - produce a CPU and memory usage plot
+
+- [Jobstats user guide](http://docs.uppmax.uu.se/software/jobstats/)
 
 ???+ question "Hands-on #3: jobstats"
 
