@@ -280,3 +280,6 @@ TMP
 checkmark
 pseudonymisation
 schedmd
+centres
+OOM
+gres
