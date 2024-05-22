@@ -1,5 +1,4 @@
-# Slurm on Bianca
-
+# Compute nodes, Slurm and debugging jobs
 !!!- info "Learning objectives"
 
     - Explore ...
