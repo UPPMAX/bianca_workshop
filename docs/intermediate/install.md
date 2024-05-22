@@ -3,8 +3,35 @@
 
 !!! info "Objectives" 
 
-    - We'll go through the methods to install packages and tools
-    - We'll briefly get an overview of the hardware on Bianca
+    - Find out there are ways for users to install on Bianca
+    - Get overview of principles for installing packages to R, python and Julia
+    - Test installing packages
+    - Get an overview of installing software
+    - Get an overview of developing/compiling software
+    - Get an overview of the hardware on Bianca
+
+???- info "Notes for teachers"
+
+    Teaching goals:
+
+    - The learners have explored the UPPMAX documentation
+    - The learners have installed a package (R, python or julia)
+    - The learners understand how to install own software
+
+    Lesson plan:
+
+    ```mermaid
+    gantt
+      title IDEs
+      dateFormat X
+      axisFormat %m
+      Introduction: intro, 0, 10m
+      Vote on wih IDE: vote, after intro, 5m
+      Exercise with personal favorite package: crit, exercise, after vote, 20m
+      Feedback: feedback, after exercise, 10m
+      Installing software and developing: monologue, after feedback, 5m
+      Break: milestone, after monologue
+    ```
 
 ## The module system
 
