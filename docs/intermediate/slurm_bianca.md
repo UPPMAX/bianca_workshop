@@ -22,7 +22,7 @@
 
 !!! info "See also"
 
-    - [Slurm intro with monitoring jobs](../slurm_intro_with_jobstats.md)
+    - [Slurm intro with monitoring jobs](../slurm_intro.md)
     - [More about Slurm including examples](../extra/slurm.md)
 
     
