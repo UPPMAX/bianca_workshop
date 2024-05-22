@@ -1,4 +1,4 @@
-# Slurm at Bianca
+# Slurm on Bianca
 
 !!!- info "Learning objectives"
 
