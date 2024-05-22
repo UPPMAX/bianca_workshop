@@ -65,29 +65,12 @@ to work on the Bianca UPPMAX cluster.
     - the more teaching assistants available, the quicker questions are answered
     - some questions may be answered after the workshop
 
-## Previous schedule
+## Schedule
 
-Time |Topic
------|--------------------------
-9.00 | [Introduction](https://uppmax.github.io/bianca_workshop/intermediate/intro/)
-9.10 | [NAISS-SENS summary](https://uppmax.github.io/bianca_workshop/sens_project_short/)
-9.20 | [Transferring files to and from Bianca](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
-10.00| Coffee break
-10.15| [Transferring files p2](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
-10.35| [Slurm jobs p1](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
-11.00| Break
-11.15| [Slurm jobs p2](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
-12.00| LUNCH
-13.00| [Software and packages installation](https://uppmax.github.io/bianca_workshop/intermediate/install/)
-13.50| break
-14.05| [IDE:s on Bianca](https://uppmax.github.io/bianca_workshop/intermediate/ides/)
-15.00| Coffee break
-15.15| [Summary](https://uppmax.github.io/bianca_workshop/intermediate/summary/)
-15.20| Q/A and [extra material](https://uppmax.github.io/bianca_workshop/extra/slurm/)
-15.55| Closing words
-16.00| END
+???- info "For UPPMAX staff"
 
-## Suggested new schedule
+    This assumes Lars/Marcus can teach in the afternoon, 
+    else I guess the schedule will be built around them...?
 
 When | Who  | What
 -----|------|-------------------------
@@ -111,13 +94,27 @@ When | Who  | What
 
 * Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
 
-Changes:
+## Previous schedule
 
-* IDEs changed from 55 -> 45 minutes, as there is a new setup: (1) let learners vote on one IDE, (2) discuss that IDE in detail, (3) mention the others more briefly. If teachers think it would be better to discuss 2 in detail, they may do so
-* NAISS-SENS to back, so that (1) learners can dive in immediately, (2) it is a nice easy way to round off the day
-* NAISS-SENS duration changed from 10 -> 30 minutes, as this is more realistic
-* Introduction duration changed from 5 -> 15 minutes
-* Transferring files part 1 duration changed from 40 -> 45 minutes
+Time |Topic
+-----|--------------------------
+9.00 | [Introduction](https://uppmax.github.io/bianca_workshop/intermediate/intro/)
+9.10 | [NAISS-SENS summary](https://uppmax.github.io/bianca_workshop/sens_project_short/)
+9.20 | [Transferring files to and from Bianca](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
+10.00| Coffee break
+10.15| [Transferring files p2](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
+10.35| [Slurm jobs p1](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
+11.00| Break
+11.15| [Slurm jobs p2](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
+12.00| LUNCH
+13.00| [Software and packages installation](https://uppmax.github.io/bianca_workshop/intermediate/install/)
+13.50| break
+14.05| [IDE:s on Bianca](https://uppmax.github.io/bianca_workshop/intermediate/ides/)
+15.00| Coffee break
+15.15| [Summary](https://uppmax.github.io/bianca_workshop/intermediate/summary/)
+15.20| Q/A and [extra material](https://uppmax.github.io/bianca_workshop/extra/slurm/)
+15.55| Closing words
+16.00| END
 
 ## Overview of courses
 
