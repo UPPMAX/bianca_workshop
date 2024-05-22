@@ -176,19 +176,137 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
 
 ### Simple workflow
 
+```bash
+#!/bin/bash
+#SBATCH -J jobname
+#SBATCH -A sens2023598
+#SBATCH -p core
+#SBATCH -n 10
+#SBATCH -t 10:00:00
+
+module load software/version
+module load python/3.9.5
+
+./my-script.sh
+./another-script.sh
+./myprogram.exe
+```
+
 ### Job dependencies
+
+- ``sbatch jobscript.sh``   submitted job with jobid1
+- ``sbatch anotherjobscript.sh``   submitted job with jobid2
+- ``--dependency=afterok:jobid1:jobid2 job`` will only start running after the successful end of jobs jobid1:jobid2
+- very handy for clearly defined workflows
+- One may also use -``-dependency=afternotok:jobid`` in case you’d like to resubmit a failed job, OOM for example, to a node with a higher memory: ``-C mem215GB`` or ``-C mem512GB`
 
 ### I/O intensive jobs: $SNIC_TMP
 
+```bash
+#!/bin/bash
+#SBATCH -J jobname
+#SBATCH -A sens2023598
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -t 10:00:00
+
+module load bioinfotools
+module load bwa/0.7.17 samtools/1.14
+
+export SRCDIR=$HOME/path-to-input
+
+cp $SRCDIR/foo.pl $SRCDIR/bar.txt $SNIC_TMP/.
+cd $SNIC_TMP
+
+./foo.pl bar.txt
+
+cp *.out $SRCDIR/path-to-output/.
+```
+
 ### OpenMP or multi-threaded job
 
+```bash
+#!/bin/bash
+#SBATCH -A sens2023598
+#SBATCH --exclusive
+#SBATCH -p node
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20
+#SBATCH -t 01:00:00
+
+module load uppasd
+export OMP_NUM_THREADS=20
+
+sd > out.log
+```
+
+
 ### GPU nodes on Bianca
+- Nodes with Nvidia A100 40 GB
+- All GPU nodes have at least 256 GB RAM (fat nodes) with 16 CPU cores
+- 1 or 2 GPUs per node
+
+- SBATCH options:
+
+  - ``#SBATCH -C gpu`
+  - ``#SBATCH --gres=gpu:1``
+  - ``#SBATCH --gpus-per-node=1``
+
+- https://slurm.schedmd.com/gres.html#Running_Jobs
 
 ### Running on several nodes: MPI jobs
 
+```bash
+#!/bin/bash -l
+#SBATCH -J rsptjob
+#SBATCH —mail-type=FAIL
+#SBATCH -A sens2023598
+#SBATCH -t 00-07:00:00
+#SBATCH -p node
+#SBATCH -N 4
+### for jobs shorter than 15 min (max 4 nodes):
+###SBATCH --qos=short
+
+
+module load RSPt/2021-10-04
+export RSPT_SCRATCH=$SNIC_TMP
+
+srun -n 80 rspt
+
+rm -f apts dmft_lock_file e_entropy efgArray.dat.0 efgData.out.0 energy_matrices eparm_last interstitialenergy jacob1 jacob2 locust.* out_last pot_last rspt_fft_wisdom.* runs.a symcof_new
+```
+
 ### Job arrays
 
+- Submit many jobs at once with the same or similar parameters
+- Use ``$SLURM_ARRAY_TASK_ID`` in the script in order to find the correct path
+
+```bash
+#!/bin/bash
+#SBATCH -A sens2023598
+#SBATCH -p node
+#SBATCH -N 2
+#SBATCH -t 01:00:00
+#SBATCH -J jobarray
+#SBATCH --array=0-19
+#SBATCH --mail-type=ALL,ARRAY_TASKS
+
+# SLURM_ARRAY_TASK_ID tells the script which iteration to run
+echo $SLURM_ARRAY_TASK_ID
+
+cd /pathtomydirectory/dir_$SLURM_ARRAY_TASK_ID/
+
+srun -n 40 my-program
+env
+```
+
+- You may use scontrol to modify some of the job arrays.
+
 ### Snakemake and Nextflow 
+
+- Conceptually similar, but with different flavours
+- First define steps, each with an input, an output, and a command that transforms the input into output
+- Then just ask for the desired output and the system will handle the rest
 
 ???+ question "Hands-on #4: make it your own"
 
@@ -199,10 +317,16 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
 
 ## Feedback on Slurm
 
+- what did you find useful?
+- not so useful?
+- what is most challenging while editing your job script / worksflow?
+- something that was not covered that you’d like to know about?
+- please provide your feedback in the HackMD
+
 ## Where to go from here?
 
-Code documentation
-SNIC training newsletter - software-specific training events included
-https://coderefinery.org/workshops/upcoming/
-https://nbis.se/training/events.html (bio)
-email support@uppmax.uu.se or https://supr.naiss.se/support/
+- Code documentation
+- SNIC training newsletter - software-specific training events included
+- https://coderefinery.org/workshops/upcoming/
+- https://nbis.se/training/events.html (bio)
+- email support@uppmax.uu.se or https://supr.naiss.se/support/
