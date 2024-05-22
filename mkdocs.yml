@@ -21,7 +21,7 @@ nav:
     - Introduction: intermediate/intro.md
     - Intro to NAISS-SENS and sensitive data: sens_project_short.md
     - Transferring files to/from Bianca: intermediate/transfer.md
-    - Slurm on Bianca: intermediate/slurm_bianca.md
+    - Compute nodes and debugging jobs: intermediate/slurm_bianca.md
     - Software and package installation: intermediate/install.md
     - IDEs: 
       - General: intermediate/ides.md
