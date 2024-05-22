@@ -79,7 +79,7 @@ When | Who  | What
 12:00| .    | Lunch
 13:00| B    | [Software and packages installation](https://uppmax.github.io/bianca_workshop/intermediate/install/)
 13:45| .    | Break
-14:00| PR   | [IDEs on Bianca](https://uppmax.github.io/bianca_workshop/intermediate/ides/)
+14:00| BR   | [IDEs on Bianca](https://uppmax.github.io/bianca_workshop/intermediate/ides/)
 14:45| .    | Break
 15:00| L    | [NAISS-SENS summary](https://uppmax.github.io/bianca_workshop/sens_project_short/)
 15:30| R    | [Summary](https://uppmax.github.io/bianca_workshop/intermediate/summary/)
@@ -87,7 +87,7 @@ When | Who  | What
 15:45| All  | Optional Q/A and [extra material](https://uppmax.github.io/bianca_workshop/extra/slurm/)
 16:00| .    | END
 
-* Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
+* Who: `B`: Björn, `L`: Lars, `R`: Richèl
 
 ## Overview of courses
 
