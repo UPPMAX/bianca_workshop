@@ -380,7 +380,7 @@ env
 
 - what did you find useful?
 - not so useful?
-- what is most challenging while editing your job script / worksflow?
+- what is most challenging while editing your job script / workflows?
 - something that was not covered that you’d like to know about?
 - please provide your feedback in the HackMD
 
