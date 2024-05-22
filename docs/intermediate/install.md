@@ -47,9 +47,9 @@
     - Usually it is not a problem to build on Rackham and move to Bianca.
 - ``cmake`` is available as module
      - Check with: ``$ ml avail cmake``
-- [Guide for compiling **serial** programs](https://www.uppmax.uu.se/support/user-guides/compiling-source-code/){:target="_blank"}
-- [Guide for compiling **parallel** programs](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/){:target="_blank"}
-    - [Available **combinations** of compilers and parallel libraries](https://www.uppmax.uu.se/support/user-guides/mpi-and-openmp-user-guide/#tocjump_7075108295107558_2){:target="_blank"}
+- [Guide for compiling **serial** programs](http://docs.uppmax.uu.se/cluster_guides/compiling_serial/){:target="_blank"}
+- [Guide for compiling **parallel** programs](http://docs.uppmax.uu.se/cluster_guides/compiling_parallel/){:target="_blank"}
+    - [Available **combinations** of compilers and parallel libraries](http://docs.uppmax.uu.se/cluster_guides/compiling_parallel/#mpi-using-the-openmpi-library){:target="_blank"}
 
 ???- info "About CPU hardware on Bianca"
 
