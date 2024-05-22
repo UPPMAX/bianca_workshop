@@ -1,9 +1,36 @@
-# Slurm at Bianca
+# Compute nodes, Slurm and debugging jobs
+!!!- info "Learning objectives"
 
+    - Explore ...
+    - Understand ...
+    - Understand ...
+
+???- question "For teachers"
+
+    Prerequisites are:
+
+    - None
+
+    Teaching goals are:
+
+    - Learners have explored ...
+    - Learners understand what ...
+    
+!!! info "Lesson material in PDF"
+   
+    - [PDF material](https://github.com/UPPMAX/bianca_workshop/blob/main/docs/presentations/Bianca-Slurm-2023-12-Diana.pdf)
+
+!!! info "See also"
+
+    - [Slurm intro with monitoring jobs](../slurm_intro.md)
+    - [More about Slurm including examples](../extra/slurm.md)
+
+    
 ## More Slurm and other advanced UPPMAX techniques
 
 - A closer look at Slurm
 - Using the GPUs
+- Debugging
 - Job efficiency with the ``jobstats`` tool
 - Advanced job submission
 
