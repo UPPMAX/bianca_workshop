@@ -9,6 +9,11 @@
     - Explore the UPPMAX documentation
     - See that there are different IDEs on Bianca
     - Start the favorite IDE on Bianca
+    - (optional) Understand why to use an IDE
+    - (optional) Understand why not to use an IDE on Bianca
+    - (optional) Understand when to run an IDE on a login node
+    - (optional) Understand when to use an interactive session
+    - (optional) Understand how to find out an interactive session is active
 
 ???- info "Notes for teachers"
 
@@ -17,6 +22,11 @@
     - The learners have explored the UPPMAX documentation
     - The learners have seen that there are different IDEs on Bianca
     - The learners have start at least one IDE on Bianca
+    - The learners understand why to use an IDE
+    - The learners understand why not to use an IDE on Bianca
+    - The learners understand when to run an IDE on a login node
+    - The learners understand when to use an interactive session
+    - The learners understand how to find out an interactive session is active
 
     Lesson plan:
 
@@ -94,12 +104,17 @@ It may look like below, where there is a preference for Jupyter:
 ???- info "Learning objectives"
 
     - Explore the UPPMAX documentation
-    - Start the favorite IDE on Bianca
+    - Understand why to use an IDE
+    - Understand why not to use an IDE on Bianca
+    - Understand when to run an IDE on a login node
+    - Understand when to use an interactive session
+    - Understand how to find out an interactive session is active
+
 
 - Try to answer the questions below.
   Be generous in accepting you answer.
   If you have no idea, use the UPPMAX documentation of the [IDEs on Bianca](http://docs.uppmax.uu.se/cluster_guides/ides_on_bianca/).
-- When done, run the other two IDEs on Bianca
+  When done, run the other two IDEs on Bianca
 
 ???- question "Why use an IDE?"
 
