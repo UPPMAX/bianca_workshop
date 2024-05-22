@@ -11,7 +11,7 @@
 
 - Free, popular, lightweight
 - Open source: https://slurm.schedmd.com
-- available at all SNIC centres
+- Available at all SNIC centres
 - [UPPMAX Slurm user guide](http://docs.uppmax.uu.se/cluster_guides/slurm/)
 
 ### More on sbatch
@@ -24,11 +24,13 @@ slurm batch| project name | max runtime | partition ("job type") | #cores | job 
 
 ### More on time limits
 
-- ``-t dd-hh:mm:ss``
-- ``0-00:10:00 = 00:10:00 = 10:00 = 10``
-- ``0-12:00:00 = 12:00:00``
-- ``3-00:00:00 =                    3-0``
-- ``3-12:10:15``
+- Format ``-t dd-hh:mm:ss``
+- Examples and variants on syntax
+
+  - ``0-00:10:00 = 00:10:00 = 10:00 = 10``
+  - ``0-12:00:00 = 12:00:00``
+  - ``3-00:00:00 =                    3-0``
+  - ``3-12:10:15``
 
 ### Job walltime
 
@@ -47,7 +49,7 @@ slurm batch| project name | max runtime | partition ("job type") | #cores | job 
     - ≤ 16 cores on Bianca
     - a script or program written without any thought on parallelism will use 1 core
 
-- ``-p node`
+- ``-p node``
     - if you wish to book full node(s)
 
 ### Quick testing
@@ -57,11 +59,11 @@ slurm batch| project name | max runtime | partition ("job type") | #cores | job 
   - max 2 nodes per job
   - up to 1 hour in length
   - only 1 at a time
-  - ``-p devcore``, ``-p devel`
+  - ``-p devcore``, ``-p devel``
 ???- question "Any free nodes in the devel partition? Check status with"
 
     - ``sinfo -p devel``
-    - ``jobinfo -p devel`
+    - ``jobinfo -p devel``
    
 - more on these tools later
 - High priority queue for short jobs
@@ -75,7 +77,7 @@ slurm batch| project name | max runtime | partition ("job type") | #cores | job 
 
   - handy for debugging a code or a script by executing it line by line or for using programs with a graphical user interface
   - ``salloc -n 80 -t 03:00:00 -A sens2023598``
-  - ``interactive -n 80 -t 03:00:00 -A sens2023598`
+  - ``interactive -n 80 -t 03:00:00 -A sens2023598``
 
   - up to 12 hours
   - useful together with the --begin=<time> flag
@@ -112,12 +114,12 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
 
 ### Memory in core or devcore jobs
 
-- ``-n X`
+- ``-n X``
 - Bianca: 8GB per core
 - Slurm reports the available memory in the prompt at the start of an interactive job
 
 ### More flags
-- ``-J <jobname>`
+- ``-J <jobname>``
 - email:
 
   - ``--mail-type=BEGIN,END,FAIL,TIME_LIMIT_80``
@@ -136,9 +138,56 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
 
 
 ## Monitoring jobs
+
+- ``jobinfo`` - a wrapper around ``squeue``
+
+  - lists running and pending jobs
+  - `jobinfo -u username`
+  - `jobinfo -A sens2023598`
+  - `jobinfo -u username --state=running`
+  - `jobinfo -u username --state=pending
+- One may also use the ``squeue`` command.
+
+- `bianca_combined_jobinfo (queued jobs of all projects)
+
 ### Monitoring and modifying jobs
+
+- `scontrol`
+
+  - `scontrol show job [jobid]`
+
+- possible to modify the job details after the job has been submitted; some options, like maximum runtime, may be modified (=shortened) even after the job started
+  - `scontrol update JobID=jobid QOS=short`
+  - `scontrol update JobID=jobid TimeLimit=1-00:00:00`
+  - `scontrol update JobID=jobid NumNodes=10`
+  - `scontrol update JobID=jobid Features=mem1TB`
+
+
 ### When a job goes wrong
+
+- `scancel [jobid]`
+
+  - `-u username` - to cancel all your jobs
+  - `-t [state]` - cancel _pending_ or _running_ jobs
+  - `-n name` - cancel jobs with a given name
+  - `-i` - ask for confirmation
+
+
 ### Priority
+
+- Roughly:
+
+  - The first job of the day has elevated priority
+  - Other normal jobs run in the order of submission (subject to scheduling)
+  - Projects exceeding their allocation get successively into the lower priority category
+  - Bonus jobs run after the jobs in the higher priority categories
+
+- In practice:
+
+  - submit early = run early
+  - bonus jobs always run eventually, but may need to wait until the night or weekend
+  - In detail: <http://docs.uppmax.uu.se/cluster_guides/running_jobs/jobinfo_reason/>
+
 
 ???+ question "Hands-on #2: sbatch/squeue/scancel/scontrol/jobinfo"
 
@@ -150,7 +199,19 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
     - cancel your job with name “wrongjob”
 
 ## Determining job efficiency
+
+- `jobstats` - custom-made UPPMAX tool
+
 ### Job efficiency
+
+- `jobstats` - a tool in the fight for productivity
+
+  - it works only for jobs longer than 5-15 minutes
+  - `-r jobid` - check running jobs
+  - `A project` - check all recent jobs of a given project
+  - `p jobid` - produce a CPU and memory usage plot
+
+- [Jobstats user guide](http://docs.uppmax.uu.se/software/jobstats/)
 
 ???+ question "Hands-on #3: jobstats"
 
@@ -248,7 +309,7 @@ sd > out.log
 
 - SBATCH options:
 
-  - ``#SBATCH -C gpu`
+  - ``#SBATCH -C gpu``
   - ``#SBATCH --gres=gpu:1``
   - ``#SBATCH --gpus-per-node=1``
 
@@ -319,7 +380,7 @@ env
 
 - what did you find useful?
 - not so useful?
-- what is most challenging while editing your job script / worksflow?
+- what is most challenging while editing your job script / workflows?
 - something that was not covered that you’d like to know about?
 - please provide your feedback in the HackMD
 
@@ -327,6 +388,6 @@ env
 
 - Code documentation
 - SNIC training newsletter - software-specific training events included
-- https://coderefinery.org/workshops/upcoming/
-- https://nbis.se/training/events.html (bio)
-- email support@uppmax.uu.se or https://supr.naiss.se/support/
+- <https://coderefinery.org/workshops/upcoming/>
+- <https://nbis.se/training/events.html> (bio)
+- email <support@uppmax.uu.se> or <https://supr.naiss.se/support/>
