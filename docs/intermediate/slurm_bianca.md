@@ -119,7 +119,7 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
 - Slurm reports the available memory in the prompt at the start of an interactive job
 
 ### More flags
-- ``-J <jobname>`
+- ``-J <jobname>``
 - email:
 
   - ``--mail-type=BEGIN,END,FAIL,TIME_LIMIT_80``
@@ -152,9 +152,9 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
 
 ### Monitoring and modifying jobs
 
-- `scontrol
+- `scontrol`
 
-  - `scontrol show job jobid
+  - `scontrol show job [jobid]`
 
 - possible to modify the job details after the job has been submitted; some options, like maximum runtime, may be modified (=shortened) even after the job started
   - `scontrol update JobID=jobid QOS=short`
@@ -186,7 +186,7 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
 
   - submit early = run early
   - bonus jobs always run eventually, but may need to wait until the night or weekend
-  - In detail: <https://www.uppmax.uu.se/support/faq/running-jobs-faq/your-priority-in-the-waiting-job-queue/>
+  - In detail: <http://docs.uppmax.uu.se/cluster_guides/running_jobs/jobinfo_reason/>
 
 
 ???+ question "Hands-on #2: sbatch/squeue/scancel/scontrol/jobinfo"
@@ -309,7 +309,7 @@ sd > out.log
 
 - SBATCH options:
 
-  - ``#SBATCH -C gpu`
+  - ``#SBATCH -C gpu``
   - ``#SBATCH --gres=gpu:1``
   - ``#SBATCH --gpus-per-node=1``
 
@@ -388,6 +388,6 @@ env
 
 - Code documentation
 - SNIC training newsletter - software-specific training events included
-- https://coderefinery.org/workshops/upcoming/
-- https://nbis.se/training/events.html (bio)
-- email support@uppmax.uu.se or https://supr.naiss.se/support/
+- <https://coderefinery.org/workshops/upcoming/>
+- <https://nbis.se/training/events.html> (bio)
+- email <support@uppmax.uu.se> or <https://supr.naiss.se/support/>
