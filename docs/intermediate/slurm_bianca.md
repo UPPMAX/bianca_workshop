@@ -22,14 +22,15 @@
 
 !!! info "See also"
 
-    - [Slurm intro with monitoring jobs](https://github.com/UPPMAX/bianca_workshop/blob/main/docs/intermediate/slurm_intro_with_jobstats.md)
-    - [More about Slurm including examples](https://uppmax.github.io/bianca_workshop/extra/slurm/)
+    - [Slurm intro with monitoring jobs](../slurm_intro_with_jobstats.md)
+    - [More about Slurm including examples](../extra/slurm.md)
 
     
 ## More Slurm and other advanced UPPMAX techniques
 
 - A closer look at Slurm
 - Using the GPUs
+- Debugging
 - Job efficiency with the ``jobstats`` tool
 - Advanced job submission
 
