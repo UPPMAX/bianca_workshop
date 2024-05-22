@@ -1,5 +1,32 @@
 # Slurm at Bianca
 
+!!!- info "Learning objectives"
+
+    - Explore ...
+    - Understand ...
+    - Understand ...
+
+???- question "For teachers"
+
+    Prerequisites are:
+
+    - None
+
+    Teaching goals are:
+
+    - Learners have explored ...
+    - Learners understand what ...
+    
+!!! info "Lesson material in PDF"
+   
+    - [PDF material](https://github.com/UPPMAX/bianca_workshop/blob/main/docs/presentations/Bianca-Slurm-2023-12-Diana.pdf)
+
+!!! info "See also"
+
+    - [Slurm intro with monitoring jobs](https://github.com/UPPMAX/bianca_workshop/blob/main/docs/intermediate/slurm_intro_with_jobstats.md)
+    - [More about Slurm including examples](https://uppmax.github.io/bianca_workshop/extra/slurm/)
+
+    
 ## More Slurm and other advanced UPPMAX techniques
 
 - A closer look at Slurm
