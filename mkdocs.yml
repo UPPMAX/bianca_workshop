@@ -1,5 +1,7 @@
 site_name: Bianca workshop
 
+repo_url: https://github.com/UPPMAX/bianca_workshop
+
 nav:
   - Home: index.md
   - Practicalities: practicalities.md
