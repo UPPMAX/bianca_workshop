@@ -114,7 +114,7 @@ flowchart LR
     transit[transit server\nrsync]
     sftp_server[SFTP server\nFileZilla]
     user[User in SUNET]
-    other_users[User on Rackham\nUser on other NAISSS clusters]:::low_focus_node
+    other_users[User on Rackham\nUser on other NAISS clusters]:::low_focus_node
     wharf <--> transit
     wharf <--> sftp_server
     transit --> user
@@ -174,6 +174,7 @@ Exercise 1 and 2 are the most important, as:
   If you have no idea at all, read the linked UPPMAX documentation:
 
     - What is [SUNET](http://docs.uppmax.uu.se/getting_started/get_inside_sunet/)?
+    - What is [`ssh`](http://docs.uppmax.uu.se/software/ssh/)? What does it allow us to do?
     - What is [`wharf`](http://docs.uppmax.uu.se/cluster_guides/wharf/)? What does it allow us to do?
     - What is [`rsync`](http://docs.uppmax.uu.se/software/rsync/)?
     - What is [`transit`](http://docs.uppmax.uu.se/cluster_guides/transit/)?
