@@ -11,7 +11,7 @@
         - ... using Python packages with pip
         - ... using R packages
         - ... using Julia packages
-        - ... using Aptainer/Singularity
+        - ... using Apptainer/Singularity
     - Understand how to build from source
 
 
@@ -50,7 +50,7 @@
 - But you may be able to do **installations yourself**. Here the use of Rackham comes handy because of the:
     - internet connection
     - the computer architecture is somewhat similar such that precompiled binaries or compiled programs (x86_64) on Rackham will most often work also on Bianca.
-    - you can use the **``wharf`` to transfer source files and binaries to Bianca from Rackham**
+    - you can use the **``wharf`` to transfer installation files and packages to Bianca from Rackham**
 
 ## Content
 
@@ -148,22 +148,7 @@
 
     - "Install packages or not? Check it!"
 
-### Python 
-
-- Check python versions: ``ml avail python``
-- load a python version: ``ml python/3.10.8``
-- from the Python shell with the ``import`` command
-- from BASH shell with the 
-	
-- ``pip list`` command 
-- ``ml help python/3.9.5`` at UPPMAX
-
-**Is it not there? Then proceed!**
-
-!!! info "Tip Python packages"
-
-    - Try Conda first directly on Bianca. We have mirrored all _major_ Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
-    - If you want to keep number of files down, use PyPI (pip), but then you need to use Rackham and the ``wharf``.
+## Check and install packages! 
 
 ### R
 
@@ -182,33 +167,44 @@ Then within R, try loading the package you want, like ``glmnet``:
 
 **Is it not there? Then proceed!**
 
-## Install packages! 
+!!! info "Installation principle"
+
+    - install on Rackham
+    - sync to ``wharf``
+    - move the files on Bianca
+
+!!! info "More info"
+
+    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
+    - [From R course: packages](https://uppmax.github.io/R-python-julia-HPC/r/packagesR.html){:target="_blank"}
+    - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html){:target="_blank"}
+
+
+### Python and other
+
+- **Check** python versions: ``ml avail python``
+- Check the **help** output from: ``ml help python/3.9.5`` at UPPMAX
+- **Load** a python version, like: ``ml python/3.10.8``
+- from the **Python shell** with the ``import`` command
+- from **BASH shell** with the ``pip list`` command 
+
+**Is it not there? Then proceed!**
+
+!!! info "Tip Python packages"
+
+    - Try Conda first directly on Bianca. We have mirrored all _major_ Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
+    - If you want to keep number of files down, use PyPI (pip), but then you need to use Rackham and the ``wharf``.
+
 
 ### Conda
 
 - We have mirrored all major Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
-
-!!! info "Available Conda channels"
-      
-    - bioconda
-    - biocore
-    - conda-forge
-    - dranew
-    - free
-    - main
-    - pro
-    - qiime2
-    - r
-    - r2018.11
-    - scilifelab-lts
 
 !!! info "More info"
 
     - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
     - [Conda user guide](https://www.uppmax.uu.se/support/user-guides/conda-user-guide/)
     - [UPPMAX Python user guide: Conda](https://www.uppmax.uu.se/support/user-guides/python-user-guide/#tocjump_9332829429720808_6)
-
-
 
 ### Python packages with pip
 
@@ -228,20 +224,6 @@ Then within R, try loading the package you want, like ``glmnet``:
     - [From Python course: packages](https://uppmax.github.io/R-python-julia-HPC/python/packages.html){:target="_blank"}
     - [From Python course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/python/isolated.html){:target="_blank"}
 
-
-### R packages
-
-!!! info "Installation principle"
-
-    - install on Rackham
-    - sync to ``wharf``
-    - move the files on Bianca
-
-!!! info "More info"
-
-    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
-    - [From R course: packages](https://uppmax.github.io/R-python-julia-HPC/r/packagesR.html){:target="_blank"}
-    - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html){:target="_blank"}
 
 ### Julia packages
 
