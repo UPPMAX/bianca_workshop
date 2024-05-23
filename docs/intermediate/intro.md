@@ -63,11 +63,10 @@ to work on the Bianca UPPMAX cluster.
 
 ???- tip "How do I copy/paste within a ThinLinc session?" 
 
-     - Right-click and choose, or
+     - Windows/MAC: Right-click and choose, or
      - Windows:
          - paste: `shift+insert`
          - copy: `ctrl+insert`
-     - Mac: TB
 
 ???- tip "How do I copy/paste between ThinLinc and locally?" 
 
