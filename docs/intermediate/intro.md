@@ -52,6 +52,16 @@ to work on the Bianca UPPMAX cluster.
     As a beginner, you are encouraged to start with the
     basic Bianca course, at [here](../intro.md).
 
+???- tip "I may be rusty on how to log in to Bianca, how do I login again?"
+
+    You can refresh your mind at 
+    [the UPPMAX documentation on accessing Bianca](http://docs.uppmax.uu.se/getting_started/login_bianca/).
+
+???- tip "I may be rusty on using Linux commands, is there any documentation?"
+
+    Sure! It is at
+    [the UPPMAX documentation on Linux basics](http://docs.uppmax.uu.se/getting_started/linux_basics/).
+    
 !!! info "Course shared document"
 
     The course shared document can be found at: [https://hackmd.io/@UPPMAX/bianca-workshop-2024/edit](https://hackmd.io/@UPPMAX/bianca-workshop-2024/edit).
