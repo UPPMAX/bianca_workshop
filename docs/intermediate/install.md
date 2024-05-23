@@ -3,8 +3,35 @@
 
 !!! info "Objectives" 
 
-    - We'll go through the methods to install packages and tools
-    - We'll briefly get an overview of the hardware on Bianca
+    - Find out there are ways for users to install on Bianca
+    - Get overview of principles for installing packages to R, python and Julia
+    - Test installing packages
+    - Get an overview of installing software
+    - Get an overview of developing/compiling software
+    - Get an overview of the hardware on Bianca
+
+???- info "Notes for teachers"
+
+    Teaching goals:
+
+    - The learners have explored the UPPMAX documentation
+    - The learners have installed a package (R, python or julia)
+    - The learners understand how to install own software
+
+    Lesson plan:
+
+    ```mermaid
+    gantt
+      title IDEs
+      dateFormat X
+      axisFormat %m
+      Introduction: intro, 0, 10m
+      Vote on wih IDE: vote, after intro, 5m
+      Exercise with personal favorite package: crit, exercise, after vote, 20m
+      Feedback: feedback, after exercise, 10m
+      Installing software and developing: monologue, after feedback, 5m
+      Break: milestone, after monologue
+    ```
 
 ## The module system
 
@@ -20,59 +47,16 @@
     - the computer architecture is somewhat similar such that precompiled binaries or compiled programs (x86_64) on Rackham will most often work also on Bianca.
     - you can use the **``wharf`` to transfer source files and binaries to Bianca from Rackham**
 
-## Install software yourself
+## Content
 
-- If not available on Bianca already (like Conda repositories) you may have to use the ``wharf`` to install your tools
-    - Alternatively let an Application Expert install the tool as a module.
-
-!!! note "Typical workflow for installation"
-
-    - **Download the source code or binary** (Linux on x86 and 64-bit) to Rackham first
-    - **Transfer** to the ``wharf``
-    - Then, either 
-        - You can install in your home directory.
-            - This is handy for personal needs and low numbers of files — i.e. not Conda.
-        - Usually better to install in project directory.
-            - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
-    - Binaries for Linux on x86 and 64-bit should be able to be run directly as it is, see the software specific installation documentation.
-    - or build from source, see next session.
-     
-
-### Build from source
-- To build from source use a **compiler module**
-- We have several compiler versions from GNU and INTEL
-     - Check with: ``$ ml avail gcc`` and ``$ ml avail intel``
-- ``make`` is installed on the system
-    - :warning: It could happen that the "Makefile" contains web fetching, which will not work from Bianca.
-    - Usually it is not a problem to build on Rackham and move to Bianca.
-- ``cmake`` is available as module
-     - Check with: ``$ ml avail cmake``
-- [Guide for compiling **serial** programs](http://docs.uppmax.uu.se/cluster_guides/compiling_serial/){:target="_blank"}
-- [Guide for compiling **parallel** programs](http://docs.uppmax.uu.se/cluster_guides/compiling_parallel/){:target="_blank"}
-    - [Available **combinations** of compilers and parallel libraries](http://docs.uppmax.uu.se/cluster_guides/compiling_parallel/#mpi-using-the-openmpi-library){:target="_blank"}
-
-???- info "About CPU hardware on Bianca"
-
-    - Architecture:          **x86_64**
-        - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes
-        - Advanced Vector Extensions 2 (**AVX2**)
-    - CPU op-mode(s):        32-bit, 64-bit
-    - Byte Order:            Little Endian
-    - CPU(s):                16
-    - Thread(s) per core:    1
-    - Core(s) per socket:    8
-    - Socket(s):             2
-    - NUMA node(s):          2
-    - Model name:            Intel Core Processor (Haswell, no TSX, IBRS)
-    - CPU MHz:               2394.446
-    - For more info, type: ``lscpu`` in the terminal 
-
-
-!!! info "Own development and Git"
-
-    - [Own development and git](https://uppmax.github.io/bianca_workshop/extra/devel/)
-
-
+- Principles of packages on Bianca
+- Exercise: test yourself in R, Conda, Python/pip and Julia
+- Feedback
+- Install software
+    - From source
+    - Developing
+    - Git on Bianca
+    - Containers
 
 ## Packages and libraries to scripting programs
 
@@ -80,7 +64,9 @@
 - R has a special module called ``R_packages``, and some Machine Learning python packages are included in the ``python_ml_packages`` module.
 - If not found there you can try to install those by yourself.
 
-## Install packages or not? Check it!
+!!! info 
+
+    - "Install packages or not? Check it!"
 
 ### Python 
 
@@ -202,6 +188,58 @@ Then within R, try loading the package you want, like ``glmnet``:
 
     - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
     - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html){:target="_blank"}
+
+## Install software yourself
+
+- If not available on Bianca already (like Conda repositories) you may have to use the ``wharf`` to install your tools
+    - Alternatively let an Application Expert install the tool as a module.
+
+!!! note "Typical workflow for installation"
+
+    - **Download the source code or binary** (Linux on x86 and 64-bit) to Rackham first
+    - **Transfer** to the ``wharf``
+    - Then, either 
+        - You can install in your home directory.
+            - This is handy for personal needs and low numbers of files — i.e. not Conda.
+        - Usually better to install in project directory.
+            - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
+    - Binaries for Linux on x86 and 64-bit should be able to be run directly as it is, see the software specific installation documentation.
+    - or build from source, see next session.
+     
+
+### Build from source
+- To build from source use a **compiler module**
+- We have several compiler versions from GNU and INTEL
+     - Check with: ``$ ml avail gcc`` and ``$ ml avail intel``
+- ``make`` is installed on the system
+    - :warning: It could happen that the "Makefile" contains web fetching, which will not work from Bianca.
+    - Usually it is not a problem to build on Rackham and move to Bianca.
+- ``cmake`` is available as module
+     - Check with: ``$ ml avail cmake``
+- [Guide for compiling **serial** programs](http://docs.uppmax.uu.se/cluster_guides/compiling_serial/){:target="_blank"}
+- [Guide for compiling **parallel** programs](http://docs.uppmax.uu.se/cluster_guides/compiling_parallel/){:target="_blank"}
+    - [Available **combinations** of compilers and parallel libraries](http://docs.uppmax.uu.se/cluster_guides/compiling_parallel/#mpi-using-the-openmpi-library){:target="_blank"}
+
+???- info "About CPU hardware on Bianca"
+
+    - Architecture:          **x86_64**
+        - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes
+        - Advanced Vector Extensions 2 (**AVX2**)
+    - CPU op-mode(s):        32-bit, 64-bit
+    - Byte Order:            Little Endian
+    - CPU(s):                16
+    - Thread(s) per core:    1
+    - Core(s) per socket:    8
+    - Socket(s):             2
+    - NUMA node(s):          2
+    - Model name:            Intel Core Processor (Haswell, no TSX, IBRS)
+    - CPU MHz:               2394.446
+    - For more info, type: ``lscpu`` in the terminal 
+
+
+!!! info "Own development and Git"
+
+    - [Own development and git](https://uppmax.github.io/bianca_workshop/extra/devel/)
 
 ## Containers
 

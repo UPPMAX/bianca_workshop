@@ -26,8 +26,6 @@ nav:
     - IDEs: 
       - General: intermediate/ides.md
       - Jupyter: intermediate/jupyter.md
-      - RStudio: intermediate/rstudio.md
-      - VSCodium: intermediate/vscodium.md
     - Summary: intermediate/summary.md
     - Extra material:
       - extra/slurm.md
