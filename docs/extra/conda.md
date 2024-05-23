@@ -126,7 +126,7 @@ following channels available:
         conda create --prefix  $CONDA_ENVS_PATH/python36-env python=3.6 numpy=1.13.1 matplotlib=2.2.2
         ```
 
-    !!! info "The `mamba` alternative is not needed in newer versions of Conda!
+    !!! info "The `mamba` alternative is not needed in newer versions of Conda"!
 
     - It all worked if you get something like this:
   
