@@ -107,7 +107,10 @@ following channels available:
     - Since python or other packages are dependent on each-other expect solving the versions takes some time.
     - use an interactive session!
 
-1.  ```bash 
+
+1.  Load Conda
+
+    ```bash 
     module load conda
     ```
     
@@ -115,7 +118,7 @@ following channels available:
     - Check the text output as ``conda`` is loaded, especially the first time, see below
 
 
-2.  Create the Conda environment
+3.  Create the Conda environment
 
     - Example:
 
