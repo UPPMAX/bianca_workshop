@@ -289,7 +289,7 @@ module load python/3.9.5
 - ``sbatch anotherjobscript.sh``   submitted job with jobid2
 - ``--dependency=afterok:jobid1:jobid2 job`` will only start running after the successful end of jobs jobid1:jobid2
 - very handy for clearly defined workflows
-- You may also use -``-dependency=afternotok:jobid`` in case you’d like to resubmit a failed job, OOM for example, to a node with a higher memory: ``-C mem215GB`` or ``-C mem512GB`
+- You may also use -``-dependency=afternotok:jobid`` in case you’d like to resubmit a failed job, OOM (out of memory) for example, to a node with a higher memory: ``-C mem215GB`` or ``-C mem512GB`
 
 ### I/O intensive jobs: $SNIC_TMP
 
