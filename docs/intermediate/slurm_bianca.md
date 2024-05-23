@@ -1,9 +1,10 @@
 # Compute nodes, Slurm and debugging jobs
 !!!- info "Learning objectives"
 
-    - Explore ...
-    - Understand ...
-    - Understand ...
+    - Understand what Slurm is
+    - Learn to submit jobs to the Slurm queue
+    - Learn about the most useful Slurm options and commands
+    - Verify the CPU and memory usage of jobs
 
 ???- question "For teachers"
 
