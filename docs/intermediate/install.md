@@ -54,15 +54,90 @@
 
 ## Content
 
-- Principles of packages on Bianca
-- Exercise: test yourself in R, Conda, Python/pip and Julia
-- Feedback
-- Install software
+- Principles of software installation on Bianca
     - From source
-    - Developing
-    - Git on Bianca
+    - From binary
     - Containers
+- Principles of packages on Bianca
+- Exercise: test yourself in EITHER
+    - R
+    - Conda
+    - Python/pip
+    - Julia
+- Feedback
+- Development and Git on Bianca
 
+## Install software yourself
+
+- If not available on Bianca already (like Conda repositories) you may have to use the ``wharf`` to install your tools
+- Alternatively let an Application Expert install the tool as a module.
+
+!!! note "Typical workflow for installation"
+
+    - **Download** the 
+        - _source_ code or 
+	- _binary_ (Linux on x86 and 64-bit) to Rackham first
+    - **Transfer** to the ``wharf``
+    - Then, either 
+        - You can install in your home directory.
+            - This is handy for personal needs and low numbers of files — i.e. not Conda.
+        - Usually better to install in project directory.
+            - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
+    - Binaries for Linux on x86 and 64-bit should be able to be run directly as it is, see the software specific installation documentation.
+    - or build from source, see next session.
+     
+
+### Build from source
+- To build from source use a **compiler module**
+- We have several compiler versions from GNU and INTEL
+     - Check with: ``$ ml avail gcc`` and ``$ ml avail intel``
+- ``make`` is installed on the system
+    - :warning: It could happen that the "Makefile" contains web fetching, which will not work from Bianca.
+    - Usually it is not a problem to build on Rackham and move to Bianca.
+- ``cmake`` is available as module
+     - Check with: ``$ ml avail cmake``
+- [Guide for compiling **serial** programs](http://docs.uppmax.uu.se/cluster_guides/compiling_serial/){:target="_blank"}
+- [Guide for compiling **parallel** programs](http://docs.uppmax.uu.se/cluster_guides/compiling_parallel/){:target="_blank"}
+    - [Available **combinations** of compilers and parallel libraries](http://docs.uppmax.uu.se/cluster_guides/compiling_parallel/#mpi-using-the-openmpi-library){:target="_blank"}
+
+???- info "About CPU hardware on Bianca"
+
+    - Architecture:          **x86_64**
+        - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes
+        - Advanced Vector Extensions 2 (**AVX2**)
+    - CPU op-mode(s):        32-bit, 64-bit
+    - Byte Order:            Little Endian
+    - CPU(s):                16
+    - Thread(s) per core:    1
+    - Core(s) per socket:    8
+    - Socket(s):             2
+    - NUMA node(s):          2
+    - Model name:            Intel Core Processor (Haswell, no TSX, IBRS)
+    - CPU MHz:               2394.446
+    - For more info, type: ``lscpu`` in the terminal 
+
+
+### Containers
+
+!!! info
+   
+    - Containers let you install programs without needing to think about the computer environment, like    
+        - operative system
+        - dependencies (libraries and other programs) with correct versions
+    - 2(3) types
+        - Singularity/Apptainer
+        - Docker that does not work on HPC-systems
+            - But docker images can be used byt Singularity and Apptainer
+    - Everything is included
+    - Draw-backs
+        - you install also things that may be already installed
+        - therefore, probably more disk space is needed
+
+!!! info "More info"
+
+    - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/)
+    - [Singularity course](https://www.uppmax.uu.se/support/courses-and-workshops/singularity-workshop-announcement)
+    
 ## Packages and libraries to scripting programs
 
 - Python, R and Julia all have some **centrally installed packages** that are available from the modules. 
@@ -194,88 +269,26 @@ Then within R, try loading the package you want, like ``glmnet``:
     - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
     - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html){:target="_blank"}
 
-## Install software yourself
 
-- If not available on Bianca already (like Conda repositories) you may have to use the ``wharf`` to install your tools
-    - Alternatively let an Application Expert install the tool as a module.
+## Exercise
 
-!!! note "Typical workflow for installation"
+Pick one of the following!
 
-    - **Download the source code or binary** (Linux on x86 and 64-bit) to Rackham first
-    - **Transfer** to the ``wharf``
-    - Then, either 
-        - You can install in your home directory.
-            - This is handy for personal needs and low numbers of files — i.e. not Conda.
-        - Usually better to install in project directory.
-            - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
-    - Binaries for Linux on x86 and 64-bit should be able to be run directly as it is, see the software specific installation documentation.
-    - or build from source, see next session.
-     
+- [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
+- [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/extra/pip/){:target="_blank"}
+- [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
+- [Extra material: Installing Julia packages (a little immature)](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
+- [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/)
 
-### Build from source
-- To build from source use a **compiler module**
-- We have several compiler versions from GNU and INTEL
-     - Check with: ``$ ml avail gcc`` and ``$ ml avail intel``
-- ``make`` is installed on the system
-    - :warning: It could happen that the "Makefile" contains web fetching, which will not work from Bianca.
-    - Usually it is not a problem to build on Rackham and move to Bianca.
-- ``cmake`` is available as module
-     - Check with: ``$ ml avail cmake``
-- [Guide for compiling **serial** programs](http://docs.uppmax.uu.se/cluster_guides/compiling_serial/){:target="_blank"}
-- [Guide for compiling **parallel** programs](http://docs.uppmax.uu.se/cluster_guides/compiling_parallel/){:target="_blank"}
-    - [Available **combinations** of compilers and parallel libraries](http://docs.uppmax.uu.se/cluster_guides/compiling_parallel/#mpi-using-the-openmpi-library){:target="_blank"}
+!!! discussion
 
-???- info "About CPU hardware on Bianca"
-
-    - Architecture:          **x86_64**
-        - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes
-        - Advanced Vector Extensions 2 (**AVX2**)
-    - CPU op-mode(s):        32-bit, 64-bit
-    - Byte Order:            Little Endian
-    - CPU(s):                16
-    - Thread(s) per core:    1
-    - Core(s) per socket:    8
-    - Socket(s):             2
-    - NUMA node(s):          2
-    - Model name:            Intel Core Processor (Haswell, no TSX, IBRS)
-    - CPU MHz:               2394.446
-    - For more info, type: ``lscpu`` in the terminal 
+    Did it work out well??
 
 
 !!! info "Own development and Git"
 
     - [Own development and git](https://uppmax.github.io/bianca_workshop/extra/devel/)
-
-## Containers
-
-!!! info
-   
-    - Containers let you install programs without needing to think about the computer environment, like    
-        - operative system
-        - dependencies (libraries and other programs) with correct versions
-    - 2(3) types
-        - Singularity/Apptainer
-        - Docker that does not work on HPC-systems
-            - But docker images can be used byt Singularity and Apptainer
-    - Everything is included
-    - Draw-backs
-        - you install also things that may be already installed
-        - therefore, probably more disk space is needed
-
-!!! info "More info"
-
-    - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/)
-    - [Singularity course](https://www.uppmax.uu.se/support/courses-and-workshops/singularity-workshop-announcement)
-
-## Demo session
-
-!!! example "What do you want to type-along"
-
-    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
-    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/extra/pip/){:target="_blank"}
-    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
-    - [Extra material: Installing Julia packages (a little immature)](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
-    - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/)
+    
 
 !!! abstract "Keypoints"
     - You have got an overview of the procedures to install packages/libraries and tools on Bianca through the ``wharf``
