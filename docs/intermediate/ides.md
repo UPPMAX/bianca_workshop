@@ -107,6 +107,7 @@ It may look like below, where there is a preference for Jupyter:
     - If not done so earlier:
 
     ```console
+    $ cd ~   # just 'cd' will work as well
     $ ln -s /proj/sens2023598/ proj
     ```
      
