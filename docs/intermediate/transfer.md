@@ -41,14 +41,13 @@
       axisFormat %s
       section First hour
       Course introduction: done, course_intro, 0, 10s
-      Introduction : intro, after course_intro, 5s
-      Theory 1: theory_1, after intro, 5s
-      Exercise 1: crit, exercise_1, after theory_1, 30s
-      Feedback 1: feedback_1, after exercise_1, 10s
-      Break: milestone, after feedback_1
+      Prior : intro, after course_intro, 5s
+      Present: theory_1, after intro, 5s
+      Challenge: crit, exercise_1, after theory_1, 40s
+      Break: crit, milestone, after exercise_1
       section Second hour
-      Exercise 2: crit, exercise_2, 0, 10s
-      Feedback 2: feedback_2, after exercise_2, 10s
+      Challenge: crit, exercise_2, 0, 10s
+      Feedback: feedback_2, after exercise_2, 10s
       SLURM: done, slurm, after feedback_2, 25s
       Break: done, milestone, after slurm
     ```
@@ -163,24 +162,29 @@ Exercise 1 and 2 are the most important, as:
 ### Working form
 
 You'll be assigned to Zoom breakout rooms with at least 3 learners in total.
-The Zoom rooms will be closed automatically after the first session
-and re-opened later with same groups.
+The Zoom rooms will be closed automatically at the end
+and stay open during the break.
 
 ???- question "Why put us in groups?"
 
-    Because group work is effective for learning,
-    especially for online courses [Bigatel & Edel-Malizia, 2018][Means, 1993].
+    Because group work in general is effective for learning 
+    (see [1] for a meta-meta analysis).
+    For online courses, group work is a recommended practice
+    [Bigatel & Edel-Malizia, 2018][Means, 1993].
 
-???- question "Why disturb us after 20 minutes?"
+???- question "What if I have a question?"
 
-    I agree that it disturbs, but it is an important enough reason to do so,
-    as feedback is one of the most effective interventions for learning
-    [Bell, 2020][Hattie, 2012][Hattie, 2023].
+    Ideally, one asks the people in the breakout room. 
+    In that way, the whole room may learn.
+
+    Additionally, there is a shared document you can use, you can ask for help
+    via a Zoom function and teachers and teaching assistants will regularly 
+    go through all rooms.
 
 ???- question "Why have a break in between?"
 
     Because breaks are important for learning [Newport, 2016].
-
+    Please take that break, ideally by doing something boring [Newport, 2016]!
 
 ### Exercise 1: first understanding of how to use `rsync`
 
@@ -291,6 +295,9 @@ Here is the exercise:
 
 ???- question "What are the full references?"
 
+    - [1] See [Hattie, 2023], page 381, effect size 0.45, robustness index 4 out of 5,
+      based on 12 meta analyses, 955 studies, 91,734 learners, 1082 effects,
+      standard error of 0.07
     - [Bell, 2020] Bell, Mike. The fundamentals of teaching: A five-step model to put the research evidence into practice. Routledge, 2020.
     - [Bigatel & Edel-Malizia, 2018] Bigatel, Paula M., and Stephanie Edel-Malizia. "Using the “indicators of engaged learning online” framework to evaluate online course quality." TechTrends 62.1 (2018): 58-70.
     - [Hattie, 2012] Hattie, John. Visible learning for teachers: Maximizing impact on learning. Routledge, 2012.
