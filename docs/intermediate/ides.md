@@ -99,6 +99,23 @@ It may look like below, where there is a preference for Jupyter:
 - Get the IDE that got the most votes to run on Bianca, by following
   its documentation. If you really want to run another IDE,
   you may do so! When done, do exercise 2.
+    - For Jupyter, you can skip the _venv_ step, but please read it!
+
+???- question "If you chose Jupyter"
+
+     - If not done so earlier:
+     ```console
+     $ ln -s /proj/sens2023598/ proj
+     ```
+     
+     - Start jupyter from your $HOME folder
+     - Try to run the script `Test-01.ipynb` located in /proj/workshop/Jupyter-demo/Test-01.ipynb
+     - 
+
+     
+    You can browse in jupyter to a test notebook in /proj/workshop/Jupyter-demo/Test-01.ipynb
+
+proj -> /proj/sens2023598/
 
 ### Exercise 2: Understand IDEs on Bianca
 
