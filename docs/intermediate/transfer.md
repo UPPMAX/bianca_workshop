@@ -2,9 +2,11 @@
 
 !!!- info "Learning objectives"
 
-    - Explore the UPPMAX documentation
-    - Understand what the wharf is
-    - Understand what the Transit server allows
+	- Find information in the UPPMAX documentation
+    - Give a reasonable definition of what the wharf is
+    - Explain well enough why the wharf exists
+    - Give a reasonable definition of what the Transit server is
+    - Explain well enough what the Transit server allows one to do
     - Mount the wharf on Transit
     - Transfer files to/from Bianca using rsync
     - Transfer files to/from Bianca using FileZilla

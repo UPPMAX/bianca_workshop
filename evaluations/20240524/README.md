@@ -45,12 +45,14 @@ This may result in a measurement like this:
     - [ ] Know where to find the link to the shared document
     - [ ] Know where to find the schedule
 - [Transferring files to and from Bianca](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
-	- [ ] Explore the UPPMAX documentation
-	- [ ] Understand what the wharf is
-	- [ ] Understand what the Transit server allows
-	- [ ] Mount the wharf on Transit
-	- [ ] Transfer files to/from Bianca using rsync
-	- [ ] Transfer files to/from Bianca using FileZilla
+	- [ ] Find information in the UPPMAX documentation
+    - [ ] Give a reasonable definition of what the wharf is
+    - [ ] Explain well enough why the wharf exists
+    - [ ] Give a reasonable definition of what the Transit server is
+    - [ ] Explain well enough what the Transit server allows one to do
+    - [ ] Mount the wharf on Transit
+    - [ ] Transfer files to/from Bianca using rsync
+    - [ ] Transfer files to/from Bianca using FileZilla
 - [Slurm jobs](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
     - [ ] Understand what Slurm is
     - [ ] Understand some Slurm parameters
