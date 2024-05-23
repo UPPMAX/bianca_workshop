@@ -253,7 +253,7 @@ Then within R, try loading the package you want, like ``glmnet``:
 
 
 
-## Exercise
+## Exercise 20 min
 
 Pick one of the following!
 
@@ -265,7 +265,9 @@ Pick one of the following!
 
 !!! discussion
 
-    Did it work out well??
+    - Did it work out well?
+    - Any questions?
+    - Any input?
 
 
 !!! info "Own development and Git"
