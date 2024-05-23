@@ -25,7 +25,6 @@ nav:
     - Software and package installation: intermediate/install.md
     - IDEs: 
       - General: intermediate/ides.md
-      - Jupyter: intermediate/jupyter.md
     - Summary: intermediate/summary.md
     - Extra material:
       - extra/slurm.md
