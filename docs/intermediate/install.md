@@ -270,9 +270,9 @@ Pick one of the following!
     - Any input?
 
 
-!!! info "Own development and Git"
+## Own development and Git
 
-    - [Own development and git](https://uppmax.github.io/bianca_workshop/extra/devel/)
+- [Own development and git](https://uppmax.github.io/bianca_workshop/extra/devel/)
     
 
 !!! abstract "Keypoints"
