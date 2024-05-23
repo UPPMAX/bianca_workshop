@@ -115,56 +115,43 @@ flowchart TD
   q_and_a --> done
 ```
 
-## Learning objectives
 
-Most are copied from their respective pages:
+## Exercises
 
-- [Introduction](https://uppmax.github.io/bianca_workshop/intermediate/intro/)
-    - [ ] See an overview of topics discussed today
-    - [ ] See the link to the shared document
-    - [ ] See the schedule
-- [Transferring files to and from Bianca](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
-	- [ ] Explore the UPPMAX documentation
-	- [ ] Understand what the wharf is
-	- [ ] Understand what the Transit server allows
-	- [ ] Mount the wharf on Transit
-	- [ ] Transfer files to/from Bianca using rsync
-	- [ ] Transfer files to/from Bianca using FileZilla
-- [Slurm jobs](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
-    - [ ] Understand what Slurm is
-    - [ ] Understand some Slurm parameters
-    - [ ] Understand what sbatch is
-    - [ ] Understand what the job queue is
-    - [ ] Start jobs
-    - [ ] See job CPU and memory usage
-    - [ ] Can start an interactive job
-    - [ ] Understand how compute nodes are moved between project clusters
-    - [ ] Have used other Slurm tools
-- [Software and packages installation](https://uppmax.github.io/bianca_workshop/intermediate/install/)
-    - [ ] Understand how to install software yourself
-    - Understand how to use Packages and libraries for scripts
-        - [ ] ... using Conda
-        - [ ] ... using Python packages with pip
-        - [ ] ... using R packages
-        - [ ] ... using Julia packages
-    - [ ] Understand what containers are
-    - [ ] Understand what Singularity is
-    - [ ] Understand what Docker is
-    - [ ] Understand how to build from source
-- [IDEs on Bianca](https://uppmax.github.io/bianca_workshop/intermediate/ides/)
-    - [ ] Understand what an IDE is
-    - [ ] Have heard that RStudio, Jupyter, VSCodium are IDEs
-    - [ ] Understand that there are IDEs that can run on Bianca
-    - [ ] Have run the voted-for IDE on Bianca
-- [NAISS-SENS](https://uppmax.github.io/bianca_workshop/sens_project_short/)
-    - [ ] Understand what sensitive personal data is
-    - [ ] Understand the difference between pseudonymisation and anonymisation
-    - [ ] Know where to apply for project
+Goal of these exercises are:
 
+- You reflect on today
+- We learn from your feedback
 
-### Exercise
+This is an anonymous evaluation
+and will ideally be published in raw form at 
+[https://github.com/UPPMAX/bianca_workshop/tree/main/evaluations/20240524](https://github.com/UPPMAX/bianca_workshop/tree/main/evaluations/20240524).
+To do so, please do not share sensitive data here!
 
-Share your confidence on having learned the topics discussed today,
+This evaluation uses a shared document, 
+because its advantages outweigh the disadvantages.
+
+The drawbacks of using a shared document are:
+
+- one needs to be careful when multiple people are editing at the same time. This may result in minor data loss possible while editing
+
+The advantages that outweigh these are: 
+
+- it is already there, hence there is no new link needed
+- you already have worked with it, hence there will be no new technical problems
+- it guarantees integrity: a literal copy-paste of the data will perfectly preserve the data
+- there is no owner of this data: all learners and teachers can access, verify and upload the data
+
+### Exercise 1: what did I learn today?
+
+The goal of this exercise is for you to reflect on what you learned today:
+
+- how many things?
+- how confident are you now?
+
+To do so, the learning objectives are collected in the shared document.
+
+There, you can share your confidence on having learned the topics discussed today,
 by going thought the list on the shared document.
 
 Although it will be messy, between `[ ]`, add a number for confidence:
@@ -182,3 +169,15 @@ This may result in a measurement like this:
 
 - `[00101000111201]`: most learners have low confidence
 - `[44345454545454]`: most learners have high confidence
+
+Thanks for your time in helping us understand where we can improve
+our teaching of these topics! 
+
+### Exercise 2: evaluation
+
+The goal of this exercise is for you to reflect on the course.
+How did you enjoy the course and how would you improve it?
+
+To do so, the evaluation questions are at the bottom of the share document.
+
+Thanks for your time  in helping us improve our course as a whole!

@@ -41,9 +41,9 @@ This may result in a measurement like this:
 - `[44345454545454]`: most learners have high confidence
 
 - [Introduction](https://uppmax.github.io/bianca_workshop/intermediate/intro/)
-    - [ ] See an overview of topics discussed today
-    - [ ] See the link to the shared document
-    - [ ] See the schedule
+    - [ ] Know where to find an overview of topics discussed today
+    - [ ] Know where to find the link to the shared document
+    - [ ] Know where to find the schedule
 - [Transferring files to and from Bianca](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
 	- [ ] Explore the UPPMAX documentation
 	- [ ] Understand what the wharf is

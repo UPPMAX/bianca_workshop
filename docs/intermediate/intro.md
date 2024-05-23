@@ -2,25 +2,28 @@
 
 !!!- info "Learning objectives"
 
-    - See an overview of topics discussed today
-    - See the link to the shared document
-    - See the schedule
+    - Know where to find an overview of topics discussed today
+    - Know where to find the link to the shared document
+    - Know where to find the schedule
 
 ???- question "For teachers"
 
     Prerequisites are:
 
-    - None
+    - Link to shared document
 
     Preparations are:
 
-    - None
+    - Shared document must contain:
+        - a proper header with specifics: Zoom room, Bianca project, etc.
+        - already redirect to evaluation at bottom
+        - evaluation at the bottom
 
     Teaching goals are:
 
-    - Learners have seen an overview of topics discussed today
-    - Learners have seen the link to the shared document
-    - Learners have seen the schedule
+    - Learners know where to find an overview of topics discussed today
+    - Learners know where to find the link to the shared document
+    - Learners know where to find the schedule
 
     Lesson plan:
 
