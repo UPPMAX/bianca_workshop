@@ -32,8 +32,7 @@
       title Introduction
       dateFormat X
       axisFormat %s
-      About Richel: about_richel, 0, 5s
-      Prior: prior, after about_richel, 5s
+      Prior: prior, 0, 5s
       Introduction: after prior, 5s
     ```
 
@@ -83,7 +82,7 @@ to work on the Bianca UPPMAX cluster.
 When | Who  | What
 -----|------|-------------------------
 9:00 | R    | [Introduction](https://uppmax.github.io/bianca_workshop/intermediate/intro/)
-9:15 | R    | 45 minutes [Transferring files to and from Bianca](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
+9:10 | R    | 50 minutes Login and [transferring files to and from Bianca](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
 10:00| .    | Break
 10:15| R    | 20 minutes [Transferring files p2](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
 10:35| D    | 25 minutes [Slurm jobs p1](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
