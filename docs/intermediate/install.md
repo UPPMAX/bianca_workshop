@@ -3,12 +3,17 @@
 
 !!! info "Objectives" 
 
-    - Find out there are ways for users to install on Bianca
-    - Get overview of principles for installing packages to R, python and Julia
-    - Test installing packages
-    - Get an overview of installing software
-    - Get an overview of developing/compiling software
-    - Get an overview of the hardware on Bianca
+    - Understand _principles_ how to install software and packages yourself
+    - Understand what containers are
+    	- understand difference of Docker and Aptainer/Singularity
+    - Know by doing how to install software, packages and libraries from at least one of the following
+        - ... using Conda
+        - ... using Python packages with pip
+        - ... using R packages
+        - ... using Julia packages
+        - ... using Aptainer/Singularity
+    - Understand how to build from source
+
 
 ???- info "Notes for teachers"
 
