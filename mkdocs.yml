@@ -19,11 +19,11 @@ nav:
     - Exercises: exercises.md
   - Intermediate workshop/hackaton: 
     - Introduction: intermediate/intro.md
-    - Intro to NAISS-SENS and sensitive data: sens_project_short.md
     - Transferring files to/from Bianca: intermediate/transfer.md
     - Compute nodes and debugging jobs: intermediate/slurm_bianca.md
     - Software and package installation: intermediate/install.md
     - IDEs: intermediate/ides.md
+    - Intro to NAISS-SENS and sensitive data: sens_project_short.md
     - Summary: intermediate/summary.md
     - Extra material:
       - extra/slurm.md
