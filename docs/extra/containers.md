@@ -67,6 +67,7 @@ export APPTAINER_CACHEDIR=/proj/staff/bjornv/apptainer_cache_dir/cache
 export APPTAINER_TMPDIR=/proj/staff/bjornv/apptainer_cache_dir/tmp
 export APPTAINER_LOCALCACHEDIR=/proj/staff/bjornv/apptainer_cache_dir/localcache
 ```
+
 !!! info "More info"
 
     - [Singularity course](https://www.uppmax.uu.se/support/courses-and-workshops/singularity-workshop-announcement)
