@@ -55,10 +55,10 @@ slurm batch| project name | max runtime | partition ("job type") | #cores | job 
 - Format ``-t dd-hh:mm:ss``
 - Examples and variants on syntax
 
-  - ``0-00:10:00 = 00:10:00 = 10:00 = 10``
-  - ``0-12:00:00 = 12:00:00``
-  - ``3-00:00:00 =                    3-0``
-  - ``3-12:10:15``
+    - ``0-00:10:00 = 00:10:00 = 10:00 = 10``
+    - ``0-12:00:00 = 12:00:00``
+    - ``3-00:00:00 =                    3-0``
+    - ``3-12:10:15``
 
 ### Job walltime
 
@@ -83,11 +83,10 @@ slurm batch| project name | max runtime | partition ("job type") | #cores | job 
 ### Quick testing
 
 - The “devel” partition
-
-  - max 2 nodes per job
-  - up to 1 hour in length
-  - only 1 at a time
-  - ``-p devcore``, ``-p devel``
+    - max 2 nodes per job
+    - up to 1 hour in length
+    - only 1 at a time
+    - ``-p devcore``, ``-p devel``
  
 ???- question "Any free nodes in the devel partition? Check status with"
 
@@ -97,21 +96,21 @@ slurm batch| project name | max runtime | partition ("job type") | #cores | job 
 
 - High priority queue for short jobs
 
-  - 4 nodes
-  - up to 15 minutes
-  - ``--qos=short``
+    - 4 nodes
+    - up to 15 minutes
+    - ``--qos=short``
 
 ### Debugging or complicated workflows
 
 - Interactive jobs
 
-  - handy for debugging a code or a script by executing it line by line or for using programs with a graphical user interface
-  - ``salloc -n 80 -t 03:00:00 -A sens2023598``
-  - ``interactive -n 80 -t 03:00:00 -A sens2023598``
+    - handy for debugging a code or a script by executing it line by line or for using programs with a graphical user interface
+    - ``salloc -n 80 -t 03:00:00 -A sens2023598``
+    - ``interactive -n 80 -t 03:00:00 -A sens2023598``
 
-  - up to 12 hours
-  - useful together with the --begin=<time> flag
-  - ``salloc -A snic2022-22-50 --begin=2022-02-17T08:00:00`
+    - up to 12 hours
+    - useful together with the --begin=<time> flag
+    - ``salloc -A snic2022-22-50 --begin=2022-02-17T08:00:00`
 
     - asks for an interactive job that will start earliest tomorrow at 08:00
 
@@ -153,31 +152,31 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
 - ``-J <jobname>``
 - email:
 
-  - ``--mail-type=BEGIN,END,FAIL,TIME_LIMIT_80``
-  - ``--mail-user``
+    - ``--mail-type=BEGIN,END,FAIL,TIME_LIMIT_80``
+    - ``--mail-user``
 
-    - Don’t use. Set your email correctly in SUPR instead.
+        - Don’t use. Set your email correctly in SUPR instead.
 
 - out/err redirection:
 
-  - ``--output=slurm-%j.out`` and ``—-error=slurm-%j.err`
+    - ``--output=slurm-%j.out`` and ``—-error=slurm-%j.err`
 
-    -  by default, where %j will be replaced by the job ID
+        -  by default, where %j will be replaced by the job ID
 
-  - ``--output=my.output.file``
-  - ``--error=my.error.file``
+    - ``--output=my.output.file``
+    - ``--error=my.error.file``
 
 
 ## Monitoring jobs
 
 - ``jobinfo`` - a wrapper around ``squeue``
 
-  - lists running and pending jobs
-  - `jobinfo -u username`
-  - `jobinfo -A sens2023598`
-  - `jobinfo -u username --state=running`
-  - `jobinfo -u username --state=pending
-- One may also use the ``squeue`` command.
+    - lists running and pending jobs
+    - `jobinfo -u username`
+    - `jobinfo -A sens2023598`
+    - `jobinfo -u username --state=running`
+    - `jobinfo -u username --state=pending
+- You may also use the ``squeue`` command.
 
 - `bianca_combined_jobinfo (queued jobs of all projects)
 
@@ -185,39 +184,39 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
 
 - `scontrol`
 
-  - `scontrol show job [jobid]`
+    - `scontrol show job [jobid]`
 
 - possible to modify the job details after the job has been submitted; some options, like maximum runtime, may be modified (=shortened) even after the job started
-  - `scontrol update JobID=jobid QOS=short`
-  - `scontrol update JobID=jobid TimeLimit=1-00:00:00`
-  - `scontrol update JobID=jobid NumNodes=10`
-  - `scontrol update JobID=jobid Features=mem1TB`
+    - `scontrol update JobID=jobid QOS=short`
+    - `scontrol update JobID=jobid TimeLimit=1-00:00:00`
+    - `scontrol update JobID=jobid NumNodes=10`
+    - `scontrol update JobID=jobid Features=mem1TB`
 
 
 ### When a job goes wrong
 
 - `scancel [jobid]`
 
-  - `-u username` - to cancel all your jobs
-  - `-t [state]` - cancel _pending_ or _running_ jobs
-  - `-n name` - cancel jobs with a given name
-  - `-i` - ask for confirmation
+    - `-u username` - to cancel all your jobs
+    - `-t [state]` - cancel _pending_ or _running_ jobs
+    - `-n name` - cancel jobs with a given name
+    - `-i` - ask for confirmation
 
 
 ### Priority
 
 - Roughly:
 
-  - The first job of the day has elevated priority
-  - Other normal jobs run in the order of submission (subject to scheduling)
-  - Projects exceeding their allocation get successively into the lower priority category
-  - Bonus jobs run after the jobs in the higher priority categories
+    - The first job of the day has elevated priority
+    - Other normal jobs run in the order of submission (subject to scheduling)
+    - Projects exceeding their allocation get successively into the lower priority category
+    - Bonus jobs run after the jobs in the higher priority categories
 
 - In practice:
 
-  - submit early = run early
-  - bonus jobs always run eventually, but may need to wait until the night or weekend
-  - In detail: <http://docs.uppmax.uu.se/cluster_guides/running_jobs/jobinfo_reason/>
+    - submit early = run early
+    - bonus jobs always run eventually, but may need to wait until the night or weekend
+    - In detail: <http://docs.uppmax.uu.se/cluster_guides/running_jobs/jobinfo_reason/>
 
 
 ???+ question "Hands-on #2: sbatch/squeue/scancel/scontrol/jobinfo"
@@ -237,10 +236,10 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
 
 - `jobstats` - a tool in the fight for productivity
 
-  - it works only for jobs longer than 5-15 minutes
-  - `-r jobid` - check running jobs
-  - `A project` - check all recent jobs of a given project
-  - `p jobid` - produce a CPU and memory usage plot
+    - it works only for jobs longer than 5-15 minutes
+    - `-r jobid` - check running jobs
+    - `A project` - check all recent jobs of a given project
+    - `p jobid` - produce a CPU and memory usage plot
 
 - [Jobstats user guide](http://docs.uppmax.uu.se/software/jobstats/)
 
@@ -290,7 +289,7 @@ module load python/3.9.5
 - ``sbatch anotherjobscript.sh``   submitted job with jobid2
 - ``--dependency=afterok:jobid1:jobid2 job`` will only start running after the successful end of jobs jobid1:jobid2
 - very handy for clearly defined workflows
-- One may also use -``-dependency=afternotok:jobid`` in case you’d like to resubmit a failed job, OOM for example, to a node with a higher memory: ``-C mem215GB`` or ``-C mem512GB`
+- You may also use -``-dependency=afternotok:jobid`` in case you’d like to resubmit a failed job, OOM for example, to a node with a higher memory: ``-C mem215GB`` or ``-C mem512GB`
 
 ### I/O intensive jobs: $SNIC_TMP
 
@@ -341,9 +340,9 @@ sd > out.log
 
 - SBATCH options:
 
-  - ``#SBATCH -C gpu``
-  - ``#SBATCH --gres=gpu:1``
-  - ``#SBATCH --gpus-per-node=1``
+    - ``#SBATCH -C gpu``
+    - ``#SBATCH --gres=gpu:1``
+    - ``#SBATCH --gpus-per-node=1``
 
 - https://slurm.schedmd.com/gres.html#Running_Jobs
 
