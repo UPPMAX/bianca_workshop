@@ -60,6 +60,29 @@ to work on the Bianca UPPMAX cluster.
 
     Sure! It is at
     [the Basic Bianca course's session on using the command-line](../commandline.md).
+
+???- tip "How do I copy/paste within a ThinLinc session?" 
+
+     - Right-click and choose, or
+     - Windows:
+         - paste: `shift+insert`
+         - copy: `ctrl+insert`
+     - Mac: TB
+
+???- tip "How do I copy/paste between ThinLinc and locally?" 
+
+      ![copy-paste](../img/copy_paste.PNG)
+
+      - Like a "wharf" for clipboard
+
+      - Copy in ThinLinc by the ThinLinc command (see above) and it ends up here in the ThinLinc clipboard
+          - Mark and copy with Windows/Mac command
+          - Paste locally with Windows/Mac command
+       
+      - Copy from locally 
+          - paste in the ThinLinc clipboard with Windows/Mac command
+          - paste to ThinLinc place by the ThinLinc command (see above)
+       
     
 !!! info "Course shared document"
 
