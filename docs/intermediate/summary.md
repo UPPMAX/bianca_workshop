@@ -1,4 +1,4 @@
-# Summary
+# Summary and evaluation
 
 !!!- info "Learning objectives"
 
@@ -115,7 +115,6 @@ flowchart TD
   q_and_a --> done
 ```
 
-
 ## Exercises
 
 Goal of these exercises are:
@@ -141,6 +140,9 @@ The advantages that outweigh these are:
 - you already have worked with it, hence there will be no new technical problems
 - it guarantees integrity: a literal copy-paste of the data will perfectly preserve the data
 - there is no owner of this data: all learners and teachers can access, verify and upload the data
+
+You will work on these exercises in a shared Breakout room,
+as having teachers present gives a bias in your feedback.
 
 ### Exercise 1: what did I learn today?
 

@@ -86,7 +86,7 @@ When | Who  | What
 14:45| .    | Break
 15:00| L    | [NAISS-SENS summary](https://uppmax.github.io/bianca_workshop/sens_project_short/)
 15:30| R    | [Summary](https://uppmax.github.io/bianca_workshop/intermediate/summary/)
-15:35| R    | Evaluation
+15:35| R    | [Evaluation](https://uppmax.github.io/bianca_workshop/intermediate/summary/)
 15:45| All  | Optional Q/A and [extra material](https://uppmax.github.io/bianca_workshop/extra/slurm/)
 16:00| .    | END
 
