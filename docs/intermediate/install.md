@@ -10,7 +10,6 @@
         - ... using Conda
         - ... using Python packages with pip
         - ... using R packages
-        - ... using Julia packages
         - ... using Apptainer/Singularity
     - Understand how to build from source
 
@@ -250,6 +249,7 @@ Then within R, try loading the package you want, like ``glmnet``:
     - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
     - [UPPMAX julia user guide: Pip](http://docs.uppmax.uu.se/software/julia/){:target="_blank"}
     - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html){:target="_blank"}
+    - :warning: contact support@uppmax.uu.se for individual help!
 
 
 
@@ -260,7 +260,7 @@ Pick one of the following!
 - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
 - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/extra/pip/){:target="_blank"}
 - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
-- [Extra material: Installing Julia packages (a little immature)](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
+- [Extra material: Installing Julia packages (:warning: contact support@uppmax.uu.se instead)](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
 - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/)
 
 !!! discussion
