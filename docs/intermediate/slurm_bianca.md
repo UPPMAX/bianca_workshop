@@ -159,7 +159,7 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
 
 - out/err redirection:
 
-    - ``--output=slurm-%j.out`` and ``—-error=slurm-%j.err`
+    - ``--output=slurm-%j.out`` and ``—-error=slurm-%j.err``
 
         -  by default, where %j will be replaced by the job ID
 
@@ -175,10 +175,10 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
     - `jobinfo -u username`
     - `jobinfo -A sens2023598`
     - `jobinfo -u username --state=running`
-    - `jobinfo -u username --state=pending
+    - `jobinfo -u username --state=pending`
 - You may also use the ``squeue`` command.
 
-- `bianca_combined_jobinfo (queued jobs of all projects)
+- `bianca_combined_jobinfo` (queued jobs of all projects)
 
 ### Monitoring and modifying jobs
 
@@ -289,7 +289,7 @@ module load python/3.9.5
 - ``sbatch anotherjobscript.sh``   submitted job with jobid2
 - ``--dependency=afterok:jobid1:jobid2 job`` will only start running after the successful end of jobs jobid1:jobid2
 - very handy for clearly defined workflows
-- You may also use -``-dependency=afternotok:jobid`` in case you’d like to resubmit a failed job, OOM (out of memory) for example, to a node with a higher memory: ``-C mem215GB`` or ``-C mem512GB`
+- You may also use -``-dependency=afternotok:jobid`` in case you’d like to resubmit a failed job, OOM (out of memory) for example, to a node with a higher memory: ``-C mem215GB`` or ``-C mem512GB``
 
 ### I/O intensive jobs: $SNIC_TMP
 
