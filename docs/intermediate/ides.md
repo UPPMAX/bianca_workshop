@@ -99,7 +99,7 @@ It may look like below, where there is a preference for Jupyter:
 - Get the IDE that got the most votes to run on Bianca, by following
   its documentation. If you really want to run another IDE,
   you may do so! When done, do exercise 2.
-    - For Jupyter, you can skip the _venv_ step, but please read it!
+    - For Jupyter, you can skip the _venv_ step!
 
 ???- question "If you chose Jupyter"
 
