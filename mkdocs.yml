@@ -23,8 +23,7 @@ nav:
     - Transferring files to/from Bianca: intermediate/transfer.md
     - Compute nodes and debugging jobs: intermediate/slurm_bianca.md
     - Software and package installation: intermediate/install.md
-    - IDEs: 
-      - General: intermediate/ides.md
+    - IDEs: intermediate/ides.md
     - Summary: intermediate/summary.md
     - Extra material:
       - extra/slurm.md
