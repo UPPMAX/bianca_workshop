@@ -255,7 +255,7 @@ Then within R, try loading the package you want, like ``glmnet``:
 
 ## Exercise 20 min
 
-???- question "Pick one of the following topics!"
+???+ question "Pick one of the following topics!"
 
     - Read the introduction with a demo and use it to solve the exercise in the end
     - "Containers" contains less material but may take time to install.
