@@ -5,7 +5,7 @@
 
     - Understand _principles_ how to install software and packages yourself
     - Understand what containers are
-    	- understand difference of Docker and Aptainer/Singularity
+    	- understand difference of Docker and Apptainer/Singularity
     - Know by doing how to install software, packages and libraries from at least one of the following
         - ... using Conda
         - ... using Python packages with pip
@@ -136,7 +136,7 @@
 !!! info "More info"
 
     - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/)
-    - [Singularity course](https://www.uppmax.uu.se/support/courses-and-workshops/singularity-workshop-announcement)
+    - [Singularity course](https://www.uu.se/centrum/uppmax/utbildning/kurser-och-workshops/basic-singularity)
     
 ## Packages and libraries to scripting programs
 
@@ -203,8 +203,7 @@ Then within R, try loading the package you want, like ``glmnet``:
 !!! info "More info"
 
     - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
-    - [Conda user guide](https://www.uppmax.uu.se/support/user-guides/conda-user-guide/)
-    - [UPPMAX Python user guide: Conda](https://www.uppmax.uu.se/support/user-guides/python-user-guide/#tocjump_9332829429720808_6)
+    - [Conda user guide](http://docs.uppmax.uu.se/cluster_guides/conda/)
 
 ### Python packages with pip
 
@@ -220,7 +219,7 @@ Then within R, try loading the package you want, like ``glmnet``:
 !!! info "More info"
 
     - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/extra/pip/){:target="_blank"}
-    - [UPPMAX Python user guide: Pip](https://www.uppmax.uu.se/support/user-guides/python-user-guide/#tocjump_9332829429720808_5){:target="_blank"}
+    - [UPPMAX Python user guide: Pip](http://docs.uppmax.uu.se/software/python_install_packages/#pip){:target="_blank"}
     - [From Python course: packages](https://uppmax.github.io/R-python-julia-HPC/python/packages.html){:target="_blank"}
     - [From Python course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/python/isolated.html){:target="_blank"}
 
@@ -249,7 +248,9 @@ Then within R, try loading the package you want, like ``glmnet``:
 !!! info "More info"
 
     - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
+    - [UPPMAX julia user guide: Pip](http://docs.uppmax.uu.se/software/julia/){:target="_blank"}
     - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html){:target="_blank"}
+
 
 
 ## Exercise
