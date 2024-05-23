@@ -6,14 +6,15 @@
 
 !!! info "Objectives"
 
-    - Explore the UPPMAX documentation
-    - See that there are different IDEs on Bianca
-    - Start the favorite IDE on Bianca
-    - (optional) Understand why to use an IDE
-    - (optional) Understand why not to use an IDE on Bianca
-    - (optional) Understand when to run an IDE on a login node
-    - (optional) Understand when to use an interactive session
-    - (optional) Understand how to find out an interactive session is active
+	- Find information in the UPPMAX documentation about IDEs on Bianca
+    - Give a reasonable definition of what an IDE is
+    - Remember that RStudio, Jupyter, VSCodium are IDEs that can be run on Bianca
+    - Can run the voted-for IDE on Bianca
+    - (optional) Can give a reason why to use an IDE
+    - (optional) Can give a reason why not to use an IDE on Bianca
+    - (optional) Can give a reason why not to run an IDE on a login node
+    - (optional) Can give a reason when to use an interactive session
+    - (optional) Can find out if an interactive session is active
 
 ???- info "Notes for teachers"
 

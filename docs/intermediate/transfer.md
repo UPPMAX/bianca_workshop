@@ -2,7 +2,7 @@
 
 !!!- info "Learning objectives"
 
-	- Find information in the UPPMAX documentation
+	- [ ] Find information in the UPPMAX documentation about file transfer on Bianca
     - Give a reasonable definition of what the wharf is
     - Explain well enough why the wharf exists
     - Give a reasonable definition of what the Transit server is

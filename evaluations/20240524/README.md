@@ -45,7 +45,7 @@ This may result in a measurement like this:
     - [ ] Know where to find the link to the shared document
     - [ ] Know where to find the schedule
 - [Transferring files to and from Bianca](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
-	- [ ] Find information in the UPPMAX documentation
+	- [ ] Find information in the UPPMAX documentation about file transfer on Bianca
     - [ ] Give a reasonable definition of what the wharf is
     - [ ] Explain well enough why the wharf exists
     - [ ] Give a reasonable definition of what the Transit server is
@@ -75,10 +75,15 @@ This may result in a measurement like this:
     - [ ] Understand what Docker is
     - [ ] Understand how to build from source
 - [IDEs on Bianca](https://uppmax.github.io/bianca_workshop/intermediate/ides/)
-    - [ ] Understand what an IDE is
-    - [ ] Have heard that RStudio, Jupyter, VSCodium are IDEs
-    - [ ] Understand that there are IDEs that can run on Bianca
-    - [ ] Have run the voted-for IDE on Bianca
+	- [ ] Find information in the UPPMAX documentation about IDEs on Bianca
+    - [ ] Give a reasonable definition of what an IDE is
+    - [ ] Remember that RStudio, Jupyter, VSCodium are IDEs that can be run on Bianca
+    - [ ] Can run the voted-for IDE on Bianca
+    - [ ] Can give a reason why to use an IDE
+    - [ ] Can give a reason why not to use an IDE on Bianca
+    - [ ] Can give a reason why not to run an IDE on a login node
+    - [ ] Can give a reason when to use an interactive session
+    - [ ] Can find out if an interactive session is active
 - [NAISS-SENS](https://uppmax.github.io/bianca_workshop/sens_project_short/)
     - [ ] Understand what sensitive personal data is
     - [ ] Understand the difference between pseudonymisation and anonymisation
