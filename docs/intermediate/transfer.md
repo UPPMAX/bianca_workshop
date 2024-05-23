@@ -2,7 +2,7 @@
 
 !!!- info "Learning objectives"
 
-	- [ ] Find information in the UPPMAX documentation about file transfer on Bianca
+    - Find information in the UPPMAX documentation about file transfer on Bianca
     - Give a reasonable definition of what the wharf is
     - Explain well enough why the wharf exists
     - Give a reasonable definition of what the Transit server is
@@ -160,6 +160,28 @@ Exercise 1 and 2 are the most important, as:
 - `rsync` is the recommended tool
 - it is harder, so do it with an UPPMAX expert around!
 
+### Working form
+
+You'll be assigned to Zoom breakout rooms with at least 3 learners in total.
+The Zoom rooms will be closed automatically after the first session
+and re-opened later with same groups.
+
+???- question "Why put us in groups?"
+
+    Because group work is effective for learning,
+    especially for online courses [Bigatel & Edel-Malizia, 2018][Means, 1993].
+
+???- question "Why disturb us after 20 minutes?"
+
+    I agree that it disturbs, but it is an important enough reason to do so,
+    as feedback is one of the most effective interventions for learning
+    [Bell, 2020][Hattie, 2012][Hattie, 2023].
+
+???- question "Why have a break in between?"
+
+    Because breaks are important for learning [Newport, 2016].
+
+
 ### Exercise 1: first understanding of how to use `rsync`
 
 ???- info "Learning objectives"
@@ -266,3 +288,12 @@ Here is the exercise:
     - One needs to mount a wharf on Transit
     - rsync is the (recommended) command-line tool that can be used to transfer data
     - FileZilla is a graphical tool that can be used to transfer data
+
+???- question "What are the full references?"
+
+    - [Bell, 2020] Bell, Mike. The fundamentals of teaching: A five-step model to put the research evidence into practice. Routledge, 2020.
+    - [Bigatel & Edel-Malizia, 2018] Bigatel, Paula M., and Stephanie Edel-Malizia. "Using the “indicators of engaged learning online” framework to evaluate online course quality." TechTrends 62.1 (2018): 58-70.
+    - [Hattie, 2012] Hattie, John. Visible learning for teachers: Maximizing impact on learning. Routledge, 2012.
+    - [Hattie, 2023] Hattie, John. Visible learning: The sequel: A synthesis of over 2,100 meta-analyses relating to achievement. Routledge, 2023.
+    - [Means, 1993] Means, Barbara. "Using technology to support education reform." (1993).
+    - [Newport, 2016] Newport, Cal. Deep work: Rules for focused success in a distracted world. Hachette UK, 2016.
