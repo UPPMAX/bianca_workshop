@@ -87,12 +87,13 @@ slurm batch| project name | max runtime | partition ("job type") | #cores | job 
   - up to 1 hour in length
   - only 1 at a time
   - ``-p devcore``, ``-p devel``
+ 
 ???- question "Any free nodes in the devel partition? Check status with"
 
     - ``sinfo -p devel``
     - ``jobinfo -p devel``
-   
-- more on these tools later
+    - more on these tools later
+
 - High priority queue for short jobs
 
   - 4 nodes
@@ -100,6 +101,7 @@ slurm batch| project name | max runtime | partition ("job type") | #cores | job 
   - ``--qos=short``
 
 ### Debugging or complicated workflows
+
 - Interactive jobs
 
   - handy for debugging a code or a script by executing it line by line or for using programs with a graphical user interface
@@ -146,6 +148,7 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
 - Slurm reports the available memory in the prompt at the start of an interactive job
 
 ### More flags
+
 - ``-J <jobname>``
 - email:
 
@@ -330,6 +333,7 @@ sd > out.log
 
 
 ### GPU nodes on Bianca
+
 - Nodes with Nvidia A100 40 GB
 - All GPU nodes have at least 256 GB RAM (fat nodes) with 16 CPU cores
 - 1 or 2 GPUs per node
