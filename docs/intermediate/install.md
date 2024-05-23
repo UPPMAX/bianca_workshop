@@ -255,13 +255,15 @@ Then within R, try loading the package you want, like ``glmnet``:
 
 ## Exercise 20 min
 
-Pick one of the following!
+???- question "Pick one of the following topics!"
 
-- [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
-- [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/extra/pip/){:target="_blank"}
-- [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
-- [Extra material: Installing Julia packages (:warning: contact support@uppmax.uu.se instead)](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
-- [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/)
+    - Read the introduction with a demo and use it to solve the exercise in the end
+    - "Containers" contains less material but may take time to install.
+
+    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/){:target="_blank"}
+    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/extra/pip/){:target="_blank"}
+    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/){:target="_blank"}
+    - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/){:target="_blank"}
 
 !!! discussion
 
