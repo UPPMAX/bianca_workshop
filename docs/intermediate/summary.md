@@ -7,13 +7,10 @@
 
 ???- question "For teachers"
 
-    Prerequisites are:
+    Teacher goals are:
 
-    - None
-
-    Preparations are:
-
-    - Copy the learning objectives in the shared document
+    - Learners give feedback on how well topics were taught today
+    - Learners give feedback on the course anonymously
 
     Teaching goals are:
 
@@ -97,9 +94,25 @@ flowchart TD
     %% can_login_to_remove_desktop ---> can_create_bash_script_using_gui
     %% can_create_bash_script_using_gui --> can_schedule_jobs
 
-    %% Make sure Non-goals is below Intermediat,
+    %% Make sure Non-goals is below Intermediate,
     %% using invisible nodes
     can_use_custom_software ~~~ can_tranfer_files_using_gui
+```
+
+## Final steps
+
+```mermaid
+flowchart TD
+  learning_objectives[Fill in learning objectives\nin breakout room]
+  evaluation[Fill in evaluation\nin breakout room]
+  questions(Questions?)
+  done[Enjoy the rest of your day!\nThanks!]
+  q_and_a[Go to main room\nQ & A after evaluation]
+  learning_objectives --> evaluation
+  evaluation --> questions
+  questions --> |yes| q_and_a
+  questions --> |no| done
+  q_and_a --> done
 ```
 
 ## Learning objectives
@@ -169,8 +182,3 @@ This may result in a measurement like this:
 
 - `[00101000111201]`: most learners have low confidence
 - `[44345454545454]`: most learners have high confidence
-
-## Next steps
-
-- Evaluation
-- Optional Q/A session
