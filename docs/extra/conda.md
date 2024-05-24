@@ -8,44 +8,6 @@
     - ONLY for the interested: [Working with Conda environments defined by files](http://docs.uppmax.uu.se/cluster_guides/conda/#working-with-conda-environments-defined-by-files)
         - On bianca you have to get the `environments.yml` to wharf first!
 
-
-!!! info "Conda cheat sheet"
-
-    -   List all environments: `conda info -e` or `conda env list`
-
-    -   Create a conda environment (it is good to directly define the packages included AND channels do not need to be explicitly mentioned)
-    
-        ```conda create --prefix /some/path/to/env <package1> [<package2> ... ] ```
-       
-        - On our systems the above should replace `conda create --name myenvironment ...`
-       
-    -   Create a new environment from requirements.txt:
-   
-        - `conda create --prefix /some/path/to/env --file requirements.txt`
-
-    -   Activate a specific environment: `conda activate myenvironment`
-
-    -   List packages in present environment: `conda list`
-
-        - Also pip list will work
-
-    -   Install additional package from an active environment: 
-    
-        - `conda install somepackage`
-
-    -   Install from certain channel (conda-forge):
-       
-        - `conda install -c conda-forge somepackage`
-
-    -   Install a specific version: `conda install somepackage=1.2.3`
-
-        -   Install a specific version: `conda install somepackage=1.2.3`
-
-    -   Deactivate current environment: `conda deactivate`
-
-
-
-
 # Exercises
 
 !!! tip
@@ -66,7 +28,7 @@
 
     -   Open a new terminal and have the old one available for later comparison
 
-    -   Make sure ``python`` module is not active in the new terminal
+    -   Make sure **``python`` module** is **not active** in the new terminal
 
     -   Start conda module
 
@@ -84,7 +46,7 @@
 
     -   Use your a path for `CONDA_ENVS_PATH`
         
-        -   It may take a couple of minutes or so and do not forget to press `Y`when asked for!
+        -   It may take a couple of minutes or so and do not forget to press `y` when asked for!
 
     -   Activate!
 
