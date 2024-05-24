@@ -45,7 +45,7 @@ This may result in a measurement like this:
     - [ ] Know where to find the link to the shared document
     - [ ] Know where to find the schedule
 - [Transferring files to and from Bianca](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
-	- [ ] Find information in the UPPMAX documentation about file transfer on Bianca
+    - [ ] Find information in the UPPMAX documentation about file transfer on Bianca
     - [ ] Give a reasonable definition of what the wharf is
     - [ ] Explain well enough why the wharf exists
     - [ ] Give a reasonable definition of what the Transit server is
@@ -75,7 +75,7 @@ This may result in a measurement like this:
     - [ ] Understand what Docker is
     - [ ] Understand how to build from source
 - [IDEs on Bianca](https://uppmax.github.io/bianca_workshop/intermediate/ides/)
-	- [ ] Find information in the UPPMAX documentation about IDEs on Bianca
+    - [ ] Find information in the UPPMAX documentation about IDEs on Bianca
     - [ ] Give a reasonable definition of what an IDE is
     - [ ] Remember that RStudio, Jupyter, VSCodium are IDEs that can be run on Bianca
     - [ ] Can run the voted-for IDE on Bianca
