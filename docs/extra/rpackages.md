@@ -1,5 +1,10 @@
 # Installing R packages on Bianca
 
+???+ queastion "Read through the content below"
+
+???+ queastion "Try to do the [exercise](rpackages.md)"
+
+
 ## First check if package is already in R_packages/x.y.z
 
 
@@ -66,7 +71,7 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 
 
 
-## Example : Update dowser
+## Exercise: Update dowser
 
 [dowser on Readthedocs](https://dowser.readthedocs.io/en/latest/){:target="_blank"}
 
