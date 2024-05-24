@@ -68,7 +68,7 @@
 
     -   Make sure ``python`` module is not active in the new terminal
 
-    -   Use the ``conda`` module on Rackham and create an environment with name `bianca-course` with `python 3.7` and `numpy 1.15`
+    -   Use the ``conda`` module on Bianca and the ``conda-forge`` channel to create an environment with name `bianca-course` with `python 3.7` and `numpy 1.15`
 
     -   Use your a path for `CONDA_ENVS_PATH` of your own choice (not doing this is perfectly OK and installs in your ``$HOME`` folder), that is `/proj/sens2023531/<user>/` 
         
