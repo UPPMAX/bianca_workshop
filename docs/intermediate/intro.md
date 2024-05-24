@@ -81,8 +81,7 @@ to work on the Bianca UPPMAX cluster.
       - Copy from locally 
           - paste in the ThinLinc clipboard with Windows/Mac command
           - paste to ThinLinc place by the ThinLinc command (see above)
-       
-    
+
 !!! info "Course shared document"
 
     The course shared document can be found at: [https://hackmd.io/@UPPMAX/bianca-workshop-2024/edit](https://hackmd.io/@UPPMAX/bianca-workshop-2024/edit).

@@ -194,6 +194,8 @@ and stay open during the break.
     - Understand what the wharf is
     - Understand what the Transit server allows
 
+- As a group, agree on how to start, for example to agree
+  to first read the exercises
 - Scan the content of [the UPPMAX documentation on how to use rsync to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/)
 - Answer the following questions to yourself in your own words (answers are below).
   Be generous in accepting your own answer.
