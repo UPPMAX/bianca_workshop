@@ -2,7 +2,7 @@
 
 ???+ queastion "Read through the content below"
 
-???+ queastion "Try to do the [exercise](rpackages.md)"
+???+ queastion "Try to do the [exercise](rpackages.md#exercise-update-dowser)"
 
 
 ## First check if package is already in R_packages/x.y.z
