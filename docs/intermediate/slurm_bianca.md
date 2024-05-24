@@ -225,7 +225,7 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
     - check all your running jobs
     - what is the priority or your recently-submitted job?
     - submit a new job to run for 24h; note the job ID
-    - modify the name of the job to “wrongjob” and the maximum runtime to 7days, for example
+    - modify the name of the job to “wrongjob”
     - cancel your job with name “wrongjob”
 
 ## Determining job efficiency
