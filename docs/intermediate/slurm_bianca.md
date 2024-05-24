@@ -335,14 +335,16 @@ sd > out.log
 ### GPU nodes on Bianca
 
 - Nodes with Nvidia A100 40 GB
-- All GPU nodes have at least 256 GB RAM (fat nodes) with 16 CPU cores
-- 1 or 2 GPUs per node
-
+- All GPU nodes have at least 256 GB RAM (fat nodes) with 16 CPU cores and 2 GPUs per node
 - SBATCH options:
 
-    - ``#SBATCH -C gpu``
-    - ``#SBATCH --gres=gpu:1``
-    - ``#SBATCH --gpus-per-node=1``
+```bash
+#SBATCH -C gpu
+#SBATCH --gpus=2            #number of GPUs requested
+#SBATCH --gpus-per-node=2   #number of GPUs per node
+
+nvidia-smi
+```
 
 - https://slurm.schedmd.com/gres.html#Running_Jobs
 
@@ -392,13 +394,15 @@ srun -n 40 my-program
 env
 ```
 
-- You may use scontrol to modify some of the job arrays.
+- You may use ``scontrol`` to modify some of the job arrays.
 
 ### Snakemake and Nextflow 
 
 - Conceptually similar, but with different flavours
 - First define steps, each with an input, an output, and a command that transforms the input into output
 - Then just ask for the desired output and the system will handle the rest
+- Snakemake hackathon: https://www.naiss.se/event/online-training-snakemake-hackathon-2024-05/ (re-occuring event)
+- Nextflow training: https://training.nextflow.io/
 
 ???+ question "Hands-on #4: make it your own"
 
@@ -407,18 +411,10 @@ env
     - paste at least one of the examples in the HackMD
     - great if you could add a comment what the job script is about
 
-## Feedback on Slurm
-
-- what did you find useful?
-- not so useful?
-- what is most challenging while editing your job script / workflows?
-- something that was not covered that you’d like to know about?
-- please provide your feedback in the HackMD
-
 ## Where to go from here?
 
 - Code documentation
-- SNIC training newsletter - software-specific training events included
+- NAISS training newsletter - software-specific training events included
 - <https://coderefinery.org/workshops/upcoming/>
 - <https://nbis.se/training/events.html> (bio)
 - email <support@uppmax.uu.se> or <https://supr.naiss.se/support/>
