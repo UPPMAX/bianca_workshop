@@ -50,7 +50,7 @@
 
 !!! tip
 
-    - You may wnat to have the same path for all conda environments in the present project
+    - You may want to have the same path for all conda environments in the present project
     - ``echo "export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/" >> ~/.bashrc`` 
         - Example: ``echo "export CONDA_ENVS_PATH=/proj/sens2023598/bjornc/conda" >> ~/.bashrc``
 
@@ -92,7 +92,7 @@ following channels available:
     -   pytorch
 
 - You reach them all by loading the ``conda`` module.
-- You don't have to state the specific channel when using UPPMAX.
+- You don't have to state the specific channel when using UPPMAX, but it may be much faster if you choose, like conda-forge
 - Also, you are offline on Bianca which means that the default is `--offline`, which you can specify if you want to simulate the experience on Rackham.
 
 !!! tip
@@ -178,43 +178,10 @@ following channels available:
 
 -   [More info about Conda on UPPMAX](http://docs.uppmax.uu.se/cluster_guides/conda/)
 
-## Working with Conda environments defined by files
+## Working with Conda environments defined by files (for the interested)
 
--   Create an environment based on dependencies given in an environment
-    file:
-
-        $ conda env create --file environment.yml
-
--   Create file from present conda environment:
-
-        $ conda env export > environment.yml
-
-`environments.yml` (for conda) is a yaml-file which looks like this:
-
-```yaml
-name: my-environment
-channels:        # not needed on bianca
-- defaults
-dependencies:
-- numpy
-- matplotlib
-- pandas
-- scipy
-```
-
-`environments.yml` with versions:
-
-``` yaml
-name: my-environment
-channels:            #not needed on bianca
-- defaults
-dependencies:
-- python=3.7
-- numpy=1.18.1
-- matplotlib=3.1.3
-- pandas=1.1.2
-- scipy=1.6.2
-```
+- See our [documentation](http://docs.uppmax.uu.se/cluster_guides/conda/#working-with-conda-environments-defined-by-files)
+- On bianca you have to get the `environments.yml` to wharf first!
 
 !!! admonition "More on dependencies"
 
@@ -229,11 +196,11 @@ dependencies:
 
     -   Open a new terminal and have the old one available for later comparison
 
-    -   Unload ``python`` module
+    -   Make sure ``python`` module is not active in the new terminal
 
     -   Use the ``conda`` module on Rackham and create an environment with name `bianca-course` with `python 3.7` and `numpy 1.15`
 
-    -   Use your a path for `CONDA_ENVS_PATH` of your own choice (not doing this is perfectly OK and isnatalls in your ``$HOME`` folder) or `/proj/sens2023531/<user>/` 
+    -   Use your a path for `CONDA_ENVS_PATH` of your own choice (not doing this is perfectly OK and installs in your ``$HOME`` folder), that is `/proj/sens2023531/<user>/` 
         
         -   (It may take a minute or so)
 
@@ -260,19 +227,21 @@ dependencies:
     $ conda deactivate
     ```
 
+    - It should show numpy=1.15 among others and the python version 3.7.X
+
 
 
 
 
 !!! abstract "keypoints"
     
-    -   Conda is an installer of packages but also bigger toolkits
+    - Conda is an installer of packages but also bigger toolkits
 
     - Conda on Bianca is easy since the repos in the most used channels are local.
 
-    -   Conda creates isolated environments not clashing with other installations of python and other versions of packages
+    -  Conda creates isolated environments not clashing with other installations of python and other versions of packages
 
     -   Conda environment requires that you install all packages needed by yourself, although automatically.
     
-    -   That is, you cannot load the python module and use the packages therein inside your Conda environment.
+    -   That is, you _cannot_ load the python module and use the packages therein inside your Conda environment.
 
