@@ -68,11 +68,23 @@
 
     -   Make sure ``python`` module is not active in the new terminal
 
+    -   Start conda module
+
+    -  Make sure you have a folder in the project directory (`$USER` will automatically fill in you username. Handy!!)
+
+    - ``mkdir /proj/sens2023598/$USER``
+
+    - ``mkdir /proj/sens2023598/$USER/conda``
+    
+    - Set a CONDA_ENVS_PATH
+        - Example: ``echo "export CONDA_ENVS_PATH=/proj/sens2023598/$USER/conda" >> ~/.bashrc``
+
+
     -   Use the ``conda`` module on Bianca and the ``conda-forge`` channel to create an environment with name `bianca-course` with `python 3.7` and `numpy 1.15`
 
-    -   Use your a path for `CONDA_ENVS_PATH` of your own choice (not doing this is perfectly OK and installs in your ``$HOME`` folder), that is `/proj/sens2023531/<user>/` 
+    -   Use your a path for `CONDA_ENVS_PATH`
         
-        -   (It may take a minute or so)
+        -   It may take a couple of minutes or so and do not forget to press `Y`when asked for!
 
     -   Activate!
 
@@ -90,14 +102,14 @@
     ``` sh
     $ module load conda
     ($ export CONDA_ENVS_PATH=/proj/sens2023598/$USER)
-    $ conda create --name HPC-python23 python=3.7 numpy=1.15
-    $ source activate HPC-python23
+    $ conda create -c conda-forge --name --prefix $CONDA_ENVS_PATH/bianca-course python=3.7 numpy=1.15
+    $ source activate bianca-course
     $ pip list
     $ python -V
     $ conda deactivate
     ```
 
-    - It should show numpy=1.15 among others and the python version 3.7.X
+    - It should show numpy=1.15 among others and the python version 3.7.X for the conda env
 
 
 
