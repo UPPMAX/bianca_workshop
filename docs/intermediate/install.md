@@ -265,6 +265,8 @@ Then within R, try loading the package you want, like ``glmnet``:
     - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/){:target="_blank"}
     - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/){:target="_blank"}
 
+    - One breakout room per topic: Help each-other!
+
 !!! discussion
 
     - Did it work out well?

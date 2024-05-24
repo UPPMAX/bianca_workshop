@@ -1,5 +1,9 @@
 # Install with pip to Bianca
 
+???+ question "Read through the content below"
+
+???+ question "Try to follow the steps with the package ``numpy==1.22.3`` for ``python/3.11.8`` "
+
 ## Check for packages 
    
 - from the Python shell with the ``import`` command
