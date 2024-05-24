@@ -1,6 +1,6 @@
 # Conda on Bianca
 
-???+ queastion "Read [Conda user guide](http://docs.uppmax.uu.se/cluster_guides/conda/)"
+???+ question "Read [Conda user guide](http://docs.uppmax.uu.se/cluster_guides/conda/)"
 
     - Read [Conda user guide](http://docs.uppmax.uu.se/cluster_guides/conda/)
         - skip [Working with Conda environments defined by files](http://docs.uppmax.uu.se/cluster_guides/conda/#working-with-conda-environments-defined-by-files)
