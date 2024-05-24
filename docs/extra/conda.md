@@ -102,7 +102,7 @@
     ``` sh
     $ module load conda
     ($ export CONDA_ENVS_PATH=/proj/sens2023598/$USER)
-    $ conda create -c conda-forge --name --prefix $CONDA_ENVS_PATH/bianca-course python=3.7 numpy=1.15
+    $ conda create -c conda-forge --prefix $CONDA_ENVS_PATH/bianca-course python=3.7 numpy=1.15
     $ source activate bianca-course
     $ pip list
     $ python -V
