@@ -401,7 +401,7 @@ env
 - Conceptually similar, but with different flavours
 - First define steps, each with an input, an output, and a command that transforms the input into output
 - Then just ask for the desired output and the system will handle the rest
-- Snakemake hackathon: https://www.naiss.se/event/online-training-snakemake-hackathon-2024-05/ (re-occuring event)
+- Snakemake hackathon: https://www.naiss.se/event/online-training-snakemake-hackathon-2024-05/ (re-occurring event)
 - Nextflow training: https://training.nextflow.io/
 
 ???+ question "Hands-on #4: make it your own"
