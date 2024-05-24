@@ -19,7 +19,7 @@
     
 !!! info "Lesson material in PDF"
    
-    - [PDF material](https://github.com/UPPMAX/bianca_workshop/blob/main/docs/presentations/Bianca-Slurm-2023-12-Diana.pdf)
+    - [PDF material](https://github.com/UPPMAX/bianca_workshop/blob/main/docs/presentations/Bianca-Slurm-2024-05-Diana.pdf)
 
 !!! info "See also"
 
