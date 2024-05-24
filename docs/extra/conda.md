@@ -1,13 +1,13 @@
 # Conda on Bianca
 
-!!! info "Objectives"
-    - This is a brief description of the necessary steps to use the local Conda repository at UPPMAX, and install things for yourself or your project using Conda. 
+???+ queastion "Read [Conda user guide](http://docs.uppmax.uu.se/cluster_guides/conda/)"
 
-!!! info "Hint"
+    - Read [Conda user guide](http://docs.uppmax.uu.se/cluster_guides/conda/)
+        - skip [Working with Conda environments defined by files](http://docs.uppmax.uu.se/cluster_guides/conda/#working-with-conda-environments-defined-by-files)
+    
+    - ONLY for the interested: [Working with Conda environments defined by files](http://docs.uppmax.uu.se/cluster_guides/conda/#working-with-conda-environments-defined-by-files)
+        - On bianca you have to get the `environments.yml` to wharf first!
 
-    - On Bianca, Conda is the first choice when installing packages, because there is a local mirror of most of the Conda repositories.
-
-## Using Conda
 
 !!! info "Conda cheat sheet"
 
@@ -44,9 +44,9 @@
     -   Deactivate current environment: `conda deactivate`
 
 
-## Your conda settings on Bianca
 
-- ```export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/```
+
+# Exercises
 
 !!! tip
 
@@ -58,136 +58,6 @@
 
     - It seems you are required to use this path, ending with the name of your environment, together with ``--prefix`` when you install new envronments AND packages also after activating the conda environment!
     Like: ``conda install --prefix $CONDA_ENVS_PATH/<your-environment> ...``
-
-!!! tip
-
-    -   REMEMBER TO `conda clean -a` once in a while to remove unused and unnecessary files
-
-??? info "By choice"
-
-    - Run `source conda_init.sh` to initialise your shell (bash) to be able to run `conda activate` and `conda deactivate` etcetera instead of `source activate`. It will modify (append) your `.bashrc` file.
-
-    -   When conda is loaded you will by default be in the ``base`` environment, which works in the same way as other Conda environments. It is a “best practice” to avoid installing additional packages into your base software environment unless it is very general packages
-
-## Installing using Conda
-
-We have mirrored all major Conda repositories directly on UPPMAX, on
-both Rackham and Bianca. These are updated every third day. We have the
-following channels available:
-
-!!! info "Conda Channels"
-
-    -   bioconda
-    -   biocore
-    -   conda-forge
-    -   dranew
-    -   free
-    -   main
-    -   pro
-    -   qiime2
-    -   r
-    -   r2018.11
-    -   scilifelab-lts
-    -   nvidia
-    -   pytorch
-
-- You reach them all by loading the ``conda`` module.
-- You don't have to state the specific channel when using UPPMAX, but it may be much faster if you choose, like conda-forge
-- Also, you are offline on Bianca which means that the default is `--offline`, which you can specify if you want to simulate the experience on Rackham.
-
-!!! tip
-
-    - If you need a channel that isn't in our repository, we can easily add it. Just send us a message and we will do it.
-
-
-## Make a new conda environment
-
-!!! tip
-
-    - Since python or other packages are dependent on each-other expect solving the versions takes some time.
-    - use an interactive session!
-
-
-1.  Load Conda
-
-    ```bash 
-    module load conda
-    ```
-    
-    - This grants you access to the latest version of Conda and all major repositories on all UPPMAX systems.
-    - Check the text output as ``conda`` is loaded, especially the first time, see below
-
-
-3.  Create the Conda environment
-
-    - Example:
-
-        ```bash
-        conda create --prefix  $CONDA_ENVS_PATH/python36-env python=3.6 numpy=1.13.1 matplotlib=2.2.2
-        ```
-
-    !!! info "The `mamba` alternative is not needed in newer versions of Conda"!
-
-    - It all worked if you get something like this:
-  
-        ```bash
-        # To activate this environment, use
-        #
-        #     $ conda activate python36-env 
-        #
-        # To deactivate an active environment, use
-        #
-        #     $ conda deactivate
-        ```
-
-    
-4.  Activate the conda environment by `source activate` if you have not enabled ``conda activate``, see above:
-
-    ```bash 
-    source activate python36-env
-    ```
-
-    - You will see that your prompt is changing to start with `(python-36-env)` to show that you are within an environment.
-
-    - You can also see the installed packages by:
-  
-    ```bash
-    conda list
-    pip list
-    ```
-    - you can also add more packages within the environment by exact version (use `=`) or latest (?) compatible version:
-    ```bash
-    conda install --prefix   $CONDA_ENVS_PATH/python36-env pandas
-    ```
-    - that may have given you ``pandas=1.1.5`` which would be the newest version compatible with ``python3.6`` and ``numpy=1.13.1``
-
-5.  Now do your work!
-
-6.  Deactivate with ``conda deactivate`` (this will work in any case!)
-
-    ```bash
-    (python-36-env) $ conda deactivate
-    ```
-
-!!! warning
-
-    -   Conda is known to create **many** *small* files. Your diskspace is not only limited in GB:s, but also in number of files (typically `300000` in ``$home``).
-    -   Check your disk usage and quota limit with `uquota`
-    -   Do a `conda clean -a` once in a while to remove unused and unnecessary files
-
-
--   [More info about Conda on UPPMAX](http://docs.uppmax.uu.se/cluster_guides/conda/)
-
-## Working with Conda environments defined by files (for the interested)
-
-- See our [documentation](http://docs.uppmax.uu.se/cluster_guides/conda/#working-with-conda-environments-defined-by-files)
-- On bianca you have to get the `environments.yml` to wharf first!
-
-!!! admonition "More on dependencies"
-
-    - Dependency management from course [Python for Scientific computing](https://aaltoscicomp.github.io/python-for-scicomp/dependencies/)
-
-# Exercises
 
 
 ???+ question "Create a conda environment and install some packages"
