@@ -1,6 +1,6 @@
 #!/bin/env Rscript
 n_learners_in_time <- readr::read_csv(
-  "learners_in_time.csv"
+  "n_learners_in_time.csv"
   )
 
 ggplot2::ggplot(
