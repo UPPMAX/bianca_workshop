@@ -1,3 +1,3 @@
 # Reflections
 
-- [Richel](20240525_richel.md)
+- [Richel](20240524_richel.md)
