@@ -2,7 +2,7 @@
 
 # General info
 course_name <- "Bianca Intermediate"
-course_date <- "2024-05-25"
+course_date <- "2024-05-24"
 course_date_str <- stringr::str_replace_all(course_date, "-", "")
 
 n_learners_in_time_wide <- readr::read_csv(
