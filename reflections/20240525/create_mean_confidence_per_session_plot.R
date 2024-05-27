@@ -38,4 +38,4 @@ ggplot2::ggplot(
   ggplot2::scale_y_continuous(limits = c(0, 5)) +
   ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust=1))
 
-ggplot2::ggsave("mean_confidence_per_session.png", height = 7)
+ggplot2::ggsave("20240524_mean_confidence_per_session.png", height = 7)
