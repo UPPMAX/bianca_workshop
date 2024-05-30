@@ -8,7 +8,8 @@
     - Give a reasonable definition of what the Transit server is
     - Explain well enough what the Transit server allows one to do
     - Mount the wharf on Transit
-    - Transfer files to/from Bianca using rsync
+    - Transfer files to/from Bianca using `rsync`
+    - Transfer files to/from Bianca using `sftp`
     - Transfer files to/from Bianca using FileZilla
 
 ???- question "For teachers"
@@ -28,7 +29,8 @@
     - Learners understand that the Transit server serves
       like a bridge between locations
     - Learners have mounted the wharf on Transit
-    - Learners have transferred files to/from Bianca using rsync
+    - Learners have transferred files to/from Bianca using `rsync`
+    - Learners have transferred files to/from Bianca using `sftp`
     - Learners have transferred files to/from Bianca using FileZilla
 
 
@@ -266,7 +268,25 @@ Here is the exercise:
   This helps us assess the optimal length of this session
 - Move to the next optional exercises
 
-### (optional) Exercise 3: using FileZilla
+### (optional) Exercise 3: using sftp
+
+???- info "Learning objectives"
+
+    - Explore the UPPMAX documentation
+    - Transfer files to/from Bianca using `sftp`
+
+- Scan the content of [the UPPMAX documentation on how to use sftp to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_sftp/)
+- Follow the step-by-step guide of
+  [the UPPMAX documentation on how to use sftp to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_sftp/).
+  There are 2 transfers described (upload versus download),
+  do both
+- Signal in Zoom that you have nothing left to do using the No (a red cross) Reaction.
+  (Zoom Reactions are in the lower menu bar of your Zoom session).
+  From now on, you may be asked to help other learners
+  and its helps us assess the optimal length of this session
+- Read the material for the next session. Well done!
+
+### (optional) Exercise 4: using FileZilla
 
 ???- info "Learning objectives"
 
