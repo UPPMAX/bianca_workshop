@@ -1,0 +1,1808 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../slurm_bianca/">
+      
+      
+        <link rel="next" href="../ides/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Software and package installation - Bianca workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#software-and-package-installation-on-bianca" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Bianca workshop" class="md-header__button md-logo" aria-label="Bianca workshop" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bianca workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Software and package installation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/UPPMAX/bianca_workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../practicalities/" class="md-tabs__link">
+        
+  
+    
+  
+  Practicalities
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../intro/" class="md-tabs__link">
+          
+  
+  Bianca intro (beginner)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../intro/" class="md-tabs__link">
+          
+  
+  Intermediate workshop/hackaton
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Bianca workshop" class="md-nav__button md-logo" aria-label="Bianca workshop" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    Bianca workshop
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/UPPMAX/bianca_workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicalities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practicalities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Bianca intro (beginner)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Bianca intro (beginner)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../login_bianca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging in to Bianca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commandline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command-line intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module system
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transfer_basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transferring files to/from Bianca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../file_transfer_using_gui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transferring files to/from Bianca using a GUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slurm_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to compute nodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sens_project_short/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to NAISS-SENS and sensitive data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../summary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Summary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercises/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercises
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Intermediate workshop/hackaton
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Intermediate workshop/hackaton
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transfer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transferring files to/from Bianca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slurm_bianca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compute nodes and debugging jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Software and package installation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Software and package installation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-module-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      The module system
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-software-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install software yourself
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install software yourself">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-from-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build from source
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packages-and-libraries-to-scripting-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packages and libraries to scripting programs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-and-install-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check and install packages!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Check and install packages!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span class="md-ellipsis">
+      R
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-and-other" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python and other
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-packages-with-pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python packages with pip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#julia-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Julia packages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-20-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 20 min
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#own-development-and-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Own development and Git
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDEs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sens_project_short/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to NAISS-SENS and sensitive data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../summary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Summary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Extra material
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Extra material
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/slurm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    More about Slurm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/conda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conda on Bianca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/pip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install with pip to Bianca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/rpackages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing R packages on Bianca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/julia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Julia packages on Bianca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Containers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/devel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Own development and Git on Bianca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-module-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      The module system
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-software-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install software yourself
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install software yourself">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-from-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build from source
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packages-and-libraries-to-scripting-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packages and libraries to scripting programs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-and-install-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check and install packages!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Check and install packages!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span class="md-ellipsis">
+      R
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-and-other" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python and other
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-packages-with-pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python packages with pip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#julia-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Julia packages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-20-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 20 min
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#own-development-and-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Own development and Git
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="software-and-package-installation-on-bianca">Software and package installation on Bianca<a class="headerlink" href="#software-and-package-installation-on-bianca" title="Anchor link to this section for reference">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Objectives</p>
+<ul>
+<li>Understand <em>principles</em> how to install software and packages yourself</li>
+<li>Understand what containers are<ul>
+<li>understand difference of Docker and Apptainer/Singularity</li>
+</ul>
+</li>
+<li>Know by doing how to install software, packages and libraries from at least one of the following<ul>
+<li>... using Conda</li>
+<li>... using Python packages with pip</li>
+<li>... using R packages</li>
+<li>... using Apptainer/Singularity</li>
+</ul>
+</li>
+<li>Understand how to build from source</li>
+</ul>
+</div>
+<details class="- info">
+<summary>Notes for teachers</summary>
+<p>Teaching goals:</p>
+<ul>
+<li>The learners have explored the UPPMAX documentation</li>
+<li>The learners have installed a package (R, python or julia)</li>
+<li>The learners understand how to install own software</li>
+</ul>
+<p>Lesson plan:</p>
+<pre class="mermaid"><code>gantt
+  title IDEs
+  dateFormat X
+  axisFormat %m
+  Introduction: intro, 0, 10m
+  Vote on wih IDE: vote, after intro, 5m
+  Exercise with personal favorite package: crit, exercise, after vote, 20m
+  Feedback: feedback, after exercise, 10m
+  Installing software and developing: monologue, after feedback, 5m
+  Break: milestone, after monologue</code></pre>
+</details>
+<h2 id="the-module-system">The module system<a class="headerlink" href="#the-module-system" title="Anchor link to this section for reference">&para;</a></h2>
+<details class="- tip">
+<summary>Forgot how to use the module system?</summary>
+<p>See <a href="../../modules1/">the basic Bianca course page 'Using the module system'</a>.</p>
+</details>
+<ul>
+<li>There is a <strong>lot of programs and tools installed as modules</strong> on Bianca.</li>
+<li>These have typically been <strong>installed on Rackham</strong> and is <strong>synced over to Bianca a couple of times per day</strong>.</li>
+<li><strong>You can request installations</strong> but that may take <strong>several days or weeks</strong> to be handled by the application experts at UPPMAX.</li>
+<li>But you may be able to do <strong>installations yourself</strong>. Here the use of Rackham comes handy because of the:<ul>
+<li>internet connection</li>
+<li>the computer architecture is somewhat similar such that precompiled binaries or compiled programs (x86_64) on Rackham will most often work also on Bianca.</li>
+<li>you can use the <strong><code>wharf</code> to transfer installation files and packages to Bianca from Rackham</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="content">Content<a class="headerlink" href="#content" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>Principles of software installation on Bianca<ul>
+<li>From source</li>
+<li>From binary</li>
+<li>Containers</li>
+</ul>
+</li>
+<li>Principles of packages on Bianca</li>
+<li>Exercise: test yourself in EITHER<ul>
+<li>R</li>
+<li>Conda</li>
+<li>Python/pip</li>
+<li>Julia</li>
+</ul>
+</li>
+<li>Feedback</li>
+<li>Development and Git on Bianca</li>
+</ul>
+<h2 id="install-software-yourself">Install software yourself<a class="headerlink" href="#install-software-yourself" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>If not available on Bianca already (like Conda repositories) you may have to use the <code>wharf</code> to install your tools</li>
+<li>Alternatively let an Application Expert install the tool as a module.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Typical workflow for installation</p>
+<ul>
+<li><strong>Download</strong> the <ul>
+<li><em>source</em> code or </li>
+</ul>
+</li>
+<li><em>binary</em> (Linux on x86 and 64-bit) to Rackham first</li>
+<li><strong>Transfer</strong> to the <code>wharf</code></li>
+<li>Then, either <ul>
+<li>You can install in your home directory.<ul>
+<li>This is handy for personal needs and low numbers of files — i.e. not Conda.</li>
+</ul>
+</li>
+<li>Usually better to install in project directory.<ul>
+<li>This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Binaries for Linux on x86 and 64-bit should be able to be run directly as it is, see the software specific installation documentation.</li>
+<li>or build from source, see next session.</li>
+</ul>
+</div>
+<h3 id="build-from-source">Build from source<a class="headerlink" href="#build-from-source" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>To build from source use a <strong>compiler module</strong></li>
+<li>We have several compiler versions from GNU and INTEL<ul>
+<li>Check with: <code>$ ml avail gcc</code> and <code>$ ml avail intel</code></li>
+</ul>
+</li>
+<li><code>make</code> is installed on the system<ul>
+<li><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> It could happen that the "Makefile" contains web fetching, which will not work from Bianca.</li>
+<li>Usually it is not a problem to build on Rackham and move to Bianca.</li>
+</ul>
+</li>
+<li><code>cmake</code> is available as module<ul>
+<li>Check with: <code>$ ml avail cmake</code></li>
+</ul>
+</li>
+<li><a href="http://docs.uppmax.uu.se/cluster_guides/compiling_serial/" target="_blank">Guide for compiling <strong>serial</strong> programs</a></li>
+<li><a href="http://docs.uppmax.uu.se/cluster_guides/compiling_parallel/" target="_blank">Guide for compiling <strong>parallel</strong> programs</a><ul>
+<li><a href="http://docs.uppmax.uu.se/cluster_guides/compiling_parallel/#mpi-using-the-openmpi-library" target="_blank">Available <strong>combinations</strong> of compilers and parallel libraries</a></li>
+</ul>
+</li>
+</ul>
+<details class="- info">
+<summary>About CPU hardware on Bianca</summary>
+<ul>
+<li>Architecture:          <strong>x86_64</strong><ul>
+<li>Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes</li>
+<li>Advanced Vector Extensions 2 (<strong>AVX2</strong>)</li>
+</ul>
+</li>
+<li>CPU op-mode(s):        32-bit, 64-bit</li>
+<li>Byte Order:            Little Endian</li>
+<li>CPU(s):                16</li>
+<li>Thread(s) per core:    1</li>
+<li>Core(s) per socket:    8</li>
+<li>Socket(s):             2</li>
+<li>NUMA node(s):          2</li>
+<li>Model name:            Intel Core Processor (Haswell, no TSX, IBRS)</li>
+<li>CPU MHz:               2394.446</li>
+<li>For more info, type: <code>lscpu</code> in the terminal </li>
+</ul>
+</details>
+<h3 id="containers">Containers<a class="headerlink" href="#containers" title="Anchor link to this section for reference">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Containers let you install programs without needing to think about the computer environment, like    <ul>
+<li>operative system</li>
+<li>dependencies (libraries and other programs) with correct versions</li>
+</ul>
+</li>
+<li>2(3) types<ul>
+<li>Singularity/Apptainer</li>
+<li>Docker that does not work on HPC-systems<ul>
+<li>But docker images can be used byt Singularity and Apptainer</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Everything is included</li>
+<li>Draw-backs<ul>
+<li>you install also things that may be already installed</li>
+<li>therefore, probably more disk space is needed</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">More info</p>
+<ul>
+<li><a href="https://uppmax.github.io/bianca_workshop/extra/containers/">Extra material: Containers</a></li>
+<li><a href="https://www.uu.se/centrum/uppmax/utbildning/kurser-och-workshops/basic-singularity">Singularity course</a></li>
+</ul>
+</div>
+<h2 id="packages-and-libraries-to-scripting-programs">Packages and libraries to scripting programs<a class="headerlink" href="#packages-and-libraries-to-scripting-programs" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>Python, R and Julia all have some <strong>centrally installed packages</strong> that are available from the modules. </li>
+<li>R has a special module called <code>R_packages</code>, and some Machine Learning python packages are included in the <code>python_ml_packages</code> module.</li>
+<li>If not found there you can try to install those by yourself.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>"Install packages or not? Check it!"</li>
+</ul>
+</div>
+<h2 id="check-and-install-packages">Check and install packages!<a class="headerlink" href="#check-and-install-packages" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="r">R<a class="headerlink" href="#r" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>On UPPMAX the module <code>R_packages</code> is an omnibus package library containing almost all packages in the CRAN and BioConductor repositories. </li>
+<li>As of 2023-05-31, there were a total of 23100 R packages installed in <code>R_packages/4.2.1</code>.<ul>
+<li>A total of 23109 packages were available in CRAN and BioConductor, and 23000 of these were installed in <code>R_packages/4.2.1</code></li>
+<li>The additional 100 R packages available in this module were installed from the CRAN/BioConductor archives, or were hosted on github, gitlab or elsewhere.</li>
+</ul>
+</li>
+</ul>
+<p>Chances are good the R packages you need are already available once you load this module.  You can quickly check by loading it:</p>
+<p><code>$ ml R_packages/4.2.1</code></p>
+<p>Then within R, try loading the package you want, like <code>glmnet</code>:</p>
+<p><code>library(glmnet)</code></p>
+<p><strong>Is it not there? Then proceed!</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Installation principle</p>
+<ul>
+<li>install on Rackham</li>
+<li>sync to <code>wharf</code></li>
+<li>move the files on Bianca</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">More info</p>
+<ul>
+<li><a href="https://uppmax.github.io/bianca_workshop/extra/rpackages/">Extra material: Installing R packages</a></li>
+<li><a href="https://uppmax.github.io/R-python-julia-HPC/r/packagesR.html" target="_blank">From R course: packages</a></li>
+<li><a href="https://uppmax.github.io/R-python-julia-HPC/R/isolatedR.html" target="_blank">From R course: isolated environments</a></li>
+</ul>
+</div>
+<h3 id="python-and-other">Python and other<a class="headerlink" href="#python-and-other" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li><strong>Check</strong> python versions: <code>ml avail python</code></li>
+<li>Check the <strong>help</strong> output from: <code>ml help python/3.9.5</code> at UPPMAX</li>
+<li><strong>Load</strong> a python version, like: <code>ml python/3.10.8</code></li>
+<li>from the <strong>Python shell</strong> with the <code>import</code> command</li>
+<li>from <strong>BASH shell</strong> with the <code>pip list</code> command </li>
+</ul>
+<p><strong>Is it not there? Then proceed!</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Tip Python packages</p>
+<ul>
+<li>Try Conda first directly on Bianca. We have mirrored all <em>major</em> Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.</li>
+<li>If you want to keep number of files down, use PyPI (pip), but then you need to use Rackham and the <code>wharf</code>.</li>
+</ul>
+</div>
+<h3 id="conda">Conda<a class="headerlink" href="#conda" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>We have mirrored all major Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">More info</p>
+<ul>
+<li><a href="https://uppmax.github.io/bianca_workshop/extra/conda/">Extra material: Installing Conda packages</a></li>
+<li><a href="http://docs.uppmax.uu.se/cluster_guides/conda/">Conda user guide</a></li>
+</ul>
+</div>
+<h3 id="python-packages-with-pip">Python packages with pip<a class="headerlink" href="#python-packages-with-pip" title="Anchor link to this section for reference">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Installation principle</p>
+<ul>
+<li>install on Rackham<ul>
+<li><code>pip install --user &lt;package&gt;</code></li>
+<li><code>python setup.py install --user or --prefix=&lt;path&gt;</code></li>
+</ul>
+</li>
+<li>sync to <code>wharf</code></li>
+<li>move the files on Bianca to correct place</li>
+<li>you may have to update <code>$PYTHONPATH</code></li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">More info</p>
+<ul>
+<li><a href="https://uppmax.github.io/bianca_workshop/extra/pip/" target="_blank">Extra material: Installing pip packages</a></li>
+<li><a href="http://docs.uppmax.uu.se/software/python_install_packages/#pip" target="_blank">UPPMAX Python user guide: Pip</a></li>
+<li><a href="https://uppmax.github.io/R-python-julia-HPC/python/packages.html" target="_blank">From Python course: packages</a></li>
+<li><a href="https://uppmax.github.io/R-python-julia-HPC/python/isolated.html" target="_blank">From Python course: isolated environments</a></li>
+</ul>
+</div>
+<h3 id="julia-packages">Julia packages<a class="headerlink" href="#julia-packages" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>At UPPMAX there is a central library with installed packages.</li>
+<li>This is good, especially when working on Bianca, since you then do not need to install via the <code>wharf</code>.</li>
+<li>A selection of the Julia packages and libraries installed on UPPMAX are:<div class="highlight"><pre><span></span><code>CSV
+CUDA
+MPI
+Distributed
+IJulia
+Plots
+PyPlot
+DataFrames
+</code></pre></div>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Installation principle</p>
+<ul>
+<li>install on Rackham</li>
+<li>sync to <code>wharf</code></li>
+<li>move the files on Bianca</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">More info</p>
+<ul>
+<li><a href="https://uppmax.github.io/bianca_workshop/extra/julia/" target="_blank">Extra material: Installing Julia packages</a></li>
+<li><a href="http://docs.uppmax.uu.se/software/julia/" target="_blank">UPPMAX julia user guide: Pip</a></li>
+<li><a href="https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html" target="_blank">Julia course: isolated environments</a></li>
+<li><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> contact support@uppmax.uu.se for individual help!</li>
+</ul>
+</div>
+<h2 id="exercise-20-min">Exercise 20 min<a class="headerlink" href="#exercise-20-min" title="Anchor link to this section for reference">&para;</a></h2>
+<details class="question" open="open">
+<summary>Pick one of the following topics!</summary>
+<ul>
+<li>Read the introduction with a demo and use it to solve the exercise in the end</li>
+<li>
+<p>"Containers" contains less material but may take time to install.</p>
+</li>
+<li>
+<p><a href="https://uppmax.github.io/bianca_workshop/extra/conda/" target="_blank">Extra material: Installing Conda packages</a></p>
+</li>
+<li><a href="https://uppmax.github.io/bianca_workshop/extra/pip/" target="_blank">Extra material: Installing pip packages</a></li>
+<li><a href="https://uppmax.github.io/bianca_workshop/extra/rpackages/" target="_blank">Extra material: Installing R packages</a></li>
+<li>
+<p><a href="https://uppmax.github.io/bianca_workshop/extra/containers/" target="_blank">Extra material: Containers</a></p>
+</li>
+<li>
+<p>One breakout room per topic: Help each-other!</p>
+</li>
+</ul>
+</details>
+<div class="admonition discussion">
+<p class="admonition-title">Discussion</p>
+<ul>
+<li>Did it work out well?</li>
+<li>Any questions?</li>
+<li>Any input?</li>
+</ul>
+</div>
+<h2 id="own-development-and-git">Own development and Git<a class="headerlink" href="#own-development-and-git" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li><a href="https://uppmax.github.io/bianca_workshop/extra/devel/">Own development and git</a></li>
+</ul>
+<div class="admonition abstract">
+<p class="admonition-title">Keypoints</p>
+<ul>
+<li>You have got an overview of the procedures to install packages/libraries and tools on Bianca through the <code>wharf</code></li>
+<li>If you feel uncomfortable or think that many users would benefit from the software, ask the support to install it.</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../slurm_bianca/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Compute nodes and debugging jobs">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Compute nodes and debugging jobs
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ides/" class="md-footer__link md-footer__link--next" aria-label="Next: IDEs">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                IDEs
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.footer", "search.suggest", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+    
+  </body>
+</html>
