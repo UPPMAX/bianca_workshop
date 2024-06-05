@@ -1,11 +1,11 @@
 # Conda on Bianca
 
-???+ question "Read [Conda user guide](http://docs.uppmax.uu.se/cluster_guides/conda/)"
+???+ question "Read [Conda user guide](http://docs.uppmax.uu.se/software/conda/)"
 
-    - Read [Conda user guide](http://docs.uppmax.uu.se/cluster_guides/conda/)
-        - skip [Working with Conda environments defined by files](http://docs.uppmax.uu.se/cluster_guides/conda/#working-with-conda-environments-defined-by-files)
+    - Read [Conda user guide](http://docs.uppmax.uu.se/software/conda/)
+        - skip [Working with Conda environments defined by files](http://docs.uppmax.uu.se/software/conda/#working-with-conda-environments-defined-by-files)
     
-    - ONLY for the interested: [Working with Conda environments defined by files](http://docs.uppmax.uu.se/cluster_guides/conda/#working-with-conda-environments-defined-by-files)
+    - ONLY for the interested: [Working with Conda environments defined by files](http://docs.uppmax.uu.se/software/conda/#working-with-conda-environments-defined-by-files)
         - On bianca you have to get the `environments.yml` to wharf first!
 
 # Exercises
