@@ -216,7 +216,7 @@ sbatch -p devcore -t 00:15:00 jobscript.sh
 
     - submit early = run early
     - bonus jobs always run eventually, but may need to wait until the night or weekend
-    - In detail: <http://docs.uppmax.uu.se/cluster_guides/running_jobs/jobinfo_reason/>
+    - In detail: <https://docs.uppmax.uu.se/cluster_guides/jobinfo_reason/>
 
 
 ???+ question "Hands-on #2: sbatch/squeue/scancel/scontrol/jobinfo"
