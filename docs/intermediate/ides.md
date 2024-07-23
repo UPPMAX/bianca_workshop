@@ -6,7 +6,7 @@
 
 !!! info "Objectives"
 
-	- Find information in the UPPMAX documentation about IDEs on Bianca
+ - Find information in the UPPMAX documentation about IDEs on Bianca
     - Give a reasonable definition of what an IDE is
     - Remember that RStudio, Jupyter, VSCodium are IDEs that can be run on Bianca
     - Can run the voted-for IDE on Bianca
@@ -50,7 +50,7 @@ You want to develop/modify code on Bianca in a program ...
 
 - ... that you already use on your regular computer
 - ... that is not the terminal
-- ... that helps you do so by providing code completion, 
+- ... that helps you do so by providing code completion,
       code hints, run-time debugging, etc.
 
 Hence, you want to use an IDE.
@@ -62,10 +62,10 @@ such as code completion, code hints and interactive debugging.
 
 Using an IDE on Bianca is cumbersome and
 there are superior ways to develop code on Bianca,
-as -for example- taught in the 
+as -for example- taught in the
 [UPPMAX 'Programming Formalisms' course](https://github.com/UPPMAX/programming_formalisms).
 
-There are three [IDEs on Bianca](http://docs.uppmax.uu.se/cluster_guides/ides_on_bianca/) 
+There are three [IDEs on Bianca](http://docs.uppmax.uu.se/cluster_guides/ides_on_bianca/)
 we can show: Jupyter, RStudio or VSCodium.
 We will practice and discuss one, and briefly talk about the others.
 
@@ -75,7 +75,7 @@ We will practice and discuss one, and briefly talk about the others.
 We pick the winning IDE democratically:
 
 - In the shared document, add a character before each IDE you'd be interested
-  in, between the `[ ]` of each option. This will be messy. 
+  in, between the `[ ]` of each option. This will be messy.
   You can vote for 0, 1, 2 or 3 IDEs.
 
 It may look like below, where there is a preference for Jupyter:

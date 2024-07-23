@@ -61,14 +61,14 @@ to work on the Bianca UPPMAX cluster.
     Sure! It is at
     [the Basic Bianca course's session on using the command-line](../commandline.md).
 
-???- tip "How do I copy/paste within a ThinLinc session?" 
+???- tip "How do I copy/paste within a ThinLinc session?"
 
      - Windows/MAC: Right-click and choose, or
      - Windows:
          - paste: `shift+insert`
          - copy: `ctrl+insert`
 
-???- tip "How do I copy/paste between ThinLinc and locally?" 
+???- tip "How do I copy/paste between ThinLinc and locally?"
 
       ![copy-paste](../img/copy_paste.PNG)
 

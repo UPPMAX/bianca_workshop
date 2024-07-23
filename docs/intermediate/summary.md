@@ -123,18 +123,18 @@ Goal of these exercises are:
 - We learn from your feedback
 
 This is an anonymous evaluation
-and will ideally be published in raw form at 
+and will ideally be published in raw form at
 [https://github.com/UPPMAX/bianca_workshop/tree/main/evaluations/20240524](https://github.com/UPPMAX/bianca_workshop/tree/main/evaluations/20240524).
 To do so, please do not share sensitive data here!
 
-This evaluation uses a shared document, 
+This evaluation uses a shared document,
 because its advantages outweigh the disadvantages.
 
 The drawbacks of using a shared document are:
 
 - one needs to be careful when multiple people are editing at the same time. This may result in minor data loss possible while editing
 
-The advantages that outweigh these are: 
+The advantages that outweigh these are:
 
 - it is already there, hence there is no new link needed
 - you already have worked with it, hence there will be no new technical problems
@@ -173,7 +173,7 @@ This may result in a measurement like this:
 - `[44345454545454]`: most learners have high confidence
 
 Thanks for your time in helping us understand where we can improve
-our teaching of these topics! 
+our teaching of these topics!
 
 ### Exercise 2: evaluation
 
