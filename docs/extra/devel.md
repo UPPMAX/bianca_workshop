@@ -23,9 +23,8 @@
 - To build from source use a compiler module
 - We have several compiler versions from GNU and INTEL
 - check with: ``$ ml avail gcc`` and ``$ ml avail intel``
-- [Guide for compiling **serial** programs](http://docs.uppmax.uu.se/cluster_guides/compiling_serial/){:target="_blank"}
-- [Guide for compiling **parallel** programs](http://docs.uppmax.uu.se/cluster_guides/compiling_parallel/){:target="_blank"}
-    - [Available **combinations** of compilers and parallel libraries](http://docs.uppmax.uu.se/cluster_guides/compiling_parallel/#mpi-using-the-openmpi-library){:target="_blank"}
+- [Guide for compiling **serial** programs](https://docs.uppmax.uu.se/software/compiling_serial/){:target="_blank"}
+- [Guide for compiling **parallel** programs](https://docs.uppmax.uu.se/software/compiling_parallel/){:target="_blank"}
   
 ## Git on Bianca
 
