@@ -65,7 +65,7 @@ there are superior ways to develop code on Bianca,
 as -for example- taught in the
 [UPPMAX 'Programming Formalisms' course](https://github.com/UPPMAX/programming_formalisms).
 
-There are three [IDEs on Bianca](http://docs.uppmax.uu.se/cluster_guides/ides_on_bianca/)
+There are three [IDEs on Bianca](http://docs.uppmax.uu.se/software/ides_on_bianca/)
 we can show: Jupyter, RStudio or VSCodium.
 We will practice and discuss one, and briefly talk about the others.
 
@@ -95,7 +95,7 @@ It may look like below, where there is a preference for Jupyter:
     - Explore the UPPMAX documentation
     - Start the favorite IDE on Bianca
 
-- Go to the UPPMAX documentation of the [IDEs on Bianca](http://docs.uppmax.uu.se/cluster_guides/ides_on_bianca/)
+- Go to the UPPMAX documentation of the [IDEs on Bianca](http://docs.uppmax.uu.se/software/ides_on_bianca/)
 - Get the IDE that got the most votes to run on Bianca, by following
   its documentation. If you really want to run another IDE,
   you may do so! When done, do exercise 2.
@@ -129,7 +129,7 @@ It may look like below, where there is a preference for Jupyter:
 
 - Try to answer the questions below.
   Be generous in accepting you answer.
-  If you have no idea, use the UPPMAX documentation of the [IDEs on Bianca](http://docs.uppmax.uu.se/cluster_guides/ides_on_bianca/).
+  If you have no idea, use the UPPMAX documentation of the [IDEs on Bianca](http://docs.uppmax.uu.se/software/ides_on_bianca/).
   When done, run the other two IDEs on Bianca
 
 ???- question "Why use an IDE?"
