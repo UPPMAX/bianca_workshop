@@ -83,7 +83,7 @@ Be sure to really use a SFTP client -- not just a SCP client.
 
 ## Using standard sftp client (command line)
 ---
-<http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_sftp/>
+<http://docs.uppmax.uu.se/software/bianca_file_transfer_using_sftp/>
 
 ```bash
 $ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se 
