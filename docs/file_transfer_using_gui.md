@@ -7,7 +7,7 @@
 ## Exercises
 
 Read the UPPMAX page on 
-[file transfer using a graphical tool](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/bianca_file_transfer_using_gui/),
+[file transfer using a graphical tool](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_gui/),
 then do these exercises.
 
 ???- question "1. Your colleague uses an SCP tool for secure file transfer. It does not work on Bianca. What is the problem?"

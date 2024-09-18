@@ -143,9 +143,9 @@ There are many ways to [tranfer files to/from Bianca](http://docs.uppmax.uu.se/c
 
 In this session, we use:
 
-- [File transfer to/from Bianca using rsync](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/):
+- [File transfer to/from Bianca using rsync](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/):
   the recommended way to do so
-- [File transfer to/from Bianca using FileZilla](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_filezilla/):
+- [File transfer to/from Bianca using FileZilla](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_filezilla/):
   the user-friendly way to do so
 
 We will use `rsync` first, as this is the UPPMAX-recommended way,
@@ -198,7 +198,7 @@ and stay open during the break.
 
 - As a group, agree on how to start, for example to agree
   to first read the exercises
-- Scan the content of [the UPPMAX documentation on how to use rsync to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/)
+- Scan the content of [the UPPMAX documentation on how to use rsync to transfer data to/from Bianca](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/)
 - Answer the following questions to yourself in your own words (answers are below).
   Be generous in accepting your own answer.
   You may share your answer in the course shared document for feedback,
@@ -260,7 +260,7 @@ Here is what to do when you get stuck:
 Here is the exercise:
 
 - Follow the step-by-step guide of
-  [the UPPMAX documentation on how to use rsync to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/).
+  [the UPPMAX documentation on how to use rsync to transfer data to/from Bianca](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/).
   There are 4 transfers described (file versus folder, upload versus download),
   do at least 1 upload and 1 download
 - Signal in Zoom that you are done using the Yes (a green checkmark) Reaction
@@ -275,9 +275,9 @@ Here is the exercise:
     - Explore the UPPMAX documentation
     - Transfer files to/from Bianca using `sftp`
 
-- Scan the content of [the UPPMAX documentation on how to use sftp to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_sftp/)
+- Scan the content of [the UPPMAX documentation on how to use sftp to transfer data to/from Bianca](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_sftp/)
 - Follow the step-by-step guide of
-  [the UPPMAX documentation on how to use sftp to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_sftp/).
+  [the UPPMAX documentation on how to use sftp to transfer data to/from Bianca](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_sftp/).
   There are 2 transfers described (upload versus download),
   do both
 - Signal in Zoom that you have nothing left to do using the No (a red cross) Reaction.
@@ -293,9 +293,9 @@ Here is the exercise:
     - Explore the UPPMAX documentation
     - Transfer files to/from Bianca using FileZilla
 
-- Scan the content of [the UPPMAX documentation on how to use FileZilla to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_filezilla/)
+- Scan the content of [the UPPMAX documentation on how to use FileZilla to transfer data to/from Bianca](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_filezilla/)
 - Follow the step-by-step guide of
-  [the UPPMAX documentation on how to use FileZilla to transfer data to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_filezilla/).
+  [the UPPMAX documentation on how to use FileZilla to transfer data to/from Bianca](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_filezilla/).
   There are 2 transfers described (upload versus download),
   do both
 - Signal in Zoom that you have nothing left to do using the No (a red cross) Reaction.
