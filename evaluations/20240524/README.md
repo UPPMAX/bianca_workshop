@@ -1,5 +1,7 @@
 # Evaluation 2024-05-24
 
+- Course: Bianca intermediate workshop
+
 ![Confidence per session](20240524_confidence.png)
 
 > From Google Forms, stitched together manually
