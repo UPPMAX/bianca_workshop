@@ -7,12 +7,12 @@
     - [2-factor authentication](https://www.uu.se/en/staff/service-and-tools/tools-and-guides/log-in-securely)
 
 - Use VPN outside Sunet. [Link to VPN for UU](https://www.uu.se/en/staff/service-and-tools/it-and-telephony-services/it-services/network-and-vpn)
-  - Click Connect using VPN
-  - You can get VPN credentials from all Swedish universities. Choose the one you are affiliated to.
- 
-  !!! warning
+    - Click Connect using VPN
+    - You can get VPN credentials from all Swedish universities. Choose the one you are affiliated to.
 
-      At UU at least: The computer must be a staff computer and should be installed by the department's/equivalent regular IT staff.
+    !!! warning
+
+        At UU at least: The computer must be a staff computer and should be installed by the department's/equivalent regular IT staff.
 
 - 1st day of the intro course, 1/2-1 day at your own pace, beneficial to do before the workshop
 
