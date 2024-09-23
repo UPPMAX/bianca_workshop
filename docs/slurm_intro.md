@@ -24,6 +24,28 @@
     - 20 minutes: exercise + quiz
     - 5 minutes: discuss answers
 
+## Nodes
+
+### One node consists of...
+![node principle](./img/node.png)
+
+### The compute clusters have this principle
+![nodes principle](./img/nodes.png)
+
+## The compute nodes
+
+When you are logged in, you are on a login node.
+There are two types of nodes:
+
+Type        |Purpose
+------------|--------------------------
+Login node  | Start jobs for worker nodes, do easy things. You share 2 cores and 15 GB RAM with active users within your project
+Compute nodes | Do hard calculations, either from scripts of an interactive session
+
+- Bianca contains hundreds of nodes, each of which is isolated from each other and the Internet.
+
+
+
 ### Try interactive and run RStudio
 
 We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), 
@@ -260,10 +282,11 @@ echo Hello world!
         ```
 ## Links
 
-- [Slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
+- [Official slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
 - [New Slurm user guide (needs updates)](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/slurm/){:target="_blank"}
 - [Discovering job resource usage with `jobstats`](http://docs.uppmax.uu.se/software/jobstats/){:target="_blank"} 
-- [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"} 
+- [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"}
+- [The job scheduler graphically](https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/){:target="_blank"}
 
 !!! example "Discussion"
 
