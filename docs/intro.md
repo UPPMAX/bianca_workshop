@@ -55,6 +55,11 @@ When  | Who  | What
 
 ???- info "For UPPMAX staff: suggested new schedule"
 
+    Suggested by Richel:
+
+    - transfer gets 15 minutes more
+    - legal aspects gets 15 minutes less
+
     When  | Who  | What
     ------|------|-----------------------------
     9:00  | R    | [Introduction](intro.md) (this page) and [logging in](login_bianca.md)
@@ -68,6 +73,30 @@ When  | Who  | What
     14:15 | B    | [Compute nodes and SLURM](slurm_intro.md), including interactive nodes
     15:00 | .    | Break
     15:15 | L    | [Legal aspects of sensitive data](sens_project_short.md)
+    15:30 | R    | Summary
+    15:35 | R    | Anonymous evaluation
+    15:45 | All  |Optional Q&A
+
+    Suggested by Björn:
+
+    - 'transfer' gets 10 minutes more
+    - 'compute nodes and SLURM' gets 5 minutes more
+    - 'Legal aspects of sensitive data' gets 10 minutes less
+    - breaks gets 5 minutes less
+
+    When  | Who  | What
+    ------|------|-----------------------------
+    9:00  | R    | [Introduction](intro.md) (this page) and [logging in](login_bianca.md)
+    10:00 | .    | Break
+    10:15 | R    | [Command line](commandline.md)
+    11:00 | .    | Break
+    11:15 | R    | [Modules](modules1.md)
+    12:00 | .    | Lunch
+    13:00 | P    | Transferring files to and from Bianca 55m
+    13:55 | .    | Break 10m
+    14:05 | B    | Compute nodes and SLURM, including interactive nodes 50m
+    14:55 | .    | Break
+    15:10 | L    | Legal aspects of sensitive data 20m
     15:30 | R    | Summary
     15:35 | R    | Anonymous evaluation
     15:45 | All  |Optional Q&A
@@ -95,50 +124,48 @@ flowchart TD
     %% Give a white background, instead of a transparent one
     classDef node fill:#fff,color:#000,stroke:#000
     classDef focus_node fill:#fff,color:#000,stroke:#000,stroke-width:4px
+    classDef basic_node fill:#fdd,color:#000,stroke:#f00
+    classDef intermediate_node fill:#ffd,color:#000,stroke:#ff0
     
-    subgraph sub_basic_use["Basic use of Bianca"]
-      can_login_to_remove_desktop(Can login to remote deskop)
-      can_login_to_console(Can login to console)
-      can_use_command_line_1(Can use the command line 1)
-      can_use_modules(Can use modules)
-      can_use_interactive_node(Can use an interactive node):::focus_node
-      can_manage_files_using_cli(Can manage files using CLI)
-      can_tranfer_files_using_rsync(Can transfer files using rsync):::focus_node
-      can_schedule_jobs(Can schedule jobs):::focus_node
-      can_create_bash_script_using_cli(Can create a bash script using CLI)
-    end
-    style sub_basic_use fill:#fcc,color:#000,stroke:#fcc
+    %% subgraph sub_basic_use[Basic use of Bianca]
+      can_login_to_remove_desktop(Can login to remote deskop):::basic_node
+      can_login_to_console(Can login to console):::basic_node
+      can_use_command_line_1(Can use the command line 1):::basic_node
+      can_use_modules(Can use modules):::basic_node
+      can_use_interactive_node(Can use an interactive node):::basic_node
+      can_manage_files_using_cli(Can manage files using CLI):::basic_node
+      can_schedule_jobs(Can schedule jobs):::basic_node
+      can_create_bash_script_using_cli(Can create a bash script using CLI):::basic_node
+      can_tranfer_files_using_gui(Can transfer files using GUI):::basic_node
+    %% end
+    %% style sub_basic_use fill:#fcc,color:#000,stroke:#fcc
 
-    subgraph sub_intermediate_use["Intermediate use of Bianca"]
-      can_use_command_line_2(Can use the command line 2)
-      can_use_custom_software(Can use custom software):::focus_node
-      can_monitor_jobs(Can monitor jobs):::focus_node
-      can_use_ide(Can use an IDE)
-    end
-    style sub_intermediate_use fill:#ffc,color:#000,stroke:#ffc
-
-    subgraph sub_non_goal["Not in course"]
-      can_tranfer_files_using_gui(Can transfer files using GUI)
-      can_create_bash_script_using_gui(Can create a bash script using GUI)
-    end
-    style sub_non_goal fill:#ccc,color:#000,stroke:#ccc
+    %% subgraph sub_intermediate_use[Intermediate use of Bianca]
+      can_tranfer_files_using_rsync(Can transfer files using rsync):::intermediate_node
+      can_use_command_line_2(Can use the command line 2):::intermediate_node
+      can_use_custom_software(Can use custom software):::intermediate_node
+      can_monitor_jobs(Can monitor jobs):::intermediate_node
+      can_use_ide(Can use an IDE):::intermediate_node
+    %% end
+    %% style sub_intermediate_use fill:#ffc,color:#000,stroke:#ffc
 
 
     %% Basic
-    can_login_to_console --> can_tranfer_files_using_rsync
+    can_login_to_remove_desktop --> can_login_to_console
+    can_login_to_remove_desktop --> can_use_command_line_1
+    can_login_to_remove_desktop --> can_tranfer_files_using_gui
     can_login_to_console --> can_use_command_line_1
-    can_login_to_remove_desktop ---> can_use_command_line_1
     can_use_command_line_1 --> can_use_modules
     can_use_command_line_1 --> can_use_interactive_node
     can_use_command_line_1 --> can_use_command_line_2
     can_use_command_line_1 --> can_create_bash_script_using_cli
     can_use_command_line_1 --> can_schedule_jobs
     can_use_command_line_1 --> can_manage_files_using_cli
-    can_use_command_line_1 --> can_tranfer_files_using_rsync
     can_use_modules --> can_schedule_jobs
     can_create_bash_script_using_cli --> can_schedule_jobs
 
     %% Basic -> Intermediate
+    can_tranfer_files_using_gui --> can_tranfer_files_using_rsync
     can_schedule_jobs --> can_monitor_jobs
     can_use_interactive_node --> can_use_ide
     can_use_modules --> can_use_ide
@@ -148,15 +175,6 @@ flowchart TD
     can_schedule_jobs ~~~ can_use_command_line_2
 
     %% Intermediate
+    can_use_command_line_1 --> can_tranfer_files_using_rsync
     can_use_command_line_2 --> can_use_custom_software
-
-    %% Basic -> None
-    %% can_login_to_remove_desktop ---> can_tranfer_files_using_gui
-    %% can_tranfer_files_using_gui --> can_use_custom_software
-    %% can_login_to_remove_desktop ---> can_create_bash_script_using_gui
-    %% can_create_bash_script_using_gui --> can_schedule_jobs
-
-    %% Make sure Non-goals is below Intermediat,
-    %% using invisible nodes
-    can_use_custom_software ~~~ can_tranfer_files_using_gui
 ```
