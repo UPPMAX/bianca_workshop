@@ -178,3 +178,8 @@ flowchart TD
     can_use_command_line_1 --> can_tranfer_files_using_rsync
     can_use_command_line_2 --> can_use_custom_software
 ```
+
+> Overview of the courses.
+> Red nodes: Intro to Bianca.
+> Yellow node: Intermediate Bianca.
+
