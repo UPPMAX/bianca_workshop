@@ -3,18 +3,19 @@
 ![Using the command line on a computer cluster](./img/610803_a_woman_using_the_command_line_on_a_computer_cluster_256_x_256.png)
 
 !!! info "Objectives"
-    - Being able to navigate in/out folders
-    - Being able to view/create/move/delete files
+
     - Create an executable bash script
+    - Optional: Being able to navigate in/out folders
+    - Optional: Being able to view/create/move/delete files
 
 ???- info "Notes for teachers"
 
     Teaching goals:
 
     - The learners demonstrate they can use a text editor
-    - The learners demonstrate they can create, move and delete files
-    - The learners demonstrate they can create and delete folders
     - The learners demonstrate they can create an executable script
+    - Optional: The learners demonstrate they can create, move and delete files
+    - Optional: The learners demonstrate they can create and delete folders
 
     Schedule:
 
@@ -37,99 +38,11 @@ therefore we must learn some Linux commands.
 
 We will learn to:
 
-- read the manual
-- navigate through the file system
-- work with directories
-- work with files
 - create an executable script
-
-### Read the manual
-
-Use `man` to see the help pages about a command:
-
-```
-man man
-man cd
-man ls
-```
-
-These command give the help pages about the programs `man`, `cd` and `ls` respectively.
-
-Press `q` (short for 'quit') to exit `man`
-
-### Navigate through the file system
-
-Like any operating system, Linux has directories (also called 'folders').
-
-Use `cd` to change directory:
-
-Where to                           |Example command
------------------------------------|---------------------
-The root folder                    |`cd /`
-The project folder                 |`cd /proj/sens2023598`
-Your home folder, using full path  |`cd /home/richel`
-Your home folder, using tilde      |`cd ~`
-The wharf                          |`cd /proj/sens2023598/nobackup/wharf`
-Up one folder                      |`cd ..`
-Into a folder, using relative path |`cd myfolder`
-The previous location              |`cd -`
-
-!!! tip "See the content of a folder"
-
-    Use `ls` to see the content of a folder
-
-!!! tip "See the current location"
-
-    Use `pwd` to see your current location
-
-!!! info "The Silence Is Golden Rule"
-    When your command 'just works' there is no output
-    (try, for example `cd ~`). 
-    This is due to [The Silence Is Golden Rule](https://www.linfo.org/rule_of_silence.html)
-
-### Work with directories
-
-Linux can create, move and delete folders.
-
-Do what                            |Example command
------------------------------------|---------------------
-Create a folder                    |`mkdir myfolder`
-Move a folder                      |`mv from_folder to_folder`
-Delete an empty folder             |`rmdir myfolder`
-Delete a folder                    |`rm -r myfolder`
-
-!!! tip "See the content of a folder"
-
-    Use `ls` to see the content of a folder
-
-!!! tip "See the current location"
-
-    Use `pwd` to see your current location
-
-!!!- tip "See the current real location (advanced)"
-
-    For sysadmins: use `pwd -P` to see your real current location on the hardware
-
-### Work with files
-
-Linux can create, view, rename, move and delete files.
-Additionally, there are some text editors that
-allow one to edit files.
-
-Do what                            |Example command
------------------------------------|---------------------
-Create an empty file               |`touch myfile.txt`
-View a file using `cat`            |`cat myfile.txt`
-Edit a file using `nano`           |`nano myfile.txt`
-Delete a file                      |`rm myfile.txt`
-Copy a file                        |`cp myfile.txt mycopy.txt`
-Rename a file                      |`mv myfile.txt mycopy.txt`
-Move a file to one folder up       |`mv myfile.txt ../`
-Move a file to the home folder     |`mv myfile.txt ~`
-
- * Note: `nano` is one of many text editors. 
-   It is the one recommended to beginners, 
-   as its interface is closest to what one expects
+- (optional) read the manual
+- (optional) navigate through the file system
+- (optional) work with directories
+- (optional) work with files
 
 ### Create an executable script
 
@@ -182,6 +95,94 @@ chmod +x do_it.sh
     `chmod` can create read-only files,
     by removing the writing rights using `chmod -w`.
 
+### (optional) Read the manual
+
+Use `man` to see the help pages about a command:
+
+```
+man man
+man cd
+man ls
+```
+
+These command give the help pages about the programs `man`, `cd` and `ls` respectively.
+
+Press `q` (short for 'quit') to exit `man`
+
+### (optional) Navigate through the file system
+
+Like any operating system, Linux has directories (also called 'folders').
+
+Use `cd` to change directory:
+
+Where to                           |Example command
+-----------------------------------|---------------------
+The root folder                    |`cd /`
+The project folder                 |`cd /proj/sens2023598`
+Your home folder, using full path  |`cd /home/richel`
+Your home folder, using tilde      |`cd ~`
+The wharf                          |`cd /proj/sens2023598/nobackup/wharf`
+Up one folder                      |`cd ..`
+Into a folder, using relative path |`cd myfolder`
+The previous location              |`cd -`
+
+!!! tip "See the content of a folder"
+
+    Use `ls` to see the content of a folder
+
+!!! tip "See the current location"
+
+    Use `pwd` to see your current location
+
+!!! info "The Silence Is Golden Rule"
+    When your command 'just works' there is no output
+    (try, for example `cd ~`). 
+    This is due to [The Silence Is Golden Rule](https://www.linfo.org/rule_of_silence.html)
+
+### (optional) Work with directories
+
+Linux can create, move and delete folders.
+
+Do what                            |Example command
+-----------------------------------|---------------------
+Create a folder                    |`mkdir myfolder`
+Move a folder                      |`mv from_folder to_folder`
+Delete an empty folder             |`rmdir myfolder`
+Delete a folder                    |`rm -r myfolder`
+
+!!! tip "See the content of a folder"
+
+    Use `ls` to see the content of a folder
+
+!!! tip "See the current location"
+
+    Use `pwd` to see your current location
+
+!!!- tip "See the current real location (advanced)"
+
+    For sysadmins: use `pwd -P` to see your real current location on the hardware
+
+### (optional) Work with files
+
+Linux can create, view, rename, move and delete files.
+Additionally, there are some text editors that
+allow one to edit files.
+
+Do what                            |Example command
+-----------------------------------|---------------------
+Create an empty file               |`touch myfile.txt`
+View a file using `cat`            |`cat myfile.txt`
+Edit a file using `nano`           |`nano myfile.txt`
+Delete a file                      |`rm myfile.txt`
+Copy a file                        |`cp myfile.txt mycopy.txt`
+Rename a file                      |`mv myfile.txt mycopy.txt`
+Move a file to one folder up       |`mv myfile.txt ../`
+Move a file to the home folder     |`mv myfile.txt ~`
+
+ * Note: `nano` is one of many text editors. 
+   It is the one recommended to beginners, 
+   as its interface is closest to what one expects
+
 ## Exercises
 
 Use the materials shown above to answer the questions below. 
@@ -189,101 +190,12 @@ Use the materials shown above to answer the questions below.
 ???- tip "Video with solutions"
 
     There is a video that shows the solution of all these exercises: 
-    [YouTube](https://youtu.be/7_LPeQbcmAo)
+    [YouTube](https://youtu.be/7_LPeQbcmAo).
 
-???- question "1. View the help of the command `cd`"
-
-    Use `man` to view the help of any command, in this case `cd`:
-
-    ```
-    man cd
-    ```
-    This will fail, because Bianca has (close to) no internet access.
-
-???- question "2a. Navigate to the project folder, e.g. `/proj/sens2023598`"
-
-    ```
-    cd /proj/sens2023598
-    ```
-
-    Don't forget the `/` at the start.
-
-???- question "2b. Navigate to your home folder"
-
-    The syntax to move to your home folder is:
-
-    ```
-    cd /home/[username]
-    ```
-
-    where `[username]` is your UPPMAX username, for example:
-
-    ```
-    cd /home/richel
-    ```
-
-    The squiggle/tilde (`~`) is a shorter notation, 
-    that does exactly the same:
-
-    ```
-    cd ~
-    ```
-
-???- question "2c. Navigate to the wharf, e.g. `/proj/sens2023598/nobackup/wharf`"
-
-    ```
-    cd /proj/sens2023598/nobackup/wharf
-    ```
-
-???- question "3a. Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/proj/sens2023598/workshop/richel`"
-
-    ```
-    mkdir /proj/sens2023598/workshop/richel
-    ```
-
-    Or navigate there first:
-
-    ```
-    cd /proj/sens2023598/workshop/
-    mkdir richel
-    ```
+    The video, however, follows the order 2-3-4-5-1.
 
 
-???- question "4a. Create a file, e.g. `richel.txt`"
-
-    ```
-    touch richel.txt
-    ```
-
-
-???- question " 4b. Copy the file (e.g. to `richel_again.txt`). "
-
-    ```
-    cp richel.txt richel_again.txt
-    ```
-
-???- question "4c. Move the copied file (e.g. move it one folder up to `../richel_again.txt`)"
-
-    ```
-    mv richel_again.txt ../
-    ```
-
-???- question "4d. Delete the copied file"
-
-
-    ```
-    rm ../richel_again.txt
-    ```
-
-    or:
-
-    ```
-    cd ..
-    rm richel_again.txt
-    ```
-
-
-???- question "5. Create an executable script called `/proj/sens2023598/workshop/[your_login_name]/do_it.sh`, which, upon running, displays a welcome message in text (e.g. `Hello!`) and does something (e.g. show the files in reverse order)"
+???- question "1. Create an executable script called `/proj/sens2023598/workshop/[your_login_name]/do_it.sh`, which, upon running, displays a welcome message in text (e.g. `Hello!`) and does something (e.g. show the files in reverse order)"
 
     Edit the script:
 
@@ -309,6 +221,97 @@ Use the materials shown above to answer the questions below.
 
     ```
     ./do_it.sh
+    ```
+
+???- question "2. View the help of the command `cd`"
+
+    Use `man` to view the help of any command, in this case `cd`:
+
+    ```
+    man cd
+    ```
+    This will fail, because Bianca has (close to) no internet access.
+
+???- question "3a. Navigate to the project folder, e.g. `/proj/sens2023598`"
+
+    ```
+    cd /proj/sens2023598
+    ```
+
+    Don't forget the `/` at the start.
+
+???- question "3b. Navigate to your home folder"
+
+    The syntax to move to your home folder is:
+
+    ```
+    cd /home/[username]
+    ```
+
+    where `[username]` is your UPPMAX username, for example:
+
+    ```
+    cd /home/richel
+    ```
+
+    The squiggle/tilde (`~`) is a shorter notation, 
+    that does exactly the same:
+
+    ```
+    cd ~
+    ```
+
+???- question "3c. Navigate to the wharf, e.g. `/proj/sens2023598/nobackup/wharf`"
+
+    ```
+    cd /proj/sens2023598/nobackup/wharf
+    ```
+
+???- question "4a. Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/proj/sens2023598/workshop/richel`"
+
+    ```
+    mkdir /proj/sens2023598/workshop/richel
+    ```
+
+    Or navigate there first:
+
+    ```
+    cd /proj/sens2023598/workshop/
+    mkdir richel
+    ```
+
+
+???- question "5a. Create a file, e.g. `richel.txt`"
+
+    ```
+    touch richel.txt
+    ```
+
+
+???- question "5b. Copy the file (e.g. to `richel_again.txt`). "
+
+    ```
+    cp richel.txt richel_again.txt
+    ```
+
+???- question "5c. Move the copied file (e.g. move it one folder up to `../richel_again.txt`)"
+
+    ```
+    mv richel_again.txt ../
+    ```
+
+???- question "5d. Delete the copied file"
+
+
+    ```
+    rm ../richel_again.txt
+    ```
+
+    or:
+
+    ```
+    cd ..
+    rm richel_again.txt
     ```
 
 ## Extra material
