@@ -55,57 +55,6 @@ When  | Who  | What
 
 * Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
 
-
-???- info "For UPPMAX staff: suggested new schedule"
-
-    Suggested by Richel:
-
-    - transfer gets 15 minutes more
-    - legal aspects gets 15 minutes less
-
-    When  | Who  | What
-    ------|------|-----------------------------
-    9:00  | R    | [Introduction](intro.md) (this page) and [logging in](login_bianca.md)
-    10:00 | .    | Break
-    10:15 | R    | [Command line](commandline.md)
-    11:00 | .    | Break
-    11:15 | R    | [Modules](modules1.md)
-    12:00 | .    | Lunch
-    13:00 | P    | [Transferring files to and from Bianca](transfer_basics.md) <-- NEEDS MORE TIME
-    14:00 | .    | Break
-    14:15 | B    | [Compute nodes and SLURM](slurm_intro.md), including interactive nodes
-    15:00 | .    | Break
-    15:15 | L    | [Legal aspects of sensitive data](sens_project_short.md)
-    15:30 | R    | Summary
-    15:35 | R    | Anonymous evaluation
-    15:45 | All  |Optional Q&A
-
-    Suggested by Björn:
-
-    - 'transfer' gets 10 minutes more
-    - 'compute nodes and SLURM' gets 5 minutes more
-    - 'Legal aspects of sensitive data' gets 10 minutes less
-    - breaks gets 5 minutes less
-
-    When  | Who  | What
-    ------|------|-----------------------------
-    9:00  | R    | [Introduction](intro.md) (this page) and [logging in](login_bianca.md)
-    10:00 | .    | Break
-    10:15 | R    | [Command line](commandline.md)
-    11:00 | .    | Break
-    11:15 | R    | [Modules](modules1.md)
-    12:00 | .    | Lunch
-    13:00 | P    | Transferring files to and from Bianca 55m
-    13:55 | .    | Break 10m
-    14:05 | B    | Compute nodes and SLURM, including interactive nodes 50m
-    14:55 | .    | Break
-    15:10 | L    | Legal aspects of sensitive data 20m
-    15:30 | R    | Summary
-    15:35 | R    | Anonymous evaluation
-    15:45 | All  |Optional Q&A
-
- * Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
-
 !!! info "Q/A collaboration document"
 
     - Use the Q/A page for the workshop with your questions.
