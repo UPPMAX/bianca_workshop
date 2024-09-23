@@ -1,6 +1,8 @@
 {
     "aliveStatusCodes": [40, 200, 401, 403, 418, 500, 503],
+    "include": ["docs"],
     "exclude": ["docs/sep23"],
+    "exclude": ["docs/apr24"],
     "ignorePatterns": [
         {
             "pattern": "^https://github.com/UPPMAX/bianca_workshop/blob/main/docs/presentations/NAISS%20SENS%2C%20sensitive%20data%2C%20and%20Bianca.pdf"
