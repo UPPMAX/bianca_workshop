@@ -10,3 +10,7 @@
         }
     ]
 }
+{
+    "aliveStatusCodes": [400],
+    "exclude": ["docs/sep23","docs/apr24"],
+}    
