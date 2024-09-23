@@ -1,6 +1,10 @@
 {
     "aliveStatusCodes": [40, 200, 401, 403, 418, 500, 503],
-    "include": ["docs"],
+    "exclude": ["evaluations"],
+    "exclude": ["lesson_plans"],
+    "exclude": ["shared_documents"],
+    "exclude": ["scripts"],
+    "exclude": ["reflections"],
     "exclude": ["docs/sep23"],
     "exclude": ["docs/apr24"],
     "ignorePatterns": [
