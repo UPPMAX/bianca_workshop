@@ -51,9 +51,9 @@ When  | Who  | What
 15:10 | L    | Legal aspects of sensitive data 20m
 15:30 | R    | Summary
 15:35 | R    | Anonymous evaluation
-15:45 | All  | Optional Q&A
+15:45 | All  |Optional Q&A
 
- * Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
+* Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
 
 !!! info "Q/A collaboration document"
 
