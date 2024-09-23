@@ -44,14 +44,17 @@ When  | Who  | What
 11:00 | .    | Break
 11:15 | R    | [Modules](modules1.md)
 12:00 | .    | Lunch
-13:00 | P    | [Transferring files to and from Bianca](transfer_basics.md)
-13:45 | .    | Break
-14:00 | B    | [Compute nodes and SLURM](slurm_intro.md), including interactive nodes
-14:45 | .    | Break
-15:00 | L    | [Legal aspects of sensitive data](sens_project_short.md)
+13:00 | P    | Transferring files to and from Bianca 55m
+13:55 | .    | Break 10m
+14:05 | B    | Compute nodes and SLURM, including interactive nodes 50m
+14:55 | .    | Break
+15:10 | L    | Legal aspects of sensitive data 20m
 15:30 | R    | Summary
 15:35 | R    | Anonymous evaluation
 15:45 | All  |Optional Q&A
+
+* Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
+
 
 ???- info "For UPPMAX staff: suggested new schedule"
 
