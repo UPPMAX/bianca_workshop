@@ -5,9 +5,8 @@
     - The learners should be able to:
         - Run simple jobs in the batch system
         - Run interactively on compute nodes
-        - When interactive and when batch
-    -     Check your jobs
-
+        - See when to run interactive and when to use batch system
+        - Check the progress of their jobs
 
 ???- info "Notes for teachers"
 
@@ -24,6 +23,133 @@
     - 15 minutes type-alongs x 2
     - 20 minutes: exercise + quiz
     - 5 minutes: discuss answers
+
+### Try interactive and run RStudio
+
+We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), 
+and to get those resources, you must should start an interactive job.
+
+!!! example "Type-along"
+
+    Use **ThinLinc**
+
+    - Start **interactive session** on compute node (2 cores)
+    
+    - If you already have an interactive session going on use that.
+   
+        - If you don't find it, do
+        
+          ``$ squeue``
+            
+        - find your session, ssh to it, like:
+        
+            ``$ ssh sens2023598-b9``
+
+    - ``$ interactive -A sens2023598 -p devcore -n 2 -t 60:00`` 
+
+
+    - Once the interactive job has begun you need to load needed modules, even if you had loaded them before in the login node
+    - You can check which node you are on?
+
+        `$ hostname`
+    
+    - Also try: 
+
+        `$ srun hostname`
+
+        - This will give several output lines resembling the number of cores you allocated.
+        - How many in this case??
+        
+    - If the name before ``.bianca.uppmax.uu.se`` is ending with bXX you are on a compute node!
+    - The login node has ``sens2023598-bianca``
+    - You can also probably see this information in your prompt, like:
+        ``[bjornc@sens2023598-b9 ~]$`` 
+  
+    - Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there. 
+
+        `$ ml R_packages/4.2.1`
+  
+        `$ ml RStudio/2022.07.1-554`
+
+
+    - **Start rstudio**, keeping terminal active (`&`)
+
+      `$ rstudio &`
+
+    - Slow to start?
+    - Depends on:
+        - number of packages 
+        - if you save a lot of data in your RStudio workspace, to be read during start up.
+
+    - **Quit RStudio**!
+    - **Log out** from interactive session with `<Ctrl>-D` or `logout` or `exit`
+ 
+ 
+## Job scripts (batch)
+
+- Batch scripts can be written in any scripting language. We will use BASH
+- Make first line be  `#!/bin/bash` in the top line
+    - It is good practice to end the line with ``-l`` to reload a fresh environment with no modules loaded.
+    - This makes you sure that you don't enable other software or versions that may interfere with what you want to do in the job. 
+- Before the job content, add the batch flags starting the lines with the keyword `#SBATCH`, like:
+    - ``#SBATCH -t 2:00:00``
+    - ``#SBATCH -p core``
+    - ``#SBATCH -n 3``
+- `#` will be ignored by `bash` and can run as an ordinary bash script
+- if running the script with the command `sbatch <script>` the `#SBATCH` lines will be interpreted as slurm flags
+
+
+### Try batch job
+
+!!! example "Type-along"
+
+    - Write a bash script called ``jobscript.sh`` 
+         - You can be in your `~` folder    
+    - To make it faster Copy-paste the code below.
+
+!!! tip
+   
+    ![copy-paste](./img/copy_paste.PNG)
+
+
+#### A simple job script template
+
+```bash
+#!/bin/bash
+
+#SBATCH -A sens2023598  # Project ID
+
+#SBATCH -p devcore  # Asking for cores (for test jobs and as opposed to multiple nodes) 
+
+#SBATCH -n 1  # Number of cores
+
+#SBATCH -t 00:10:00  # Ten minutes
+
+#SBATCH -J Template_script  # Name of the job
+
+# go to some directory
+
+cd /proj/sens2023598/
+pwd -P
+
+# load software modules
+
+module load bioinfo-tools
+module list
+
+# do something
+
+echo Hello world!  
+
+```
+
+- Run it:
+
+    ``$ sbatch jobscript.sh``
+
+
+
+
 
 ## Exercises
 
