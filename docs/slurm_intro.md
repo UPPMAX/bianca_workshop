@@ -139,6 +139,9 @@
 - [Discovering job resource usage with `jobstats`](http://docs.uppmax.uu.se/software/jobstats/){:target="_blank"} 
 - [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"} 
 
+!!! example "Discussion"
+
+    - Any further thoughts?
 
 !!! abstract "Keypoints"
     - Slurm is a job scheduler to handle the compute nodes
