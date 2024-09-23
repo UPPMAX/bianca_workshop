@@ -35,6 +35,16 @@
       Feedback: feedback, after exercise, 10s
     ```
 
+## Why?
+
+There are multiple ways to log in to Bianca, each having its own features:
+
+Way                                                  |Features
+-----------------------------------------------------|--------------------------------------------------------------------------------------------------
+Using the remote desktop environment via the website |Must be within SUNET, requires no setup, visual, clunky to work with
+(optional) Using the console environment             |Must be within SUNET, requires an SSH client, terminal, powerful to work with (if you know how)
+(optional) Using the console environment from Rackham|Can be done everywhere, requires an SSH client, terminal, powerful to work with (if you know how)
+
 ## Exercises
 
 ???- question "Prefer a video?"
@@ -73,16 +83,7 @@ to answer the questions below.
     familiar within the remote desktop environment. When one knows where
     it is, this exercise takes literally one mouse click.
 
-???- question "4. Exercise: login into the Bianca console environment"
-
-    The goal of this exercise is: (1) troubleshooting, to make sure one can access
-    this environment (2) see how it looks like, this may help one decide to
-    use this environment yes of no.
-
-    Do this after having logged in to the Bianca remote desktop,
-    as most troubleshooting occurs in that exercise.
-
-???- question "5. Your colleague finds out that one can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?"
+???- question "4. Your colleague finds out that one can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?"
 
     For that colleague, there seems to be no problem. 
     However, for everyone else this is a problem,
@@ -95,7 +96,7 @@ to answer the questions below.
     and is described [here](slurm_intro.md).
     This is done by using the SLURM scheduler.
 
-???- question "6. You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
+???- question "5. You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
 
     This is the typical use-case to use an interactive node.
     One could also consider to develop code on a local computer 
@@ -104,3 +105,23 @@ to answer the questions below.
 
     Requesting an interactive node is part of this course 
     and is described on this page.
+
+???- question "(optional) 6. Exercise: login into the Bianca console environment"
+
+    The goal of this exercise is: (1) troubleshooting, to make sure one can access
+    this environment (2) see how it looks like, this may help one decide to
+    use this environment yes of no.
+
+    Do this after having logged in to the Bianca remote desktop,
+    as most troubleshooting occurs in that exercise.
+
+???- question "(optional) 7. Exercise: login into the Bianca console environment from Rackham"
+
+    Read [the UPPMAX documentation's 'Login to the Rackham console environment with a password'](https://docs.uppmax.uu.se/getting_started/login_rackham_console_password/).
+
+    Then, log in to the Rackham console environment.
+    From there, log in to the Bianca console environment.
+
+    Do this after having logged in to the Bianca console environment,
+    as most troubleshooting occurs in that exercise.
+
