@@ -57,9 +57,9 @@ Pseudonymisation is a security mechanism that improves the security of sensitive
 
 But how do you know whether data is anonymised?
 
- - "It depends..."
- - Some data cannot be anonymised at all (e.g. whole genome sequence)
- - One metric for micro data is [K-anonymity](https://en.wikipedia.org/wiki/K-anonymity)
+- "It depends..."
+- Some data cannot be anonymised at all (e.g. whole genome sequence)
+- One metric for micro data is [K-anonymity](https://en.wikipedia.org/wiki/K-anonymity)
 
 ## Making sensitive data FAIR
 
@@ -77,6 +77,7 @@ Sensitive data can be made FAIR. Even though you cannot publish it freely and op
 - Before GDPR-data will be transferred to UPPMAX, there must be a [Data Processing Agreement](https://www.uu.se/en/centre/uppmax/get-started/create-account-and-apply-for-project/apply-for-projects/applying-for-naiss-sens-project/puba) between UU and the data controlling organisation. These are currently specific to the PI (and sometimes project).
 
 !!! note "Some definitions"
+
     - Project: A collection of resource allocations and people, with an expiration date.
     - Compute resources: CPU time used by submitted jobs.
     - Storage resources: GB of disk space. /proj has backup, /proj/no-backup has no backup.
@@ -110,6 +111,7 @@ Sensitive data can be made FAIR. Even though you cannot publish it freely and op
     - and to satisfy regulations.
 
 !!! note "Some definitions"
+
     - Node: A basic "computer", with processor, RAM memory, local disk, and network connection.
     - Core: A *part* of a processor (CPU), capable of executing a thread of execution.
     - Thread: A series of logical steps, executing a program.
@@ -126,9 +128,6 @@ Sensitive data can be made FAIR. Even though you cannot publish it freely and op
 - Use VPN outside Sunet.
     - [Link to VPN for UU](https://www.uu.se/en/staff/service-and-tools/tools-and-guides/connect-to-the-network-remotely/connect-using-the-universitys-vpn-service)
     - You can get VPN credentials from all Swedish universities. Search the web of your University.
-
-<br>
-
 - The whole Bianca cluster (blue) contains hundreds of virtual project clusters (green), each of which is isolated from each other and the Internet.
 - Data can be transferred to or from a virtual project cluster through the ``wharf``, which is a special file area that is visible from the Internet.
 
@@ -174,12 +173,13 @@ Sensitive data can be made FAIR. Even though you cannot publish it freely and op
 - If you've done all this and you still need space, contact UPPMAX support and request more space. Motivate your request by summarising your inventory. Include an estimate of your future needs.
 
 !!! abstract "Keypoints"
+
     - Sensitive Personal data is data that could identify a person and that have implication
     - The workflow for a project is:
-        - When doing your Data management plan,
-     - do a DPIA,
-     - apply for PUBA (if appropriate)
-     - apply for project
- - DO science
- - Transfer resulted data
- - close project
+          - When doing your Data management plan,
+              - do a DPIA,
+              - apply for PUBA (if appropriate)
+              - apply for project
+    - DO science
+    - Transfer resulted data
+    - close project
