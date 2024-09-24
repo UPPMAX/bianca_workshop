@@ -299,8 +299,7 @@ There are three types of nodes:
 
 ???- tip "Requesting an interactive node"
 
-    Requesting an interactive node is part of this course 
-    and is described [here](login_bianca_desktop.md).
+    Requesting an interactive node is part of this course.
     This is done by requesting an interactive node 
     from the SLURM scheduler.
 
@@ -353,8 +352,7 @@ A user logs in to a login node via the Internet.
     The colleague will be asked to *schedule* his/her jobs instead.
     This is usually done by an email from the UPPMAX staff.
 
-    Requesting a calculation to run is part of this course 
-    and is described [here](slurm-intro.md).
+    Requesting a calculation to run is part of this course.
     This is done by using the SLURM scheduler.
 
 ???- question "6. You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
