@@ -54,7 +54,7 @@ to work on the Bianca UPPMAX cluster.
 ???- tip "I may be rusty on how to log in to Bianca, how do I login again?"
 
     You can refresh your mind at 
-    [the Basic Bianca course's session on accessing Bianca](../login_bianca.md).
+    [the Basic Bianca course's session on accessing Bianca](../login.md).
 
 ???- tip "I may be rusty on using Linux commands, is there any documentation?"
 

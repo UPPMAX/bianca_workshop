@@ -224,7 +224,7 @@ are restricted in some ways:
 ???- tip "Requesting an interactive node"
 
     Requesting an interactive node is part of this course 
-    and is described [here](login_bianca.md).
+    and is described [here](login.md).
     This is done by requesting an interactive node 
     from the SLURM scheduler.
 
@@ -330,7 +330,7 @@ A user logs in to a login node via the Internet.
 
     He/she is not inside of SUNET.
     
-    Logging in is part of this course and is described [here](login_bianca.md).
+    Logging in is part of this course and is described [here](login.md).
 
 ???- question "3. You want to use a piece of software that came out this morning (!) on Bianca. Will you be able to? Why?"
 
@@ -365,7 +365,7 @@ A user logs in to a login node via the Internet.
     and upload the final code instead.
 
     Requesting an interactive node is part of this course 
-    and is described [here](login_bianca.md).
+    and is described [here](login.md).
     This is done by requesting an interactive node 
     from the SLURM scheduler.
 
