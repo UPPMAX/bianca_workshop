@@ -25,22 +25,12 @@
     - 20 minutes: exercise + quiz
     - 5 minutes: discuss answers
 
-## Nodes
+## Nodes and cores
 
 - Bianca contains hundreds of nodes.
-- Each node is like a ordinary computer without a screen
-
-### One Bianca node consists of 16 cores
-
-- Each core can do work more or less independently
-
-![node principle](./img/node.png)
-
-### Our compute clusters (like Bianca) have this principle
-
-![nodes principle](./img/nodes.png)
-
-### The compute nodes
+- Each node is like a ordinary computer without a screen.
+- One Bianca node consists of 16 cores.
+- Each core can do work more or less independently.
 
 There are two types of nodes:
 
@@ -49,6 +39,14 @@ Type        |Purpose
 Login node  | Start jobs for worker nodes, do easy things. You share 2 cores and 15 GB RAM with active users within your Sens project
 Compute nodes | Do hard calculations, either from scripts of an interactive session
 
+
+**Our nodes on Bianca have this principle**
+
+![node principle](./img/node.png)
+
+**Our clusters (like Bianca) have this principle**
+
+![nodes principle](./img/nodes.png)
 
 ## Slurm schedules and allocates compute resources for you
 
@@ -108,16 +106,6 @@ flowchart TD
     - `-n 1`, for Rstudio `-n 2`
     - `-t 10-00:00:00` (10 days)
 
-!!! admonition "Slurm Cheat Sheet"
-
-    - ``-A``    project number
-    - ``-t``    wall time          (default 1 min)
-    - ``-n``    number of cores    (default 1)
-    - ``-p``    partition
-        - ``core`` is default and works for jobs narrower than 16 cores
-        - ``node`` can be used if you need the whole node and its memory
-    - ``-N``    number of nodes (only needed if your code is parallelized with MPI and with ``-p node´´)
-
 ### Jobs
 
 - Job = what happens during booked time
@@ -167,19 +155,31 @@ flowchart TD
 
 ## Interactive jobs
 
-- Most work is most effective as submitted jobs (batch), but e.g. development needs responsiveness
-- Interactive jobs are high-priority but limited in `-n` and `-t`
-- Quickly gives you a job and logs you in to the compute node
-- Require same Slurm parameters as other jobs
-- Log in to compute node
-    - `$ interactive -A <sensXXXXXXX>...`
-- Log out with `<Ctrl>-D` or `logout`
+!!! tip
 
-- To use an interactive node, in a terminal, type:
+    - When to use?
+        - Development and programs that nees responiveness
+    - Pros
+        - Interactive jobs are high-priority
+        - Quickly gives you a job and logs you in to the compute node
+        - You run play with your data and do graphical analysis in real-time
+        - You can develop and test your coming workflows to be run later as perfect batch jobs with larger data.
+
+!!! warning
+
+    - When to not use?
+        - Most work is most effective as submitted jobs (batch)
+    - Cons
+        - Limited to 12 hours (?) and 2 nodes (32 cores)
+        - CPU hours are ticking all the time the session is active, even if you do not perform any work
+
+- Log in to compute node via thwe terminal:
 
 ```bash
 interactive -A [project name] -p core -n [number_of_cores] -t [session_duration]
 ```
+
+- Log out with `<Ctrl>-D` or `logout`
 
 For example:
 
@@ -190,49 +190,46 @@ interactive -A sens2023598 -p core -n 2 -t 8:0:0
 This starts an interactive session using project `sens2023598`
 that uses 2 cores and has a maximum duration of 8 hours.
 
-!!! tip
-
-    ![copy-paste](./img/copy_paste.PNG)
-
 ### Try interactive and run RStudio
 
 We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), and to get those resources, you must should start an interactive job.
 
-!!! example "Type-along"
+!!! example "Demo/type-along"
 
+    !!! tip
+
+        - Try to start  the interactive session but if it takes a while, just listen.
+        - It may have started by the time for exercises
+   
     Use **ThinLinc**
 
-    - Start **interactive session** on compute node (2 cores)
+    - If you already have an interactive session going on, use that.
 
-    - If you already have an interactive session going on use that.
+            - If you don't find it, do
 
-        - If you don't find it, do
+                ``$ squeue``
 
-          ``$ squeue``
+            - find your session, ssh to it, like:
 
-        - find your session, ssh to it, like:
+                ``$ ssh sens2023598-b9``
 
-            ``$ ssh sens2023598-b9``
+    - Otherwise start a new one with:
+        
+        ``$ interactive -A sens2023598 -p devcore -n 2 -t 30:00 --mail-type=BEGIN``
 
-    - ``$ interactive -A sens2023598 -p devcore -n 2 -t 60:00``
+    - You will get an email wghen started so you don't miss some compute time!
 
-    - Once the interactive job has begun you need to load needed modules, even if you had loaded them before in the login node
-    - You can check which node you are on?
+    !!! tip
 
-        `$ hostname`
+        - Try to start  the interactive session but if it takes a while, just listen.
+        - It may have started by the time for exercises.
+        - We may all also return to this after some time!
 
-    - Also try:
 
-        `$ srun hostname`
-
-        - This will give several output lines resembling the number of cores you allocated.
-        - How many in this case??
-
-    - If the name before ``.bianca.uppmax.uu.se`` is ending with bXX you are on a compute node!
-    - The login node has ``sens2023598-bianca``
-    - You can also probably see this information in your prompt, like:
+    - When session is started, you can check which node you are from the information in your prompt, like:
         ``[bjornc@sens2023598-b9 ~]$``
 
+    - Once the interactive job has begun after a while you need to **load needed modules**, even if you had loaded them before in the login node
     - Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there.
 
         `$ ml RStudio/2023.06.2-561`
@@ -241,23 +238,41 @@ We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/sof
 
       `$ rstudio &`
 
-    - Slow to start?
-    - Depends on:
-        - number of packages
-        - if you save a lot of data in your RStudio workspace, to be read during start up.
-
     - **Quit RStudio**!
     - **Log out** from interactive session with `<Ctrl>-D` or `logout` or `exit`
 
 !!! tip
 
-    - (Re-)load modules here in an interactive session
-    - Check your working directory, ``pwd``. You are not automatically coming to ``~`` or you project folder
+    - (Re-)load modules in an interactive session
+    - Check your working directory, ``pwd``. You are not automatically coming to ``~`` or you project folder.
 
 ## Job scripts (batch)
 
+!!! info
+
+    - A batch job is an instruction you give the computer to perform.
+    - The instruction is settled when it has been sent to the job scheduler.
+        - you can though ``cancel`` the job, if you find out that you missed anything
+
+!!! tip
+
+    - When to use?
+        - Finished (and tested) automatic workflows where no interaction is needed
+    - Pros
+        - Very effective on CPU hours
+        - Ends when the job is done
+            - or if something goes wrong (hopefully)
+
+!!! warning
+
+    - When to not use?
+        - When you need to interact or adjust settings during run
+    - Cons
+        - You have no interaction
+
+
 - Batch scripts can be written in any scripting language. We will use BASH
-- Make first line be  `#!/bin/bash` in the top line
+- Make first line be  `#!/bin/bash -l` in the top line
     - It is good practice to end the line with ``-l`` to reload a fresh environment with no modules loaded.
     - This makes you sure that you don't enable other software or versions that may interfere with what you want to do in the job.
 - Before the job content, add the batch flags starting the lines with the keyword `#SBATCH`, like:
@@ -265,8 +280,11 @@ We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/sof
     - ``#SBATCH -p core``
     - ``#SBATCH -n 3``
 - `#` will be ignored by `bash` and can run as an ordinary bash script
-- if running the script with the command `sbatch <script>` the `#SBATCH` lines will be interpreted as slurm flags
-
+- If running the script with the command `sbatch <script>` the `#SBATCH` lines will be interpreted as slurm flags
+- The add your workflow: An algorithm of the steps to be done from the terminal point of view.
+    - Think about what you would have to do yourself in the terminal to:
+        - run the tool in a login session from the terminal.
+        - and do possible modification to allow for use of more cores
 
 ### Try batch job
 
@@ -281,7 +299,7 @@ We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/sof
     ![copy-paste](./img/copy_paste.PNG)
 
 
-#### A simple job script template
+#### A (very) simple job script template
 
 ```bash
 #!/bin/bash -l
@@ -290,11 +308,11 @@ We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/sof
 
 #SBATCH -p devcore  # Asking for cores (for test jobs and as opposed to multiple nodes)
 
-#SBATCH -n 1  # Number of cores
+#SBATCH -n 2  # Number of cores
 
-#SBATCH -t 00:10:00  # Ten minutes
+#SBATCH -t 00:1:00  # One minute
 
-#SBATCH -J Template_script  # Name of the job
+#SBATCH -J Test  # Name of the job
 
 # go to some directory
 
@@ -321,7 +339,53 @@ srun echo Hello world!
 
     - ``$ sbatch -n 4 jobscript.sh``
 
-## Exercises
+!!! warning
+
+    Do we need to go back and test the interactive?
+
+## Check the jobs
+
+- `squeue` — quick info about jobs in queue
+- `jobinfo` — detailed info about jobs
+- `finishedjobinfo` — summary of finished jobs
+- `jobstats` — efficiency of booked resources
+    - use ``eog`` to watch the ``png`` output files
+- `bianca_combined_jobinfo`
+
+!!! admonition "See also"
+
+    - [Intermediate workshop material on slurm](intermediate/slurm_bianca)
+
+
+!!! admonition "Slurm Cheat Sheet"
+
+    - ``-A``    project number
+    - ``-t``    wall time
+    - ``-n``    number of cores
+    - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
+    - ``-p``    partition
+        - ``core`` is default and works for jobs narrower than 16 cores
+        - ``node`` can be used if you need the whole node and its memory
+            - must be used when allocating the fat nodes, see below
+    - ``-C mem256GB`` allocate a fat node with 256 GB RAM
+    - ``-C mem512GB`` allocate a fat node with 512 GB RAM
+    - ``-C gpu``
+
+    **Batch jobs**
+    
+    - Two alternatives
+        - ``sbatch <jobscript with all #SBATCH options>``
+        - ``sbatch <options that will be prioritized over the options within the jobs script> <jobscript>``
+           - can for instance be used if you just want to test with, for instance, fewer cores and shorter time
+           - Example: ``sbatch -t  60:00 -p devcore -n 2 job.sh``
+          
+    **Interactive**
+    
+    - ``interactive -A <project> <other options if not using default settings>`` 
+    - load your modules when session starts
+
+
+## Exercises 20 minutes
 
 ???+ question "You are developing code on Bianca."
 
@@ -336,7 +400,8 @@ srun echo Hello world!
 
 ??? question "Start an interactive session"
 
-    The goal of this exercise is to make sure you know how to start an interactive session.
+    - The goal of this exercise is to make sure you know how to start an interactive session.
+    - Try to reproduce the steps in the Demo above , if we did not manage!
 
 ???- question "Why not always use an interactive session?"
 
@@ -430,13 +495,14 @@ srun echo Hello world!
 ## Links
 
 - [Official slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
-- [New Slurm user guide (needs updates)](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/slurm/){:target="_blank"}
+- [New Slurm user guide ](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/slurm/){:target="_blank"}
 - [Discovering job resource usage with `jobstats`](http://docs.uppmax.uu.se/software/jobstats/){:target="_blank"}
 - [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"}
 - [The job scheduler graphically](https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/){:target="_blank"}
 
 !!! example "Discussion"
 
+    - Discuss the exercise
     - Any further thoughts?
 
 !!! abstract "Keypoints"
