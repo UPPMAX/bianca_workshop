@@ -25,6 +25,7 @@
     - Therefore, it serves as a bridge between Internet and Bianca.
 
 ## Data transfers:
+
 - <http://docs.uppmax.uu.se/cluster_guides/transfer_bianca/>
     - section 3: Transfer files to and from Bianca
 
@@ -44,11 +45,8 @@ E.g.
    e.g.
    `myuser-sens2023598`
 
-
-
 ##  Methods
 
----
 - GUI sftp clients
 - Using standard command line sftp client
 - Transit Server from/to Rackham
