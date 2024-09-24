@@ -77,10 +77,11 @@ echo "Hello!"
 ```
 
 !!! info "What does this program do?"
-
-     - The first line is called the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)),
-       and indicates this is a Bash script
-     - The second line displays the text between double quotes
+    
+    The first line is called the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)),
+    and indicates this is a Bash script.
+    
+    The second line displays the text between double quotes.
 
 Save and close `nano`.
 
@@ -236,13 +237,13 @@ echo "Hello!"
 
     Edit the script:
 
-    ```
+    ```bash
     nano do_it.sh
     ```
 
     Change the text to:
 
-    ```
+    ```bash
     #!/bin/bash
     echo "Hello!"
     ls | rev
@@ -250,7 +251,7 @@ echo "Hello!"
 
     Make the script executable:
 
-    ```
+    ```bash
     chmod +x ./do_it.sh
     ```
 
@@ -260,7 +261,7 @@ echo "Hello!"
 
     Run the script:
 
-    ```
+    ```bash
     ./do_it.sh
     ```
 
@@ -354,7 +355,7 @@ Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/p
 
 ???- question "5b. Copy the file (e.g. to `richel_again.txt`). "
 
-    ```
+    ```bash
     cp richel.txt richel_again.txt
     ```
 
