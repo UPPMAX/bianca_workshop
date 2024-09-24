@@ -206,7 +206,7 @@ Welcome on a login node!
 
 ???- question "(optional) 7. Exercise: login into the Bianca console environment from Bianca"
 
-    Read [the UPPMAX documentation's 'Login to the Bianca console environment with a password'](https://docs.uppmax.uu.se/getting_started/login_Bianca_console_password/).
+    Read [the UPPMAX documentation's 'Login to the Bianca console environment with a password'](https://docs.uppmax.uu.se/getting_started/login_bianca_console_password/).
 
     Then, log in to the Bianca console environment.
     From there, log in to the Bianca console environment.

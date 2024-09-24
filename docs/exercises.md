@@ -3,19 +3,17 @@
 !!! info
 
     We put some exercises here for you, if you want to get some more hands-on.
-   
 
 ## Working with modules
 
 ???+ question "View in IGV"
 
-  
     - Load the genome, the bam file, and the annotated *vcf* that we got from the [demo](https://uppmax.github.io/bianca_workshop/modules/#workflows) into IGV for viewing
 
         ??? tip "Answer"
 
             For this small example we use ``igv-core``. Good is also to be on a compute node.
-           
+
             ```bash
             $ ml bioinfo-tools IGV
             $ igv-core --genome genome.fa
@@ -30,23 +28,21 @@
     - Use the Transit server to copy a file (e.g. the interactive session script) from the Bianca workshop project to another project, if you belong to one.
 
         ??? tip "Answer"
-           
+
             1. Connect to transit
             2. Mount the projects with mount_wharf
-            3. Move/copy the file(s) from sens2023598 to your other project.
+            3. Move/copy the file(s) from sens2023598 to your other project
             4. Log in to the other Sens project on Bianca and move the file from the wharf to a good place
-          
-           
 
 ## Using the compute nodes
 
 ???+ question "Submit a Slurm job"
 
     - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshop/modules/#workflows) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
-   
+  
     ??? tip "Answer"
         - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
-       
+      
         ```bash
         #!/bin/bash
         #SBATCH -A sens2023598
@@ -91,12 +87,12 @@
         ```bash
         $ chmod a+x my_bio_workflow.sh
         ```
-       
+      
         - submit the job
         ```bash
         $ sbatch my_bio_workflow.sh
         ```
-       
+      
 ## Doing installations
 
 ### Rpackage installation
@@ -105,7 +101,7 @@
 
     - Install the package ``dowser`` on Rackham and use sftp to get it to Bianca.
     - [Dowser on ReadTheDocs](https://dowser.readthedocs.io/en/latest/){:target="_blank"}
-    
+   
     ??? tip "Answer"
         [Dowser exercise](https://uppmax.github.io/bianca_workshop/rpackages/#example-update-dowser)
 
@@ -124,7 +120,7 @@
 ???+ question "Install with pip"
 
     - Make a virtual environment (confer this [tutorial](https://uppmax.github.io/R-python-julia-matlab-HPC/python/isolated.html)) with ``python/3.8.7`` on Rackham and install ``numpy==1.18.1`` and ``matplotlib==3.1.3``. Use ``sftp`` to get it to Bianca.
-   
+  
 
     ??? tip "Answer"
         <https://uppmax.github.io/bianca_workshop/pip/#isolatedvirtual-environments>
@@ -135,7 +131,7 @@
 ???+ question "Install a Julia package"
 
     - Install ``Gumbo`` in the julia packager [tutorial](https://www.uppmax.uu.se/support/user-guides/julia-user-guide/#tocjump_536805789462588_6). Use ``sftp`` to get it to Bianca.
-   
+  
 
     ??? tip "Answer"
         <https://uppmax.github.io/bianca_workshop/julia/#install-yourself>
