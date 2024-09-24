@@ -304,22 +304,22 @@ cd /proj/sens2023598/
 pwd -P
 
 # load software modules
-
 module load bioinfo-tools
 module list
 
 # do something
-
+hostname
 echo Hello world!
+echo Using the srun command: Running the same commands using the available cores
 srun hostname
-
+srun echo Hello world!
 ```
 
 - Run it:
 
     - ``$ sbatch jobscript.sh``
 
-- We _can_ modify the slurm parameters for tests from the commandline.
+- We _can_ modify the slurm parameters for tests from the command-line.
 
     - ``$ sbatch -n 4 jobscript.sh``
 
