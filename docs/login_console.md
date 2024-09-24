@@ -202,7 +202,7 @@ Welcome on a login node!
 
     You can find find it at <https://docs.uppmax.uu.se/software/ssh_client/>
 
-### 5. Using SSH via Bianca
+### Exercise 5: Using SSH via Bianca
 
 ???- question "(optional) 7. Exercise: login into the Bianca console environment from Bianca"
 
