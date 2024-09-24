@@ -1,5 +1,9 @@
 # Introduction to Bianca: Handling Sensitive Research Data
 
+![Bianca Castafiore](./img/bianca_castafiore_192_x_226.png)
+
+> Bianca Castafiore, the Tintin character the cluster is named after.
+
 ???- question "Prefer a video?"
 
     In case you prefer a video over reading,
