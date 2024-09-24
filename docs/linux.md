@@ -9,7 +9,7 @@
         - [LINUX](https://uppmax.github.io/uppmax_intro/linux.html)
         - [Basic toolkit](https://uppmax.github.io/uppmax_intro/linux_basics.html)
         
- ### Navigation and file management
+### Navigation and file management
 
 1. `pwd`  &emsp; present directory
 1. `ls`  &emsp;list content
@@ -63,15 +63,16 @@ $ pwd -P
     /proj
     /proj
     ```
+
 ```
 $ cd /sensXXX
 $ pwd
 $ pwd -P
 ```
+
 ??? answer
     ```
     /proj/sensXXX
     /castor/project/proj
     ```
-
 
