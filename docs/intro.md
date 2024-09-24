@@ -146,4 +146,5 @@ flowchart TD
 
 > Overview of the courses.
 > Red nodes: Intro to Bianca.
-> Yellow node: Intermediate Bianca.
+> Yellow node: Intro to Bianca extra material.
+> Green node: Intermediate Bianca.
