@@ -30,6 +30,10 @@
       Feedback: feedback, after exercise, 10s
     ```
 
+## Why?
+
+You need the command-line to start calculations.
+
 ## Overview
 
 Bianca is a cluster with the Linux operating system.
@@ -64,18 +68,15 @@ nano do_it.sh
 
 As an example, copy-paste this content into the script:
 
-```
+```bash
 #!/bin/bash
 echo "Hello!"
-ls | rev
 ```
 
 !!! info "What does this program do?"
      * The first line is called the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)),
        and indicates this is a Bash script
      * The second line displays the text between double quotes
-     * The third line displays the files in the folder reversed. 
-       The `|` is called the [pipeline](https://en.wikipedia.org/wiki/Pipeline_(Unix)) operator
 
 Save and close `nano`.
 
@@ -194,8 +195,44 @@ Use the materials shown above to answer the questions below.
 
     The video, however, follows the order 2-3-4-5-1.
 
+### Exercise 1
 
-???- question "1. Create an executable script called `/proj/sens2023598/workshop/[your_login_name]/do_it.sh`, which, upon running, displays a welcome message in text (e.g. `Hello!`) and does something (e.g. show the files in reverse order)"
+- Create a file called `do_it.sh` using `nano`
+
+???- question "Answer"
+
+    Use `nano` to create it:
+
+    ```bash
+    nano do_it.sh
+    ```
+
+    Then do `CTRL + O` to save, `CTRL + X` to exit
+
+
+- Edit the file `do_it.sh` to have the content below:
+
+```bash
+#!/bin/bash
+echo "Hello!"
+```
+
+???- question "Answer"
+
+    Use `nano` to edit it:
+
+    ```bash
+    nano do_it.sh
+    ```
+
+
+
+    Then do `CTRL + O` to save, `CTRL + X` to exit
+
+
+- Write an executable script that displays a welcome message in text (e.g. `Hello!`)
+
+???- question "Answer"
 
     Edit the script:
 
@@ -217,13 +254,21 @@ Use the materials shown above to answer the questions below.
     chmod +x ./do_it.sh
     ```
 
+- Run the script
+
+???- question "Answer"
+
     Run the script:
 
     ```
     ./do_it.sh
     ```
 
-???- question "2. View the help of the command `cd`"
+### Exercise 2
+
+View the help of the command `cd`
+
+???- question "Answer"
 
     Use `man` to view the help of any command, in this case `cd`:
 
@@ -232,7 +277,11 @@ Use the materials shown above to answer the questions below.
     ```
     This will fail, because Bianca has (close to) no internet access.
 
-???- question "3a. Navigate to the project folder, e.g. `/proj/sens2023598`"
+### Exercise 3a
+
+Navigate to the project folder, e.g. `/proj/sens2023598`
+
+???- question "Answer"
 
     ```
     cd /proj/sens2023598
@@ -240,7 +289,11 @@ Use the materials shown above to answer the questions below.
 
     Don't forget the `/` at the start.
 
-???- question "3b. Navigate to your home folder"
+### Exercise 3b
+
+Navigate to your home folder"
+
+???- question "Answer"
 
     The syntax to move to your home folder is:
 
@@ -261,13 +314,22 @@ Use the materials shown above to answer the questions below.
     cd ~
     ```
 
-???- question "3c. Navigate to the wharf, e.g. `/proj/sens2023598/nobackup/wharf`"
+### Exercise 3c
+
+Navigate to the wharf, e.g. `/proj/sens2023598/nobackup/wharf`"
+
+???- question "Answer"
 
     ```
     cd /proj/sens2023598/nobackup/wharf
     ```
 
-???- question "4a. Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/proj/sens2023598/workshop/richel`"
+
+### Exercise 4a
+
+Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/proj/sens2023598/workshop/richel`"
+
+???- question "Answer"
 
     ```
     mkdir /proj/sens2023598/workshop/richel
@@ -281,6 +343,8 @@ Use the materials shown above to answer the questions below.
     ```
 
 
+### Exercise 5a
+
 ???- question "5a. Create a file, e.g. `richel.txt`"
 
     ```
@@ -288,17 +352,23 @@ Use the materials shown above to answer the questions below.
     ```
 
 
+### Exercise 5b
+
 ???- question "5b. Copy the file (e.g. to `richel_again.txt`). "
 
     ```
     cp richel.txt richel_again.txt
     ```
 
+### Exercise 5c
+
 ???- question "5c. Move the copied file (e.g. move it one folder up to `../richel_again.txt`)"
 
     ```
     mv richel_again.txt ../
     ```
+
+### Exercise 5d
 
 ???- question "5d. Delete the copied file"
 

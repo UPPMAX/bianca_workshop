@@ -1,8 +1,8 @@
-# Log in to Bianca
+# Log in to the Bianca remote desktop environment
 
 ![The Bianca environments](./img/bianca_environments_926_x_261.png)
 
-!!! info "Objectives" 
+!!! info "Learning objectives" 
 
     - Use the UPPMAX documentation
     - Observe the most common problems when accessing Bianca
@@ -60,6 +60,10 @@ Way                                                     |Features
 Here you will see how these looks like,
 so you can decide which environment to use.
 
+## Using
+
+
+
 ## Exercises
 
 ???- question "Prefer a video?"
@@ -75,10 +79,7 @@ so you can decide which environment to use.
     - You can see [a YouTube video here](https://youtu.be/UpNI5OUlIo8).
 
 
-
-### 1. Using the remote desktop website
-
-#### 1a. Find the documentation
+### Exercise 1: Find the documentation
 
 Search the UPPMAX documentation at
 [https://docs.uppmax.uu.se/](https://docs.uppmax.uu.se/)
@@ -90,7 +91,7 @@ for how to log in to the Bianca remote desktop environment website.
     similar. This will take you to
     [https://docs.uppmax.uu.se/getting_started/login_bianca_remote_desktop_website/](https://docs.uppmax.uu.se/getting_started/login_bianca_remote_desktop_website/)
 
-#### 1b. Seeing nothing
+#### Exercise 2: A user sees nothing
 
 ![](./img/login_uppmax_bianca_website_outside_sunet_browser_short.png)
 
@@ -106,7 +107,7 @@ What is likely the problem?"
 
     Show him/her the section above on how to get into SUNET.
 
-#### 1c. Log in to the Bianca remote desktop
+#### Exercise 3: Log in to the Bianca remote desktop
 
 Log in to the Bianca remote desktop.
 
@@ -116,13 +117,26 @@ Log in to the Bianca remote desktop.
 
     You can see [a YouTube video here](https://youtu.be/UpNI5OUlIo8).
 
-???- question "1c. Exercise: start a terminal in the Bianca remote desktop environment"
+### Exercise 4: start a terminal in the Bianca remote desktop environment
 
-    The goal of this exercise is that one makes him/herself slightly
-    familiar within the remote desktop environment. When one knows where
-    it is, this exercise takes literally one mouse click.
+Start a terminal in the Bianca remote desktop environment.
 
-???- question "1d. Your colleague finds out that one can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?"
+???- question "Answer"
+
+    Click on the terminal icon at the bottom of the screen.
+
+    ![The terminal icon at the bottom of the screen](./img/bianca_remote_desktop_terminal_icon.png)
+
+    > The terminal icon at the bottom of the screen
+
+### Exercise 5: A user enjoys the login node
+
+Your colleague finds out that one can run scripts with calculations directly
+on the login node.
+This saves him/her much time waiting for a calculation to start.
+Is this OK and why?
+
+???- question "Answer"
 
     For that colleague, there seems to be no problem. 
     However, for everyone else this is a problem,
@@ -135,7 +149,18 @@ Log in to the Bianca remote desktop.
     and is described [here](slurm_intro.md).
     This is done by using the SLURM scheduler.
 
-???- question "1e. You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
+### Exercise 6: A user develops code
+
+Your colleague is developing code on Bianca.
+She writes the code line-by-line and
+schedules a job to test the new code after each addition.
+However, each job takes some minutes to start
+and hence it takes a couple of minutes
+before she knows if her code worked yes/no.
+
+How could your colleague develop your code quicker?"
+
+???- question "Answer"
 
     This is the typical use-case to use an interactive node.
     One could also consider to develop code on a local computer 
@@ -143,28 +168,4 @@ Log in to the Bianca remote desktop.
     and upload the final code instead.
 
     Requesting an interactive node is part of this course 
-    and is described on this page.
-
-### 2. Using SSH
-
-???- question "(optional) 6. Exercise: login into the Bianca console environment"
-
-    The goal of this exercise is: (1) troubleshooting, to make sure one can access
-    this environment (2) see how it looks like, this may help one decide to
-    use this environment yes of no.
-
-    Do this after having logged in to the Bianca remote desktop,
-    as most troubleshooting occurs in that exercise.
-
-### 3. Using SSH via Rackham
-
-???- question "(optional) 7. Exercise: login into the Bianca console environment from Rackham"
-
-    Read [the UPPMAX documentation's 'Login to the Rackham console environment with a password'](https://docs.uppmax.uu.se/getting_started/login_rackham_console_password/).
-
-    Then, log in to the Rackham console environment.
-    From there, log in to the Bianca console environment.
-
-    Do this after having logged in to the Bianca console environment,
-    as most troubleshooting occurs in that exercise.
-
+    and is described [in the session on Slurm](slurm_intro.md).

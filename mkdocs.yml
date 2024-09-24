@@ -7,7 +7,9 @@ nav:
   - Practicalities: practicalities.md
   - Bianca intro (beginner): 
     - Introduction: intro.md
-    - Log in to Bianca: login_bianca.md
+    - Log in to the Bianca remote desktop environment: login_bianca_remote_desktop.md
+    - Using the desktop environment: use_remote_desktop.md
+    - Log in to the Bianca console environment: login_bianca_console.md
     - Command-line intro: commandline.md
     - Module system: modules1.md
     - Transferring files to/from Bianca: transfer_basics.md
