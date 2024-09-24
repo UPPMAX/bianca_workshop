@@ -29,21 +29,115 @@
 ### One node consists of...
 ![node principle](./img/node.png)
 
-### The compute clusters have this principle
+### Our compute clusters (like Bianca) have this principle
 ![nodes principle](./img/nodes.png)
 
-## The compute nodes
+### The compute nodes
 
-When you are logged in, you are on a login node.
 There are two types of nodes:
 
 Type        |Purpose
 ------------|--------------------------
-Login node  | Start jobs for worker nodes, do easy things. You share 2 cores and 15 GB RAM with active users within your project
+Login node  | Start jobs for worker nodes, do easy things. You share 2 cores and 15 GB RAM with active users within your Sens project
 Compute nodes | Do hard calculations, either from scripts of an interactive session
 
 - Bianca contains hundreds of nodes, each of which is isolated from each other and the Internet.
+- 
 
+## Slurm schedules and allocates compute resources for you 
+
+- Problem: _1000 users, 300 nodes, 5000 cores_
+- We need a **queue** system:
+
+    - [Slurm](https://slurm.schedmd.com/) is a job scheduler
+
+### Two ways to allocate compute resources
+
+- Work **interactively** with your data or develop or test
+    - Run an **Interactive session**
+    - ``$ interactive <flags> ...``
+    - Typical use cases:
+        - Run RStudio
+- If you _don't_ need any live interaction with your workflow/analysis/simulation
+    - Send your job to the slurm job **batch** (sbatch)
+    - `$ sbatch <flags> <program>` or
+    - `$ sbatch <job script>`
+ 
+```mermaid
+flowchart TD
+    UPPMAX(What to run on which node?)
+    operation_type{What type of operation/calculation?}
+    interaction_type{What type of interaction?}
+    login_node(Work on login node)
+    interactive_node(Work on interactive node)
+    calculation_node(Schedule for calculation node)
+
+    UPPMAX-->operation_type
+    operation_type-->|light,short|login_node
+    operation_type-->|heavy,long|interaction_type
+    interaction_type-->|Direct|interactive_node
+    interaction_type-->|Indirect|calculation_node
+```
+
+### jobs
+
+- Job = what happens during booked time
+- Described in
+    - a script file or 
+    - the command-line (priority over script)
+- The definitions of a job:
+    - Slurm parameters (**flags**)
+    - Load software modules
+    - (Navigate in file system)
+    - Run program(s)
+    - (Collect output)
+    - ... and more
+
+- You define **jobs** to be run on the compute nodes and therefore sent to the queue.
+
+!!! admonition "Slurm Cheat Sheet"
+
+    - ``-A``    project number
+    - ``-t``    wall time
+    - ``-n``    number of cores
+    - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
+    - ``-p``    partition
+        - ``core`` is default and works for jobs narrower than 16 cores
+        - ``node`` can be used if you need the whole node and its memory
+
+
+
+
+
+
+## Interactive jobs
+
+- Most work is most effective as submitted jobs, but e.g. development needs responsiveness
+- Interactive jobs are high-priority but limited in `-n` and `-t`
+- Quickly give you a job and logs you in to the compute node
+- Require same Slurm parameters as other jobs
+- Log in to compute node
+    -  `$ interactive ...`
+- Logout with `<Ctrl>-D` or `logout`
+
+- To use an interactive node, in a terminal, type:
+
+```bash
+interactive -A [project name] -p core -n [number_of_cores] -t [session_duration]
+```
+
+For example:
+
+```bash
+interactive -A sens2023598 -p core -n 2 -t 8:0:0
+```
+
+This starts an interactive session using project `sens2023598` 
+that uses 2 cores and has a maximum duration of 8 hours.
+
+!!! tip
+   
+    ![copy-paste](./img/copy_paste.PNG)
 
 
 ### Try interactive and run RStudio
