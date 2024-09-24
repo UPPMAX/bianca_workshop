@@ -176,10 +176,10 @@ Sensitive data can be made FAIR. Even though you cannot publish it freely and op
 
     - Sensitive Personal data is data that could identify a person and that have implication
     - The workflow for a project is:
-          - When doing your Data management plan,
-              - do a DPIA,
-              - apply for PUBA (if appropriate)
-              - apply for project
+        - When doing your Data management plan,
+            - do a DPIA,
+            - apply for PUBA (if appropriate)
+            - apply for project
     - DO science
     - Transfer resulted data
     - close project
