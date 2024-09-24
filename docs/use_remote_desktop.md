@@ -259,7 +259,7 @@ its name will be useful to know:
 
     The file navigator is called Thunar.
 
-### Exercise 3: file management
+### Exercise 4: file management
 
 In Thunar:
 
