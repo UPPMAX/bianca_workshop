@@ -8,7 +8,7 @@ nav:
   - Bianca intro (beginner): 
     - Introduction: intro.md
     - Overview: overview.md
-    - Logging in to Bianca: login_bianca.md
+    - Log in to Bianca: login_bianca.md
     - Command-line intro: commandline.md
     - Module system: modules1.md
     - Transferring files to/from Bianca: transfer_basics.md
