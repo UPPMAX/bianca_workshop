@@ -104,7 +104,7 @@
 
     - Install the package ``dowser`` on Rackham and use sftp to get it to Bianca.
     - [Dowser on ReadTheDocs](https://dowser.readthedocs.io/en/latest/){:target="_blank"}
-   
+
     ??? tip "Answer"
 
         [Dowser exercise](https://uppmax.github.io/bianca_workshop/extra/rpackages/#example-update-dowser)

@@ -56,15 +56,15 @@ When  | Who  | What
 15:35 | R    | Anonymous evaluation
 15:45 | All  | Optional Q&A
 
-* Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
+- Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
 
 !!! info "Q/A collaboration document"
 
     - Use the Q/A page for the workshop with your questions.
-      - [https://hackmd.io/@UPPMAX/Bianca_Intro_QaA](https://hackmd.io/@UPPMAX/Bianca_Intro_QaA){target="_blank"}
-    - Depending on how many helpers there are, 
+        - [https://hackmd.io/@UPPMAX/Bianca_Intro_QaA](https://hackmd.io/@UPPMAX/Bianca_Intro_QaA){target="_blank"}
+    - Depending on how many helpers there are,
       we'll see how fast there are answers
-      - Some answers may come after the workshop.
+        - Some answers may come after the workshop.
     - Create a new line for new questions.
       Take care if others are editing at the same time.
 
@@ -79,7 +79,7 @@ flowchart TD
     classDef focus_node fill:#fff,color:#000,stroke:#000,stroke-width:4px
     classDef basic_node fill:#fdd,color:#000,stroke:#f00
     classDef intermediate_node fill:#ffd,color:#000,stroke:#ff0
-    
+  
     %% subgraph sub_basic_use[Basic use of Bianca]
       can_login_to_remove_desktop(Can login to remote deskop):::basic_node
       can_login_to_console(Can login to console):::basic_node
