@@ -127,4 +127,4 @@ mv –a  <file(s)> ~/.julia/packages/
 
 !!! info "More info"
 
-    - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html){:target="_blank"}
+    - Julia course: isolated environments  <!-- link to https://uppmax.github.io/R-python-julia-HPC/julia/isolatedJulia.html is broken and hence removed -->
