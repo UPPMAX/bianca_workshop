@@ -215,7 +215,7 @@ and stay open during the break.
 
     > - What is SUNET?
 
-    [SUNET](docs.uppmax.uu.se/getting_started/get_inside_sunet) is the university networks (yes, plural!).
+    [SUNET](https://docs.uppmax.uu.se/getting_started/get_inside_sunet/) is the university networks (yes, plural!).
 
     > - What is `ssh`? What does it allow us to do?
 
