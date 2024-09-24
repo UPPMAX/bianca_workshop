@@ -200,7 +200,26 @@ Use the materials shown above to answer the questions below.
 
     The video, however, follows the order 2-3-4-5-1.
 
-### Exercise 1
+```mermaid
+flowchart TD
+
+  classDef minimal_node fill:#fdd,color:#000,stroke:#f00
+  classDef extra_node fill:#ffd,color:#000,stroke:#ff0
+
+  exercise_1[1.create an executable script]:::minimal_node
+  exercise_2[2.view help]:::extra_node
+  exercise_3[3.file navigation]:::extra_node
+  exercise_4[4.folder management]:::extra_node
+  exercise_5[5.file management]:::extra_node
+
+  exercise_1 --> exercise_2 --> exercise_3 --> exercise_4 --> exercise_5
+```
+
+> Exercises for this session.
+> Red nodes: minimal, needed in other sessions.
+> Yellow nodes: extra, useful in general.
+
+### Exercise 1: create an executable script
 
 - Create a file called `do_it.sh` using `nano`
 
@@ -265,7 +284,7 @@ echo "Hello!"
     ./do_it.sh
     ```
 
-### Exercise 2
+### Exercise 2: view help
 
 View the help of the command `cd`
 
@@ -279,9 +298,9 @@ View the help of the command `cd`
 
     This will fail, because Bianca has (close to) no internet access.
 
-### Exercise 3a
+### Exercise 3: file navigation
 
-Navigate to the project folder, e.g. `/proj/sens2023598`
+- Navigate to the project folder, e.g. `/proj/sens2023598`
 
 ???- question "Answer"
 
@@ -291,9 +310,7 @@ Navigate to the project folder, e.g. `/proj/sens2023598`
 
     Don't forget the `/` at the start.
 
-### Exercise 3b
-
-Navigate to your home folder"
+- Navigate to your home folder"
 
 ???- question "Answer"
 
@@ -316,9 +333,7 @@ Navigate to your home folder"
     cd ~
     ```
 
-### Exercise 3c
-
-Navigate to the wharf, e.g. `/proj/sens2023598/nobackup/wharf`"
+- Navigate to the wharf, e.g. `/proj/sens2023598/nobackup/wharf`"
 
 ???- question "Answer"
 
@@ -326,9 +341,9 @@ Navigate to the wharf, e.g. `/proj/sens2023598/nobackup/wharf`"
     cd /proj/sens2023598/nobackup/wharf
     ```
 
-### Exercise 4a
+## Exercise 4: folder management
 
-Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/proj/sens2023598/workshop/richel`"
+- Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/proj/sens2023598/workshop/richel`"
 
 ???- question "Answer"
 
@@ -343,33 +358,42 @@ Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/p
     mkdir richel
     ```
 
-### Exercise 5a
+### Exercise 5: file management
 
-???- question "5a. Create a file, e.g. `richel.txt`"
+- Create a file, e.g. `richel.txt`
+
+???- question "Answer"
+
+    ```bash
+    nano richel.txt
+    ```
+
+    or alternatively:
 
     ```bash
     touch richel.txt
     ```
 
-### Exercise 5b
 
-???- question "5b. Copy the file (e.g. to `richel_again.txt`)."
+- Copy the file (e.g. to `richel_again.txt`)
+
+???- question "Answer"
 
     ```bash
     cp richel.txt richel_again.txt
     ```
 
-### Exercise 5c
+- Move the copied file (e.g. move it one folder up to `../richel_again.txt`)
 
-???- question "5c. Move the copied file (e.g. move it one folder up to `../richel_again.txt`)"
+???- question "Answer"
 
     ```bash
     mv richel_again.txt ../
     ```
 
-### Exercise 5d
+- Delete the copied file
 
-???- question "5d. Delete the copied file"
+???- question "Answer"
 
     ```bash
     rm ../richel_again.txt
@@ -391,7 +415,6 @@ but are not part of the learning objectives.
 
 Command name|Purpose
 ------------|---------------------------------------------
-`scp`       |Copy file between Bianca and your local computer
 `cat`       |Show the content of a file
 `less`      |Navigate through the content of a file
 `head`      |Show the first lines of a file
@@ -401,11 +424,10 @@ Command name|Purpose
 `>`         |Write to file (removes existing content if any)
 `>>`        |Append to file
 
-A command that cannot be put in a table:
+A command that cannot be put in a Markdown table:
 
 - `|`: [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix)),
   the output of one command to serve as input for the next
-
 
 With `ls /usr/bin | wc --lines` one can see that there are more than 1700
 commands on Bianca.

@@ -75,12 +75,27 @@ as maybe you'll be too afraid to ask a colleague later.
 
 It is assumed you are logged in to the remote desktop environment of Bianca.
 
-No need to read the documentation here:
-we'll take a look at the (Linux) filesystem of Bianca.
+```mermaid
+flowchart TD
 
-Try to do these exercises by trying out things yourself first.
-There are usually multiple ways to solve the exercise.
-Feel encouraged to explore this new environment too!
+  classDef minimal_node fill:#fdd,color:#000,stroke:#f00
+  classDef extra_node fill:#ffd,color:#000,stroke:#ff0
+
+  exercise_1[1.copy-paste text]:::minimal_node
+  exercise_2[2.starting a text editor]:::minimal_node
+  exercise_3[3.file navigation]:::extra_node
+  exercise_4[4.file management]:::extra_node
+  exercise_5[5.starting a terminal]:::extra_node
+
+  exercise_1 --> exercise_2 --> exercise_3 --> exercise_4 --> exercise_5
+```
+
+> Exercises for this session.
+> Red nodes: minimal, needed in other sessions.
+> Yellow nodes: extra, useful in general.
+
+For the extra exercises: no need to read the documentation here,
+these are mostly finding out where to click.
 
 ### Exercise 1: copy-paste text
 
@@ -135,7 +150,33 @@ then answer these questions:
     Then, on your local computer, press `CTRL + V` to paste
     the text from your clipboard to a text editor
 
-### Exercise 2: file navigation
+### Exercise 2: starting a terminal
+
+- Start a terminal
+
+???- question "Answer"
+
+    At the bottom bar of the screen, click the icon for 'Terminal emulator':
+
+    ![At the bottom bar of the screen, click the icon for 'Terminal emulator'](./img/start_terminal.png)
+
+    You now have started a terminal:
+
+    ![You now have started a terminal](./img/terminal.png)
+
+- Close the terminal. There are multiple ways!
+
+???- question "Answer"
+
+    These are some of the more conventional ways to close a terminal:
+
+    - Click on the `x` at the top-right of the terminal. When asked to really do
+      it, say 'Yes'
+    - Click the terminal and Press `CTRL + C` to stop `xeyes`. Type `exit`
+      and press enter
+    - Many more: any solution that worked is fine
+
+### Exercise 3: file navigation
 
 - Start a program to navigate your files
 
@@ -218,46 +259,6 @@ In Thunar:
 - copy a folder
 - move a folder
 - delete a folder
-
-### Exercise 4: starting a terminal
-
-- Start a terminal
-
-???- question "Answer"
-
-    At the bottom bar of the screen, click the icon for 'Terminal emulator':
-
-    ![At the bottom bar of the screen, click the icon for 'Terminal emulator'](./img/start_terminal.png)
-
-    You now have started a terminal:
-
-    ![You now have started a terminal](./img/terminal.png)
-
-- From the terminal, start the program `xeyes` by typing `xeyes` and
-  press enter. Does this work? Why?
-
-???- question "Answer"
-
-    You will get an error:
-
-    ```bash
-    Error: Can't open display:
-    ```
-
-    You will get this error as Bianca does not allow for
-    [SSH X-forwarding](https://docs.uppmax.uu.se/software/ssh_x_forwarding/).
-
-- Close the terminal. There are multiple ways!
-
-???- question "Answer"
-
-    These are some of the more conventional ways to close a terminal:
-
-    - Click on the `x` at the top-right of the terminal. When asked to really do
-      it, say 'Yes'
-    - Click the terminal and Press `CTRL + C` to stop `xeyes`. Type `exit`
-      and press enter
-    - Many more: any solution that worked is fine
 
 ### Exercise 5: starting a text editor
 

@@ -82,6 +82,25 @@ Only after loading it will some other tools appear.
     [Here](https://youtu.be/ZuLMoZkGsZk) is a video that shows
     the solution of these exercises
 
+```mermaid
+flowchart TD
+
+  classDef minimal_node fill:#fdd,color:#000,stroke:#f00
+  classDef extra_node fill:#ffd,color:#000,stroke:#ff0
+
+  exercise_1[1.find the software]:::minimal_node
+  exercise_2[2.work with modules]:::minimal_node
+  exercise_3[3.the bioinfo-tools module]:::minimal_node
+  exercise_4[4.find the databases]:::extra_node
+
+  exercise_1 --> exercise_2 --> exercise_3 --> exercise_4
+```
+
+> Exercises for this session.
+> Red nodes: minimal, needed in other sessions.
+> Yellow nodes: extra, useful in general.
+
+
 ### Exercise 1: find the software
 
 Go to the UPPMAX documentation at
@@ -96,21 +115,7 @@ then answer these questions:
     One can find the answer at <https://docs.uppmax.uu.se/software/software-table/>,
     where one can find around 800 pieces of software installed
 
-### Exercise 2: find the databases
-
-Go to the UPPMAX documentation at
-[https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
-then answer these questions:
-
-- Find to list of databases.
-  Estimate how many collections of databases are installed on Bianca
-
-???- question "Answer"
-
-    One can find the answer at <http://docs.uppmax.uu.se/databases/overview/>,
-    where one can find around 7 collections of databases installed.
-
-### Exercise 3: work with modules
+### Exercise 2: work with modules
 
 Go to the UPPMAX documentation at
 [https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
@@ -164,7 +169,7 @@ then answer these questions:
 - Confirm that `cowsay` does not work anymore,
   by typing `cowsay hello`. This should give an error
 
-### Exercise 4: the `bioinfo-tools` module
+### Exercise 3: the `bioinfo-tools` module
 
 Go to the UPPMAX documentation at
 [https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
@@ -279,3 +284,18 @@ Remember, whenever you cannot find something, do:
 ```bash
 module load bioinfo-tools
 ```
+
+### Exercise 4: find the databases
+
+Go to the UPPMAX documentation at
+[https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
+then answer these questions:
+
+- Find to list of databases.
+  Estimate how many collections of databases are installed on Bianca
+
+???- question "Answer"
+
+    One can find the answer at <http://docs.uppmax.uu.se/databases/overview/>,
+    where one can find around 7 collections of databases installed.
+
