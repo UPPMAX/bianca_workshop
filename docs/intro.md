@@ -52,13 +52,12 @@ When  | Who  | What
 11:00 | .    | Break
 11:15 | R    | [Create an executable script](create_script.md), [use modules](modules.md)
 12:00 | .    | Lunch
-13:00 | P    | Transferring files to and from Bianca 55m
-13:55 | .    | Break 10m
-14:05 | B    | Compute nodes and SLURM, including interactive nodes 50m
+13:00 | P    | Transferring files to and from Bianca
+13:55 | .    | Break
+14:05 | B    | Compute nodes and SLURM, including interactive nodes
 14:55 | .    | Break
-15:10 | L    | Legal aspects of sensitive data 20m
-15:30 | R    | Summary
-15:35 | R    | Anonymous evaluation
+15:10 | L    | Legal aspects of sensitive data
+15:30 | R    | Summary and anonymous evaluation
 15:45 | All  | Optional Q&A
 
 - Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
