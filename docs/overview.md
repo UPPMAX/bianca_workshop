@@ -236,14 +236,14 @@ are restricted in some ways:
 ???- tip "Using pre-installed software"
 
     Using pre-installed software is part of this course 
-    and is described [here](modules1.md).
+    and is described [here](modules.md).
     This is done by using the module system.
 
 ???- tip "How to run custom software"
 
     Techniques how to run custom software is *not* part of this course.
     Instead, one technique is part of the intermediate Bianca course 
-    and can be found described [here](extra/containers/),
+    and can be found described [here](extra/containers.md),
     which is about using containers
 
 These restrictions apply to most general-purpose clusters.
@@ -262,7 +262,7 @@ due to which there are these additional restrictions to users:
 
 ???- tip "File transfer"
 
-    Transferring file is part of this course and is described [here](transfer_basic.md).
+    Transferring file is part of this course and is described [here](transfer_basics.md).
     This is done using
 
 The goal is *not* to prevent the up/download of sensitive data,
@@ -285,14 +285,14 @@ There are three types of nodes:
 
 ???- tip "Logging in"
 
-    Logging in is part of this course and is described [here](login_bianca.md).
+    Logging in is part of this course and is described [here](login_bianca_desktop.md).
 
 - **calculation nodes**: nodes that do the calculations
 
 ???- tip "Requesting a calculation to run"
 
     Requesting a calculation to run is part of this course 
-    and is described [here](slurm-intro.md).
+    and is described [here](slurm_intro.md).
     This is done by using the SLURM scheduler.
 
 - **interactive nodes**: a type of calculation node, where a user can do calculations directly
@@ -300,7 +300,7 @@ There are three types of nodes:
 ???- tip "Requesting an interactive node"
 
     Requesting an interactive node is part of this course 
-    and is described [here](login_bianca.md).
+    and is described [here](login_bianca_desktop.md).
     This is done by requesting an interactive node 
     from the SLURM scheduler.
 
