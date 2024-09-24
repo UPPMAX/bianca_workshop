@@ -180,8 +180,7 @@ basic Linux knowledge to use her.
 
     Using Linux (and especially the so-called command-line/terminal) is essential
     to use Bianca. Learning the essential Linux commands
-    is part of this course and is described [here](linux.md).
-
+    is part of this course.
 
 ### Difference between supercomputer and (high-performing) computer cluster
 
@@ -218,17 +217,14 @@ are restricted in some ways:
 
 ???- tip "Requesting a calculation to run"
 
-    Requesting a calculation to run is part of this course
-    and is described [here](slurm_intro.md).
+    Requesting a calculation to run is part of this course.
     This is done by using the SLURM scheduler.
 
 ???- tip "Requesting an interactive node"
 
-    Requesting an interactive node is part of this course
-    and is described [here](login.md).
+    Requesting an interactive node is part of this course.
     This is done by requesting an interactive node
     from the SLURM scheduler.
-
 
 - Users cannot install software directly.
   Instead, users need to use pre-installed software or learn
@@ -236,15 +232,14 @@ are restricted in some ways:
 
 ???- tip "Using pre-installed software"
 
-    Using pre-installed software is part of this course
-    and is described [here](modules.md).
+    Using pre-installed software is part of this course.
     This is done by using the module system.
 
 ???- tip "How to run custom software"
 
     Techniques how to run custom software is *not* part of this course.
     Instead, one technique is part of the intermediate Bianca course
-    and can be found described [here](extra/containers.md),
+    and can be found described [here](../extra/containers.md),
     which is about using containers
 
 These restrictions apply to most general-purpose clusters.
@@ -263,8 +258,8 @@ due to which there are these additional restrictions to users:
 
 ???- tip "File transfer"
 
-    Transferring file is part of this course and is described [here](transfer_basics.md).
-    This is done using
+    Transferring file is part of this course.
+    This is done using FileZilla.
 
 The goal is *not* to prevent the up/download of sensitive data,
 instead it is to prevent the *accidental* up/download of sensitive data.
