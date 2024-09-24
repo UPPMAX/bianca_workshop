@@ -75,62 +75,62 @@ When  | Who  | What
 %% Direction is top->down
 flowchart TD
 
-    %% Give a white background, instead of a transparent one
-    classDef node fill:#fff,color:#000,stroke:#000
-    classDef focus_node fill:#fff,color:#000,stroke:#000,stroke-width:4px
-    classDef basic_node fill:#fdd,color:#000,stroke:#f00
-    classDef intermediate_node fill:#ffd,color:#000,stroke:#ff0
+  %% Give a white background, instead of a transparent one
+  classDef node fill:#fff,color:#000,stroke:#000
+  classDef focus_node fill:#fff,color:#000,stroke:#000,stroke-width:4px
+  classDef basic_node fill:#fdd,color:#000,stroke:#f00
+  classDef intermediate_node fill:#ffd,color:#000,stroke:#ff0
   
-    %% subgraph sub_basic_use[Basic use of Bianca]
-      can_login_to_remove_desktop(Can login to remote deskop):::basic_node
-      can_login_to_console(Can login to console):::basic_node
-      can_use_command_line_1(Can use the command line 1):::basic_node
-      can_use_modules(Can use modules):::basic_node
-      can_use_interactive_node(Can use an interactive node):::basic_node
-      can_manage_files_using_cli(Can manage files using CLI):::basic_node
-      can_schedule_jobs(Can schedule jobs):::basic_node
-      can_create_bash_script_using_cli(Can create a bash script using CLI):::basic_node
-      can_tranfer_files_using_gui(Can transfer files using GUI):::basic_node
-    %% end
-    %% style sub_basic_use fill:#fcc,color:#000,stroke:#fcc
+  %% subgraph sub_basic_use[Basic use of Bianca]
+    can_login_to_remove_desktop(Can login to remote deskop):::basic_node
+    can_login_to_console(Can login to console):::basic_node
+    can_use_command_line_1(Can use the command line 1):::basic_node
+    can_use_modules(Can use modules):::basic_node
+    can_use_interactive_node(Can use an interactive node):::basic_node
+    can_manage_files_using_cli(Can manage files using CLI):::basic_node
+    can_schedule_jobs(Can schedule jobs):::basic_node
+    can_create_bash_script_using_cli(Can create a bash script using CLI):::basic_node
+    can_tranfer_files_using_gui(Can transfer files using GUI):::basic_node
+  %% end
+  %% style sub_basic_use fill:#fcc,color:#000,stroke:#fcc
 
-    %% subgraph sub_intermediate_use[Intermediate use of Bianca]
-      can_tranfer_files_using_rsync(Can transfer files using rsync):::intermediate_node
-      can_use_command_line_2(Can use the command line 2):::intermediate_node
-      can_use_custom_software(Can use custom software):::intermediate_node
-      can_monitor_jobs(Can monitor jobs):::intermediate_node
-      can_use_ide(Can use an IDE):::intermediate_node
-    %% end
-    %% style sub_intermediate_use fill:#ffc,color:#000,stroke:#ffc
+  %% subgraph sub_intermediate_use[Intermediate use of Bianca]
+    can_tranfer_files_using_rsync(Can transfer files using rsync):::intermediate_node
+    can_use_command_line_2(Can use the command line 2):::intermediate_node
+    can_use_custom_software(Can use custom software):::intermediate_node
+    can_monitor_jobs(Can monitor jobs):::intermediate_node
+    can_use_ide(Can use an IDE):::intermediate_node
+  %% end
+  %% style sub_intermediate_use fill:#ffc,color:#000,stroke:#ffc
 
 
-    %% Basic
-    can_login_to_remove_desktop --> can_login_to_console
-    can_login_to_remove_desktop --> can_use_command_line_1
-    can_login_to_remove_desktop --> can_tranfer_files_using_gui
-    can_login_to_console --> can_use_command_line_1
-    can_use_command_line_1 --> can_use_modules
-    can_use_command_line_1 --> can_use_interactive_node
-    can_use_command_line_1 --> can_use_command_line_2
-    can_use_command_line_1 --> can_create_bash_script_using_cli
-    can_use_command_line_1 --> can_schedule_jobs
-    can_use_command_line_1 --> can_manage_files_using_cli
-    can_use_modules --> can_schedule_jobs
-    can_create_bash_script_using_cli --> can_schedule_jobs
+  %% Basic
+  can_login_to_remove_desktop --> can_login_to_console
+  can_login_to_remove_desktop --> can_use_command_line_1
+  can_login_to_remove_desktop --> can_tranfer_files_using_gui
+  can_login_to_console --> can_use_command_line_1
+  can_use_command_line_1 --> can_use_modules
+  can_use_command_line_1 --> can_use_interactive_node
+  can_use_command_line_1 --> can_use_command_line_2
+  can_use_command_line_1 --> can_create_bash_script_using_cli
+  can_use_command_line_1 --> can_schedule_jobs
+  can_use_command_line_1 --> can_manage_files_using_cli
+  can_use_modules --> can_schedule_jobs
+  can_create_bash_script_using_cli --> can_schedule_jobs
 
-    %% Basic -> Intermediate
-    can_tranfer_files_using_gui --> can_tranfer_files_using_rsync
-    can_schedule_jobs --> can_monitor_jobs
-    can_use_interactive_node --> can_use_ide
-    can_use_modules --> can_use_ide
+  %% Basic -> Intermediate
+  can_tranfer_files_using_gui --> can_tranfer_files_using_rsync
+  can_schedule_jobs --> can_monitor_jobs
+  can_use_interactive_node --> can_use_ide
+  can_use_modules --> can_use_ide
 
-    %% Make sure Intermediate is below Basic,
-    %% using invisible nodes
-    can_schedule_jobs ~~~ can_use_command_line_2
+  %% Make sure Intermediate is below Basic,
+  %% using invisible nodes
+  can_schedule_jobs ~~~ can_use_command_line_2
 
-    %% Intermediate
-    can_use_command_line_1 --> can_tranfer_files_using_rsync
-    can_use_command_line_2 --> can_use_custom_software
+  %% Intermediate
+  can_use_command_line_1 --> can_tranfer_files_using_rsync
+  can_use_command_line_2 --> can_use_custom_software
 ```
 
 > Overview of the courses.
