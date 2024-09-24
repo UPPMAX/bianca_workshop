@@ -59,7 +59,7 @@ But how do you know whether data is anonymised?
 
  - "It depends..."
  - Some data cannot be anonymised at all (e.g. whole genome sequence)
- - One metric for microdata is [K-anonymity](https://en.wikipedia.org/wiki/K-anonymity)
+ - One metric for micro data is [K-anonymity](https://en.wikipedia.org/wiki/K-anonymity)
 
 ## Making sensitive data FAIR
 
