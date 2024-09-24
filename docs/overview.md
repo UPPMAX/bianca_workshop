@@ -218,7 +218,7 @@ are restricted in some ways:
 ???- tip "Requesting a calculation to run"
 
     Requesting a calculation to run is part of this course 
-    and is described [here](slurm-intro.md).
+    and is described [here](slurm_intro.md).
     This is done by using the SLURM scheduler.
 
 ???- tip "Requesting an interactive node"
@@ -285,7 +285,7 @@ There are three types of nodes:
 
 ???- tip "Logging in"
 
-    Logging in is part of this course and is described [here](login_bianca_desktop.md).
+    Log in to Bianca is part of this course and is described [here](login.md).
 
 - **calculation nodes**: nodes that do the calculations
 
@@ -338,7 +338,7 @@ A user logs in to a login node via the Internet.
     
     If you are more advanced, there are ways to get it running yourself.
     For example, one technique -using containers- is part of the intermediate Bianca course 
-    and can be found described [here](extra/containers/).
+    and can be found described [here](extra/containers.md).
 
 ???- question "4. You want to use an online tool to do a calculation on Bianca. Will this work? Why?"
 

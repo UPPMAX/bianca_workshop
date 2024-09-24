@@ -141,7 +141,7 @@ then answer these questions:
     - a console environment, which looks like text. No graphics. Text.
 
     These answers can be found at
-    <https://docs.uppmax.uu.se/getting_started/login_Bianca/>.
+    <https://docs.uppmax.uu.se/getting_started/login_bianca/>.
 
 - The documentation of how to log in to Bianca states:
   'After logging in, one is on a login node'.
