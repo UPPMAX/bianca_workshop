@@ -332,7 +332,7 @@ A user logs in to a login node via the Internet.
 
     If you are more advanced, there are ways to get it running yourself.
     For example, one technique -using containers- is part of the intermediate Bianca course
-    and can be found described [here](extra/containers.md).
+    and can be found described [here](../extra/containers.md).
 
 ???- question "4. You want to use an online tool to do a calculation on Bianca. Will this work? Why?"
 
