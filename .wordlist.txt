@@ -287,3 +287,8 @@ Formalisms
 hackathon
 snakemake
 nextflow
+filesystem
+gedit
+Thunar
+webbrowser
+
