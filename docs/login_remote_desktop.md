@@ -1,14 +1,14 @@
 # Log in to the Bianca remote desktop environment
 
-![The Bianca environments](./img/bianca_environments_926_x_261.png)
+![The Bianca remote desktop environment](./img/bianca_remote_desktop_463_x_262.png)
+
+> The Bianca remote desktop environment
 
 !!! info "Learning objectives"
 
     - Use the UPPMAX documentation
     - Observe the most common problems when accessing Bianca
     - Log in into Bianca's remote desktop environment using a website 
-    - Log in into Bianca's console environment using SSH
-    - Log in into Bianca's console environment via Rackham
 
 ???- info "Notes for teachers"
 
@@ -17,8 +17,6 @@
     - The learners have used the UPPMAX documentation
     - The learners have observed the most common problems when accessing Bianca
     - The learners have logged in into Bianca's remote desktop environment using a website 
-    - The learners have logged in into Bianca's console environment using SSH
-    - The learners have logged in into Bianca's console environment via Rackham
 
     Schedule:
 
@@ -53,15 +51,12 @@ flowchart TD
 
 Way                                                     |Features
 --------------------------------------------------------|--------------------------------------------------------------------------------------------------
-
 1. Using the remote desktop website                     |Must be within SUNET, requires no setup, visual, clunky to work with
 2. Using the console environment                        |Must be within SUNET, requires an SSH client, terminal, powerful to work with (if you know how)
-3. (optional) Using the console environment from Rackham|Can be done everywhere, requires an SSH client, terminal, powerful to work with (if you know how)
+3. Using the console environment from Rackham           |Can be done everywhere, requires an SSH client, terminal, powerful to work with (if you know how)
 
-Here you will see how these looks like,
-so you can decide which environment to use.
-
-## Using
+Here we focus on the environment that most of us are familiar with:
+a (remote) desktop environment.
 
 ## Exercises
 
@@ -167,3 +162,4 @@ How could your colleague develop your code quicker?"
 
     Requesting an interactive node is part of this course 
     and is described [in the session on Slurm](slurm_intro.md).
+

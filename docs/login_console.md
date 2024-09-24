@@ -1,86 +1,214 @@
-# Log in to the Bianca console environment
+# Login via a terminal
 
-![The Bianca environments](./img/bianca_environments_926_x_261.png)
+!!!- info "Learning objectives"
 
-!!! info "Learning objectives"
+    - Practice using the UPPMAX documentation
+    - Understand what a console environment is
+    - Understand what a terminal is
+    - Understand what a prompt is
+    - Understand that after login, one is on a login node
+    - If needed: has installed an SSH client
+        - Windows: MobaXTerm
+    - Can log in to the console environment using a terminal with X forwarding
+    - Can determine if X forwarding works
 
-    - Use the UPPMAX documentation
-    - Observe the most common problems when accessing Bianca
-    - Log in into Bianca's remote desktop environment using a website 
-    - Log in into Bianca's console environment using SSH
-    - Log in into Bianca's console environment via Rackham
+???- question "For teachers"
 
-???- info "Notes for teachers"
+    Teaching goals are:
 
-    Teaching goals:
+    - Learners have practiced using the UPPMAX documentation
+    - Learners understand what a console environment is
+    - Learners understand what a terminal is
+    - Learners understand what a prompt is
+    - Learners understand that after login, one is on a login node
+    - If needed, learners have installed an SSH client
+        - Windows: MobaXTerm
+    - Learners have logged in to the console environment
+      using a terminal with X forwarding
+    - Learners have determined if X forwarding works
 
-    - The learners have used the UPPMAX documentation
-    - The learners have observed the most common problems when accessing Bianca
-    - The learners have logged in into Bianca's remote desktop environment using a website 
-    - The learners have logged in into Bianca's console environment using SSH
-    - The learners have logged in into Bianca's console environment via Rackham
-
-    Schedule:
+    Lesson plan:
 
     ```mermaid
     gantt
-      title Lesson plan Introduction and Logging in
+      title Login via terminal
       dateFormat X
       axisFormat %s
-      section Introduction
-      Prior knowledge: prior_1, 0, 5s
-      Theory : theory_1, after prior_1, 5s
-      section Logging In
-      Prior knowledge: prior_2, after theory_1, 5s
-      Theory: theory, after prior_2, 5s
-      Exercises: crit, exercise, after theory, 30s
-      Feedback: feedback, after exercise, 10s
+      section First hour
+      Prior : prior, 0, 5s
+      Present: present, after prior, 2s
+      %% It took me 7 mins, here I do that time x2
+      Challenge: crit, challenge, after present, 14s
+      %% Here I use the same time it took me to give feedback
+      Feedback: feedback, after challenge, 7s
     ```
+
+    Prior questions:
+
+    - What is a console environment?
+    - What is a terminal?
+    - What is SSH?
+    - What is an SSH client?
+    - Do you know any SSH clients?
 
 ## Why?
 
-There are multiple ways to log in to Bianca, each having its own features:
+Using a terminal is powerful, where a remote desktop is clumsy.
+Copy-pasting text to a terminal on the remote desktop
+will quickly make you wonder if it cannot be done in a smarter way.
 
-```mermaid
-flowchart TD
-  you[You]
-  bianca[Bianca]
-  you --> |1.Using the remote desktop website| bianca
-  you --> |2.Using SSH| bianca
-  you --> |3.Via Rackham| bianca
+## A terminal and SSH clients
 
-```
+A terminal is a text-only program that can do many things, for example,
+starting a program.
+An SSH client is a program that allows you to connect to another computer.
+Some SSH clients can run from a terminal or vice versa.
 
-Way                                                     |Features
---------------------------------------------------------|--------------------------------------------------------------------------------------------------
+## Exercises
 
-1. Using the remote desktop website                     |Must be within SUNET, requires no setup, visual, clunky to work with
-2. Using the console environment                        |Must be within SUNET, requires an SSH client, terminal, powerful to work with (if you know how)
-3. (optional) Using the console environment from Rackham|Can be done everywhere, requires an SSH client, terminal, powerful to work with (if you know how)
+???- question "Need a video?"
 
-Here you will see how these looks like,
-so you can decide which environment to use.
+    [Here](https://youtu.be/FUNPZHEMC2s) is a video that shows
+    the solution of these exercises
 
-## Using
+Here, we log in to Bianca's console environment via a terminal.
 
-### 2. Using SSH
+For Mac and Windows users it will be hardest to get it working.
 
-???- question "(optional) 6. Exercise: login into the Bianca console environment"
+### Exercise 1: a terminal
 
-    The goal of this exercise is: (1) troubleshooting, to make sure one can access
-    this environment (2) see how it looks like, this may help one decide to
-    use this environment yes of no.
+Go to the UPPMAX documentation at
+[https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
+then answer these questions:
 
-    Do this after having logged in to the Bianca remote desktop,
-    as most troubleshooting occurs in that exercise.
+- Find the UPPMAX page on terminals
 
-### 3. Using SSH via Rackham
+???- question "I cannot find it. Where is it?"
 
-???- question "(optional) 7. Exercise: login into the Bianca console environment from Rackham"
+    You can find find it at <https://docs.uppmax.uu.se/software/terminal/>
 
-    Read [the UPPMAX documentation's 'Login to the Rackham console environment with a password'](https://docs.uppmax.uu.se/getting_started/login_rackham_console_password/).
+- What is a prompt?
 
-    Then, log in to the Rackham console environment.
+???- question "Answer"
+
+    The prompt is the text at the start of the line you can type on.
+    It indicates that the terminal is waiting for user input.
+
+### Exercise 2: install an SSH client if needed
+
+Go to the UPPMAX documentation at
+[https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
+then answer these questions:
+
+- Find the UPPMAX page on SSH clients
+
+???- question "Answer"
+
+    You can find find it at <https://docs.uppmax.uu.se/software/ssh_client/>
+
+- Try starting a terminal and type `ssh` and then enter.
+  If you do not get an error message, you are lucky to have an SSH client
+  installed!
+
+???- question "How does it look like when `ssh` works?"
+
+    Your output will look similar to this:
+
+    ```bash
+    richel@richel-N141CU:~$ ssh
+    usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface] [-b bind_address]
+               [-c cipher_spec] [-D [bind_address:]port] [-E log_file]
+               [-e escape_char] [-F configfile] [-I pkcs11] [-i identity_file]
+               [-J destination] [-L address] [-l login_name] [-m mac_spec]
+               [-O ctl_cmd] [-o option] [-P tag] [-p port] [-R address]
+               [-S ctl_path] [-W host:port] [-w local_tun[:remote_tun]]
+               destination [command [argument ...]]
+           ssh [-Q query_option]
+    ```
+
+- If there is an error, install the recommended SSH client
+
+### Exercise 3: login via SSH
+
+Go to the UPPMAX documentation at
+[https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
+then answer these questions:
+
+- Find the page about how to login to Bianca via SSH and a password
+
+???- question "I cannot find it. Where is it?"
+
+    You can find find it at
+    <https://docs.uppmax.uu.se/getting_started/login_bianca_console_password/>
+
+- Log in to Bianca
+
+???- question "How does that look like?"
+
+    Your ouput will look similar to this:
+
+    <!-- Indeed, line lengths beyond 80 characters -->
+    <!-- markdownlint-disable MD013 -->
+
+    ```bash
+    sven@richel-N141CU:~/GitHubs/uppmax_intro_day_1/docs/sessions$ ssh -X sven@Bianca.uppmax.uu.se
+    sven@Bianca.uppmax.uu.se's password: 
+    Last login: Thu Aug  8 18:35:17 2024 from vpnpool189-229.anst.uu.se
+     _   _ ____  ____  __  __    _    __  __
+    | | | |  _ \|  _ \|  \/  |  / \   \ \/ /   | System:    Bianca1
+    | | | | |_) | |_) | |\/| | / _ \   \  /    | User:      sven
+    | |_| |  __/|  __/| |  | |/ ___ \  /  \    | 
+     \___/|_|   |_|   |_|  |_/_/   \_\/_/\_\   | 
+
+    ###############################################################################
+
+            User Guides: https://docs.uppmax.uu.se/
+
+            Write to support@uppmax.uu.se, if you have questions or comments.
+
+
+    [sven@Bianca1 ~]$ 
+    ```
+
+    <!-- markdownlint-enable MD013 -->
+
+
+Welcome on a login node!
+
+### Exercise 4: find out if X forwarding works
+
+- Find the page about the program called `xeyes`
+
+???- question "I cannot find it. Where is it?"
+
+    You can find find it at <https://docs.uppmax.uu.se/software/xeyes/>
+
+- On a Bianca login node, run `xeyes`.
+
+???- question "How do I run it"
+
+    In your terminal, type:
+
+    ```bash
+    xeyes
+    ```
+
+    and press enter.
+
+- Conclude if X-forwarding works for you. If not, the UPPMAX page on SSH clients
+  hold some hints.
+
+???- question "Where is that page?"
+
+    You can find find it at <https://docs.uppmax.uu.se/software/ssh_client/>
+
+### 5. Using SSH via Bianca
+
+???- question "(optional) 7. Exercise: login into the Bianca console environment from Bianca"
+
+    Read [the UPPMAX documentation's 'Login to the Bianca console environment with a password'](https://docs.uppmax.uu.se/getting_started/login_Bianca_console_password/).
+
+    Then, log in to the Bianca console environment.
     From there, log in to the Bianca console environment.
 
     Do this after having logged in to the Bianca console environment,

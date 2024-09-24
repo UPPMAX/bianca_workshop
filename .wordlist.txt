@@ -291,4 +291,6 @@ filesystem
 gedit
 Thunar
 webbrowser
+bioinformaticians
+
 
