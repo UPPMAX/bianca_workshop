@@ -12,6 +12,7 @@ nav:
     - Using the desktop environment: use_remote_desktop.md
     - Log in to the Bianca console environment: login_console.md
     - Command-line intro: commandline.md
+    - Create an exectable script: create_script.md
     - Module system: modules.md
     - Transferring files to/from Bianca: transfer_basics.md
     - Transferring files to/from Bianca using a GUI: file_transfer_using_gui.md

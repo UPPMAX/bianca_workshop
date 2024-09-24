@@ -48,59 +48,6 @@ We will learn to:
 - (optional) work with directories
 - (optional) work with files
 
-### Create an executable script
-
-Creating an executable script has two steps:
-
-- Create a script
-- Allow the script to execute
-
-As an example, we create a script, called `do_it.sh`:
-
-```bash
-nano do_it.sh
-```
-
-!!! info "Why use a `.sh` file extension?"
-    Using `.sh` as a file extension a social convention
-    for how a Bash script is called,
-    as (1) `sh` is short for 'shell',
-    (2) Bash is short for 'Bourne Again Shell'.
-    A 'shell' in this context is a program
-    that allows working with an operating system.
-
-As an example, copy-paste this content into the script:
-
-```bash
-#!/bin/bash
-echo "Hello!"
-```
-
-!!! info "What does this program do?"
-    
-    The first line is called the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)),
-    and indicates this is a Bash script.
-    
-    The second line displays the text between double quotes.
-
-Save and close `nano`.
-
-- Use `CTRL-X` to start to exit, then press `y` to start saving the file, then
-  press enter to use the current filename
-
-Use [chmod](https://en.wikipedia.org/wiki/Chmod) to make the file executable:
-
-```bash
-chmod +x do_it.sh
-```
-
-- `+x` can be read as: 'add the right to execute'
-
-!!! info "Create read-only files"
-    If you want to protect your data from being modified accidentally,
-    `chmod` can create read-only files,
-    by removing the writing rights using `chmod -w`.
-
 ### (optional) Read the manual
 
 Use `man` to see the help pages about a command:
@@ -206,99 +153,19 @@ flowchart TD
   classDef minimal_node fill:#fdd,color:#000,stroke:#f00
   classDef extra_node fill:#ffd,color:#000,stroke:#ff0
 
-  exercise_1[1.create an executable script]:::minimal_node
+  exercise_1[1.file navigation]:::minimal_node
   exercise_2[2.view help]:::extra_node
-  exercise_3[3.file navigation]:::extra_node
-  exercise_4[4.folder management]:::extra_node
-  exercise_5[5.file management]:::extra_node
+  exercise_4[3.folder management]:::extra_node
+  exercise_5[4.file management]:::extra_node
 
-  exercise_1 --> exercise_2 --> exercise_3 --> exercise_4 --> exercise_5
+  exercise_1 --> exercise_2 --> exercise_3 --> exercise_4
 ```
 
 > Exercises for this session.
 > Red nodes: minimal, needed in other sessions.
 > Yellow nodes: extra, useful in general.
 
-### Exercise 1: create an executable script
-
-- Create a file called `do_it.sh` using `nano`
-
-???- question "Answer"
-
-    Use `nano` to create it:
-
-    ```bash
-    nano do_it.sh
-    ```
-
-    Then do `CTRL + O` to save, `CTRL + X` to exit
-
-- Edit the file `do_it.sh` to have the content below:
-
-```bash
-#!/bin/bash
-echo "Hello!"
-```
-
-???- question "Answer"
-
-    Use `nano` to edit it:
-
-    ```bash
-    nano do_it.sh
-    ```
-
-    Then do `CTRL + O` to save, `CTRL + X` to exit
-
-- Write an executable script that displays a welcome message in text (e.g. `Hello!`)
-
-???- question "Answer"
-
-    Edit the script:
-
-    ```bash
-    nano do_it.sh
-    ```
-
-    Change the text to:
-
-    ```bash
-    #!/bin/bash
-    echo "Hello!"
-    ls | rev
-    ```
-
-    Make the script executable:
-
-    ```bash
-    chmod +x ./do_it.sh
-    ```
-
-- Run the script
-
-???- question "Answer"
-
-    Run the script:
-
-    ```bash
-    ./do_it.sh
-    ```
-
-### Exercise 2: view help
-
-View the help of the command `cd`
-
-???- question "Answer"
-
-    Use `man` to view the help of any command, in this case `cd`:
-
-    ```bash
-    man cd
-    ```
-
-    This will fail, because Bianca has (close to) no internet access.
-
-### Exercise 3: file navigation
+### Exercise 1: file navigation
 
 - Navigate to the project folder, e.g. `/proj/sens2023598`
 
@@ -369,7 +236,21 @@ can be transferred to/from.
     cd /proj/nobackup/sens2023598/wharf/sven/sven-sens2023598
     ```
 
-## Exercise 4: folder management
+### Exercise 2: view help
+
+View the help of the command `cd`
+
+???- question "Answer"
+
+    Use `man` to view the help of any command, in this case `cd`:
+
+    ```bash
+    man cd
+    ```
+
+    This will fail, because Bianca has (close to) no internet access.
+
+## Exercise 3: folder management
 
 - Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/proj/sens2023598/workshop/richel`"
 
@@ -386,7 +267,7 @@ can be transferred to/from.
     mkdir richel
     ```
 
-### Exercise 5: file management
+### Exercise 4: file management
 
 - Create a file, e.g. `richel.txt`
 
