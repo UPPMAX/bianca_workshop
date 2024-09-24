@@ -88,6 +88,22 @@ Also, it helps UPPMAX staff find out how good our documentation is :-)
     - [Exercise 1](https://youtu.be/eSn0kLkU5Dc)
     - [Exercise 2](https://youtu.be/J6hhEfW8-5w)
 
+```mermaid
+flowchart TD
+
+  classDef minimal_node fill:#fdd,color:#000,stroke:#f00
+  classDef extra_node fill:#ffd,color:#000,stroke:#ff0
+
+  exercise_1[1.get an UPPMAX 2FA]:::minimal_node
+  exercise_2[2.general understanding]:::extra_node
+
+  exercise_1 --> exercise_2
+```
+
+> Exercises for this session.
+> Red nodes: minimal, needed in other sessions.
+> Yellow nodes: extra, useful in general.
+
 ### Exercise 1: get an UPPMAX 2FA
 
 Go to the UPPMAX documentation at
