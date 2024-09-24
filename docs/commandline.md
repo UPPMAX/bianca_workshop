@@ -353,7 +353,7 @@ Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/p
 
 ### Exercise 5b
 
-???- question "5b. Copy the file (e.g. to `richel_again.txt`). "
+???- question "5b. Copy the file (e.g. to `richel_again.txt`)."
 
     ```bash
     cp richel.txt richel_again.txt
