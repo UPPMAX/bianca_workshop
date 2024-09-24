@@ -1,74 +1,89 @@
 # Summary
 
-## Next steps
+Learning objectives of this course:
 
-- Q/A session
-- Exercises for the interested.
+- I can log in to the Bianca remote desktop using the website
+- (optional) I can log in to the Bianca console environment using SSH
+- (optional) I can log in to the Bianca via Rackham
+- I can create a minimal executable bash script
+- I can use modules
+- I can transfer files to/from Bianca using FileZilla
+- I can start an interactive session
+- I can submit jobs to the scheduler
+- I understand the legal aspects of sensitive data
 
-## Today's topics
+This course and its relation to the Bianca Intermediate course:
 
-- **Overview of UPPMAX systems**
+```mermaid
+%% Direction is top->down
+flowchart TD
 
-    - NAISS-SENS
-    - Several clusters, like 
+    %% Give a white background, instead of a transparent one
+    classDef node fill:#fff,color:#000,stroke:#000
+    classDef focus_node fill:#fff,color:#000,stroke:#000,stroke-width:4px
+    classDef basic_node fill:#fdd,color:#000,stroke:#f00
+    classDef intermediate_node fill:#ffd,color:#000,stroke:#ff0
+    
+    %% subgraph sub_basic_use[Basic use of Bianca]
+      can_login_to_remove_desktop(Can login to remote deskop):::basic_node
+      can_login_to_console(Can login to console):::basic_node
+      can_use_command_line_1(Can use the command line 1):::basic_node
+      can_use_modules(Can use modules):::basic_node
+      can_use_interactive_node(Can use an interactive node):::basic_node
+      can_manage_files_using_cli(Can manage files using CLI):::basic_node
+      can_schedule_jobs(Can schedule jobs):::basic_node
+      can_create_bash_script_using_cli(Can create a bash script using CLI):::basic_node
+      can_tranfer_files_using_gui(Can transfer files using GUI):::basic_node
+    %% end
+    %% style sub_basic_use fill:#fcc,color:#000,stroke:#fcc
 
-        - Bianca
-        - Rackham
-
-    - Login and compute nodes
-
-- **Legal and administrative aspects**
-
-    - Sensitive personal data
-    - Pseudonymisation and anonymisation
-    - Apply for project
-
-- **Logging in**
- 
-    - ThinLinc, a must for graphics
-    - ``ssh``, may be faster if you just use command-line
-    - VPN
-    - 2FA
-
-
-- **Command-line intro**
-
-    - navigation, using `cd`
-    - file and directory management
-    - change file permission, using `chmod`
-
-
-- **Module system and workflows**
-
-    - modules adds paths to tools
-
-        - module load ...
-        - bioinfo-tools may be required to load you tool
-
-    - workflows
-
-
-- **Transferring files**
-
-    - The ``wharf`` works like a dock at the harbour.
-    - There are several ways to use the ``wharf`` to transfer files
-
-      - copy
-      - transit server
-      - rsync, scp/sftp
-
-- **Introduction to compute nodes**
-
-    - Submitting jobs
+    %% subgraph sub_intermediate_use[Intermediate use of Bianca]
+      can_tranfer_files_using_rsync(Can transfer files using rsync):::intermediate_node
+      can_use_command_line_2(Can use the command line 2):::intermediate_node
+      can_use_custom_software(Can use custom software):::intermediate_node
+      can_monitor_jobs(Can monitor jobs):::intermediate_node
+      can_use_ide(Can use an IDE):::intermediate_node
+    %% end
+    %% style sub_intermediate_use fill:#ffc,color:#000,stroke:#ffc
 
 
-        - Slurm, sbatch, the job queue
-        - Jobs
-        - Slurm parameters
-        - Interactive jobs 
+    %% Basic
+    can_login_to_remove_desktop --> can_login_to_console
+    can_login_to_remove_desktop --> can_use_command_line_1
+    can_login_to_remove_desktop --> can_tranfer_files_using_gui
+    can_login_to_console --> can_use_command_line_1
+    can_use_command_line_1 --> can_use_modules
+    can_use_command_line_1 --> can_use_interactive_node
+    can_use_command_line_1 --> can_use_command_line_2
+    can_use_command_line_1 --> can_create_bash_script_using_cli
+    can_use_command_line_1 --> can_schedule_jobs
+    can_use_command_line_1 --> can_manage_files_using_cli
+    can_use_modules --> can_schedule_jobs
+    can_create_bash_script_using_cli --> can_schedule_jobs
 
-            - allows you to work interactively with command line and your tools but on a compute node.
+    %% Basic -> Intermediate
+    can_tranfer_files_using_gui --> can_tranfer_files_using_rsync
+    can_schedule_jobs --> can_monitor_jobs
+    can_use_interactive_node --> can_use_ide
+    can_use_modules --> can_use_ide
 
-    - Other Slurm tools
+    %% Make sure Intermediate is below Basic,
+    %% using invisible nodes
+    can_schedule_jobs ~~~ can_use_command_line_2
 
-    - Summary about the Bianca Hardware
+    %% Intermediate
+    can_use_command_line_1 --> can_tranfer_files_using_rsync
+    can_use_command_line_2 --> can_use_custom_software
+```
+
+> Overview of the courses.
+> Red nodes: Intro to Bianca.
+> Yellow node: Intermediate Bianca.
+
+Possible next steps:
+
+- [Bianca Intermediate course](https://uppmax.github.io/bianca_workshop/intermediate/intro/):
+  work better with Bianca
+- [Programming Formalisms](https://uppmax.github.io/programming_formalisms/):
+  formal aspects of software development
+
