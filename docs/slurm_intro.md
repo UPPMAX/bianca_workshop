@@ -26,8 +26,12 @@
 
 ## Nodes
 
+- Bianca contains hundreds of nodes, each of which is isolated from each other and the Internet.
+
 ### One node consists of...
 ![node principle](./img/node.png)
+
+- cores
 
 ### Our compute clusters (like Bianca) have this principle
 ![nodes principle](./img/nodes.png)
@@ -41,8 +45,6 @@ Type        |Purpose
 Login node  | Start jobs for worker nodes, do easy things. You share 2 cores and 15 GB RAM with active users within your Sens project
 Compute nodes | Do hard calculations, either from scripts of an interactive session
 
-- Bianca contains hundreds of nodes, each of which is isolated from each other and the Internet.
-- 
 
 ## Slurm schedules and allocates compute resources for you 
 
@@ -158,35 +160,10 @@ flowchart TD
 - Example 2: 12 hours with a full node = 192 hours
    - Waste of resources unless you have a parallel program using all cores or need all the memory, e.g. 128 GB per node
   
-### Choices
-- Work interactively with your data or develop or test
-    - Run an **Interactive session**
-    - ``$ interactive <flags> ...``
-- If you _don't_ need any live interaction with your workflow/analysis/simulation
-    - Send your job to the slurm job batch (sbatch)
-    - `$ sbatch <flags> <program>` or
-    - `$ sbatch <job script>`
- 
-```mermaid
-flowchart TD
-    UPPMAX(What to run on which node?)
-    operation_type{What type of operation/calculation?}
-    interaction_type{What type of interaction?}
-    login_node(Work on login node)
-    interactive_node(Work on interactive node)
-    calculation_node(Schedule for calculation node)
-
-    UPPMAX-->operation_type
-    operation_type-->|light,short|login_node
-    operation_type-->|heavy,long|interaction_type
-    interaction_type-->|Direct|interactive_node
-    interaction_type-->|Indirect|calculation_node
-```
-
 
 ## Interactive jobs
 
-- Most work is most effective as submitted jobs (bacth), but e.g. development needs responsiveness
+- Most work is most effective as submitted jobs (batch), but e.g. development needs responsiveness
 - Interactive jobs are high-priority but limited in `-n` and `-t`
 - Quickly gives you a job and logs you in to the compute node
 - Require same Slurm parameters as other jobs
@@ -257,10 +234,7 @@ and to get those resources, you must should start an interactive job.
   
     - Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there. 
 
-        `$ ml R_packages/4.2.1`
-  
-        `$ ml RStudio/2022.07.1-554`
-
+        `$ ml RStudio/2023.06.2-561`
 
     - **Start rstudio**, keeping terminal active (`&`)
 
@@ -273,9 +247,16 @@ and to get those resources, you must should start an interactive job.
 
     - **Quit RStudio**!
     - **Log out** from interactive session with `<Ctrl>-D` or `logout` or `exit`
+
+!!! tip
+
+    - (Re-)load modules here in an interactive session
+    - Check your working directory, ``pwd``. You are not automatically coming to ``~`` or you project folder
  
  
 ## Job scripts (batch)
+
+!!! 
 
 - Batch scripts can be written in any scripting language. We will use BASH
 - Make first line be  `#!/bin/bash` in the top line
