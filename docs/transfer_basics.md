@@ -244,7 +244,7 @@ rsync -avh my_user@rackham.uppmax.uu.se:path/my_files ~/sens2023531/
 
 ## Mounting the SFTP-server with ``sshfs`` on you local machine
 
-**Mount the wharf on your machine**
+Mount the wharf on your machine.
 
 - This is only possible on your own system.
 - ``sshfs`` allows you to mount the ``wharf`` on your own machine.
