@@ -236,7 +236,7 @@ View the help of the command `cd`
 
     This will fail, because Bianca has (close to) no internet access.
 
-## Exercise 3: folder management
+### Exercise 3: folder management
 
 - Create a folder `/proj/sens2023598/workshop/[your_login_name]`,
   for example, `/proj/sens2023598/workshop/richel`"
