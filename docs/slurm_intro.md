@@ -354,7 +354,7 @@ srun echo Hello world!
 
 !!! admonition "See also"
 
-    - [Intermediate workshop material on slurm](intermediate/slurm_bianca)
+    - [Intermediate workshop material on slurm](intermediate/slurm_bianca.md)
 
 
 !!! admonition "Slurm Cheat Sheet"
