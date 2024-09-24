@@ -38,7 +38,7 @@ Schedule:
 
 When  | Who  | What
 ------|------|-----------------------------
-9:00  | R    | [Introduction](intro.md) (this page) and [logging in](login_bianca.md)
+9:00  | R    | [Introduction](intro.md) (this page), [log in to remote desktop](login_remote_desktop.md), [log in to console environment](login_console.md)
 10:00 | .    | Break
 10:15 | R    | [Command line](commandline.md)
 11:00 | .    | Break
