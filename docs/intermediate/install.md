@@ -41,7 +41,7 @@
 
 ???- tip "Forgot how to use the module system?"
 
-    See [the basic Bianca course page 'Using the module system'](../modules1.md).
+    See [the basic Bianca course page 'Using the module system'](../modules.md).
 
 - There is a **lot of programs and tools installed as modules** on Bianca.
 - These have typically been **installed on Rackham** and is **synced over to Bianca a couple of times per day**.
