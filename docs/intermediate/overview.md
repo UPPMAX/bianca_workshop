@@ -281,14 +281,13 @@ There are three types of nodes:
 
 ???- tip "Logging in"
 
-    Log in to Bianca is part of this course and is described [here](login.md).
+    Log in to Bianca is part of this course.
 
 - **calculation nodes**: nodes that do the calculations
 
 ???- tip "Requesting a calculation to run"
 
-    Requesting a calculation to run is part of this course
-    and is described [here](slurm_intro.md).
+    Requesting a calculation to run is part of this course.
     This is done by using the SLURM scheduler.
 
 - **interactive nodes**: a type of calculation node, where a user can do calculations directly
@@ -325,7 +324,7 @@ A user logs in to a login node via the Internet.
 
     He/she is not inside of SUNET.
 
-    Logging in is part of this course and is described [here](login.md).
+    Logging in is part of this course.
 
 ???- question "3. You want to use a piece of software that came out this morning (!) on Bianca. Will you be able to? Why?"
 
@@ -358,8 +357,7 @@ A user logs in to a login node via the Internet.
     instead (which uses nonsensitive/simulated/fake testing data)
     and upload the final code instead.
 
-    Requesting an interactive node is part of this course
-    and is described [here](login.md).
+    Requesting an interactive node is part of this course.
     This is done by requesting an interactive node
     from the SLURM scheduler.
 
