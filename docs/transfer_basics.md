@@ -89,7 +89,8 @@ Be sure to really use a SFTP client -- not just a SCP client.
 ```bash
 $ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se
 ```
- Ex.
+Ex.
+
 ```bash
 $ sftp -q myuser-sens2023598@bianca-sftp.uppmax.uu.se
 ```
@@ -108,6 +109,7 @@ Please note that in the wharf you only have access to upload your files to the d
 `<username>-<projid>` e.g. `myuser-sens2023598`
 
 Example:
+
 ```bash
 $ sftp -q  pmitev-sens2023598@bianca-sftp.uppmax.uu.se
 pmitev-sens2023598@bianca-sftp.uppmax.uu.se's password:
@@ -125,9 +127,11 @@ Alternatively, you can specify this at the end of the sftp command, so that you 
 $ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>
 ```
 E.g.
+
 ```bash
 `$ sftp -q myuser-sens2023598@bianca-sftp.uppmax.uu.se:myuser-sens2023598
 ```
+
 - `sftp` supports a recursive flag `-r` to upload (`put -r folder_name`) or download (`get -r folder_name`) entire folders and subfolders.
 
 
