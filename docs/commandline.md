@@ -52,19 +52,19 @@ We will learn to:
 
 Creating an executable script has two steps:
 
-- 1. Create a script
-- 2. Allow the script to execute
+- Create a script
+- Allow the script to execute
 
 As an example, we create a script, called `do_it.sh`:
 
-```
+```bash
 nano do_it.sh
 ```
 
 !!! info "Why use a `.sh` file extension?"
     Using `.sh` as a file extension a social convention for how a Bash script is called,
     as (1) `sh` is short for 'shell', (2) Bash is short for 'Bourne Again Shell'.
-    A 'shell' in this context is a program that allows working with an operating system. 
+    A 'shell' in this context is a program that allows working with an operating system.
 
 As an example, copy-paste this content into the script:
 
@@ -80,12 +80,12 @@ echo "Hello!"
 
 Save and close `nano`.
 
- * Use `CTRL-X` to start to exit, then press `y` to start saving the file, then
-   press enter to use the current filename
+- Use `CTRL-X` to start to exit, then press `y` to start saving the file, then
+  press enter to use the current filename
 
 Use [chmod](https://en.wikipedia.org/wiki/Chmod) to make the file executable:
 
-```
+```bash
 chmod +x do_it.sh
 ```
 
@@ -100,7 +100,7 @@ chmod +x do_it.sh
 
 Use `man` to see the help pages about a command:
 
-```
+```bash
 man man
 man cd
 man ls
@@ -137,7 +137,7 @@ The previous location              |`cd -`
 
 !!! info "The Silence Is Golden Rule"
     When your command 'just works' there is no output
-    (try, for example `cd ~`). 
+    (try, for example `cd ~`).
     This is due to [The Silence Is Golden Rule](https://www.linfo.org/rule_of_silence.html)
 
 ### (optional) Work with directories
@@ -180,17 +180,17 @@ Rename a file                      |`mv myfile.txt mycopy.txt`
 Move a file to one folder up       |`mv myfile.txt ../`
 Move a file to the home folder     |`mv myfile.txt ~`
 
- * Note: `nano` is one of many text editors. 
-   It is the one recommended to beginners, 
+ * Note: `nano` is one of many text editors.
+   It is the one recommended to beginners,
    as its interface is closest to what one expects
 
 ## Exercises
 
-Use the materials shown above to answer the questions below. 
+Use the materials shown above to answer the questions below.
 
 ???- tip "Video with solutions"
 
-    There is a video that shows the solution of all these exercises: 
+    There is a video that shows the solution of all these exercises:
     [YouTube](https://youtu.be/7_LPeQbcmAo).
 
     The video, however, follows the order 2-3-4-5-1.
@@ -307,7 +307,7 @@ Navigate to your home folder"
     cd /home/richel
     ```
 
-    The squiggle/tilde (`~`) is a shorter notation, 
+    The squiggle/tilde (`~`) is a shorter notation,
     that does exactly the same:
 
     ```
@@ -412,14 +412,14 @@ commands on Bianca.
 If you are using the Bianca remote desktop environment,
 you can see that its file browser and terminal are friends.
 
-On a clean terminal, try typing `cd` 
+On a clean terminal, try typing `cd`
 and then drag a folder from the GUI to the terminal.
 
 It types the absolute path for you!
 
 ### Commonly used symbolic links
 
-These are some commonly used symbolic links, 
+These are some commonly used symbolic links,
 that will simplify navigation:
 
 ```
