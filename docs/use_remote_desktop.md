@@ -3,6 +3,8 @@
 !!!- info "Learning objectives"
 
     - Practice using the UPPMAX documentation
+    - Can copy-paste text between local computer and the remote desktop
+      (in both directions)
     - Can navigate the file system
     - Can find the name of the file explorer
     - Can do basic file management: create, copy, move and delete
@@ -12,13 +14,13 @@
     - Can start a visual text editor
     - Can find the name of the visual text editor
     - Can do basic things in the visual text editor: edit, save, close
-    - Can copy-paste text between local computer and the remote desktop
-      (in both directions)
 
 ???- question "For teachers"
 
     Teaching goals are:
 
+    - Learners have copy-pasted text between local computer
+      and the remote desktop (in both directions)
     - Learners have used Thunar
     - Learners have found out that the file explorer is called Thunar
     - Learners have done basic file management:
@@ -28,8 +30,6 @@
     - Learners have started `gedit`
     - Learners have found that the text editor is called gedit
     - Learners have done basic things in gedit: edit a files, save, close
-    - Learners have copy-pasted text between local computer
-      and the remote desktop (in both directions)
 
     Lesson plan:
 
@@ -82,7 +82,60 @@ Try to do these exercises by trying out things yourself first.
 There are usually multiple ways to solve the exercise.
 Feel encouraged to explore this new environment too!
 
-### Exercise 1: file navigation
+### Exercise 1: copy-paste text
+
+Go to the UPPMAX documentation at
+[https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
+then answer these questions:
+
+- Find the page where it is documented to log in to
+  Bianca's remote desktop via a webbrowser.
+
+???- question "Answer"
+
+    The page is
+    [here](http://docs.uppmax.uu.se/getting_started/login_Bianca_remote_desktop_website/).
+
+- On that page, find where to find information on how to use the
+  remote desktop
+
+???- question "Answer"
+
+    The link can be found at the 'Usage' heading,
+    which takes you to [ThinLinc](https://docs.uppmax.uu.se/software/thinlinc/),
+    the program that is the workhorse behind the website
+
+- Copy-paste text from local computer to your remote desktop
+
+???- question "Answer"
+
+    Select some text on your local computer and press `CTRL + C` to copy
+    it to your loal clipboard.
+
+    Then, click on the menu bar on the left side of the window and click on the
+    clipboard icon. Press `CTRL + V` to paste the text from your local
+    clipboard to the remote desktop's clipboard
+
+    ![Copy the text to the ThinLinc clipboard](copy_to_clipboard.png)
+
+    Then, in the remote desktop environment, press `CTRL + V` to paste
+    the text from the remote desktop's clipboard to a text editor
+
+    ![Do a regular paste in a text editor](copied_to_text_editor.png)
+
+- Copy-paste text from your remote desktop to your local computer
+
+    In the remote desktop environment, press `CTRL + C` to copy
+    the selected text to the remote desktop's clipboard.
+
+    Then, click on the menu bar on the left side of the window and click on the
+    clipboard icon. Copy the text in the remote desktop's clipboard using
+    `CTRL + C` to your local computer's clipboard.
+
+    Then, on your local computer, press `CTRL + V` to paste
+    the text from your clipboard to a text editor
+
+### Exercise 2: file navigation
 
 - Start a program to navigate your files
 
@@ -137,7 +190,7 @@ its name will be useful to know:
 
     The file navigator is called Thunar.
 
-### Exercise 2: file management
+### Exercise 3: file management
 
 In Thunar:
 
@@ -166,7 +219,7 @@ In Thunar:
 - move a folder
 - delete a folder
 
-### Exercise 3: starting a terminal
+### Exercise 4: starting a terminal
 
 - Start a terminal
 
@@ -201,7 +254,7 @@ In Thunar:
       and press enter
     - Many more: any solution that worked is fine
 
-### Exercise 4: starting a text editor
+### Exercise 5: starting a text editor
 
 - Create a file called `my_file.txt` (the `.txt` at the end is important),
   if not already present
@@ -267,56 +320,3 @@ its name will be useful to know:
     - In the gedit hamburger menu, click 'Quit'
 
     ![The gedit hamburger menu](gedit_hamburger_menu.png)
-
-### Exercise 5: copy-paste text
-
-Go to the UPPMAX documentation at
-[https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
-then answer these questions:
-
-- Find the page where it is documented to log in to
-  Bianca's remote desktop via a webbrowser.
-
-???- question "Answer"
-
-    The page is
-    [here](http://docs.uppmax.uu.se/getting_started/login_Bianca_remote_desktop_website/).
-
-- On that page, find where to find information on how to use the
-  remote desktop
-
-???- question "Answer"
-
-    The link can be found at the 'Usage' heading,
-    which takes you to [ThinLinc](https://docs.uppmax.uu.se/software/thinlinc/),
-    the program that is the workhorse behind the website
-
-- Copy-paste text from local computer to your remote desktop
-
-???- question "Answer"
-
-    Select some text on your local computer and press `CTRL + C` to copy
-    it to your loal clipboard.
-
-    Then, click on the menu bar on the left side of the window and click on the
-    clipboard icon. Press `CTRL + V` to paste the text from your local
-    clipboard to the remote desktop's clipboard
-
-    ![Copy the text to the ThinLinc clipboard](copy_to_clipboard.png)
-
-    Then, in the remote desktop environment, press `CTRL + V` to paste
-    the text from the remote desktop's clipboard to a text editor
-
-    ![Do a regular paste in a text editor](copied_to_text_editor.png)
-
-- Copy-paste text from your remote desktop to your local computer
-
-    In the remote desktop environment, press `CTRL + C` to copy
-    the selected text to the remote desktop's clipboard.
-
-    Then, click on the menu bar on the left side of the window and click on the
-    clipboard icon. Copy the text in the remote desktop's clipboard using
-    `CTRL + C` to your local computer's clipboard.
-
-    Then, on your local computer, press `CTRL + V` to paste
-    the text from your clipboard to a text editor
