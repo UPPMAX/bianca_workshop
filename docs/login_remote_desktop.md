@@ -8,7 +8,7 @@
 
     - Use the UPPMAX documentation
     - Observe the most common problems when accessing Bianca
-    - Log in into Bianca's remote desktop environment using a website 
+    - Log in into Bianca's remote desktop environment using a website
 
 ???- info "Notes for teachers"
 
@@ -16,7 +16,7 @@
 
     - The learners have used the UPPMAX documentation
     - The learners have observed the most common problems when accessing Bianca
-    - The learners have logged in into Bianca's remote desktop environment using a website 
+    - The learners have logged in into Bianca's remote desktop environment using a website
 
     Schedule:
 
@@ -71,7 +71,7 @@ a (remote) desktop environment.
 
 ???- question "Prefer a video?"
 
-    [This 17 minutes long YouTube video](https://youtu.be/74f9AyKkOjg) 
+    [This 17 minutes long YouTube video](https://youtu.be/74f9AyKkOjg)
     shows how to do these exercises, so you can check your answers.
 
     A goal of these exercises is to practice to use the UPPMAX documentation.
@@ -79,7 +79,8 @@ a (remote) desktop environment.
     Please try to do the exercises first!
 
     Specialized videos:
-    - You can see [a YouTube video here](https://youtu.be/UpNI5OUlIo8).
+
+    - You can see [a YouTube video here](https://youtu.be/UpNI5OUlIo8)
 
 ### Exercise 1: Find the documentation
 
@@ -105,7 +106,7 @@ What is likely the problem?"
 
 ???- question "Answer"
 
-    He/she is not inside of SUNET. 
+    He/she is not inside of SUNET.
 
     Show him/her the section above on how to get into SUNET.
 
@@ -141,14 +142,14 @@ Is this OK and why?
 
 ???- question "Answer"
 
-    For that colleague, there seems to be no problem. 
+    For that colleague, there seems to be no problem.
     However, for everyone else this is a problem,
     as the login node is a *shared* node.
 
     The colleague will be asked to *schedule* his/her jobs instead.
     This is usually done by an email from the UPPMAX staff.
 
-    Requesting a calculation to run is part of this course 
+    Requesting a calculation to run is part of this course
     and is described [here](slurm_intro.md).
     This is done by using the SLURM scheduler.
 
@@ -166,10 +167,10 @@ How could your colleague develop your code quicker?"
 ???- question "Answer"
 
     This is the typical use-case to use an interactive node.
-    One could also consider to develop code on a local computer 
+    One could also consider to develop code on a local computer
     instead (which uses nonsensitive/simulated/fake testing data)
     and upload the final code instead.
 
-    Requesting an interactive node is part of this course 
+    Requesting an interactive node is part of this course
     and is described [in the session on Slurm](slurm_intro.md).
 

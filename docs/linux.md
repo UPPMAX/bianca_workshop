@@ -46,14 +46,14 @@ $ pwd -P
 
 ??? answer
 
-    ```
+    ```bash
     /home/$USER
     /castor/project/home/bjornc
     ```
 
 - Check the path to your projects
 
-```
+```bash
 $ cd /proj
 $ ls
 $ pwd
@@ -62,12 +62,12 @@ $ pwd -P
 
 ??? answer
 
-    ```
+    ```bash
     /proj
     /proj
     ```
 
-```
+```bash
 $ cd /sensXXX
 $ pwd
 $ pwd -P
@@ -75,7 +75,7 @@ $ pwd -P
 
 ??? answer
 
-    ```
+    ```bash
     /proj/sensXXX
     /castor/project/proj
     ```
