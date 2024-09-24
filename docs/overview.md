@@ -300,7 +300,7 @@ There are three types of nodes:
 ???- tip "Requesting an interactive node"
 
     Requesting an interactive node is part of this course 
-    and is described [here](login_bianca_desktop.md).
+    and is described [here](login_remote_desktop.md).
     This is done by requesting an interactive node 
     from the SLURM scheduler.
 
