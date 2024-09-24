@@ -41,11 +41,11 @@ Schedule:
 
 When  | Who  | What
 ------|------|-----------------------------
-9:00  | R    | [Introduction](intro.md) (this page), [log in to remote desktop](login_remote_desktop.md), [log in to console environment](login_console.md)
+9:00  | R    | [Introduction](intro.md) (this page), [log in to remote desktop](login_remote_desktop.md), [use the remote desktop](use_remote_desktop.md), [log in to console environment](login_console.md)
 10:00 | .    | Break
 10:15 | R    | [Command line](commandline.md)
 11:00 | .    | Break
-11:15 | R    | [Modules](modules1.md)
+11:15 | R    | [Modules](modules.md)
 12:00 | .    | Lunch
 13:00 | P    | Transferring files to and from Bianca 55m
 13:55 | .    | Break 10m
