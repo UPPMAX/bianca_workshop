@@ -16,6 +16,7 @@ nav:
     - Introduction to compute nodes: slurm_intro.md
     - Intro to NAISS-SENS and sensitive data: sens_project_short.md
     - Summary: summary.md
+    - Evaluation: evaluation.md
     - Exercises: exercises.md
   - Intermediate workshop/hackaton: 
     - Introduction: intermediate/intro.md

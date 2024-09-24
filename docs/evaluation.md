@@ -1,7 +1,5 @@
 # Evaluation
 
-## Evaluation forms
-
 - Any feedback during the day
 
 ???- question "For teachers: what is in that form?"
@@ -32,22 +30,17 @@
 
     Give you confidence levels of the following statements below:
 
-    - I can log in to the Rackham remote desktop using the website
-    - I can do basic things in the Rackham remote desktop
-    - I can transfer files to/from Rackham using FileZilla
-    - I can log in to Rackham using a terminal
-    - I can do basic things in the terminal
-    - I can transfer files to/from Rackham using `scp`
+    - I can log in to the Bianca remote desktop using the website
+    - I can log in to the Bianca console environment using SSH
+    - I can log in to the Bianca via Rackham
+    - I can create a minimal executable bash script
+    - I can use modules
+    - I can transfer files to/from Bianca using FileZilla
     - I can start an interactive session
-    - I can find and load a module
-    - I can start an IDE
-    - I can start a terminal text editor
-    - I can create a bash script
-    - I can schedule a job
-    - I can conclude which UPPMAX cluster best suits my needs
-    - I can find the hardware specifications of an UPPMAX cluster
-    - I can find where to apply for NAISS resources
-    - I can find other UPPMAX courses
+    - I can submit jobs to the scheduler
+    - I understand the legal aspects of sensitive data
+
+    Any other feedback?
 
     Thanks for your feedback.
     This feedback will be published as-is at the end of the day,
