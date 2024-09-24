@@ -1,6 +1,7 @@
 # Introduction to compute nodes
 
 !!! info "Learning objectives"
+
     - This is a short introduction in how to reach the calculation/compute/worker nodes
     - The learners should be able to:
         - Run simple jobs in the batch system
@@ -12,9 +13,9 @@
 
     Teaching goals:
 
-    - The learners demonstrate to have run in interactive 
+    - The learners demonstrate to have run in interactive
     - The learners demonstrate to have run batch job
-    - The learners demonstrate to have understood when to use batch or interactive 
+    - The learners demonstrate to have understood when to use batch or interactive
     - The learners demonstrate to have understood how to plan for jobs
 
     Schedule (45 minutes):
@@ -26,12 +27,14 @@
 
 ## Nodes
 
-- Bianca contains hundreds of nodes, each of which is isolated from each other and the Internet.
+- Bianca contains hundreds of nodes.
+- Each node is like a ordinary computer without a screen
 
-### One node consists of...
+### One Bianca node consists of 16 cores
+
+- Each core can do work more or less independently
+
 ![node principle](./img/node.png)
-
-- cores
 
 ### Our compute clusters (like Bianca) have this principle
 ![nodes principle](./img/nodes.png)
@@ -64,7 +67,7 @@ Compute nodes | Do hard calculations, either from scripts of an interactive sess
     - Send your job to the slurm job **batch** (sbatch)
     - `$ sbatch <flags> <program>` or
     - `$ sbatch <job script>`
- 
+
 ```mermaid
 flowchart TD
     UPPMAX(What to run on which node?)
@@ -98,7 +101,7 @@ flowchart TD
     - How long at most? (`-t`)
         - Example: ask for 30 minutes of 4 cores
             - ``interactive -A sens2023598 -p core -n 4 -t 0:30:0``
-        - Default is 1 min so set it if the job requires more time! 
+        - Default is 1 min so set it if the job requires more time!
 - If in doubt:
     - `-p core`
     - `-n 1`, for Rstudio `-n 2`
@@ -119,7 +122,7 @@ flowchart TD
 - Job = what happens during booked time
 - In interactive session = what you do "live"
 - Otherwise (batch described in)
-    - a script file or 
+    - a script file or
     - the command-line (priority over script)
 - Content of batch script :
     - Slurm parameters (**flags**)
@@ -158,7 +161,7 @@ flowchart TD
 - Remember that you are charged CPU-hours according to booked #cores x hours
 - Example 1: 60 hours with 2 cores = 120 CPU-hours
 - Example 2: 12 hours with a full node = 192 hours
-   - Waste of resources unless you have a parallel program using all cores or need all the memory, e.g. 128 GB per node
+    - Waste of resources unless you have a parallel program using all cores or need all the memory, e.g. 128 GB per node
   
 
 ## Interactive jobs
@@ -168,7 +171,7 @@ flowchart TD
 - Quickly gives you a job and logs you in to the compute node
 - Require same Slurm parameters as other jobs
 - Log in to compute node
-    -  `$ interactive -A <sensXXXXXXX>...`
+    - `$ interactive -A <sensXXXXXXX>...`
 - Log out with `<Ctrl>-D` or `logout`
 
 - To use an interactive node, in a terminal, type:
@@ -183,18 +186,16 @@ For example:
 interactive -A sens2023598 -p core -n 2 -t 8:0:0
 ```
 
-This starts an interactive session using project `sens2023598` 
+This starts an interactive session using project `sens2023598`
 that uses 2 cores and has a maximum duration of 8 hours.
 
 !!! tip
    
     ![copy-paste](./img/copy_paste.PNG)
 
-
 ### Try interactive and run RStudio
 
-We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), 
-and to get those resources, you must should start an interactive job.
+We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), and to get those resources, you must should start an interactive job.
 
 !!! example "Type-along"
 
@@ -203,7 +204,7 @@ and to get those resources, you must should start an interactive job.
     - Start **interactive session** on compute node (2 cores)
     
     - If you already have an interactive session going on use that.
-   
+
         - If you don't find it, do
         
           ``$ squeue``
@@ -212,15 +213,14 @@ and to get those resources, you must should start an interactive job.
         
             ``$ ssh sens2023598-b9``
 
-    - ``$ interactive -A sens2023598 -p devcore -n 2 -t 60:00`` 
-
+    - ``$ interactive -A sens2023598 -p devcore -n 2 -t 60:00``
 
     - Once the interactive job has begun you need to load needed modules, even if you had loaded them before in the login node
     - You can check which node you are on?
 
         `$ hostname`
     
-    - Also try: 
+    - Also try:
 
         `$ srun hostname`
 
@@ -230,9 +230,9 @@ and to get those resources, you must should start an interactive job.
     - If the name before ``.bianca.uppmax.uu.se`` is ending with bXX you are on a compute node!
     - The login node has ``sens2023598-bianca``
     - You can also probably see this information in your prompt, like:
-        ``[bjornc@sens2023598-b9 ~]$`` 
+        ``[bjornc@sens2023598-b9 ~]$``
   
-    - Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there. 
+    - Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there.
 
         `$ ml RStudio/2023.06.2-561`
 
@@ -252,7 +252,7 @@ and to get those resources, you must should start an interactive job.
 
     - (Re-)load modules here in an interactive session
     - Check your working directory, ``pwd``. You are not automatically coming to ``~`` or you project folder
- 
+
 ## Job scripts (batch)
 
 - Batch scripts can be written in any scripting language. We will use BASH
@@ -272,7 +272,7 @@ and to get those resources, you must should start an interactive job.
 !!! example "Type-along"
 
     - Write a bash script called ``jobscript.sh``
-         - You can be in your `~` folder
+        - You can be in your `~` folder
     - To make it faster Copy-paste the code below.
 
 !!! tip
@@ -341,7 +341,7 @@ srun echo Hello world!
 
     - Because it is an inefficient use of your core hours.
     - An interactive session means that you use a calculation node with low efficiency: only irregularly you will use such a node to its full
-    capacity. 
+    capacity.
     - However, the number of core hours are registered as if the node is used at full capacity, as it is _reserved_ to be used at that capacity.
 
 ???+ question "Which approach is best in the following use cases? Batch jobs or interactive sessions?"
@@ -371,7 +371,7 @@ srun echo Hello world!
         - alternatively copy the ``/proj/sens2023598/workshop/slurm/my_bio_workflow.sh`` file and modify it
           ``cd ~``
           ``cp /proj/sens2023598/workshop/slurm/my_bio_workflow.sh .``
-          - edit ``my_bio_workflow.sh`` and add the SBATCH commands
+        - edit ``my_bio_workflow.sh`` and add the SBATCH commands
         
         ```bash
         #!/bin/bash
