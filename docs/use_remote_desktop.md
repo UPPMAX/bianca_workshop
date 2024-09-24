@@ -82,10 +82,10 @@ flowchart TD
   classDef extra_node fill:#ffd,color:#000,stroke:#ff0
 
   exercise_1[1.copy-paste text]:::minimal_node
-  exercise_2[2.starting a text editor]:::minimal_node
+  exercise_2[2.starting a terminal]:::minimal_node
   exercise_3[3.file navigation, can find wharf]:::minimal_node
   exercise_4[4.file management]:::extra_node
-  exercise_5[5.starting a terminal]:::extra_node
+  exercise_5[5.starting a text editor]:::extra_node
 
   exercise_1 --> exercise_2 --> exercise_3 --> exercise_4 --> exercise_5
 ```
