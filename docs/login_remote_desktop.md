@@ -93,7 +93,7 @@ for how to log in to the Bianca remote desktop environment website.
     similar. This will take you to
     [https://docs.uppmax.uu.se/getting_started/login_bianca_remote_desktop_website/](https://docs.uppmax.uu.se/getting_started/login_bianca_remote_desktop_website/)
 
-#### Exercise 2: A user sees nothing
+### Exercise 2: A user sees nothing
 
 ![The Bianca website does nothing](./img/login_uppmax_bianca_website_outside_sunet_browser_short.png)
 
@@ -109,7 +109,7 @@ What is likely the problem?"
 
     Show him/her the section above on how to get into SUNET.
 
-#### Exercise 3: Log in to the Bianca remote desktop
+### Exercise 3: Log in to the Bianca remote desktop
 
 Log in to the Bianca remote desktop.
 
