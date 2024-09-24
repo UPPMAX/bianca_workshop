@@ -11,21 +11,21 @@ This page summarises the content of [this presentation](https://github.com/UPPMA
 ## Sensitive personal data
 
 - Personal data: Traced to now living persons, e.g.
-   	- Name
-   	- Address
-   	- Food preference
-   	- Size of left nostril
+        - Name
+        - Address
+        - Food preference
+        - Size of left nostril
 
 - Sensitive personal data:
-   	- ethnic origin
-   	- political opinion
-   	- religious or philosophical beliefs
-   	- trade union membership
-   	- health
-   	- sex life
-   	- genetic data
-   	- biometric data that can uniquely identify a person
-      		- including some image or auditory recordings
+        - ethnic origin
+        - political opinion
+        - religious or philosophical beliefs
+        - trade union membership
+        - health
+        - sex life
+        - genetic data
+        - biometric data that can uniquely identify a person
+                - including some image or auditory recordings
 
 - More about sensitive personal data
     - [IMY](https://www.imy.se/en/)
@@ -37,11 +37,11 @@ This page summarises the content of [this presentation](https://github.com/UPPMA
 - When in doubt, contact your university's [data protection officer](https://www.uu.se/en/centre/uppmax/get-started/create-account-and-apply-for-project/apply-for-projects/applying-for-naiss-sens-project/sensitive--data), legal department, and/or security department.
 
 - Other sensitive data:
-   	- Confidential information
-      		- e.g. IP from private industry
-   	- Secrets
-      		- sensitive environmental data, e.g. protected species
-   	- National security
+        - Confidential information
+                - e.g. IP from private industry
+        - Secrets
+                - sensitive environmental data, e.g. protected species
+        - National security
 
 - A Data Protection Impact Assessment (DPIA) is legal requirement for any project with GDPR-data.
 
@@ -100,8 +100,8 @@ Sensitive data can be made FAIR. Even though you cannot publish it freely and op
 ## Bianca's design
 
 - Bianca was designed
-   	- for sensitive data from large-scale molecular experiments
-      		- but has since grown into new domains
+        - for sensitive data from large-scale molecular experiments
+                - but has since grown into new domains
     - to make accidental data leaks difficult
     - to make correct data management as easy as possible
     - to emulate the HPC cluster environment that SNIC/NAISS users were familiar with
@@ -160,16 +160,16 @@ Sensitive data can be made FAIR. Even though you cannot publish it freely and op
 **I need more core-hours!**
 
 - Do you really?
-   	- First, use ``jobstats`` to determine whether you've been using your allocation efficiently.
-   	- Second, remember that you can still submit and run jobs after your allocation is out. Such "bonus" jobs run after normal-priority jobs. Typically, they will run in the evening, within a couple of days.
+        - First, use ``jobstats`` to determine whether you've been using your allocation efficiently.
+        - Second, remember that you can still submit and run jobs after your allocation is out. Such "bonus" jobs run after normal-priority jobs. Typically, they will run in the evening, within a couple of days.
 - If you know that you've been submitting efficient jobs and the wait time in the queue is an actual problem, then contact UPPMAX support and request more time. Motivate your request.
 
 **I need more storage space!**
 
 - Do you really?
-   	- First, make an inventory of the data in your project — what do you have, how much space does it take, and why is it there?
-   	- Second, delete data that you don't have an immediate plan to analyse.
-   	- Also convert all .sam files to .bam and compress all your .fastq files.
+        - First, make an inventory of the data in your project — what do you have, how much space does it take, and why is it there?
+        - Second, delete data that you don't have an immediate plan to analyse.
+        - Also convert all .sam files to .bam and compress all your .fastq files.
 - If you've done all this and you still need space, contact UPPMAX support and request more space. Motivate your request by summarising your inventory. Include an estimate of your future needs.
 
 !!! abstract "Keypoints"
