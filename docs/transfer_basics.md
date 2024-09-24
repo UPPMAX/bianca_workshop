@@ -209,7 +209,6 @@ rsync -avh my_user@rackham.uppmax.uu.se:path/my_files ~/sens2023531/
 - You can use transit to transfer data between projects by mounting the wharfs for the different projects and transferring data with ``rsync``.
 - Note that you may of course only do this if this is allowed (agreements, permissions, etc.)
 
-
 ### Software on Transit
 
 - While logged in to Transit, you cannot make lasting changes to anything except for mounted wharf directories. However, anything you have added to your Rackham home directory is available on Transit. In addition, some modules are available.
@@ -222,7 +221,8 @@ rsync -avh my_user@rackham.uppmax.uu.se:path/my_files ~/sens2023531/
     # Run the tool
     dds
     ```
-  ![dds-cli](./img/dds-cli.png)
+
+    ![dds-cli](./img/dds-cli.png)
 
 - To download data from TCGA, log in to Rackham and install the GDC client to your home directory. Then log in to Transit, mount the wharf, and run ./gdc-client.
 
@@ -235,6 +235,7 @@ rsync -avh my_user@rackham.uppmax.uu.se:path/my_files ~/sens2023531/
     - Keep in mind that project folders on Rackham are not available on transit.
 
 !!! abstract "keypoints"
+
     - The "WHARF" works like a dock at the harbour.
     - There are several ways to use the wharf to transfer files
         - copy
@@ -242,7 +243,7 @@ rsync -avh my_user@rackham.uppmax.uu.se:path/my_files ~/sens2023531/
         - rsync, scp/sftp
 
 ## Mounting the SFTP-server with ``sshfs`` on you local machine
----
+
 **Mount the wharf on your machine**
 
 - This is only possible on your own system.
@@ -251,6 +252,7 @@ rsync -avh my_user@rackham.uppmax.uu.se:path/my_files ~/sens2023531/
 - Remember that you are neither logged in on the distant server, nor is the data physically on your local disk (until you have copied it).
 
 !!! warning
+
     - UPPMAX doesn't have ``sshfs`` client package installed for security reasons.
     - ``sshfs`` is available on most Linux distributions:
         - install the package ``sshfs`` on Ubuntu,
