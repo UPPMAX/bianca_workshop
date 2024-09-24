@@ -19,7 +19,7 @@
 
     Schedule (45 minutes):
 
-    - 5 minutes: lecturing
+    - 10 minutes: lecturing
     - 15 minutes type-alongs x 2
     - 20 minutes: exercise + quiz
     - 5 minutes: discuss answers
@@ -79,21 +79,52 @@ flowchart TD
     interaction_type-->|Indirect|calculation_node
 ```
 
-### jobs
+### Allocation flags/Slurm parameters
+
+- 1 mandatory setting for jobs:
+    - Which compute project? (`-A`)
+    - Example: ``interactive -A sens2023598``
+- 3 settings you really should set:
+    - Type of queue or partition? (`-p`)
+        - ``core``  for most jobs and **default**!
+        - ``node``  for larger jobs
+        - for short development jobs and tests: ``devcore``, ``devel``)
+        - Example: ``interactive -A sens2023598 -p core``
+    - How many cores? (`-n`)
+        - up to 16 for core job (default 1)
+        - Example: ``interactive -A sens2023598 -p core -n 4``
+    - How long at most? (`-t`)
+        - Example: ask for 30 minutes of 4 cores
+            - ``interactive -A sens2023598 -p core -n 4 -t 0:30:0``
+- If in doubt:
+    - `-p core`
+    - `-n 1`, for Rstudio `-n 2`
+    - `-t 10-00:00:00` (10 days)
+
+!!! admonition "Slurm Cheat Sheet"
+
+    - ``-A``    project number
+    - ``-t``    wall time          (default 1 hr)
+    - ``-n``    number of cores    (default 1)
+    - ``-p``    partition
+        - ``core`` is default and works for jobs narrower than 16 cores
+        - ``node`` can be used if you need the whole node and its memory
+    - ``-N``    number of nodes (only needed if your code is parallelized with MPI and with ``-p node´´)
+
+### Jobs
 
 - Job = what happens during booked time
-- Described in
+- In interactive session = what you do "live"
+- Otherwise (batch described in)
     - a script file or 
     - the command-line (priority over script)
-- The definitions of a job:
+- Content of batch script :
     - Slurm parameters (**flags**)
     - Load software modules
     - (Navigate in file system)
     - Run program(s)
     - (Collect output)
     - ... and more
-
-- You define **jobs** to be run on the compute nodes and therefore sent to the queue.
 
 !!! admonition "Slurm Cheat Sheet"
 
@@ -105,20 +136,62 @@ flowchart TD
         - ``core`` is default and works for jobs narrower than 16 cores
         - ``node`` can be used if you need the whole node and its memory
 
+### The queue
 
+!!! tip
 
+    - You don't see the queue graphically.
+    - But, overall:
+        - short and narrow jobs will start fast
+        - test and development jobs can get use of specific development nodes if they are shorter than 1 hour and uses up to two nodes.
+        - waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
 
+!!! note "See also"
+
+    [More about the queue](slurm_intro.md#more-about-the-queue)
+
+### Core-hours
+
+- Remember that you are charged CPU-hours according to booked #cores x hours
+- Example 1: 60 hours with 2 cores = 120 CPU-hours
+- Example 2: 12 hours with a full node = 192 hours
+   - Waste of resources unless you have a parallel program using all cores or need all the memory, e.g. 128 GB per node
+  
+### Choices
+- Work interactively with your data or develop or test
+    - Run an **Interactive session**
+    - ``$ interactive <flags> ...``
+- If you _don't_ need any live interaction with your workflow/analysis/simulation
+    - Send your job to the slurm job batch (sbatch)
+    - `$ sbatch <flags> <program>` or
+    - `$ sbatch <job script>`
+ 
+```mermaid
+flowchart TD
+    UPPMAX(What to run on which node?)
+    operation_type{What type of operation/calculation?}
+    interaction_type{What type of interaction?}
+    login_node(Work on login node)
+    interactive_node(Work on interactive node)
+    calculation_node(Schedule for calculation node)
+
+    UPPMAX-->operation_type
+    operation_type-->|light,short|login_node
+    operation_type-->|heavy,long|interaction_type
+    interaction_type-->|Direct|interactive_node
+    interaction_type-->|Indirect|calculation_node
+```
 
 
 ## Interactive jobs
 
-- Most work is most effective as submitted jobs, but e.g. development needs responsiveness
+- Most work is most effective as submitted jobs (bacth), but e.g. development needs responsiveness
 - Interactive jobs are high-priority but limited in `-n` and `-t`
-- Quickly give you a job and logs you in to the compute node
+- Quickly gives you a job and logs you in to the compute node
 - Require same Slurm parameters as other jobs
 - Log in to compute node
-    -  `$ interactive ...`
-- Logout with `<Ctrl>-D` or `logout`
+    -  `$ interactive -A <sensXXXXXXX>...`
+- Log out with `<Ctrl>-D` or `logout`
 
 - To use an interactive node, in a terminal, type:
 
