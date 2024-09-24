@@ -27,7 +27,7 @@ starting from the biggest source of money for research in Sweden.
 ![Vetenskapsrådet logo](./img/vr_logo_128_x_154.png)
 
 [Vetenskapsrådet](https://www.vr.se) ('Science counsel', VR) is biggest funder
-of research in Sweden and funds the national HPC infrastructure. 
+of research in Sweden and funds the national HPC infrastructure.
 
 ![NAISS logo](./img/naiss_logo_416_x_68.png)
 
@@ -37,8 +37,8 @@ among other Uppsala.
 
 ![UPPMAX logo](./img/uppmax_logo.png)
 
-[Uppsala Multidisciplinary Center for Advanced Computational Science](https://www.uppmax.uu.se/) (**UPPMAX = UppMACS**) 
-provides the HPC infrastructure that is physically located in Uppsala. 
+[Uppsala Multidisciplinary Center for Advanced Computational Science](https://www.uppmax.uu.se/) (**UPPMAX = UppMACS**)
+provides the HPC infrastructure that is physically located in Uppsala.
 Part of this is to provide training and [support](https://www.uppmax.uu.se/support).
 
 ```mermaid
@@ -138,17 +138,17 @@ that can be accessed by the internet.
 
 For this, the [UPPMAX cloud](https://www.uu.se/en/centre/uppmax/resources/clusters/cloud-service-dis)
 has a service called 'Dis' (the Swedish word for 'haze') and is part of
-the `EAST-1` region of the SNIC science cloud. 
+the `EAST-1` region of the SNIC science cloud.
 
 ## Bianca
 
-Here we describe what Bianca is, 
+Here we describe what Bianca is,
 where her name comes from,
 and the ideas behind her design.
 
 ### Bianca's name
 
-Bianca, like all clusters at UPPMAX, 
+Bianca, like all clusters at UPPMAX,
 is named after a Tintin character,
 in this case after Bianca Castafiore.
 
@@ -158,13 +158,13 @@ in this case after Bianca Castafiore.
 
 Bianca is an high-performance computing (HPC) cluster for sensitive data.
 
-Or: Bianca is a group of computers that can effectively run many calculations, 
+Or: Bianca is a group of computers that can effectively run many calculations,
 as requested by multiple people, at the same time.
 As the data is sensitive, it is protected to remain only on Bianca.
 
 Bianca is designed to
 
-- Protect the sensitive data: 
+- Protect the sensitive data:
     - (1a) Accidental data leaks should be difficult
     - (1b) Law: if data is leaked, the person doing so should be possibly identified
 - Emulate a standard HPC cluster environment:
@@ -198,7 +198,7 @@ This home-made computer cluster may not be suitable for high-performance.
 
 ![The Rackham computer cluster](./img/uppmax-light2_412_x_285.jpg)
 
-The image above shows Rackham, another UPPMAX 
+The image above shows Rackham, another UPPMAX
 computer cluster, suitable for high-performance computing.
 This makes Rackham an high-performance computing (HPC) cluster.
 Bianca and Rackham are HPC clusters.
@@ -211,7 +211,7 @@ many calculations, as requested by multiple people, at the same time.
 To ensure fair use of this shared resource, regular users
 are restricted in some ways:
 
-- Users cannot run calculations directly. 
+- Users cannot run calculations directly.
   Instead, users need to request either (1) a calculation to be run,
   or (2) an interactive node
 
@@ -229,7 +229,7 @@ are restricted in some ways:
     from the SLURM scheduler.
 
 
-- Users cannot install software directly. 
+- Users cannot install software directly.
   Instead, users need to use pre-installed software or learn
   techniques how to run custom software anyway
 
@@ -246,13 +246,13 @@ are restricted in some ways:
     and can be found described [here](extra/containers/),
     which is about using containers
 
-These restrictions apply to most general-purpose clusters. 
+These restrictions apply to most general-purpose clusters.
 However, Bianca is a **sensitive data** cluster, to which
 more restrictions apply.
 
 ### Restrictions on a sensitive data computer cluster
 
-Next to the general restrictions above, 
+Next to the general restrictions above,
 Bianca also is a **sensitive data** cluster.
 This sensitive data must be protected to remain only on Bianca,
 due to which there are these additional restrictions to users:
@@ -267,7 +267,7 @@ due to which there are these additional restrictions to users:
 
 The goal is *not* to prevent the up/download of sensitive data,
 instead it is to prevent the *accidental* up/download of sensitive data.
-As these up/downloads are monitored, in case of an accident, 
+As these up/downloads are monitored, in case of an accident,
 the extent of the leak and the person (accidentally) causing it
 is known. Identifying a responsible person in case of such an
 accident is required by law.
@@ -308,7 +308,6 @@ There are three types of nodes:
 Each node contains several CPU/GPU cores, RAM and local storage space.
 
 A user logs in to a login node via the Internet.
-
 
 
 ## Summary

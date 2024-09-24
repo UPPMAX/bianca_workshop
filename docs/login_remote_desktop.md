@@ -51,6 +51,7 @@ flowchart TD
 
 Way                                                     |Features
 --------------------------------------------------------|--------------------------------------------------------------------------------------------------
+
 1. Using the remote desktop website                     |Must be within SUNET, requires no setup, visual, clunky to work with
 2. Using the console environment                        |Must be within SUNET, requires an SSH client, terminal, powerful to work with (if you know how)
 3. Using the console environment from Rackham           |Can be done everywhere, requires an SSH client, terminal, powerful to work with (if you know how)
@@ -86,7 +87,7 @@ for how to log in to the Bianca remote desktop environment website.
 
 #### Exercise 2: A user sees nothing
 
-![](./img/login_uppmax_bianca_website_outside_sunet_browser_short.png)
+![The Bianca website does nothing](./img/login_uppmax_bianca_website_outside_sunet_browser_short.png)
 
 > A colleague visiting [https://bianca.uppmax.uu.se/](https://bianca.uppmax.uu.se/) and sees nothing...
 

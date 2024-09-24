@@ -402,7 +402,7 @@ Command name|Purpose
 
 A command that cannot be put in a table:
 
- - `|`: [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix)),
+- `|`: [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix)),
   the output of one command to serve as input for the next
 
 
