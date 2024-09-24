@@ -96,6 +96,7 @@ flowchart TD
     - How long at most? (`-t`)
         - Example: ask for 30 minutes of 4 cores
             - ``interactive -A sens2023598 -p core -n 4 -t 0:30:0``
+        - Default is 1 min so set it if the job requires more time! 
 - If in doubt:
     - `-p core`
     - `-n 1`, for Rstudio `-n 2`
@@ -104,7 +105,7 @@ flowchart TD
 !!! admonition "Slurm Cheat Sheet"
 
     - ``-A``    project number
-    - ``-t``    wall time          (default 1 hr)
+    - ``-t``    wall time          (default 1 min)
     - ``-n``    number of cores    (default 1)
     - ``-p``    partition
         - ``core`` is default and works for jobs narrower than 16 cores
@@ -281,7 +282,7 @@ and to get those resources, you must should start an interactive job.
     - It is good practice to end the line with ``-l`` to reload a fresh environment with no modules loaded.
     - This makes you sure that you don't enable other software or versions that may interfere with what you want to do in the job. 
 - Before the job content, add the batch flags starting the lines with the keyword `#SBATCH`, like:
-    - ``#SBATCH -t 2:00:00``
+    - ``#SBATCH -t 0:30:00``
     - ``#SBATCH -p core``
     - ``#SBATCH -n 3``
 - `#` will be ignored by `bash` and can run as an ordinary bash script
@@ -304,7 +305,7 @@ and to get those resources, you must should start an interactive job.
 #### A simple job script template
 
 ```bash
-#!/bin/bash
+#!/bin/bash -l
 
 #SBATCH -A sens2023598  # Project ID
 
@@ -328,16 +329,18 @@ module list
 
 # do something
 
-echo Hello world!  
+echo Hello world!
+srun hostname
 
 ```
 
 - Run it:
 
-    ``$ sbatch jobscript.sh``
+    - ``$ sbatch jobscript.sh``
 
+- We _can_ modify the slurm parameters for tests from the commandline.
 
-
+    - ``$ sbatch -n 4 jobscript.sh``
 
 
 ## Exercises
