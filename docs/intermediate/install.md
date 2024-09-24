@@ -175,7 +175,7 @@ Then within R, try loading the package you want, like ``glmnet``:
 
     - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
     - [From R course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/r/packagesR.html){:target="_blank"}
-    - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/R/isolatedR.html){:target="_blank"}
+    - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/r/isolatedR.html){:target="_blank"}
 
 
 ### Python and other
