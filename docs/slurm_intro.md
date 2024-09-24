@@ -242,7 +242,7 @@ and to get those resources, you must should start an interactive job.
 
     - Slow to start?
     - Depends on:
-        - number of packages 
+        - number of packages
         - if you save a lot of data in your RStudio workspace, to be read during start up.
 
     - **Quit RStudio**!
@@ -253,15 +253,12 @@ and to get those resources, you must should start an interactive job.
     - (Re-)load modules here in an interactive session
     - Check your working directory, ``pwd``. You are not automatically coming to ``~`` or you project folder
  
- 
 ## Job scripts (batch)
-
-!!! 
 
 - Batch scripts can be written in any scripting language. We will use BASH
 - Make first line be  `#!/bin/bash` in the top line
     - It is good practice to end the line with ``-l`` to reload a fresh environment with no modules loaded.
-    - This makes you sure that you don't enable other software or versions that may interfere with what you want to do in the job. 
+    - This makes you sure that you don't enable other software or versions that may interfere with what you want to do in the job.
 - Before the job content, add the batch flags starting the lines with the keyword `#SBATCH`, like:
     - ``#SBATCH -t 0:30:00``
     - ``#SBATCH -p core``
@@ -274,12 +271,12 @@ and to get those resources, you must should start an interactive job.
 
 !!! example "Type-along"
 
-    - Write a bash script called ``jobscript.sh`` 
-         - You can be in your `~` folder    
+    - Write a bash script called ``jobscript.sh``
+         - You can be in your `~` folder
     - To make it faster Copy-paste the code below.
 
 !!! tip
-   
+
     ![copy-paste](./img/copy_paste.PNG)
 
 
@@ -323,13 +320,12 @@ srun echo Hello world!
 
     - ``$ sbatch -n 4 jobscript.sh``
 
-
 ## Exercises
 
 ???+ question "You are developing code on Bianca."
 
-    - You write the code line-by-line and schedule a test run after each addition. 
-    - However, after each new line, it takes a couple of minutes before you know your code worked yes/no. 
+    - You write the code line-by-line and schedule a test run after each addition.
+    - However, after each new line, it takes a couple of minutes before you know your code worked yes/no.
     - How could you develop your code quicker?"
 
     ??? tip "Answer"
@@ -339,34 +335,30 @@ srun echo Hello world!
     
 ??? question "Start an interactive session"
 
-    The goal of this exercise is to make sure you know how to start an 
-    interactive session. 
+    The goal of this exercise is to make sure you know how to start an interactive session.
 
 ???- question "Why not always use an interactive session?"
 
-     - Because it is an inefficient use of your core hours.
-
-     - An interactive session means that you use a calculation node with low efficiency: only irregularly you will use such a node to its full
+    - Because it is an inefficient use of your core hours.
+    - An interactive session means that you use a calculation node with low efficiency: only irregularly you will use such a node to its full
     capacity. 
-     - However, the number of core hours are registered as if the node is used at full capacity, as it is *reserved* to be used at that capacity.
+    - However, the number of core hours are registered as if the node is used at full capacity, as it is _reserved_ to be used at that capacity.
 
 ???+ question "Which approach is best in the following use cases? Batch jobs or interactive sessions?"
 
-    1.  Long jobs
-    1.  Short jobs with interactive "run-time"/interactive user input
-    1.  Short jobs without interactive "run-time"/interactive user input
-    1.  Test/debugging/developing code
-    1.  Playing with and plotting large data
+    1. Long jobs
+    1. Short jobs with interactive "run-time"/interactive user input
+    1. Short jobs without interactive "run-time"/interactive user input
+    1. Test/debugging/developing code
+    1. Playing with and plotting large data
 
     ??? tip "Answer"
 
-        1.  batch
-        1.  interactice
-        1.  batch
-        1.  interactive
-        1.  interactive
-
-
+        1. batch
+        1. interactice
+        1. batch
+        1. interactive
+        1. interactive
 
 ???+ question "Submit a Slurm job"
 
@@ -374,9 +366,10 @@ srun echo Hello world!
         - You can copy the my_bio_workflow.sh file in ``/proj/sens2023598/workshop/slurm`` to your home folder and make the necessary changes.
     
     ??? tip "Answer"
+
         - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
         - alternatively copy the ``/proj/sens2023598/workshop/slurm/my_bio_workflow.sh`` file and modify it
-          ``cd ~`` 
+          ``cd ~``
           ``cp /proj/sens2023598/workshop/slurm/my_bio_workflow.sh .``
           - edit ``my_bio_workflow.sh`` and add the SBATCH commands
         
@@ -387,7 +380,6 @@ srun echo Hello world!
         #SBATCH -t 01:00:00
         #SBATCH -p core
         #SBATCH -n 2
-
 
         cd ~
         mkdir -p myworkflow
@@ -423,19 +415,22 @@ srun echo Hello world!
         ```
 
         - make the job script executable
+        
         ```bash
         $ chmod a+x my_bio_workflow.sh
         ```
         
         - submit the job
+        
         ```bash
         $ sbatch my_bio_workflow.sh
         ```
+
 ## Links
 
 - [Official slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
 - [New Slurm user guide (needs updates)](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/slurm/){:target="_blank"}
-- [Discovering job resource usage with `jobstats`](http://docs.uppmax.uu.se/software/jobstats/){:target="_blank"} 
+- [Discovering job resource usage with `jobstats`](http://docs.uppmax.uu.se/software/jobstats/){:target="_blank"}
 - [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"}
 - [The job scheduler graphically](https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/){:target="_blank"}
 
@@ -444,10 +439,10 @@ srun echo Hello world!
     - Any further thoughts?
 
 !!! abstract "Keypoints"
+
     - Slurm is a job scheduler to handle the compute nodes
         - add flags to describe your job.
     - You are always in the login node unless you:
         - start an interactive session to do development or hands-on work
         - start a batch job to run jobs not needing any manual input
     - There is a job wall time limit of ten days (240 hours).
- 
