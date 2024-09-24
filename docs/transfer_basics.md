@@ -45,7 +45,7 @@ E.g.
    e.g.
    `myuser-sens2023598`
 
-##  Methods
+## Methods
 
 - GUI sftp clients
 - Using standard command line sftp client
@@ -56,8 +56,8 @@ E.g.
 
 !!! info "A step-by-step explanation can be found [here](file_transfer_using_gui.md)"
 
----
 - Please notice that **SFTP is NOT the same as SCP**.
+
 Be sure to really use a SFTP client -- not just a SCP client.
 
 - Also be aware that many SFTP clients use reconnects (with a cached version of your password). This will not work for Bianca, because of the second factor authentication! Other clients try to use multiple connections with the same password, which will fail as well.
@@ -69,11 +69,13 @@ Be sure to really use a SFTP client -- not just a SCP client.
 `lftp sftp://<username>-<projname>@bianca-sftp.uppmax.uu.se/<username>-<projname>/`
 
 ### WinSCP (Windows)
+
 - Connect from local computer
 
 ![WinSCP](./img/winscp-snaphot1.png)
 
 ### Filezilla (Linux/MacOS/Windows)
+
 - Asks for password every time you transfer files
 - Connect from local computer
 
