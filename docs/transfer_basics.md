@@ -47,11 +47,12 @@ E.g.
 
 
 ##  Methods
+
 ---
--	GUI sftp clients
--	Using standard command line sftp client
+- GUI sftp clients
+- Using standard command line sftp client
 - Transit Server from/to Rackham
--	Mounting the wharf on your local computer
+- Mounting the wharf on your local computer
 
 ## GUI sftp clients
 
