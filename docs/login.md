@@ -67,7 +67,7 @@ After logging in, one wants to behave considerate towards other users.
 <!-- markdownlint-disable MD013 -->
 
 It is assumed you have fulfilled all
-[prerequisites for using Bianca](https://docs.uppmax.uu.se/getting_started/Bianca_usage_prerequisites/).
+[prerequisites for using Bianca](https://docs.uppmax.uu.se/getting_started/bianca_usage_prerequisites/).
 
 <!-- markdownlint-enable MD013 -->
 
@@ -124,7 +124,7 @@ then answer these questions:
 
 ???- question "Answer"
 
-    It is at <https://docs.uppmax.uu.se/getting_started/login_Bianca/>.
+    It is at <https://docs.uppmax.uu.se/getting_started/login_bianca/>.
 
     You can reach this page by searching for
     'Login Bianca' or 'Log in Bianca'.
