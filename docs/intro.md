@@ -28,16 +28,17 @@
       Feedback: feedback, after exercise, 10s
     ```
 
+## Introduction
+
 Are you starting to work with your sensitive data in your research?
 
 If yes, welcome to a full day introduction to
 handling sensitive data on the UPPMAX cluster, Bianca!
 
-You will learn about the national infrastructure Bianca is part of,
-how to login to Bianca, upload and download files,
+You will learn how to login to Bianca, upload and download files,
 using pre-installed software and how to run your code.
 
-Schedule:
+## Schedule
 
 When  | Who  | What
 ------|------|-----------------------------
