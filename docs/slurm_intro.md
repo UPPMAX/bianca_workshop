@@ -40,11 +40,11 @@ Login node  | Start jobs for worker nodes, do easy things. You share 2 cores and
 Compute nodes | Do hard calculations, either from scripts of an interactive session
 
 
-**Our nodes on Bianca have this principle**
+- **Our nodes on Bianca have this principle**
 
 ![node principle](./img/node.png)
 
-**Our clusters (like Bianca) have this principle**
+- **Our clusters (like Bianca) have this principle**
 
 ![nodes principle](./img/nodes.png)
 
@@ -173,7 +173,7 @@ flowchart TD
         - Limited to 12 hours (?) and 2 nodes (32 cores)
         - CPU hours are ticking all the time the session is active, even if you do not perform any work
 
-- Log in to compute node via thwe terminal:
+- Log in to compute node via the terminal:
 
 ```bash
 interactive -A [project name] -p core -n [number_of_cores] -t [session_duration]
@@ -200,7 +200,7 @@ We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/sof
 
         - Try to start  the interactive session but if it takes a while, just listen.
         - It may have started by the time for exercises
-   
+
     Use **ThinLinc**
 
     - If you already have an interactive session going on, use that.
@@ -371,17 +371,17 @@ srun echo Hello world!
     - ``-C mem512GB`` allocate a fat node with 512 GB RAM
     - ``-C gpu``
 
-    **Batch jobs**
+    - **Batch jobs**
     
     - Two alternatives
         - ``sbatch <jobscript with all #SBATCH options>``
         - ``sbatch <options that will be prioritized over the options within the jobs script> <jobscript>``
-           - can for instance be used if you just want to test with, for instance, fewer cores and shorter time
-           - Example: ``sbatch -t  60:00 -p devcore -n 2 job.sh``
+            - can for instance be used if you just want to test with, for instance, fewer cores and shorter time
+            - Example: ``sbatch -t  60:00 -p devcore -n 2 job.sh``
           
-    **Interactive**
+    - **Interactive**
     
-    - ``interactive -A <project> <other options if not using default settings>`` 
+    - ``interactive -A <project> <other options if not using default settings>``
     - load your modules when session starts
 
 
@@ -495,7 +495,7 @@ srun echo Hello world!
 ## Links
 
 - [Official slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
-- [New Slurm user guide ](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/slurm/){:target="_blank"}
+- [New Slurm user guide](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/slurm/){:target="_blank"}
 - [Discovering job resource usage with `jobstats`](http://docs.uppmax.uu.se/software/jobstats/){:target="_blank"}
 - [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"}
 - [The job scheduler graphically](https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/){:target="_blank"}
