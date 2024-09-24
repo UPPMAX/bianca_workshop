@@ -94,7 +94,7 @@ then answer these questions:
 ???- question "Answer"
 
     The page is
-    [here](http://docs.uppmax.uu.se/getting_started/login_Bianca_remote_desktop_website/).
+    [here](http://docs.uppmax.uu.se/getting_started/login_bianca_remote_desktop_website/).
 
 - On that page, find where to find information on how to use the
   remote desktop
@@ -116,12 +116,12 @@ then answer these questions:
     clipboard icon. Press `CTRL + V` to paste the text from your local
     clipboard to the remote desktop's clipboard
 
-    ![Copy the text to the ThinLinc clipboard](copy_to_clipboard.png)
+    ![Copy the text to the ThinLinc clipboard](./img/copy_to_clipboard.png)
 
     Then, in the remote desktop environment, press `CTRL + V` to paste
     the text from the remote desktop's clipboard to a text editor
 
-    ![Do a regular paste in a text editor](copied_to_text_editor.png)
+    ![Do a regular paste in a text editor](./img/copied_to_text_editor.png)
 
 - Copy-paste text from your remote desktop to your local computer
 
@@ -141,7 +141,7 @@ then answer these questions:
 
 ???- question "Answer"
 
-    ![The Bianca remote desktop environment](Bianca_remote_desktop.png)
+    ![The Bianca remote desktop environment](./img/bianca_remote_desktop.png)
 
     At the bar at the bottom of the screen, click on the rightmost folder icon
     to open the file explorer. You will be asked in which folder to open
@@ -151,7 +151,7 @@ then answer these questions:
 
 ???- question "Answer"
 
-    ![The Bianca remote desktop environment with the file explorer open](Bianca_remote_desktop_file_explorer.png)
+    ![The Bianca remote desktop environment with the file explorer open](./img/bianca_remote_desktop_file_explorer.png)
 
     When you started the file explorer, you already had to pick a folder,
     giving away the answer to this question.
@@ -163,7 +163,7 @@ then answer these questions:
 
 ???- question "Answer"
 
-    ![The Bianca remote desktop environment with the file explorer open](Bianca_remote_desktop_file_explorer.png)
+    ![The Bianca remote desktop environment with the file explorer open](./img/bianca_remote_desktop_file_explorer.png)
 
     When you started the file explorer, pick the top option 'Open folder'
     to open up your home folder.
@@ -182,11 +182,11 @@ its name will be useful to know:
 
     In the file explorer, click on `Help | About`:
 
-    ![Thunar, click on `Help | About`](thunar_help_about.png)
+    ![Thunar, click on `Help | About`](./img/thunar_help_about.png)
 
     It shows the name of the file explorer:
 
-    ![Thunar's about screen](thunar_about.png)
+    ![Thunar's about screen](./img/thunar_about.png)
 
     The file navigator is called Thunar.
 
@@ -201,15 +201,15 @@ In Thunar:
     In Thunar, click on the white space next/under the files with
     the right mouse button. In this pop-up menu, click 'Create a new file':
 
-    ![Popup menu to create a new file](create_a_new_file.png)
+    ![Popup menu to create a new file](./img/create_a_new_file.png)
 
     In the following dialog, give it any filename:
 
-    ![Give the file a name](give_file_a_filename.png)
+    ![Give the file a name](./img/give_file_a_filename.png)
 
     Now the file is created:
 
-    ![The created file is shown](file_created.png)
+    ![The created file is shown](./img/file_created.png)
 
 - copy a file
 - move a file
@@ -227,20 +227,25 @@ In Thunar:
 
     At the bottom bar of the screen, click the icon for 'Terminal emulator':
 
-    ![At the bottom bar of the screen, click the icon for 'Terminal emulator'](start_terminal.png)
+    ![At the bottom bar of the screen, click the icon for 'Terminal emulator'](./img/start_terminal.png)
 
     You now have started a terminal:
 
-    ![You now have started a terminal](terminal.png)
+    ![You now have started a terminal](./img/terminal.png)
 
 - From the terminal, start the program `xeyes` by typing `xeyes` and
-  press enter,
+  press enter. Does this work? Why?
 
 ???- question "Answer"
 
-    These eyes will show up:
+    You will get an error:
 
-    ![These eyes will show up](xeyes.png)
+    ```bash
+    Error: Can't open display:
+    ```
+
+    You will get this error as Bianca does not allow for
+    [SSH X-forwarding](https://docs.uppmax.uu.se/software/ssh_x_forwarding/).
 
 - Close the terminal. There are multiple ways!
 
@@ -267,14 +272,14 @@ In Thunar:
     - Double-click the file. Because the file ends with `.txt` it will
       open a visual text editor
 
-    ![Open file with a text editor](open_file_with_text_editor.png)
+    ![Open file with a text editor](./img/open_file_with_text_editor.png)
 
     - Do a right-mouse button click on the file
       and select 'Open with text editor'
 
     It will look similar to this:
 
-    ![A file opened with a text editor](opened_file.png)
+    ![A file opened with a text editor](./img/opened_file.png)
 
 To be able to search the web for questions on this graphical text editor,
 its name will be useful to know:
@@ -287,17 +292,17 @@ its name will be useful to know:
 
      You can see its name in the menu bar at the top:
 
-    ![A file opened with gedit](opened_file.png)
+    ![A file opened with gedit](./img/opened_file.png)
 
     You can also click on
     [the hamburger button](https://en.wikipedia.org/wiki/Hamburger_button)
     and click 'Help':
 
-    ![The gedit hamburger menu](gedit_help_about.png)
+    ![The gedit hamburger menu](./img/gedit_help_about.png)
 
     This will show you the gedit about screen:
 
-    ![The gedit about screen](gedit_about.png)
+    ![The gedit about screen](./img/gedit_about.png)
 
 - Save the file. There are multiple ways!
 
@@ -308,7 +313,7 @@ its name will be useful to know:
     - Press `CTRL + S`
     - Click on the 'Save' button at the top menu bar of gedit
 
-    ![There is a 'Save' button at the top menu bar of gedit](opened_file.png)
+    ![There is a 'Save' button at the top menu bar of gedit](./img/opened_file.png)
 
 - Close gedit. There are multiple ways!
 
@@ -319,4 +324,4 @@ its name will be useful to know:
     - Click on the `x` at the top-right of the terminal
     - In the gedit hamburger menu, click 'Quit'
 
-    ![The gedit hamburger menu](gedit_hamburger_menu.png)
+    ![The gedit hamburger menu](./img/gedit_hamburger_menu.png)
