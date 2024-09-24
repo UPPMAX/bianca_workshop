@@ -35,6 +35,14 @@
       Feedback: feedback, after exercise, 10s
     ```
 
+    Prior questions:
+
+    - How many different environment are available on Bianca?
+    - How many ways are there to access Bianca?
+    - What kind of problems would you expect when accessing Bianca?
+    - What is a desktop environment?
+    - What is a remote desktop environment?
+
 ## Why?
 
 There are multiple ways to log in to Bianca, each having its own features:
@@ -105,9 +113,10 @@ What is likely the problem?"
 
 Log in to the Bianca remote desktop.
 
-    Note that you have to be within SUNET.
-
 ???- question "Answer"
+
+    The UPPMAX documentation can be found
+    [here](https://docs.uppmax.uu.se/getting_started/login_bianca_remote_desktop_website/).
 
     You can see [a YouTube video here](https://youtu.be/UpNI5OUlIo8).
 
