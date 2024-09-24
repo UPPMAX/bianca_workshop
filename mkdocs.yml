@@ -7,6 +7,7 @@ nav:
   - Practicalities: practicalities.md
   - Bianca intro (beginner): 
     - Introduction: intro.md
+    - Login: login.md
     - Log in to the Bianca remote desktop environment: login_remote_desktop.md
     - Using the desktop environment: use_remote_desktop.md
     - Log in to the Bianca console environment: login_console.md

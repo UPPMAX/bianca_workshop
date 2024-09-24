@@ -41,9 +41,9 @@ Schedule:
 
 When  | Who  | What
 ------|------|-----------------------------
-9:00  | R    | [Introduction](intro.md) (this page), [log in to remote desktop](login_remote_desktop.md), [use the remote desktop](use_remote_desktop.md), [log in to console environment](login_console.md)
+9:00  | R    | [Introduction](intro.md) (this page), [login](login.md), [log in to remote desktop](login_remote_desktop.md), 
 10:00 | .    | Break
-10:15 | R    | [Command line](commandline.md)
+10:15 | R    | [use the remote desktop](use_remote_desktop.md), [command line](commandline.md), [log in to console environment](login_console.md)
 11:00 | .    | Break
 11:15 | R    | [Modules](modules.md)
 12:00 | .    | Lunch
