@@ -24,7 +24,7 @@
     - The `wharf` area can be reached from both Bianca and any other place on Bianca.
     - Therefore, it serves as a bridge between Internet and Bianca.
 
-## Data transfers:
+## Data transfers
 
 - <http://docs.uppmax.uu.se/cluster_guides/transfer_bianca/>
     - section 3: Transfer files to and from Bianca
@@ -83,12 +83,13 @@ Be sure to really use a SFTP client -- not just a SCP client.
 
 
 ## Using standard sftp client (command line)
----
+
 <http://docs.uppmax.uu.se/software/bianca_file_transfer_using_sftp/>
 
 ```bash
 $ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se
 ```
+
 Ex.
 
 ```bash
@@ -126,6 +127,7 @@ Alternatively, you can specify this at the end of the sftp command, so that you 
 ```bash
 $ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>
 ```
+
 E.g.
 
 ```bash
@@ -136,7 +138,7 @@ E.g.
 
 
 ## Transit server
----
+
 - To facilitate secure data transfers to, from, and within the system for computing on sensitive data a special service is available via SSH at `transit.uppmax.uu.se`.
 
 ```bash
@@ -161,6 +163,7 @@ my_user@transit:~$ mount_wharf sens2023531
 Mounting wharf (accessible for you only) to /home/<user>/sens2023531
 <user>-sens2023531@bianca-sftp.uppmax.uu.se's password:
 ```
+
 - Enter password + F2A
 
 ```bash
