@@ -201,7 +201,7 @@ Then within R, try loading the package you want, like ``glmnet``:
 !!! info "More info"
 
     - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
-    - [Conda user guide](http://docs.uppmax.uu.se/cluster_guides/conda/)
+    - [Conda user guide](http://docs.uppmax.uu.se/software/conda/)
 
 ### Python packages with pip
 
