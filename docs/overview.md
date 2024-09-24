@@ -1,6 +1,7 @@
 # Overview
 
 !!! info "Goals"
+
     - See the bigger picture UPPMAX is part of
     - See other UPPMAX systems
     - First understanding why Bianca is how she is
@@ -95,7 +96,7 @@ flowchart TD
     is_scilifelab{Do you work at SciLifeLab?}
     is_long{Do you use long runs and/or GPUs?}
 
-    UPPMAX --> is_sensitive 
+    UPPMAX --> is_sensitive
     is_sensitive --> |yes|is_scilifelab
     is_scilifelab --> |yes|Miarka
     is_scilifelab --> |no|Bianca
@@ -178,7 +179,7 @@ basic Linux knowledge to use her.
 ???- tip "Using Linux"
 
     Using Linux (and especially the so-called command-line/terminal) is essential
-    to use Bianca. Learning the essential Linux commands 
+    to use Bianca. Learning the essential Linux commands
     is part of this course and is described [here](linux.md).
 
 
@@ -217,15 +218,15 @@ are restricted in some ways:
 
 ???- tip "Requesting a calculation to run"
 
-    Requesting a calculation to run is part of this course 
+    Requesting a calculation to run is part of this course
     and is described [here](slurm_intro.md).
     This is done by using the SLURM scheduler.
 
 ???- tip "Requesting an interactive node"
 
-    Requesting an interactive node is part of this course 
+    Requesting an interactive node is part of this course
     and is described [here](login.md).
-    This is done by requesting an interactive node 
+    This is done by requesting an interactive node
     from the SLURM scheduler.
 
 
@@ -235,14 +236,14 @@ are restricted in some ways:
 
 ???- tip "Using pre-installed software"
 
-    Using pre-installed software is part of this course 
+    Using pre-installed software is part of this course
     and is described [here](modules.md).
     This is done by using the module system.
 
 ???- tip "How to run custom software"
 
     Techniques how to run custom software is *not* part of this course.
-    Instead, one technique is part of the intermediate Bianca course 
+    Instead, one technique is part of the intermediate Bianca course
     and can be found described [here](extra/containers.md),
     which is about using containers
 
@@ -291,7 +292,7 @@ There are three types of nodes:
 
 ???- tip "Requesting a calculation to run"
 
-    Requesting a calculation to run is part of this course 
+    Requesting a calculation to run is part of this course
     and is described [here](slurm_intro.md).
     This is done by using the SLURM scheduler.
 
@@ -300,7 +301,7 @@ There are three types of nodes:
 ???- tip "Requesting an interactive node"
 
     Requesting an interactive node is part of this course.
-    This is done by requesting an interactive node 
+    This is done by requesting an interactive node
     from the SLURM scheduler.
 
 
@@ -313,7 +314,7 @@ A user logs in to a login node via the Internet.
 
 !!! abstract "keypoints"
 
-    - NAISS provides HPC resources for Swedish research. 
+    - NAISS provides HPC resources for Swedish research.
     - UPPMAX takes care of the Uppsala HPC facilities
     - Bianca is an HPC cluster for sensitive data
     - The restrictions on Bianca follow from Bianca being a shared resource
@@ -328,15 +329,15 @@ A user logs in to a login node via the Internet.
 ???- question "2. Your colleague visits [https://bianca.uppmax.uu.se/](https://bianca.uppmax.uu.se/) and sees nothing appear. What is likely the problem?"
 
     He/she is not inside of SUNET.
-    
+
     Logging in is part of this course and is described [here](login.md).
 
 ???- question "3. You want to use a piece of software that came out this morning (!) on Bianca. Will you be able to? Why?"
 
     This will likely fail, as it is not a pre-installed piece of software.
-    
+
     If you are more advanced, there are ways to get it running yourself.
-    For example, one technique -using containers- is part of the intermediate Bianca course 
+    For example, one technique -using containers- is part of the intermediate Bianca course
     and can be found described [here](extra/containers.md).
 
 ???- question "4. You want to use an online tool to do a calculation on Bianca. Will this work? Why?"
@@ -345,7 +346,7 @@ A user logs in to a login node via the Internet.
 
 ???- question "5. Your colleague finds out that one can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?"
 
-    For that colleague, there seems to be no problem. 
+    For that colleague, there seems to be no problem.
     However, for everyone else this is a problem,
     as the login node is a *shared* node.
 
@@ -358,13 +359,13 @@ A user logs in to a login node via the Internet.
 ???- question "6. You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
 
     This is the typical use-case to use an interactive node.
-    One could also consider to develop code on a local computer 
+    One could also consider to develop code on a local computer
     instead (which uses nonsensitive/simulated/fake testing data)
     and upload the final code instead.
 
-    Requesting an interactive node is part of this course 
+    Requesting an interactive node is part of this course
     and is described [here](login.md).
-    This is done by requesting an interactive node 
+    This is done by requesting an interactive node
     from the SLURM scheduler.
 
 ???- question "7. Your script downloads a human reference genome from a secure website. Will this work on Bianca? Why?"
@@ -401,14 +402,14 @@ A user logs in to a login node via the Internet.
   Node1 -- interactive --> SubGraph2Flow
   Node1 -- sbatch --> SubGraph2Flow
   subgraph "Snowy"
-  SubGraph2Flow(calculation nodes) 
+  SubGraph2Flow(calculation nodes)
         end
 
         thinlinc -- usr-sensXXX + 2FA + VPN ----> SubGraph1Flow
         terminal -- usr --> Node1
         terminal -- usr-sensXXX + 2FA + VPN ----> SubGraph1Flow
         Node1 -- usr-sensXXX + 2FA + no VPN ----> SubGraph1Flow
-        
+
         subgraph "Bianca"
         SubGraph1Flow(Bianca login) -- usr+passwd --> private(private cluster)
         private -- interactive --> calcB(calculation nodes)
