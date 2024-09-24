@@ -51,9 +51,9 @@ tags:
     - Who has already logged in to an HPC cluster?
     - Who has already logged in to Bianca?
 
-![Bianca](Bianca.jpg)
+![Bianca or Rackham](bianca_or_rackham.jpg)
 
-> A human taking care of the Bianca UPPMAX HPC cluster
+> A human taking care of the Bianca (or Rackham) UPPMAX HPC cluster
 
 ## Why?
 
