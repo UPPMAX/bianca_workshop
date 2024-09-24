@@ -8,8 +8,8 @@
     - We assume that you have already covered the Command-line material and tested on Rackham
         - [LINUX](https://uppmax.github.io/uppmax_intro/linux.html)
         - [Basic toolkit](https://uppmax.github.io/uppmax_intro/linux_basics.html)
-        
-### Navigation and file management
+       
+## Navigation and file management
 
 1. `pwd`  &emsp; present directory
 1. `ls`  &emsp;list content
@@ -21,7 +21,7 @@
 1. `rm`  &emsp;remove
 1. `rmdir`  &emsp;remove empty directory
 
-### Read files and change file properties
+## Read files and change file properties
 
 10. `cat`  &emsp;print content on screen
 11. `head`  &emsp;print first part
@@ -44,6 +44,7 @@ $ pwd -P
 ```
 
 ??? answer
+
     ```
     /home/$USER
     /castor/project/home/bjornc
@@ -59,6 +60,7 @@ $ pwd -P
 ```
 
 ??? answer
+
     ```
     /proj
     /proj
@@ -71,8 +73,8 @@ $ pwd -P
 ```
 
 ??? answer
+
     ```
     /proj/sensXXX
     /castor/project/proj
     ```
-
