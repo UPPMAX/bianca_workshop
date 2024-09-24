@@ -83,7 +83,7 @@ flowchart TD
 
   exercise_1[1.copy-paste text]:::minimal_node
   exercise_2[2.starting a text editor]:::minimal_node
-  exercise_3[3.file navigation]:::extra_node
+  exercise_3[3.file navigation, can find wharf]:::minimal_node
   exercise_4[4.file management]:::extra_node
   exercise_5[5.starting a terminal]:::extra_node
 
@@ -213,6 +213,34 @@ then answer these questions:
     is your UPPMAX username.
     For the image above, the username was `richel` and hence the home directory
     is called `/home/richel`.
+
+Your project folder is an important folder:
+it is the folder where you run your project in.
+It can be found at `/proj/[project_code]`,
+where `[project_code]` is the project code.
+
+- Navigate to the project folder of this course
+
+???- question "Don't know the project code?"
+
+    In our case, the project code is `sens2023598`,
+    hence the project folder is `/proj/sens2023598`.
+
+The `wharf` is an important folder: it is the only folder where files
+can be transferred to/from.
+
+- Navigate to the wharf folder of the project of this course
+
+???- question "Cannot find it?"
+
+    Go to [the UPPMAX documentation about the wharf folder](https://docs.uppmax.uu.se/cluster_guides/wharf/)
+
+???- question "Still cannot find it?"
+
+    It is at `/proj/nobackup/[project_id]/wharf/[user_name]/[user_name]-[project_id]`,
+    hence, `/proj/nobackup/sens2023598/wharf/[user_name]/[user_name]-sens2023598`,
+    or, for a user with username `sven`, at
+    `/proj/nobackup/sens2023598/wharf/sven/sven-sens2023598`
 
 To be able to search the web for questions on this file explorer,
 its name will be useful to know:

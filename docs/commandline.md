@@ -333,12 +333,40 @@ View the help of the command `cd`
     cd ~
     ```
 
-- Navigate to the wharf, e.g. `/proj/sens2023598/nobackup/wharf`"
+- Navigate to the project folder of this course
 
-???- question "Answer"
+???- question "Don't know the project code?"
+
+    In our case, the project code is `sens2023598`,
+    hence the project folder is `/proj/sens2023598`.
+
+    To go there:
 
     ```bash
-    cd /proj/sens2023598/nobackup/wharf
+    cd /proj/sens2023598
+    ```
+
+
+The `wharf` is an important folder: it is the only folder where files
+can be transferred to/from.
+
+- Navigate to the wharf folder of the project of this course
+
+???- question "Cannot find it?"
+
+    Go to [the UPPMAX documentation about the wharf folder](https://docs.uppmax.uu.se/cluster_guides/wharf/)
+
+???- question "Still cannot find it?"
+
+    It is at `/proj/nobackup/[project_id]/wharf/[user_name]/[user_name]-[project_id]`,
+    hence, `/proj/nobackup/sens2023598/wharf/[user_name]/[user_name]-sens2023598`,
+    or, for a user with username `sven`, at
+    `/proj/nobackup/sens2023598/wharf/sven/sven-sens2023598`
+
+    To go there:
+
+    ```bash
+    cd /proj/nobackup/sens2023598/wharf/sven/sven-sens2023598
     ```
 
 ## Exercise 4: folder management
