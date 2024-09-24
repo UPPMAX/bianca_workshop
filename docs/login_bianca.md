@@ -4,19 +4,21 @@
 
 !!! info "Objectives" 
 
-    - Observe that there are two ways to interact with Bianca
-    - Observe that there are multiple ways to get inside SUNET
-    - Log in to a terminal in the Bianca remote desktop
-    - Log in to the Bianca console environment
+    - Use the UPPMAX documentation
+    - Observe the most common problems when accessing Bianca
+    - Log in into Bianca's remote desktop environment using a website 
+    - Log in into Bianca's console environment using SSH
+    - Log in into Bianca's console environment via Rackham
 
 ???- info "Notes for teachers"
 
     Teaching goals:
 
-    - The learners demonstrate to have logged in to the Bianca remote desktop environment 
-      using the UPPMAX Bianca login website
-    - The learners demonstrate to have started a terminal in the Bianca remote desktop environment
-    - The learners demonstrate to have logged in to the Bianca console environment 
+    - The learners have used the UPPMAX documentation
+    - The learners have observed the most common problems when accessing Bianca
+    - The learners have logged in into Bianca's remote desktop environment using a website 
+    - The learners have logged in into Bianca's console environment using SSH
+    - The learners have logged in into Bianca's console environment via Rackham
 
     Schedule:
 
@@ -49,11 +51,14 @@ flowchart TD
 
 ```
 
-Way                                                    |Features
--------------------------------------------------------|--------------------------------------------------------------------------------------------------
+Way                                                     |Features
+--------------------------------------------------------|--------------------------------------------------------------------------------------------------
 1. Using the remote desktop website                     |Must be within SUNET, requires no setup, visual, clunky to work with
-2. (optional) Using the console environment             |Must be within SUNET, requires an SSH client, terminal, powerful to work with (if you know how)
+2. Using the console environment                        |Must be within SUNET, requires an SSH client, terminal, powerful to work with (if you know how)
 3. (optional) Using the console environment from Rackham|Can be done everywhere, requires an SSH client, terminal, powerful to work with (if you know how)
+
+Here you will see how these looks like,
+so you can decide which environment to use.
 
 ## Exercises
 
@@ -65,6 +70,11 @@ Way                                                    |Features
     A goal of these exercises is to practice to use the UPPMAX documentation.
     Such active learning is more effective than watching a video passively.
     Please try to do the exercises first!
+
+    Specialized videos:
+    - You can see [a YouTube video here](https://youtu.be/UpNI5OUlIo8).
+
+
 
 ### 1. Using the remote desktop website
 
@@ -90,16 +100,21 @@ Your colleague visits [https://bianca.uppmax.uu.se/](https://bianca.uppmax.uu.se
 and sees nothing appear on the website (see also image above).
 What is likely the problem?"
 
+???- question "Answer"
+
     He/she is not inside of SUNET. 
+
     Show him/her the section above on how to get into SUNET.
 
-???- question "1b. Exercise: login into the Bianca remote desktop"
+#### 1c. Log in to the Bianca remote desktop
 
-    The goal of this exercise is: (1) troubleshooting, to make sure one can access
-    this environment (2) see how it looks like, this may help one decide to
-    use this environment yes of no.
+Log in to the Bianca remote desktop.
 
     Note that you have to be within SUNET.
+
+???- question "Answer"
+
+    You can see [a YouTube video here](https://youtu.be/UpNI5OUlIo8).
 
 ???- question "1c. Exercise: start a terminal in the Bianca remote desktop environment"
 

@@ -7,7 +7,6 @@ nav:
   - Practicalities: practicalities.md
   - Bianca intro (beginner): 
     - Introduction: intro.md
-    - Overview: overview.md
     - Log in to Bianca: login_bianca.md
     - Command-line intro: commandline.md
     - Module system: modules1.md
@@ -27,6 +26,7 @@ nav:
     - Intro to NAISS-SENS and sensitive data: sens_project_short.md
     - Summary: intermediate/summary.md
     - Extra material:
+      - Overview: overview.md
       - extra/slurm.md
       - extra/conda.md
       - extra/pip.md
