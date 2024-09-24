@@ -28,11 +28,14 @@
       Feedback: feedback, after exercise, 10s
     ```
 
-Are you starting to work with your sensitive data in your research? 
+Are you starting to work with your sensitive data in your research?
 
-If yes, welcome to a full day introduction to handling sensitive data on the UPPMAX cluster, Bianca!
+If yes, welcome to a full day introduction to
+handling sensitive data on the UPPMAX cluster, Bianca!
 
-You will learn about the national infrastructure Bianca is part of, how to login to Bianca, upload and download files, using pre-installed software and how to start your code.
+You will learn about the national infrastructure Bianca is part of,
+how to login to Bianca, upload and download files,
+using pre-installed software and how to run your code.
 
 Schedule:
 
@@ -58,14 +61,12 @@ When  | Who  | What
 !!! info "Q/A collaboration document"
 
     - Use the Q/A page for the workshop with your questions.
-
-          - [https://hackmd.io/@UPPMAX/Bianca_Intro_QaA](https://hackmd.io/@UPPMAX/Bianca_Intro_QaA){target="_blank"}
-
-    - Depending on how many helpers there are we’ll see how fast there are answers.
-
-        - Some answers may come after the workshop.
-
-    - Create a new line for new questions. Take care if others are editing at the same time.
+      - [https://hackmd.io/@UPPMAX/Bianca_Intro_QaA](https://hackmd.io/@UPPMAX/Bianca_Intro_QaA){target="_blank"}
+    - Depending on how many helpers there are, 
+      we'll see how fast there are answers
+      - Some answers may come after the workshop.
+    - Create a new line for new questions.
+      Take care if others are editing at the same time.
 
 ## Overview of courses
 
@@ -134,4 +135,3 @@ flowchart TD
 > Overview of the courses.
 > Red nodes: Intro to Bianca.
 > Yellow node: Intermediate Bianca.
-
