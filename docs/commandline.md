@@ -77,9 +77,10 @@ echo "Hello!"
 ```
 
 !!! info "What does this program do?"
-     *The first line is called the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)),
+
+     - The first line is called the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)),
        and indicates this is a Bash script
-     * The second line displays the text between double quotes
+     - The second line displays the text between double quotes
 
 Save and close `nano`.
 
@@ -227,8 +228,6 @@ echo "Hello!"
     nano do_it.sh
     ```
 
-
-
     Then do `CTRL + O` to save, `CTRL + X` to exit
 
 - Write an executable script that displays a welcome message in text (e.g. `Hello!`)
@@ -273,9 +272,10 @@ View the help of the command `cd`
 
     Use `man` to view the help of any command, in this case `cd`:
 
-    ```
+    ```bash
     man cd
     ```
+
     This will fail, because Bianca has (close to) no internet access.
 
 ### Exercise 3a
@@ -284,7 +284,7 @@ Navigate to the project folder, e.g. `/proj/sens2023598`
 
 ???- question "Answer"
 
-    ```
+    ```bash
     cd /proj/sens2023598
     ```
 
@@ -298,20 +298,20 @@ Navigate to your home folder"
 
     The syntax to move to your home folder is:
 
-    ```
+    ```bash
     cd /home/[username]
     ```
 
     where `[username]` is your UPPMAX username, for example:
 
-    ```
+    ```bash
     cd /home/richel
     ```
 
     The squiggle/tilde (`~`) is a shorter notation,
     that does exactly the same:
 
-    ```
+    ```bash
     cd ~
     ```
 
@@ -321,7 +321,7 @@ Navigate to the wharf, e.g. `/proj/sens2023598/nobackup/wharf`"
 
 ???- question "Answer"
 
-    ```
+    ```bash
     cd /proj/sens2023598/nobackup/wharf
     ```
 
@@ -331,13 +331,13 @@ Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/p
 
 ???- question "Answer"
 
-    ```
+    ```bash
     mkdir /proj/sens2023598/workshop/richel
     ```
 
     Or navigate there first:
 
-    ```
+    ```bash
     cd /proj/sens2023598/workshop/
     mkdir richel
     ```
@@ -346,7 +346,7 @@ Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/p
 
 ???- question "5a. Create a file, e.g. `richel.txt`"
 
-    ```
+    ```bash
     touch richel.txt
     ```
 
@@ -362,7 +362,7 @@ Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/p
 
 ???- question "5c. Move the copied file (e.g. move it one folder up to `../richel_again.txt`)"
 
-    ```
+    ```bash
     mv richel_again.txt ../
     ```
 
@@ -370,13 +370,13 @@ Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/p
 
 ???- question "5d. Delete the copied file"
 
-    ```
+    ```bash
     rm ../richel_again.txt
     ```
 
     or:
 
-    ```
+    ```bash
     cd ..
     rm richel_again.txt
     ```
