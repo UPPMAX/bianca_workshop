@@ -51,7 +51,7 @@ tags:
     - Who has already logged in to an HPC cluster?
     - Who has already logged in to Bianca?
 
-![Bianca or Rackham](bianca_or_rackham.jpg)
+![Bianca or Rackham](./img/bianca_or_rackham.jpg)
 
 > A human taking care of the Bianca (or Rackham) UPPMAX HPC cluster
 
@@ -195,7 +195,7 @@ then answer these questions:
     Don't do this on a Bianca login node. These program
     need a lot of CPU and memory and are typically used for a long time.
 
-    Instead, use [an interactive session](start_interactive_session.md).
+    Instead, use an interactive session.
 
     > - Edit a file using a simple text editor such as `emacs`, `nano` or `vim`
 
@@ -208,7 +208,7 @@ then answer these questions:
     if it does a light calculation or takes a reasonable short time to run,
     you can run it on a login node.
 
-    Else, you will have to use [the Slurm job scheduler](job_scheduler.md).
+    Else, you will have to use the Slurm job scheduler.
 
 Done?
 
