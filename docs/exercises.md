@@ -136,7 +136,7 @@
 
 ???+ question "Install a Julia package"
 
-    - Install ``Gumbo`` in the julia packager [tutorial](https://www.uppmax.uu.se/support/user-guides/julia-user-guide/#tocjump_536805789462588_6). Use ``sftp`` to get it to Bianca.
+    - Install ``Gumbo`` in the julia packager [tutorial](https://docs.uppmax.uu.se/software/julia/). Use `sftp` to get it to Bianca.
   
 
     ??? tip "Answer"
