@@ -37,6 +37,7 @@
 ![node principle](./img/node.png)
 
 ### Our compute clusters (like Bianca) have this principle
+
 ![nodes principle](./img/nodes.png)
 
 ### The compute nodes
@@ -49,7 +50,7 @@ Login node  | Start jobs for worker nodes, do easy things. You share 2 cores and
 Compute nodes | Do hard calculations, either from scripts of an interactive session
 
 
-## Slurm schedules and allocates compute resources for you 
+## Slurm schedules and allocates compute resources for you
 
 - Problem: _1000 users, 300 nodes, 5000 cores_
 - We need a **queue** system:
@@ -162,7 +163,7 @@ flowchart TD
 - Example 1: 60 hours with 2 cores = 120 CPU-hours
 - Example 2: 12 hours with a full node = 192 hours
     - Waste of resources unless you have a parallel program using all cores or need all the memory, e.g. 128 GB per node
-  
+
 
 ## Interactive jobs
 
@@ -190,7 +191,7 @@ This starts an interactive session using project `sens2023598`
 that uses 2 cores and has a maximum duration of 8 hours.
 
 !!! tip
-   
+
     ![copy-paste](./img/copy_paste.PNG)
 
 ### Try interactive and run RStudio
@@ -202,15 +203,15 @@ We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/sof
     Use **ThinLinc**
 
     - Start **interactive session** on compute node (2 cores)
-    
+
     - If you already have an interactive session going on use that.
 
         - If you don't find it, do
-        
+
           ``$ squeue``
-            
+
         - find your session, ssh to it, like:
-        
+
             ``$ ssh sens2023598-b9``
 
     - ``$ interactive -A sens2023598 -p devcore -n 2 -t 60:00``
@@ -219,19 +220,19 @@ We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/sof
     - You can check which node you are on?
 
         `$ hostname`
-    
+
     - Also try:
 
         `$ srun hostname`
 
         - This will give several output lines resembling the number of cores you allocated.
         - How many in this case??
-        
+
     - If the name before ``.bianca.uppmax.uu.se`` is ending with bXX you are on a compute node!
     - The login node has ``sens2023598-bianca``
     - You can also probably see this information in your prompt, like:
         ``[bjornc@sens2023598-b9 ~]$``
-  
+
     - Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there.
 
         `$ ml RStudio/2023.06.2-561`
@@ -287,7 +288,7 @@ We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/sof
 
 #SBATCH -A sens2023598  # Project ID
 
-#SBATCH -p devcore  # Asking for cores (for test jobs and as opposed to multiple nodes) 
+#SBATCH -p devcore  # Asking for cores (for test jobs and as opposed to multiple nodes)
 
 #SBATCH -n 1  # Number of cores
 
@@ -329,10 +330,10 @@ srun echo Hello world!
     - How could you develop your code quicker?"
 
     ??? tip "Answer"
-    
+
         - This is the typical use-case to use an interactive node.
         - One could also consider to develop code on a local computer instead (which uses nonsensitive/simulated/fake testing data) and upload the final code instead.
-    
+
 ??? question "Start an interactive session"
 
     The goal of this exercise is to make sure you know how to start an interactive session.
@@ -364,7 +365,7 @@ srun echo Hello world!
 
     - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshop/modules/#bigger-exercises) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
         - You can copy the my_bio_workflow.sh file in ``/proj/sens2023598/workshop/slurm`` to your home folder and make the necessary changes.
-    
+
     ??? tip "Answer"
 
         - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
@@ -372,7 +373,7 @@ srun echo Hello world!
           ``cd ~``
           ``cp /proj/sens2023598/workshop/slurm/my_bio_workflow.sh .``
         - edit ``my_bio_workflow.sh`` and add the SBATCH commands
-        
+
         ```bash
         #!/bin/bash
         #SBATCH -A sens2023598
@@ -415,13 +416,13 @@ srun echo Hello world!
         ```
 
         - make the job script executable
-        
+
         ```bash
         $ chmod a+x my_bio_workflow.sh
         ```
-        
+
         - submit the job
-        
+
         ```bash
         $ sbatch my_bio_workflow.sh
         ```
