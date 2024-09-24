@@ -2,15 +2,15 @@
 
 !!! info "Objectives"
 
-    - Optional: Being able to navigate in/out folders
+    - Being able to navigate to home folder, project folder and wharf
     - Optional: Being able to view/create/move/delete files
 
 ???- info "Notes for teachers"
 
     Teaching goals:
 
-    - The learners demonstrate they can use a text editor
-    - The learners demonstrate they can create an executable script
+    - The learners demonstrate they can navigate
+      to home folder, project folder and wharf
     - Optional: The learners demonstrate they can create, move and delete files
     - Optional: The learners demonstrate they can create and delete folders
 
@@ -39,24 +39,10 @@ therefore we must learn some Linux commands.
 
 We will learn to:
 
-- (optional) navigate through the file system
+- Navigate through the file system
 - (optional) read the manual
 - (optional) work with directories
 - (optional) work with files
-
-### (optional) Read the manual
-
-Use `man` to see the help pages about a command:
-
-```bash
-man man
-man cd
-man ls
-```
-
-These command give the help pages about the programs `man`, `cd` and `ls` respectively.
-
-Press `q` (short for 'quit') to exit `man`
 
 ### Navigate through the file system
 
@@ -87,6 +73,21 @@ The previous location              |`cd -`
     When your command 'just works' there is no output
     (try, for example `cd ~`).
     This is due to [The Silence Is Golden Rule](https://www.linfo.org/rule_of_silence.html)
+
+### (optional) Read the manual
+
+Use `man` to see the help pages about a command:
+
+```bash
+man man
+man cd
+man ls
+```
+
+These command give the help pages about the programs `man`, `cd` and `ls` respectively.
+
+Press `q` (short for 'quit') to exit `man`
+
 
 ### (optional) Work with directories
 
