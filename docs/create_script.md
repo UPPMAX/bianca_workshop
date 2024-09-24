@@ -1,21 +1,14 @@
 # Create an executable script
 
-![Using the command line on a computer cluster](./img/610803_a_woman_using_the_command_line_on_a_computer_cluster_256_x_256.png)
-
 !!! info "Objectives"
 
     - Create an executable bash script
-    - Optional: Being able to navigate in/out folders
-    - Optional: Being able to view/create/move/delete files
 
 ???- info "Notes for teachers"
 
     Teaching goals:
 
-    - The learners demonstrate they can use a text editor
     - The learners demonstrate they can create an executable script
-    - Optional: The learners demonstrate they can create, move and delete files
-    - Optional: The learners demonstrate they can create and delete folders
 
     Schedule:
 
@@ -32,19 +25,11 @@
 
 ## Why?
 
-You need the command-line to start calculations.
+Instead of typing commands in the terminal all the time,
+you can put these in a file.
+Such a file, called a script, can then be shared.
 
-## Overview
-
-Bianca is a cluster with the Linux operating system.
-We must use a Linux terminal to work with Bianca,
-therefore we must learn some Linux commands.
-
-We will learn to:
-
-- create an executable script
-
-### Create an executable script
+## Procedure
 
 Creating an executable script has two steps:
 
@@ -97,6 +82,7 @@ chmod +x do_it.sh
     `chmod` can create read-only files,
     by removing the writing rights using `chmod -w`.
 
+## Exercises
 
 ### Exercise 1: create an executable script
 
@@ -129,25 +115,11 @@ echo "Hello!"
 
     Then do `CTRL + O` to save, `CTRL + X` to exit
 
-- Write an executable script that displays a welcome message in text (e.g. `Hello!`)
+- Make the script executable
 
 ???- question "Answer"
 
-    Edit the script:
-
-    ```bash
-    nano do_it.sh
-    ```
-
-    Change the text to:
-
-    ```bash
-    #!/bin/bash
-    echo "Hello!"
-    ls | rev
-    ```
-
-    Make the script executable:
+    Do:
 
     ```bash
     chmod +x ./do_it.sh
@@ -163,3 +135,8 @@ echo "Hello!"
     ./do_it.sh
     ```
 
+    Or, alternatively:
+
+    ```bash
+    bash do_it.sh
+    ```

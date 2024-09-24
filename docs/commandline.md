@@ -1,10 +1,7 @@
 # The command-line on Bianca
 
-![Using the command line on a computer cluster](./img/610803_a_woman_using_the_command_line_on_a_computer_cluster_256_x_256.png)
-
 !!! info "Objectives"
 
-    - Create an executable bash script
     - Optional: Being able to navigate in/out folders
     - Optional: Being able to view/create/move/delete files
 
@@ -42,9 +39,8 @@ therefore we must learn some Linux commands.
 
 We will learn to:
 
-- create an executable script
-- (optional) read the manual
 - (optional) navigate through the file system
+- (optional) read the manual
 - (optional) work with directories
 - (optional) work with files
 
@@ -62,7 +58,7 @@ These command give the help pages about the programs `man`, `cd` and `ls` respec
 
 Press `q` (short for 'quit') to exit `man`
 
-### (optional) Navigate through the file system
+### Navigate through the file system
 
 Like any operating system, Linux has directories (also called 'folders').
 
@@ -167,16 +163,6 @@ flowchart TD
 
 ### Exercise 1: file navigation
 
-- Navigate to the project folder, e.g. `/proj/sens2023598`
-
-???- question "Answer"
-
-    ```bash
-    cd /proj/sens2023598
-    ```
-
-    Don't forget the `/` at the start.
-
 - Navigate to your home folder"
 
 ???- question "Answer"
@@ -212,7 +198,6 @@ flowchart TD
     ```bash
     cd /proj/sens2023598
     ```
-
 
 The `wharf` is an important folder: it is the only folder where files
 can be transferred to/from.
@@ -252,7 +237,8 @@ View the help of the command `cd`
 
 ## Exercise 3: folder management
 
-- Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/proj/sens2023598/workshop/richel`"
+- Create a folder `/proj/sens2023598/workshop/[your_login_name]`,
+  for example, `/proj/sens2023598/workshop/richel`"
 
 ???- question "Answer"
 
