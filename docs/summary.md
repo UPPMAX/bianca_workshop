@@ -86,4 +86,3 @@ Possible next steps:
   work better with Bianca
 - [Programming Formalisms](https://uppmax.github.io/programming_formalisms/):
   formal aspects of software development
-

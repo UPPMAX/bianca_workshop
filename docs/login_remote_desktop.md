@@ -2,7 +2,7 @@
 
 ![The Bianca environments](./img/bianca_environments_926_x_261.png)
 
-!!! info "Learning objectives" 
+!!! info "Learning objectives"
 
     - Use the UPPMAX documentation
     - Observe the most common problems when accessing Bianca
@@ -53,6 +53,7 @@ flowchart TD
 
 Way                                                     |Features
 --------------------------------------------------------|--------------------------------------------------------------------------------------------------
+
 1. Using the remote desktop website                     |Must be within SUNET, requires no setup, visual, clunky to work with
 2. Using the console environment                        |Must be within SUNET, requires an SSH client, terminal, powerful to work with (if you know how)
 3. (optional) Using the console environment from Rackham|Can be done everywhere, requires an SSH client, terminal, powerful to work with (if you know how)
@@ -61,8 +62,6 @@ Here you will see how these looks like,
 so you can decide which environment to use.
 
 ## Using
-
-
 
 ## Exercises
 
@@ -77,7 +76,6 @@ so you can decide which environment to use.
 
     Specialized videos:
     - You can see [a YouTube video here](https://youtu.be/UpNI5OUlIo8).
-
 
 ### Exercise 1: Find the documentation
 

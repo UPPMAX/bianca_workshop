@@ -2,7 +2,7 @@
 
 ![Working with a computer cluster module system](./img/627409_working_with_a_computer_cluster_module_system_256_x_256.png)
 
-!!! info "Objectives" 
+!!! info "Objectives"
 
     - Being able to search/load/unload modules
     - Create an executable Bash script that uses a module (without SLURM)
@@ -29,7 +29,7 @@
 
 ## Exercises
 
-Use [the UPPMAX documentation on modules](http://docs.uppmax.uu.se/cluster_guides/modules/) 
+Use [the UPPMAX documentation on modules](http://docs.uppmax.uu.se/cluster_guides/modules/)
 to do these exercises.
 
 ???- tip "Video with solutions"
@@ -67,20 +67,17 @@ to do these exercises.
 
 ???- question "1e. Unload that module"
 
-
     ```
     module unload cowsay/3.03
     ```
 
 ???- question "1f. Verify that the tool `cowsay` is not available anymore"
 
-
     ```
     cowsay hello
     ```
 
     Gives the error message: `cowsay: command not found`.
-
 
 ???- question "2a. Create an executable script called `cow_says_hello.sh`. It should load a specific version of the `cowsay` module, after which it uses `cowsay` to do something"
 
@@ -109,7 +106,7 @@ to do these exercises.
     ```
 
 ???- question "2b. Find out: if the `cowsay` module is not loaded, after running the script, is it loaded yes/no?"
-    
+
     Running the script does not load the module beyond running the script.
 
     ```
@@ -142,13 +139,12 @@ to do these exercises.
 
     The solution is to do `module load bioinfo-tools` first.
 
-???- info "Want more complex/realistic exercises?" 
+???- info "Want more complex/realistic exercises?"
 
     The goal of this lesson is to work with the module system
     in a minimal/fast way. 
     These exercises do not achieve anything useful.
     See 'Bigger exercises' for more complex/realistic exercises
-
 
 ## Bigger exercises
 
@@ -188,7 +184,7 @@ to do these exercises.
     The tools use too much resources to be used on a login node.
     Alternatively, use the Slurm scheduler instead :-)
 
-!!! warning 
+!!! warning
     - To access bioinformatics tools, load the **bioinfo-tools** module first.
 
 ???- question "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff"
