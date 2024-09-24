@@ -1,6 +1,6 @@
 # Installing R packages on Bianca
 
-[R on UPPMAX course](https://uppmax.github.io/R-python-julia-HPC/r/packagesR.html)
+[R on UPPMAX course](https://uppmax.github.io/R-python-julia-matlab-HPC/r/packagesR.html)
 
 ## What is a package, really?
 
