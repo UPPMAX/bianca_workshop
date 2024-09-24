@@ -62,9 +62,12 @@ nano do_it.sh
 ```
 
 !!! info "Why use a `.sh` file extension?"
-    Using `.sh` as a file extension a social convention for how a Bash script is called,
-    as (1) `sh` is short for 'shell', (2) Bash is short for 'Bourne Again Shell'.
-    A 'shell' in this context is a program that allows working with an operating system.
+    Using `.sh` as a file extension a social convention
+    for how a Bash script is called,
+    as (1) `sh` is short for 'shell',
+    (2) Bash is short for 'Bourne Again Shell'.
+    A 'shell' in this context is a program
+    that allows working with an operating system.
 
 As an example, copy-paste this content into the script:
 
@@ -74,7 +77,7 @@ echo "Hello!"
 ```
 
 !!! info "What does this program do?"
-     * The first line is called the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)),
+     *The first line is called the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)),
        and indicates this is a Bash script
      * The second line displays the text between double quotes
 
@@ -89,7 +92,7 @@ Use [chmod](https://en.wikipedia.org/wiki/Chmod) to make the file executable:
 chmod +x do_it.sh
 ```
 
- * `+x` can be read as: 'add the right to execute'
+- `+x` can be read as: 'add the right to execute'
 
 !!! info "Create read-only files"
     If you want to protect your data from being modified accidentally,
@@ -180,7 +183,7 @@ Rename a file                      |`mv myfile.txt mycopy.txt`
 Move a file to one folder up       |`mv myfile.txt ../`
 Move a file to the home folder     |`mv myfile.txt ~`
 
- * Note: `nano` is one of many text editors.
+- Note: `nano` is one of many text editors.
    It is the one recommended to beginners,
    as its interface is closest to what one expects
 
@@ -209,7 +212,6 @@ Use the materials shown above to answer the questions below.
 
     Then do `CTRL + O` to save, `CTRL + X` to exit
 
-
 - Edit the file `do_it.sh` to have the content below:
 
 ```bash
@@ -228,7 +230,6 @@ echo "Hello!"
 
 
     Then do `CTRL + O` to save, `CTRL + X` to exit
-
 
 - Write an executable script that displays a welcome message in text (e.g. `Hello!`)
 
@@ -324,7 +325,6 @@ Navigate to the wharf, e.g. `/proj/sens2023598/nobackup/wharf`"
     cd /proj/sens2023598/nobackup/wharf
     ```
 
-
 ### Exercise 4a
 
 Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/proj/sens2023598/workshop/richel`"
@@ -342,7 +342,6 @@ Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/p
     mkdir richel
     ```
 
-
 ### Exercise 5a
 
 ???- question "5a. Create a file, e.g. `richel.txt`"
@@ -350,7 +349,6 @@ Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/p
     ```
     touch richel.txt
     ```
-
 
 ### Exercise 5b
 
@@ -371,7 +369,6 @@ Create a folder `/proj/sens2023598/workshop/[your_login_name]`, for example, `/p
 ### Exercise 5d
 
 ???- question "5d. Delete the copied file"
-
 
     ```
     rm ../richel_again.txt
@@ -400,9 +397,14 @@ Command name|Purpose
 `tail`      |Show the last lines of a file
 `less`      |Show the content of a file
 `wc`        |Count words, lines and/or characters
-`|`         |[Pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix)) the output of one command to serve as input for the next
 `>`         |Write to file (removes existing content if any)
 `>>`        |Append to file
+
+A command that cannot be put in a table:
+
+ - `|`: [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix)),
+  the output of one command to serve as input for the next
+
 
 With `ls /usr/bin | wc --lines` one can see that there are more than 1700
 commands on Bianca.
@@ -422,12 +424,12 @@ It types the absolute path for you!
 These are some commonly used symbolic links,
 that will simplify navigation:
 
-```
+```bash
 cd Desktop
 ln -s /proj/sens2023598/ proj
 ln -s /proj/sens2023598/nobackup nobackup
 ln -s /proj/sens2023598/nobackup/wharf/richel/richel-sens2023598 wharf`
 ```
 
- * Replace `sens2023598` by your project
- * Replace `richel` by your username
+- Replace `sens2023598` by your project
+- Replace `richel` by your username
