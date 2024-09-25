@@ -173,3 +173,31 @@ How could your colleague develop her code quicker?
     Requesting an interactive node is part of this course
     and is described [in the session on Slurm](slurm_intro.md).
 
+### Exercise 7: A user develops code on his own
+
+Your colleague is developing code on Bianca.
+He writes the code line-by-line and
+works directlt on the login node.
+
+You colleague argues correctly that he is the only user of
+login node of his project, hence nobody else is hindered by this.
+
+Is this a good practice?
+
+???- question "Answer"
+
+    Yes, this is fine, if indeed the user works alone on the login node.
+
+    The login node, however, does have limited computing power,
+    so some programs will not work smoothly on it. In that case,
+    an interactive node with more resources can be booked.
+
+    But if the login node has enough computing power for a user
+    that is indeed the only user, then this is fine.
+
+???- question "How do I find out that I am the only user?"
+
+    You can do so by running the command-line tool `top`:
+    this will display how many users there are.
+
+
