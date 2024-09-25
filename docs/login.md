@@ -97,9 +97,10 @@ flowchart TD
   classDef extra_node fill:#ffd,color:#000,stroke:#ff0
 
   exercise_1[1.get an UPPMAX 2FA]:::minimal_node
-  exercise_2[2.general understanding]:::minimal_node
+  exercise_1[2.get inside the university networks]:::minimal_node
+  exercise_2[3.general understanding]:::minimal_node
 
-  exercise_1 --> exercise_2
+  exercise_1 --> exercise_2 --> exercise_3
 ```
 
 > Exercises for this session.
@@ -132,7 +133,47 @@ then answer these questions:
 
 Note that it takes 15 minutes before you can use this 2FA.
 
-### Exercise 2: general understanding
+### Exercise 2: get inside university networks
+
+Go to the UPPMAX documentation at
+[https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
+then answer these questions:
+
+- Where is it is described how to get inside the university networks?
+  The formal name of these university networks is SUNET.
+
+???- question "Answer"
+
+    At <https://docs.uppmax.uu.se/getting_started/get_inside_sunet/>
+
+- From that page, determine if you are inside the university networks.
+
+???- question "How do I know if I am inside the university networks?"
+
+???- question "Answer"
+
+    Go to <http://bianca.uppmax.uu.se/>.
+
+    - If nothing happens, you are outside of the university networks
+
+    ![A user that is outside of the university network sees nothing](./img/login_uppmax_bianca_website_outside_sunet_browser_short.png)
+
+    - If you so a login screen, you are inside of the university networks
+
+    ![A user that is outside of the university network sees a login screen](./img/bianca_gui_login_1st.png)
+
+    > A user that is outside of the university network sees a login screen
+
+- If you are outside of the university networks, setup your VPN
+
+???- question "Answer"
+
+    This is described at
+    ['Get inside the university networks' at the section 'Use a virtual private network'](https://docs.uppmax.uu.se/getting_started/get_inside_sunet/#use-a-virtual-private-network).
+
+    Beyond this, it differs for users from different universities.
+
+### Exercise 3: general understanding
 
 Go to the UPPMAX documentation at
 [https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
