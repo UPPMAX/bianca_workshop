@@ -1,6 +1,6 @@
 # Login via a terminal
 
-![The Bianca console environment](bianca_console_461_x_202.png)
+![The Bianca console environment](./img/bianca_console_461_x_202.png)
 
 > The Bianca console environment
 
