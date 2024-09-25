@@ -152,7 +152,7 @@ then answer these questions:
 
 ???- question "Answer"
 
-    Go to <http://bianca.uppmax.uu.se/>.
+    Go to <https://bianca.uppmax.uu.se/>.
 
     - If nothing happens, you are outside of the university networks
 

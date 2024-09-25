@@ -39,6 +39,7 @@ nav:
       - extra/devel.md
   - Misc: 
       - Project: misc/project.md
+      - Shared document: misc/shared_document.md
       - Exercise procedure: misc/exercise_procedure.md
  
 theme:
