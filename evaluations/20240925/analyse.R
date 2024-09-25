@@ -1,13 +1,13 @@
 #!/bin/env Rstudio
 
-t <- readr::read_csv("survey.csv")
+t <- readr::read_csv("20240925_fixed.csv")
 t$Timestamp <- NULL
 t$`Any feedback?` <- NULL
 # tail(names(t))
 questions <- stringr::str_remove(
   stringr::str_remove(
     names(t), 
-    "Give you confidence levels of the statements below: \\["),
+    "Give you confidence levels of the following statements: \\["),
   "\\]"
 )
 #new_names <- c(
@@ -22,6 +22,8 @@ t$i <- seq(1, nrow(t))
 names(t)
 t_tidy <- tidyr::pivot_longer(t, cols = starts_with("I", ignore.case = FALSE))
 names(t_tidy)
+# No idea why 'starts_with("I", ignore.case = FALSE)' does not work today
+t_tidy$`Any other feedback?` <- NULL
 names(t_tidy) <- c("i", "question", "answer")
 t_tidy
 
