@@ -37,7 +37,9 @@ nav:
       - extra/julia.md
       - extra/containers.md
       - extra/devel.md
-     
+  - Misc: 
+      - Project: misc/project.md
+      - Exercise procedure: misc/exercise_procedure.md
  
 theme:
   name: material
