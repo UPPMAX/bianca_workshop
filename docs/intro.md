@@ -57,7 +57,7 @@ When  | Who  | What
 14:05 | B    | Compute nodes and SLURM, including interactive nodes
 14:55 | .    | Break
 15:10 | L    | Legal aspects of sensitive data
-15:30 | R    | Summary and anonymous evaluation
+15:30 | R    | [Summary](summary.md) and anonymous [evaluation](evaluation.md)
 15:45 | All  | Optional Q&A
 
 - Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
