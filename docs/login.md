@@ -225,15 +225,3 @@ then answer these questions:
     you can run it on a login node.
 
     Else, you will have to use the Slurm job scheduler.
-
-Done?
-
-<!-- Indeed, line lengths beyond 80 characters -->
-<!-- markdownlint-disable MD013 -->
-
-- If you want to know what an HPC cluster is in more detail,
-  read up on
-  [the UPPMAX clusters](https://docs.uppmax.uu.se/cluster_guides/uppmax_cluster/)
-- Else move on to the next session
-
-<!-- markdownlint-enable MD013 -->
