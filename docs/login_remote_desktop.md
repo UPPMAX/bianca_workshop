@@ -199,5 +199,3 @@ Is this a good practice?
 
     You can do so by running the command-line tool `top`:
     this will display how many users there are.
-
-
