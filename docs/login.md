@@ -51,6 +51,7 @@ tags:
     - How does using an HPC clusters look like?
     - How does one tell the UPPMAX HPC clusters what to do?
     - Who has already logged in to an HPC cluster?
+    - What does one need to be allowed to login to Bianca?
     - Who has already logged in to Bianca?
 
 ![Bianca or Rackham](./img/bianca_or_rackham.jpg)
