@@ -177,7 +177,7 @@ How could your colleague develop her code quicker?
 
 Your colleague is developing code on Bianca.
 He writes the code line-by-line and
-works directlt on the login node.
+works directly on the login node.
 
 You colleague argues correctly that he is the only user of
 login node of his project, hence nobody else is hindered by this.
