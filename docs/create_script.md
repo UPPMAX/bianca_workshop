@@ -67,7 +67,7 @@ echo "Hello!"
 Save and close `nano`.
 
 - Use `CTRL-O` to start saving your file, then edit the filename, then
-  press enter 
+  press enter
 - Use `CTRL-X` to exit
 
 Use [chmod](https://en.wikipedia.org/wiki/Chmod) to make the file executable:
