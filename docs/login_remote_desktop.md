@@ -101,7 +101,7 @@ for how to log in to the Bianca remote desktop environment website.
 
 Your colleague visits [https://bianca.uppmax.uu.se/](https://bianca.uppmax.uu.se/)
 and sees nothing appear on the website (see also image above).
-What is likely the problem?"
+What is likely the problem?
 
 ???- question "Answer"
 
@@ -161,7 +161,7 @@ However, each job takes some minutes to start
 and hence it takes a couple of minutes
 before she knows if her code worked yes/no.
 
-How could your colleague develop your code quicker?"
+How could your colleague develop her code quicker?
 
 ???- question "Answer"
 
