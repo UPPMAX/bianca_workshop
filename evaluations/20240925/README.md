@@ -2,11 +2,11 @@
 
 - Raw data: [20240925.csv](20240925.csv)
 
-![Raw data in Google Forms](Screenshot from 2024-09-25 16-04-23.png)
+![Raw data in Google Forms](2024-09-25_16-04-23.png)
 
 > Raw data in Google Forms
 
-![Raw data in Google Forms](Screenshot from 2024-09-25 16-05-31.png)
+![Raw data in Google Forms](2024-09-25_16-05-31.png)
 
 > Raw data in Google Forms
 
@@ -24,7 +24,7 @@
 
 ## Feedback in text
 
-![Feedback in text as screenshot](Screenshot from 2024-09-25 16-21-01.png)
+![Feedback in text as screenshot](2024-09-25_16-21-01.png)
 
 > Feedback in text as screenshot
 
