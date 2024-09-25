@@ -95,7 +95,7 @@ flowchart TD
   classDef extra_node fill:#ffd,color:#000,stroke:#ff0
 
   exercise_1[1.get an UPPMAX 2FA]:::minimal_node
-  exercise_2[2.general understanding]:::extra_node
+  exercise_2[2.general understanding]:::minimal_node
 
   exercise_1 --> exercise_2
 ```
