@@ -11,10 +11,9 @@
     - Extra: Can find the name of the file explorer
     - Extra: Can do basic file management: create, copy, move and delete
       a file and folder
-    - Can start a program from the terminal
-    - Can start a visual text editor
-    - Can find the name of the visual text editor
-    - Can do basic things in the visual text editor: edit, save, close
+    - Extra: Can start a visual text editor
+    - Extra: Can find the name of the visual text editor
+    - Extra: Can do basic things in the visual text editor: edit, save, close
 
 ???- question "For teachers"
 
@@ -24,13 +23,12 @@
       and the remote desktop (in both directions)
     - Learners have used Thunar
     - Learners have found out that the file explorer is called Thunar
-    - Learners have done basic file management:
-      create, copy, move and delete a file and folder
     - Learners have started a terminal
-    - Learners have start `xeyes` from the terminal
-    - Learners have started `gedit`
-    - Learners have found that the text editor is called gedit
-    - Learners have done basic things in gedit: edit a files, save, close
+    - Extra: Learners have done basic file management:
+      create, copy, move and delete a file and folder
+    - Extra: Learners have started `gedit`
+    - Extra: Learners have found that the text editor is called gedit
+    - Extra: Learners have done basic things in gedit: edit a files, save, close
 
     Lesson plan:
 
@@ -260,7 +258,7 @@ its name will be useful to know:
 
     The file navigator is called Thunar.
 
-### Exercise 4: starting a text editor
+### Extra: Exercise 4: starting a text editor
 
 - Create a file called `my_file.txt` (the `.txt` at the end is important),
   if not already present
@@ -328,7 +326,7 @@ its name will be useful to know:
     ![The gedit hamburger menu](./img/gedit_hamburger_menu.png)
 
 
-### Exercise 5: file management
+### Extra: Exercise 5: file management
 
 In Thunar:
 

@@ -3,25 +3,25 @@
 !!!- info "Learning objectives"
 
     - Practice using the UPPMAX documentation
-    - Can find pre-installed software from the documentation
-    - Can find pre-installed databases from the documentation
     - Understand why there is a module system
     - Can find pre-installed software using the module system
     - Can load a module
     - Practice loading the `bioinfo-tools` module first
+    - Extra: Can find pre-installed software from the documentation
+    - Extra: Can find pre-installed databases from the documentation
 
 ???- question "For teachers"
 
     Teaching goals are:
 
     - Learners have practiced using the UPPMAX documentation
-    - Learners have found pre-installed software from the documentation
-    - Learners have found pre-installed databases from the documentation
     - Learners understand why there is a module system
     - Learners can find pre-installed software using the module system
     - Learners can load a module
     - Learners can unload a module
     - Learners understand to load the `bioinfo-tools` module first
+    - Extra: Learners have found pre-installed software from the documentation
+    - Extra: Learners have found pre-installed databases from the documentation
 
     Lesson plan:
 

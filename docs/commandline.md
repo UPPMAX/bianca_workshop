@@ -31,18 +31,11 @@
 
 You need the command-line to start calculations.
 
-## Overview
+## Introduction
 
 Bianca is a cluster with the Linux operating system.
 We must use a Linux terminal to work with Bianca,
 therefore we must learn some Linux commands.
-
-We will learn to:
-
-- Navigate through the file system
-- (optional) read the manual
-- (optional) work with directories
-- (optional) work with files
 
 ### Navigate through the file system
 
@@ -74,7 +67,7 @@ The previous location              |`cd -`
     (try, for example `cd ~`).
     This is due to [The Silence Is Golden Rule](https://www.linfo.org/rule_of_silence.html)
 
-### (optional) Read the manual
+### Extra: Read the manual
 
 Use `man` to see the help pages about a command:
 
@@ -89,7 +82,7 @@ These command give the help pages about the programs `man`, `cd` and `ls` respec
 Press `q` (short for 'quit') to exit `man`
 
 
-### (optional) Work with directories
+### Extra: Work with directories
 
 Linux can create, move and delete folders.
 
@@ -112,7 +105,7 @@ Delete a folder                    |`rm -r myfolder`
 
     For sysadmins: use `pwd -P` to see your real current location on the hardware
 
-### (optional) Work with files
+### Extra: Work with files
 
 Linux can create, view, rename, move and delete files.
 Additionally, there are some text editors that

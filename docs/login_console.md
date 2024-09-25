@@ -9,8 +9,6 @@
     - Understand that after login, one is on a login node
     - If needed: has installed an SSH client
         - Windows: MobaXTerm
-    - Can log in to the console environment using a terminal with X forwarding
-    - Can determine if X forwarding works
 
 ???- question "For teachers"
 
@@ -23,9 +21,6 @@
     - Learners understand that after login, one is on a login node
     - If needed, learners have installed an SSH client
         - Windows: MobaXTerm
-    - Learners have logged in to the console environment
-      using a terminal with X forwarding
-    - Learners have determined if X forwarding works
 
     Lesson plan:
 
@@ -179,7 +174,7 @@ Welcome on a login node!
 
 ???- question "(optional) 7. Exercise: login into the Bianca console environment from Bianca"
 
-    Read [the UPPMAX documentation's 'Login to the Rackham console environment with a password'](https://docs.uppmax.uu.se/getting_started/login_rackham_console_password/).
+    Read [the UPPMAX documentation's 'Login to the Rackham (yes, Rackham) console environment with a password'](https://docs.uppmax.uu.se/getting_started/login_rackham_console_password/).
 
     Then, log in to the Rackham console environment.
     From there, log in to the Bianca console environment.
