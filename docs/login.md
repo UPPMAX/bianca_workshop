@@ -10,6 +10,7 @@ tags:
 
     - Practice using the UPPMAX documentation
     - Get an UPPMAX 2FA
+    - If needed: get a VPN
     - Understand that there are two environments
     - Understand that after login, one is on a login node
     - Understand what a login node is
@@ -21,6 +22,7 @@ tags:
 
     - Learners have practiced using the UPPMAX documentation
     - Learners have gotten an UPPMAX 2FA
+    - If needed, learners have installed a VPN
     - Learners have read and heard that there are two environments
     - Learners have read and heard that after login, one is on a login node
     - Learners have read and heard about what a login node is in general terms
