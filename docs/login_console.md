@@ -1,5 +1,9 @@
 # Login via a terminal
 
+![The Bianca console environment](bianca_console_461_x_202.png)
+
+> The Bianca console environment
+
 !!!- info "Learning objectives"
 
     - Practice using the UPPMAX documentation
