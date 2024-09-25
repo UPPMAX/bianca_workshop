@@ -74,6 +74,7 @@ flowchart TD
 
     %% Basic -> Intermediate
     can_manage_files_using_cli --> can_tranfer_files_using_rsync
+    can_find_wharf --> can_tranfer_files_using_rsync
     can_schedule_jobs --> can_monitor_jobs
     can_use_interactive_node --> can_use_ide
     can_use_modules --> can_use_ide
