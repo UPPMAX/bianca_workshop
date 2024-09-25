@@ -389,7 +389,6 @@ srun echo Hello world!
     - ``scancel [job ID]``
 
 
-
 ## Exercises 20 minutes
 
 ???+ question "You are developing code on Bianca."
@@ -402,11 +401,6 @@ srun echo Hello world!
 
         - This is the typical use-case to use an interactive node.
         - One could also consider to develop code on a local computer instead (which uses nonsensitive/simulated/fake testing data) and upload the final code instead.
-
-??? question "Start an interactive session"
-
-    - The goal of this exercise is to make sure you know how to start an interactive session.
-    - Try to reproduce the steps in the Demo above , if we did not manage!
 
 ???- question "Why not always use an interactive session?"
 
@@ -431,7 +425,19 @@ srun echo Hello world!
         1. interactive
         1. interactive
 
-???+ question "Submit a Slurm job"
+??? question "Start an interactive session"
+
+    - Ask for like 15 minutes only
+    - The goal of this exercise is to make sure you know how to start an interactive session.
+    - Try to reproduce the steps in the Demo above, if we did not manage!
+
+???+ question "Play with some changes in the submit script used in the Type-along"
+
+    - Examples:
+        - more cores
+        - other things to do
+
+???+ question "Extra: Submit a complex Slurm job"
 
     - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshop/modules/#bigger-exercises) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
         - You can copy the my_bio_workflow.sh file in ``/proj/sens2023598/workshop/slurm`` to your home folder and make the necessary changes.
@@ -496,14 +502,20 @@ srun echo Hello world!
         ```bash
         $ sbatch my_bio_workflow.sh
         ```
+        
+???+ question "EXTRA: Have look at the link below"
+
+    - [The job scheduler graphically](https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/){:target="_blank"}
+    
+    - Which jobs will start faster?
 
 ## Links
 
-- [Official slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
 - [New Slurm user guide](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/slurm/){:target="_blank"}
 - [Discovering job resource usage with `jobstats`](http://docs.uppmax.uu.se/software/jobstats/){:target="_blank"}
 - [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"}
 - [The job scheduler graphically](https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/){:target="_blank"}
+- [Official slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
 
 !!! example "Discussion"
 
