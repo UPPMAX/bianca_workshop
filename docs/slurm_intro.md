@@ -18,7 +18,7 @@
     - The learners demonstrate to have understood when to use batch or interactive
     - The learners demonstrate to have understood how to plan for jobs
 
-    Schedule (45 minutes):
+    Schedule (50 minutes):
 
     - 10 minutes: lecturing
     - 15 minutes type-alongs x 2
@@ -143,7 +143,7 @@ flowchart TD
 
 !!! note "See also"
 
-    [More about the queue](slurm_intro.md#more-about-the-queue)
+    - [The job scheduler graphically](https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/){:target="_blank"}
 
 ### Core-hours
 
@@ -270,7 +270,6 @@ We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/sof
     - Cons
         - You have no interaction
 
-
 - Batch scripts can be written in any scripting language. We will use BASH
 - Make first line be  `#!/bin/bash -l` in the top line
     - It is good practice to end the line with ``-l`` to reload a fresh environment with no modules loaded.
@@ -281,7 +280,7 @@ We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/sof
     - ``#SBATCH -n 3``
 - `#` will be ignored by `bash` and can run as an ordinary bash script
 - If running the script with the command `sbatch <script>` the `#SBATCH` lines will be interpreted as slurm flags
-- The add your workflow: An algorithm of the steps to be done from the terminal point of view.
+- Then add your workflow: An algorithm of the steps to be done from the terminal point of view.
     - Think about what you would have to do yourself in the terminal to:
         - run the tool in a login session from the terminal.
         - and do possible modification to allow for use of more cores
@@ -383,6 +382,12 @@ srun echo Hello world!
     
     - ``interactive -A <project> <other options if not using default settings>``
     - load your modules when session starts
+
+!!! admonition "Check and cancel jobs"
+
+    - ``squeue``    see the pending and running jobs with their job IDs
+    - ``scancel [job ID]``
+
 
 
 ## Exercises 20 minutes
