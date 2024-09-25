@@ -62,15 +62,10 @@ When  | Who  | What
 
 - Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
 
-!!! info "Q/A collaboration document"
+Useful pages:
 
-    - Use the Q/A page for the workshop with your questions.
-        - [https://hackmd.io/@UPPMAX/Bianca_Intro_QaA](https://hackmd.io/@UPPMAX/Bianca_Intro_QaA){target="_blank"}
-    - Depending on how many helpers there are,
-      we'll see how fast there are answers
-        - Some answers may come after the workshop.
-    - Create a new line for new questions.
-      Take care if others are editing at the same time.
+- [The project name](misc/project.md)
+- [The shared document](misc/shared_document.md)
 
 ## Overview of courses
 
