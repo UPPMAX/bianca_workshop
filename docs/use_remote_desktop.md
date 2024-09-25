@@ -5,11 +5,12 @@
     - Practice using the UPPMAX documentation
     - Can copy-paste text between local computer and the remote desktop
       (in both directions)
-    - Can navigate the file system
-    - Can find the name of the file explorer
-    - Can do basic file management: create, copy, move and delete
-      a file and folder
     - Can start a terminal
+    - Can navigate the file system
+    - Can find the wharf
+    - Extra: Can find the name of the file explorer
+    - Extra: Can do basic file management: create, copy, move and delete
+      a file and folder
     - Can start a program from the terminal
     - Can start a visual text editor
     - Can find the name of the visual text editor
@@ -84,8 +85,8 @@ flowchart TD
   exercise_1[1.copy-paste text]:::minimal_node
   exercise_2[2.starting a terminal]:::minimal_node
   exercise_3[3.file navigation, can find wharf]:::minimal_node
-  exercise_4[4.file management]:::extra_node
-  exercise_5[5.starting a text editor]:::extra_node
+  exercise_4[4.starting a text editor]:::extra_node
+  exercise_5[5.file management]:::extra_node
 
   exercise_1 --> exercise_2 --> exercise_3 --> exercise_4 --> exercise_5
 ```
@@ -259,36 +260,7 @@ its name will be useful to know:
 
     The file navigator is called Thunar.
 
-### Exercise 4: file management
-
-In Thunar:
-
-- create a file
-
-???- question "Answer"
-
-    In Thunar, click on the white space next/under the files with
-    the right mouse button. In this pop-up menu, click 'Create a new file':
-
-    ![Popup menu to create a new file](./img/create_a_new_file.png)
-
-    In the following dialog, give it any filename:
-
-    ![Give the file a name](./img/give_file_a_filename.png)
-
-    Now the file is created:
-
-    ![The created file is shown](./img/file_created.png)
-
-- copy a file
-- move a file
-- delete a file
-- create a folder
-- copy a folder
-- move a folder
-- delete a folder
-
-### Exercise 5: starting a text editor
+### Exercise 4: starting a text editor
 
 - Create a file called `my_file.txt` (the `.txt` at the end is important),
   if not already present
@@ -354,3 +326,33 @@ its name will be useful to know:
     - In the gedit hamburger menu, click 'Quit'
 
     ![The gedit hamburger menu](./img/gedit_hamburger_menu.png)
+
+
+### Exercise 5: file management
+
+In Thunar:
+
+- create a file
+
+???- question "Answer"
+
+    In Thunar, click on the white space next/under the files with
+    the right mouse button. In this pop-up menu, click 'Create a new file':
+
+    ![Popup menu to create a new file](./img/create_a_new_file.png)
+
+    In the following dialog, give it any filename:
+
+    ![Give the file a name](./img/give_file_a_filename.png)
+
+    Now the file is created:
+
+    ![The created file is shown](./img/file_created.png)
+
+- copy a file
+- move a file
+- delete a file
+- create a folder
+- copy a folder
+- move a folder
+- delete a folder
