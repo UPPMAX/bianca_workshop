@@ -53,6 +53,8 @@
       when using a remote desktop environment?
     - Does someone have already tried to copy-past text between
       local computer and remote desktop?
+    - Can you already name some folders that are special, either
+      for Linux or on Bianca?
 
 ## Why?
 
