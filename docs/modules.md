@@ -88,9 +88,9 @@ flowchart TD
   classDef minimal_node fill:#fdd,color:#000,stroke:#f00
   classDef extra_node fill:#ffd,color:#000,stroke:#ff0
 
-  exercise_1[1.find the software]:::minimal_node
-  exercise_2[2.work with modules]:::minimal_node
-  exercise_3[3.the bioinfo-tools module]:::minimal_node
+  exercise_1[1.work with modules]:::minimal_node
+  exercise_2[2.the bioinfo-tools module]:::minimal_node
+  exercise_3[3.find the software]:::extra_node
   exercise_4[4.find the databases]:::extra_node
 
   exercise_1 --> exercise_2 --> exercise_3 --> exercise_4
@@ -100,22 +100,7 @@ flowchart TD
 > Red nodes: minimal, needed in other sessions.
 > Yellow nodes: extra, useful in general.
 
-
-### Exercise 1: find the software
-
-Go to the UPPMAX documentation at
-[https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
-then answer these questions:
-
-- Find to list of installed software.
-  Estimate how many pieces of software are installed on Bianca
-
-???- question "Answer"
-
-    One can find the answer at <https://docs.uppmax.uu.se/software/software-table/>,
-    where one can find around 800 pieces of software installed
-
-### Exercise 2: work with modules
+### Exercise 1: work with modules
 
 Go to the UPPMAX documentation at
 [https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
@@ -169,7 +154,7 @@ then answer these questions:
 - Confirm that `cowsay` does not work anymore,
   by typing `cowsay hello`. This should give an error
 
-### Exercise 3: the `bioinfo-tools` module
+### Exercise 2: the `bioinfo-tools` module
 
 Go to the UPPMAX documentation at
 [https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
@@ -285,7 +270,21 @@ Remember, whenever you cannot find something, do:
 module load bioinfo-tools
 ```
 
-### Exercise 4: find the databases
+### Extra: Exercise 3: find the software
+
+Go to the UPPMAX documentation at
+[https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
+then answer these questions:
+
+- Find to list of installed software.
+  Estimate how many pieces of software are installed on Bianca
+
+???- question "Answer"
+
+    One can find the answer at <https://docs.uppmax.uu.se/software/software-table/>,
+    where one can find around 800 pieces of software installed
+
+### Extra: Exercise 4: find the databases
 
 Go to the UPPMAX documentation at
 [https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
