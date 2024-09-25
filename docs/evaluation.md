@@ -32,12 +32,10 @@
 
     - I can log in to the Bianca remote desktop using the website
     - I can log in to the Bianca console environment using SSH
-    - I can log in to the Bianca via Rackham
-    - I can navigate the filesystem using a GUI
-    - I can find the wharf folder using a GUI
-    - I can manage my files and folders using a GUI
-    - I can navigate the filesystem using a terminal
-    - I can find the wharf folder using a terminal
+    - I can log in to Bianca via Rackham
+    - I can navigate to the wharf folder using a graphical file manager
+    - I can manage my files and folders using a graphical file manager
+    - I can navigate to the wharf folder using a terminal
     - I can manage my files and folders using a terminal
     - I can create a minimal executable bash script
     - I can use modules
