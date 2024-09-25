@@ -1,8 +1,10 @@
 # Evaluation
 
-- Any feedback during the day
+- [Any feedback during the day](https://docs.google.com/forms/d/e/1FAIpQLSfrIR52k3JMZ3rAFJ6ZzV8hqOXdy_-d0pYnf1wq1bHBY91xFw/viewform?usp=sf_link)
 
 ???- question "For teachers: what is in that form?"
+
+    Intro to Bianca: Any feedback
 
     Thanks for your feedback.
     This feedback will be published as-is at the end of the day,
@@ -10,9 +12,13 @@
     in the feedback.
     Do mention the teachers, assistants, etc by name!
 
-- Evaluation questions
+    Any feedback?
+
+- [Evaluation questions](https://docs.google.com/forms/d/e/1FAIpQLSfSp8li1xSUrK7zGVhI2j5Li-Onuzf1kVpiUysUOFL2H6EV1A/viewform?usp=sf_link)
 
 ???- question "For teachers: what is in that form?"
+
+    Intro to Bianca: evaluation questions
 
     These are the evaluation questions.
     The goals of these questions is to find out how successful
@@ -28,7 +34,7 @@
     - 4: I have good confidence I can do this
     - 5: I absolutely can do this!
 
-    Give you confidence levels of the following statements below:
+    Give you confidence levels of the following statements:
 
     - I can log in to the Bianca remote desktop using the website
     - I can log in to the Bianca console environment using SSH
