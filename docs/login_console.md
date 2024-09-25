@@ -175,40 +175,13 @@ then answer these questions:
 
 Welcome on a login node!
 
-### Exercise 4: find out if X forwarding works
-
-- Find the page about the program called `xeyes`
-
-???- question "I cannot find it. Where is it?"
-
-    You can find find it at <https://docs.uppmax.uu.se/software/xeyes/>
-
-- On a Bianca login node, run `xeyes`.
-
-???- question "How do I run it"
-
-    In your terminal, type:
-
-    ```bash
-    xeyes
-    ```
-
-    and press enter.
-
-- Conclude if X-forwarding works for you. If not, the UPPMAX page on SSH clients
-  hold some hints.
-
-???- question "Where is that page?"
-
-    You can find find it at <https://docs.uppmax.uu.se/software/ssh_client/>
-
-### Exercise 5: Using SSH via Bianca
+### Extra: Exercise 4: Using SSH via Rackham
 
 ???- question "(optional) 7. Exercise: login into the Bianca console environment from Bianca"
 
-    Read [the UPPMAX documentation's 'Login to the Bianca console environment with a password'](https://docs.uppmax.uu.se/getting_started/login_bianca_console_password/).
+    Read [the UPPMAX documentation's 'Login to the Rackham console environment with a password'](https://docs.uppmax.uu.se/getting_started/login_rackham_console_password/).
 
-    Then, log in to the Bianca console environment.
+    Then, log in to the Rackham console environment.
     From there, log in to the Bianca console environment.
 
     Do this after having logged in to the Bianca console environment,

@@ -3,7 +3,7 @@
 !!! info "Objectives"
 
     - Being able to navigate to home folder, project folder and wharf
-    - Optional: Being able to view/create/move/delete files
+    - Extra: Being able to view/create/move/delete files
 
 ???- info "Notes for teachers"
 
@@ -11,8 +11,8 @@
 
     - The learners demonstrate they can navigate
       to home folder, project folder and wharf
-    - Optional: The learners demonstrate they can create, move and delete files
-    - Optional: The learners demonstrate they can create and delete folders
+    - Extra: The learners demonstrate they can create, move and delete files
+    - Extra: The learners demonstrate they can create and delete folders
 
     Schedule:
 
@@ -142,7 +142,7 @@ Use the materials shown above to answer the questions below.
     There is a video that shows the solution of all these exercises:
     [YouTube](https://youtu.be/7_LPeQbcmAo).
 
-    The video, however, follows the order 2-3-4-5-1.
+    The video, however, follows a different order.
 
 ```mermaid
 flowchart TD
@@ -152,8 +152,8 @@ flowchart TD
 
   exercise_1[1.file navigation]:::minimal_node
   exercise_2[2.view help]:::extra_node
-  exercise_4[3.folder management]:::extra_node
-  exercise_5[4.file management]:::extra_node
+  exercise_3[3.folder management]:::extra_node
+  exercise_4[4.file management]:::extra_node
 
   exercise_1 --> exercise_2 --> exercise_3 --> exercise_4
 ```
@@ -164,7 +164,7 @@ flowchart TD
 
 ### Exercise 1: file navigation
 
-- Navigate to your home folder"
+- Navigate to your home folder
 
 ???- question "Answer"
 
@@ -222,7 +222,7 @@ can be transferred to/from.
     cd /proj/nobackup/sens2023598/wharf/sven/sven-sens2023598
     ```
 
-### Exercise 2: view help
+### Extra: Exercise 2: view help
 
 View the help of the command `cd`
 
@@ -236,7 +236,7 @@ View the help of the command `cd`
 
     This will fail, because Bianca has (close to) no internet access.
 
-### Exercise 3: folder management
+### Extra: Exercise 3: folder management
 
 - Create a folder `/proj/sens2023598/workshop/[your_login_name]`,
   for example, `/proj/sens2023598/workshop/richel`"
@@ -254,7 +254,7 @@ View the help of the command `cd`
     mkdir richel
     ```
 
-### Exercise 4: file management
+### Extra: Exercise 4: file management
 
 - Create a file, e.g. `richel.txt`
 
