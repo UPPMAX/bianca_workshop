@@ -433,9 +433,9 @@ srun echo Hello world!
 
 ???+ question "Play with some changes in the submit script used in the Type-along"
 
-     - Examples:
-         - more cores
-         - other things to do
+    - Examples:
+        - more cores
+        - other things to do
 
 ???+ question "Extra: Submit a complex Slurm job"
 
@@ -502,13 +502,12 @@ srun echo Hello world!
         ```bash
         $ sbatch my_bio_workflow.sh
         ```
-???+ question "EXTRA: Have look at the links
-    - [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"}
+        
+???+ question "EXTRA: Have look at the link below"
+
     - [The job scheduler graphically](https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/){:target="_blank"}
-
-    ??? tip "Answer"
-
-
+    
+    - Which jobs will start faster?
 
 ## Links
 
