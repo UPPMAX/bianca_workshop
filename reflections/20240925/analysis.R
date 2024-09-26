@@ -62,3 +62,62 @@ testthat::expect_true(ks_interactive$p.value >= 0.05) # Same distribution
 
 ks_schedule <- ks.test(confidences_schedule_r, confidences_schedule_nr)
 testthat::expect_true(ks_schedule$p.value >= 0.05) # Same distribution
+
+
+transfer_r_tally <- dplyr::tally(dplyr::group_by(tibble::tibble(confidence = confidences_transfer_r), confidence))
+transfer_r_tally$f <- transfer_r_tally$n / sum(transfer_r_tally$n)
+transfer_r_tally$teacher <- "r"
+
+transfer_nr_tally <- dplyr::tally(dplyr::group_by(tibble::tibble(confidence = confidences_transfer_nr), confidence))
+transfer_nr_tally$f <- transfer_nr_tally$n / sum(transfer_nr_tally$n)
+transfer_nr_tally$teacher <- "nr"
+
+ggplot2::ggplot(
+  data = dplyr::bind_rows(transfer_r_tally, transfer_nr_tally),
+  ggplot2::aes(x = confidence, y = f, color = teacher)) +
+  ggplot2::geom_line() + 
+  ggplot2::scale_y_continuous(limits = c(0, 1)) +
+  ggplot2::scale_x_continuous(limits = c(0, 5)) +
+  ggplot2::labs(title = "File transfer")
+
+ggplot2::ggsave("file_transfer_confidences_compared.png", width = 3, height = 3)
+
+
+interactive_r_tally <- dplyr::tally(dplyr::group_by(tibble::tibble(confidence = confidences_interactive_r), confidence))
+interactive_r_tally$f <- interactive_r_tally$n / sum(interactive_r_tally$n)
+interactive_r_tally$teacher <- "r"
+
+interactive_nr_tally <- dplyr::tally(dplyr::group_by(tibble::tibble(confidence = confidences_interactive_nr), confidence))
+interactive_nr_tally$f <- interactive_nr_tally$n / sum(interactive_nr_tally$n)
+interactive_nr_tally$teacher <- "nr"
+
+ggplot2::ggplot(
+  data = dplyr::bind_rows(interactive_r_tally, interactive_nr_tally),
+  ggplot2::aes(x = confidence, y = f, color = teacher)) +
+  ggplot2::geom_line() + 
+  ggplot2::scale_y_continuous(limits = c(0, 1)) +
+  ggplot2::scale_x_continuous(limits = c(0, 5)) +
+  ggplot2::labs(title = "Interactive")
+
+ggplot2::ggsave("interactive_confidences_compared.png", width = 3, height = 3)
+
+
+
+
+schedule_r_tally <- dplyr::tally(dplyr::group_by(tibble::tibble(confidence = confidences_schedule_r), confidence))
+schedule_r_tally$f <- schedule_r_tally$n / sum(schedule_r_tally$n)
+schedule_r_tally$teacher <- "r"
+
+schedule_nr_tally <- dplyr::tally(dplyr::group_by(tibble::tibble(confidence = confidences_schedule_nr), confidence))
+schedule_nr_tally$f <- schedule_nr_tally$n / sum(schedule_nr_tally$n)
+schedule_nr_tally$teacher <- "nr"
+
+ggplot2::ggplot(
+  data = dplyr::bind_rows(schedule_r_tally, schedule_nr_tally),
+  ggplot2::aes(x = confidence, y = f, color = teacher)) +
+  ggplot2::geom_line() + 
+  ggplot2::scale_y_continuous(limits = c(0, 1)) +
+  ggplot2::scale_x_continuous(limits = c(0, 5)) +
+  ggplot2::labs(title = "schedule")
+
+ggplot2::ggsave("schedule_confidences_compared.png", width = 3, height = 3)
