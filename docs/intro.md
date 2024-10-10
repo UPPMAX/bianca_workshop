@@ -101,7 +101,15 @@ flowchart TD
       can_tranfer_files_using_rsync(Can transfer files using rsync):::intermediate_node
       can_use_command_line_2(Can use the command line 2):::intermediate_node
       can_use_custom_software(Can use custom software):::intermediate_node
+      can_use_custom_python_pip(Can use custom Python packages using pip):::intermediate_node
+      can_use_custom_python_conda(Can use custom Python packages using conda):::intermediate_node
+      can_use_custom_r(Can use custom R packages):::intermediate_node
+      can_use_container(Can use a container):::intermediate_node
+      can_build_from_source(Can build software from source):::intermediate_node
+
       can_monitor_jobs(Can monitor jobs):::intermediate_node
+      can_use_gpus(Can use GPUs):::intermediate_node
+      can_use_partitions(Can use partitions):::intermediate_node
       can_use_ide(Can use an IDE):::intermediate_node
     %% end
     %% style sub_intermediate_use fill:#ffc,color:#000,stroke:#ffc
@@ -131,6 +139,8 @@ flowchart TD
     can_manage_files_using_cli --> can_tranfer_files_using_rsync
     can_find_wharf --> can_tranfer_files_using_rsync
     can_schedule_jobs --> can_monitor_jobs
+    can_schedule_jobs --> can_use_gpus
+    can_schedule_jobs --> can_use_partitions
     can_use_interactive_node --> can_use_ide
     can_use_modules --> can_use_ide
 
@@ -141,6 +151,12 @@ flowchart TD
     %% Intermediate
     can_use_command_line_1 --> can_tranfer_files_using_rsync
     can_use_command_line_2 --> can_use_custom_software
+
+    can_use_custom_software --> can_use_custom_python_pip
+    can_use_custom_software --> can_use_custom_python_conda
+    can_use_custom_software --> can_use_custom_r
+    can_use_custom_software --> can_build_from_source
+    can_use_custom_software --> can_use_container
 ```
 
 > Overview of the courses.
