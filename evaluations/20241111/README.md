@@ -26,7 +26,6 @@ Give you confidence levels of the following statements:
 - I can install software using a container
 - I can build software from source
 - I can use an IDE
-- I can work with sensitive data responsibly
 
 Any other feedback?
 
