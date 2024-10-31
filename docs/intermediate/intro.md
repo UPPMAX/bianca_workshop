@@ -120,7 +120,7 @@ When | Who  | What
 15:45| All  | Optional Q/A and [extra material](https://uppmax.github.io/bianca_workshop/extra/slurm/)
 16:00| .    | END
 
-* Who: `B`: Björn, `L`: Lars, `R`: Richèl
+* Who: `B`: Björn, `D`: Diana, `L`: Lars, `P`: Pavlin, `R`: Richèl
 
 ## Overview of courses
 
