@@ -23,11 +23,12 @@ It takes into account that one may need to leave early too.
 
     - I can transfer files to/from Bianca using rsync
     - I can see a job's CPU and memory usage
+    - I understand how to make a job
+      make efficient use of computational resources
     - I understand how to install software myself
     - I understand how to use packages and libraries for scripts
     - I understand what containers are
     - I understand how to build from source
-    - I can find information in the UPPMAX documentation about IDEs on Bianca
     - I can can run the voted-for IDE on Bianca
     - I understand how to deal with sensitive data
 
