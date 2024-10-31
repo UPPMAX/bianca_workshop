@@ -4,10 +4,11 @@
 
     We'll go through the methods to transfer files
 
-    - wharf
-    - transit server
-    - rsync, scp/sftp
-    - pros/cons of different solutions
+    - [Transfer files to/from Bianca using FileZilla](https://github.com/UPPMAX/bianca_workshop/issues/35)
+    - (optional) wharf
+    - (optional) transit server
+    - (optional) rsync, scp/sftp
+    - (optional) pros/cons of different solutions
 
 !!! warning
 

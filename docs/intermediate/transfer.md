@@ -8,9 +8,9 @@
     - Give a reasonable definition of what the Transit server is
     - Explain well enough what the Transit server allows one to do
     - Mount the wharf on Transit
-    - Transfer files to/from Bianca using `rsync`
-    - Transfer files to/from Bianca using `sftp`
-    - Transfer files to/from Bianca using FileZilla
+    - [Transfer files to/from Bianca using `rsync`](https://github.com/UPPMAX/bianca_workshop/issues/35)
+    - (optional) Transfer files to/from Bianca using `sftp`
+    - (optional) Transfer files to/from Bianca using FileZilla
 
 ???- question "For teachers"
 
@@ -29,9 +29,9 @@
     - Learners understand that the Transit server serves
       like a bridge between locations
     - Learners have mounted the wharf on Transit
-    - Learners have transferred files to/from Bianca using `rsync`
-    - Learners have transferred files to/from Bianca using `sftp`
-    - Learners have transferred files to/from Bianca using FileZilla
+    - Learners have [transferred files to/from Bianca using `rsync`](https://github.com/UPPMAX/bianca_workshop/issues/35)
+    - (optional) Learners have transferred files to/from Bianca using `sftp`
+    - (optional) Learners have transferred files to/from Bianca using FileZilla
 
 
     Lesson plan:
