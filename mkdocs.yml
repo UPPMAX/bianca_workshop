@@ -28,15 +28,16 @@ nav:
     - IDEs: intermediate/ides.md
 #    - Intro to NAISS-SENS and sensitive data: sens_project_short.md
     - Summary: intermediate/summary.md
-    - Extra material:
-      - Overview: overview.md
-      - extra/slurm.md
-      - extra/conda.md
-      - extra/pip.md
-      - extra/rpackages.md
-      - extra/julia.md
-      - extra/containers.md
-      - extra/devel.md
+    - Evaluation: intermediate/evaluation_intermediate.md
+  - Extra material:
+    - Overview: overview.md
+    - extra/slurm.md
+    - extra/conda.md
+    - extra/pip.md
+    - extra/rpackages.md
+    - extra/julia.md
+    - extra/containers.md
+    - extra/devel.md
   - Misc: 
       - Project: misc/project.md
       - Shared document: misc/shared_document.md
