@@ -103,11 +103,11 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-  learning_objectives[Fill in learning objectives\nin breakout room]
-  evaluation[Fill in evaluation\nin breakout room]
+  learning_objectives[Fill in learning objectives in breakout room]
+  evaluation[Fill in evaluation in breakout room]
   questions(Questions?)
-  done[Enjoy the rest of your day!\nThanks!]
-  q_and_a[Go to main room\nQ & A after evaluation]
+  done[Enjoy the rest of your day! Thanks!]
+  q_and_a[Go to main room, Q & A after evaluation]
   learning_objectives --> evaluation
   evaluation --> questions
   questions --> |yes| q_and_a

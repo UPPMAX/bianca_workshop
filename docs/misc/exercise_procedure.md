@@ -144,7 +144,7 @@
 flowchart TD
   subgraph breakout_room[Your initial breakout room]
     do_exercise[Do exercises in group]
-    stuck[Wait\nAsk for help\nGo the main room]
+    stuck[Wait or ask for help or go the main room]
     do_exercise <--> |Stuck?| stuck
   end
   subgraph main_room[Main room]
