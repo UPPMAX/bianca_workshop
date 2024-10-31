@@ -23,10 +23,12 @@ nav:
   - Intermediate workshop/hackaton: 
     - Introduction: intermediate/intro.md
     - Transferring files to/from Bianca: intermediate/transfer.md
-    - Compute nodes and debugging jobs: intermediate/slurm_bianca.md
+    - Efficient jobs: intermediate/efficient_jobs.md
+    - Complex jobs: intermediate/complex_jobs.md
+    - Replicate jobs: intermediate/replicate_jobs.md
     - Software and package installation: intermediate/install.md
     - IDEs: intermediate/ides.md
-#    - Intro to NAISS-SENS and sensitive data: sens_project_short.md
+    - Intro to NAISS-SENS and sensitive data: sens_project_short.md
     - Summary: intermediate/summary.md
     - Evaluation: intermediate/evaluation_intermediate.md
   - Extra material:

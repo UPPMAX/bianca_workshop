@@ -102,22 +102,23 @@ to work on the Bianca UPPMAX cluster.
 
 When | Who  | What
 -----|------|-------------------------
-9:00 | R    | [Introduction](https://uppmax.github.io/bianca_workshop/intermediate/intro/)
-9:10 | R->P | 50 minutes [transferring files to and from Bianca](https://uppmax.github.io/bianca_workshop/intermediate/transfer/), which includes login
+9:00 | R    | [Introduction](intro.md)
+9:10 | R->P | [transfer.md) (includes login)
 10:00| .    | Break
-10:15| R->P | 20 minutes [Transferring files p2](https://uppmax.github.io/bianca_workshop/intermediate/transfer/)
-10:35| D->R | 25 minutes [Slurm jobs p1](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
+10:15| R->P | [Transferring files p2](transfer.md)
+10:35| D->R | [Efficient jobs](efficient_jobs.md)
 11:00| .    | Break
-11:15| D->R | 45 minutes [Slurm jobs p2](https://uppmax.github.io/bianca_workshop/intermediate/slurm_intermed/)
+11:15| D->R | [Complex jobs](complex_jobs.md)
+11:35| D->R | [Replicate jobs](replicate_jobs.md)
 12:00| .    | Lunch
 13:00| B    | [Software and packages installation](https://uppmax.github.io/bianca_workshop/intermediate/install/)
 13:45| .    | Break
-14:00| BR   | [IDEs on Bianca](https://uppmax.github.io/bianca_workshop/intermediate/ides/): learners vote 1, briefly mention the other 2
+14:00| BR   | [IDEs on Bianca](ides.md)
 14:45| .    | Break
-15:00| L    | [NAISS-SENS summary](https://uppmax.github.io/bianca_workshop/sens_project_short/)
-15:30| R    | [Summary](https://uppmax.github.io/bianca_workshop/intermediate/summary/)
-15:35| R    | [Evaluation](https://uppmax.github.io/bianca_workshop/intermediate/summary/)
-15:45| All  | Optional Q/A and [extra material](https://uppmax.github.io/bianca_workshop/extra/slurm/)
+15:00| L    | [NAISS-SENS summary](../sens_project_short.md)
+15:30| R    | [Summary](summary.md)
+15:35| R    | [Evaluation](evaluation.md)
+15:45| All  | Optional Q/A
 16:00| .    | END
 
 * Who: `B`: Björn, `D`: Diana, `L`: Lars, `P`: Pavlin, `R`: Richèl
