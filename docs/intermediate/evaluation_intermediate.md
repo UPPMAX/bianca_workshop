@@ -22,9 +22,11 @@ It takes into account that one may need to leave early too.
     Give you confidence levels of the following statements below:
 
     - I can transfer files to/from Bianca using rsync
-    - I can see a job's CPU and memory usage
-    - I understand how to make a job
-      make efficient use of computational resources
+    - I can see the CPU and memory usage of jobs
+    - I understand how to set up jobs efficiently
+    - I can schedule a simple workflow of jobs that depend on each other using Slurm
+    - I can schedule a simple workflow of jobs that depend on each other using Nextflow
+    - I can run replicate jobs using Slurm job arrays
     - I understand how to install software myself
     - I understand how to use packages and libraries for scripts
     - I understand what containers are
