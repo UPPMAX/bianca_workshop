@@ -353,8 +353,10 @@ srun echo Hello world!
 
 !!! admonition "See also"
 
-    - [Intermediate workshop material on slurm](intermediate/slurm_bianca.md)
-
+    Intermediate workshop material on Slurm: 
+    - [complex jobs](intermediate/complex_jobs.md)
+    - [efficient jobs](intermediate/efficient_jobs.md)
+    - [replicate jobs](intermediate/complex_jobs.md)
 
 !!! admonition "Slurm Cheat Sheet"
 

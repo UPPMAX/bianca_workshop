@@ -117,7 +117,7 @@ When | Who  | What
 14:45| .    | Break
 15:00| L    | [NAISS-SENS summary](../sens_project_short.md)
 15:30| R    | [Summary](summary.md)
-15:35| R    | [Evaluation](evaluation.md)
+15:35| R    | [Evaluation](evaluation_intermediate.md)
 15:45| All  | Optional Q/A
 16:00| .    | END
 
