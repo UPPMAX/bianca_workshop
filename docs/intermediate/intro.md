@@ -103,21 +103,22 @@ to work on the Bianca UPPMAX cluster.
 When | Who  | What
 -----|------|-------------------------
 9:00 | R    | [Introduction](intro.md)
-9:10 | R->P | [transfer.md) (includes login)
+9:10 | P    | [Transferring files p1](transfer.md) (includes login)
 10:00| .    | Break
-10:15| R->P | [Transferring files p2](transfer.md)
-10:35| D->R | [Efficient jobs](efficient_jobs.md)
+10:15| P    | [Transferring files p2](transfer.md)
+10:35| R    | [Efficient jobs](efficient_jobs.md)
 11:00| .    | Break
-11:15| D->R | [Complex jobs](complex_jobs.md)
-11:35| D->R | [Replicate jobs](replicate_jobs.md)
+11:15| R    | [Complex jobs](complex_jobs.md)
+11:35| R    | [Replicate jobs](replicate_jobs.md)
 12:00| .    | Lunch
-13:00| B    | [Software and packages installation](https://uppmax.github.io/bianca_workshop/intermediate/install/)
-13:45| .    | Break
-14:00| BR   | [IDEs on Bianca](ides.md)
-14:45| .    | Break
-15:00| L    | [NAISS-SENS summary](../sens_project_short.md)
-15:30| R    | [Summary](summary.md)
-15:35| R    | [Evaluation](evaluation_intermediate.md)
+13:00| B    | [Software and packages installation p1](https://uppmax.github.io/bianca_workshop/intermediate/install/)
+13:50| .    | Break
+14:00| B    | [Software and packages installation p2](https://uppmax.github.io/bianca_workshop/intermediate/install/)
+14:40| BR   | [IDEs on Bianca p1](ides.md)
+14:50| .    | Break
+15:05| L    | [IDEs on Bianca p2](ides.md)
+15:40| R    | [Summary](summary.md)
+15:45| R    | [Evaluation](evaluation_intermediate.md)
 15:45| All  | Optional Q/A
 16:00| .    | END
 
