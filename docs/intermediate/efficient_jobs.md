@@ -48,7 +48,9 @@ Run more jobs that start faster.
 
 ## Measure job efficiency
 
-Use UPPMAX doc text.
+- Read [the UPPMAX `jobstats` documentation](https://docs.uppmax.uu.se/software/jobstats/)
+  especially [the 'effective use' section](https://docs.uppmax.uu.se/software/jobstats/#efficient-use)
+
 
 ## Exercise
 
