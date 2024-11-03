@@ -1,4 +1,4 @@
-#!/bin/env Rstudio
+#!/bin/env Rscript
 
 t <- readr::read_csv("20240925_fixed.csv")
 t$Timestamp <- NULL
