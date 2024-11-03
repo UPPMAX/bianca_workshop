@@ -3,7 +3,9 @@
 !!!- info "Learning objectives"
 
     - I can schedule a minimal workflow of jobs that depend on each other using Slurm
-    - I can schedule a minimal workflow of jobs that depend on each other using Nextflow
+    - (optional) I can schedule a minimal workflow of jobs that depend on each other using Nextflow
+    - (optional) I can schedule a minimal workflow of jobs that depend on each other using Snakemake
+    - (optional) I can schedule a minimal workflow of jobs that depend on each other using GNU make
 
 ???- question "For teachers"
 
