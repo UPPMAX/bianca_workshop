@@ -32,7 +32,7 @@ nav:
     - Summary: intermediate/summary.md
     - Evaluation: intermediate/evaluation_intermediate.md
   - Extra material:
-    - Overview: overview.md
+    - Overview: intermediate/overview.md
     - extra/slurm.md
     - extra/conda.md
     - extra/pip.md
