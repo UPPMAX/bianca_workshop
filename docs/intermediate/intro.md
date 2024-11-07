@@ -103,7 +103,7 @@ to work on the Bianca UPPMAX cluster.
 When | Who  | What
 -----|------|-------------------------
 9:00 | R    | [Introduction](intro.md)
-9:10 | R    | [Prevaluation](intro.md)
+9:10 | R    | [Prevaluation](prevaluation_intermediate.md)
 9:20 | P    | [Transferring files p1](transfer.md) (includes login)
 10:00| .    | Break
 10:15| P    | [Transferring files p2](transfer.md)
