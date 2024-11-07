@@ -84,7 +84,7 @@
             - This way the project contains both data and software 
 			- good for reproducibility, collaboration, and everyone's general sanity.
     - Then, either 
-	    - Binaries for Linux on x86 and 64-bit should be able to be run directly as they are.
+	- Binaries for Linux on x86 and 64-bit should be able to be run directly as they are.
         - Install program following instructions from documentationof the software
         - or build from source, see next session.
      
@@ -128,7 +128,7 @@
     - 2(3) types
         - Singularity/Apptainer
         - Docker that does not work on HPC-systems
-            - But docker images can be used byt Singularity and Apptainer
+            - But docker images can be used by Singularity and Apptainer
     - Everything is included
     - Draw-backs
         - you install also things that may be already installed
@@ -153,26 +153,23 @@
 
 ### R
 
-- On UPPMAX the module ``R_packages`` is an omnibus package library containing almost all packages in the CRAN and BioConductor repositories. 
-- As of 2023-05-31, there were a total of 23100 R packages installed in ``R_packages/4.2.1``.
-    -  A total of 23109 packages were available in CRAN and BioConductor, and 23000 of these were installed in ``R_packages/4.2.1``
-    -  The additional 100 R packages available in this module were installed from the CRAN/BioConductor archives, or were hosted on github, gitlab or elsewhere.
+- On UPPMAX the module ``R_packages`` is an omnibus package library containing almost all packages in the CRAN and BioConductor Chances are good the R packages you need are already available once you load this module.  You can quickly check by loading it:
 
-Chances are good the R packages you need are already available once you load this module.  You can quickly check by loading it:
+!!! info "Check if available"
 
-``$ ml R_packages/4.2.1``
+    ``$ ml R_packages/4.3.1``
 
-Then within R, try loading the package you want, like ``glmnet``:
+    Then within R, try loading the package you want, like ``glmnet``:
 
-``library(glmnet)``
+    ``library(glmnet)``
 
 **Is it not there? Then proceed!**
 
 !!! info "Installation principle"
 
-    - install on Rackham
+    - install on Rackham or other place
     - sync to ``wharf``
-    - move the files on Bianca
+    - move the files on Bianca to local Bianca R package path 
 
 !!! info "More info"
 
@@ -180,14 +177,18 @@ Then within R, try loading the package you want, like ``glmnet``:
     - [From R course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/r/packagesR.html){:target="_blank"}
     - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/r/isolatedR.html){:target="_blank"}
 
-
 ### Python and other
 
-- **Check** python versions: ``ml avail python``
-- Check the **help** output from: ``ml help python/3.9.5`` at UPPMAX
-- **Load** a python version, like: ``ml python/3.10.8``
-- from the **Python shell** with the ``import`` command
-- from **BASH shell** with the ``pip list`` command 
+!!! info "Check if available"
+
+    - Check **python versions**: ``ml avail python``
+    - Check **python packages/modules**
+    	
+     	1. **help** output from: ``ml help python/3.9.5`` at UPPMAX
+        2. In a loaded python 
+            - **Load** a python version, like: ``ml python/3.11.8``
+            - from **Python shell** with the ``import`` command
+            - from **BASH shell** with the ``pip list`` command 
 
 **Is it not there? Then proceed!**
 
@@ -195,7 +196,6 @@ Then within R, try loading the package you want, like ``glmnet``:
 
     - Try Conda first directly on Bianca. We have mirrored all _major_ Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
     - If you want to keep number of files down, use PyPI (pip), but then you need to use Rackham and the ``wharf``.
-
 
 ### Conda
 
@@ -253,8 +253,6 @@ Then within R, try loading the package you want, like ``glmnet``:
     - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/julia/isolatedJulia.html){:target="_blank"}
     - :warning: contact support@uppmax.uu.se for individual help!
 
-
-
 ## Exercise 20 min
 
 ???+ question "Pick one of the following topics!"
@@ -275,12 +273,10 @@ Then within R, try loading the package you want, like ``glmnet``:
     - Any questions?
     - Any input?
 
-
 ## Own development and Git
 
 - [Own development and git](https://uppmax.github.io/bianca_workshop/extra/devel/)
     
-
 !!! abstract "Keypoints"
     - You have got an overview of the procedures to install packages/libraries and tools on Bianca through the ``wharf``
     - If you feel uncomfortable or think that many users would benefit from the software, ask the support to install it.
