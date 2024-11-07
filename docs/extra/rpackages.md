@@ -9,13 +9,15 @@
 
 
 - On UPPMAX the module ``R_packages`` is an omnibus package library containing almost all packages in the CRAN and BioConductor repositories.
-- As of 2023-05-31, there were a total of 23100 R packages installed in ``R_packages/4.2.1``.
-    -  A total of 23109 packages were available in CRAN and BioConductor, and 23000 of these were installed in ``R_packages/4.2.1``
-    -  The additional 100 R packages available in this module were installed from the CRAN/BioConductor archives, or were hosted on github, gitlab or elsewhere.
+    - As of 2023-11-21, there were a total of 23478  R packages installed in ``R_packages/4.3.1``.
+        - A total of 23603 packages are available in CRAN and BioConductor
+        - 19586 CRAN packages are installed, out of 20044 available
+        - 3544 BioConductor-specific packages are installed, out of 3559 available
+        - 346 other R packages are installed. These are not in CRAN/BioConductor, are only available in the CRAN/BioConductor archives, or are hosted on github, gitlab or elsewhere
 
 Chances are good the R packages you need are already available once you load this module.  You can quickly check by loading it:
 
-``$ ml R_packages/4.2.1``
+``$ ml R_packages/4.3.1``
 
 Then within R, try loading the package you want:
 
