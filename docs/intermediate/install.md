@@ -42,13 +42,14 @@
 
     See [the basic Bianca course page 'Using the module system'](../modules.md).
 
-- There is a **lot of programs and tools installed as modules** on Bianca.
-- These have typically been **installed on Rackham** and is **synced over to Bianca a couple of times per day**.
-- **You can request installations** but that may take **several days or weeks** to be handled by the application experts at UPPMAX.
-- But you may be able to do **installations yourself**. Here the use of Rackham comes handy because of the:
-    - internet connection
-    - the computer architecture is somewhat similar such that precompiled binaries or compiled programs (x86_64) on Rackham will most often work also on Bianca.
-    - you can use the **``wharf`` to transfer installation files and packages to Bianca from Rackham**
+- **Lots of programs and tools installed as modules** on Bianca.
+    - You can **request installations** but that **may take several days or weeks** to be handled by the application experts at UPPMAX.
+    - Workflow: Application expert installs on Rackham and it is synced over to Bianca within a day.
+- **Installations yourself**.
+    - Workflow: use the **``wharf`` to transfer installation files and packages to Bianca from Rackham or other place**
+	- Here the use of Rackham comes handy because of the:
+    	- internet connection
+    	- the computer architecture is somewhat similar such that precompiled binaries or compiled programs (x86_64) on Rackham will most often work also on Bianca.
 
 ## Content
 
@@ -67,22 +68,25 @@
 
 ## Install software yourself
 
-- If not available on Bianca already (like Conda repositories) you may have to use the ``wharf`` to install your tools
-- Alternatively let an Application Expert install the tool as a module.
+- If not available on Bianca already (like Conda repositories) --> use the ``wharf`` to install your tools
 
 !!! note "Typical workflow for installation"
 
     - **Download** the 
         - _source_ code or 
-	- _binary_ (Linux on x86 and 64-bit) to Rackham first
+	    - _binary_ (Linux on x86 and 64-bit)
     - **Transfer** to the ``wharf``
-    - Then, either 
-        - You can install in your home directory.
-            - This is handy for personal needs and low numbers of files — i.e. not Conda.
+	- Move file(s) to either:
+        - ``$HOME`` directory.
+            - Handy for personal needs and low numbers of files — i.e. not Conda.
+			- Example python/R/julia packages
         - Usually better to install in project directory.
-            - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
-    - Binaries for Linux on x86 and 64-bit should be able to be run directly as it is, see the software specific installation documentation.
-    - or build from source, see next session.
+            - This way the project contains both data and software 
+			- good for reproducibility, collaboration, and everyone's general sanity.
+    - Then, either 
+	    - Binaries for Linux on x86 and 64-bit should be able to be run directly as they are.
+        - Install program following instructions from documentationof the software
+        - or build from source, see next session.
      
 
 ### Build from source
