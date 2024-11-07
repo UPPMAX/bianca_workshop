@@ -1,11 +1,11 @@
 # Starting an interactive node
 
-![](./img/login_bianca_via_terminal_terminal_462_x_202.png)
+![login_bianca_via_terminal_terminal](./img/login_bianca_via_terminal_terminal_462_x_202.png)
 
 ???- info "Note to teachers"
 
-    We teach `interactive` 
-    (over [`salloc`](https://slurm.schedmd.com/salloc.html)) 
+    We teach `interactive`
+    (over [`salloc`](https://slurm.schedmd.com/salloc.html))
     as it is recommended by the UPPMAX system experts.
 
 ## Exercises
@@ -15,8 +15,7 @@ then do these exercises.
 
 ???- question "Exercise: Start an interactive session"
 
-    The goal of this exercise is to make sure you know how to start an 
-    interactive session. 
+    The goal of this exercise is to make sure you know how to start an interactive session.
 
 ???- question "Why not always use an interactive session?"
 
@@ -24,7 +23,7 @@ then do these exercises.
 
     An interactive session means that you use a calculation node with low
     efficiency: only irregularly you will use such a node to its full
-    capacity. 
+    capacity.
     However, the number of core hours are registered as if the node is used
     at full capacity, as it is *reserved* to be used at that capacity.
 
