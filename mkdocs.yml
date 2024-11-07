@@ -22,6 +22,7 @@ nav:
     - Evaluation: evaluation.md
   - Intermediate workshop/hackaton: 
     - Introduction: intermediate/intro.md
+    - Prevaluation: intermediate/prevaluation_intermediate.md
     - Transferring files to/from Bianca: intermediate/transfer.md
     - Efficient jobs: intermediate/efficient_jobs.md
     - Complex jobs: intermediate/complex_jobs.md
