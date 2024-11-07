@@ -2,7 +2,7 @@
 
 A prevaluation is an evaluation done before the course has started.
 
-Goals of the prevaluation are:
+The goals of the prevaluation are:
 
 - For the learners: to get an introduction of what will be taught
 - For the teachers: to measure how much knowledge is gained
@@ -30,7 +30,26 @@ The prevaluation form can be found `TODO`.
 
 ???- question "What are the prevaluation questions?"
 
-    These are the same as the evaluation questions,
-    except for an additional question:
+    These are the prevaluation questions.
+    The goals of these questions is to introduce what is taught
+    today, as well as measuring how much knowledge is gained at the end
+    of the day.
+
+    Give you confidence levels of the following statements,
+    using this scale:
+
+    - 0: I don't know even what this is about ...?
+    - 1: I have no confidence I can do this
+    - 2: I have low confidence I can do this
+    - 3: I have some confidence I can do this
+    - 4: I have good confidence I can do this
+    - 5: I absolutely can do this!
+
+    Give you confidence levels of the following statements below:
+
+    ```code
+    [Learning objectives from the evaluation here]
+    ```
 
     Is there a learning objective you think is missing? What is it?
+

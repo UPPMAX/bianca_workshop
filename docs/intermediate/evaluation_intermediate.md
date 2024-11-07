@@ -21,7 +21,7 @@ It takes into account that one may need to leave early too.
 
     Give you confidence levels of the following statements below:
 
-    - I can transfer files to/from Bianca using rsync
+    - I can transfer files to/from Bianca using `rsync`
     - I can see the CPU and memory usage of jobs
     - I understand how to set up jobs efficiently
     - I can schedule a simple workflow of jobs that depend on each other using Slurm
