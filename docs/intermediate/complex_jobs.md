@@ -54,23 +54,65 @@
 
 ## Use case
 
-Your computational experiment takes two steps.
+Imagine a computational experiment that takes three steps:
 
-The first one:
+```mermaid
+flowchart TD
+  a[do_a.sh]
+  b[do_b.sh]
+  c[do_c.sh]
+  a --> c
+  b --> c
+```
+
+> Example setup of a computational experiment.
+> [`do_a.sh`](scripts/do_a.sh) and [`do_b.sh`](scripts/do_a.sh) 
+> can run in parallel.
+> [`do_c.sh`](scripts/do_a.sh) can only run when
+> [`do_a.sh`](scripts/do_a.sh) and [`do_b.sh`](scripts/do_a.sh) have finished.
+
+The first two can be run in parallel:
 
 ```bash
 sbatch do_a.sh
-```
-
-When you've seen that this job is finished, you do:
-
-```bash
 sbatch do_b.sh
 ```
 
-You wonder: can this be done in one step?
+After this, you wait. You check regularily
+if the jobs have finished.
+When both jobs have finished, you do:
 
-Yes!
+```bash
+sbatch do_c.sh
+```
+
+You wonder: can this be set up in such a way that does not require your
+attention anymore when running?
+
+## Scripts for this use case
+
+### `do_a.sh`
+
+```bash
+#!/bin/bash
+echo "42" > a.txt
+```
+
+### `do_b.sh`
+
+```bash
+#!/bin/bash
+echo "314" > b.txt
+```
+
+### `do_c.sh`
+
+```bash
+#!/bin/bash
+cat a.txt > c.txt
+cat b.txt >> c.txt
+```
+
 
 ## Complex jobs
 
@@ -93,14 +135,11 @@ $ sbatch do_a.sh
 Submitted job with id: 12345678
 [TODO: correct output]
 
-$ sbatch do_b.sh --dependency=afterok:12345678
+$ sbatch do_b.sh
+Submitted job with id: 23456789
+
+$ sbatch do_c.sh --dependency=afterok:12345678:23456789
 [TODO: correct output]
-```
-
-When you've seen that this job is finished, you do:
-
-```bash
-sbatch do_b.sh
 ```
 
 ## Complex jobs in Slurm from a script
@@ -129,6 +168,10 @@ TODO: Add script
 ```
 
 ## Exercise 1: run a job with a dependency from the command-line
+
+
+
+
 
 ## Exercise 2: run a job with a dependency from a script
 

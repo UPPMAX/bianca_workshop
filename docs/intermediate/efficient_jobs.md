@@ -35,7 +35,7 @@
     Prior questions:
 
     - How to schedule jobs efficiently?
-
+    - What is the `jobstats` tool?
 
 ## Why?
 
@@ -44,19 +44,51 @@
 >
 > From the UPPMAX documentation, original source unknown
 
-Run more jobs that start faster.
+Running efficients jobs allows you to run more jobs that start running faster.
 
 ## Measure job efficiency
+
+
+## Exercises
+
+## Exercise 1: view the `jobstats`
 
 - Read [the UPPMAX `jobstats` documentation](https://docs.uppmax.uu.se/software/jobstats/)
   especially [the 'effective use' section](https://docs.uppmax.uu.se/software/jobstats/#efficient-use)
 
 
-## Exercise
+## Exercise 1: determining the algorithm
 
-Read UPPMAX doc text.
+- Read [the UPPMAX `jobstats` documentation](https://docs.uppmax.uu.se/software/jobstats/)
+  especially [the 'effective use' section](https://docs.uppmax.uu.se/software/jobstats/#efficient-use)
+
+## Exercise 2:
+
+How much cores should this user book? Why?
+
+![rackham-naiss2024-22-282-youse-49928732.png](rackham-naiss2024-22-282-youse-49928732.png)
 
 View some jobs.
 
 Discuss.
 
+49928732
+
+jobstats --plot 49928732
+
+
+
+![rackham-naiss2023-22-1014-fdube-50060711.png](rackham-naiss2023-22-1014-fdube-50060711.png)
+
+
+rackham-naiss2023-22-1014-fdube-50060711.png
+rackham-naiss2023-22-1014-fdube-50060732.png
+rackham-naiss2023-22-1014-fdube-50060752.png
+rackham-naiss2023-22-1014-fdube-50060791.png
+rackham-naiss2023-22-1014-fdube-50061380.png
+rackham-naiss2024-22-282-youse-49928732.png
+
+
+
+
+rackham-naiss2024-22-282-youse-49928732.png
