@@ -15,6 +15,9 @@
             "pattern": "^https://supr.naiss.se/support/"
         },
         {
+            "pattern": "^https://supr.naiss.se/round/"
+        },
+        {
             "pattern": "^https://supr.naiss.se/round/open_or_pending_type/?type=NAISS+SENS"
         },
         {

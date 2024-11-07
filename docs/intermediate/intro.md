@@ -107,7 +107,7 @@ When | Who  | What
 9:20 | P    | [Transferring files p1](transfer.md) (includes login)
 10:00| .    | Break
 10:15| P    | [Transferring files p2](transfer.md)
-10:35| R    | [Efficient jobs](efficient_jobs.md)
+10:45| R    | [Efficient jobs](efficient_jobs.md)
 11:00| .    | Break
 11:15| R    | [Complex jobs](complex_jobs.md)
 11:35| R    | [Replicate jobs](replicate_jobs.md)
@@ -123,7 +123,7 @@ When | Who  | What
 15:45| All  | Optional Q/A
 16:00| .    | END
 
-* Who: `B`: Björn, `D`: Diana, `L`: Lars, `P`: Pavlin, `R`: Richèl
+* Who: `B`: Björn, `P`: Pavlin, `R`: Richèl
 
 ## Overview of courses
 
