@@ -82,7 +82,7 @@
         - Usually better to install in project directory.
             - This way the project contains both data and software
             - Good for reproducibility, collaboration, and everyone's general sanity.
-    - Then, either: 
+    - Then, either:
         - Binaries for Linux on x86 and 64-bit should be able to be run directly as they are.
         - Install program following instructions from documentation of the software.
 
@@ -118,7 +118,7 @@
 ### Containers
 
 !!! info
-   
+
     - Containers let you install programs without needing to think about the computer environment, like
         - operative system
         - dependencies (libraries and other programs) with correct versions
@@ -138,15 +138,15 @@
     
 ## Packages and libraries to scripting programs
 
-- Python, R and Julia all have some **centrally installed packages** that are available from the modules. 
+- Python, R and Julia all have some **centrally installed packages** that are available from the modules.
 - R has a special module called ``R_packages``, and some Machine Learning python packages are included in the ``python_ml_packages`` module.
 - If not found there you can try to install those by yourself.
 
-!!! info 
+!!! info
 
     - "Install packages or not? Check it!"
 
-## Check and install packages! 
+## Check and install packages
 
 ### R
 
@@ -166,7 +166,7 @@
 
     - install on Rackham or other place
     - sync to ``wharf``
-    - move the files on Bianca to local Bianca R package path 
+    - move the files on Bianca to local Bianca R package path
 
 !!! info "More info"
 
@@ -180,12 +180,13 @@
 
     - Check **python versions**: ``ml avail python``
     - Check **python packages/modules**
-    	
-     	1. **help** output from: ``ml help python/3.9.5`` at UPPMAX
-        2. In a loaded python 
+
+        1. **help** output from: ``ml help python/3.9.5`` at UPPMAX
+        2. In a loaded python
+ 
             - **Load** a python version, like: ``ml python/3.11.8``
             - from **Python shell** with the ``import`` command
-            - from **BASH shell** with the ``pip list`` command 
+            - from **BASH shell** with the ``pip list`` command
 
 **Is it not there? Then proceed!**
 
@@ -237,7 +238,7 @@
     - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
     - [UPPMAX julia user guide: Pip](http://docs.uppmax.uu.se/software/julia/){:target="_blank"}
     - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/julia/isolatedJulia.html){:target="_blank"}
-    - :warning: contact support@uppmax.uu.se for individual help!
+    - :warning: contact [NAISS support](javascript:void(window.open('https://supr.naiss.se/support/?centre_resource=c4%27,%27_blank%27,%27toolbar=1,location=1,status=1,menubar=1,scrollbars=1,resizable=1%27));) for individual help!
 
 ## Exercise 20 min
 
