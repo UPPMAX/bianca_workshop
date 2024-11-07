@@ -1,7 +1,7 @@
 # Software and package installation on Bianca
 
 
-!!! info "Learning Objectives" 
+!!! info "Learning Objectives"
 
     Learners
     
@@ -9,7 +9,7 @@
     - can install Python packages using conda
     - can install Python packages using pip
     - can install R packages
-    - Understand what containers are
+    - understand what containers are
     - can install software using a container
     - can build software from source
 
@@ -46,10 +46,9 @@
     - You can **request installations** but that **may take several days or weeks** to be handled by the application experts at UPPMAX.
     - Workflow: Application expert installs on Rackham and it is synced over to Bianca within a day.
 - **Installations yourself**.
-    - Workflow: use the **``wharf`` to transfer installation files and packages to Bianca from Rackham or other place**
-	- Here the use of Rackham comes handy because of the:
-    	- internet connection
-    	- the computer architecture is somewhat similar such that precompiled binaries or compiled programs (x86_64) on Rackham will most often work also on Bianca.
+    - Workflow: use the **``wharf`` to transfer installation files and packages to Bianca from Rackham or other place**. Here the use of Rackham comes handy because
+        - of the internet connection.
+        - the computer architecture is somewhat similar such that precompiled binaries or compiled programs (x86_64) on Rackham will most often work also on Bianca.
 
 ## Content
 
@@ -72,32 +71,31 @@
 
 !!! note "Typical workflow for installation"
 
-    - **Download** the 
-        - _source_ code or 
-	    - _binary_ (Linux on x86 and 64-bit)
+    - **Download** the
+        - _source_ code or
+        - _binary_ (Linux on x86 and 64-bit)
     - **Transfer** to the ``wharf``
-	- Move file(s) to either:
+    - Move file(s) to either
         - ``$HOME`` directory.
             - Handy for personal needs and low numbers of files — i.e. not Conda.
-			- Example python/R/julia packages
+            - Example python/R/julia packages.
         - Usually better to install in project directory.
-            - This way the project contains both data and software 
-			- good for reproducibility, collaboration, and everyone's general sanity.
-    - Then, either 
-	- Binaries for Linux on x86 and 64-bit should be able to be run directly as they are.
-        - Install program following instructions from documentationof the software
-        - or build from source, see next session.
-     
+            - This way the project contains both data and software
+            - Good for reproducibility, collaboration, and everyone's general sanity.
+    - Then, either: 
+        - Binaries for Linux on x86 and 64-bit should be able to be run directly as they are.
+        - Install program following instructions from documentation of the software.
 
 ### Build from source
+
 - To build from source use a **compiler module**
 - We have several compiler versions from GNU and INTEL
-     - Check with: ``$ ml avail gcc`` and ``$ ml avail intel``
+    - Check with: ``$ ml avail gcc`` and ``$ ml avail intel``
 - ``make`` is installed on the system
     - :warning: It could happen that the "Makefile" contains web fetching, which will not work from Bianca.
     - Usually it is not a problem to build on Rackham and move to Bianca.
 - ``cmake`` is available as module
-     - Check with: ``$ ml avail cmake``
+    - Check with: ``$ ml avail cmake``
 - [Guide for compiling **serial** programs](https://docs.uppmax.uu.se/software/compiling_serial/){:target="_blank"}
 - [Guide for compiling **parallel** programs](https://docs.uppmax.uu.se/software/compiling_parallel/){:target="_blank"}
 
@@ -115,14 +113,13 @@
     - NUMA node(s):          2
     - Model name:            Intel Core Processor (Haswell, no TSX, IBRS)
     - CPU MHz:               2394.446
-    - For more info, type: ``lscpu`` in the terminal 
-
+    - For more info, type: ``lscpu`` in the terminal
 
 ### Containers
 
 !!! info
    
-    - Containers let you install programs without needing to think about the computer environment, like    
+    - Containers let you install programs without needing to think about the computer environment, like
         - operative system
         - dependencies (libraries and other programs) with correct versions
     - 2(3) types
@@ -224,21 +221,10 @@
     - [From Python course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/python/packages.html){:target="_blank"}
     - [From Python course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/python/isolated.html){:target="_blank"}
 
-
 ### Julia packages
 
 - At UPPMAX there is a central library with installed packages.
 - This is good, especially when working on Bianca, since you then do not need to install via the ``wharf``.
-- A selection of the Julia packages and libraries installed on UPPMAX are:
-
-        CSV
-        CUDA
-        MPI
-        Distributed
-        IJulia
-        Plots
-        PyPlot
-        DataFrames
 
 !!! info "Installation principle"
 
@@ -257,7 +243,7 @@
 
 ???+ question "Pick one of the following topics!"
 
-    - Read the introduction with a demo and use it to solve the exercise in the end
+    - Read the introduction with a demo and use it to solve the exercise in the end.
     - "Containers" contains less material but may take time to install.
 
     - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/){:target="_blank"}
@@ -276,7 +262,8 @@
 ## Own development and Git
 
 - [Own development and git](https://uppmax.github.io/bianca_workshop/extra/devel/)
-    
+
 !!! abstract "Keypoints"
+
     - You have got an overview of the procedures to install packages/libraries and tools on Bianca through the ``wharf``
     - If you feel uncomfortable or think that many users would benefit from the software, ask the support to install it.
