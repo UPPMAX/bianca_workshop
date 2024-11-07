@@ -1,18 +1,17 @@
 # Software and package installation on Bianca
 
 
-!!! info "Objectives" 
+!!! info "Learning Objectives" 
 
-    - Understand _principles_ how to install software and packages yourself
+    Learners
+    
+    - understand _principles_ how to install software and packages yourself
+    - can install Python packages using conda
+    - can install Python packages using pip
+    - can install R packages
     - Understand what containers are
-    	- understand difference of Docker and Apptainer/Singularity
-    - Know by doing how to install software, packages and libraries from at least one of the following
-        - ... using Conda
-        - ... using Python packages with pip
-        - ... using R packages
-        - ... using Apptainer/Singularity
-    - Understand how to build from source
-
+    - can install software using a container
+    - can build software from source
 
 ???- info "Notes for teachers"
 
