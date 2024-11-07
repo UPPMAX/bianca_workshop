@@ -9,7 +9,7 @@ Goals of the prevaluation are:
 
 The prevaluation form can be found `TODO`.
 
-???- question "What do you mean with 'to measure how much knowledge is gained'?
+???- question "What do you mean with 'to measure how much knowledge is gained'?"
 
     Here is [part of an evaluation](https://github.com/UPPMAX/bianca_workshop/blob/main/reflections/20240925/20240925_richel.md):
 
