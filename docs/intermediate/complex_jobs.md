@@ -2,17 +2,27 @@
 
 !!!- info "Learning objectives"
 
-    - I can schedule a minimal workflow of jobs that depend on each other using Slurm
-    - (optional) I can schedule a minimal workflow of jobs that depend on each other using Nextflow
-    - (optional) I can schedule a minimal workflow of jobs that depend on each other using Snakemake
-    - (optional) I can schedule a minimal workflow of jobs that depend on each other using GNU make
+    - Practice using the UPPMAX documentation
+    - I can manually schedule a minimal workflow of jobs
+      that depend on each other using Slurm
+    - (optional) I can write a script to schedule a minimal workflow of jobs
+      that depend on each other using Slurm
+    - (optional) I can schedule a minimal workflow of jobs
+      that depend on each other using Nextflow
+    - (optional) I can schedule a minimal workflow of jobs
+      that depend on each other using Snakemake
+    - (optional) I can schedule a minimal workflow of jobs
+      that depend on each other using GNU make
 
 ???- question "For teachers"
 
     Teaching goals are:
 
-    - Learners have scheduled a minimal workflow of jobs
-      that depend on each other using Slurm
+    - Learners have practiced using the UPPMAX documentation
+    - Learners have manually scheduled a minimal workflow of jobs that depend
+      on each other using Slurm
+    - (optional) Learners have written a script to schedule a minimal workflow
+      of jobs that depend on each other using Slurm
     - Learners have scheduled a minimal workflow of jobs
       that depend on each other using Nextflow
     - (optional) Learners have scheduled a minimal workflow of jobs
@@ -45,8 +55,6 @@
     - You do a computational experiment that has multiple steps.
       How do you do it?
 
-
-    
 ## Why?
 
 - To reduce checking on jobs to finish
@@ -78,7 +86,7 @@ sbatch do_a.sh
 sbatch do_b.sh
 ```
 
-After this, you wait. You check regularily
+After this, you wait. You check regularly
 if the jobs have finished.
 When both jobs have finished, you do:
 

@@ -2,6 +2,7 @@
 
 !!!- info "Learning objectives"
 
+    - Practice using the UPPMAX documentation
     - I can see the CPU and memory usage of jobs
     - I understand how to set up jobs efficiently
 
@@ -9,6 +10,7 @@
 
     Teaching goals are:
 
+    - Learners have practiced using the UPPMAX documentation
     - Learners have seen the CPU and memory usage of jobs
     - Learners have discussed how to set up jobs efficiently
 
@@ -44,51 +46,24 @@
 >
 > From the UPPMAX documentation, original source unknown
 
-Running efficients jobs allows you to run more jobs that start running faster.
-
-## Measure job efficiency
-
+Running efficient jobs allows you to run more jobs that start running faster.
 
 ## Exercises
 
-## Exercise 1: view the `jobstats`
+### Exercise 1: view a `jobstats`
 
 - Read [the UPPMAX `jobstats` documentation](https://docs.uppmax.uu.se/software/jobstats/)
   especially [the 'effective use' section](https://docs.uppmax.uu.se/software/jobstats/#efficient-use)
 
-
-## Exercise 1: determining the algorithm
+### Exercise 2: determining the algorithm
 
 - Read [the UPPMAX `jobstats` documentation](https://docs.uppmax.uu.se/software/jobstats/)
   especially [the 'effective use' section](https://docs.uppmax.uu.se/software/jobstats/#efficient-use)
 
-## Exercise 2:
+- How much cores should this user book? Why?
 
-How much cores should this user book? Why?
+![An example job](./img/rackham-naiss2024-22-282-youse-49928732.png)
 
-![rackham-naiss2024-22-282-youse-49928732.png](rackham-naiss2024-22-282-youse-49928732.png)
+- How much cores should this user book? Why?
 
-View some jobs.
-
-Discuss.
-
-49928732
-
-jobstats --plot 49928732
-
-
-
-![rackham-naiss2023-22-1014-fdube-50060711.png](rackham-naiss2023-22-1014-fdube-50060711.png)
-
-
-rackham-naiss2023-22-1014-fdube-50060711.png
-rackham-naiss2023-22-1014-fdube-50060732.png
-rackham-naiss2023-22-1014-fdube-50060752.png
-rackham-naiss2023-22-1014-fdube-50060791.png
-rackham-naiss2023-22-1014-fdube-50061380.png
-rackham-naiss2024-22-282-youse-49928732.png
-
-
-
-
-rackham-naiss2024-22-282-youse-49928732.png
+![Another example job](./img/rackham-naiss2023-22-1014-fdube-50060711.png)
