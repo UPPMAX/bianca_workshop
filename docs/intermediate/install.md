@@ -183,7 +183,7 @@
 
         1. **help** output from: ``ml help python/3.9.5`` at UPPMAX
         2. In a loaded python
- 
+
             - **Load** a python version, like: ``ml python/3.11.8``
             - from **Python shell** with the ``import`` command
             - from **BASH shell** with the ``pip list`` command
