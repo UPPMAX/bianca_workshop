@@ -208,7 +208,10 @@ Here we do the procedure 'by hand':
 
 ## (optional) Exercise 2: run a job with a dependency from a script
 
-- Write a script `do_all.sh` that does this manual setup
+- Copy-paste (easy) or write (harder) a script `do_all.sh` that does this manual setup.
+  Hint: `sbatch` returns 4 words if the job was submitted
+  successfully (`Submitted batch job 12345678`). One can use
+  `cut -d " " -f 4` to select the 4th field when the delimiter is a space.
 
 ???- question "Answer"
 
@@ -219,7 +222,15 @@ Here we do the procedure 'by hand':
     sbatch -A staff --dependency=afterok:${job_id_a},${job_id_b} do_c.sh
     ```
 
-## Exercise 3: run a job with a dependency using Nextflow
+- Must the script `do_all.sh` be submitted using `sbatch` or can it be run
+  directly? Why?
+
+???- question "Answer"
+
+    The script `do_all.sh` can be run directly, as all it does
+    is schedule jobs. Scheduling jobs is a light operation.
+
+## (optional) Exercise 3: run a job with a dependency using Nextflow
 
 ## (optional) Exercise 4: run a job with a dependency using Snakemake
 
