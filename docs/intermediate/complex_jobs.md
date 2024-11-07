@@ -169,11 +169,47 @@ TODO: Add script
 
 ## Exercise 1: run a job with a dependency from the command-line
 
+Here we do the procedure 'by hand':
 
+- Collect the scripts [`do_a.sh`](scripts/do_a.sh), 
+  [`do_b.sh`](scripts/do_b.sh)  and [`do_c.sh`](scripts/do_c.sh) 
 
+???- question "Answer"
 
+    There are many ways to transfer these files.
+    One easy way is to copy-paste the scripts' contents
+    to `nano`.
 
-## Exercise 2: run a job with a dependency from a script
+- Submit `do_a.sh` and `do_b.sh` to the job scheduler
+
+???- question "Answer"
+
+    ```bash
+    sbatch -A staff do_a.sh
+    sbatch -A staff do_b.sh
+    ```
+
+- Submit `do_c.sh` to the job scheduler, with the dependency that
+  it runs after `do_a.sh` and `do_b.sh` have finished successfully
+
+???- question "Answer"
+
+    ```bash
+    sbatch -A staff --dependency=afterok:51383809,51383810 do_c.sh
+    ```
+
+## (optional) Exercise 2: run a job with a dependency from a script
+
+- Write a script `do_all.sh` that does this manual setup
+
+???- question "Answer"
+
+    ```bash
+    #!/bin/bash
+    job_id_a=$(sbatch -A staff do_a.sh | cut -d " " -f 4)
+    job_id_b=$(sbatch -A staff do_b.sh | cut -d " " -f 4)
+    sbatch -A staff --dependency=afterok:${job_id_a},${job_id_b} do_c.sh
+    ```
 
 ## Exercise 3: run a job with a dependency using Nextflow
 
