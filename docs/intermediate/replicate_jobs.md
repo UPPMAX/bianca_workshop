@@ -43,14 +43,14 @@
 You have a simulation that uses randomness. 
 You want to run 1000 replicates of it. How would you do that?
 
-## `run_simulation.sh`
+## [`run_simulation.sh`](scripts/run_simulation.sh)
 
 ```bash
 #!/bin/bash
 echo $((1 + ($RANDOM % 6))) > result_$1.txt
 ```
 
-## `submit_runs.sh`
+## [`submit_runs.sh`](scripts/submit_runs.sh)
 
 ```bash
 #!/bin/bash
@@ -60,3 +60,6 @@ echo $((1 + ($RANDOM % 6))) > result_$1.txt
 
 ## Exercises
 
+### Exercise 1: run replicate jobs
+
+- Create scripts
