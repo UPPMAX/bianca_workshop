@@ -95,12 +95,10 @@
     - Usually it is not a problem to build on Rackham and move to Bianca.
 - ``cmake`` is available as module
 
- 
 !!! info "More info"
 
     - [Extra material: Build from source](../extra/source_install.md)
     - [Singularity course](https://www.uu.se/centrum/uppmax/utbildning/kurser-och-workshops/basic-singularity){:target="_blank"}
-    
 
 ### Containers
 
@@ -116,15 +114,21 @@
 !!! info
 
     - 2(3) types
+    
         1. Singularity/Apptainer perfect for HPC systems
         2. Docker that does not work on HPC-systems
+        
             - But docker images can be used by Singularity and Apptainer
+            
     - Everything is included
     - Workflow:
+    
         - Download on Rackham or local computer
         - Transfer to Bianca
-        - Move to from wharf to any place in your working folders on Bianca 
+        - Move to from wharf to any place in your working folders on Bianca
+        
     - Draw-backs
+    
         - you install also things that may be already installed
         - therefore, probably more disk space is needed
 
