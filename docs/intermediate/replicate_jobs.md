@@ -78,7 +78,7 @@ called [`submit_runs_using_bash.sh`](scripts/submit_runs_using_bash.sh):
 #!/bin/bash
 for i in {0..10}
 do
-  sbatch -A staff run_simulation.sh ${i}
+  sbatch -A sens2023598 run_simulation.sh ${i}
 done
 ```
 
@@ -102,7 +102,7 @@ called [`submit_runs_using_job_array.sh`](scripts/submit_runs_using_job_array.sh
 Run it by:
 
 ```bash
-sbatch -A staff submit_runs_using_job_array.sh
+sbatch -A sens2023598 submit_runs_using_job_array.sh
 ```
 
 ## Exercises
