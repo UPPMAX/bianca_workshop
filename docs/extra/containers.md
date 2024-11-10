@@ -42,7 +42,7 @@ Can I find it on sylabs.io?
 
 No.
 
-  - Continue to Dockerhub.
+- Continue to Dockerhub.
 
 Dockerhub?
 
