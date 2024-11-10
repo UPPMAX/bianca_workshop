@@ -206,6 +206,4 @@ mv –a  projectB <path to any place, like project folder>
 
 !!! error
 
-    If problems arise, send an email to support@uppmax.uu.se and we'll help you.
-
-
+    If problems arise, send an email to `support@uppmax.uu.se` and we'll help you.
