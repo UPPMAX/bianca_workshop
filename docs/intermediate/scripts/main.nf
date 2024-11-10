@@ -35,13 +35,15 @@ process DO_B {
 }
 
 process DO_C {
+    publishDir params.scripts_dir, mode: 'copy'
+
     input:
     path script
     val a_done
     val b_done
 
     output:
-    path '*', emit: c_output
+    path '*', optional: true, emit: c_output
 
     script:
     """
@@ -51,6 +53,11 @@ process DO_C {
     ls -la
     echo "Executing: bash $script"
     bash $script
+    echo "After execution, contents of current directory:"
+    ls -la
+    
+    # Copy any new files back to the work directory
+    find . -type f -newer $script -exec cp {} . \\;
     """
 }
 

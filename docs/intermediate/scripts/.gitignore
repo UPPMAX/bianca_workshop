@@ -4,3 +4,11 @@ work/
 a.txt
 b.txt
 c.txt
+index.*
+000003.log
+CURRENT
+LOCK
+history
+.command.*
+.exitcode
+MANIFEST-000002
