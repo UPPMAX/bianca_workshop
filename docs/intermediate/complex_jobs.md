@@ -123,8 +123,7 @@ cat a.txt > c.txt
 cat b.txt >> c.txt
 ```
 
-
-## Complex jobs
+## Ways to run complex jobs
 
 There are multiple ways to run complex jobs:
 
@@ -149,7 +148,7 @@ Submitted job with id: 5000002
 ```
 
 [The Slurm documentation on sbatch](https://slurm.schedmd.com/sbatch.html)
-shows 
+shows more options.
 
 
 ### Complex jobs in Slurm from a script
