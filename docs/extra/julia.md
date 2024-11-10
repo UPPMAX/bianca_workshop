@@ -38,7 +38,7 @@
 
 ### First time run on Bianca
 
-You may have to build some package the first time with ``Pkg.build(“<package>”)``. Since “<package>" is pre-installed centrally on UPPMAX you must activate the central environment by following these steps below. This should only be needed the first time like this
+You may have to build some package the first time with `Pkg.build(“<package>”)`. Since `<package>` is pre-installed centrally on UPPMAX you must activate the central environment by following these steps below. This should only be needed the first time like this
 
 ``` julia
 > using Pkg
@@ -48,7 +48,7 @@ You may have to build some package the first time with ``Pkg.build(“<package>�
 
 ## Install yourself
 
-If you have started Julia once you will get the folders like this in the ``~/.julia`` folder.
+If you have started Julia once you will get the folders like this in the `~/.julia` folder.
 
 ```bash
    $ tree .julia/ -d -L 1
@@ -65,19 +65,19 @@ If you have started Julia once you will get the folders like this in the ``~/.ju
    └── scratchspaces
 ```
 
-**The plan is that what you install on Rackham should be moved here in the same manner**
+The plan is that what you install on Rackham should be moved here in the same manner
 
 - Make an installation of the package on Rackham in the Julia package manager
 - Use a transfer method to move the package files to the ``wharf``
     - To be certain to include all files, you may transfer the whole ``.julia`` dir. However, that can grow rather big with time.
 
-**Transfer to the ``wharf``**
+Transfer to the ``wharf``
 
 ``` bash
 sftp sftp bjornc-sens2023531@bianca-sftp
 sftp> cd bjornc-sens2023531/
 sftp> dir
-sftp> 
+sftp>
 ```
 
 If you have not uploaded anything to your ``wharf``, this will be empty. It might have a few things in it.
@@ -89,10 +89,10 @@ sftp> put -r ~/.julia
 ```
 
 - That may take a while since you are sending thousands of files. Consider archiving the .julia directory (a copy) and then tranfer it with the ``put`` command.
-    
+
 - **Alt 2: Just transfer the latest installed julia package(s)**
 
-    :warning: The following part still needs some update    
+    :warning: The following part still needs some update
 
 - Check what was installed. It may have been several dependency packages as well. Look at the times!
 
