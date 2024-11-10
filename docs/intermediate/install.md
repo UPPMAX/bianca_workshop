@@ -109,8 +109,8 @@
     - dependencies (libraries and other programs) with correct versions
 
 <figure markdown="span">
-  ![Containerization](img/Containerization_nextlab.png)
-  <figcaption>Containerization_nextlab from [Nextlab](https://www.nextlabs.com/what-is-containerization/)</figcaption>
+  ![Containerization](img/Containerization_nextlabs.png)
+  <figcaption>Containerization_nextlab from [Nextlabs](https://www.nextlabs.com/what-is-containerization/)</figcaption>
 </figure>
 
 !!! info
@@ -121,9 +121,9 @@
             - But docker images can be used by Singularity and Apptainer
     - Everything is included
     - Workflow:
-      - Download on Rackham or local computer
-      - Transfer to Bianca
-      - Move to from wharf to any place in your working folders on Bianca 
+        - Download on Rackham or local computer
+        - Transfer to Bianca
+        - Move to from wharf to any place in your working folders on Bianca 
     - Draw-backs
         - you install also things that may be already installed
         - therefore, probably more disk space is needed
@@ -194,7 +194,7 @@
 
 ### Conda
 
-- We have mirrored all major Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
+- We have mirrored the non-proprietary Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
 
 !!! info "More info"
 
