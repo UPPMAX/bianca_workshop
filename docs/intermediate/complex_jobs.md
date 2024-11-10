@@ -128,15 +128,12 @@ cat b.txt >> c.txt
 
 There are multiple ways to run complex jobs:
 
-Tool      |Features
-----------|----------------------------------------------------------------------------
-Slurm     |Can be done on the command line or bash scripts, no help
-Nextflow  |Workflow manager, newest, uses the Groovy language, recognizes Slurm systems
-Snakemake |Workflow manager, use the Python language, recognizes Slurm systems
-GNU make  |Workflow manager, oldest, uses GNU make syntax, need to manually call Slurm
+Tool              |Features
+------------------|----------------------------------------------------------------------------
+Slurm             |Can be done on the command line or bash scripts, no help
+A workflow manager|See [the section on workflow managers](#workflow-managers)
 
-
-## Complex jobs in Slurm from the command-line
+### Complex jobs in Slurm from the command-line
 
 You can tell Slurm to start a job after a job has finished with an OK:
 
@@ -155,7 +152,7 @@ Submitted job with id: 5000002
 shows 
 
 
-## Complex jobs in Slurm from a script
+### Complex jobs in Slurm from a script
 
 You can do the same in a script like this:
 
@@ -174,20 +171,24 @@ A job ID was extracted from the text `Submitted job with id: 5000000` by
 using a pipe (`|`) to send it to `cut`. `cut` the takes the fourth field,
 where fields are separated by spaces, to obtain the job ID.
 
-## Workflow manager
+## Workflow managers
 
 For such complex jobs, workflow managers have been created:
 
 Year|Tool                   |Features
 ----|-----------------------|------------------------------------------
-1976|`make`, e.g. GNU `make`|Must use tabs for indentation, HPC unaware
-2021|Snakemake              |Python-like syntax, HPC friendly
-2013|Nextflow               |HPC friendly, has peer-review pipelines
+1976|`make`, e.g. GNU `make`|Widely used, must use tabs for indentation, file-driven approach, HPC unaware
+2021|Snakemake              |Python-like syntax, data-driven approach, HPC friendly
+2013|Nextflow               |HPC friendly, data-driven approach, has peer-review pipelines
 
-### Complex jobs using `make`
+### Complex jobs using GNU `make`
 
-[make](https://en.wikipedia.org/wiki/Make_(software))
-is a tool that has been around since 1976 to do complex jobs.
+GNU [make](https://en.wikipedia.org/wiki/Make_(software))
+is a widely used tool that has been around since 1976 to do complex jobs.
+
+It uses a file-driven approach, i.e. processes create files.
+When all the files that a process needs are present, 
+it will start that process.
 
 ???- question "How does the make script of this pipeline looks like?"
 
@@ -229,10 +230,15 @@ is a tool that has been around since 1976 to do complex jobs.
 
 Snakemake features a Python-like syntax.
 It's power and complexity is between `make` (above) and Nextflow (below).
+It is more similar to Nextflow, as it follows a data-driven approach too.
 
 ### Nextflow
 
 Nextflow is around since 2013 and started with HPC cluster usage in mind.
+
+It uses a data-driven approach: processes produce output in the form
+of numbers, text and/or files. When a process has all the inputs it
+needs, it starts.
 
 ???- question "How does the Nextflow script of this pipeline looks like?"
 
@@ -329,9 +335,10 @@ Nextflow is around since 2013 and started with HPC cluster usage in mind.
 	nextflow run main.nf --scripts_dir $PWD
 	```
 
-Nextflow is very powerful and can submit jobs for you
-using Slurm and has
-[an UPPMAX configuration file](https://github.com/nf-core/configs/blob/master/conf/uppmax.config).
+Nextflow is powerful and can submit jobs for you with/without using Slurm
+(it can detect if it is on an HPC cluster!)
+and even has a formal 
+[UPPMAX configuration file](https://github.com/nf-core/configs/blob/master/conf/uppmax.config).
 nextflow can optimize your resource allocation by trial-and-error
 and has peer-reviewed pipelines maintained by `nf-core`.
 
