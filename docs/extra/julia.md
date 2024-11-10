@@ -35,6 +35,7 @@
     Pkg.activate(DEPOT_PATH[1]*"/environments/v1.8");     #to return to user library
 
 ```
+
 ### First time run on Bianca
 
 You may have to build some package the first time with ``Pkg.build(“<package>”)``. Since “<package>" is pre-installed centrally on UPPMAX you must activate the central environment by following these steps below. This should only be needed the first time like this
@@ -78,6 +79,7 @@ sftp> cd bjornc-sens2023531/
 sftp> dir
 sftp> 
 ```
+
 If you have not uploaded anything to your ``wharf``, this will be empty. It might have a few things in it.
 
 - **Alt1: If you would like all your locally installed packages:**
@@ -85,6 +87,7 @@ If you have not uploaded anything to your ``wharf``, this will be empty. It migh
 ``` bash
 sftp> put -r ~/.julia
 ```
+
 - That may take a while since you are sending thousands of files. Consider archiving the .julia directory (a copy) and then tranfer it with the ``put`` command.
     
 - **Alt 2: Just transfer the latest installed julia package(s)**
@@ -111,6 +114,7 @@ On Bianca
 cd /proj/sens2023531/nobackup/wharf/bjornc/bjornc-sens2023531/
 mv –a  <file(s)> ~/.julia/packages/
 ```
+
 !!! info "If many files or packages"
 
     you may want to tar before copying to include all possible symbolic links:
@@ -118,6 +122,7 @@ mv –a  <file(s)> ~/.julia/packages/
     ``` bash
     $ tar cfz <package.tar.gz> <package>
     ```
+
     and in target directory (wharf_mnt) on Bianca:
 
     ``` bash
