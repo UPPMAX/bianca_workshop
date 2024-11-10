@@ -5,6 +5,8 @@ nextflow.enable.dsl = 2
 params.scripts_dir = "$projectDir"  // You can override this with --scripts_dir option
 
 process DO_A {
+    publishDir params.scripts_dir, mode: 'copy'
+    
     input:
     path script
 
@@ -18,6 +20,8 @@ process DO_A {
 }
 
 process DO_B {
+    publishDir params.scripts_dir, mode: 'copy'
+    
     input:
     path script
 
@@ -46,16 +50,9 @@ process DO_C {
 }
 
 workflow {
-    println "Scripts directory: ${params.scripts_dir}"
-    
     do_a_script = file("${params.scripts_dir}/do_a.sh")
     do_b_script = file("${params.scripts_dir}/do_b.sh")
     do_c_script = file("${params.scripts_dir}/do_c.sh")
-
-    println "Script files:"
-    println "A: ${do_a_script.name} (exists: ${do_a_script.exists()})"
-    println "B: ${do_b_script.name} (exists: ${do_b_script.exists()})"
-    println "C: ${do_c_script.name} (exists: ${do_c_script.exists()})"
 
     a_result = DO_A(do_a_script)
     b_result = DO_B(do_b_script)

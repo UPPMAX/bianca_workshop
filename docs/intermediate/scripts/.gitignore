@@ -1,3 +1,5 @@
 result_*
 work/
 .nextflow*
+a.txt
+b.txt
