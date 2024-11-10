@@ -155,20 +155,31 @@
     - Check **python versions**: ``ml avail python``
     - Check **python packages/modules**
 
-        1. **help** output from: ``ml help python/3.12.7`` at UPPMAX
+        1. **help** output from: ``ml help python/3.12.7``
         2. In a loaded python
 
             - **Load** a python version, like: ``ml python/3.11.8``
             - from **Python shell** with the ``import`` command
             - from **BASH shell** with the ``pip list`` command
 
+!!! admonition "Julia"
+
+    - Check **julia versions**: ``ml avail julia``
+    - Check **julia packages/modules**
+
+        1. **help** output from: ``ml help julia/1.9.3``
+        2. In a loaded julia
+
+            - **Load** a python version, like: ``ml julia/1.8.5``
+            - from **julia shell** with the ``using`` command
+
 ### Install packages, principles
 
 !!! info "Installation principle"
 
-    - install on Rackham or other place
-    - sync to ``wharf``
-    - move the files on Bianca to a place in the path used for packages of R, Python (pip) or julia
+    - Install on Rackham or other place
+    - Sync to ``wharf``
+    - Move the files on Bianca to a place in the path used for packages of R, Python (pip) or julia
 
 !!! admonition "R"
 
@@ -181,20 +192,6 @@
     - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
     - [From R course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/r/packagesR.html){:target="_blank"}
     - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/r/isolatedR.html){:target="_blank"}
-
-!!! info "Tip Python packages"
-
-    - Try Conda first directly on Bianca. We have mirrored all _major_ Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
-    - If you want to keep number of files down, use PyPI (pip), but then you need to use Rackham and the ``wharf``.
-
-!!! admonition "Conda"
-
-    - We have mirrored the non-proprietary Conda repositories (not ``main``, ``anaconda`` and ``r``) directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
-
-    **Links**
-
-    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
-    - [Conda user guide](http://docs.uppmax.uu.se/software/conda/)
 
 !!! admonition "pip"
 
@@ -209,6 +206,20 @@
     - [UPPMAX Python user guide: Pip](http://docs.uppmax.uu.se/software/python_install_packages/#pip){:target="_blank"}
     - [From Python course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/python/packages.html){:target="_blank"}
     - [From Python course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/python/isolated.html){:target="_blank"}
+
+!!! info "Tip Python packages"
+
+    - Try Conda first directly on Bianca. We have mirrored all _major_ Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
+    - If you want to keep number of files down, use PyPI (pip), but then you need to use Rackham and the ``wharf``.
+
+!!! admonition "Conda"
+
+    - We have mirrored the non-proprietary Conda repositories (not ``main``, ``anaconda`` and ``r``) directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
+
+    **Links**
+
+    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
+    - [Conda user guide](http://docs.uppmax.uu.se/software/conda/)
 
 !!! admonition "Julia"
 
