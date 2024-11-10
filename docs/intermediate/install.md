@@ -86,34 +86,21 @@
         - Binaries for Linux on x86 and 64-bit should be able to be run directly as they are.
         - Install program following instructions from documentation of the software.
 
-### Build from source
+### Build from source (C/C++ and Fortran)
 
 - To build from source use a **compiler module**
 - We have several compiler versions from GNU and INTEL
-    - Check with: ``$ ml avail gcc`` and ``$ ml avail intel``
 - ``make`` is installed on the system
     - :warning: It could happen that the "Makefile" contains web fetching, which will not work from Bianca.
     - Usually it is not a problem to build on Rackham and move to Bianca.
 - ``cmake`` is available as module
-    - Check with: ``$ ml avail cmake``
-- [Guide for compiling **serial** programs](https://docs.uppmax.uu.se/software/compiling_serial/){:target="_blank"}
-- [Guide for compiling **parallel** programs](https://docs.uppmax.uu.se/software/compiling_parallel/){:target="_blank"}
 
-???- info "About CPU hardware on Bianca"
+ 
+!!! info "More info"
 
-    - Architecture:          **x86_64**
-        - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes
-        - Advanced Vector Extensions 2 (**AVX2**)
-    - CPU op-mode(s):        32-bit, 64-bit
-    - Byte Order:            Little Endian
-    - CPU(s):                16
-    - Thread(s) per core:    1
-    - Core(s) per socket:    8
-    - Socket(s):             2
-    - NUMA node(s):          2
-    - Model name:            Intel Core Processor (Haswell, no TSX, IBRS)
-    - CPU MHz:               2394.446
-    - For more info, type: ``lscpu`` in the terminal
+    - [Extra material: Build from source](../extra/source_install.md)
+    - [Singularity course](https://www.uu.se/centrum/uppmax/utbildning/kurser-och-workshops/basic-singularity){:target="_blank"}
+    
 
 ### Containers
 
@@ -133,8 +120,8 @@
 
 !!! info "More info"
 
-    - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/)
-    - [Singularity course](https://www.uu.se/centrum/uppmax/utbildning/kurser-och-workshops/basic-singularity)
+    - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/){:target="_blank"}
+    - [Singularity course](https://www.uu.se/centrum/uppmax/utbildning/kurser-och-workshops/basic-singularity){:target="_blank"}
     
 ## Packages and libraries to scripting programs
 
