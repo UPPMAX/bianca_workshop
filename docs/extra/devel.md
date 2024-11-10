@@ -13,7 +13,7 @@
     - Then, either
         - You can install in your home directory.
             - This is handy for personal needs, low numbers of files (i.e. not Conda).
-         - Usually better to install in project directory.
+        - Usually better to install in project directory.
             - This way the project contains both data and software — good for reproducibility, collaboration, and everyone's general sanity.
     - Binaries for Linux on x86 and 64-bit should be able to be run directly as it is, see the software specific installation documentation.
     - or build from source, see next session.
@@ -39,7 +39,3 @@
 
 - For collaboration within a ``sens`` project your can have a "local" ``remote`` repo in your common project folder.
 - [More on Git on Bianca](http://docs.uppmax.uu.se/software/git_on_bianca/)
-
-
-
-
