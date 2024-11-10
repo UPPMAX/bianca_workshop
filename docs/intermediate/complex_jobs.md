@@ -172,7 +172,7 @@ to specify which jobs to depend on.
 
 A job ID was extracted from the text `Submitted job with id: 5000000` by
 using a pipe (`|`) to send it to `cut`. `cut` the takes the fourth field,
-where fields are seperated by spaces, to obtain the job ID.
+where fields are separated by spaces, to obtain the job ID.
 
 ## Workflow manager
 
