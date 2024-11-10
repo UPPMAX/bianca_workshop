@@ -194,7 +194,7 @@
 
 ### Conda
 
-- We have mirrored the non-proprietary Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
+- We have mirrored the non-proprietary Conda repositories (not ``main``, ``anaconda`` and ``r``) directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
 
 !!! info "More info"
 
