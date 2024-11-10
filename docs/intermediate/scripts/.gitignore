@@ -12,3 +12,5 @@ history
 .command.*
 .exitcode
 MANIFEST-000002
+work/
+.nextflow/
