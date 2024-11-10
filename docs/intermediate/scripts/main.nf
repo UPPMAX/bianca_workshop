@@ -5,13 +5,13 @@ nextflow.enable.dsl = 2
 params.scripts_dir = "$projectDir"  // You can override this with --scripts_dir option
 
 process DO_A {
-    publishDir params.scripts_dir, mode: 'copy'
+    publishDir params.scripts_dir, mode: 'copy', pattern: '*.txt'
     
     input:
     path script
 
     output:
-    path '*', emit: a_output
+    path '*.txt', emit: a_output
 
     script:
     """
@@ -20,13 +20,13 @@ process DO_A {
 }
 
 process DO_B {
-    publishDir params.scripts_dir, mode: 'copy'
+    publishDir params.scripts_dir, mode: 'copy', pattern: '*.txt'
     
     input:
     path script
 
     output:
-    path '*', emit: b_output
+    path '*.txt', emit: b_output
 
     script:
     """
@@ -35,7 +35,7 @@ process DO_B {
 }
 
 process DO_C {
-    publishDir params.scripts_dir, mode: 'copy'
+    publishDir params.scripts_dir, mode: 'copy', pattern: '*.txt'
 
     input:
     path script
@@ -43,21 +43,21 @@ process DO_C {
     val b_done
 
     output:
-    path '*', optional: true, emit: c_output
+    path '*.txt', optional: true, emit: c_output
 
     script:
     """
     cd ${params.scripts_dir}
     echo "Current directory: \$(pwd)"
     echo "Contents of current directory:"
-    ls -la
+    ls -la *.txt
     echo "Executing: bash $script"
     bash $script
     echo "After execution, contents of current directory:"
-    ls -la
+    ls -la *.txt
     
-    # Copy any new files back to the work directory
-    find . -type f -newer $script -exec cp {} . \\;
+    # Copy any new .txt files back to the work directory
+    find . -type f -name "*.txt" -newer $script -exec cp {} . \\;
     """
 }
 
