@@ -15,6 +15,10 @@
     - (optional) I can schedule a minimal workflow of jobs
       that depend on each other using GNU make
 
+???- question "Want to see this session as a video?"
+
+    Watch it on YouTube [here](https://youtu.be/GzkknvVl4Mo).
+
 ???- question "For teachers"
 
     Teaching goals are:
