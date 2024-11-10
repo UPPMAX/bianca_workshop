@@ -21,32 +21,32 @@
     - Install it on Rackham. Perhaps you need it here as well! Then transfer to ``wharf`` and Bianca local python library.
     - Make a virtual environment with one or several packages on Rackham. Then transfer to ``wharf`` and Bianca (any place).
 
-
-
 ## Only download on Rackham and install on Bianca
 
-**Rackham**
+### Rackham
+
 ``` sh
 $ pip download <package-name>
 ```
 
-**Transfer to the ``wharf``**
+### Transfer to the ``wharf``
 
-``` bash
+```bash
 sftp douglas-sens2017625@bianca-sftp
 sftp> cd douglas-sens2017625/
 sftp> dir
 sftp>
 ```
+
 If you have not uploaded anything to your ``wharf``, this will be empty. It might have a few things in it.
 
-Now, upload to the ``wharf`` the package <package-name> and all the dependency packages ``pip download`` got you.
+Now, upload to the `wharf` the package `<package-name>` and all the dependency packages `pip download` got you.
 
 ``` bash
 sftp> put -r <package-name>
 ```
 
-**Install on Bianca**
+### Install on Bianca
 
 On Bianca
 install it (Yes, you can do it from this place) by telling pip where to look for packages and dependencies
@@ -55,7 +55,8 @@ install it (Yes, you can do it from this place) by telling pip where to look for
 $ ml python
 $ pip install --user --no-index --find-links <path-to-packages> <package-name>
 ```
-<path-to-packages> is where your packages are, if in present working directory it is ``.``
+
+`<path-to-packages>` is where your packages are, if in present working directory it is `.`
 
 **Then the package ends up in ``~/.local/lib/python<version>/site-packages/`` .**
 
@@ -65,7 +66,7 @@ $ pip install --user --no-index --find-links <path-to-packages> <package-name>
 
     **The package ends up on Rackham in ``~/.local/lib/python<version>/site-packages/`` .**
 
-    - Note that python<version> is omitting the last number (bug fix), like 3.8 for python-3.8.7.
+    - Note that `python<version>` is omitting the last number (bug fix), like `3.8` for `python-3.8.7`.
 
 
 **Install on Rackham**

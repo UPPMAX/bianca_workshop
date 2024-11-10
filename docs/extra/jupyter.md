@@ -23,6 +23,7 @@ Start a notebook like this:
 $ module load python/<version>
 $ jupyter-notebook
 ```
+
 or jupyter lab:
 
 ``` bash
