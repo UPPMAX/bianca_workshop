@@ -43,14 +43,53 @@
 You have a simulation that uses randomness. 
 You want to run 1000 replicates of it. How would you do that?
 
-## [`run_simulation.sh`](scripts/run_simulation.sh)
+## The simulation
+
+This is the bash script of a simulation,
+called [`run_simulation.sh`](scripts/run_simulation.sh):
 
 ```bash
 #!/bin/bash
 echo $((1 + ($RANDOM % 6))) > result_$1.txt
 ```
 
-## [`submit_runs.sh`](scripts/submit_runs.sh)
+It simulates a dice throw.
+
+This is a toy simulation: imagine a 
+
+## Methods to run replicate jobs
+
+There are multiple methods to run replicate jobs,
+these are the methods shown in this session:
+
+Method             |Features
+-------------------|--------------------------------------------------------
+Slurm job arrays   |Slurm does the replication for you, Slurm friendly
+Use a bash for loop|Need to write the replication and interaction with Slurm
+
+## Replicate jobs using bash
+
+This is the bash script to run replicate jobs using bash,
+called [`submit_runs_using_bash.sh`](scripts/submit_runs_using_bash.sh):
+
+```bash
+#!/bin/bash
+for i in {0..10}
+do
+  sbatch -A staff run_simulation.sh ${i}
+done
+```
+
+Run it by:
+
+```bash
+./submit_runs_using_bash.sh
+```
+
+## Replicate jobs using a job array
+
+This is the bash script to run replicate jobs using a Slurm job array,
+called [`submit_runs_using_job_array.sh`](scripts/submit_runs_using_job_array.sh):
 
 ```bash
 #!/bin/bash
@@ -58,8 +97,26 @@ echo $((1 + ($RANDOM % 6))) > result_$1.txt
 ./run_simulation.sh ${SLURM_ARRAY_TASK_ID}
 ```
 
+Run it by:
+
+```bash
+sbatch -A staff submit_runs_using_job_array.sh
+```
+
 ## Exercises
 
-### Exercise 1: run replicate jobs
+### Exercise 1: run replicate jobs using Slurm job arrays
 
-- Create scripts
+- Create the script [`run_simulation.sh`](scripts/run_simulation.sh)
+- Create the script [`submit_runs_using_job_array.sh`](scripts/submit_runs_using_job_array.sh)
+- Submit the script `submit_runs_using_job_array.sh`
+- How does the queue look like?
+- How many result files are created: ten or eleven?
+
+### (optional) Exercise 2: run replicate jobs using bash
+
+- Create the script [`run_simulation.sh`](scripts/run_simulation.sh)
+- Create the script [`submit_runs_using_bash.sh`](scripts/submit_runs_using_bash.sh)
+- Run the script `submit_runs_using_bash.sh`
+- How does the queue look like?
+- How many result files are created: ten or eleven?

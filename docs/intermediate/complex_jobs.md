@@ -317,6 +317,9 @@ Nextflow is around since 2013 and started with HPC cluster usage in mind.
 	the architecture of the workflow and can be made more elegant
 	when following a workflow suitable for Nextflow.
 
+	The script is created using [Seqera's Ask AI](https://seqera.io/ask-ai/)
+	and took 40 minutes of dialogue.
+
 ???- question "How to start that pipeline?"
 
 	To run the pipeline (and when Nextflow is installed), do:
