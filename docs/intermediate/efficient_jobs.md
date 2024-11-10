@@ -5,7 +5,12 @@
     - Practice using the UPPMAX documentation
     - I can see the CPU and memory usage of jobs
     - I can read a `jobstats` plot
+    - I can create a `jobstats` plot
     - I understand how to set up jobs efficiently
+
+???- question "Want to see this session as a video?"
+
+    Watch it on YouTube [here](https://youtu.be/0FcREXUcOHc).
 
 ???- question "For teachers"
 
@@ -14,6 +19,7 @@
     - Learners have practiced using the UPPMAX documentation
     - Learners have seen the CPU and memory usage of jobs
     - Learners have read a `jobstats` plot
+    - Learners have created a `jobstats` plot
     - Learners have discussed how to set up jobs efficiently
 
     Lesson plan:
@@ -60,9 +66,11 @@ Running efficient jobs allows you to run more jobs that start running faster.
 - Read [the UPPMAX `jobstats` documentation](https://docs.uppmax.uu.se/software/jobstats/)
   especially [the 'effective use' section](https://docs.uppmax.uu.se/software/jobstats/#efficient-use)
 
-- See `jobstats plot 1` below and answer these questions:
-  - How much cores should this user book?
-  - Why?
+#### Exercise 1.1: `jobstats plot 1`
+
+See `jobstats plot 1` below and answer these questions:
+- How much cores should this user book?
+- Why?
 
 ![jobstats plot 1](./img/jobstats_example_1.png)
 
@@ -76,10 +84,12 @@ Running efficient jobs allows you to run more jobs that start running faster.
     It may be that the program is set up incorrectly
     and that it can use multiple cores if set up correctly.
 
-- See `jobstats plot 2` below and answer these questions:
-  - Did the job finish successfully?
-  - How much cores should this user book?
-  - Why?
+#### Exercise 1.2: `jobstats plot 2`
+
+See `jobstats plot 2` below and answer these questions:
+- Did the job finish successfully?
+- How much cores should this user book?
+- Why?
 
 ![jobstats plot 2](./img/jobstats_example_2.png)
 
@@ -94,11 +104,11 @@ Running efficient jobs allows you to run more jobs that start running faster.
     more then currently used. One strategy is to double to amount of cores
     and finetune after a successful run.
 
+#### Exercise 1.3: `jobstats plot 3`
 
 - See `jobstats plot 3` below and answer these questions:
-  - How much cores should this user book?
-  - Why?
-
+- How much cores should this user book?
+- Why?
 
 ![jobstats plot 3](./img/jobstats_example_3.png)
 
@@ -119,13 +129,11 @@ Running efficient jobs allows you to run more jobs that start running faster.
     using multiple cores always brings computational overhead
     and hence wasted CPU resources. 
 
+#### Exercise 1.4: `jobstats plot 4`
 
-![An example job](./img/rackham-naiss2024-22-282-youse-49928732.png)
-
-- See `jobstats plot 4` below and answer these questions:
-  - How much cores should this user book?
-  - Why?
-
+See `jobstats plot 4` below and answer these questions:
+- How much cores should this user book?
+- Why?
 
 ![jobstats plot 4](./img/rackham-naiss2023-22-1014-fdube-50060711.png)
 
@@ -144,6 +152,18 @@ We are going to create a `jobstats` plot. For that, we need a job
 to plot. Here we first look for a job, after which we plot it. 
 
 - Scan [the UPPMAX `finishedjobinfo` documentation](https://docs.uppmax.uu.se/software/finishedjobinfo/)
+- Log in to **Rackham**.
+- Why do we need to log in to Rackham to find jobs?
+
+???- question "Answer"
+
+    On Bianca, all projects are part of an independent, isolated virtual
+    cluster, for security reasons. When working in a Bianca project,
+    one cannot see anything of other projects.
+
+    Rackham does not have this: we can see all jobs submitted by all users.
+    Hence, there are more visible jobs for us to look at.
+
 - Find a job that has finished successfully that took longer than one hour.
 
 ???- question "Answer"
@@ -156,7 +176,6 @@ to plot. Here we first look for a job, after which we plot it.
     ```
 
     Press `CTRL-C` to stop the process: it will take very long to finish.
-
 
 - Read [the UPPMAX `jobstats` documentation](https://docs.uppmax.uu.se/software/jobstats/),
   create a `jobstats` plot of that job
@@ -178,3 +197,6 @@ to plot. Here we first look for a job, after which we plot it.
     ```
 
 - Was that a job that was set up well? If not, how should it be setup? Why?
+- Does the quote at the start of this sessions ('If everyone would use our
+  computational resources effectively, there would be no queue') apply to
+  your job?
