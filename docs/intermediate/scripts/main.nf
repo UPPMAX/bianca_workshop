@@ -45,6 +45,11 @@ process DO_C {
 
     script:
     """
+    cd ${params.scripts_dir}
+    echo "Current directory: \$(pwd)"
+    echo "Contents of current directory:"
+    ls -la
+    echo "Executing: bash $script"
     bash $script
     """
 }
