@@ -35,37 +35,39 @@ Create local symlinks to the iGenomes BWA index for GRCh38.
 
 The SLURM script `run_good.sh` runs an efficient job, which requests 8 cores and uses 8 for mapping and 2 to generate the BAM file:
 
-    #!/bin/bash -l
+```
+#!/bin/bash -l
 
-    #SBATCH -A sens2023598
-    #SBATCH -t 8:00:00
-    #SBATCH -n 8
-    #SBATCH -o run_good.out
+#SBATCH -A sens2023598
+#SBATCH -t 8:00:00
+#SBATCH -n 8
+#SBATCH -o run_good.out
 
-    module load bioinfo-tools
-    module load bwa/0.7.17
-    module load samtools/1.17
+module load bioinfo-tools
+module load bwa/0.7.17
+module load samtools/1.17
 
-    bwa mem -t 8 genome.fa NA12878_WGS_possorted_bam.chr1.r1.fastq.gz NA12878_WGS_possorted_bam.chr1.r2.fastq.gz | samtools view -Sb -@ 2 - > good.bam
-
+bwa mem -t 8 genome.fa NA12878_WGS_possorted_bam.chr1.r1.fastq.gz NA12878_WGS_possorted_bam.chr1.r2.fastq.gz | samtools view -Sb -@ 2 - > good.bam
+```
 
 ### Poor job: inefficient use of requested cores
 
 The SLURM script `run_poor.sh` runs an inefficient job, which also requests 8 cores but only uses 2 for mapping and 1 to generate the BAM file:
 
-    #!/bin/bash -l
+```bash
+#!/bin/bash -l
 
-    #SBATCH -A sens2023598
-    #SBATCH -t 12:00:00
-    #SBATCH -n 8
-    #SBATCH -o run_poor.out
+#SBATCH -A sens2023598
+#SBATCH -t 12:00:00
+#SBATCH -n 8
+#SBATCH -o run_poor.out
 
-    module load bioinfo-tools
-    module load bwa/0.7.17
-    module load samtools/1.17
+module load bioinfo-tools
+module load bwa/0.7.17
+module load samtools/1.17
 
-    bwa mem -t 2 genome.fa NA12878_WGS_possorted_bam.chr1.r1.fastq.gz NA12878_WGS_possorted_bam.chr1.r2.fastq.gz | samtools view -Sb - > poor.bam
-
+bwa mem -t 2 genome.fa NA12878_WGS_possorted_bam.chr1.r1.fastq.gz NA12878_WGS_possorted_bam.chr1.r2.fastq.gz | samtools view -Sb - > poor.bam
+```
 
 ### Examining jobstats plots
 
