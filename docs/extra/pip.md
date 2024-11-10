@@ -4,19 +4,19 @@
 
 ???+ question "Try to follow the steps with the package ``numpy==1.22.3`` for ``python/3.11.8`` "
 
-## Check for packages 
-   
+## Check for packages
+
 - from the Python shell with the ``import`` command
-- from BASH shell with the 
-	
-- ``pip list`` command 
+- from BASH shell with the
+
+- ``pip list`` command
 - ``ml help python/3.9.5`` at UPPMAX
 
 **Is it not there? Then proceed!**
 
 !!! info
     **Methods:**
-    
+
     - You can either just download a python package, transfer to ``wharf`` and Bianca and install there.
     - Install it on Rackham. Perhaps you need it here as well! Then transfer to ``wharf`` and Bianca local python library.
     - Make a virtual environment with one or several packages on Rackham. Then transfer to ``wharf`` and Bianca (any place).
@@ -26,9 +26,9 @@
 ## Only download on Rackham and install on Bianca
 
 **Rackham**
-``` sh 
+``` sh
 $ pip download <package-name>
-``` 
+```
 
 **Transfer to the ``wharf``**
 
@@ -51,7 +51,7 @@ sftp> put -r <package-name>
 On Bianca
 install it (Yes, you can do it from this place) by telling pip where to look for packages and dependencies
 
-``` sh 
+``` sh
 $ ml python
 $ pip install --user --no-index --find-links <path-to-packages> <package-name>
 ```
@@ -66,12 +66,12 @@ $ pip install --user --no-index --find-links <path-to-packages> <package-name>
     **The package ends up on Rackham in ``~/.local/lib/python<version>/site-packages/`` .**
 
     - Note that python<version> is omitting the last number (bug fix), like 3.8 for python-3.8.7.
-    
+
 
 **Install on Rackham**
 
-``` sh 
-$ ml python/<version>		# this is to make use the correct python version and possible dependencies already available
+``` sh
+$ ml python/<version>        # this is to make use the correct python version and possible dependencies already available
 $ pip install --user <package-name>
 ```
 - If there is a requirements.txt file with the content of packages to be installed:
@@ -130,7 +130,7 @@ mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
     ```
     and in target directory (wharf_mnt) on Bianca:
 
-    ``` bash 
+    ``` bash
     $ tar xfz <tarfile.tar.gz> #if there is a tar file!
     $ mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
     ```
@@ -138,17 +138,17 @@ mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
 
 ## Isolated/virtual environments
 
-- We HIGHLY recommend using a virtual environment during installation, since this makes it easier to install for different versions of Python.  
+- We HIGHLY recommend using a virtual environment during installation, since this makes it easier to install for different versions of Python.
 
 !!! note
-   
+
     Isolated environments solve a couple of problems:
-   
+
     - You can install specific package, also older, versions into them.
     - You can create one for each project and no problem if the two projects require different versions.
     - You can remove the environment and create a new one, if not needed or with errors.
 
-- More information about [isolated environments](https://uppmax.github.io/HPC-python/extra/isolated_deeper.html). 
+- More information about [isolated environments](https://uppmax.github.io/HPC-python/extra/isolated_deeper.html).
 
 **Example, where python packages from the loaded module are used (``--system-site-packages``)**
 
@@ -157,7 +157,7 @@ $ module load python/3.6.8
 $ python -m venv --system-site-packages <path>/projectB
 ```
 
-“projectB” is the name of the virtual environment. The directory “projectB” is created in the present working directory. The ``-m`` flag makes sure that you use the libraries from the python version you are using.	
+“projectB” is the name of the virtual environment. The directory “projectB” is created in the present working directory. The ``-m`` flag makes sure that you use the libraries from the python version you are using.
 
 - Activate and install with pip (package one by one or from requirements.txt)
 
@@ -175,7 +175,7 @@ $ deactivate
 ```
 
 - Virtual environments can be saved easily anywhere
-	
+
 **Transfer to the ``wharf``**
 
 ``` bash
@@ -203,5 +203,5 @@ mv –a  projectB <path to any place, like project folder>
 !!! error
 
     If problems arise, send an email to support@uppmax.uu.se and we'll help you.
-    
+
 

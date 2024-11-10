@@ -29,11 +29,12 @@ or jupyter lab:
 $ jupyter-lab
 ```
 
-A local Firefox session (not a internet web page!) should start with the Jupyter notebook/lab interface. 
+A local Firefox session (not a internet web page!) should start with the Jupyter notebook/lab interface.
+
 - If not, make jupyter work in background, start firefox and paste the address.
-- `` <ctrl-z>``
-- ``bg``
-- ``firefox &``
+- `<ctrl-z>`
+- `bg`
+- `firefox &`
 - copy-paste one of the addresses from the jupyter output in the terminal into the address files in the open ``firefox`` session.
 
 - You can browse in jupyter to a test notebook in ``/proj/workshop/Jupyter-demo/Test-01.ipynb``
@@ -48,7 +49,8 @@ However, you won't find your locally installed packages from that jupyter sessio
 ```bash
 $ pip install -I jupyter
 ```
+
 and run it as above.
 
 Be sure to start the kernel with the virtual environment name, like "project A", and not "Python 3 (ipykernel)".
-      
+
