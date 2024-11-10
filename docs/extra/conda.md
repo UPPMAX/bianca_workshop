@@ -1,5 +1,24 @@
 # Conda on Bianca
 
+We have mirrored all major non-proprietary Conda repositories (not ``main``, ``anaconda`` and ``r``) directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
+
+!!! info "Available Conda channels"
+
+    - bioconda
+    - biocore
+    - conda-forge
+    - dranew
+    - free
+    - ~~main~~
+    - pro
+    - qiime2
+    - ~~r~~
+    - r2018.11
+    - scilifelab-lts
+    - nvidia
+    - pytorch
+
+
 ???+ question "Read [Conda user guide](http://docs.uppmax.uu.se/software/conda/)"
 
     - Read [Conda user guide](http://docs.uppmax.uu.se/software/conda/)
