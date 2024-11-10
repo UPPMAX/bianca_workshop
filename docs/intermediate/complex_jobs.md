@@ -138,13 +138,13 @@ A workflow manager|See [the section on workflow managers](#workflow-managers)
 You can tell Slurm to start a job after a job has finished with an OK:
 
 ```bash
-$ sbatch do_a.sh
+$ sbatch -A staff do_a.sh
 Submitted job with id: 5000000
 
-$ sbatch do_b.sh
+$ sbatch -A staff do_b.sh
 Submitted job with id: 5000001
 
-$ sbatch do_c.sh --dependency=afterok:5000000:5000001
+$ sbatch -A staff do_c.sh --dependency=afterok:5000000:5000001
 Submitted job with id: 5000002
 ```
 
