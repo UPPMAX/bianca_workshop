@@ -54,16 +54,16 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 - manual download and install
     - <https://uppmax.github.io/bianca_workshop/extra/rpackages/#manual-download-and-install>
     - **NOTE** that if you install a package this way, you need to handle any dependencies yourself.
-        - For instance you might get use of our modules  
+        - For instance you might get use of our modules
 
 ### Transfer to wharf
 
-- You may transfer the whole R library (in you home folder)  
+- You may transfer the whole R library (in you home folder)
     - this is usually the easiest way
 - or select the directory(-ies) related to you new installation
     - **note** there may be more than one directory
 
-### Move package to local Bianca R package path 
+### Move package to local Bianca R package path
 
 - Sync or move the R directory or the specific folders to your ``~/R`` directory on bianca
 
@@ -71,27 +71,26 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 
 - Start an R session on bianca and load the new package
 
-
-
 ## Exercise: Update dowser
 
 [dowser on Readthedocs](https://dowser.readthedocs.io/en/latest/){:target="_blank"}
 
 !!! info
-   
-    - Dowser is part of the Immcantation analysis framework for Adaptive Immune Receptor Repertoire sequencing (AIRR-seq). 
-    - Dowser provides a set of tools for performing phylogenetic analysis on B cell receptor repertoires. 
+
+    - Dowser is part of the Immcantation analysis framework for Adaptive Immune Receptor Repertoire sequencing (AIRR-seq).
+    - Dowser provides a set of tools for performing phylogenetic analysis on B cell receptor repertoires.
     - It supports building and visualizing trees using multiple methods, and implements statistical tests for discrete trait analysis of B cell migration, differentiation, and isotype switching.
 
 The version of dowser in ``R_packages/4.2.1`` is 1.1.0. It was updated to version 1.2.0 on [2023-05-30](https://cran.rstudio.com/web/packages/dowser/){:target="_blank"}.
 
-### Install on Rackham
+### Install dowser on Rackham
 
 You can update this for yourself by beginning on **rackham**. Do
 
-``` bash
+```bash
 module load R_packages/4.2.1
 ```
+
 and then, within R, do
 
 ``` R
@@ -164,8 +163,6 @@ The downloaded source packages are in
 [1] '1.2.0'
 ```
 
-
-
 ### Transfer to the Wharf
 
 After installation, the next step is to copy the contents of this directory over to bianca so that it is the same directory within your bianca home directory.
@@ -211,7 +208,7 @@ This will take a while to upload all the files. When it has completed, quit.
 sftp> quit
 ```
 
-- Now, **log into bianca** using the shell, or using the web interface and start a terminal. 
+- Now, **log into bianca** using the shell, or using the web interface and start a terminal.
 - Once you have a bianca shell, **change to your wharf directory** within your project.  Replace my user and project with yours.
 
 ``` bash
@@ -257,4 +254,3 @@ Then start R, and load the new package.
     > library(dowser)
     >
 ```
-

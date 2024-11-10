@@ -3,8 +3,8 @@
 - [Link to Slurm session in Intro to UPPMAX course](https://www.uu.se/download/18.57591c9d18f3ec99a0521784/1715116006615/c_560271-l_1-k_uppmax-slurm-2024-01.pdf){:target="_blank"}
 - [Slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
 - [Slurm user guide](http://docs.uppmax.uu.se/cluster_guides/slurm/){:target="_blank"}
-- [Discovering job resource usage with `jobstats`](http://docs.uppmax.uu.se/software/jobstats/){:target="_blank"} 
-- [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"} 
+- [Discovering job resource usage with `jobstats`](http://docs.uppmax.uu.se/software/jobstats/){:target="_blank"}
+- [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"}
 
 ## Example
 
@@ -23,7 +23,7 @@ Sort reads by name, keep result in `test_BAM_chr1_11464076_11466075.name.bam`.
 Extract paired reads into `test_BAM_chr1_11464076_11466075.r1.fastq.gz` and
 `test_BAM_chr1_11464076_11466075.r2.fastq.gz`, discard singletons and others.
 
-    samtools fastq -n -0 /dev/null -s /dev/null -1 test_BAM_chr1_11464076_11466075.r1.fastq.gz -2 test_BAM_chr1_11464076_11466075.r2.fastq.gz test_BAM_chr1_11464076_11466075.name.bam 
+    samtools fastq -n -0 /dev/null -s /dev/null -1 test_BAM_chr1_11464076_11466075.r1.fastq.gz -2 test_BAM_chr1_11464076_11466075.r2.fastq.gz test_BAM_chr1_11464076_11466075.name.bam
 
 Create local symlinks to the iGenomes BWA index for GRCh38.
 
@@ -36,16 +36,16 @@ Create local symlinks to the iGenomes BWA index for GRCh38.
 The SLURM script `run_good.sh` runs an efficient job, which requests 8 cores and uses 8 for mapping and 2 to generate the BAM file:
 
     #!/bin/bash -l
-    
+
     #SBATCH -A sens2023598
     #SBATCH -t 8:00:00
     #SBATCH -n 8
     #SBATCH -o run_good.out
-    
+
     module load bioinfo-tools
     module load bwa/0.7.17
     module load samtools/1.17
-    
+
     bwa mem -t 8 genome.fa NA12878_WGS_possorted_bam.chr1.r1.fastq.gz NA12878_WGS_possorted_bam.chr1.r2.fastq.gz | samtools view -Sb -@ 2 - > good.bam
 
 
@@ -54,16 +54,16 @@ The SLURM script `run_good.sh` runs an efficient job, which requests 8 cores and
 The SLURM script `run_poor.sh` runs an inefficient job, which also requests 8 cores but only uses 2 for mapping and 1 to generate the BAM file:
 
     #!/bin/bash -l
-    
+
     #SBATCH -A sens2023598
     #SBATCH -t 12:00:00
     #SBATCH -n 8
     #SBATCH -o run_poor.out
-    
+
     module load bioinfo-tools
     module load bwa/0.7.17
     module load samtools/1.17
-    
+
     bwa mem -t 2 genome.fa NA12878_WGS_possorted_bam.chr1.r1.fastq.gz NA12878_WGS_possorted_bam.chr1.r2.fastq.gz | samtools view -Sb - > poor.bam
 
 
@@ -83,7 +83,7 @@ This generates two PNG image files, one for each job. These are named `cluster-p
 
 
 ??? "Extra: How compute nodes are moved between project clusters"
-    
+
     The total job queue, made by putting together job queues of all project clusters, is monitored, and acted upon, by an external program, named meta-scheduler.
 
     In short, this program goes over the following procedure, over and over again:
@@ -91,8 +91,8 @@ This generates two PNG image files, one for each job. These are named `cluster-p
     1. Finds out where all the compute nodes are: on a specific project cluster or yet unallocated.
     1. Reads status reports from all compute nodes, about all their jobs, all their compute nodes, and all their active users.
     1. Are there unallocated compute nodes for all queued jobs?
-    1. Otherwise, try to "steal" nodes from project clusters, to get more unallocated compute nodes. This "stealing" is done in two steps: 
-        - "drain" a certain node, i.e. disallow more jobs to start on it; 
+    1. Otherwise, try to "steal" nodes from project clusters, to get more unallocated compute nodes. This "stealing" is done in two steps:
+        - "drain" a certain node, i.e. disallow more jobs to start on it;
         - remove the compute node from the project cluster, if no jobs are running on the node.
     3. Use all unallocated nodes to create new compute nodes. Jobs with a higher priority get compute nodes first.
 
