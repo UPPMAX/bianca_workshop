@@ -69,12 +69,13 @@ $ pip install --user --no-index --find-links <path-to-packages> <package-name>
     - Note that `python<version>` is omitting the last number (bug fix), like `3.8` for `python-3.8.7`.
 
 
-**Install on Rackham**
+### Install on Rackham
 
 ``` sh
 $ ml python/<version>        # this is to make use the correct python version and possible dependencies already available
 $ pip install --user <package-name>
 ```
+
 - If there is a requirements.txt file with the content of packages to be installed:
 
 ```bash
@@ -91,6 +92,7 @@ sftp> cd douglas-sens2017625/
 sftp> dir
 sftp>
 ```
+
 If you have not uploaded anything to your ``wharf``, this will be empty. It might have a few things in it.
 
 - **Alt1: If you would like all your locally installed packages:**
@@ -129,6 +131,7 @@ mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
     ``` bash
     $ tar cfz <tarfile.tar.gz> <package>
     ```
+
     and in target directory (wharf_mnt) on Bianca:
 
     ``` bash
@@ -165,10 +168,11 @@ $ python -m venv --system-site-packages <path>/projectB
 ``` bash
 $ source <path>/projectB/bin/activate
 ```
+
 - Note that your prompt is changing to start with (analysis) to show that you are within an environment.
 - Install the packages from the file::
 
-```
+```bash
 $ pip install -r requirements.txt
 
 $ pip list   # check
@@ -185,6 +189,7 @@ sftp> cd douglas-sens2017625/
 sftp> dir
 sftp>
 ```
+
 If you have not uploaded anything to your ``wharf``, this will be empty. It might have a few things in it.
 
 ``` bash
@@ -198,8 +203,6 @@ On Bianca
 cd /proj/sens2023531/nobackup/wharf/bjornc/bjornc-sens2023531/
 mv –a  projectB <path to any place, like project folder>
 ```
-
-<br><br><br>
 
 !!! error
 
