@@ -1,11 +1,11 @@
 # Build from source
 
 - To build from source use a **compiler module**
-- We have several compiler versions from GNU and INTEL. Check what is available with: 
+- We have several compiler versions from GNU and INTEL. Check what is available with:
     - ``$ ml avail gcc``
     - or for intel
         - ``$ ml avail intel`` or
-        - `` module load intel-oneapi``
+        - ``module load intel-oneapi``
         - ``module avail compiler``
 - ``make`` is installed on the system
     - :warning: It could happen that the "Makefile" contains web fetching, which will not work from Bianca.
