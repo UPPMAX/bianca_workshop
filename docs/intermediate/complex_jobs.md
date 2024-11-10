@@ -76,7 +76,7 @@ flowchart TD
 ```
 
 > Example setup of a computational experiment.
-> [`do_a.sh`](scripts/do_a.sh) and [`do_b.sh`](scripts/do_a.sh) 
+> [`do_a.sh`](scripts/do_a.sh) and [`do_b.sh`](scripts/do_a.sh)
 > can run in parallel.
 > [`do_c.sh`](scripts/do_a.sh) can only run when
 > [`do_a.sh`](scripts/do_a.sh) and [`do_b.sh`](scripts/do_a.sh) have finished.
@@ -186,8 +186,11 @@ GNU [make](https://en.wikipedia.org/wiki/Make_(software))
 is a widely used tool that has been around since 1976 to do complex jobs.
 
 It uses a file-driven approach, i.e. processes create files.
-When all the files that a process needs are present, 
+When all the files that a process needs are present,
 it will start that process.
+
+<!-- A Makefile uses hard tabs for indentation -->
+<!-- markdownlint-disable MD010 -->
 
 ???- question "How does the make script of this pipeline looks like?"
 
@@ -212,6 +215,8 @@ it will start that process.
 	  by doing `do_c.sh`
 	- `a.txt` can (always) be created by doing `do_a.sh`
 	- `b.txt` can (always) be created by doing `do_b.sh`
+
+<!-- markdownlint-enable MD010 -->
 
 ???- question "How to run this make script?"
 
@@ -336,7 +341,7 @@ needs, it starts.
 
 Nextflow is powerful and can submit jobs for you with/without using Slurm
 (it can detect if it is on an HPC cluster!)
-and even has a formal 
+and even has a formal
 [UPPMAX configuration file](https://github.com/nf-core/configs/blob/master/conf/uppmax.config).
 nextflow can optimize your resource allocation by trial-and-error
 and has peer-reviewed pipelines maintained by `nf-core`.
@@ -345,8 +350,8 @@ and has peer-reviewed pipelines maintained by `nf-core`.
 
 Here we do the procedure 'by hand':
 
-- Collect the scripts [`do_a.sh`](scripts/do_a.sh), 
-  [`do_b.sh`](scripts/do_b.sh)  and [`do_c.sh`](scripts/do_c.sh) 
+- Collect the scripts [`do_a.sh`](scripts/do_a.sh),
+  [`do_b.sh`](scripts/do_b.sh)  and [`do_c.sh`](scripts/do_c.sh)
 
 ???- question "Answer"
 
