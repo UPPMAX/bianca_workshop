@@ -55,7 +55,9 @@ echo $((1 + ($RANDOM % 6))) > result_$1.txt
 
 It simulates a dice throw.
 
-This is a toy simulation: imagine a 
+This is a toy simulation instead of a real simulation:
+there is no need to burden an HPC cluster with a real simulation
+to learn how to use job arrays.
 
 ## Methods to run replicate jobs
 
