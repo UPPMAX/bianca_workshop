@@ -7,18 +7,18 @@
     The Julia application at UPPMAX comes with several preinstalled packages.
     A selection of the Julia packages and libraries installed on UPPMAX are:
 
-	- BenchmarkTools
-	- CSV
-	- CUDA
-	- MPI (needs gcc and openmpi loaded)
-	- Distributed
-	- IJulia (needs python loaded)
-	- Plots
-	- PyPlot (needs python loaded)
-	- Gadfly
-	- DataFrames
-	- DistributedArrays
-	- PlotlyJS
+    - BenchmarkTools
+    - CSV
+    - CUDA
+    - MPI (needs gcc and openmpi loaded)
+    - Distributed
+    - IJulia (needs python loaded)
+    - Plots
+    - PyPlot (needs python loaded)
+    - Gadfly
+    - DataFrames
+    - DistributedArrays
+    - PlotlyJS
 
 - In Julia you can check if the packages are their by: ``using <package-name>``
     - The first time Julia will precompile the package for you!
