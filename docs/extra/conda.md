@@ -4,7 +4,7 @@
 
     - Read [Conda user guide](http://docs.uppmax.uu.se/software/conda/)
         - skip [Working with Conda environments defined by files](http://docs.uppmax.uu.se/software/conda/#working-with-conda-environments-defined-by-files)
-    
+
     - ONLY for the interested: [Working with Conda environments defined by files](http://docs.uppmax.uu.se/software/conda/#working-with-conda-environments-defined-by-files)
         - On bianca you have to get the `environments.yml` to wharf first!
 
@@ -13,7 +13,7 @@
 !!! tip
 
     - You may want to have the same path for all conda environments in the present project
-    - ``echo "export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/" >> ~/.bashrc`` 
+    - ``echo "export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/" >> ~/.bashrc``
         - Example: ``echo "export CONDA_ENVS_PATH=/proj/sens2023598/bjornc/conda" >> ~/.bashrc``
 
 !!! warning
@@ -37,7 +37,7 @@
     - ``mkdir /proj/sens2023598/$USER``
 
     - ``mkdir /proj/sens2023598/$USER/conda``
-    
+
     - Set a CONDA_ENVS_PATH
         - Example: ``echo "export CONDA_ENVS_PATH=/proj/sens2023598/$USER/conda" >> ~/.bashrc``
 
@@ -45,7 +45,7 @@
     -   Use the ``conda`` module on Bianca and the ``conda-forge`` channel to create an environment with name `bianca-course` with `python 3.7` and `numpy 1.15`
 
     -   Use your a path for `CONDA_ENVS_PATH`
-        
+
         -   It may take a couple of minutes or so and do not forget to press `y` when asked for!
 
     -   Activate!
@@ -83,6 +83,6 @@
     -  Conda creates isolated environments not clashing with other installations of python and other versions of packages
 
     -   Conda environment requires that you install all packages needed by yourself, although automatically.
-    
+
     -   That is, you _cannot_ load the python module and use the packages therein inside your Conda environment.
 
