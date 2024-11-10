@@ -5,6 +5,10 @@
     - Practice using the UPPMAX documentation
     - I can schedule a job that has replicates
 
+???- question "Want to see this session as a video?"
+
+    Watch it on YouTube [here](https://youtu.be/frGUu8Hhr-g).
+
 ???- question "For teachers"
 
     Teaching goals are:
