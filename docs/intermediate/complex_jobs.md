@@ -137,13 +137,13 @@ A workflow manager|See [the section on workflow managers](#workflow-managers)
 You can tell Slurm to start a job after a job has finished with an OK:
 
 ```bash
-$ sbatch -A staff do_a.sh
+$ sbatch -A sens2023598 do_a.sh
 Submitted job with id: 5000000
 
-$ sbatch -A staff do_b.sh
+$ sbatch -A sens2023598 do_b.sh
 Submitted job with id: 5000001
 
-$ sbatch -A staff do_c.sh --dependency=afterok:5000000:5000001
+$ sbatch -A sens2023598 --dependency=afterok:5000000:5000001 do_c.sh
 Submitted job with id: 5000002
 ```
 
@@ -157,9 +157,9 @@ You can do the same in a script like this:
 
 ```bash
 #!/bin/bash
-job_id_a=$(sbatch -A staff do_a.sh | cut -d " " -f 4)
-job_id_b=$(sbatch -A staff do_b.sh | cut -d " " -f 4)
-sbatch -A staff --dependency=afterok:${job_id_a},${job_id_b} do_c.sh
+job_id_a=$(sbatch -A sens2023598 do_a.sh | cut -d " " -f 4)
+job_id_b=$(sbatch -A sens2023598 do_b.sh | cut -d " " -f 4)
+sbatch -A sens2023598 --dependency=afterok:${job_id_a},${job_id_b} do_c.sh
 ```
 
 This script uses two variables (`job_id_a` and `job_id_b`),
@@ -364,8 +364,8 @@ Here we do the procedure 'by hand':
 ???- question "Answer"
 
     ```bash
-    sbatch -A staff do_a.sh
-    sbatch -A staff do_b.sh
+    sbatch -A sens2023598 do_a.sh
+    sbatch -A sens2023598 do_b.sh
     ```
 
 - Submit `do_c.sh` to the job scheduler, with the dependency that
@@ -374,7 +374,7 @@ Here we do the procedure 'by hand':
 ???- question "Answer"
 
     ```bash
-    sbatch -A staff --dependency=afterok:51383809,51383810 do_c.sh
+    sbatch -A sens2023598 --dependency=afterok:51383809,51383810 do_c.sh
     ```
 
 ## (optional) Exercise 2: run a job with a dependency from a script
@@ -388,9 +388,9 @@ Here we do the procedure 'by hand':
 
     ```bash
     #!/bin/bash
-    job_id_a=$(sbatch -A staff do_a.sh | cut -d " " -f 4)
-    job_id_b=$(sbatch -A staff do_b.sh | cut -d " " -f 4)
-    sbatch -A staff --dependency=afterok:${job_id_a},${job_id_b} do_c.sh
+    job_id_a=$(sbatch -A sens2023598 do_a.sh | cut -d " " -f 4)
+    job_id_b=$(sbatch -A sens2023598 do_b.sh | cut -d " " -f 4)
+    sbatch -A sens2023598 --dependency=afterok:${job_id_a},${job_id_b} do_c.sh
     ```
 
 - Must the script `do_all.sh` be submitted using `sbatch` or can it be run
@@ -401,9 +401,11 @@ Here we do the procedure 'by hand':
     The script `do_all.sh` can be run directly, as all it does
     is schedule jobs. Scheduling jobs is a light operation.
 
-## (optional) Exercise 3: run a job with a dependency using Nextflow
+## (optional) Exercise 3: run a job with a dependency using GNU make
 
-## (optional) Exercise 4: run a job with a dependency using Snakemake
+Use the makefile as shown in this session and get it to run on Bianca.
 
-## (optional) Exercise 5: run a job with a dependency using GNU make
+## (optional) Exercise 4: run a job with a dependency using Nextflow
+
+Use the Nextflow script as shown in this session and get it to run on Bianca.
 
