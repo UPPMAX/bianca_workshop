@@ -168,6 +168,10 @@
 
 !!! admonition "Julia"
 
+    - At UPPMAX there is a central library with installed packages.
+    - This is good, especially when working on Bianca, since you then do not need to install via the ``wharf``.
+    - It is often better to install you own, see below, or ask the support to install centrally.
+
     - Check **julia versions**: ``ml avail julia``
     - Check **julia packages/modules**
 
@@ -185,11 +189,10 @@
     - Sync to ``wharf``
     - Move the files on Bianca to a place in the path used for packages of R, Python (pip) or julia
 
-!!! admonition "R"
+!!! admonition "R links"
 
-    - install on Rackham or other place
-    - sync to ``wharf``
-    - move the files on Bianca to local Bianca R package path
+    - Typical place to put R packages: ``~/R`` 
+    - Otherwise you may have to update your ``R_LIBS_USER="<path>"``
     
     **Links**
 
@@ -197,12 +200,10 @@
     - [From R course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/r/packagesR.html){:target="_blank"}
     - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/r/isolatedR.html){:target="_blank"}
 
-!!! admonition "pip"
+!!! admonition "pip links"
 
-    - install on Rackham
-    - sync to ``wharf``
-    - move the files on Bianca to correct place
-    - you may have to update ``$PYTHONPATH``
+    - Typical place to put python packages: ``~/.local/lib/python<version>/site-packages/`` 
+    - Otherwise you may have to update ``PYTHONPATH="<path>"``
 
     **Links**
 
@@ -227,15 +228,8 @@
 
 !!! admonition "Julia"
 
-    - At UPPMAX there is a central library with installed packages.
-    - This is good, especially when working on Bianca, since you then do not need to install via the ``wharf``.
-    - It is often better to install you own, see below, or ask the support to install centrally.
-    
-    **Installation principle**
-
-    - install on Rackham
-    - sync to ``wharf``
-    - move the files on Bianca
+    - Typical place to put julia packages: ``~/.julia/packages`` 
+    - Otherwise you may have to update ``export JULIA_LOAD_PATH="path1:path2:..."``
 
     **Links**
     
