@@ -96,5 +96,6 @@ This generates two PNG image files, one for each job. These are named `cluster-p
     1. Otherwise, try to "steal" nodes from project clusters, to get more unallocated compute nodes. This "stealing" is done in two steps:
         - "drain" a certain node, i.e. disallow more jobs to start on it;
         - remove the compute node from the project cluster, if no jobs are running on the node.
+
     1. Use all unallocated nodes to create new compute nodes. Jobs with a higher priority get compute nodes first.
 
