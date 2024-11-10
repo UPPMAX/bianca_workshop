@@ -86,7 +86,7 @@
         - Binaries for Linux on x86 and 64-bit should be able to be run directly as they are.
         - Install program following instructions from documentation of the software.
 
-### Build from source (C/c++ and Fortran)
+### Build from source (C/C++ and Fortran)
 
 - To build from source use a **compiler module**
 - We have several compiler versions from GNU and INTEL
@@ -98,7 +98,7 @@
  
 !!! info "More info"
 
-    - [Extra material: Build from source](..extra/source_install.md)
+    - [Extra material: Build from source](../extra/source_install.md)
     - [Singularity course](https://www.uu.se/centrum/uppmax/utbildning/kurser-och-workshops/basic-singularity){:target="_blank"}
     
 
