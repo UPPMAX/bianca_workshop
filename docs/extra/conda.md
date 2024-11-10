@@ -8,7 +8,7 @@
     - ONLY for the interested: [Working with Conda environments defined by files](http://docs.uppmax.uu.se/software/conda/#working-with-conda-environments-defined-by-files)
         - On bianca you have to get the `environments.yml` to wharf first!
 
-# Exercises
+## Exercises
 
 !!! tip
 
@@ -74,11 +74,8 @@
     - It should show numpy=1.15 among others and the python version 3.7.X for the conda env
 
 
-
-
-
 !!! abstract "keypoints"
-    
+
     - Conda is an installer of packages but also bigger toolkits
 
     - Conda on Bianca is easy since the repos in the most used channels are local.
