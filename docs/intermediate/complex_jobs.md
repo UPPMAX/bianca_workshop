@@ -194,7 +194,7 @@ it will start that process.
 
 ???- question "How does the make script of this pipeline looks like?"
 
-	Here is a file (called `Makefile`) that does that same workflow:
+    Here is a file (called `Makefile`) that does that same workflow:
 
 	```make
 	c.txt: a.txt b.txt
@@ -207,28 +207,28 @@ it will start that process.
 		./do_b.sh
 	```
 
-	The indentation must be done with tabs, not with spaces.
+    The indentation must be done with tabs, not with spaces.
 
-	In English, this script is read as:
+    In English, this script is read as:
 
-	- `c.txt` can be created when `a.txt` and `b.txt` are present,
-	  by doing `do_c.sh`
-	- `a.txt` can (always) be created by doing `do_a.sh`
-	- `b.txt` can (always) be created by doing `do_b.sh`
+    - `c.txt` can be created when `a.txt` and `b.txt` are present,
+      by doing `do_c.sh`
+    - `a.txt` can (always) be created by doing `do_a.sh`
+    - `b.txt` can (always) be created by doing `do_b.sh`
 
 <!-- markdownlint-enable MD010 -->
 
 ???- question "How to run this make script?"
 
-	Running this (assuming `make` is installed, which it usually is)
-	for a bash script:
+    Running this (assuming `make` is installed, which it usually is)
+    for a bash script:
 
-	```bash
-	#!/bin/bash
-	make -j
-	```
+    ```bash
+    #!/bin/bash
+    make -j
+    ```
 
-	You can submit this job to the job scheduler as usual.
+    You can submit this job to the job scheduler as usual.
 
 ### Snakemake
 
@@ -246,98 +246,98 @@ needs, it starts.
 
 ???- question "How does the Nextflow script of this pipeline looks like?"
 
-	Here is a Nextflow to achieve the same pipeline:
+    Here is a Nextflow to achieve the same pipeline:
 
-	```nextflow
-	#!/usr/bin/env nextflow
+    ```nextflow
+    #!/usr/bin/env nextflow
 
-	nextflow.enable.dsl = 2
+    nextflow.enable.dsl = 2
 
-	params.scripts_dir = "$projectDir"
+    params.scripts_dir = "$projectDir"
 
-	process DO_A {
-		publishDir params.scripts_dir, mode: 'copy', pattern: '*.txt'
-		
-		input:
-		path script
+    process DO_A {
+        publishDir params.scripts_dir, mode: 'copy', pattern: '*.txt'
+        
+        input:
+        path script
 
-		output:
-		path '*.txt', emit: a_output
+        output:
+        path '*.txt', emit: a_output
 
-		script:
-		"""
-		bash $script
-		"""
-	}
+        script:
+        """
+        bash $script
+        """
+    }
 
-	process DO_B {
-		publishDir params.scripts_dir, mode: 'copy', pattern: '*.txt'
-		
-		input:
-		path script
+    process DO_B {
+        publishDir params.scripts_dir, mode: 'copy', pattern: '*.txt'
+        
+        input:
+        path script
 
-		output:
-		path '*.txt', emit: b_output
+        output:
+        path '*.txt', emit: b_output
 
-		script:
-		"""
-		bash $script
-		"""
-	}
+        script:
+        """
+        bash $script
+        """
+    }
 
-	process DO_C {
-		publishDir params.scripts_dir, mode: 'copy', pattern: '*.txt'
+    process DO_C {
+        publishDir params.scripts_dir, mode: 'copy', pattern: '*.txt'
 
-		input:
-		path script
-		val a_done
-		val b_done
+        input:
+        path script
+        val a_done
+        val b_done
 
-		output:
-		path '*.txt', optional: true, emit: c_output
+        output:
+        path '*.txt', optional: true, emit: c_output
 
-		script:
-		"""
-		cd ${params.scripts_dir}
-		echo "Current directory: \$(pwd)"
-		echo "Contents of current directory:"
-		ls -la *.txt
-		echo "Executing: bash $script"
-		bash $script
-		echo "After execution, contents of current directory:"
-		ls -la *.txt
-		
-		# Copy any new .txt files back to the work directory
-		find . -type f -name "*.txt" -newer $script -exec cp {} . \\;
-		"""
-	}
+        script:
+        """
+        cd ${params.scripts_dir}
+        echo "Current directory: \$(pwd)"
+        echo "Contents of current directory:"
+        ls -la *.txt
+        echo "Executing: bash $script"
+        bash $script
+        echo "After execution, contents of current directory:"
+        ls -la *.txt
+        
+        # Copy any new .txt files back to the work directory
+        find . -type f -name "*.txt" -newer $script -exec cp {} . \\;
+        """
+    }
 
-	workflow {
-		do_a_script = file("${params.scripts_dir}/do_a.sh")
-		do_b_script = file("${params.scripts_dir}/do_b.sh")
-		do_c_script = file("${params.scripts_dir}/do_c.sh")
+    workflow {
+        do_a_script = file("${params.scripts_dir}/do_a.sh")
+        do_b_script = file("${params.scripts_dir}/do_b.sh")
+        do_c_script = file("${params.scripts_dir}/do_c.sh")
 
-		a_result = DO_A(do_a_script)
-		b_result = DO_B(do_b_script)
-		DO_C(do_c_script, a_result.a_output, b_result.b_output)
-	}
-	```
+        a_result = DO_A(do_a_script)
+        b_result = DO_B(do_b_script)
+        DO_C(do_c_script, a_result.a_output, b_result.b_output)
+    }
+    ```
 
-	This Nextflow script is complex mostly because of
-	the architecture of the workflow and can be made more elegant
-	when following a workflow suitable for Nextflow.
+    This Nextflow script is complex mostly because of
+    the architecture of the workflow and can be made more elegant
+    when following a workflow suitable for Nextflow.
 
-	The script is created using [Seqera's Ask AI](https://seqera.io/ask-ai/)
-	and took 40 minutes of dialogue.
+    The script is created using [Seqera's Ask AI](https://seqera.io/ask-ai/)
+    and took 40 minutes of dialogue.
 
 ???- question "How to start that pipeline?"
 
-	To run the pipeline (and when Nextflow is installed), do:
+    To run the pipeline (and when Nextflow is installed), do:
 
-	```bash
-	#!/bin/bash
-	nextflow run main.nf --scripts_dir $PWD
-	```
+    ```bash
+    #!/bin/bash
+    nextflow run main.nf --scripts_dir $PWD
+    ```
 
 Nextflow is powerful and can submit jobs for you with/without using Slurm
 (it can detect if it is on an HPC cluster!)
