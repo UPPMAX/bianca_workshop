@@ -11,6 +11,9 @@
     - install on Rackham
     - sync to ``wharf``
     - move the files on Bianca
+    - Typical place to put julia packages: ``~/.julia/packages``
+    - Otherwise you may have to update ``export JULIA_LOAD_PATH="path1:path2:..."``
+
 
 ## UPPMAX Central library
 
