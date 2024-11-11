@@ -12,6 +12,8 @@
     - sync to ``wharf``
     - move the files on Bianca to correct place
     - you may have to update ``$PYTHONPATH``
+    - Typical place to put python packages: ``~/.local/lib/python<version>/site-packages/``
+    - Otherwise you may have to update ``PYTHONPATH="<path>"``
 
 ## Check for packages
 
