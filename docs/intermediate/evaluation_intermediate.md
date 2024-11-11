@@ -1,6 +1,7 @@
 # Evaluation
 
-The evaluation form can be found `TODO`.
+The evaluation form can be found [here](https://docs.google.com/forms/d/e/1FAIpQLSeY3ma7YBGuHTFns8APeHh5K1BXTXBS9vtYpecTveskaf_UVw/viewform?usp=sf_link).
+
 It takes into account that one may need to leave early too.
 
 ???- question "What are the evaluation questions?"
