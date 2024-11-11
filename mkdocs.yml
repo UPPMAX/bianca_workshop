@@ -29,7 +29,6 @@ nav:
     - Replicate jobs: intermediate/replicate_jobs.md
     - Software and package installation: intermediate/install.md
     - IDEs: intermediate/ides.md
-    - Intro to NAISS-SENS and sensitive data: sens_project_short.md
     - Summary: intermediate/summary.md
     - Evaluation: intermediate/evaluation_intermediate.md
   - Extra material:
