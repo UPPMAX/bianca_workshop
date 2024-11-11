@@ -4,7 +4,7 @@
 !!! info "Learning Objectives"
 
     Learners
-    
+
     - understand _principles_ how to install software and packages yourself
     - can install Python packages using conda
     - can install Python packages using pip
@@ -106,29 +106,29 @@
     - operative system
     - dependencies (libraries and other programs) with correct versions
 
-<figure markdown="span">
-  ![Containerization](img/Containerization_nextlabs.png)
-  <figcaption>Containerization_nextlab from [Nextlabs](https://www.nextlabs.com/what-is-containerization/)</figcaption>
-</figure>
+
+![Containerization](img/Containerization_nextlabs.png)
+
+> From [Nextlabs](https://www.nextlabs.com/what-is-containerization/)
 
 !!! info
 
     - 2(3) types
-    
+
         1. Singularity/Apptainer perfect for HPC systems
         2. Docker that does not work on HPC-systems
-        
+
             - But docker images can be used by Singularity and Apptainer
-            
+
     - Everything is included
     - Workflow:
-    
+
         - Download on Rackham or local computer
         - Transfer to Bianca
         - Move to from wharf to any place in your working folders on Bianca
-        
+
     - Draw-backs
-    
+
         - you install also things that may be already installed
         - therefore, probably more disk space is needed
 
@@ -136,7 +136,7 @@
 
     - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/){:target="_blank"}
     - [Singularity course](https://www.uu.se/centrum/uppmax/utbildning/kurser-och-workshops/basic-singularity){:target="_blank"}
-    
+
 ## Packages and libraries to scripting programs
 
 - Python, R and Julia all have some **centrally installed packages** that are available from the modules.
@@ -191,9 +191,9 @@
 
 !!! admonition "R links"
 
-    - Typical place to put R packages: ``~/R`` 
+    - Typical place to put R packages: ``~/R``
     - Otherwise you may have to update your ``R_LIBS_USER="<path>"``
-    
+
     **Links**
 
     - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
@@ -202,7 +202,7 @@
 
 !!! admonition "pip links"
 
-    - Typical place to put python packages: ``~/.local/lib/python<version>/site-packages/`` 
+    - Typical place to put python packages: ``~/.local/lib/python<version>/site-packages/``
     - Otherwise you may have to update ``PYTHONPATH="<path>"``
 
     **Links**
@@ -228,11 +228,11 @@
 
 !!! admonition "Julia"
 
-    - Typical place to put julia packages: ``~/.julia/packages`` 
+    - Typical place to put julia packages: ``~/.julia/packages``
     - Otherwise you may have to update ``export JULIA_LOAD_PATH="path1:path2:..."``
 
-    **Links**
-    
+    Links:
+
     - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
     - [UPPMAX julia user guide: Pip](http://docs.uppmax.uu.se/software/julia/){:target="_blank"}
     - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/julia/isolatedJulia.html){:target="_blank"}
