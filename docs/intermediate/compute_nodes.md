@@ -136,22 +136,23 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
     - ``-n``    number of cores
     - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
     - ``-p``    partition
-      - ``core`` is default and works for jobs narrower than 16 cores
-      - ``node`` can be used if you need the whole node and its memory
-        - must be used when allocating the fat nodes, see below
+        - ``core`` is default and works for jobs narrower than 16 cores
+        - ``node`` can be used if you need the whole node and its memory
+            - must be used when allocating the fat nodes, see below
     - ``-C mem256GB`` allocate a fat node with 256 GB RAM
     - ``-C mem512GB`` allocate a fat node with 512 GB RAM
-    - ``-C gpu --gres=gpu:1`` allocate one GPU (also define number of CPU cores with ``-n 3 `` or similar)
-    - ``-C gpu --gres=gpu:2`` allocate two GPU:s (also define number of CPU cores with ``-n 3 `` or similar)
+    - ``-C gpu --gres=gpu:1`` allocate one GPU (also define number of CPU cores with `-n 3` or similar)
+    - ``-C gpu --gres=gpu:2`` allocate two GPU:s (also define number of CPU cores with `-n 3` or similar)
 
 
 ## Interactive jobs
+
 - Most work is most effective as submitted jobs, but e.g. development needs responsiveness
 - Interactive jobs are high-priority but limited in `-n` and `-t`
 - Quickly give you a job and logs you in to the compute node
 - Require same Slurm parameters as other jobs
 - Log in to compute node
-    -  `$ interactive ...`
+    - `$ interactive ...`
 - Logout with `<Ctrl>-D` or `logout`
 
 ### Try interactive and run RStudio
@@ -210,7 +211,7 @@ We recommend using at least two cores for RStudio, and to get those resources, y
 - `#` will be ignored by `bash` and can run as an ordinary bash script
 - if running the script with the command `sbatch <script>` the `#SBATCH` lines will be interpreted as slurm flags
 
-#### A simple job script template
+### A simple job script template
 
 ```bash
 #!/bin/bash
@@ -269,9 +270,9 @@ echo Hello world!
     - Intel Xeon E5-2630 v3 Huawei XH620 V3 nodes with 128, 256 or 512 GB memory
     - GPU nodes with two NVIDIA A100 40GB GPUs each.
 
-    **Cores per node:** 16, or on some 128
+    Cores per node: 16, or on some 128
 
-    **Details about the compute nodes**
+    Details about the compute nodes:
 
     - Thin nodes
         - 194 compute nodes with 16 cores and a 4TB mechanical drive or 1TB SSD as SCRATCH.
@@ -284,7 +285,7 @@ echo Hello world!
     - Network
         - Dual 10 Gigabit Ethernet for all nodes
 
-    **Storage**
+    Storage:
 
     - Local disk (scratch): 4 TB
     - Home storage: 32 GB at Castor
