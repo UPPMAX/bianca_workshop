@@ -18,6 +18,12 @@ We have mirrored all major non-proprietary Conda repositories (not ``main``, ``a
     - nvidia
     - pytorch
 
+!!! warning
+
+    - Good to change ``CONDA_ENVS_PATH`` to project folder, because of many small files.
+    - Example: ``CONDA_ENVS_PATH=/proj/sens2023598/bjornc/conda``
+
+
 
 ???+ question "Read [Conda user guide](http://docs.uppmax.uu.se/software/conda/)"
 
