@@ -94,6 +94,7 @@ This generates two PNG image files, one for each job. These are named `cluster-p
     1. Reads status reports from all compute nodes, about all their jobs, all their compute nodes, and all their active users.
     1. Are there unallocated compute nodes for all queued jobs?
     1. Otherwise, try to "steal" nodes from project clusters, to get more unallocated compute nodes. This "stealing" is done in two steps:
+
         - "drain" a certain node, i.e. disallow more jobs to start on it;
         - remove the compute node from the project cluster, if no jobs are running on the node.
 
