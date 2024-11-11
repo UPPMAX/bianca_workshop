@@ -368,16 +368,13 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
     - Two alternatives
         - ``sbatch <jobscript with all #SBATCH options>``
         - `sbatch <options that will be prioritized over the options within the jobs script> <jobscript>`
-           - can for instance be used if you just want to test with, for instance, fewer cores and shorter time
-           - Example: `sbatch -t 60:00 -p devcore -n 2 job.sh`
+            - can for instance be used if you just want to test with, for instance, fewer cores and shorter time
+            - Example: `sbatch -t 60:00 -p devcore -n 2 job.sh`
 
     Interactive:
 
     - ``interactive -A <project> <other options if not using default settings>``
     - load your modules when session starts
-
-
-
 
 ## Extra exercise (if time allows)
 
@@ -387,11 +384,12 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
         - You can copy the my_bio_workflow.sh file in ``/proj/sens2023598/workshop/slurm`` to your home folder and make the necessary changes.
 
     ??? tip "Answer"
+
         - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
         - alternatively copy the ``/proj/sens2023598/workshop/slurm/my_bio_workflow.sh`` file and modify it
           ``cd ~``
           ``cp /proj/sens2023598/workshop/slurm/my_bio_workflow.sh .``
-          - edit ``my_bio_workflow.sh`` and add the SBATCH commands
+            - edit ``my_bio_workflow.sh`` and add the SBATCH commands
 
         ```bash
         #!/bin/bash
@@ -436,11 +434,13 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
         ```
 
         - make the job script executable
+
         ```bash
         $ chmod a+x my_bio_workflow.sh
         ```
 
         - submit the job
+
         ```bash
         $ sbatch my_bio_workflow.sh
         ```
