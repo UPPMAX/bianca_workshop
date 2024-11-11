@@ -35,6 +35,7 @@ nav:
   - Extra material:
     - Overview: intermediate/overview.md
     - extra/slurm.md
+    - extra/source_install.md
     - extra/conda.md
     - extra/pip.md
     - extra/rpackages.md
