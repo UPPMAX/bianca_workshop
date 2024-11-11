@@ -109,7 +109,7 @@ If you have not uploaded anything to your ``wharf``, this will be empty. It migh
 - **Alt1: If you would like all your locally installed packages:**
 
 ``` bash
-sftp> put -r ~/.local/lib/python<version>/site-packages/
+sftp> put -r .local/lib/python<version>/site-packages/
 ```
 
 - **Alt 2: Just transfer the latest installed python package(s)**
@@ -117,13 +117,13 @@ sftp> put -r ~/.local/lib/python<version>/site-packages/
 - Check what was installed. It may have been several dependency packages as well. Look at the times!
 
 ``` bash
-sftp>  lls -lrt ~/.local/lib/python<version>/site-packages/
+sftp>  lls -lrt .local/lib/python<version>/site-packages/
 ```
 
 ``` bash
-sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 1>
+sftp> put -r .local/lib/python<version>/site-packages/<package name 1>
 # and if several packages
-sftp> put -r ~/.local/lib/python<version>/site-packages/<package name 2>
+sftp> put -r .local/lib/python<version>/site-packages/<package name 2>
 # and so on...
 ```
 
