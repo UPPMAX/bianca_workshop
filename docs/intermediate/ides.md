@@ -6,7 +6,7 @@
 
 !!! info "Objectives"
 
-- Find information in the UPPMAX documentation about IDEs on Bianca
+    - Find information in the UPPMAX documentation about IDEs on Bianca
     - Give a reasonable definition of what an IDE is
     - Remember that RStudio, Jupyter, VSCodium are IDEs that can be run on Bianca
     - Can run the voted-for IDE on Bianca
