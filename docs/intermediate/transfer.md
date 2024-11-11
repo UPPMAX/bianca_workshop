@@ -100,10 +100,13 @@
 
 ## Why?
 
-Most users need to transfer files to/from Bianca,
-for example, their scripts to analyse their (sensitive) data.
+`rsync` allows you to transfer files from anywhere to anywhere
+securely, unlike, for example, FileZilla.
 
-In this session, we will transfer (non-sensitive) files to/from Bianca.
+In this session, we will transfer (non-sensitive) files to/from Bianca
+to/from you local computer, as this is more convenient for teaching.
+Imagine, however, that you transfer from Bianca to/from another
+sensitive data HPC center.
 
 ## Terms
 
