@@ -201,7 +201,7 @@
     - [From R course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/r/packagesR.html){:target="_blank"}
     - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/r/isolatedR.html){:target="_blank"}
 
-!!! admonition "pip links"
+!!! admonition "pip (PyPI)"
 
     - Typical place to put python packages: ``~/.local/lib/python<version>/site-packages/``
     - Otherwise you may have to update ``PYTHONPATH="<path>"``
