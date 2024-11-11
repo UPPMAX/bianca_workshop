@@ -221,7 +221,7 @@
 
     - We have mirrored the non-proprietary Conda repositories (not ``main``, ``anaconda`` and ``r``) directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
 
-    **Links**
+    Links:
 
     - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
     - [Conda user guide](http://docs.uppmax.uu.se/software/conda/)

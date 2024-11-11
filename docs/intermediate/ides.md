@@ -110,7 +110,7 @@ It may look like below, where there is a preference for Jupyter:
     $ cd ~   # just 'cd' will work as well
     $ ln -s /proj/sens2023598/ proj
     ```
-     
+
     - Start jupyter from your $HOME folder
     - Try to run the script `Test-01.ipynb` located in /proj/workshop/Jupyter-demo/Test-01.ipynb
     - You can browse in jupyter to a test notebook in /proj/workshop/Jupyter-demo/Test-01.ipynb
@@ -146,7 +146,7 @@ It may look like below, where there is a preference for Jupyter:
 
     Using an IDE on Bianca is cumbersome and
     there are superior ways to develop code on Bianca,
-    as -for example- taught in the 
+    as -for example- taught in the
     [UPPMAX 'Programming Formalisms' course](https://github.com/UPPMAX/programming_formalisms).
 
 ???- question "Is it OK to run IDEs on a login node? Why yes/no?"
@@ -163,9 +163,9 @@ It may look like below, where there is a preference for Jupyter:
 
     An interactive session means that you use a calculation node with low
     efficiency: only irregularly you will use such a node to its full
-    capacity. 
+    capacity.
     However, the number of core hours are registered as if the node is used
-    at full capacity, as it is *reserved* to be used at that capacity.
+    at full capacity, as it is _reserved_ to be used at that capacity.
 
 ???- question "How to find out if you are on a login or interactive node?"
 
