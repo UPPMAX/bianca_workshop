@@ -6,9 +6,11 @@
     Learners
 
     - understand _principles_ how to install software and packages yourself
-    - can install Python packages using conda
-    - can install Python packages using pip
-    - can install R packages
+    - can install packages of one or several types
+        - Python packages using conda
+        - Python packages using pip
+        - R packages
+        - Julia packages
     - understand what containers are
     - can install software using a container
     - can build software from source
