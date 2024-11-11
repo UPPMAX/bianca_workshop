@@ -1,6 +1,5 @@
 # Software and package installation on Bianca
 
-
 !!! info "Learning Objectives"
 
     Learners
@@ -196,7 +195,7 @@
     - Typical place to put R packages: ``~/R``
     - Otherwise you may have to update your ``R_LIBS_USER="<path>"``
 
-    **Links**
+    Links:
 
     - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
     - [From R course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/r/packagesR.html){:target="_blank"}
@@ -207,7 +206,7 @@
     - Typical place to put python packages: ``~/.local/lib/python<version>/site-packages/``
     - Otherwise you may have to update ``PYTHONPATH="<path>"``
 
-    **Links**
+    Links:
 
     - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/extra/pip/){:target="_blank"}
     - [UPPMAX Python user guide: Pip](http://docs.uppmax.uu.se/software/python_install_packages/#pip){:target="_blank"}
