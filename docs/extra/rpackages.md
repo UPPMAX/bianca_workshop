@@ -25,6 +25,8 @@
     - install on Rackham or other place
     - sync to ``wharf``
     - move the files on Bianca to local Bianca R package path
+    - Typical place to put R packages: ``~/R``
+    - Otherwise you may have to update your ``R_LIBS_USER="<path>"``
 
 ## First check if package is already in R_packages/x.y.z
 
