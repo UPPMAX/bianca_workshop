@@ -444,6 +444,7 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
         ```bash
         $ sbatch my_bio_workflow.sh
         ```
+
 ## Links
 
 - [Slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
@@ -453,6 +454,7 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
 
 
 !!! abstract "Keypoints"
+
     - You are always in the login node unless you:
         - start an interactive session to do development or hands-on work
         - start a batch job to run jobs not needing any manual input

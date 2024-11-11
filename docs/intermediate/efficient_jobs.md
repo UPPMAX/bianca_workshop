@@ -69,6 +69,7 @@ Running efficient jobs allows you to run more jobs that start running faster.
 #### Exercise 1.1: `jobstats plot 1`
 
 See `jobstats plot 1` below and answer these questions:
+
 - How much cores should this user book?
 - Why?
 
@@ -87,6 +88,7 @@ See `jobstats plot 1` below and answer these questions:
 #### Exercise 1.2: `jobstats plot 2`
 
 See `jobstats plot 2` below and answer these questions:
+
 - Did the job finish successfully?
 - How much cores should this user book?
 - Why?
@@ -120,18 +122,19 @@ See `jobstats plot 2` below and answer these questions:
     there is enough memory available.
 
     The user may benefit from more CPUs, as the program may be
-    CPU limited. 
+    CPU limited.
 
     It may be that the program used is designed to use
     20 CPUs maximally, hence scheduling 20 cores is perfect!
 
     It may be that using 20 cores is a strategy of the user:
     using multiple cores always brings computational overhead
-    and hence wasted CPU resources. 
+    and hence wasted CPU resources.
 
 #### Exercise 1.4: `jobstats plot 4`
 
 See `jobstats plot 4` below and answer these questions:
+
 - How much cores should this user book?
 - Why?
 
@@ -149,7 +152,7 @@ See `jobstats plot 4` below and answer these questions:
 ### Exercise 2: creating a `jobstats` plot
 
 We are going to create a `jobstats` plot. For that, we need a job
-to plot. Here we first look for a job, after which we plot it. 
+to plot. Here we first look for a job, after which we plot it.
 
 - Scan [the UPPMAX `finishedjobinfo` documentation](https://docs.uppmax.uu.se/software/finishedjobinfo/)
 - Log in to **Rackham**.
