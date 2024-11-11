@@ -190,7 +190,7 @@
     - Sync to ``wharf``
     - Move the files on Bianca to a place in the path used for packages of R, Python (pip) or julia
 
-!!! admonition "R links"
+!!! admonition "R"
 
     - Typical place to put R packages: ``~/R``
     - Otherwise you may have to update your ``R_LIBS_USER="<path>"``
@@ -221,6 +221,8 @@
 !!! admonition "Conda"
 
     - We have mirrored the non-proprietary Conda repositories (not ``main``, ``anaconda`` and ``r``) directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
+    - Good to change ``CONDA_ENVS_PATH`` to project folder, because of many small files.
+    - Example: ``CONDA_ENVS_PATH=/proj/sens2023598/bjornc/conda``
 
     Links:
 
