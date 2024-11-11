@@ -7,7 +7,7 @@ The goals of the prevaluation are:
 - For the learners: to get an introduction of what will be taught
 - For the teachers: to measure how much knowledge is gained
 
-The prevaluation form can be found `TODO`.
+The prevaluation form can be found [here](https://docs.google.com/forms/d/e/1FAIpQLScTfXNk0IUjQ4x9oumoE7kE3vFa5Ay_F5ttsVfqfWtAN50NDg/viewform?usp=sf_link).
 
 ???- question "What do you mean with 'to measure how much knowledge is gained'?"
 
