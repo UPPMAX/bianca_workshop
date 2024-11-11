@@ -35,7 +35,7 @@
     - DistributedArrays
     - PlotlyJS
 
-- In Julia you can check if the packages are their by: ``using <package-name>``
+- In Julia you can check if the packages are there by: ``using <package-name>``
     - The first time Julia will precompile the package for you!
 - You may control the present "central library" by typing ``ml help julia/<version>`` in the BASH shell.
     - There you will also find which python, gcc and openmpi version that are compatible.
