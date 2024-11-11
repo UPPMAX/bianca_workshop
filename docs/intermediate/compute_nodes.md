@@ -36,14 +36,14 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
   Node1 -- interactive --> SubGraph2Flow
   Node1 -- sbatch --> SubGraph2Flow
   subgraph "Snowy"
-  SubGraph2Flow(calculation nodes) 
+  SubGraph2Flow(calculation nodes)
         end
 
         thinlinc -- usr-sensXXX + 2FA + VPN ----> SubGraph1Flow
         terminal/thinlinc -- usr --> Node1
         terminal -- usr-sensXXX + 2FA + VPN ----> SubGraph1Flow
         Node1 -- usr-sensXXX + 2FA + no VPN ----> SubGraph1Flow
-        
+
         subgraph "Bianca"
         SubGraph1Flow(Bianca login) -- usr+passwd --> private(private cluster)
         private -- interactive --> calcB(calculation nodes)
@@ -60,8 +60,7 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
 
 - Problem: _1000 users, 300 nodes, 5000 cores_
 - We need a queue:
-
-  - [Slurm](https://slurm.schedmd.com/) is a job scheduler
+    - [Slurm](https://slurm.schedmd.com/) is a job scheduler
 
 ### Choices
 
@@ -76,7 +75,7 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
 ### Jobs
 
 - Job = what happens during booked time
-- Described in a script file or 
+- Described in a script file or
 - Described in the command-line (priority over script)
 - The definitions of a job:
     - Slurm parameters (**flags**)
@@ -105,23 +104,21 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
 
 ![Image](./img/queue1.png)
 
-- *x-axis: cores, one thread per core*
-- *y-axis: time*
-<br/><br/>
+- x-axis: cores, one thread per core
+- y-axis: time
 
-- Easiest to schedule *single-threaded*, short jobs
+- Easiest to schedule _single-threaded_, short jobs
 
 ![Image](./img/queue2.png)
 ![Image](./img/queue3.png)
-<br>
 
-- *Left: 4 one-core jobs can run immediately (or a 4-core wide job).*
+- Left: 4 one-core jobs can run immediately (or a 4-core wide job).
 
-    - *The jobs are too long to fit in core number 9-13.*
+    - The jobs are too long to fit in core number 9-13.
 
-- *Right: A 5-core job has to wait.*
+- Right: A 5-core job has to wait.
 
-    - *Too long to fit in cores 9-13 and too wide to fit in the last cores.*
+    - Too long to fit in cores 9-13 and too wide to fit in the last cores.
 
 ### To think about
 
@@ -131,7 +128,7 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
     - 1 hour walltime = 16 core hours = expensive
         - Waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
 - Default value: core
-  
+
 !!! Slurm Cheat Sheet
 
     - ``-A``    project number
@@ -171,23 +168,23 @@ We recommend using at least two cores for RStudio, and to get those resources, y
     - find your session, ssh to it, like:
         ssh sens2023598-b9
 
-- ``$ interactive -A sens2023598 -p core -n 2 -t 60:00`` 
+- ``$ interactive -A sens2023598 -p core -n 2 -t 60:00``
 
 
 - Once the interactive job has begun you need to load needed modules, even if you had loaded them before in the login node
 - You can check which node you are on?
 
     `$ hostname`
-  
+
 - If the name before ``.bianca.uppmax.uu.se`` is ending with bXX you are on a compute node!
 - The login node has ``sens2023598-bianca``
 - You can also probably see this information in your prompt, like:
-    ``[bjornc@sens2023598-b9 ~]$`` 
-  
-- Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there. 
+    ``[bjornc@sens2023598-b9 ~]$``
+
+- Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there.
 
     `$ ml R_packages/4.2.1`
-  
+
     `$ ml RStudio/2022.07.1-554`
 
 
@@ -197,17 +194,17 @@ We recommend using at least two cores for RStudio, and to get those resources, y
 
 - Slow to start?
 - Depends on:
-    - number of packages 
+    - number of packages
     - if you save a lot of data in your RStudio workspace, to be read during start up.
 
 - **Quit RStudio**!
 - **Log out** from interactive session with `<Ctrl>-D` or `logout`
- 
- 
+
+
 ## Job scripts (batch)
 
-- Write a bash script called ``jobscript.sh`` 
-    - You can be in your `~` folder    
+- Write a bash script called ``jobscript.sh``
+    - You can be in your `~` folder
 - Make first line be  `#!/bin/bash` in the top line
 - Add also before the rest of the commands the the keywords `#SBATCH`
 - `#` will be ignored by `bash` and can run as an ordinary bash script
@@ -220,7 +217,7 @@ We recommend using at least two cores for RStudio, and to get those resources, y
 
 #SBATCH -A sens2023598  # Project ID
 
-#SBATCH -p devcore  # Asking for cores (for test jobs and as opposed to multiple nodes) 
+#SBATCH -p devcore  # Asking for cores (for test jobs and as opposed to multiple nodes)
 
 #SBATCH -n 1  # Number of cores
 
@@ -240,7 +237,7 @@ module list
 
 # do something
 
-echo Hello world!  
+echo Hello world!
 
 ```
 
@@ -248,19 +245,19 @@ echo Hello world!
 
     ``$ sbatch jobscript.sh``
 
-  
+
 !!! note "Node types"
 
-    - Bianca has three node types: thin, fat and gpu. 
-        - thin being the typical cluster node with 128 GB memory 
-        - fat nodes having 256 GB or 512 GB of memory. 
-            - You may specify a node with more RAM, by adding the words `-C fat` to your job submission line and thus making sure that you will get at least 256 GB of RAM on each node in your job. 
-            - If you absolutely must have more than 256 GB of RAM then you can request to get 512 GB of RAM specifically by adding the words `-C mem512GB` to your job submission line. 
+    - Bianca has three node types: thin, fat and gpu.
+        - thin being the typical cluster node with 128 GB memory
+        - fat nodes having 256 GB or 512 GB of memory.
+            - You may specify a node with more RAM, by adding the words `-C fat` to your job submission line and thus making sure that you will get at least 256 GB of RAM on each node in your job.
+            - If you absolutely must have more than 256 GB of RAM then you can request to get 512 GB of RAM specifically by adding the words `-C mem512GB` to your job submission line.
             - Please note that requesting 512 GB can not be combined with requesting GPUs.
-        - You may also add `-C gpu` to your submission line to request a GPU node with two NVIDIA A100 40 GB. 
+        - You may also add `-C gpu` to your submission line to request a GPU node with two NVIDIA A100 40 GB.
             - Please note that all GPU nodes have 256 GB of RAM, and are thus "fat" as well. All compute nodes in Bianca has 16 CPU cores in total.
     - Please note that there are only 5 nodes with 256 GB of RAM, 2 nodes with 512 GB of RAM and 4 nodes with 2xA100 GPUs. The wait times for these node types are expected to be somewhat longer.
-   
+
 !!! note "Some Limits"
 
     - There is a job wall time limit of ten days (**240 hours**).
@@ -289,7 +286,7 @@ echo Hello world!
 
     **Storage**
 
-    - Local disk (scratch): 4 TB 
+    - Local disk (scratch): 4 TB
     - Home storage: 32 GB at Castor
     - Project Storage: Castor
 
@@ -319,8 +316,8 @@ echo Hello world!
     - Generate the images:
         - `$ jobstats -p ID1 ID2 ID3`
     - Watch the images:
-        - `$ eog <figure-files.png>`  
-    
+        - `$ eog <figure-files.png>`
+
 
 - The figures
 
@@ -330,7 +327,7 @@ echo Hello world!
 
 ### Example demo
 
-Examine the jobs run by user `douglas`. The relevant job numbers are the jobs with the highest jobid= numbers that have the names names `run_good.sh` and `run_poor.sh`. These should appear at the end of the output. 
+Examine the jobs run by user `douglas`. The relevant job numbers are the jobs with the highest jobid= numbers that have the names names `run_good.sh` and `run_poor.sh`. These should appear at the end of the output.
 
 - You can be in your ``~`` dir!
 - Some background info may be found in the [extra material](https://uppmax.github.io/bianca_workshop/extra/slurm/){:target="_blank"}.
@@ -339,7 +336,7 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
 
 - We find these are job numbers 18 for `run_good.sh` and 19 for `run_poor.sh`. Generate jobstats plots for each job.
 
-    ``jobstats -p 18 19`` 
+    ``jobstats -p 18 19``
 
 - This generates two PNG image files, one for each job. These are named `cluster-project-user-jobid.png`. Examine them both using an image viewer.
 
@@ -373,7 +370,7 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
          - can for instance be used if you just want to test with, for instance, fewer cores and shorter time
          - Example: ``sbatch -t  60:00 -p devcore -n 2 job.sh``
     ** Interactive
-    - ``interactive -A <project> <other options if not using default settings>`` 
+    - ``interactive -A <project> <other options if not using default settings>``
     - load your modules when session starts
 
 
@@ -385,14 +382,14 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
 
     - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshop/modules/#bigger-exercises) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
         - You can copy the my_bio_workflow.sh file in ``/proj/sens2023598/workshop/slurm`` to your home folder and make the necessary changes.
-    
+
     ??? tip "Answer"
         - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
         - alternatively copy the ``/proj/sens2023598/workshop/slurm/my_bio_workflow.sh`` file and modify it
-          ``cd ~`` 
+          ``cd ~``
           ``cp /proj/sens2023598/workshop/slurm/my_bio_workflow.sh .``
           - edit ``my_bio_workflow.sh`` and add the SBATCH commands
-        
+
         ```bash
         #!/bin/bash
         #SBATCH -A sens2023598
@@ -439,7 +436,7 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
         ```bash
         $ chmod a+x my_bio_workflow.sh
         ```
-        
+
         - submit the job
         ```bash
         $ sbatch my_bio_workflow.sh
@@ -448,8 +445,8 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
 
 - [Slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
 - [Slurm user guide](http://docs.uppmax.uu.se/cluster_guides/slurm/){:target="_blank"}
-- [Discovering job resource usage with `jobstats`](http://docs.uppmax.uu.se/software/jobstats/){:target="_blank"} 
-- [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"} 
+- [Discovering job resource usage with `jobstats`](http://docs.uppmax.uu.se/software/jobstats/){:target="_blank"}
+- [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"}
 
 
 !!! abstract "Keypoints"
@@ -459,4 +456,4 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
     - Slurm is a job scheduler
         - add flags to describe your job.
     - There is a job wall time limit of ten days (240 hours).
- 
+
