@@ -1,6 +1,7 @@
 # Compute nodes
 
 !!! info "Objectives"
+
     - This is a short introduction in how to reach the calculation/compute/worker nodes
     - We will cover
         - queue system
@@ -23,10 +24,10 @@ Bianca contains hundreds of nodes, each of which is isolated from each other and
 
 As Bianca is a shared resources, there are rules to use it together in fair way:
 
- * The login node is only for easy things, such as moving files,
-   starting jobs or starting an interactive session
- * The worker nodes are for harder things, such as
-   running a script or running an interactive session.
+- The login node is only for easy things, such as moving files,
+  starting jobs or starting an interactive session
+- The worker nodes are for harder things, such as
+  running a script or running an interactive session.
 
 ```mermaid
 
@@ -56,12 +57,14 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
 ```
 
 ## Slurm, sbatch, the job queue
+
 - Problem: _1000 users, 300 nodes, 5000 cores_
 - We need a queue:
 
   - [Slurm](https://slurm.schedmd.com/) is a job scheduler
 
 ### Choices
+
 - Work interactively with your data or development
     - Run an **Interactive session**
     - ``$ interactive <flags> ...``
@@ -71,6 +74,7 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
     - `$ sbatch <job script>`
 
 ### Jobs
+
 - Job = what happens during booked time
 - Described in a script file or 
 - Described in the command-line (priority over script)
@@ -83,6 +87,7 @@ As Bianca is a shared resources, there are rules to use it together in fair way:
 - ... and more
 
 ### Slurm parameters
+
 - 1 mandatory setting for jobs:
     - Which compute project? (`-A`)
 - 3 settings you really should set:
