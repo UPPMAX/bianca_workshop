@@ -95,12 +95,10 @@
     - Usually it is not a problem to build on Rackham and move to Bianca.
 - ``cmake`` is available as module
 
- 
 !!! info "More info"
 
     - [Extra material: Build from source](../extra/source_install.md)
     - [Singularity course](https://www.uu.se/centrum/uppmax/utbildning/kurser-och-workshops/basic-singularity){:target="_blank"}
-    
 
 ### Containers
 
@@ -116,15 +114,21 @@
 !!! info
 
     - 2(3) types
+    
         1. Singularity/Apptainer perfect for HPC systems
         2. Docker that does not work on HPC-systems
+        
             - But docker images can be used by Singularity and Apptainer
+            
     - Everything is included
     - Workflow:
+    
         - Download on Rackham or local computer
         - Transfer to Bianca
-        - Move to from wharf to any place in your working folders on Bianca 
+        - Move to from wharf to any place in your working folders on Bianca
+        
     - Draw-backs
+    
         - you install also things that may be already installed
         - therefore, probably more disk space is needed
 
@@ -139,17 +143,10 @@
 - R has a special module called ``R_packages``, and some Machine Learning python packages are included in the ``python_ml_packages`` module.
 - If not found there you can try to install those by yourself.
 
-!!! info
 
-    - "Install packages or not? Check it!"
+### Check packages
 
-## Check and install packages
-
-### R
-
-- On UPPMAX the module ``R_packages`` is an omnibus package library containing almost all packages in the CRAN and BioConductor Chances are good the R packages you need are already available once you load this module.  You can quickly check by loading it:
-
-!!! info "Check if available"
+!!! admonition "R"
 
     ``$ ml R_packages/4.3.1``
 
@@ -157,81 +154,85 @@
 
     ``library(glmnet)``
 
-**Is it not there? Then proceed!**
-
-!!! info "Installation principle"
-
-    - install on Rackham or other place
-    - sync to ``wharf``
-    - move the files on Bianca to local Bianca R package path
-
-!!! info "More info"
-
-    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
-    - [From R course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/r/packagesR.html){:target="_blank"}
-    - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/r/isolatedR.html){:target="_blank"}
-
-### Python and other
-
-!!! info "Check if available"
+!!! admonition "Python"
 
     - Check **python versions**: ``ml avail python``
     - Check **python packages/modules**
 
-        1. **help** output from: ``ml help python/3.9.5`` at UPPMAX
+        1. **help** output from: ``ml help python/3.12.7``
         2. In a loaded python
 
             - **Load** a python version, like: ``ml python/3.11.8``
             - from **Python shell** with the ``import`` command
             - from **BASH shell** with the ``pip list`` command
 
-**Is it not there? Then proceed!**
+!!! admonition "Julia"
 
-!!! info "Tip Python packages"
+    - At UPPMAX there is a central library with installed packages.
+    - This is good, especially when working on Bianca, since you then do not need to install via the ``wharf``.
+    - It is often better to install you own, see below, or ask the support to install centrally.
 
-    - Try Conda first directly on Bianca. We have mirrored all _major_ Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
-    - If you want to keep number of files down, use PyPI (pip), but then you need to use Rackham and the ``wharf``.
+    - Check **julia versions**: ``ml avail julia``
+    - Check **julia packages/modules**
 
-### Conda
+        1. **help** output from: ``ml help julia/1.9.3``
+        2. In a loaded julia
 
-- We have mirrored the non-proprietary Conda repositories (not ``main``, ``anaconda`` and ``r``) directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
+            - **Load** a python version, like: ``ml julia/1.8.5``
+            - from **julia shell** with the ``using`` command
 
-!!! info "More info"
-
-    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
-    - [Conda user guide](http://docs.uppmax.uu.se/software/conda/)
-
-### Python packages with pip
+### Install packages, principles
 
 !!! info "Installation principle"
 
-    - install on Rackham
-        - ``pip install --user <package>``
-        - ``python setup.py install --user or --prefix=<path>``
-    - sync to ``wharf``
-    - move the files on Bianca to correct place
-    - you may have to update ``$PYTHONPATH``
+    - Install on Rackham or other place
+    - Sync to ``wharf``
+    - Move the files on Bianca to a place in the path used for packages of R, Python (pip) or julia
 
-!!! info "More info"
+!!! admonition "R links"
+
+    - Typical place to put R packages: ``~/R`` 
+    - Otherwise you may have to update your ``R_LIBS_USER="<path>"``
+    
+    **Links**
+
+    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
+    - [From R course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/r/packagesR.html){:target="_blank"}
+    - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/r/isolatedR.html){:target="_blank"}
+
+!!! admonition "pip links"
+
+    - Typical place to put python packages: ``~/.local/lib/python<version>/site-packages/`` 
+    - Otherwise you may have to update ``PYTHONPATH="<path>"``
+
+    **Links**
 
     - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/extra/pip/){:target="_blank"}
     - [UPPMAX Python user guide: Pip](http://docs.uppmax.uu.se/software/python_install_packages/#pip){:target="_blank"}
     - [From Python course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/python/packages.html){:target="_blank"}
     - [From Python course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/python/isolated.html){:target="_blank"}
 
-### Julia packages
+!!! info "Tip Python packages"
 
-- At UPPMAX there is a central library with installed packages.
-- This is good, especially when working on Bianca, since you then do not need to install via the ``wharf``.
+    - Try Conda first directly on Bianca. We have mirrored all _major_ Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
+    - If you want to keep number of files down, use PyPI (pip), but then you need to use Rackham and the ``wharf``.
 
-!!! info "Installation principle"
+!!! admonition "Conda"
 
-    - install on Rackham
-    - sync to ``wharf``
-    - move the files on Bianca
+    - We have mirrored the non-proprietary Conda repositories (not ``main``, ``anaconda`` and ``r``) directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
 
-!!! info "More info"
+    **Links**
 
+    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
+    - [Conda user guide](http://docs.uppmax.uu.se/software/conda/)
+
+!!! admonition "Julia"
+
+    - Typical place to put julia packages: ``~/.julia/packages`` 
+    - Otherwise you may have to update ``export JULIA_LOAD_PATH="path1:path2:..."``
+
+    **Links**
+    
     - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
     - [UPPMAX julia user guide: Pip](http://docs.uppmax.uu.se/software/julia/){:target="_blank"}
     - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/julia/isolatedJulia.html){:target="_blank"}

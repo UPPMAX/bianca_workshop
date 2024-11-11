@@ -4,9 +4,29 @@
 
 ???+ question "Try to do the [exercise](rpackages.md#exercise-update-dowser)"
 
+## R packages workflow
+
+!!! info "Check if available"
+
+    - On UPPMAX the module ``R_packages`` is an omnibus package library containing almost all packages in the CRAN and BioConductor Chances are good the R packages you need are already available once you load this module.  You can quickly check by loading it:
+
+    - Check if available"
+
+    ``$ ml R_packages/4.3.1``
+
+    - Then within R, try loading the package you want, like ``glmnet``:
+
+    ``library(glmnet)``
+
+    - **Is it not there? Then proceed!**
+
+!!! info "Installation principle"
+
+    - install on Rackham or other place
+    - sync to ``wharf``
+    - move the files on Bianca to local Bianca R package path
 
 ## First check if package is already in R_packages/x.y.z
-
 
 - On UPPMAX the module ``R_packages`` is an omnibus package library containing almost all packages in the CRAN and BioConductor repositories.
     - As of 2023-11-21, there were a total of 23478  R packages installed in ``R_packages/4.3.1``.
@@ -46,13 +66,13 @@ drwxrwsr-x  7 douglas sw  4096 May 25 10:46 glmnetr
 #### Methods
 
 - automatic download and install from CRAN
-    - <https://uppmax.github.io/bianca_workshop/extra/rpackages/#automatical-download-and-install-from-cran>
+    - <https://uppmax.github.io/bianca_workshop/extra/rpackages_copy/#automatic-download-and-install-from-cran>
 
 - automatic download and install from GitHub
-    - <https://uppmax.github.io/bianca_workshop/extra/rpackages/#automatic-download-and-install-from-github>
+    - <https://uppmax.github.io/bianca_workshop/extra/rpackages_copy/#automatic-download-and-install-from-github>
 
 - manual download and install
-    - <https://uppmax.github.io/bianca_workshop/extra/rpackages/#manual-download-and-install>
+    - <https://uppmax.github.io/bianca_workshop/extra/rpackages_copy/#manual-download-and-install>
     - **NOTE** that if you install a package this way, you need to handle any dependencies yourself.
         - For instance you might get use of our modules
 

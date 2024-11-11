@@ -4,6 +4,15 @@
 
 ???+ question "Try to follow the steps with the package ``numpy==1.22.3`` for ``python/3.11.8`` "
 
+!!! info "Installation principle"
+
+    - install on Rackham
+        - ``pip install --user <package>``
+        - ``python setup.py install --user or --prefix=<path>``
+    - sync to ``wharf``
+    - move the files on Bianca to correct place
+    - you may have to update ``$PYTHONPATH``
+
 ## Check for packages
 
 - from the Python shell with the ``import`` command
