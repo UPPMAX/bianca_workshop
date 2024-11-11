@@ -81,8 +81,9 @@ When | Who  | What
 10:15| P    | [Transferring files p2](transfer.md)
 10:45| R    | [Efficient jobs](efficient_jobs.md)
 11:00| .    | Break
-11:15| R    | [Complex jobs](complex_jobs.md)
-11:45| R    | [Replicate jobs](replicate_jobs.md)
+11:15| R    | [Efficient jobs](efficient_jobs.md)
+11:20| R    | [Complex jobs](complex_jobs.md)
+11:40| R    | [Replicate jobs](replicate_jobs.md)
 12:00| .    | Lunch
 13:00| B    | [Software and packages installation p1](https://uppmax.github.io/bianca_workshop/intermediate/install/)
 13:50| .    | Break
