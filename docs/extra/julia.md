@@ -89,8 +89,8 @@ The plan is that what you install on Rackham should be moved here in the same ma
 Transfer to the ``wharf``
 
 ``` bash
-sftp sftp bjornc-sens2023531@bianca-sftp
-sftp> cd bjornc-sens2023531/
+sftp sftp bjornc-sens2023598@bianca-sftp
+sftp> cd bjornc-sens2023598/
 sftp> dir
 sftp>
 ```
@@ -100,7 +100,7 @@ If you have not uploaded anything to your ``wharf``, this will be empty. It migh
 - **Alt1: If you would like all your locally installed packages:**
 
 ``` bash
-sftp> put -r ~/.julia
+sftp> put -r .julia
 ```
 
 - That may take a while since you are sending thousands of files. Consider archiving the .julia directory (a copy) and then tranfer it with the ``put`` command.
@@ -112,13 +112,14 @@ sftp> put -r ~/.julia
 - Check what was installed. It may have been several dependency packages as well. Look at the times!
 
 ``` bash
-sftp>  lls -lrt ~/.julia/packages
+sftp> lcd  
+sftp>  lls -lrt .julia/packages
 ```
 
 ``` bash
-sftp> put -r ~/.julia/packages/<package name 1>
+sftp> put -r .julia/packages/<package name 1>
 # and if several packages
-sftp> put -r ~/.julia/packages/<package name 2>
+sftp> put -r .julia/packages/<package name 2>
 # and so on...
 ```
 
@@ -126,7 +127,7 @@ sftp> put -r ~/.julia/packages/<package name 2>
 On Bianca
 
 ``` bash
-cd /proj/sens2023531/nobackup/wharf/bjornc/bjornc-sens2023531/
+cd /proj/sens2023598/nobackup/wharf/bjornc/bjornc-sens2023598/
 mv –a  <file(s)> ~/.julia/packages/
 ```
 
