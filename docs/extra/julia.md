@@ -85,12 +85,13 @@ The plan is that what you install on Rackham should be moved here in the same ma
 - Make an installation of the package on Rackham in the Julia package manager
 - Use a transfer method to move the package files to the ``wharf``
     - To be certain to include all files, you may transfer the whole ``.julia`` dir. However, that can grow rather big with time.
- 
+
 - Prepare tar file of all packages if needed:
 
 ```console
 tar cfvz julia_pkg.tar.gz .julia/packages
 ```
+
 Transfer to the ``wharf``
 
 ``` console
