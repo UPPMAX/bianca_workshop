@@ -85,10 +85,15 @@ The plan is that what you install on Rackham should be moved here in the same ma
 - Make an installation of the package on Rackham in the Julia package manager
 - Use a transfer method to move the package files to the ``wharf``
     - To be certain to include all files, you may transfer the whole ``.julia`` dir. However, that can grow rather big with time.
+ 
+- Prepare tar file of all packges if needed:
 
+```console
+tar cfvz julia_pkg.tar.gz .julia/packages
+```
 Transfer to the ``wharf``
 
-``` bash
+``` console
 sftp sftp bjornc-sens2023598@bianca-sftp
 sftp> cd bjornc-sens2023598/
 sftp> dir
@@ -99,7 +104,7 @@ If you have not uploaded anything to your ``wharf``, this will be empty. It migh
 
 - **Alt1: If you would like all your locally installed packages:**
 
-``` bash
+``` console
 sftp> put -r .julia
 ```
 
@@ -112,7 +117,6 @@ sftp> put -r .julia
 - Check what was installed. It may have been several dependency packages as well. Look at the times!
 
 ``` bash
-sftp> lcd  
 sftp>  lls -lrt .julia/packages
 ```
 
