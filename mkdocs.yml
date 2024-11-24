@@ -64,6 +64,8 @@ theme:
     - search.suggest
     - content.code.annotate
     - content.tabs.link
+    - content.action.edit
+    - content.action.view
 
   custom_dir: mkdocs_uppmax/
     
