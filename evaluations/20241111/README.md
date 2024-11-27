@@ -37,7 +37,8 @@ Here are the results:
 > and red is the post/evaluation. KS is shorthand
 > for Kolmogorov-Smirnoff test, a test to determine if two distribitions
 > may come from the same underlying distribution, without any assumptions on
-> the shape of the distrition. If the p value is low, it can rejected that
+> the shape of the distrition. A two-sided KS test was used.
+> If the p value is low, it can rejected that
 > the two distributions come from the same underlying distribution.
 
 ![](confidences_per_question.png)
@@ -62,3 +63,14 @@ Copied from [stats.md](stats.md):
 |I can can run the voted-for IDE on Bianca                                         |      1.6|       4.6| 0.0476190|TRUE      |
 |I understand how to deal with sensitive data                                      |      3.6|       4.4| 0.2857143|FALSE     |
 
+> The p values are calculated from a two-sided Kolmogorov-Smirnoff test,
+> a test to determine if two distribitions
+> may come from the same underlying distribution, without any assumptions on
+> the shape of the distrition. If the p value is low, it can rejected that
+> the two distributions come from the same underlying distribution.
+
+Or, in English, these sessions made a significant differce:
+
+- I understand how to set up jobs efficiently
+- I understand how to install software myself
+- I can can run the voted-for IDE on Bianca
