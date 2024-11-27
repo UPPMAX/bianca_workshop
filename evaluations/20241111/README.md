@@ -3,9 +3,30 @@
 - [results.csv](results.csv)
 - [results.ods](results.ods)
 
+## Missing before
+
+From the [prevaluation](../../prevaluation/20241111/README.md):
+
+> Installation of packages on Bianca (without internet connection)
+
+## Missing after
+
+> Perhaps an explanation of Nextflow or snakemake would be useful.
+> Since it was a bit difficult to follow if we have not run these workflow
+> managers. But I believe it is out of scope!
+> Maybe it will be interesting to follow a practical installation
+> (demonstration) of Github repo/packages to Bianca.
+> Just as it was performed from the file transfers.
+> I don´t know if other users will be interested on this,
+> but more practical example could be useful.
+> Anyhow the course was interesting and
+> I learned a lot and feel more confident in working with Bianca.
+> Thanks! 
+
 ## Analysis
 
-These confidences were compared to the [prevaluation](../../prevaluation/20241111/README.md).
+These confidences were compared to the
+[prevaluation](../../prevaluation/20241111/README.md).
 which has most of the same questions.
 The analysis code can be found at [analyse.R](analyse.R).
 Here are the results:
@@ -40,3 +61,4 @@ Copied from [stats.md](stats.md):
 |I understand how to build from source                                             |      0.8|       1.8| 0.1904762|FALSE     |
 |I can can run the voted-for IDE on Bianca                                         |      1.6|       4.6| 0.0476190|TRUE      |
 |I understand how to deal with sensitive data                                      |      3.6|       4.4| 0.2857143|FALSE     |
+
