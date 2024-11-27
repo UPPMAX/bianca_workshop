@@ -45,7 +45,7 @@ Or, in English, these course made a significant differce in confidence.
 
 Now per learning objective:
 
-![](confidences_per_question.png)
+![Confidences per question](confidences_per_question.png)
 
 > All confidences per question, where blue is the prevaliation
 > and red is the post/evaluation
