@@ -44,7 +44,7 @@
 
 ## Why?
 
-You have a simulation that uses randomness. 
+You have a simulation that uses randomness.
 You want to run 1000 replicates of it. How would you do that?
 
 ## The simulation
