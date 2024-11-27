@@ -12,8 +12,12 @@ Here are the results:
 
 ![All confidences](all_confidences.png)
 
-> All confidences, where blue is the prevaliation
-> and red is the post/evaluation
+> All confidences, where blue is the prevaluation
+> and red is the post/evaluation. KS is shorthand
+> for Kolmogorov-Smirnoff test, a test to determine if two distribitions
+> may come from the same underlying distribution, without any assumptions on
+> the shape of the distrition. If the p value is low, it can rejected that
+> the two distributions come from the same underlying distribution.
 
 ![](confidences_per_question.png)
 
