@@ -58,7 +58,7 @@ echo "Hello!"
 ```
 
 !!! info "What does this program do?"
-    
+
     The first line is called the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)),
     and indicates this is a Bash script.
     
