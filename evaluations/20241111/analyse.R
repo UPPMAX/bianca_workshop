@@ -1,6 +1,7 @@
 #!/bin/env Rscript
 prevaluation_file <- "../../prevaluations/20241111/results.csv"
 evaluation_file <- "results.csv"
+alpha_value <- 0.05
 
 testthat::expect_true(file.exists(prevaluation_file))
 testthat::expect_true(file.exists(evaluation_file))
@@ -57,7 +58,7 @@ plot_histrogram <- function(t_tidy) {
   mean_confidence <- mean(t_tidy$answer[!is.na(t_tidy$answer)])
   
   ggplot2::ggplot(t_tidy, ggplot2::aes(x = answer)) +
-    ggplot2::geom_histogram() + 
+    ggplot2::geom_density() + 
     ggplot2::labs(
       title = "All confidences",
       caption = paste0(
@@ -72,16 +73,32 @@ plot_histrogram <- function(t_tidy) {
 plot_histrogram(t_pre)
 plot_histrogram(t_post)
 
+
+mean_pre <- mean(t[t$when == "pre", ]$answer)
+mean_post <- mean(t[t$when == "post", ]$answer)
+ks_test <- ks.test(t[t$when == "pre", ]$answer, t[t$when == "post", ]$answer)
+ks_test_p_value <- ks_test$p.value
+ks_test_is_different <- ks_test$p.value < alpha_value
+
 ggplot2::ggplot(t, ggplot2::aes(x = answer, fill = when)) +
-  ggplot2::geom_histogram(binwidth = 0.5, position = "dodge") + 
+  ggplot2::geom_density(alpha = 0.5) + 
+  ggplot2::geom_vline(xintercept = mean_pre, color = "skyblue", lty = "dashed") + 
+  ggplot2::geom_vline(xintercept = mean_post, color = "salmon", lty = "dashed") + 
   ggplot2::labs(
-    title = "All confidences"
+    title = "All confidences",
+    caption = paste0(
+      "Mean pre: ", format(mean_pre, digits = 2), ", ",
+      "Mean post: ", format(mean_post, digits = 2), "\n",
+      "p value from KS test: ", format(ks_test_p_value, digits = 2), ", ",
+      "alpha value: ", alpha_value, ", ",
+      "different: ", ks_test_is_different
+    )
   )
 
-ggplot2::ggsave(filename = "all_confidences.png", width = 4, height = 2)
+ggplot2::ggsave(filename = "all_confidences.png", width = 6, height = 2)
 
 ggplot2::ggplot(t, ggplot2::aes(x = answer, fill = when)) +
-  ggplot2::geom_histogram(position = "dodge", binwidth = 0.5) + 
+  ggplot2::geom_density(alpha = 0.5) + 
   ggplot2::facet_grid(rows = "question", scales = "free_y") +
   ggplot2::theme(
     strip.text.y = ggplot2::element_text(angle = 0),
@@ -95,9 +112,8 @@ ggplot2::ggsave(filename = "confidences_per_question.png", width = 6, height = 7
 
 names(t)
 
-
+# Get the average
 t_averages <- t |> dplyr::group_by(question, when) |> dplyr::summarise(mean = mean(answer))
-
 ggplot2::ggplot(t_averages, ggplot2::aes(x = mean, fill = when)) +
   ggplot2::geom_histogram(position = "dodge", binwidth = 0.25) + 
   ggplot2::facet_grid(rows = "question", scales = "free_y") +
@@ -108,3 +124,19 @@ ggplot2::ggplot(t_averages, ggplot2::aes(x = mean, fill = when)) +
   ggplot2::labs(
     title = "Confidences per question"
   )
+
+# Per question, has the distribution changed?
+t_stats <- tibble::tibble(question = unique(t$question), mean_pre = NA, mean_post = NA, p_value = NA, different = NA)
+for (question in unique(t$question)) {
+  pre_values <- t[t$question == question & t$when == "pre", ]$answer
+  post_values <- t[t$question == question & t$when == "post", ]$answer
+  p <- ks.test(pre_values, post_values)
+  t_stats[t_stats$question == question, ]$mean_pre <- mean(pre_values)
+  t_stats[t_stats$question == question, ]$mean_post <- mean(post_values)
+  t_stats[t_stats$question == question, ]$p_value <- p$p.value
+  t_stats[t_stats$question == question, ]$different <- p$p.value < alpha_value
+}
+t_stats
+
+k <- knitr::kable(t_stats)
+readr::write_lines(k, "stats.md")

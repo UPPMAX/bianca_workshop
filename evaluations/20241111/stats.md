@@ -1,27 +1,3 @@
-# Evaluation Bianca Intermediate
-
-- [results.csv](results.csv)
-- [results.ods](results.ods)
-
-## Analysis
-
-These confidences were compared to the [prevaluation](../../prevaluation/20241111/README.md).
-which has most of the same questions.
-The analysis code can be found at [analyse.R](analyse.R).
-Here are the results:
-
-![All confidences](all_confidences.png)
-
-> All confidences, where blue is the prevaliation
-> and red is the post/evaluation
-
-![](confidences_per_question.png)
-
-> All confidences per question, where blue is the prevaliation
-> and red is the post/evaluation
-
-Copied from [stats.md](stats.md):
-
 |question                                                                          | mean_pre| mean_post|   p_value|different |
 |:---------------------------------------------------------------------------------|--------:|---------:|---------:|:---------|
 |I can transfer files to/from Bianca using rsync                                   |      2.2|       4.6| 0.2857143|FALSE     |
