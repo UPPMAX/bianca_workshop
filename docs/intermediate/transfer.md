@@ -172,24 +172,24 @@ and stay open during the break.
 
 ???- question "Why put us in groups?"
 
-    Because group work in general is effective for learning 
-    (see [1] for a meta-meta analysis).
+    Because group work in general is effective for learning
+    (see `[1]` for a meta-meta analysis).
     For online courses, group work is a recommended practice
-    [Bigatel & Edel-Malizia, 2018][Means, 1993].
+    `[Bigatel & Edel-Malizia, 2018][Means, 1993]`.
 
 ???- question "What if I have a question?"
 
-    Ideally, one asks the people in the breakout room. 
+    Ideally, one asks the people in the breakout room.
     In that way, the whole room may learn.
 
     Additionally, there is a shared document you can use, you can ask for help
-    via a Zoom function and teachers and teaching assistants will regularly 
+    via a Zoom function and teachers and teaching assistants will regularly
     go through all rooms.
 
 ???- question "Why have a break in between?"
 
-    Because breaks are important for learning [Newport, 2016].
-    Please take that break, ideally by doing something boring [Newport, 2016]!
+    Because breaks are important for learning `[Newport, 2016]`.
+    Please take that break, ideally by doing something boring `[Newport, 2016]`!
 
 ### Exercise 1: first understanding of how to use `rsync`
 
@@ -227,7 +227,7 @@ and stay open during the break.
 
     > - What is `wharf`? What does it allow us to do?
 
-    [`wharf`](http://docs.uppmax.uu.se/cluster_guides/wharf/) is a folder 
+    [`wharf`](http://docs.uppmax.uu.se/cluster_guides/wharf/) is a folder
     on Bianca used for file transfer to/from Bianca.
 
     > - What is `rsync`?
@@ -237,7 +237,7 @@ and stay open during the break.
 
     > - What is `transit`?
 
-    [`transit`](http://docs.uppmax.uu.se/cluster_guides/transit/) 
+    [`transit`](http://docs.uppmax.uu.se/cluster_guides/transit/)
     is an UPPMAX service that can be used to securely transfer files.
 
 ### Exercise 2: using `rsync`
@@ -320,12 +320,12 @@ Here is the exercise:
 
 ???- question "What are the full references?"
 
-    - [1] See [Hattie, 2023], page 381, effect size 0.45, robustness index 4 out of 5,
+    - `[1]` See `[Hattie, 2023]`, page 381, effect size 0.45, robustness index 4 out of 5,
       based on 12 meta analyses, 955 studies, 91,734 learners, 1082 effects,
       standard error of 0.07
-    - [Bell, 2020] Bell, Mike. The fundamentals of teaching: A five-step model to put the research evidence into practice. Routledge, 2020.
-    - [Bigatel & Edel-Malizia, 2018] Bigatel, Paula M., and Stephanie Edel-Malizia. "Using the “indicators of engaged learning online” framework to evaluate online course quality." TechTrends 62.1 (2018): 58-70.
-    - [Hattie, 2012] Hattie, John. Visible learning for teachers: Maximizing impact on learning. Routledge, 2012.
-    - [Hattie, 2023] Hattie, John. Visible learning: The sequel: A synthesis of over 2,100 meta-analyses relating to achievement. Routledge, 2023.
-    - [Means, 1993] Means, Barbara. "Using technology to support education reform." (1993).
-    - [Newport, 2016] Newport, Cal. Deep work: Rules for focused success in a distracted world. Hachette UK, 2016.
+    - `[Bell, 2020]` Bell, Mike. The fundamentals of teaching: A five-step model to put the research evidence into practice. Routledge, 2020.
+    - `[Bigatel & Edel-Malizia, 2018]` Bigatel, Paula M., and Stephanie Edel-Malizia. "Using the “indicators of engaged learning online” framework to evaluate online course quality." TechTrends 62.1 (2018): 58-70.
+    - `[Hattie, 2012]` Hattie, John. Visible learning for teachers: Maximizing impact on learning. Routledge, 2012.
+    - `[Hattie, 2023]` Hattie, John. Visible learning: The sequel: A synthesis of over 2,100 meta-analyses relating to achievement. Routledge, 2023.
+    - `[Means, 1993]` Means, Barbara. "Using technology to support education reform." (1993).
+    - `[Newport, 2016]` Newport, Cal. Deep work: Rules for focused success in a distracted world. Hachette UK, 2016.
