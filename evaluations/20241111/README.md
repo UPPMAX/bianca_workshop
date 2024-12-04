@@ -5,7 +5,7 @@
 
 ## Missing before
 
-From the [prevaluation](../../prevaluation/20241111/README.md):
+From the [prevaluation](../../prevaluations/20241111/README.md):
 
 > Installation of packages on Bianca (without internet connection)
 
@@ -26,7 +26,7 @@ From the [prevaluation](../../prevaluation/20241111/README.md):
 ## Analysis
 
 These confidences were compared to the
-[prevaluation](../../prevaluation/20241111/README.md).
+[prevaluation](../../prevaluations/20241111/README.md).
 which has most of the same questions.
 The analysis code can be found at [analyse.R](analyse.R).
 Here are the results:
