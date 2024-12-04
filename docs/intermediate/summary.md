@@ -19,7 +19,7 @@ I understand how to set up jobs efficiently
 
 - Enough cores for memory
 - CPU limited? Consider adding more until CPU usage is around 80% on average
-- Consider addigng 1 core for safety
+- Consider adding 1 core for safety
 
 I can schedule a simple workflow of jobs that depend on each other using Slurm
 
