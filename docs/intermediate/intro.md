@@ -96,7 +96,7 @@ When | Who  | What
 15:45| All  | Optional Q/A
 16:00| .    | END
 
-* Who: `B`: Björn, `P`: Pavlin, `R`: Richèl
+- Who: `B`: Björn, `P`: Pavlin, `R`: Richèl
 
 ## Overview of courses
 
