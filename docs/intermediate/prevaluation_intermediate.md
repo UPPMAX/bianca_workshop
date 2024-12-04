@@ -23,7 +23,7 @@ The prevaluation form can be found `[not here anymore]`.
     everyone already knew how to do this.
 
     If all learners already knew about this, we could
-    consider removing this. 
+    consider removing this.
 
     If all learners did not knew about this, then, indeed,
     us teachers did a good job :-)
