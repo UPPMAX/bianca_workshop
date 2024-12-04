@@ -60,10 +60,10 @@ to work on the Bianca UPPMAX cluster.
 
     It contains exercises, room for questions and room for feedback.
 
-    To view the shared document in both text and rendered form, 
+    To view the shared document in both text and rendered form,
     click on the button in the top between the pen and eye.
 
-    Regarding questions: 
+    Regarding questions:
 
     - create a new line for new questions
     - take care if others are editing at the same time
