@@ -9,7 +9,7 @@
 
 This is an anonymous evaluation
 and will ideally be published in raw form at 
-https://github.com/UPPMAX/bianca_workshop/tree/main/evaluations/20240419 .
+https://github.com/UPPMAX/bianca_workshops/tree/main/evaluations/20240419 .
 To do so, please do not share sensitive data here!
 
 Below are tallies, i.e. add one character behind each
@@ -130,7 +130,7 @@ Below are the question. If needed, specify your ideas per session.
 ## Results
 
 This is an anonymous evaluation and will ideally be published in raw form at 
-https://github.com/UPPMAX/bianca_workshop/tree/main/evaluations/20240419 . To do so, please do not share sensitive data here!
+https://github.com/UPPMAX/bianca_workshops/tree/main/evaluations/20240419 . To do so, please do not share sensitive data here!
 
 Below are tallies, i.e. add one character behind each to answer a question. This helps us assess how well we as teachers did expressed in a quantity. After that, there is the option for more qualitative feedback. 
 

@@ -6,7 +6,7 @@
     - Legal guidance
     - A discussion of NAISS SENS projects, proposals, and allocations
 
-This page summarises the content of [this presentation](https://github.com/UPPMAX/bianca_workshop/blob/main/docs/presentations/Bianca%20legal%20and%20admin.pdf).
+This page summarises the content of [this presentation](https://github.com/UPPMAX/bianca_workshops/blob/main/docs/presentations/Bianca%20legal%20and%20admin.pdf).
 
 
 ## Sensitive personal data

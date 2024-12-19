@@ -95,7 +95,7 @@ flowchart TD
 
 Possible next steps:
 
-- [Bianca Intermediate course](https://uppmax.github.io/bianca_workshop/intermediate/intro/):
+- [Bianca Intermediate course](https://uppmax.github.io/bianca_workshops/intermediate/intro/):
   work better with Bianca
 - [Programming Formalisms](https://uppmax.github.io/programming_formalisms/):
   formal aspects of software development

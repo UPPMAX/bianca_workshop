@@ -8,7 +8,7 @@
 
 ???+ question "View in IGV"
 
-    - Load the genome, the bam file, and the annotated *vcf* that we got from the [demo](https://uppmax.github.io/bianca_workshop/modules/#workflows) into IGV for viewing
+    - Load the genome, the bam file, and the annotated *vcf* that we got from the [demo](https://uppmax.github.io/bianca_workshops/modules/#workflows) into IGV for viewing
 
         ??? tip "Answer"
 
@@ -38,7 +38,7 @@
 
 ???+ question "Submit a Slurm job"
 
-    - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshop/modules/#workflows) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
+    - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshops/modules/#workflows) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
   
     ??? tip "Answer"
 
@@ -107,7 +107,7 @@
 
     ??? tip "Answer"
 
-        [Dowser exercise](https://uppmax.github.io/bianca_workshop/extra/rpackages/#example-update-dowser)
+        [Dowser exercise](https://uppmax.github.io/bianca_workshops/extra/rpackages/#example-update-dowser)
 
 ### Conda installation
 
@@ -117,7 +117,7 @@
 
     ??? tip "Answer"
 
-        <https://uppmax.github.io/bianca_workshop/extra/conda/#exercises>
+        <https://uppmax.github.io/bianca_workshops/extra/conda/#exercises>
 
 
 ### Pip installation with virtual environment
@@ -129,7 +129,7 @@
 
     ??? tip "Answer"
 
-        <https://uppmax.github.io/bianca_workshop/extra/pip/#isolatedvirtual-environments>
+        <https://uppmax.github.io/bianca_workshops/extra/pip/#isolatedvirtual-environments>
 
 
 ### Julia installation
@@ -141,7 +141,7 @@
 
     ??? tip "Answer"
 
-        <https://uppmax.github.io/bianca_workshop/extra/julia/#install-yourself>
+        <https://uppmax.github.io/bianca_workshops/extra/julia/#install-yourself>
 
 
 ### Singularity/Apptainer
@@ -152,4 +152,4 @@
 
     ??? tip "Answer"
 
-        <https://uppmax.github.io/bianca_workshop/extra/containers/#example-i-want-gatk-on-bianca>
+        <https://uppmax.github.io/bianca_workshops/extra/containers/#example-i-want-gatk-on-bianca>

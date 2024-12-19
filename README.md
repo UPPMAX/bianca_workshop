@@ -1,11 +1,11 @@
-# bianca_workshop
+# bianca_workshops
 
-[![Build pages](https://github.com/UPPMAX/bianca_workshop/actions/workflows/gh.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/bianca_workshop/actions/workflows/gh.yaml)
-[![Check links](https://github.com/UPPMAX/bianca_workshop/actions/workflows/check_links.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/bianca_workshop/actions/workflows/check_links.yaml)
-[![Check markdown](https://github.com/UPPMAX/bianca_workshop/actions/workflows/check_markdown.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/bianca_workshop/actions/workflows/check_markdown.yaml)
-[![Check spelling](https://github.com/UPPMAX/bianca_workshop/actions/workflows/check_spelling.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/bianca_workshop/actions/workflows/check_spelling.yaml)
+[![Build pages](https://github.com/UPPMAX/bianca_workshops/actions/workflows/gh.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/bianca_workshops/actions/workflows/gh.yaml)
+[![Check links](https://github.com/UPPMAX/bianca_workshops/actions/workflows/check_links.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/bianca_workshops/actions/workflows/check_links.yaml)
+[![Check markdown](https://github.com/UPPMAX/bianca_workshops/actions/workflows/check_markdown.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/bianca_workshops/actions/workflows/check_markdown.yaml)
+[![Check spelling](https://github.com/UPPMAX/bianca_workshops/actions/workflows/check_spelling.yaml/badge.svg?branch=main)](https://github.com/UPPMAX/bianca_workshops/actions/workflows/check_spelling.yaml)
 
-This repository contains the source code for the [Bianca workshop](https://uppmax.github.io/bianca_workshop/)
+This repository contains the source code for the [Bianca workshop](https://uppmax.github.io/bianca_workshops/)
 
 ## Credits
 

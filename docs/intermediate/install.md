@@ -135,7 +135,7 @@
 
 !!! info "More info"
 
-    - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/){:target="_blank"}
+    - [Extra material: Containers](https://uppmax.github.io/bianca_workshops/extra/containers/){:target="_blank"}
     - [Singularity course](https://www.uu.se/centrum/uppmax/utbildning/kurser-och-workshops/basic-singularity){:target="_blank"}
 
 ## Packages and libraries to scripting programs
@@ -197,7 +197,7 @@
 
     Links:
 
-    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/)
+    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshops/extra/rpackages/)
     - [From R course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/r/packagesR.html){:target="_blank"}
     - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/r/isolatedR.html){:target="_blank"}
 
@@ -208,7 +208,7 @@
 
     Links:
 
-    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/extra/pip/){:target="_blank"}
+    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshops/extra/pip/){:target="_blank"}
     - [UPPMAX Python user guide: Pip](http://docs.uppmax.uu.se/software/python_install_packages/#pip){:target="_blank"}
     - [From Python course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/python/packages.html){:target="_blank"}
     - [From Python course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/python/isolated.html){:target="_blank"}
@@ -226,7 +226,7 @@
 
     Links:
 
-    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/)
+    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshops/extra/conda/)
     - [Conda user guide](http://docs.uppmax.uu.se/software/conda/)
 
 !!! admonition "Julia"
@@ -236,7 +236,7 @@
 
     Links:
 
-    - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshop/extra/julia/){:target="_blank"}
+    - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshops/extra/julia/){:target="_blank"}
     - [UPPMAX julia user guide: Pip](http://docs.uppmax.uu.se/software/julia/){:target="_blank"}
     - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/julia/isolatedJulia.html){:target="_blank"}
     - :warning: contact [NAISS support](javascript:void(window.open('https://supr.naiss.se/support/?centre_resource=c4%27,%27_blank%27,%27toolbar=1,location=1,status=1,menubar=1,scrollbars=1,resizable=1%27));) for individual help!
@@ -248,10 +248,10 @@
     - Read the introduction with a demo and use it to solve the exercise in the end.
     - "Containers" contains less material but may take time to install.
 
-    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshop/extra/conda/){:target="_blank"}
-    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshop/extra/pip/){:target="_blank"}
-    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshop/extra/rpackages/){:target="_blank"}
-    - [Extra material: Containers](https://uppmax.github.io/bianca_workshop/extra/containers/){:target="_blank"}
+    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshops/extra/conda/){:target="_blank"}
+    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshops/extra/pip/){:target="_blank"}
+    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshops/extra/rpackages/){:target="_blank"}
+    - [Extra material: Containers](https://uppmax.github.io/bianca_workshops/extra/containers/){:target="_blank"}
 
     - One breakout room per topic: Help each-other!
 
@@ -263,7 +263,7 @@
 
 ## Own development and Git
 
-- [Own development and git](https://uppmax.github.io/bianca_workshop/extra/devel/)
+- [Own development and git](https://uppmax.github.io/bianca_workshops/extra/devel/)
 
 !!! abstract "Keypoints"
 

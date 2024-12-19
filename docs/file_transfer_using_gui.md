@@ -6,7 +6,7 @@
 
 !!! info "Objectives"
 
-    - [Transfer files to/from Bianca using FileZilla](https://github.com/UPPMAX/bianca_workshop/issues/35)
+    - [Transfer files to/from Bianca using FileZilla](https://github.com/UPPMAX/bianca_workshops/issues/35)
 
 ## Exercises
 

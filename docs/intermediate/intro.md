@@ -85,9 +85,9 @@ When | Who  | What
 11:20| R    | [Complex jobs](complex_jobs.md)
 11:40| R    | [Replicate jobs](replicate_jobs.md)
 12:00| .    | Lunch
-13:00| B    | [Software and packages installation p1](https://uppmax.github.io/bianca_workshop/intermediate/install/)
+13:00| B    | [Software and packages installation p1](https://uppmax.github.io/bianca_workshops/intermediate/install/)
 13:50| .    | Break
-14:00| B    | [Software and packages installation p2](https://uppmax.github.io/bianca_workshop/intermediate/install/)
+14:00| B    | [Software and packages installation p2](https://uppmax.github.io/bianca_workshops/intermediate/install/)
 14:40| BR   | [IDEs on Bianca p1](ides.md)
 14:50| .    | Break
 15:05| L    | [IDEs on Bianca p2](ides.md)

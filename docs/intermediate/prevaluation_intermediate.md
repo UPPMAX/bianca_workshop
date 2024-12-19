@@ -11,7 +11,7 @@ The prevaluation form can be found `[not here anymore]`.
 
 ???- question "What do you mean with 'to measure how much knowledge is gained'?"
 
-    Here is [part of an evaluation](https://github.com/UPPMAX/bianca_workshop/blob/main/reflections/20240925/20240925_richel.md):
+    Here is [part of an evaluation](https://github.com/UPPMAX/bianca_workshops/blob/main/reflections/20240925/20240925_richel.md):
 
     ![Part of an evaluation](img/confidences_per_question_zoom.png)
 
