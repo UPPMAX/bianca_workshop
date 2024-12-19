@@ -72,6 +72,8 @@ to work on the Bianca UPPMAX cluster.
 
 ## Schedule
 
+The next intermediate Bianca course will take place May 23rd.
+
 When | Who  | What
 -----|------|-------------------------
 9:00 | R    | [Introduction](intro.md)

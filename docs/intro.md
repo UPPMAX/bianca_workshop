@@ -44,6 +44,8 @@ using pre-installed software and how to run your code.
 
 ## Schedule
 
+The next intro/basic course will take place March 19th.
+
 When  | Who  | What
 ------|------|-----------------------------
 9:00  | R    | [Introduction](intro.md) (this page), [login](login.md), [log in to remote desktop](login_remote_desktop.md), [use the remote desktop](use_remote_desktop.md)
