@@ -48,15 +48,16 @@ to work on the Bianca UPPMAX cluster.
 
 ???- tip "Help! I am new to Bianca, where do I start instead?"
 
-    As a beginner, you are encouraged to start with the
-    basic Bianca course, at [here](../intro.md).
+    As a beginner, you are encouraged to start with
+    [the beginner Bianca course](../beginner/intro.md).
 
     This course assumes you have worked with Bianca for longer
     and there is no time scheduled to get a Bianca beginner up to speed.
 
 !!! info "Course shared document"
 
-    The course shared document can be found at: [https://hackmd.io/@UPPMAX/bianca-workshop-2024/edit](https://hackmd.io/@UPPMAX/bianca-workshop-2024/edit).
+    The course shared document can be found at:
+    [https://hackmd.io/@UPPMAX/bianca-workshop-2024/edit](https://hackmd.io/@UPPMAX/bianca-workshop-2024/edit).
 
     It contains exercises, room for questions and room for feedback.
 
