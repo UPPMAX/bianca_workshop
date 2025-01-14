@@ -7,7 +7,7 @@ nav:
   - Home: index.md
   - Prerequisites: prereqs.md
   - Beginner: 
-    - Introduction: intro.md
+    - Introduction: beginner/intro.md
     - Course dates: beginner/course_dates.md
     - Schedule: beginner/schedule.md
     - Login: beginner/login.md
