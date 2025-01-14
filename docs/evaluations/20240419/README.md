@@ -137,40 +137,40 @@ Below are tallies, i.e. add one character behind each to answer a question. This
 Thanks already for filling this in!
 
 I am confident that I can now login:
-- yes: 1111qii*
+- yes: `1111qii*`
 - no:
 
 I am confident that I can now create executable bash scripts:
-- yes:21q11i*
-- no:i
+- yes: `21q11i*`
+- no: `i`
 
 I am confident that I can now use modules:
-- yes:1q11ii*
+- yes: `1q11ii*`
 - no:
 
 I am confident that I can now do file tranfer using a GUI:
-- yes:q111i
-- no:1i*
+- yes: `q111i`
+- no: `1i*`
 
 I am confident that I can now do file tranfer using transit:
-- yes:11i*
-- no:q11i
+- yes: `11i*`
+- no: `q11i`
 
 I am confident that I can now do file tranfer using rsync:
-- yes:11j
-- no:q11i*
+- yes: `11j`
+- no: `q11i*`
 
 I am confident that I can now start an interactive session:
-- yes:q11ji*
-- no:11
+- yes: `q11ji*`
+- no: `11`
 
 I am confident that I can now submit jobs to the scheduler:
-- yes:q1i*
-- no:111i
+- yes: `q1i*`
+- no: `111i`
 
 I am confident that I now know the legal aspects of sensitive data:
-- yes: q
-- no:i
+- yes: `q`
+- no: `i`
 
 Below are the question. If needed, specify your ideas per session.
 
