@@ -18,11 +18,11 @@ template: home.html
 !!! info "Introduction to Bianca: Handling Sensitive Research Data"
 
     - Are you *starting to* work with your sensitive data in your research?
-      - If yes, welcome to [a full day introduction to handling sensitive data on the UPPMAX cluster, Bianca](beginner/intro.md).
+        - If yes, welcome to [a full day beginner-level workshop on Bianca](beginner/intro.md).
 
     - Do you want to *deepen your existing knowledge* to work
       with your sensitive data in new, more flexible ways?
-      - If yes, welcome to [a full day intermediate-level workshop/hackathon to handling sensitive data on the UPPMAX cluster, Bianca](intermediate/intro.md).
+        - If yes, welcome to [a full day intermediate-level workshop on Bianca](intermediate/intro.md).
 
     - You will learn about
 
