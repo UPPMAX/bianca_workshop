@@ -41,7 +41,7 @@
 
 ???- tip "Forgot how to use the module system?"
 
-    See [the basic Bianca course page 'Using the module system'](../modules.md).
+    See [the basic Bianca course page 'Using the module system'](../beginner/modules.md).
 
 - **Lots of programs and tools installed as modules** on Bianca.
     - You can **request installations** but that **may take several days or weeks** to be handled by the application experts at UPPMAX.

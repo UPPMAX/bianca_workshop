@@ -9,7 +9,7 @@
 
 This is an anonymous evaluation
 and will ideally be published in raw form at
-https://github.com/UPPMAX/bianca_workshops/tree/main/evaluations/20240419 .
+https://uppmax.github.io/bianca_workshops/evaluations/20240419/ .
 To do so, please do not share sensitive data here!
 
 Below are tallies, i.e. add one character behind each

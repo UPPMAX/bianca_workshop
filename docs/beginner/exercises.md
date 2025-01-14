@@ -8,7 +8,7 @@
 
 ???+ question "View in IGV"
 
-    - Load the genome, the bam file, and the annotated *vcf* that we got from the [demo](https://uppmax.github.io/bianca_workshops/modules/#workflows) into IGV for viewing
+    - Load the genome, the bam file, and the annotated *vcf* that we got from the [demo](https://uppmax.github.io/bianca_workshops/modules) into IGV for viewing
 
         ??? tip "Answer"
 
