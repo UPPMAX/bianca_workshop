@@ -304,3 +304,14 @@ nextlabs
 nextlab
 makefile
 PyPI
+Bigatel
+csv
+Edel
+Gantt
+Interconnectivity
+Malizia
+ods
+Prevaluations
+Routledge
+Socio
+TechTrends
