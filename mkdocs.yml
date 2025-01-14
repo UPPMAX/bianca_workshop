@@ -7,23 +7,23 @@ nav:
   - Home: index.md
   - Practicalities: practicalities.md
   - Schedule: schedule.md
-  - Course dates: course_dates.md
-  - Bianca intro (beginner): 
+  - Beginner: 
     - Introduction: intro.md
-    - Login: login.md
-    - Log in to the Bianca remote desktop environment: login_remote_desktop.md
-    - Using the desktop environment: use_remote_desktop.md
-    - Log in to the Bianca console environment: login_console.md
-    - Command-line intro: commandline.md
-    - Create an exectable script: create_script.md
-    - Module system: modules.md
-    - Transferring files to/from Bianca: transfer_basics.md
-    - Transferring files to/from Bianca using a GUI: file_transfer_using_gui.md
-    - Introduction to compute nodes: slurm_intro.md
-    - Intro to NAISS-SENS and sensitive data: sens_project_short.md
-    - Summary: summary.md
-    - Evaluation: evaluation.md
-  - Intermediate workshop/hackaton: 
+    - Course dates: beginner/course_dates.md
+    - Login: beginner/login.md
+    - Log in to the Bianca remote desktop environment: beginner/login_remote_desktop.md
+    - Using the desktop environment: beginner/use_remote_desktop.md
+    - Log in to the Bianca console environment: beginner/login_console.md
+    - Command-line intro: beginner/commandline.md
+    - Create an exectable script: beginner/create_script.md
+    - Module system: beginner/modules.md
+    - Transferring files to/from Bianca: beginner/transfer_basics.md
+    - Transferring files to/from Bianca using a GUI: beginner/file_transfer_using_gui.md
+    - Introduction to compute nodes: beginner/slurm_intro.md
+    - Intro to NAISS-SENS and sensitive data: beginner/sens_project_short.md
+    - Summary: beginner/summary.md
+    - Evaluation: beginner/evaluation.md
+  - Intermediate: 
     - Introduction: intermediate/intro.md
     - Prevaluation: intermediate/prevaluation_intermediate.md
     - Transferring files to/from Bianca: intermediate/transfer.md
@@ -32,10 +32,10 @@ nav:
     - Replicate jobs: intermediate/replicate_jobs.md
     - Software and package installation: intermediate/install.md
     - IDEs: intermediate/ides.md
+    - Overview: intermediate/overview.md
     - Summary: intermediate/summary.md
     - Evaluation: intermediate/evaluation_intermediate.md
   - Extra material:
-    - Overview: intermediate/overview.md
     - extra/slurm.md
     - extra/source_install.md
     - extra/conda.md
