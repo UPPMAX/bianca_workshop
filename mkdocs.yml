@@ -52,6 +52,7 @@ nav:
       - Lesson plans: lesson_plans/README.md
       - Prevaluations: prevaluations/README.md
       - Project: misc/project.md
+      - Reflections: reflections/README.md
       - Shared document: misc/shared_document.md
  
 theme:
