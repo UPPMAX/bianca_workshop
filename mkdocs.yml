@@ -6,6 +6,8 @@ edit_uri: blob/main/docs/
 nav:
   - Home: index.md
   - Practicalities: practicalities.md
+  - Schedule: schedule.md
+  - Course dates: course_dates.md
   - Bianca intro (beginner): 
     - Introduction: intro.md
     - Login: login.md

@@ -18,7 +18,7 @@ template: home.html
 !!! info "Introduction to Bianca: Handling Sensitive Research Data"
     
     - Are you *starting to* work with your sensitive data in your research? 
-      - If yes, welcome to [a full day introduction to handling sensitive data on the UPPMAX cluster, Bianca](intro.md). 
+      - If yes, welcome to [a full day introduction to handling sensitive data on the UPPMAX cluster, Bianca](beginner/intro.md). 
 
     - Do you want to *deepen your existing knowledge* to work 
       with your sensitive data in new, more flexible ways? 
@@ -38,11 +38,10 @@ template: home.html
     
 <br/><br/>
 
-[Practicalities](practicalities.md){ .md-button .md-button--primary }
-[Bianca intro ](intro.md){ .md-button .md-button--primary }
+[Prerequisites](prereqs.md){ .md-button .md-button--primary }
+[Beginner workshop](beginnerintro.md){ .md-button .md-button--primary }
 [Intermediate workshop](intermediate/intro.md){ .md-button .md-button--primary }
 
 <br/><br/>
-
 
 </center>
