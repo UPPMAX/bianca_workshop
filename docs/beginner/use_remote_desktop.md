@@ -209,7 +209,7 @@ then answer these questions:
 
     When you started the file explorer, pick the top option 'Open folder'
     to open up your home folder.
-    
+
     It's full path is `/home/[your UPPMAX username]`, where `[your UPPMAX username]`
     is your UPPMAX username.
     For the image above, the username was `richel` and hence the home directory

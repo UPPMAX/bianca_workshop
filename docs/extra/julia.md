@@ -5,7 +5,7 @@
     - At UPPMAX there is a central library with installed packages.
     - This is good, especially when working on Bianca, since you then do not need to install via the ``wharf``.
     - It is often better to install you own, see below, or ask the support to install centrally.
-    
+
     Installation principle:
 
     - install on Rackham

@@ -39,11 +39,11 @@
 ???+ question "Submit a Slurm job"
 
     - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshops/modules/#workflows) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
-  
+
     ??? tip "Answer"
 
         - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
-      
+
         ```bash
         #!/bin/bash
         #SBATCH -A sens2023598
@@ -89,13 +89,13 @@
         ```bash
         $ chmod a+x my_bio_workflow.sh
         ```
-      
+
         - submit the job
 
         ```bash
         $ sbatch my_bio_workflow.sh
         ```
-      
+
 ## Doing installations
 
 ### Rpackage installation
@@ -125,7 +125,7 @@
 ???+ question "Install with pip"
 
     - Make a virtual environment (confer this [tutorial](https://uppmax.github.io/R-python-julia-matlab-HPC/python/isolated.html)) with ``python/3.8.7`` on Rackham and install ``numpy==1.18.1`` and ``matplotlib==3.1.3``. Use ``sftp`` to get it to Bianca.
-  
+
 
     ??? tip "Answer"
 
@@ -137,7 +137,7 @@
 ???+ question "Install a Julia package"
 
     - Install ``Gumbo`` in the julia packager [tutorial](https://docs.uppmax.uu.se/software/julia/). Use `sftp` to get it to Bianca.
-  
+
 
     ??? tip "Answer"
 

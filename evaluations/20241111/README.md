@@ -21,7 +21,7 @@ From the [prevaluation](../../prevaluations/20241111/README.md):
 > but more practical example could be useful.
 > Anyhow the course was interesting and
 > I learned a lot and feel more confident in working with Bianca.
-> Thanks! 
+> Thanks!
 
 ## Analysis
 

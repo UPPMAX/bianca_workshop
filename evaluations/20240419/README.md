@@ -8,7 +8,7 @@
 ## Evaluation
 
 This is an anonymous evaluation
-and will ideally be published in raw form at 
+and will ideally be published in raw form at
 https://github.com/UPPMAX/bianca_workshops/tree/main/evaluations/20240419 .
 To do so, please do not share sensitive data here!
 
@@ -54,7 +54,7 @@ I am confident that I now know the legal aspects of sensitive data:
 
 Below are the question. If needed, specify your ideas per session.
 
-### What should we keep doing? 
+### What should we keep doing?
 
 - ...
 - ...
@@ -129,16 +129,16 @@ Below are the question. If needed, specify your ideas per session.
 
 ## Results
 
-This is an anonymous evaluation and will ideally be published in raw form at 
+This is an anonymous evaluation and will ideally be published in raw form at
 https://github.com/UPPMAX/bianca_workshops/tree/main/evaluations/20240419 . To do so, please do not share sensitive data here!
 
-Below are tallies, i.e. add one character behind each to answer a question. This helps us assess how well we as teachers did expressed in a quantity. After that, there is the option for more qualitative feedback. 
+Below are tallies, i.e. add one character behind each to answer a question. This helps us assess how well we as teachers did expressed in a quantity. After that, there is the option for more qualitative feedback.
 
 Thanks already for filling this in!
 
 I am confident that I can now login:
 - yes: 1111qii*
-- no: 
+- no:
 
 I am confident that I can now create executable bash scripts:
 - yes:21q11i*
@@ -174,7 +174,7 @@ I am confident that I now know the legal aspects of sensitive data:
 
 Below are the question. If needed, specify your ideas per session.
 
-### What should we keep doing? 
+### What should we keep doing?
 
 - keep ther overall structure and input
 - ...
@@ -190,7 +190,7 @@ Below are the question. If needed, specify your ideas per session.
 - ...
 - ...
 - Amazing dynamics to keep everyone on the same page. Other bioinfo workshops I have attended tend to be less "interactive" hence more difficult. Thanks!
-- 
+-
 
 
 ### Which section(s) scheduled enough time for exercises?
@@ -200,7 +200,7 @@ Below are the question. If needed, specify your ideas per session.
 - A bit too much time in the morning perhaps, maybe some more time could be put into the afternoon to be able to actually try the file transfer for example.
 - could be less time for basic scripting and bash exercises and more time for file transfer and job sceduling. We had the sample data, but never did not have time to properly go through it, besides reviewing the example script.
 - The morning session had enough time (perhaps optional extra exercises for the fast students)
-- Logging in from Rackham to Bianca is unclear a bit! 
+- Logging in from Rackham to Bianca is unclear a bit!
 - ...
 - It would have been good to spend more time on the second part, maybe to actually try a data transfer + use that data in a job scheduler
 - ...
@@ -220,7 +220,7 @@ Below are the question. If needed, specify your ideas per session.
 - Perhaps more info on developing a script, what way can you scale up your project and estimate workload or test running time.
 - ...
 - Don't have a feedback/evaluation document where text can (accidentaly) be deleted and edited by others :)
-- Perhaps to extend more time for the practical exercises. And go throught them together in some of the cases.  
+- Perhaps to extend more time for the practical exercises. And go throught them together in some of the cases.
 - ...
 - ...
 - ...
@@ -231,9 +231,9 @@ Below are the question. If needed, specify your ideas per session.
 
 - file transfer from bianca would be nice to learn
 - More time on transfer of files, to and from desktop and also to and from other secure environments such as Vesta
-- Really great intro, it felt easy to ask questions even though it was on zoom. 
+- Really great intro, it felt easy to ask questions even though it was on zoom.
 - Overall very nice course, thank you!
-- Excellent course, thank you greatly to the organizers and teachers!  
+- Excellent course, thank you greatly to the organizers and teachers!
 - ...
 - ...
 - ...

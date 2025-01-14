@@ -261,7 +261,7 @@ needs, it starts.
 
     process DO_A {
         publishDir params.scripts_dir, mode: 'copy', pattern: '*.txt'
-        
+
         input:
         path script
 
@@ -276,7 +276,7 @@ needs, it starts.
 
     process DO_B {
         publishDir params.scripts_dir, mode: 'copy', pattern: '*.txt'
-        
+
         input:
         path script
 
@@ -310,7 +310,7 @@ needs, it starts.
         bash $script
         echo "After execution, contents of current directory:"
         ls -la *.txt
-        
+
         # Copy any new .txt files back to the work directory
         find . -type f -name "*.txt" -newer $script -exec cp {} . \\;
         """

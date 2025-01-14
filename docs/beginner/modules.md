@@ -255,10 +255,10 @@ then answer these questions:
         You will need to load all module(s) on any one of the lines below before the "samtools/1.20" module is available to load.
 
           bioinfo-tools
-     
+
         Help:
            samtools - use samtools 1.20
-          
+
            Version 1.20
     ```
 

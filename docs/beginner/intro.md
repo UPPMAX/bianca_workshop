@@ -61,7 +61,7 @@ flowchart TD
     classDef basic_node fill:#fdd,color:#000,stroke:#f00
     classDef basic_extra_node fill:#ffd,color:#000,stroke:#ff0
     classDef intermediate_node fill:#dfd,color:#000,stroke:#0f0
-  
+
     %% subgraph sub_basic_use[Basic use of Bianca]
       understand_login(Understand login, has 2FA):::basic_node
       can_login_to_remove_desktop(Can login to remote deskop):::basic_node

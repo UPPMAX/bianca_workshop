@@ -34,11 +34,11 @@
 
 > Great pedagogical methods used by the teachers!
 
-> This beginners course was in some sense very basic (how to log into Bianca etc) but in most parts very focused on users that were confident in programming. As many scientists working with sensitive data with use BIanca, also those who are not primarily programmers/data scientists by training, I missed some things: 
+> This beginners course was in some sense very basic (how to log into Bianca etc) but in most parts very focused on users that were confident in programming. As many scientists working with sensitive data with use BIanca, also those who are not primarily programmers/data scientists by training, I missed some things:
 > Start with an overview: What is the goal with using Bianca (store and work with sensitive data)
 > For example show a basic statistical analysis in R studio, in graphical interface)
 > The sensitive data part in the end was too short
-> Hands-on, how to work with Bianca for users that are not so advanced: For example show a basic statistical analysis in R studio, in graphical interface. 
+> Hands-on, how to work with Bianca for users that are not so advanced: For example show a basic statistical analysis in R studio, in graphical interface.
 > I missed some info about applying for projects etc
 
-> Having cameras on was good but the pinpointing of participants with questions was a bit too much. 
+> Having cameras on was good but the pinpointing of participants with questions was a bit too much.

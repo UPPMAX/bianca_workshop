@@ -61,7 +61,7 @@ echo "Hello!"
 
     The first line is called the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)),
     and indicates this is a Bash script.
-    
+
     The second line displays the text between double quotes.
 
 Save and close `nano`.

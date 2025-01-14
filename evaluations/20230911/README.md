@@ -18,7 +18,7 @@ multiple students.
  * 0x 5
 
 > Rate the difficulty level of the material presented?
-> 
+>
 > 1 (Easy) to 5 (Advanced)
 
  * 1x 1
@@ -41,7 +41,7 @@ multiple students.
 > What did you like the most about the course?
 
 ```
-I appreciated the first three hours of the course. They were interactive and appropriately paced with questions, information on how to answer the questions then answers. I appreciated the small group pairings with a mix of experienced and inexperienced users. 
+I appreciated the first three hours of the course. They were interactive and appropriately paced with questions, information on how to answer the questions then answers. I appreciated the small group pairings with a mix of experienced and inexperienced users.
 
 Learning by doing
 
@@ -55,21 +55,21 @@ the online material useful and very extensive
 > What did you like the least about the course?
 
 ```
-The afternoon sessions were faster paced with less interactive components. If you were new and trying to work along, the session often sped ahead. There was no assistance if you needed help with a particular step as it was a big lecture rather than smaller break out room. 
+The afternoon sessions were faster paced with less interactive components. If you were new and trying to work along, the session often sped ahead. There was no assistance if you needed help with a particular step as it was a big lecture rather than smaller break out room.
 
-Some part were just theoretical 
+Some part were just theoretical
 
-The last QA I thought we were going to have one that could allow attendees to ask questions. I myself had some questions about if Bianca was the best fit for my project as I'm new to it on my recently started job. Also the part with the transfer of files from and to bianca could've had its own hands in and even thought there is a multitude of ways to do this present a couple of them to allow for ways to workaround. Instead this last part was mostly looking at the speaker's computer and seeing what they did. I truly believe the harder part of Bianca is the file transfer feature which is key when deciding wheter is worth it in a project. 
+The last QA I thought we were going to have one that could allow attendees to ask questions. I myself had some questions about if Bianca was the best fit for my project as I'm new to it on my recently started job. Also the part with the transfer of files from and to bianca could've had its own hands in and even thought there is a multitude of ways to do this present a couple of them to allow for ways to workaround. Instead this last part was mostly looking at the speaker's computer and seeing what they did. I truly believe the harder part of Bianca is the file transfer feature which is key when deciding wheter is worth it in a project.
 
-Introduction to linux could be set as a separate/pre course event for non experienced users 
+Introduction to linux could be set as a separate/pre course event for non experienced users
 
-breakout rooms for all the exercises. perhaps have 3 rooms: "advanced", "beginner" "in-between", and then course participants could allocate themselves. 
+breakout rooms for all the exercises. perhaps have 3 rooms: "advanced", "beginner" "in-between", and then course participants could allocate themselves.
 ```
 
 > Which sessions should have had more dedicated time?
 
 ```
-The afternoon sessions all needed more time for the newer users.Perhaps two parallel sessions, one for experienced users and one for new users could have been helpful. 
+The afternoon sessions all needed more time for the newer users.Perhaps two parallel sessions, one for experienced users and one for new users could have been helpful.
 
 Software and package installation on Bianca
 
@@ -77,7 +77,7 @@ transfer of files (at least a hands in could've worked well)
 
 more time for transit exercises
 
-There could have been a QA part? More time for own work, followed by QA section for instance. 
+There could have been a QA part? More time for own work, followed by QA section for instance.
 
 Slurm and Software installation
 ```
@@ -98,7 +98,7 @@ Sensitive data
 > Additional comments
 
 ```
-I thought Richel in particular showed thoughtfulness to how students learn and how to teach with a group of mixed experienced participants. 
+I thought Richel in particular showed thoughtfulness to how students learn and how to teach with a group of mixed experienced participants.
 
 Have a Q&A session at the end.
 

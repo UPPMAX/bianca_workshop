@@ -6,9 +6,9 @@
 
 - An R package is essentially a contained folder and file structure containing R
 code (and possibly C/C++ or other code) and other files relevant for the
-package e.g. documentation(vignettes), licensing and configuration files. 
+package e.g. documentation(vignettes), licensing and configuration files.
 
-- Let us look at a very simple example 
+- Let us look at a very simple example
 
 ``` sh
 
@@ -25,18 +25,18 @@ package e.g. documentation(vignettes), licensing and configuration files.
    ├── man
    │   └── hello.Rd
    └── r_example.Rproj
-   
+
 ```
-   
+
 ## Installing your own packages
 
 Sometimes you will need R packages that are not already installed. The solution
-to this is to install your own packages. 
+to this is to install your own packages.
 - These packages will usually come from CRAN (https://cran.r-project.org/) - the Comprehensive R Archive Network, or
 - sometimes from other places, like GitHub or R-Forge
 
 Here we will look at installing R packages with automatic download and with
-manual download. It is also possible to install from inside Rstudio. 
+manual download. It is also possible to install from inside Rstudio.
 
 ## Methods
 
@@ -56,9 +56,9 @@ https://uppmax.github.io/bianca_workshops/rpackages/#setup
 NOTE: In this example we are going to assume you have chosen to place the R packages in a directory under your home directory. As mentioned, you will need separate ones for each R version.
 
 If you have not yet installed any packages to R yourself, the environment file
-should be empty and you can update it like this: 
+should be empty and you can update it like this:
 
-``` sh 
+``` sh
 
     echo R_LIBS_USER=\"$HOME/R-packages-%V\" > ~/.Renviron
 ```
@@ -67,7 +67,7 @@ If it is **not** empty, you can edit ``$HOME/.Renviron`` with your favorite
 editor so that ``R_LIBS_USER`` contain the path to your chosen directory for
 own-installed R packages. It should look something like this when you are done:
 
-``` sh 
+``` sh
 
     R_LIBS_USER="/home/u/user/R-packages-%V"
 ```
@@ -79,7 +79,7 @@ For each version of R you are using, create a directory matching the pattern
 used in ``.Renviron`` to store your packages in. This example is shown for R
 version 4.0.4:
 
-``` sh 
+``` sh
 
     mkdir -p $HOME/R-packages-4.0.4
 ```
@@ -90,24 +90,24 @@ https://uppmax.github.io/bianca_workshops/rpackages/#automatical-download-and-in
 
 !!! note
 
-    You find a list of packages in CRAN (https://cran.r-project.org/) and a list of repos here: https://cran.r-project.org/mirrors.html 
+    You find a list of packages in CRAN (https://cran.r-project.org/) and a list of repos here: https://cran.r-project.org/mirrors.html
 
-    - Please choose a location close to you when picking a repo. 
+    - Please choose a location close to you when picking a repo.
 
 
 === "From command line"
 
-    ``` sh 
+    ``` sh
     R --quiet --no-save --no-restore -e "install.packages('<r-package>', repos='<repo>')"
     ```
-    
+
 === "From inside R"
 
      ``` R
      install.packages('<r-package>', repos='<repo>')
-     ```  
+     ```
 
-In either case, the dependencies of the package will be downloaded and installed as well. 
+In either case, the dependencies of the package will be downloaded and installed as well.
 
 
 ### Automatic download and install from GitHub
@@ -115,37 +115,37 @@ In either case, the dependencies of the package will be downloaded and installed
 https://uppmax.github.io/bianca_workshops/rpackages/#automatic-download-and-install-from-github
 
 If you want to install a package that is not on CRAN, but which do have a GitHub page, then there is an automatic way of installing, but you need to
-handle prerequsites yourself by installing those first. 
--  It can also be that the package is not in as finished a state as those on CRAN, so be careful. 
+handle prerequsites yourself by installing those first.
+-  It can also be that the package is not in as finished a state as those on CRAN, so be careful.
 
 !!! note
 
-    To install packages from GitHub directly, from inside R, you first need to install the devtools package. Note that you only need to install this **once**. 
+    To install packages from GitHub directly, from inside R, you first need to install the devtools package. Note that you only need to install this **once**.
 
 This is how you install a package from GitHub, inside R:
 
 ``` R
- 
+
     install.packages("devtools")   # ONLY ONCE
     devtools::install_github("DeveloperName/package")
-```    
-    
+```
+
 ### Manual download and install
 
 https://uppmax.github.io/bianca_workshops/rpackages/#manual-download-and-install
 
-If the package is not on CRAN or you want the development version, or you for other reason want to install a package you downloaded, then this is how to install from the command line: 
+If the package is not on CRAN or you want the development version, or you for other reason want to install a package you downloaded, then this is how to install from the command line:
 
-``` sh 
+``` sh
     R CMD INSTALL -l <path-to-R-package>/R-package.tar.gz
-```    
+```
 
-**NOTE** that if you install a package this way, you need to handle any dependencies yourself. 
+**NOTE** that if you install a package this way, you need to handle any dependencies yourself.
 
 !!! note
 
     Places to look for R packages
-   
+
     - CRAN (https://cran.r-project.org/)
     - R-Forge (https://r-forge.r-project.org/)
     - Project's own GitHub page
@@ -156,7 +156,7 @@ If the package is not on CRAN or you want the development version, or you for ot
 [tidycmprsk on GitHub](https://mskcc-epi-bio.github.io/tidycmprsk/)
 
 !!! info
-   
+
     The tidycmprsk package provides an intuitive interface for working with the competing risk endpoints. The package wraps the cmprsk package, and exports functions for univariate cumulative incidence estimates with cuminc() and competing risk regression with crr().
 
 
@@ -236,7 +236,7 @@ This will take a while to upload all the files. When it has completed, quit.
 sftp> quit
 ```
 
-- Now, **log into bianca** using the shell, or using the web interface and start a terminal. 
+- Now, **log into bianca** using the shell, or using the web interface and start a terminal.
 - Once you have a bianca shell, **change to your wharf directory** within your project.  Replace my user and project with yours.
 
 ``` bash

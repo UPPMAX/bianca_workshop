@@ -214,7 +214,7 @@ We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/sof
                 ``$ ssh sens2023598-b9``
 
     - Otherwise start a new one with:
-        
+
         ``$ interactive -A sens2023598 -p devcore -n 2 -t 30:00 --mail-type=BEGIN``
 
     - You will get an email wghen started so you don't miss some compute time!
@@ -374,15 +374,15 @@ srun echo Hello world!
     - ``-C gpu``
 
     - **Batch jobs**
-    
+
     - Two alternatives
         - ``sbatch <jobscript with all #SBATCH options>``
         - ``sbatch <options that will be prioritized over the options within the jobs script> <jobscript>``
             - can for instance be used if you just want to test with, for instance, fewer cores and shorter time
             - Example: ``sbatch -t  60:00 -p devcore -n 2 job.sh``
-          
+
     - **Interactive**
-    
+
     - ``interactive -A <project> <other options if not using default settings>``
     - load your modules when session starts
 
@@ -505,11 +505,11 @@ srun echo Hello world!
         ```bash
         $ sbatch my_bio_workflow.sh
         ```
-        
+
 ???+ question "EXTRA: Have look at the link below"
 
     - [The job scheduler graphically](https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/){:target="_blank"}
-    
+
     - Which jobs will start faster?
 
 ## Links
