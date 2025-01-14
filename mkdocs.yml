@@ -5,8 +5,7 @@ edit_uri: blob/main/docs/
 
 nav:
   - Home: index.md
-  - Practicalities: practicalities.md
-  - Schedule: schedule.md
+  - Prerequisites: prereqs.md
   - Beginner: 
     - Introduction: intro.md
     - Course dates: beginner/course_dates.md

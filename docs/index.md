@@ -39,7 +39,7 @@ template: home.html
 <br/><br/>
 
 [Prerequisites](prereqs.md){ .md-button .md-button--primary }
-[Beginner workshop](beginnerintro.md){ .md-button .md-button--primary }
+[Beginner workshop](beginner/intro.md){ .md-button .md-button--primary }
 [Intermediate workshop](intermediate/intro.md){ .md-button .md-button--primary }
 
 <br/><br/>
