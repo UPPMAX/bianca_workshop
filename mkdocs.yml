@@ -10,6 +10,7 @@ nav:
   - Beginner: 
     - Introduction: intro.md
     - Course dates: beginner/course_dates.md
+    - Schedule: beginner/schedule.md
     - Login: beginner/login.md
     - Log in to the Bianca remote desktop environment: beginner/login_remote_desktop.md
     - Using the desktop environment: beginner/use_remote_desktop.md
@@ -25,6 +26,8 @@ nav:
     - Evaluation: beginner/evaluation.md
   - Intermediate: 
     - Introduction: intermediate/intro.md
+    - Course dates: intermediate/course_dates.md
+    - Schedule: intermediate/schedule.md
     - Prevaluation: intermediate/prevaluation_intermediate.md
     - Transferring files to/from Bianca: intermediate/transfer.md
     - Efficient jobs: intermediate/efficient_jobs.md
