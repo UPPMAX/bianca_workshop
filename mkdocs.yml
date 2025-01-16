@@ -54,6 +54,7 @@ nav:
       - Project: misc/project.md
       - Reflections: reflections/README.md
       - Shared document: misc/shared_document.md
+      - Shared documents: shared_documents/README.md
  
 theme:
   name: material

@@ -442,7 +442,7 @@ srun echo Hello world!
 
 ???+ question "Extra: Submit a complex Slurm job"
 
-    - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshops/modules/#bigger-exercises) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
+    - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshops/extra/slurm/) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
         - You can copy the my_bio_workflow.sh file in ``/proj/sens2023598/workshop/slurm`` to your home folder and make the necessary changes.
 
     ??? tip "Answer"

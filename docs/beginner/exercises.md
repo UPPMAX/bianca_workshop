@@ -8,7 +8,7 @@
 
 ???+ question "View in IGV"
 
-    - Load the genome, the bam file, and the annotated *vcf* that we got from the [demo](https://uppmax.github.io/bianca_workshops/modules) into IGV for viewing
+    - Load the genome, the bam file, and the annotated *vcf* that we got from the [demo](https://uppmax.github.io/bianca_workshops/beginner/modules/) into IGV for viewing
 
         ??? tip "Answer"
 
@@ -38,7 +38,7 @@
 
 ???+ question "Submit a Slurm job"
 
-    - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshops/modules/#workflows) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
+    - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshops/beginner/modules/) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
 
     ??? tip "Answer"
 
