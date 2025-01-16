@@ -5,7 +5,7 @@ on:
   push:
   pull_request:
   schedule:
-  - cron: "0 0 16 * *"
+  - cron: "0 0 2 * *"
 
 
 jobs:
@@ -21,6 +21,8 @@ jobs:
 
       - name: Remove folders that must allow spelling mistakes
         run: |
+          rm -rf docs/evaluations
           rm -rf docs/reflections
+          rm -rf docs/shared_documents
 
       - uses: igsekor/pyspelling-any@v0.0.2
