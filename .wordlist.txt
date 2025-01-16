@@ -318,3 +318,6 @@ TechTrends
 sshfs
 lftp
 Rclone
+prevaluations
+prereqs
+
