@@ -21,7 +21,7 @@ matrix:
   sources:
   - 'docs/**/*.md'
      exclude:
-          - 'docs/shared_documents/**/*.md'
+       - 'docs/shared_documents/**/*.md'
 
   default_encoding: utf-8
 
