@@ -1,3 +1,9 @@
+---
+tags:
+  - shared
+  - document
+---
+
 # Shared document
 
 The shared document for this course can be found at here:

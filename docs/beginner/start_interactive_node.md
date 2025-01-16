@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Starting an interactive node
 
 ![login_bianca_via_terminal_terminal](./img/login_bianca_via_terminal_terminal_462_x_202.png)

@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Using Julia packages on Bianca
 
 !!! admonition "Julia"

@@ -1,3 +1,8 @@
+---
+tags:
+  - reflections
+---
+
 # Reflections
 
 Course      |Iteration |Reflection

@@ -1,3 +1,8 @@
+---
+tags:
+  - evaluation
+---
+
 # Evaluation 2024-05-24
 
 - Course: Bianca intermediate workshop

@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # More about Slurm
 
 - [Link to Slurm session in Intro to UPPMAX course](https://www.uu.se/download/18.57591c9d18f3ec99a0521784/1715116006615/c_560271-l_1-k_uppmax-slurm-2024-01.pdf){:target="_blank"}

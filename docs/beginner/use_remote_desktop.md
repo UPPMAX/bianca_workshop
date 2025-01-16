@@ -1,3 +1,13 @@
+---
+tags:
+  - lesson
+  - session
+  - use
+  - remote
+  - destop
+  - environment
+---
+
 # Use the remote desktop environment
 
 !!!- info "Learning objectives"

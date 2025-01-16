@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Compute nodes
 
 !!! info "Objectives"

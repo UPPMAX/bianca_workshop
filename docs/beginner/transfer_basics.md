@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Introduction to transfer
 
 !!! info "Objectives"

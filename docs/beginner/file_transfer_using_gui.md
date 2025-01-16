@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # File transfer using a graphical tool
 
 ![FileZilla connected to Bianca](./img/filezilla_login_to_bianca_236_x_266.png)

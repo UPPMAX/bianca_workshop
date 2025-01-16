@@ -1,3 +1,10 @@
+---
+tags:
+  - lesson plan
+  - indicators of engagement
+  - literature
+---
+
 # Indicators of engagement
 
 Here is the first of two assessment tables, adapted from [Bigatel & Edel-Malizia, 2018]:

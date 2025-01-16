@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # IDEs
 
 ![RStudio running on Bianca](./img/rstudio_in_action_480_x_270.png)

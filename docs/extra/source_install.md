@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Build from source
 
 - To build from source use a **compiler module**

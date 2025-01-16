@@ -1,3 +1,9 @@
+---
+tags:
+  - evaluation
+  - statistics
+---
+
 |question                                                                          | mean_pre| mean_post|   p_value|different |
 |:---------------------------------------------------------------------------------|--------:|---------:|---------:|:---------|
 |I can transfer files to/from Bianca using rsync                                   |      2.2|       4.6| 0.2857143|FALSE     |

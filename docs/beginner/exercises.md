@@ -1,3 +1,8 @@
+---
+tags:
+  - exercise
+---
+
 # Exercises
 
 !!! info

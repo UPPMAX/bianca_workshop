@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Software and package installation on Bianca
 
 !!! info "Learning Objectives"

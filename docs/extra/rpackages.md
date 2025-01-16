@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Installing R packages on Bianca
 
 ???+ question "Read through the content below"

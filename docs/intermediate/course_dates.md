@@ -1,3 +1,10 @@
+---
+tags:
+  - course
+  - dates
+  - calendar
+---
+
 # Course dates
 
 ???- question "What is the course schedule?"

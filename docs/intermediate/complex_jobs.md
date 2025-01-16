@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Complex jobs
 
 !!!- info "Learning objectives"

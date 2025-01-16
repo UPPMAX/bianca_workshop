@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Install with pip to Bianca
 
 ???+ question "Read through the content below"

@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # The command-line on Bianca
 
 !!! info "Objectives"

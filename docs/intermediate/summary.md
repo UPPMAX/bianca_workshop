@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Summary
 
 I can transfer files to/from Bianca using `rsync`

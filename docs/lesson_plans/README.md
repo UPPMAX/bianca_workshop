@@ -1,3 +1,8 @@
+---
+tags:
+  - lesson plans
+---
+
 # Lesson plans
 
 Course      |Iteration |Lesson plan

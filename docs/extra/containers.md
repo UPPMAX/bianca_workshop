@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Containers
 
 ![Apptainer](./img/apptainer.png)

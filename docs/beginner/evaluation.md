@@ -1,3 +1,8 @@
+---
+tags:
+  - evaluation
+---
+
 # Evaluation
 
 - [Any feedback during the day](https://docs.google.com/forms/d/e/1FAIpQLSfrIR52k3JMZ3rAFJ6ZzV8hqOXdy_-d0pYnf1wq1bHBY91xFw/viewform?usp=sf_link)

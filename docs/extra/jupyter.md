@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Running Jupyter on Bianca
 
 ???- warning "For teachers"

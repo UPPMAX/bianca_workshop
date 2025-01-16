@@ -1,3 +1,8 @@
+---
+tags:
+  - prevaluation
+---
+
 # Prevaluation
 
 A prevaluation is an evaluation done before the course has started.

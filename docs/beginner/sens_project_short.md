@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Intro to NAISS-SENS
 
 !!! info "Objectives"

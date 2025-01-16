@@ -1,3 +1,12 @@
+---
+tags:
+  - practicalities
+  - prereqs
+  - prerequisites
+  - prepare
+  - preparation
+---
+
 # Practicalities
 
 ## Prerequisites

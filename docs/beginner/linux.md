@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Command-line intro
 
 !!! info "Objectives"

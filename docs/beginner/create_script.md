@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Create an executable script
 
 !!! info "Objectives"

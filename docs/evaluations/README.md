@@ -1,3 +1,8 @@
+---
+tags:
+  - evaluations
+---
+
 # Evaluations
 
 Course      |Iteration |Evaluation results

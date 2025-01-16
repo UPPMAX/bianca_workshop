@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Introduction to Bianca: Handling Sensitive Research Data
 
 ![Bianca Castafiore](./img/bianca_castafiore_192_x_226.png)

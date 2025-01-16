@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # File transfer to/from Bianca
 
 !!!- info "Learning objectives"

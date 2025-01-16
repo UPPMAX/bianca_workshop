@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Bianca In-Depth Hackathon: Improve Your Handling of Sensitive Research Data
 
 !!!- info "Learning objectives"

@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Replicate jobs
 
 !!!- info "Learning objectives"

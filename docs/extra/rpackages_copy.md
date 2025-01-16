@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Installing R packages on Bianca
 
 [R on UPPMAX course](https://uppmax.github.io/R-python-julia-matlab-HPC/r/packagesR.html)

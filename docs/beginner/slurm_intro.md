@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Introduction to compute nodes
 
 !!! info "Learning objectives"

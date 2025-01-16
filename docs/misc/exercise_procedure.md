@@ -1,3 +1,8 @@
+---
+tags:
+  - exercise
+---
+
 # Duo's in breakout rooms exercise procedure
 
 ???- info "For teachers: why this setup?"

@@ -1,3 +1,9 @@
+---
+tags:
+  - schedule
+  - timetable
+---
+
 # Schedule
 
 ???- question "What are the course dates?"

@@ -1,3 +1,8 @@
+---
+tags:
+  - prevaluations
+---
+
 # Prevaluations
 
 TODO: split per course

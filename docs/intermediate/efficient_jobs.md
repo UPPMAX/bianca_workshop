@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Efficient jobs
 
 !!!- info "Learning objectives"
