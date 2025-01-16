@@ -315,3 +315,6 @@ Prevaluations
 Routledge
 Socio
 TechTrends
+sshfs
+lftp
+Rclone
