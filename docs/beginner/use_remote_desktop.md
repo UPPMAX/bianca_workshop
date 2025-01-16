@@ -4,7 +4,7 @@ tags:
   - session
   - use
   - remote
-  - destop
+  - desktop
   - environment
 ---
 
