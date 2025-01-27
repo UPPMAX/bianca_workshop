@@ -6,7 +6,7 @@ tags:
 
 # Efficient jobs
 
-!!!- info "Learning objectives"
+!!!- info "Learning outcomes"
 
     - Practice using the UPPMAX documentation
     - I can see the CPU and memory usage of jobs

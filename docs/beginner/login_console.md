@@ -10,7 +10,7 @@ tags:
 
 > The Bianca console environment
 
-!!!- info "Learning objectives"
+!!!- info "Learning outcomes"
 
     - Practice using the UPPMAX documentation
     - Understand what a console environment is

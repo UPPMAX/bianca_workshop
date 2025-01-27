@@ -1,6 +1,6 @@
 # Summary
 
-Learning objectives of this course:
+Learning outcomes of this course:
 
 - I can log in to the Bianca remote desktop using the website
 - (optional) I can log in to the Bianca console environment using SSH

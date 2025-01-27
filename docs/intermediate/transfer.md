@@ -6,7 +6,7 @@ tags:
 
 # File transfer to/from Bianca
 
-!!!- info "Learning objectives"
+!!!- info "Learning outcomes"
 
     - Find information in the UPPMAX documentation about file transfer on Bianca
     - Give a reasonable definition of what the wharf is
@@ -199,7 +199,7 @@ and stay open during the break.
 
 ### Exercise 1: first understanding of how to use `rsync`
 
-???- info "Learning objectives"
+???- info "Learning outcomes"
 
     - Explore the UPPMAX documentation
     - Understand what the wharf is
@@ -248,7 +248,7 @@ and stay open during the break.
 
 ### Exercise 2: using `rsync`
 
-???- info "Learning objectives"
+???- info "Learning outcomes"
 
     - Explore the UPPMAX documentation
     - Mount the wharf on Transit
@@ -279,7 +279,7 @@ Here is the exercise:
 
 ### (optional) Exercise 3: using sftp
 
-???- info "Learning objectives"
+???- info "Learning outcomes"
 
     - Explore the UPPMAX documentation
     - Transfer files to/from Bianca using `sftp`
@@ -297,7 +297,7 @@ Here is the exercise:
 
 ### (optional) Exercise 4: using FileZilla
 
-???- info "Learning objectives"
+???- info "Learning outcomes"
 
     - Explore the UPPMAX documentation
     - Transfer files to/from Bianca using FileZilla

@@ -10,7 +10,7 @@ tags:
 
 # Use the remote desktop environment
 
-!!!- info "Learning objectives"
+!!!- info "Learning outcomes"
 
     - Practice using the UPPMAX documentation
     - Can copy-paste text between local computer and the remote desktop

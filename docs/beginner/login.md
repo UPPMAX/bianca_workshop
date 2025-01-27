@@ -8,7 +8,7 @@ tags:
 
 # Login
 
-!!!- info "Learning objectives"
+!!!- info "Learning outcomes"
 
     - Practice using the UPPMAX documentation
     - Get an UPPMAX 2FA

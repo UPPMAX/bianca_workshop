@@ -6,7 +6,7 @@ tags:
 
 # Bianca In-Depth Hackathon: Improve Your Handling of Sensitive Research Data
 
-!!!- info "Learning objectives"
+!!!- info "Learning outcomes"
 
     - Know where to find an overview of topics discussed today
     - Know where to find the link to the shared document

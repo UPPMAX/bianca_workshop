@@ -6,7 +6,7 @@ tags:
 
 # Introduction to compute nodes
 
-!!! info "Learning objectives"
+!!! info "Learning outcomes"
 
     - This is a short introduction in how to reach the calculation/compute/worker nodes
     - The learners should be able to:

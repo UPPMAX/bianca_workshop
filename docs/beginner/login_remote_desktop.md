@@ -10,7 +10,7 @@ tags:
 
 > The Bianca remote desktop environment
 
-!!! info "Learning objectives"
+!!! info "Learning outcomes"
 
     - Use the UPPMAX documentation
     - Observe the most common problems when accessing Bianca

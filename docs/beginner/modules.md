@@ -6,7 +6,7 @@ tags:
 
 # The module system
 
-!!!- info "Learning objectives"
+!!!- info "Learning outcomes"
 
     - Practice using the UPPMAX documentation
     - Understand why there is a module system

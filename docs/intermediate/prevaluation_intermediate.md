@@ -53,7 +53,7 @@ The prevaluation form can be found `[not here anymore]`.
     Give you confidence levels of the following statements below:
 
     ```code
-    [Learning objectives from the evaluation here]
+    [Learning outcomes from the evaluation here]
     ```
 
     Is there a learning objective you think is missing? What is it?

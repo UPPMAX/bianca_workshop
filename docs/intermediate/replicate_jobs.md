@@ -6,7 +6,7 @@ tags:
 
 # Replicate jobs
 
-!!!- info "Learning objectives"
+!!!- info "Learning outcomes"
 
     - Practice using the UPPMAX documentation
     - I can schedule a job that has replicates

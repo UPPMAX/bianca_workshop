@@ -6,7 +6,7 @@ tags:
 
 # Complex jobs
 
-!!!- info "Learning objectives"
+!!!- info "Learning outcomes"
 
     - Practice using the UPPMAX documentation
     - Practice using the Slurm documentation

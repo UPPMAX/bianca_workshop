@@ -96,7 +96,7 @@ It may look like below, where there is a preference for Jupyter:
 
 ### Exercise 1: Start the favorite IDE
 
-???- info "Learning objectives"
+???- info "Learning outcomes"
 
     - Explore the UPPMAX documentation
     - Start the favorite IDE on Bianca
@@ -123,7 +123,7 @@ It may look like below, where there is a preference for Jupyter:
 
 ### Exercise 2: Understand IDEs on Bianca
 
-???- info "Learning objectives"
+???- info "Learning outcomes"
 
     - Explore the UPPMAX documentation
     - Understand why to use an IDE
