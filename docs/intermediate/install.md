@@ -105,7 +105,7 @@ tags:
 !!! info "More info"
 
     - [Extra material: Build from source](../extra/source_install.md)
-    - [Singularity course](https://www.uu.se/centrum/uppmax/utbildning/kurser-och-workshops/basic-singularity){:target="_blank"}
+    - [Singularity course](https://pmitev.github.io/UPPMAX-Singularity-workshop/)
 
 ### Containers
 
