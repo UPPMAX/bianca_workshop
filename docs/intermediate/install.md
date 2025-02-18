@@ -141,8 +141,8 @@ tags:
 
 !!! info "More info"
 
-    - [Extra material: Containers](https://uppmax.github.io/bianca_workshops/extra/containers/){:target="_blank"}
-    - [Singularity course](https://www.uu.se/centrum/uppmax/utbildning/kurser-och-workshops/basic-singularity){:target="_blank"}
+    - [Extra material: Containers](https://uppmax.github.io/bianca_workshops/extra/containers/)
+    - [Singularity course](https://docs.uppmax.uu.se/courses_workshops/singularity/)
 
 ## Packages and libraries to scripting programs
 
